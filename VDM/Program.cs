@@ -21,7 +21,7 @@ namespace com.vdm.form
             login.ShowDialog();
             if (login.DialogResult == DialogResult.OK)
             {
-               // Application.Run(new frmMain());
+                Application.Run(new frmMain());
             }
 
         }

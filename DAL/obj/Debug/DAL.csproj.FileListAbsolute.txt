@@ -6,11 +6,3 @@ D:\workspace\VDM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\workspace\VDM\DAL\obj\Debug\DAL.dll
 D:\workspace\VDM\DAL\obj\Debug\DAL.pdb
 D:\workspace\VDM\DAL\bin\Debug\System.Data.SQLite.dll
-F:\学习\乡村数据采集系统\Project\DAL\bin\Debug\DAL.dll
-F:\学习\乡村数据采集系统\Project\DAL\bin\Debug\DAL.pdb
-F:\学习\乡村数据采集系统\Project\DAL\bin\Debug\Common.dll
-F:\学习\乡村数据采集系统\Project\DAL\bin\Debug\System.Data.SQLite.dll
-F:\学习\乡村数据采集系统\Project\DAL\bin\Debug\Common.pdb
-F:\学习\乡村数据采集系统\Project\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-F:\学习\乡村数据采集系统\Project\DAL\obj\Debug\DAL.dll
-F:\学习\乡村数据采集系统\Project\DAL\obj\Debug\DAL.pdb
