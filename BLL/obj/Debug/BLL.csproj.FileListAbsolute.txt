@@ -8,3 +8,13 @@ D:\workspace\VDM\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\workspace\VDM\BLL\obj\Debug\BLL.dll
 D:\workspace\VDM\BLL\obj\Debug\BLL.pdb
 D:\workspace\VDM\BLL\bin\Debug\System.Data.SQLite.dll
+F:\学习\乡村数据采集系统\Project\BLL\bin\Debug\BLL.dll
+F:\学习\乡村数据采集系统\Project\BLL\bin\Debug\BLL.pdb
+F:\学习\乡村数据采集系统\Project\BLL\bin\Debug\Common.dll
+F:\学习\乡村数据采集系统\Project\BLL\bin\Debug\DAL.dll
+F:\学习\乡村数据采集系统\Project\BLL\bin\Debug\System.Data.SQLite.dll
+F:\学习\乡村数据采集系统\Project\BLL\bin\Debug\Common.pdb
+F:\学习\乡村数据采集系统\Project\BLL\bin\Debug\DAL.pdb
+F:\学习\乡村数据采集系统\Project\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\学习\乡村数据采集系统\Project\BLL\obj\Debug\BLL.dll
+F:\学习\乡村数据采集系统\Project\BLL\obj\Debug\BLL.pdb

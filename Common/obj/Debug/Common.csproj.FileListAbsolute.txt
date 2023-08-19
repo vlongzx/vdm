@@ -2,3 +2,8 @@ D:\workspace\VDM\Common\bin\Debug\Common.dll
 D:\workspace\VDM\Common\bin\Debug\Common.pdb
 D:\workspace\VDM\Common\obj\Debug\Common.dll
 D:\workspace\VDM\Common\obj\Debug\Common.pdb
+F:\学习\乡村数据采集系统\Project\Common\bin\Debug\Common.dll
+F:\学习\乡村数据采集系统\Project\Common\bin\Debug\Common.pdb
+F:\学习\乡村数据采集系统\Project\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+F:\学习\乡村数据采集系统\Project\Common\obj\Debug\Common.dll
+F:\学习\乡村数据采集系统\Project\Common\obj\Debug\Common.pdb
