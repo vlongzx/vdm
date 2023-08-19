@@ -17,11 +17,11 @@ namespace com.vdm.form
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //frmLogin login = new frmLogin();
-            //login.ShowDialog();
+            frmLogin login = new frmLogin();
+            login.ShowDialog();
             //if (login.DialogResult == DialogResult.OK)
             //{
-                Application.Run(new frmMain());
+            Application.Run(new frmMain());
             //}
 
         }
