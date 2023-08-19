@@ -1,0 +1,4 @@
+D:\workspace\VDM\Common\bin\x64\Debug\Common.dll
+D:\workspace\VDM\Common\bin\x64\Debug\Common.pdb
+D:\workspace\VDM\Common\obj\x64\Debug\Common.dll
+D:\workspace\VDM\Common\obj\x64\Debug\Common.pdb
