@@ -1,0 +1,10 @@
+D:\workspace\VDM\BLL\bin\Debug\BLL.dll
+D:\workspace\VDM\BLL\bin\Debug\BLL.pdb
+D:\workspace\VDM\BLL\bin\Debug\Common.dll
+D:\workspace\VDM\BLL\bin\Debug\DAL.dll
+D:\workspace\VDM\BLL\bin\Debug\Common.pdb
+D:\workspace\VDM\BLL\bin\Debug\DAL.pdb
+D:\workspace\VDM\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\workspace\VDM\BLL\obj\Debug\BLL.dll
+D:\workspace\VDM\BLL\obj\Debug\BLL.pdb
+D:\workspace\VDM\BLL\bin\Debug\System.Data.SQLite.dll
