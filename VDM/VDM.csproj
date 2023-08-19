@@ -116,7 +116,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\data.ico" />
-    <Content Include="images\居民.png" />
+    <Content Include="images\土地.png" />
+    <Content Include="images\居民2.png" />
+    <Content Include="images\户主.png" />
     <Content Include="lib\System.Data.SQLite.dll" />
   </ItemGroup>
   <ItemGroup />
