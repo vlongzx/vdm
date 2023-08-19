@@ -858,7 +858,8 @@
             // 
             // frmPeopleAdd
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1578, 844);
             this.Controls.Add(this.btSubmit);
             this.Controls.Add(this.btCancel);
