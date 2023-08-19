@@ -16,3 +16,5 @@ D:\workspace\VDM\VDM\bin\Debug\DAL.dll
 D:\workspace\VDM\VDM\bin\Debug\DAL.pdb
 D:\workspace\VDM\VDM\bin\Debug\db_file\vdm_data.db
 D:\workspace\VDM\VDM\bin\Debug\System.Data.SQLite.dll
+D:\workspace\VDM\VDM\obj\Debug\com.vdm.form.frmPeople.resources
+D:\workspace\VDM\VDM\obj\Debug\com.vdm.form.frmPeopleAdd.resources
