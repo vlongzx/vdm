@@ -120,6 +120,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
+    <None Include="db_file\VDM.pdm" />
     <None Include="db_file\vdm_data.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
