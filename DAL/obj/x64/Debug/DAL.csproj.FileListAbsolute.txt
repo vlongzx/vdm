@@ -1,8 +1,0 @@
-D:\workspace\VDM\DAL\bin\x64\Debug\DAL.dll
-D:\workspace\VDM\DAL\bin\x64\Debug\DAL.pdb
-D:\workspace\VDM\DAL\bin\x64\Debug\Common.dll
-D:\workspace\VDM\DAL\bin\x64\Debug\System.Data.SQLite.dll
-D:\workspace\VDM\DAL\bin\x64\Debug\Common.pdb
-D:\workspace\VDM\DAL\obj\x64\Debug\DAL.csprojResolveAssemblyReference.cache
-D:\workspace\VDM\DAL\obj\x64\Debug\DAL.dll
-D:\workspace\VDM\DAL\obj\x64\Debug\DAL.pdb
