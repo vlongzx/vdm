@@ -45,7 +45,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbIdcard = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.tbBirthday = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbRemark = new System.Windows.Forms.TextBox();
             this.tbPeople_name = new System.Windows.Forms.TextBox();
@@ -103,6 +102,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.btCancel = new System.Windows.Forms.Button();
             this.btSubmit = new System.Windows.Forms.Button();
+            this.dtBirthday = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -113,6 +113,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.dtBirthday);
             this.groupBox1.Controls.Add(this.cbBlood_type);
             this.groupBox1.Controls.Add(this.cbIs_real_name);
             this.groupBox1.Controls.Add(this.cbMarital_status);
@@ -129,7 +130,6 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.tbIdcard);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.tbBirthday);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.tbRemark);
             this.groupBox1.Controls.Add(this.tbPeople_name);
@@ -232,6 +232,7 @@
             // 
             // cbSex
             // 
+            this.cbSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSex.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbSex.FormattingEnabled = true;
             this.cbSex.Location = new System.Drawing.Point(539, 36);
@@ -294,14 +295,6 @@
             this.label8.Size = new System.Drawing.Size(106, 24);
             this.label8.TabIndex = 0;
             this.label8.Text = "所在镇：";
-            // 
-            // tbBirthday
-            // 
-            this.tbBirthday.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbBirthday.Location = new System.Drawing.Point(168, 91);
-            this.tbBirthday.Name = "tbBirthday";
-            this.tbBirthday.Size = new System.Drawing.Size(200, 35);
-            this.tbBirthday.TabIndex = 4;
             // 
             // label6
             // 
@@ -894,6 +887,14 @@
             this.btSubmit.UseVisualStyleBackColor = true;
             this.btSubmit.Click += new System.EventHandler(this.btSubmit_Click);
             // 
+            // dtBirthday
+            // 
+            this.dtBirthday.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtBirthday.Location = new System.Drawing.Point(168, 91);
+            this.dtBirthday.Name = "dtBirthday";
+            this.dtBirthday.Size = new System.Drawing.Size(200, 35);
+            this.dtBirthday.TabIndex = 12;
+            // 
             // frmPeopleAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -940,7 +941,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbIdcard;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox tbBirthday;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbPeople_name;
         private System.Windows.Forms.Label label7;
@@ -1001,5 +1001,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.ComboBox cbEducation;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.DateTimePicker dtBirthday;
     }
 }
