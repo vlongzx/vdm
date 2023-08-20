@@ -8,8 +8,8 @@ namespace com.vdm.model
 {
     public class People
     {
-        private int people_id;
-        private int farmer_id;
+        private long people_id;
+        private long farmer_id;
         private string people_name;
         private string idcard;
         private string relationship;
@@ -47,14 +47,14 @@ namespace com.vdm.model
         private string creater;
         private string last_update_datetime;
         private string last_updater;
-        private int statues;
+        private long statues;
         private string town;
         private string villiage;
 
         /// <summary>
         ///  人员ID
         /// </summary>
-        public int People_id
+        public long People_id
         {
             get
             {
@@ -70,7 +70,7 @@ namespace com.vdm.model
         /// <summary>
         ///  所属户主，如是户主本周则等于0
         /// </summary>
-        public int Farmer_id
+        public long Farmer_id
         {
             get
             {
@@ -643,7 +643,7 @@ namespace com.vdm.model
         /// <summary>
         /// 状态
         /// </summary>
-        public int Statues
+        public long Statues
         {
             get
             {

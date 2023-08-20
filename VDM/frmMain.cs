@@ -41,7 +41,7 @@ namespace com.vdm.form
 
         private void tspPeople_Click(object sender, EventArgs e)
         {
-            OpenForm(new frmPeople());
+            OpenForm(new frmPeopleList());
         }
     }
 }

@@ -13,13 +13,29 @@ using System.Windows.Forms;
 
 namespace com.vdm.form
 {
-    public partial class frmPeopleAdd : Form
+    public partial class frmPeopleInfo : Form
     {
         private DictBLL dictBLL = null;
         private OrgBLL orgBLL = null;
-        public frmPeopleAdd()
+        private PeopleBLL peopleBLL = null;
+        private string opreation_mode = "ADD";//默认增加操作
+        private int people_id = 0;
+        public frmPeopleInfo()
         {
             InitializeComponent();
+        }
+
+        public frmPeopleInfo(string opreation_mode)
+        {
+            InitializeComponent();
+            this.opreation_mode = opreation_mode;
+        }
+
+        public frmPeopleInfo(string opreation_mode,int people_id)
+        {
+            InitializeComponent();
+            this.opreation_mode = opreation_mode;
+            this.people_id = people_id;
         }
 
         private void frmPeopleAdd_Load(object sender, EventArgs e)
@@ -27,6 +43,47 @@ namespace com.vdm.form
             //初始化节目控件的值
             InitPageControl();
 
+            if(this.opreation_mode == "EDIT")
+            {
+                peopleBLL = new PeopleBLL();
+                People people = this.peopleBLL.getPeople(this.people_id);
+
+                //界面数据绑定
+                this.tbPeople_name.Text = people.People_name;
+                this.cbSex.SelectedValue = people.Sex;
+                this.cbNation.SelectedValue = people.Nation;
+                this.cbRelationship.SelectedValue = people.Relationship;
+                this.dtBirthday.Value = DateTime.Parse(people.Birthday);
+                this.tbIdcard.Text = people.Idcard;
+                this.tbPhone_number.Text = people.Phone_number;
+                this.cbTown.SelectedValue = people.Town;
+                this.cbVillage.SelectedValue = people.Villiage;
+                this.cbMarital_status.SelectedValue = people.Marital_status;
+                this.cbIs_real_name.SelectedValue = people.Is_real_name;
+                this.cbBlood_type.SelectedValue = people.Blood_type;
+                this.tbRemark.Text = people.Remark;
+                this.cbDisability_type.SelectedValue = people.Disability_type;
+                this.tbJoin_party_time.Text = people.Join_party_time;
+                this.cbReligious_belief.SelectedValue = people.Religious_belief;
+                this.cbEducation.SelectedValue = people.Education;
+                this.cbWork_or_study.SelectedValue = people.Work_or_study;
+                this.tbUnit_or_school.Text = people.Unit_or_school;
+                this.tbWork_study_location.Text = people.Work_study_location;
+                this.cbSkill_type.SelectedValue = people.Skill_type;
+                this.cbEmploy_guide.SelectedValue = people.Employ_guide;
+                this.cbSkill_train.SelectedValue = people.Skill_train;
+                this.tbPq_gettime.Text = people.Pq_gettime;
+                this.cbDisability_type.SelectedValue = people.Disability_type;
+                this.cbDisability_grade.SelectedValue = people.Disability_grade;
+                this.tbDisability_reason.Text = people.Disability_reason;
+                this.cbBig_ill_help.SelectedValue = people.Big_ill_help;
+                this.cbTemporary_help.SelectedValue = people.Temporary_help;
+                this.cbIs_unable_old.SelectedValue = people.Is_unable_old;
+                this.cbIs_relocation.SelectedValue = people.Is_relocation;
+                this.cbLow_five.SelectedValue = people.Low_five;
+                this.cbLow_five_grade.SelectedValue = people.Low_five_grade;
+                this.cbMilitary_service.SelectedValue = people.Military_service;
+            }
 
         }
 
@@ -333,20 +390,39 @@ namespace com.vdm.form
             people.Creater = LoginInfo.CurrentUser.Account;
             people.Create_datetime = DateTime.Now.ToString();
             people.Statues = 1;//默认有效
-            PeopleBLL peopleBLL = new PeopleBLL();
-            Result result  = peopleBLL.AddPeople(people);
+            peopleBLL = new PeopleBLL();
 
-            if(result.Count == 1)
+            if(this.opreation_mode == "ADD")
             {
-                MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                Result result = peopleBLL.AddPeople(people);
+                if (result.Count == 1)
+                {
+                    MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogHelper.Error(result.Information, result.Exception);
+                }
             }
             else
             {
-                MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LogHelper.Error(result.Information,result.Exception);
+                Result result = peopleBLL.AddPeople(people);
+                if (result.Count == 1)
+                {
+                    MessageBox.Show("编辑成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogHelper.Error(result.Information, result.Exception);
+                }
             }
+           
         }
 
         private void cbTown_SelectedIndexChanged(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace com.vdm.form
 {
-    partial class frmPeople
+    partial class frmPeopleList
     {
         /// <summary>
         /// Required designer variable.
@@ -30,23 +30,23 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btSearch = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbSex = new System.Windows.Forms.ComboBox();
+            this.cbEducation = new System.Windows.Forms.ComboBox();
+            this.cbReligious_belief = new System.Windows.Forms.ComboBox();
+            this.cbPolitcal_outlook = new System.Windows.Forms.ComboBox();
+            this.cbNation = new System.Windows.Forms.ComboBox();
+            this.cbRelationship = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbPhone_number = new System.Windows.Forms.TextBox();
+            this.tbIdcard = new System.Windows.Forms.TextBox();
+            this.tbPeople_name = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,6 +68,7 @@
             this.btExport = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lvPeople = new System.Windows.Forms.ListView();
+            this.btRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -77,23 +78,23 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btSearch);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox6);
-            this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbSex);
+            this.groupBox1.Controls.Add(this.cbEducation);
+            this.groupBox1.Controls.Add(this.cbReligious_belief);
+            this.groupBox1.Controls.Add(this.cbPolitcal_outlook);
+            this.groupBox1.Controls.Add(this.cbNation);
+            this.groupBox1.Controls.Add(this.cbRelationship);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbPhone_number);
+            this.groupBox1.Controls.Add(this.tbIdcard);
+            this.groupBox1.Controls.Add(this.tbPeople_name);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -125,15 +126,16 @@
             this.button2.Text = "重置(&R)";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btSearch
             // 
-            this.button1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(1539, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 60);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "查询(&S)";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btSearch.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btSearch.Location = new System.Drawing.Point(1539, 71);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(140, 60);
+            this.btSearch.TabIndex = 4;
+            this.btSearch.Text = "查询(&S)";
+            this.btSearch.UseVisualStyleBackColor = true;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // textBox5
             // 
@@ -183,59 +185,59 @@
             this.textBox2.Size = new System.Drawing.Size(80, 35);
             this.textBox2.TabIndex = 3;
             // 
-            // comboBox3
+            // cbSex
             // 
-            this.comboBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1279, 36);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(200, 32);
-            this.comboBox3.TabIndex = 2;
+            this.cbSex.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbSex.FormattingEnabled = true;
+            this.cbSex.Location = new System.Drawing.Point(1279, 36);
+            this.cbSex.Name = "cbSex";
+            this.cbSex.Size = new System.Drawing.Size(200, 32);
+            this.cbSex.TabIndex = 2;
             // 
-            // comboBox6
+            // cbEducation
             // 
-            this.comboBox6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(1279, 146);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(200, 32);
-            this.comboBox6.TabIndex = 2;
+            this.cbEducation.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbEducation.FormattingEnabled = true;
+            this.cbEducation.Location = new System.Drawing.Point(1279, 146);
+            this.cbEducation.Name = "cbEducation";
+            this.cbEducation.Size = new System.Drawing.Size(200, 32);
+            this.cbEducation.TabIndex = 2;
             // 
-            // comboBox5
+            // cbReligious_belief
             // 
-            this.comboBox5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(895, 146);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(200, 32);
-            this.comboBox5.TabIndex = 2;
+            this.cbReligious_belief.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbReligious_belief.FormattingEnabled = true;
+            this.cbReligious_belief.Location = new System.Drawing.Point(895, 146);
+            this.cbReligious_belief.Name = "cbReligious_belief";
+            this.cbReligious_belief.Size = new System.Drawing.Size(200, 32);
+            this.cbReligious_belief.TabIndex = 2;
             // 
-            // comboBox4
+            // cbPolitcal_outlook
             // 
-            this.comboBox4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(895, 88);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(200, 32);
-            this.comboBox4.TabIndex = 2;
+            this.cbPolitcal_outlook.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbPolitcal_outlook.FormattingEnabled = true;
+            this.cbPolitcal_outlook.Location = new System.Drawing.Point(895, 88);
+            this.cbPolitcal_outlook.Name = "cbPolitcal_outlook";
+            this.cbPolitcal_outlook.Size = new System.Drawing.Size(200, 32);
+            this.cbPolitcal_outlook.TabIndex = 2;
             // 
-            // comboBox2
+            // cbNation
             // 
-            this.comboBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(895, 36);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 32);
-            this.comboBox2.TabIndex = 2;
+            this.cbNation.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbNation.FormattingEnabled = true;
+            this.cbNation.Location = new System.Drawing.Point(895, 36);
+            this.cbNation.Name = "cbNation";
+            this.cbNation.Size = new System.Drawing.Size(200, 32);
+            this.cbNation.TabIndex = 2;
             // 
-            // comboBox1
+            // cbRelationship
             // 
-            this.comboBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(537, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 32);
-            this.comboBox1.TabIndex = 2;
+            this.cbRelationship.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbRelationship.FormattingEnabled = true;
+            this.cbRelationship.Location = new System.Drawing.Point(537, 36);
+            this.cbRelationship.Name = "cbRelationship";
+            this.cbRelationship.Size = new System.Drawing.Size(200, 32);
+            this.cbRelationship.TabIndex = 2;
             // 
             // label4
             // 
@@ -247,29 +249,29 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "性别：";
             // 
-            // textBox9
+            // tbPhone_number
             // 
-            this.textBox9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox9.Location = new System.Drawing.Point(537, 145);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(200, 35);
-            this.textBox9.TabIndex = 1;
+            this.tbPhone_number.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPhone_number.Location = new System.Drawing.Point(537, 145);
+            this.tbPhone_number.Name = "tbPhone_number";
+            this.tbPhone_number.Size = new System.Drawing.Size(200, 35);
+            this.tbPhone_number.TabIndex = 1;
             // 
-            // textBox8
+            // tbIdcard
             // 
-            this.textBox8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox8.Location = new System.Drawing.Point(162, 145);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(200, 35);
-            this.textBox8.TabIndex = 1;
+            this.tbIdcard.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbIdcard.Location = new System.Drawing.Point(162, 145);
+            this.tbIdcard.Name = "tbIdcard";
+            this.tbIdcard.Size = new System.Drawing.Size(200, 35);
+            this.tbIdcard.TabIndex = 1;
             // 
-            // textBox1
+            // tbPeople_name
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(162, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 35);
-            this.textBox1.TabIndex = 0;
+            this.tbPeople_name.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPeople_name.Location = new System.Drawing.Point(162, 35);
+            this.tbPeople_name.Name = "tbPeople_name";
+            this.tbPeople_name.Size = new System.Drawing.Size(200, 35);
+            this.tbPeople_name.TabIndex = 0;
             // 
             // label9
             // 
@@ -429,8 +431,9 @@
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(140, 60);
             this.btEdit.TabIndex = 4;
-            this.btEdit.Text = "修改(&M)";
+            this.btEdit.Text = "编辑(&M)";
             this.btEdit.UseVisualStyleBackColor = true;
+            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
             // btDelete
             // 
@@ -441,6 +444,7 @@
             this.btDelete.TabIndex = 4;
             this.btDelete.Text = "删除(&D)";
             this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // btImport
             // 
@@ -488,19 +492,31 @@
             this.lvPeople.TabIndex = 0;
             this.lvPeople.UseCompatibleStateImageBehavior = false;
             // 
-            // frmPeople
+            // btRefresh
+            // 
+            this.btRefresh.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btRefresh.Location = new System.Drawing.Point(741, 213);
+            this.btRefresh.Name = "btRefresh";
+            this.btRefresh.Size = new System.Drawing.Size(140, 60);
+            this.btRefresh.TabIndex = 4;
+            this.btRefresh.Text = "刷新(&R)";
+            this.btRefresh.UseVisualStyleBackColor = true;
+            this.btRefresh.Click += new System.EventHandler(this.btRefresh_Click);
+            // 
+            // frmPeopleList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btRefresh);
             this.Controls.Add(this.btExport);
             this.Controls.Add(this.btImport);
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btAdd);
-            this.Name = "frmPeople";
+            this.Name = "frmPeopleList";
             this.Text = "人员信息管理";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPeople_Load);
@@ -515,11 +531,11 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbSex;
+        private System.Windows.Forms.ComboBox cbNation;
+        private System.Windows.Forms.ComboBox cbRelationship;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbPeople_name;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
@@ -531,14 +547,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox cbEducation;
+        private System.Windows.Forms.ComboBox cbReligious_belief;
+        private System.Windows.Forms.ComboBox cbPolitcal_outlook;
+        private System.Windows.Forms.TextBox tbPhone_number;
+        private System.Windows.Forms.TextBox tbIdcard;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
@@ -553,5 +569,6 @@
         private System.Windows.Forms.Button btExport;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListView lvPeople;
+        private System.Windows.Forms.Button btRefresh;
     }
 }
