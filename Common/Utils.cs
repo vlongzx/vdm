@@ -39,6 +39,19 @@ namespace com.vdm.common
         }
         #endregion
 
+        /// <summary>
+        /// 将字符串首字母转换为大写
+        /// </summary>
+        public static string Capitalize( string s)
+        {
+            if (String.IsNullOrEmpty(s))
+            {
+                throw new ArgumentException("String is mull or empty");
+            }
+
+            return s[0].ToString().ToUpper() + s.Substring(1);
+        }
+
         #region 将字符串转换为int类型数组
         /// <summary>
         /// 将字符串转换为int类型数组
@@ -100,6 +113,22 @@ namespace com.vdm.common
             return str.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
         }
 
+        #endregion
+
+        #region 将字符串数组转换为逗号分隔的字符串
+        /// <summary>
+        ///  将字符串数组转换为逗号分隔的字符串
+        /// </summary>
+        /// <param name="listString">字符串List</param>
+        /// <returns>逗号分隔的字符串</returns>
+        public static string JoinStingListToString(List<string> listString)
+        {
+            string str = "";
+            if(listString != null){
+                str = string.Join(",", listString);
+            }
+            return str;
+        }
         #endregion
 
         #region 截取字符串

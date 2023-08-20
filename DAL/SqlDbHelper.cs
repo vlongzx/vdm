@@ -129,6 +129,34 @@ namespace com.vdm.dal
             //CommandBehavior.CloseConnection参数指示关闭Reader对象时关闭与其关联的Connection对象
             return command.ExecuteReader(CommandBehavior.CloseConnection);
         }
+
+        /// <summary>
+        ///  获得指定sql语句的表结构
+        /// </summary>
+        /// <param name="sql">需要查询的表的无记录sql语句</param>
+        /// <returns></returns>
+        public DataTable GetTableSchema(string sql)
+        {
+            DataTable tblSchema;
+
+            using (SQLiteConnection cnn = new SQLiteConnection(connectionString))
+            {
+                using (SQLiteCommand cmd = cnn.CreateCommand())
+                {
+                    cmd.CommandText = sql;
+                    cmd.CommandType = CommandType.Text;
+                    cnn.Open();
+                    using (SQLiteDataReader rdr = cmd.ExecuteReader(CommandBehavior.KeyInfo))
+                    {
+                        tblSchema = rdr.GetSchemaTable();
+                    }
+                    cnn.Close();
+                }
+            }
+
+            return tblSchema;
+        }
+
         /// <summary>
         ///
         /// </summary>

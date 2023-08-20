@@ -37,23 +37,43 @@ namespace com.vdm.dal
         /// <returns></returns>
         public Result CreatePeople(People people)
         {
-            string sql = "insert into t_people(farmer_id,people_name,idcard,relationship,statues) values(@farmer_id,@people_name,@idcard,@relationship,@statues)";
+            //构建sql语句
+            List<string> listColumnName = new List<string>();
+            List<string> listParameter = new List<string>();
+            string schemaSql = "select * from t_people where 1=0";
+            DataTable tblSchema = this.sqlDB.GetTableSchema(schemaSql);
+            if(tblSchema != null)
+            {
+                foreach(DataRow row in tblSchema.Rows)
+                {
+                    //过滤掉主键
+                    if(row["ColumnName"].ToString() == "people_id")
+                    {
+                        continue;
+                    }
+                    listColumnName.Add(row["ColumnName"].ToString());
+                    listParameter.Add("@" + row["ColumnName"].ToString());
+                }
+            }
+            string sql = "insert into t_people("+ Utils.JoinStingListToString(listColumnName) + ") values("+ Utils.JoinStingListToString(listParameter) + ")";
+
+            //构建参数值
             SQLiteParameter parameter = null;
             List <SQLiteParameter> parameters = new List<SQLiteParameter>();
-            parameter = new SQLiteParameter("@farmer_id", people.Farmer_id);
-            parameters.Add(parameter);
-
-            parameter = new SQLiteParameter("@people_name", people.People_name);
-            parameters.Add(parameter);
-
-            parameter = new SQLiteParameter("@idcard", people.Idcard);
-            parameters.Add(parameter);
-
-            parameter = new SQLiteParameter("@relationship", people.Relationship);
-            parameters.Add(parameter);
-
-            parameter = new SQLiteParameter("@statues", people.Statues);
-            parameters.Add(parameter);
+            if (tblSchema != null)
+            {
+                foreach (DataRow row in tblSchema.Rows)
+                {
+                    if (row["ColumnName"].ToString() == "people_id")
+                    {
+                        continue;
+                    }
+                    string ColumnName = row["ColumnName"].ToString();
+                    string PropertyName = Utils.Capitalize(row["ColumnName"].ToString());
+                    parameter = new SQLiteParameter("@"+ ColumnName, people.GetType().GetProperty(PropertyName).GetValue(people, null));
+                    parameters.Add(parameter);
+                }
+            }
 
             return  this.sqlDB.ExecuteNonQuery(sql,CommandType.Text,parameters);
         }
