@@ -204,6 +204,7 @@
             this.cbTown.Size = new System.Drawing.Size(200, 32);
             this.cbTown.TabIndex = 7;
             this.cbTown.SelectedIndexChanged += new System.EventHandler(this.cbTown_SelectedIndexChanged);
+            this.cbTown.SelectionChangeCommitted += new System.EventHandler(this.cbTown_SelectionChangeCommitted);
             // 
             // cbRelationship
             // 

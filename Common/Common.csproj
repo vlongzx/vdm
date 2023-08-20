@@ -58,8 +58,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="KeyValue.cs" />
+    <Compile Include="MakeObject.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{8db26780-23b3-4624-95c8-c1a2ce08070f}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

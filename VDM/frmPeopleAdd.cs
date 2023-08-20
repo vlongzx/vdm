@@ -266,14 +266,19 @@ namespace com.vdm.form
 
         }
 
+        private void cbTown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         /// <summary>
-        ///  选择乡镇发生变化
+        ///  乡镇选择发生改变触发该事件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void cbTown_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbTown_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if(this.cbTown.SelectedValue != null)
+            if (this.cbTown.SelectedValue != null)
             {
                 orgBLL = new OrgBLL();
                 int select_village = int.Parse(this.cbTown.SelectedValue.ToString());
@@ -285,8 +290,6 @@ namespace com.vdm.form
                     this.cbVillage.ValueMember = "key";
                 }
             }
-            
-
         }
     }
 }

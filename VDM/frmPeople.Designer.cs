@@ -67,10 +67,9 @@
             this.btImport = new System.Windows.Forms.Button();
             this.btExport = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvPeople = new System.Windows.Forms.DataGridView();
+            this.lvPeople = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPeople)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -468,7 +467,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.dgvPeople);
+            this.groupBox2.Controls.Add(this.lvPeople);
             this.groupBox2.Location = new System.Drawing.Point(12, 279);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1874, 733);
@@ -476,17 +475,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "数据列表";
             // 
-            // dgvPeople
+            // lvPeople
             // 
-            this.dgvPeople.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lvPeople.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPeople.Location = new System.Drawing.Point(17, 27);
-            this.dgvPeople.Name = "dgvPeople";
-            this.dgvPeople.RowTemplate.Height = 30;
-            this.dgvPeople.Size = new System.Drawing.Size(1842, 663);
-            this.dgvPeople.TabIndex = 0;
+            this.lvPeople.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lvPeople.FullRowSelect = true;
+            this.lvPeople.GridLines = true;
+            this.lvPeople.Location = new System.Drawing.Point(18, 27);
+            this.lvPeople.Name = "lvPeople";
+            this.lvPeople.Size = new System.Drawing.Size(1839, 650);
+            this.lvPeople.TabIndex = 0;
+            this.lvPeople.UseCompatibleStateImageBehavior = false;
             // 
             // frmPeople
             // 
@@ -503,10 +503,10 @@
             this.Name = "frmPeople";
             this.Text = "人员信息管理";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmPeople_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPeople)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -552,6 +552,6 @@
         private System.Windows.Forms.Button btImport;
         private System.Windows.Forms.Button btExport;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dgvPeople;
+        private System.Windows.Forms.ListView lvPeople;
     }
 }
