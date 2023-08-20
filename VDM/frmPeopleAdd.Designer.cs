@@ -80,6 +80,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.cbIndustry = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.tbUnit_or_school = new System.Windows.Forms.TextBox();
             this.tbWork_study_location = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -97,12 +98,13 @@
             this.label30 = new System.Windows.Forms.Label();
             this.cbBig_ill_help = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.tbDisability_reason = new System.Windows.Forms.TextBox();
             this.cbDisability_type = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.btCancel = new System.Windows.Forms.Button();
             this.btSubmit = new System.Windows.Forms.Button();
-            this.tbUnit_or_school = new System.Windows.Forms.TextBox();
-            this.tbDisability_reason = new System.Windows.Forms.TextBox();
+            this.tbPq_gettime = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -501,11 +503,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.label34);
             this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label36);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.cbWork_or_study);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.cbMilitary_service);
-            this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.cbSkill_train);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.cbEmploy_guide);
@@ -515,6 +516,7 @@
             this.groupBox3.Controls.Add(this.cbIndustry);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.tbUnit_or_school);
+            this.groupBox3.Controls.Add(this.tbPq_gettime);
             this.groupBox3.Controls.Add(this.tbWork_study_location);
             this.groupBox3.Location = new System.Drawing.Point(12, 403);
             this.groupBox3.Name = "groupBox3";
@@ -578,7 +580,7 @@
             this.cbMilitary_service.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMilitary_service.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbMilitary_service.FormattingEnabled = true;
-            this.cbMilitary_service.Location = new System.Drawing.Point(1284, 90);
+            this.cbMilitary_service.Location = new System.Drawing.Point(907, 145);
             this.cbMilitary_service.Name = "cbMilitary_service";
             this.cbMilitary_service.Size = new System.Drawing.Size(200, 32);
             this.cbMilitary_service.TabIndex = 2;
@@ -587,11 +589,11 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label21.Location = new System.Drawing.Point(1147, 95);
+            this.label21.Location = new System.Drawing.Point(755, 148);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(106, 24);
+            this.label21.Size = new System.Drawing.Size(154, 24);
             this.label21.TabIndex = 0;
-            this.label21.Text = "服兵役：";
+            this.label21.Text = "是否服兵役：";
             // 
             // cbSkill_train
             // 
@@ -673,6 +675,14 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "从事行业：";
             // 
+            // tbUnit_or_school
+            // 
+            this.tbUnit_or_school.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbUnit_or_school.Location = new System.Drawing.Point(907, 25);
+            this.tbUnit_or_school.Name = "tbUnit_or_school";
+            this.tbUnit_or_school.Size = new System.Drawing.Size(200, 35);
+            this.tbUnit_or_school.TabIndex = 1;
+            // 
             // tbWork_study_location
             // 
             this.tbWork_study_location.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -690,7 +700,9 @@
             this.groupBox4.Controls.Add(this.label24);
             this.groupBox4.Controls.Add(this.cbIs_relocation);
             this.groupBox4.Controls.Add(this.label29);
+            this.groupBox4.Controls.Add(this.cbMilitary_service);
             this.groupBox4.Controls.Add(this.cbIs_unable_old);
+            this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.cbTemporary_help);
             this.groupBox4.Controls.Add(this.label27);
@@ -812,13 +824,12 @@
             // 
             // label31
             // 
-            this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label31.Location = new System.Drawing.Point(399, 148);
+            this.label31.Location = new System.Drawing.Point(400, 133);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(130, 24);
+            this.label31.Size = new System.Drawing.Size(130, 48);
             this.label31.TabIndex = 0;
-            this.label31.Text = "所属分类：";
+            this.label31.Text = "低保等级/五保类别:";
             // 
             // cbLow_five
             // 
@@ -859,6 +870,14 @@
             this.label26.Size = new System.Drawing.Size(130, 24);
             this.label26.TabIndex = 0;
             this.label26.Text = "大病救助：";
+            // 
+            // tbDisability_reason
+            // 
+            this.tbDisability_reason.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbDisability_reason.Location = new System.Drawing.Point(906, 27);
+            this.tbDisability_reason.Name = "tbDisability_reason";
+            this.tbDisability_reason.Size = new System.Drawing.Size(200, 35);
+            this.tbDisability_reason.TabIndex = 1;
             // 
             // cbDisability_type
             // 
@@ -902,21 +921,22 @@
             this.btSubmit.UseVisualStyleBackColor = true;
             this.btSubmit.Click += new System.EventHandler(this.btSubmit_Click);
             // 
-            // tbUnit_or_school
+            // tbPq_gettime
             // 
-            this.tbUnit_or_school.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbUnit_or_school.Location = new System.Drawing.Point(907, 25);
-            this.tbUnit_or_school.Name = "tbUnit_or_school";
-            this.tbUnit_or_school.Size = new System.Drawing.Size(200, 35);
-            this.tbUnit_or_school.TabIndex = 1;
+            this.tbPq_gettime.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPq_gettime.Location = new System.Drawing.Point(1284, 82);
+            this.tbPq_gettime.Name = "tbPq_gettime";
+            this.tbPq_gettime.Size = new System.Drawing.Size(200, 35);
+            this.tbPq_gettime.TabIndex = 1;
             // 
-            // tbDisability_reason
+            // label36
             // 
-            this.tbDisability_reason.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbDisability_reason.Location = new System.Drawing.Point(906, 27);
-            this.tbDisability_reason.Name = "tbDisability_reason";
-            this.tbDisability_reason.Size = new System.Drawing.Size(200, 35);
-            this.tbDisability_reason.TabIndex = 1;
+            this.label36.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label36.Location = new System.Drawing.Point(1138, 75);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(139, 50);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "职称等级及获得时间:";
             // 
             // frmPeopleAdd
             // 
@@ -1025,5 +1045,7 @@
         private System.Windows.Forms.DateTimePicker dtBirthday;
         private System.Windows.Forms.TextBox tbUnit_or_school;
         private System.Windows.Forms.TextBox tbDisability_reason;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox tbPq_gettime;
     }
 }

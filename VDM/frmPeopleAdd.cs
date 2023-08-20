@@ -1,5 +1,6 @@
 ﻿using com.vdm.bll;
 using com.vdm.common;
+using com.vdm.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -206,6 +207,15 @@ namespace com.vdm.form
                 this.cbBig_ill_help.ValueMember = "key";
             }
 
+            //初始化是否实名认证
+            List<KeyValue> list_is_real_name = dictBLL.getDict("is_real_name");
+            if (list_is_real_name != null)
+            {
+                this.cbIs_real_name.DataSource = list_is_real_name;
+                this.cbIs_real_name.DisplayMember = "value";
+                this.cbIs_real_name.ValueMember = "key";
+            }
+
             //初始化临时救助
             List<KeyValue> list_temporary_help = dictBLL.getDict("temporary_help");
             if (list_temporary_help != null)
@@ -263,7 +273,80 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btSubmit_Click(object sender, EventArgs e)
         {
+            //数据校验
+            if (this.tbPeople_name.Text.Trim() == "") {
+                MessageBox.Show("姓名不能为空。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            //验证输入的身份证是否合法
+            if (this.tbIdcard.Text.Trim() != "" && Utils.IsIDCard(this.tbIdcard.Text.Trim()) == false)
+            {
+                MessageBox.Show("您输入的身份证号码不合法，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
+
+            //从界面获取值封装业务对象
+            //------------------基础信息部分---------------------------------
+            People people = new People();
+            people.People_name = this.tbPeople_name.Text.Trim();
+            people.Sex = this.cbSex.SelectedValue.ToString();
+            people.Nation = this.cbNation.SelectedValue.ToString();
+            people.Relationship = this.cbRelationship.SelectedValue.ToString();
+            people.Birthday = this.dtBirthday.Value.ToString();
+            people.Idcard = this.tbIdcard.Text.Trim();
+            people.Phone_number = this.tbPhone_number.Text.Trim();
+            people.Town = this.cbTown.SelectedValue.ToString();
+            people.Villiage = this.cbVillage.SelectedValue.ToString();
+            people.Marital_status = this.cbMarital_status.SelectedValue.ToString();
+            people.Is_real_name = this.cbIs_real_name.SelectedValue.ToString();
+            people.Blood_type = this.cbBlood_type.SelectedValue.ToString();
+            people.Remark = this.tbRemark.Text.Trim();
+            //------------------------------------------------------------------
+            //-----------------政治面貌与宗教信仰
+            people.Politcal_outlook = this.cbPolitcal_outlook.SelectedValue.ToString();
+            people.Join_party_time = this.tbJoin_party_time.Text.Trim();
+            people.Religious_belief = this.cbReligious_belief.SelectedValue.ToString();
+            people.Education = this.cbEducation.SelectedValue.ToString();
+            //------------------------------------------------------------------
+            //-----------------就业社保情况
+            people.Work_or_study = this.cbWork_or_study.SelectedValue.ToString();
+            people.Industry = this.cbIndustry.SelectedValue.ToString();
+            people.Unit_or_school = this.tbUnit_or_school.Text.Trim();
+            people.Work_study_location = this.tbWork_study_location.Text.Trim();
+            people.Skill_type = this.cbSkill_type.SelectedValue.ToString();
+            people.Employ_guide = this.cbEmploy_guide.SelectedValue.ToString();
+            people.Skill_train = this.cbSkill_train.SelectedValue.ToString();
+            people.Pq_gettime = this.tbPq_gettime.Text.Trim();
+            //------------------------------------------------------------------
+            //-----------------健康信息
+            people.Disability_type = this.cbDisability_type.SelectedValue.ToString();
+            people.Disability_grade = this.cbDisability_grade.SelectedValue.ToString();
+            people.Disability_reason = this.tbDisability_reason.Text.Trim();
+            people.Big_ill_help = this.cbBig_ill_help.SelectedValue.ToString();
+            people.Temporary_help = this.cbTemporary_help.SelectedValue.ToString();
+            people.Is_unable_old = this.cbIs_unable_old.SelectedValue.ToString();
+            people.Is_relocation = this.cbIs_relocation.SelectedValue.ToString();
+            people.Low_five = this.cbLow_five.SelectedValue.ToString();
+            people.Low_five_grade = this.cbLow_five_grade.SelectedValue.ToString();
+            people.Military_service = this.cbMilitary_service.SelectedValue.ToString();
+            people.Creater = LoginInfo.CurrentUser.Account;
+            people.Create_datetime = DateTime.Now.ToString();
+            people.Statues = 1;//默认有效
+            PeopleBLL peopleBLL = new PeopleBLL();
+            Result result  = peopleBLL.AddPeople(people);
+
+            if(result.Count == 1)
+            {
+                MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LogHelper.Error(result.Information,result.Exception);
+            }
         }
 
         private void cbTown_SelectedIndexChanged(object sender, EventArgs e)

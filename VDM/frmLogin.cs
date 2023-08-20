@@ -1,4 +1,5 @@
 ﻿using com.vdm.bll;
+using com.vdm.common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,8 @@ namespace com.vdm.form
 
             if(result == 1)
             {
+                LoginInfo.CurrentUser.Account = username;
+                LoginInfo.CurrentUser.LoginTime = DateTime.Now;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

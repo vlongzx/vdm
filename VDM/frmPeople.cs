@@ -24,30 +24,42 @@ namespace com.vdm.form
         {
             Form formPeopleAdd = new frmPeopleAdd();
             formPeopleAdd.ShowDialog();
+            if(formPeopleAdd.DialogResult == DialogResult.OK)
+            {
+                InitListView();
+            }
         }
 
         private void frmPeople_Load(object sender, EventArgs e)
         {
+            InitListView();
+        }
+        /// <summary>
+        ///  初始化ListView
+        /// </summary>
+        public void InitListView()
+        {
+            this.lvPeople.Items.Clear();
             this.lvPeople.View = View.Details;
-            this.lvPeople.Columns.Add("姓名",100);
-            this.lvPeople.Columns.Add("身份证号",260);
+            this.lvPeople.Columns.Add("姓名", 100);
+            this.lvPeople.Columns.Add("身份证号", 260);
             this.lvPeople.Columns.Add("出生日期", 150);
             this.lvPeople.Columns.Add("性别", 100);
             this.lvPeople.Columns.Add("与户主关系", 150, HorizontalAlignment.Center);
-            this.lvPeople.Columns.Add("民族", 100,HorizontalAlignment.Center);
+            this.lvPeople.Columns.Add("民族", 100, HorizontalAlignment.Center);
             this.lvPeople.Columns.Add("政治面貌", 150);
-            this.lvPeople.Columns.Add( "入党时间", 150);
+            this.lvPeople.Columns.Add("入党时间", 150);
             this.lvPeople.Columns.Add("联系电话", 150);
             this.lvPeople.Columns.Add("是否实名", 150);
             this.lvPeople.Columns.Add("所属镇", 150);
             this.lvPeople.Columns.Add("所属村", 150);
             this.lvPeople.Columns.Add("宗教信仰", 150);
-            this.lvPeople.Columns.Add( "学历", 100);
+            this.lvPeople.Columns.Add("学历", 100);
             this.lvPeople.Columns.Add("血型", 100);
-            this.lvPeople.Columns.Add( "婚姻状况", 150);
-            this.lvPeople.Columns.Add( "是否外出", 150);
+            this.lvPeople.Columns.Add("婚姻状况", 150);
+            this.lvPeople.Columns.Add("是否外出", 150);
             this.lvPeople.Columns.Add("从事行业", 150);
-            this.lvPeople.Columns.Add( "工作单位/学校名称", 300);
+            this.lvPeople.Columns.Add("工作单位/学校名称", 300);
             this.lvPeople.Columns.Add("工作地点/学习地点", 300);
             this.lvPeople.Columns.Add("技能类型", 150);
             this.lvPeople.Columns.Add("就业指导", 150);
@@ -68,7 +80,7 @@ namespace com.vdm.form
             peopleBLL = new PeopleBLL();
             //初始化加载数据
             List<People> list_people = this.peopleBLL.getAllPeople();
-            foreach(People people in list_people)
+            foreach (People people in list_people)
             {
                 ListViewItem lvi = new ListViewItem();
                 lvi.Tag = people.People_id;//存储主键

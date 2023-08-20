@@ -1,4 +1,5 @@
-﻿using System;
+﻿using com.vdm.common;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -62,7 +63,7 @@ namespace com.vdm.dal
         /// <param name="commandType">要执行的查询语句的类型，如存储过程或者SQL文本命令</param>
         /// <param name="parameters">Transact-SQL 语句或存储过程的参数数组</param>
         /// <returns></returns>
-        public DataTable ExecuteDataTable(string sql, CommandType commandType, SqlParameter[] parameters)
+        public DataTable ExecuteDataTable(string sql, CommandType commandType,List<SQLiteParameter> parameters)
         {
             DataTable data = new DataTable();//实例化DataTable，用于装载查询结果集
             using (SQLiteConnection  connection = new SQLiteConnection (connectionString))
@@ -73,7 +74,7 @@ namespace com.vdm.dal
                     //如果同时传入了参数，则添加这些参数
                     if (parameters != null)
                     {
-                        foreach (SqlParameter parameter in parameters)
+                        foreach (SQLiteParameter parameter in parameters)
                         {
                             command.Parameters.Add(parameter);
                         }
@@ -112,14 +113,14 @@ namespace com.vdm.dal
         /// <param name="commandType">要执行的查询语句的类型，如存储过程或者SQL文本命令</param>
         /// <param name="parameters">Transact-SQL 语句或存储过程的参数数组</param>
         /// <returns></returns>
-        public SQLiteDataReader ExecuteReader(string sql, CommandType commandType, SqlParameter[] parameters)
+        public SQLiteDataReader ExecuteReader(string sql, CommandType commandType, List<SQLiteParameter> parameters)
         {
             SQLiteConnection  connection = new SQLiteConnection (connectionString);
             SQLiteCommand  command = new SQLiteCommand (sql, connection);
             //如果同时传入了参数，则添加这些参数
             if (parameters != null)
             {
-                foreach (SqlParameter parameter in parameters)
+                foreach (SQLiteParameter parameter in parameters)
                 {
                     command.Parameters.Add(parameter);
                 }
@@ -154,7 +155,7 @@ namespace com.vdm.dal
         /// <param name="commandType">要执行的查询语句的类型，如存储过程或者SQL文本命令</param>
         /// <param name="parameters">Transact-SQL 语句或存储过程的参数数组</param>
         /// <returns></returns>
-        public Object ExecuteScalar(string sql, CommandType commandType, SqlParameter[] parameters)
+        public Object ExecuteScalar(string sql, CommandType commandType, List<SQLiteParameter> parameters)
         {
             object result = null;
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
@@ -165,7 +166,7 @@ namespace com.vdm.dal
                     //如果同时传入了参数，则添加这些参数
                     if (parameters != null)
                     {
-                        foreach (SqlParameter parameter in parameters)
+                        foreach (SQLiteParameter parameter in parameters)
                         {
                             command.Parameters.Add(parameter);
                         }
@@ -181,7 +182,7 @@ namespace com.vdm.dal
         /// </summary>
         /// <param name="sql">要执行的查询SQL文本命令</param>
         /// <returns></returns>
-        public int ExecuteNonQuery(string sql)
+        public Result ExecuteNonQuery(string sql)
         {
             return ExecuteNonQuery(sql, CommandType.Text, null);
         }
@@ -191,7 +192,7 @@ namespace com.vdm.dal
         /// <param name="sql">要执行的SQL语句</param>
         /// <param name="commandType">要执行的查询语句的类型，如存储过程或者SQL文本命令</param>
         /// <returns></returns>
-        public int ExecuteNonQuery(string sql, CommandType commandType)
+        public Result  ExecuteNonQuery(string sql, CommandType commandType)
         {
             return ExecuteNonQuery(sql, commandType, null);
         }
@@ -202,27 +203,38 @@ namespace com.vdm.dal
         /// <param name="commandType">要执行的查询语句的类型，如存储过程或者SQL文本命令</param>
         /// <param name="parameters">Transact-SQL 语句或存储过程的参数数组</param>
         /// <returns></returns>
-        public int ExecuteNonQuery(string sql, CommandType commandType, SqlParameter[] parameters)
+        public Result ExecuteNonQuery(string sql, CommandType commandType, List<SQLiteParameter> parameters)
         {
-            int count = 0;
-            using (SQLiteConnection  connection = new SQLiteConnection (connectionString))
+            Result result = new Result();
+            try
             {
-                using (SQLiteCommand  command = new SQLiteCommand (sql, connection))
+                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
                 {
-                    command.CommandType = commandType;//设置command的CommandType为指定的CommandType
-                    //如果同时传入了参数，则添加这些参数
-                    if (parameters != null)
-                    {
-                        foreach (SqlParameter parameter in parameters)
-                        {
-                            command.Parameters.Add(parameter);
-                        }
-                    }
                     connection.Open();//打开数据库连接
-                    count = command.ExecuteNonQuery();
+                    using (SQLiteCommand command = new SQLiteCommand(sql, connection))
+                    {
+                        command.CommandType = commandType;//设置command的CommandType为指定的CommandType
+                                                          //如果同时传入了参数，则添加这些参数
+                        if (parameters != null)
+                        {
+                            foreach (SQLiteParameter parameter in parameters)
+                            {
+                                command.Parameters.Add(parameter);
+                            }
+                        }
+
+                        result.Count = command.ExecuteNonQuery();
+                        
+                    }
                 }
             }
-            return count;//返回执行增删改操作之后，数据库中受影响的行数
+            catch(Exception ex)
+            {
+                result.Exception = ex;
+                result.Information = ex.Message;
+            }
+            
+            return result;//返回执行增删改操作之后，数据库中受影响的行数
         }
         /// <summary>
         /// 返回当前连接的数据库中所有由用户创建的数据库

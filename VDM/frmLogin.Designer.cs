@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labSystemName = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labSystemName = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "欢迎登录";
+            // 
+            // labSystemName
+            // 
+            this.labSystemName.AutoSize = true;
+            this.labSystemName.Font = new System.Drawing.Font("楷体", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labSystemName.Location = new System.Drawing.Point(251, 59);
+            this.labSystemName.Name = "labSystemName";
+            this.labSystemName.Size = new System.Drawing.Size(378, 33);
+            this.labSystemName.TabIndex = 3;
+            this.labSystemName.Text = "万荣县乡村数据采集系统";
             // 
             // btLogin
             // 
@@ -72,6 +82,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(500, 39);
             this.txtPassword.TabIndex = 1;
+            this.txtPassword.Text = "123456";
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // txtUsername
@@ -81,6 +92,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(500, 39);
             this.txtUsername.TabIndex = 0;
+            this.txtUsername.Text = "lisi";
             // 
             // label2
             // 
@@ -101,16 +113,6 @@
             this.label1.Size = new System.Drawing.Size(124, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "用户名：";
-            // 
-            // labSystemName
-            // 
-            this.labSystemName.AutoSize = true;
-            this.labSystemName.Font = new System.Drawing.Font("楷体", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labSystemName.Location = new System.Drawing.Point(251, 59);
-            this.labSystemName.Name = "labSystemName";
-            this.labSystemName.Size = new System.Drawing.Size(378, 33);
-            this.labSystemName.TabIndex = 3;
-            this.labSystemName.Text = "万荣县乡村数据采集系统";
             // 
             // frmLogin
             // 

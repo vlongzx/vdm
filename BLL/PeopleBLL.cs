@@ -38,5 +38,10 @@ namespace com.vdm.bll
             }
             return list_people;
         }
+
+        public Result AddPeople(People people)
+        {
+            return this.peopleDAL.CreatePeople(people);
+        }
     }
 }
