@@ -495,7 +495,7 @@
             // btRefresh
             // 
             this.btRefresh.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btRefresh.Location = new System.Drawing.Point(741, 213);
+            this.btRefresh.Location = new System.Drawing.Point(752, 213);
             this.btRefresh.Name = "btRefresh";
             this.btRefresh.Size = new System.Drawing.Size(140, 60);
             this.btRefresh.TabIndex = 4;
