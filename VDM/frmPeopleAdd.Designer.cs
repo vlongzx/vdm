@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtBirthday = new System.Windows.Forms.DateTimePicker();
             this.cbBlood_type = new System.Windows.Forms.ComboBox();
             this.cbIs_real_name = new System.Windows.Forms.ComboBox();
             this.cbMarital_status = new System.Windows.Forms.ComboBox();
@@ -64,7 +65,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tbJoin_party_time = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbUnit_or_school = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -82,7 +82,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tbWork_study_location = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cbDisability_reason = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.cbDisability_grade = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -102,7 +101,8 @@
             this.label23 = new System.Windows.Forms.Label();
             this.btCancel = new System.Windows.Forms.Button();
             this.btSubmit = new System.Windows.Forms.Button();
-            this.dtBirthday = new System.Windows.Forms.DateTimePicker();
+            this.tbUnit_or_school = new System.Windows.Forms.TextBox();
+            this.tbDisability_reason = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -146,8 +146,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息";
             // 
+            // dtBirthday
+            // 
+            this.dtBirthday.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtBirthday.Location = new System.Drawing.Point(168, 91);
+            this.dtBirthday.Name = "dtBirthday";
+            this.dtBirthday.Size = new System.Drawing.Size(200, 35);
+            this.dtBirthday.TabIndex = 12;
+            // 
             // cbBlood_type
             // 
+            this.cbBlood_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBlood_type.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbBlood_type.FormattingEnabled = true;
             this.cbBlood_type.Location = new System.Drawing.Point(1295, 144);
@@ -167,6 +176,7 @@
             // 
             // cbMarital_status
             // 
+            this.cbMarital_status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMarital_status.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbMarital_status.FormattingEnabled = true;
             this.cbMarital_status.Location = new System.Drawing.Point(539, 147);
@@ -176,6 +186,7 @@
             // 
             // cbVillage
             // 
+            this.cbVillage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbVillage.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbVillage.FormattingEnabled = true;
             this.cbVillage.Location = new System.Drawing.Point(168, 150);
@@ -185,15 +196,18 @@
             // 
             // cbTown
             // 
+            this.cbTown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTown.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTown.FormattingEnabled = true;
             this.cbTown.Location = new System.Drawing.Point(1295, 93);
             this.cbTown.Name = "cbTown";
             this.cbTown.Size = new System.Drawing.Size(200, 32);
             this.cbTown.TabIndex = 7;
+            this.cbTown.SelectedIndexChanged += new System.EventHandler(this.cbTown_SelectedIndexChanged);
             // 
             // cbRelationship
             // 
+            this.cbRelationship.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRelationship.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbRelationship.FormattingEnabled = true;
             this.cbRelationship.Location = new System.Drawing.Point(1295, 36);
@@ -213,6 +227,7 @@
             // 
             // cbNation
             // 
+            this.cbNation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNation.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbNation.FormattingEnabled = true;
             this.cbNation.Location = new System.Drawing.Point(916, 37);
@@ -403,6 +418,7 @@
             // 
             // cbEducation
             // 
+            this.cbEducation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEducation.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbEducation.FormattingEnabled = true;
             this.cbEducation.Location = new System.Drawing.Point(1295, 32);
@@ -422,6 +438,7 @@
             // 
             // cbReligious_belief
             // 
+            this.cbReligious_belief.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbReligious_belief.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbReligious_belief.FormattingEnabled = true;
             this.cbReligious_belief.Location = new System.Drawing.Point(916, 35);
@@ -451,6 +468,7 @@
             // 
             // cbPolitcal_outlook
             // 
+            this.cbPolitcal_outlook.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPolitcal_outlook.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbPolitcal_outlook.FormattingEnabled = true;
             this.cbPolitcal_outlook.Location = new System.Drawing.Point(168, 41);
@@ -480,7 +498,6 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.cbUnit_or_school);
             this.groupBox3.Controls.Add(this.label34);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label16);
@@ -496,6 +513,7 @@
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.cbIndustry);
             this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.tbUnit_or_school);
             this.groupBox3.Controls.Add(this.tbWork_study_location);
             this.groupBox3.Location = new System.Drawing.Point(12, 403);
             this.groupBox3.Name = "groupBox3";
@@ -503,15 +521,6 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "职业就业情况";
-            // 
-            // cbUnit_or_school
-            // 
-            this.cbUnit_or_school.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbUnit_or_school.FormattingEnabled = true;
-            this.cbUnit_or_school.Location = new System.Drawing.Point(907, 31);
-            this.cbUnit_or_school.Name = "cbUnit_or_school";
-            this.cbUnit_or_school.Size = new System.Drawing.Size(200, 32);
-            this.cbUnit_or_school.TabIndex = 2;
             // 
             // label34
             // 
@@ -545,6 +554,7 @@
             // 
             // cbWork_or_study
             // 
+            this.cbWork_or_study.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbWork_or_study.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbWork_or_study.FormattingEnabled = true;
             this.cbWork_or_study.Location = new System.Drawing.Point(168, 31);
@@ -564,6 +574,7 @@
             // 
             // cbMilitary_service
             // 
+            this.cbMilitary_service.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMilitary_service.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbMilitary_service.FormattingEnabled = true;
             this.cbMilitary_service.Location = new System.Drawing.Point(1284, 90);
@@ -583,6 +594,7 @@
             // 
             // cbSkill_train
             // 
+            this.cbSkill_train.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSkill_train.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbSkill_train.FormattingEnabled = true;
             this.cbSkill_train.Location = new System.Drawing.Point(907, 85);
@@ -602,6 +614,7 @@
             // 
             // cbEmploy_guide
             // 
+            this.cbEmploy_guide.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmploy_guide.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbEmploy_guide.FormattingEnabled = true;
             this.cbEmploy_guide.Location = new System.Drawing.Point(536, 88);
@@ -621,6 +634,7 @@
             // 
             // cbSkill_type
             // 
+            this.cbSkill_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSkill_type.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbSkill_type.FormattingEnabled = true;
             this.cbSkill_type.Location = new System.Drawing.Point(168, 88);
@@ -640,6 +654,7 @@
             // 
             // cbIndustry
             // 
+            this.cbIndustry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIndustry.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbIndustry.FormattingEnabled = true;
             this.cbIndustry.Location = new System.Drawing.Point(536, 31);
@@ -669,7 +684,6 @@
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.cbDisability_reason);
             this.groupBox4.Controls.Add(this.label25);
             this.groupBox4.Controls.Add(this.cbDisability_grade);
             this.groupBox4.Controls.Add(this.label24);
@@ -685,6 +699,7 @@
             this.groupBox4.Controls.Add(this.label30);
             this.groupBox4.Controls.Add(this.cbBig_ill_help);
             this.groupBox4.Controls.Add(this.label26);
+            this.groupBox4.Controls.Add(this.tbDisability_reason);
             this.groupBox4.Controls.Add(this.cbDisability_type);
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Location = new System.Drawing.Point(12, 564);
@@ -693,15 +708,6 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "社会保障情况";
-            // 
-            // cbDisability_reason
-            // 
-            this.cbDisability_reason.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbDisability_reason.FormattingEnabled = true;
-            this.cbDisability_reason.Location = new System.Drawing.Point(907, 29);
-            this.cbDisability_reason.Name = "cbDisability_reason";
-            this.cbDisability_reason.Size = new System.Drawing.Size(200, 32);
-            this.cbDisability_reason.TabIndex = 2;
             // 
             // label25
             // 
@@ -715,6 +721,7 @@
             // 
             // cbDisability_grade
             // 
+            this.cbDisability_grade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDisability_grade.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbDisability_grade.FormattingEnabled = true;
             this.cbDisability_grade.Location = new System.Drawing.Point(536, 29);
@@ -734,6 +741,7 @@
             // 
             // cbIs_relocation
             // 
+            this.cbIs_relocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIs_relocation.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbIs_relocation.FormattingEnabled = true;
             this.cbIs_relocation.Location = new System.Drawing.Point(1284, 85);
@@ -753,6 +761,7 @@
             // 
             // cbIs_unable_old
             // 
+            this.cbIs_unable_old.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIs_unable_old.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbIs_unable_old.FormattingEnabled = true;
             this.cbIs_unable_old.Location = new System.Drawing.Point(907, 87);
@@ -772,6 +781,7 @@
             // 
             // cbTemporary_help
             // 
+            this.cbTemporary_help.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTemporary_help.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTemporary_help.FormattingEnabled = true;
             this.cbTemporary_help.Location = new System.Drawing.Point(536, 87);
@@ -791,6 +801,7 @@
             // 
             // cbLow_five_grade
             // 
+            this.cbLow_five_grade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLow_five_grade.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbLow_five_grade.FormattingEnabled = true;
             this.cbLow_five_grade.Location = new System.Drawing.Point(536, 143);
@@ -810,6 +821,7 @@
             // 
             // cbLow_five
             // 
+            this.cbLow_five.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLow_five.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbLow_five.FormattingEnabled = true;
             this.cbLow_five.Location = new System.Drawing.Point(168, 143);
@@ -829,6 +841,7 @@
             // 
             // cbBig_ill_help
             // 
+            this.cbBig_ill_help.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBig_ill_help.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbBig_ill_help.FormattingEnabled = true;
             this.cbBig_ill_help.Location = new System.Drawing.Point(168, 85);
@@ -848,6 +861,7 @@
             // 
             // cbDisability_type
             // 
+            this.cbDisability_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDisability_type.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbDisability_type.FormattingEnabled = true;
             this.cbDisability_type.Location = new System.Drawing.Point(168, 27);
@@ -887,13 +901,21 @@
             this.btSubmit.UseVisualStyleBackColor = true;
             this.btSubmit.Click += new System.EventHandler(this.btSubmit_Click);
             // 
-            // dtBirthday
+            // tbUnit_or_school
             // 
-            this.dtBirthday.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dtBirthday.Location = new System.Drawing.Point(168, 91);
-            this.dtBirthday.Name = "dtBirthday";
-            this.dtBirthday.Size = new System.Drawing.Size(200, 35);
-            this.dtBirthday.TabIndex = 12;
+            this.tbUnit_or_school.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbUnit_or_school.Location = new System.Drawing.Point(907, 25);
+            this.tbUnit_or_school.Name = "tbUnit_or_school";
+            this.tbUnit_or_school.Size = new System.Drawing.Size(200, 35);
+            this.tbUnit_or_school.TabIndex = 1;
+            // 
+            // tbDisability_reason
+            // 
+            this.tbDisability_reason.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbDisability_reason.Location = new System.Drawing.Point(906, 27);
+            this.tbDisability_reason.Name = "tbDisability_reason";
+            this.tbDisability_reason.Size = new System.Drawing.Size(200, 35);
+            this.tbDisability_reason.TabIndex = 1;
             // 
             // frmPeopleAdd
             // 
@@ -957,7 +979,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tbJoin_party_time;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox cbUnit_or_school;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox cbWork_or_study;
@@ -976,7 +997,6 @@
         private System.Windows.Forms.ComboBox cbBlood_type;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox cbDisability_reason;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox cbDisability_grade;
         private System.Windows.Forms.Label label24;
@@ -1002,5 +1022,7 @@
         private System.Windows.Forms.ComboBox cbEducation;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.DateTimePicker dtBirthday;
+        private System.Windows.Forms.TextBox tbUnit_or_school;
+        private System.Windows.Forms.TextBox tbDisability_reason;
     }
 }
