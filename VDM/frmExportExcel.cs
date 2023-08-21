@@ -31,21 +31,29 @@ namespace com.vdm.form
             string mypath = dialog.SelectedPath.Replace('\\', '/');
             string fileName = tbFile_name.Text;
             string password = tbFile_password.Text;
-            try
+            if (!string.IsNullOrWhiteSpace(mypath))
             {
-                if (!string.IsNullOrWhiteSpace(mypath))
+                string pathFinal = mypath + '/' + fileName + ".xlsx";
+                this.Close();
+                if (pathFinal.Trim() == "" || password.Trim() == "")
                 {
-                    string pathFinal = mypath + '/' + fileName + ".xlsx";
-                    this.Close();
-                    ExcelUtil.exportExcel(pathFinal, password);
-                    MessageBox.Show("导出成功");
+                    MessageBox.Show("文件名与密码均需要输入！");
                 }
-        }
-            catch
-            {
-                MessageBox.Show("导出失败");
-            }
+                else
+                {
+                    bool result = ExcelUtil.exportExcel(pathFinal, password);
+                    if (result)
+                    {
+                        MessageBox.Show("导入成功");
+                    }
+                    else
+                    {
+                        MessageBox.Show("导入失败");
+                    }
+                }
 
+            }
+   
 }
 
         private void frmExportExcel_Load(object sender, EventArgs e)
