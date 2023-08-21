@@ -1,5 +1,6 @@
 ﻿using com.vdm.bll;
 using com.vdm.common;
+using com.vdm.form.utils;
 using com.vdm.model;
 using System;
 using System.Collections.Generic;
@@ -310,6 +311,13 @@ namespace com.vdm.form
             people.Education = this.cbEducation.SelectedValue.ToString();
             //------------------------------------------------------------------
             this.InitListView(people);
+        }
+
+        private void btExport_Click(object sender, EventArgs e)
+        {
+            ExcelUtil.Lv = lvPeople;
+            frmExportExcel ef = new frmExportExcel();
+            ef.ShowDialog();
         }
     }
 }

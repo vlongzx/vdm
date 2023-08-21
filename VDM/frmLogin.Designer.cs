@@ -46,9 +46,11 @@
             this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(34, 37);
+            this.groupBox1.Location = new System.Drawing.Point(45, 49);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(853, 476);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1137, 635);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "欢迎登录";
@@ -57,30 +59,33 @@
             // 
             this.labSystemName.AutoSize = true;
             this.labSystemName.Font = new System.Drawing.Font("楷体", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labSystemName.Location = new System.Drawing.Point(251, 59);
+            this.labSystemName.Location = new System.Drawing.Point(335, 79);
+            this.labSystemName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labSystemName.Name = "labSystemName";
-            this.labSystemName.Size = new System.Drawing.Size(378, 33);
+            this.labSystemName.Size = new System.Drawing.Size(514, 43);
             this.labSystemName.TabIndex = 3;
             this.labSystemName.Text = "万荣县乡村数据采集系统";
             // 
             // btLogin
             // 
             this.btLogin.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btLogin.Location = new System.Drawing.Point(591, 388);
+            this.btLogin.Location = new System.Drawing.Point(788, 517);
+            this.btLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btLogin.Name = "btLogin";
-            this.btLogin.Size = new System.Drawing.Size(166, 47);
+            this.btLogin.Size = new System.Drawing.Size(221, 63);
             this.btLogin.TabIndex = 2;
-            this.btLogin.Text = "登录(&L)";
+            this.btLogin.Text = "登录（L）";
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPassword.Location = new System.Drawing.Point(257, 292);
+            this.txtPassword.Location = new System.Drawing.Point(343, 389);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(500, 39);
+            this.txtPassword.Size = new System.Drawing.Size(665, 50);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.Text = "123456";
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
@@ -88,9 +93,10 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtUsername.Location = new System.Drawing.Point(257, 174);
+            this.txtUsername.Location = new System.Drawing.Point(343, 232);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(500, 39);
+            this.txtUsername.Size = new System.Drawing.Size(665, 50);
             this.txtUsername.TabIndex = 0;
             this.txtUsername.Text = "lisi";
             // 
@@ -98,9 +104,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(127, 295);
+            this.label2.Location = new System.Drawing.Point(169, 393);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 28);
+            this.label2.Size = new System.Drawing.Size(169, 38);
             this.label2.TabIndex = 0;
             this.label2.Text = "密  码：";
             // 
@@ -108,18 +115,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(127, 177);
+            this.label1.Location = new System.Drawing.Point(169, 236);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 28);
+            this.label1.Size = new System.Drawing.Size(169, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "用户名：";
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 564);
+            this.ClientSize = new System.Drawing.Size(1239, 752);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";
