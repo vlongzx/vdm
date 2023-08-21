@@ -126,6 +126,7 @@ namespace com.vdm.form
         public void InitListView(People p)
         {
             this.lvPeople.Items.Clear();
+            this.lvPeople.Columns.Clear();
             this.lvPeople.View = View.Details;
             this.lvPeople.Columns.Add("姓名", 100);
             this.lvPeople.Columns.Add("身份证号", 260);
@@ -323,6 +324,11 @@ namespace com.vdm.form
             ExcelUtil.Lv = lvPeople;
             frmExportExcel ef = new frmExportExcel();
             ef.ShowDialog();
+        }
+
+        private void btImport_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

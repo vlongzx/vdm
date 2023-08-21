@@ -110,9 +110,9 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(16, 16);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(2499, 260);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -122,7 +122,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.Location = new System.Drawing.Point(2261, 95);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(187, 80);
             this.button2.TabIndex = 4;
@@ -133,7 +133,7 @@
             // 
             this.btSearch.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btSearch.Location = new System.Drawing.Point(2052, 95);
-            this.btSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btSearch.Name = "btSearch";
             this.btSearch.Size = new System.Drawing.Size(187, 80);
             this.btSearch.TabIndex = 4;
@@ -145,7 +145,7 @@
             // 
             this.textBox5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox5.Location = new System.Drawing.Point(876, 116);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(105, 44);
             this.textBox5.TabIndex = 3;
@@ -154,7 +154,7 @@
             // 
             this.textBox7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox7.Location = new System.Drawing.Point(1863, 116);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(105, 44);
             this.textBox7.TabIndex = 3;
@@ -163,7 +163,7 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox3.Location = new System.Drawing.Point(376, 119);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(105, 44);
             this.textBox3.TabIndex = 3;
@@ -172,7 +172,7 @@
             // 
             this.textBox6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox6.Location = new System.Drawing.Point(1705, 116);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(105, 44);
             this.textBox6.TabIndex = 3;
@@ -181,7 +181,7 @@
             // 
             this.textBox4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox4.Location = new System.Drawing.Point(719, 116);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(105, 44);
             this.textBox4.TabIndex = 3;
@@ -190,7 +190,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox2.Location = new System.Drawing.Point(216, 116);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(105, 44);
             this.textBox2.TabIndex = 3;
@@ -200,7 +200,7 @@
             this.cbSex.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbSex.FormattingEnabled = true;
             this.cbSex.Location = new System.Drawing.Point(1705, 48);
-            this.cbSex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSex.Margin = new System.Windows.Forms.Padding(4);
             this.cbSex.Name = "cbSex";
             this.cbSex.Size = new System.Drawing.Size(265, 41);
             this.cbSex.TabIndex = 2;
@@ -210,7 +210,7 @@
             this.cbEducation.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbEducation.FormattingEnabled = true;
             this.cbEducation.Location = new System.Drawing.Point(1705, 195);
-            this.cbEducation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbEducation.Margin = new System.Windows.Forms.Padding(4);
             this.cbEducation.Name = "cbEducation";
             this.cbEducation.Size = new System.Drawing.Size(265, 41);
             this.cbEducation.TabIndex = 2;
@@ -220,7 +220,7 @@
             this.cbReligious_belief.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbReligious_belief.FormattingEnabled = true;
             this.cbReligious_belief.Location = new System.Drawing.Point(1193, 195);
-            this.cbReligious_belief.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbReligious_belief.Margin = new System.Windows.Forms.Padding(4);
             this.cbReligious_belief.Name = "cbReligious_belief";
             this.cbReligious_belief.Size = new System.Drawing.Size(265, 41);
             this.cbReligious_belief.TabIndex = 2;
@@ -230,7 +230,7 @@
             this.cbPolitcal_outlook.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbPolitcal_outlook.FormattingEnabled = true;
             this.cbPolitcal_outlook.Location = new System.Drawing.Point(1193, 117);
-            this.cbPolitcal_outlook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbPolitcal_outlook.Margin = new System.Windows.Forms.Padding(4);
             this.cbPolitcal_outlook.Name = "cbPolitcal_outlook";
             this.cbPolitcal_outlook.Size = new System.Drawing.Size(265, 41);
             this.cbPolitcal_outlook.TabIndex = 2;
@@ -240,7 +240,7 @@
             this.cbNation.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbNation.FormattingEnabled = true;
             this.cbNation.Location = new System.Drawing.Point(1193, 48);
-            this.cbNation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbNation.Margin = new System.Windows.Forms.Padding(4);
             this.cbNation.Name = "cbNation";
             this.cbNation.Size = new System.Drawing.Size(265, 41);
             this.cbNation.TabIndex = 2;
@@ -250,7 +250,7 @@
             this.cbRelationship.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbRelationship.FormattingEnabled = true;
             this.cbRelationship.Location = new System.Drawing.Point(716, 48);
-            this.cbRelationship.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbRelationship.Margin = new System.Windows.Forms.Padding(4);
             this.cbRelationship.Name = "cbRelationship";
             this.cbRelationship.Size = new System.Drawing.Size(265, 41);
             this.cbRelationship.TabIndex = 2;
@@ -270,7 +270,7 @@
             // 
             this.tbPhone_number.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbPhone_number.Location = new System.Drawing.Point(716, 193);
-            this.tbPhone_number.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPhone_number.Margin = new System.Windows.Forms.Padding(4);
             this.tbPhone_number.Name = "tbPhone_number";
             this.tbPhone_number.Size = new System.Drawing.Size(265, 44);
             this.tbPhone_number.TabIndex = 1;
@@ -279,7 +279,7 @@
             // 
             this.tbIdcard.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbIdcard.Location = new System.Drawing.Point(216, 193);
-            this.tbIdcard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbIdcard.Margin = new System.Windows.Forms.Padding(4);
             this.tbIdcard.Name = "tbIdcard";
             this.tbIdcard.Size = new System.Drawing.Size(265, 44);
             this.tbIdcard.TabIndex = 1;
@@ -288,7 +288,7 @@
             // 
             this.tbPeople_name.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbPeople_name.Location = new System.Drawing.Point(216, 47);
-            this.tbPeople_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPeople_name.Margin = new System.Windows.Forms.Padding(4);
             this.tbPeople_name.Name = "tbPeople_name";
             this.tbPeople_name.Size = new System.Drawing.Size(265, 44);
             this.tbPeople_name.TabIndex = 0;
@@ -451,7 +451,7 @@
             // 
             this.btAdd.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btAdd.Location = new System.Drawing.Point(15, 284);
-            this.btAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(187, 80);
             this.btAdd.TabIndex = 4;
@@ -463,7 +463,7 @@
             // 
             this.btEdit.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btEdit.Location = new System.Drawing.Point(209, 284);
-            this.btEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(187, 80);
             this.btEdit.TabIndex = 4;
@@ -475,7 +475,7 @@
             // 
             this.btDelete.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btDelete.Location = new System.Drawing.Point(404, 284);
-            this.btDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(187, 80);
             this.btDelete.TabIndex = 4;
@@ -487,18 +487,19 @@
             // 
             this.btImport.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btImport.Location = new System.Drawing.Point(599, 284);
-            this.btImport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btImport.Margin = new System.Windows.Forms.Padding(4);
             this.btImport.Name = "btImport";
             this.btImport.Size = new System.Drawing.Size(187, 80);
             this.btImport.TabIndex = 4;
             this.btImport.Text = "导入(&I)";
             this.btImport.UseVisualStyleBackColor = true;
+            this.btImport.Click += new System.EventHandler(this.btImport_Click);
             // 
             // btExport
             // 
             this.btExport.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btExport.Location = new System.Drawing.Point(793, 284);
-            this.btExport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btExport.Margin = new System.Windows.Forms.Padding(4);
             this.btExport.Name = "btExport";
             this.btExport.Size = new System.Drawing.Size(187, 80);
             this.btExport.TabIndex = 4;
@@ -513,9 +514,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.lvPeople);
             this.groupBox2.Location = new System.Drawing.Point(16, 372);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(2499, 977);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
@@ -529,7 +530,7 @@
             this.lvPeople.FullRowSelect = true;
             this.lvPeople.GridLines = true;
             this.lvPeople.Location = new System.Drawing.Point(24, 36);
-            this.lvPeople.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvPeople.Margin = new System.Windows.Forms.Padding(4);
             this.lvPeople.Name = "lvPeople";
             this.lvPeople.Size = new System.Drawing.Size(2451, 865);
             this.lvPeople.TabIndex = 0;
@@ -539,7 +540,7 @@
             // 
             this.btRefresh.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btRefresh.Location = new System.Drawing.Point(1003, 284);
-            this.btRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btRefresh.Name = "btRefresh";
             this.btRefresh.Size = new System.Drawing.Size(187, 80);
             this.btRefresh.TabIndex = 4;
@@ -560,7 +561,7 @@
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btAdd);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPeopleList";
             this.Text = "人员信息管理";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
