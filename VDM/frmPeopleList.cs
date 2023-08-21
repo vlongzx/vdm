@@ -313,6 +313,11 @@ namespace com.vdm.form
             this.InitListView(people);
         }
 
+        /// <summary>
+        /// 导出
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btExport_Click(object sender, EventArgs e)
         {
             ExcelUtil.Lv = lvPeople;

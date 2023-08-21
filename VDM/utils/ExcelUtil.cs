@@ -11,6 +11,7 @@ namespace com.vdm.form.utils
     class ExcelUtil
     {
 
+            //要导出的ListView
             private static ListView lv;
 
             public static ListView Lv
@@ -26,6 +27,11 @@ namespace com.vdm.form.utils
                 }
             }
 
+            /// <summary>
+            /// ListView导出为Excel表格
+            /// </summary>
+            /// <param name="path">文件完整路径</param>
+            /// <param name="password">文件保护密码</param>
             public static void exportExcel(string path, string password)
             {
 

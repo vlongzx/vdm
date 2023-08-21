@@ -18,6 +18,11 @@ namespace com.vdm.form
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 选择文件导出
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btExport_excel_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
