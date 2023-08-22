@@ -392,6 +392,8 @@ namespace com.vdm.form
                         peopleBLL.AddPeople(people);
                     }
                     MessageBox.Show("导入成功");
+                    //使用的是全局变量people
+                    InitListView(this.people);
                 }
                     catch
                 {
@@ -404,6 +406,28 @@ namespace com.vdm.form
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// 重置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btReset_Click(object sender, EventArgs e)
+        {
+            //清空查询文本框内容
+            this.tbPeople_name.Text="";
+            this.cbSex.SelectedValue= "";
+            this.cbNation.SelectedValue= "";
+            this.cbRelationship.SelectedValue = "";
+            this.tbIdcard.Text = "";
+            this.tbPhone_number.Text = "";
+            this.cbPolitcal_outlook.SelectedValue = "";
+            this.cbReligious_belief.SelectedValue = "";
+            this.cbEducation.SelectedValue = "";
+            //查询所有人员信息
+            People p = null;
+            InitListView(p);
         }
     }
 }

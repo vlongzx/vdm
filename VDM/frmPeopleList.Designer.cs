@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btReset = new System.Windows.Forms.Button();
             this.btSearch = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -77,7 +77,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btReset);
             this.groupBox1.Controls.Add(this.btSearch);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.textBox7);
@@ -118,16 +118,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查询";
             // 
-            // button2
+            // btReset
             // 
-            this.button2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(2261, 95);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 80);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "重置(&R)";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btReset.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btReset.Location = new System.Drawing.Point(2261, 95);
+            this.btReset.Margin = new System.Windows.Forms.Padding(4);
+            this.btReset.Name = "btReset";
+            this.btReset.Size = new System.Drawing.Size(187, 80);
+            this.btReset.TabIndex = 4;
+            this.btReset.Text = "重置(&R)";
+            this.btReset.UseVisualStyleBackColor = true;
+            this.btReset.Click += new System.EventHandler(this.btReset_Click);
             // 
             // btSearch
             // 
@@ -521,7 +522,6 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "数据列表";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // lvPeople
             // 
@@ -593,7 +593,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btReset;
         private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
