@@ -72,7 +72,8 @@ namespace com.vdm.form
                 this.cbSkill_type.SelectedValue = people.Skill_type;
                 this.cbEmploy_guide.SelectedValue = people.Employ_guide;
                 this.cbSkill_train.SelectedValue = people.Skill_train;
-                this.tbPq_gettime.Text = people.Pq_gettime;
+                this.tbCareer_grade.Text = people.Career_grade;
+                this.dtCareer_get_time.Value = DateTime.Parse(people.Career_get_time);
                 this.cbDisability_type.SelectedValue = people.Disability_type;
                 this.cbDisability_grade.SelectedValue = people.Disability_grade;
                 this.tbDisability_reason.Text = people.Disability_reason;
@@ -374,7 +375,8 @@ namespace com.vdm.form
             people.Skill_type = this.cbSkill_type.SelectedValue.ToString();
             people.Employ_guide = this.cbEmploy_guide.SelectedValue.ToString();
             people.Skill_train = this.cbSkill_train.SelectedValue.ToString();
-            people.Pq_gettime = this.tbPq_gettime.Text.Trim();
+            people.Career_grade = this.tbCareer_grade.Text.Trim();
+            people.Career_get_time = this.dtCareer_get_time.Value.ToString();
             //------------------------------------------------------------------
             //-----------------健康信息
             people.Disability_type = this.cbDisability_type.SelectedValue.ToString();

@@ -151,7 +151,8 @@ namespace com.vdm.form
             this.lvPeople.Columns.Add("技能类型", 150);
             this.lvPeople.Columns.Add("就业指导", 150);
             this.lvPeople.Columns.Add("技能培训", 150);
-            this.lvPeople.Columns.Add("职称等级及获得时间", 300);
+            this.lvPeople.Columns.Add("职称等级", 150);
+            this.lvPeople.Columns.Add("职称获得时间", 200);
             this.lvPeople.Columns.Add("残疾分类", 150);
             this.lvPeople.Columns.Add("残疾等级", 150);
             this.lvPeople.Columns.Add("因何致残", 150);
@@ -161,6 +162,7 @@ namespace com.vdm.form
             this.lvPeople.Columns.Add("是否易地搬迁户", 200);
             this.lvPeople.Columns.Add("低保户/五保户", 200);
             this.lvPeople.Columns.Add("低保等级/五保类别", 300);
+            this.lvPeople.Columns.Add("备注", 100);
             this.lvPeople.Columns.Add("添加时间", 150);
             this.lvPeople.Columns.Add("添加人", 100);
 
@@ -203,7 +205,8 @@ namespace com.vdm.form
                 lvi.SubItems.Add(people.Skill_type);
                 lvi.SubItems.Add(people.Employ_guide);
                 lvi.SubItems.Add(people.Skill_train);
-                lvi.SubItems.Add(people.Pq_gettime);
+                lvi.SubItems.Add(people.Career_grade);
+                lvi.SubItems.Add(people.Career_get_time);
                 lvi.SubItems.Add(people.Disability_type);
                 lvi.SubItems.Add(people.Disability_grade);
                 lvi.SubItems.Add(people.Disability_reason);
@@ -213,6 +216,7 @@ namespace com.vdm.form
                 lvi.SubItems.Add(people.Is_relocation);
                 lvi.SubItems.Add(people.Low_five);
                 lvi.SubItems.Add(people.Low_five_grade);
+                lvi.SubItems.Add(people.Remark);
                 lvi.SubItems.Add(people.Create_datetime);
                 lvi.SubItems.Add(people.Creater);
                 this.lvPeople.Items.Add(lvi);
@@ -327,6 +331,11 @@ namespace com.vdm.form
         }
 
         private void btImport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
