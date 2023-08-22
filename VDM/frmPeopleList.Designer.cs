@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btReset = new System.Windows.Forms.Button();
             this.btSearch = new System.Windows.Forms.Button();
@@ -70,6 +71,7 @@
             this.lvPeople = new System.Windows.Forms.ListView();
             this.btRefresh = new System.Windows.Forms.Button();
             this.pagination = new PageControl.Pagination();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -486,7 +488,8 @@
             // 
             // lvPeople
             // 
-            this.lvPeople.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lvPeople.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lvPeople.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lvPeople.FullRowSelect = true;
@@ -494,6 +497,7 @@
             this.lvPeople.Location = new System.Drawing.Point(18, 27);
             this.lvPeople.Name = "lvPeople";
             this.lvPeople.Size = new System.Drawing.Size(1839, 625);
+            this.lvPeople.SmallImageList = this.imageList1;
             this.lvPeople.TabIndex = 0;
             this.lvPeople.UseCompatibleStateImageBehavior = false;
             // 
@@ -510,6 +514,7 @@
             // 
             // pagination
             // 
+            this.pagination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pagination.CurrentPage = 1;
             this.pagination.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.pagination.Location = new System.Drawing.Point(578, 659);
@@ -519,6 +524,13 @@
             this.pagination.Size = new System.Drawing.Size(1279, 65);
             this.pagination.TabIndex = 1;
             this.pagination.TotalPage = 1;
+            this.pagination.LoadListView += new PageControl.Pagination.LoadListViewEventHandler(this.pagination_LoadListView);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(10, 45);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // frmPeopleList
             // 
@@ -588,5 +600,6 @@
         private System.Windows.Forms.ListView lvPeople;
         private System.Windows.Forms.Button btRefresh;
         private PageControl.Pagination pagination;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
