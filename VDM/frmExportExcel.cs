@@ -26,6 +26,7 @@ namespace com.vdm.form
         private void btExport_excel_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.ShowNewFolderButton=false;//关闭新建文件夹
             dialog.Description = "请选择一个目录作为导出Excel文件的保存路径：";
             dialog.ShowDialog();
             string mypath = dialog.SelectedPath.Replace('\\', '/');
@@ -44,11 +45,11 @@ namespace com.vdm.form
                     bool result = ExcelUtil.exportExcel(pathFinal, password);
                     if (result)
                     {
-                        MessageBox.Show("导入成功");
+                        MessageBox.Show("导出成功");
                     }
                     else
                     {
-                        MessageBox.Show("导入失败");
+                        MessageBox.Show("导出失败");
                     }
                 }
 

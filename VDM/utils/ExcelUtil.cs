@@ -1,6 +1,8 @@
 ﻿using Aspose.Cells;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,7 +41,7 @@ namespace com.vdm.form.utils
             {
                     License li = new License();
                     li.SetLicense(System.IO.Directory.GetCurrentDirectory() + "\\aspose\\License.lic");//破解证书
-                                                                                                       // 创建工作簿
+                    // 创建工作簿
                     Workbook book = new Workbook();
                     // 创建工作表
                     Worksheet sheet = book.Worksheets[0];
@@ -78,5 +80,58 @@ namespace com.vdm.form.utils
                 return false;
             }
             }
+
+        /// <summary>
+        /// 选择EXCEL文件并导出为DataTable
+        /// </summary>
+        /// <returns>DataTable</returns>
+        public static DataTable ExcelToDataTable()
+        {
+             OpenFileDialog dialog = new OpenFileDialog();
+            //过滤选择文件
+             dialog.Filter = "EXCEL 文件|*.xlsx";
+             DialogResult result = dialog.ShowDialog();
+             DataTable dataTable = new DataTable();
+            //导入对话框 选择打开
+            if (result == DialogResult.OK)
+            {
+                string filepath = dialog.FileName;
+                string pathFinal = filepath.Replace('\\', '/');
+                string password = Interaction.InputBox("请输入EXCEL保护密码", "输入密码", "", Screen.PrimaryScreen.Bounds.Width / 4, Screen.PrimaryScreen.Bounds.Height / 4);
+                Workbook book = new Workbook();
+                if(""!=password)
+                {
+                    try
+                    {
+                        book.Open(pathFinal, FileFormatType.Excel2007Xlsx, password);
+                        //MessageBox.Show("密码正确");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("密码错误");
+                    }
+
+                    // Excel 中 sheets 数量必须大于 0
+                    if (book.Worksheets.Count > 0)
+                    {
+                        // 导入 Excel 文件中的第一个 sheets 工作表
+                        Cells cells = book.Worksheets[0].Cells;
+                        // sheets 中的数据必须存在
+                        if (cells.MaxDataRow != -1 && cells.MaxDataColumn != -1)
+                        {
+                            // 方法 ExportDataTable 的参数说明
+                            //  要导出的第一个单元格的行号。
+                            //  要导出的第一个单元格的列号。
+                            //  要导入的行数。
+                            //  要导入的列数。
+                            //  指示第一行的数据是否导出到DataTable的列名。
+                            dataTable = cells.ExportDataTable(0, 0, cells.MaxDataRow + 1, cells.MaxDataColumn + 1, true);
+                        }
+                    }
+                }
+                return dataTable;
+            }
+            return dataTable;
         }
+    }
 }
