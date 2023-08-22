@@ -18,16 +18,41 @@ namespace com.vdm.dal
         {
             this.sqlDB = new SqlDbHelper();
         }
-
+        public int getTotalPeople()
+        {
+            string sql = "select * from t_people  order by create_datetime desc";
+            DataTable dt = this.sqlDB.ExecuteDataTable(sql);
+            if(dt != null)
+            {
+                return dt.Rows.Count;
+            }
+            return 0;
+        }
         /// <summary>
         ///  获取所有的人员信息
         /// </summary>
         /// <returns></returns>
-        public DataTable getAllPeople()
+        public DataTable getAllPeople(int pageIndex, int pageSize)
         {
-            string sql = "select * from t_people order by create_datetime desc";
-
-            return this.sqlDB.ExecuteDataTable(sql);
+            int offset = 1;
+            int totalPeople = this.getTotalPeople();
+            if (pageIndex > 1)
+            {
+                offset =  (pageIndex-1)* pageSize + 1;
+            }
+            int limit = 1;
+            int pageCount = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
+            if (pageIndex+1 <=  pageCount)
+            {
+                limit = pageSize-1;
+            }
+            else
+            {
+                limit = totalPeople - (pageCount - 1) * pageSize - 1 ;
+            }
+            string sql =  "select * from t_people order by create_datetime desc LIMIT " + limit + " OFFSET " + offset + " ";
+            DataTable dt = this.sqlDB.ExecuteDataTable(sql);
+            return dt;
         }
 
         public DataTable getAllPeople(People people)

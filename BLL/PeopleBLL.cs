@@ -17,15 +17,18 @@ namespace com.vdm.bll
         public PeopleBLL() {
             this.peopleDAL = new PeopleDAL();
         }
-
+        public int getTotalPeople()
+        {
+            return this.peopleDAL.getTotalPeople();
+        }
         /// <summary>
         ///  获得所有的人员信息
         /// </summary>
         /// <returns></returns>
-        public List<People> getAllPeople()
+        public List<People> getAllPeople(int pageIndex,int pageSize)
         {
             List<People> list_people = new List<People>();
-            DataTable dt = this.peopleDAL.getAllPeople();
+            DataTable dt = this.peopleDAL.getAllPeople(pageIndex, pageSize);
 
             if(dt != null)
             {

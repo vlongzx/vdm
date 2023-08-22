@@ -20,6 +20,9 @@ namespace com.vdm.form
         private DictBLL dictBLL = null;
         private PeopleBLL peopleBLL = null;
         private People people = null;
+        private int currentPage = 1;
+        private int totalPage = 1;
+        private int pageSize = 10;
         public frmPeopleList()
         {
             InitializeComponent();
@@ -38,14 +41,15 @@ namespace com.vdm.form
             formPeopleAdd.ShowDialog();
             if(formPeopleAdd.DialogResult == DialogResult.OK)
             {
-                InitListView(people);
+                InitListView(people,this.currentPage,this.pageSize);
             }
         }
 
         private void frmPeople_Load(object sender, EventArgs e)
         {
             InitControlData();
-            InitListView(people);
+
+            InitListView(people, this.currentPage, this.pageSize);
         }
 
         public void InitControlData()
@@ -123,9 +127,10 @@ namespace com.vdm.form
         /// <summary>
         ///  初始化ListView
         /// </summary>
-        public void InitListView(People p)
+        public void InitListView(People p,int pageIndex,int pageSize)
         {
             this.lvPeople.Items.Clear();
+            this.lvPeople.Columns.Clear();
             this.lvPeople.View = View.Details;
             this.lvPeople.Columns.Add("姓名", 100);
             this.lvPeople.Columns.Add("身份证号", 260);
@@ -150,7 +155,8 @@ namespace com.vdm.form
             this.lvPeople.Columns.Add("技能类型", 150);
             this.lvPeople.Columns.Add("就业指导", 150);
             this.lvPeople.Columns.Add("技能培训", 150);
-            this.lvPeople.Columns.Add("职称等级及获得时间", 300);
+            this.lvPeople.Columns.Add("职称等级", 150);
+            this.lvPeople.Columns.Add("职称获得时间", 200);
             this.lvPeople.Columns.Add("残疾分类", 150);
             this.lvPeople.Columns.Add("残疾等级", 150);
             this.lvPeople.Columns.Add("因何致残", 150);
@@ -160,6 +166,7 @@ namespace com.vdm.form
             this.lvPeople.Columns.Add("是否易地搬迁户", 200);
             this.lvPeople.Columns.Add("低保户/五保户", 200);
             this.lvPeople.Columns.Add("低保等级/五保类别", 300);
+            this.lvPeople.Columns.Add("备注", 100);
             this.lvPeople.Columns.Add("添加时间", 150);
             this.lvPeople.Columns.Add("添加人", 100);
 
@@ -168,10 +175,25 @@ namespace com.vdm.form
             List<People> list_people;
             if (p == null)
             {
-                list_people = this.peopleBLL.getAllPeople();
+                //获得总页数
+                this.peopleBLL = new PeopleBLL();
+               
+                int totalPeople = this.peopleBLL.getTotalPeople() ;
+                this.totalPage = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
+                this.pagination.PageSize = this.pageSize;
+                this.pagination.TotalPage = this.totalPage;
+                this.pagination.InitPagination();
+                list_people = this.peopleBLL.getAllPeople(pageIndex,pageSize);
             }
             else
             {
+                //获得总页数
+                this.peopleBLL = new PeopleBLL();
+                int totalPeople = this.peopleBLL.getTotalPeople();
+                this.totalPage = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
+                this.pagination.PageSize = this.pageSize;
+                this.pagination.TotalPage = this.totalPage;
+                this.pagination.InitPagination();
                 list_people = this.peopleBLL.getAllPeople(p);
             }
            
@@ -202,7 +224,8 @@ namespace com.vdm.form
                 lvi.SubItems.Add(people.Skill_type);
                 lvi.SubItems.Add(people.Employ_guide);
                 lvi.SubItems.Add(people.Skill_train);
-                lvi.SubItems.Add(people.Pq_gettime);
+                lvi.SubItems.Add(people.Career_grade);
+                lvi.SubItems.Add(people.Career_get_time);
                 lvi.SubItems.Add(people.Disability_type);
                 lvi.SubItems.Add(people.Disability_grade);
                 lvi.SubItems.Add(people.Disability_reason);
@@ -212,10 +235,12 @@ namespace com.vdm.form
                 lvi.SubItems.Add(people.Is_relocation);
                 lvi.SubItems.Add(people.Low_five);
                 lvi.SubItems.Add(people.Low_five_grade);
+                lvi.SubItems.Add(people.Remark);
                 lvi.SubItems.Add(people.Create_datetime);
                 lvi.SubItems.Add(people.Creater);
                 this.lvPeople.Items.Add(lvi);
             }
+
         }
 
         private void btEdit_Click(object sender, EventArgs e)
@@ -237,7 +262,7 @@ namespace com.vdm.form
             formPeopleAdd.ShowDialog();
             if (formPeopleAdd.DialogResult == DialogResult.OK)
             {
-                InitListView(people);
+                InitListView(people, this.currentPage, this.pageSize);
             }
         }
         /// <summary>
@@ -247,7 +272,7 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btRefresh_Click(object sender, EventArgs e)
         {
-            InitListView(people);
+            InitListView(people, this.currentPage, this.pageSize);
         }
 
         /// <summary>
@@ -275,7 +300,7 @@ namespace com.vdm.form
                     Result result = this.peopleBLL.DelPeople(people_id);
                     if (result.Count == 1)
                     {
-                        this.InitListView(people);
+                        this.InitListView(people, this.currentPage, this.pageSize);
                         MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
@@ -310,7 +335,7 @@ namespace com.vdm.form
             people.Religious_belief = this.cbReligious_belief.SelectedValue.ToString();
             people.Education = this.cbEducation.SelectedValue.ToString();
             //------------------------------------------------------------------
-            this.InitListView(people);
+            this.InitListView(people, this.currentPage, this.pageSize);
         }
 
         /// <summary>
@@ -323,6 +348,114 @@ namespace com.vdm.form
             ExcelUtil.Lv = lvPeople;
             frmExportExcel ef = new frmExportExcel();
             ef.ShowDialog();
+        }
+
+        /// <summary>
+        /// 导入
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btImport_Click(object sender, EventArgs e)
+        {
+                DataTable dt = ExcelUtil.ExcelToDataTable();
+                //若有数据
+                if (dt.Rows.Count != 0)
+                {
+                    People people = new People();
+                    peopleBLL = new PeopleBLL();
+                    try
+                {
+                    foreach (DataRow dataRow in dt.Rows)
+                    {
+
+                        //将excel数据值封装业务对象
+                        //------------------基础信息部分---------------------------------
+
+                        people.People_name = dataRow["姓名"].ToString();
+                        people.Sex = dataRow["性别"].ToString();
+                        people.Nation = dataRow["民族"].ToString();
+                        people.Relationship = dataRow["与户主关系"].ToString();
+                        people.Birthday = dataRow["出生日期"].ToString();
+                        people.Idcard = this.tbIdcard.Text.Trim();
+                        people.Phone_number = this.tbPhone_number.Text.Trim();
+                        people.Town = dataRow["所属镇"].ToString();
+                        people.Villiage = dataRow["所属村"].ToString();
+                        people.Marital_status = dataRow["婚姻状况"].ToString();
+                        people.Is_real_name = dataRow["是否实名"].ToString();
+                        people.Blood_type = dataRow["血型"].ToString();
+                        people.Remark = dataRow["备注"].ToString();
+                        people.Politcal_outlook = dataRow["政治面貌"].ToString();
+                        people.Join_party_time = dataRow["入党时间"].ToString();
+                        people.Religious_belief = dataRow["宗教信仰"].ToString();
+                        people.Education = dataRow["学历"].ToString();
+                        people.Work_or_study = dataRow["工作地点/学习地点"].ToString();
+                        people.Industry = dataRow["从事行业"].ToString();
+                        people.Unit_or_school = dataRow["工作单位/学校名称"].ToString();
+                        people.Work_study_location = dataRow["婚姻状况"].ToString();
+                        people.Skill_type = dataRow["技能类型"].ToString();
+                        people.Employ_guide = dataRow["就业指导"].ToString();
+                        people.Skill_train = dataRow["技能培训"].ToString();
+                        people.Career_grade = dataRow["职称等级"].ToString();
+                        people.Career_get_time = dataRow["职称获得时间"].ToString();
+                        people.Disability_type = dataRow["残疾分类"].ToString();
+                        people.Disability_grade = dataRow["残疾等级"].ToString();
+                        people.Disability_reason = dataRow["因何致残"].ToString();
+                        people.Big_ill_help = dataRow["大病救助情况"].ToString();
+                        people.Temporary_help = dataRow["临时救助情况"].ToString();
+                        people.Is_unable_old = dataRow["是否失能老人"].ToString();
+                        people.Is_relocation = dataRow["是否易地搬迁户"].ToString();
+                        people.Low_five = dataRow["低保户/五保户"].ToString();
+                        people.Low_five_grade = dataRow["低保等级/五保类别"].ToString();
+                        people.Military_service = dataRow["婚姻状况"].ToString();
+                        people.Creater = LoginInfo.CurrentUser.Account;
+                        people.Create_datetime = DateTime.Now.ToString();
+                        peopleBLL.AddPeople(people);
+                    }
+                    MessageBox.Show("导入成功");
+                    //使用的是全局变量people
+                    InitListView(this.people, this.currentPage, this.pageSize);
+                }
+                    catch
+                {
+                    MessageBox.Show("导入失败");
+                }
+                }
+
+            }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 重置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btReset_Click(object sender, EventArgs e)
+        {
+            //清空查询文本框内容
+            this.tbPeople_name.Text="";
+            this.cbSex.SelectedValue= "";
+            this.cbNation.SelectedValue= "";
+            this.cbRelationship.SelectedValue = "";
+            this.tbIdcard.Text = "";
+            this.tbPhone_number.Text = "";
+            this.cbPolitcal_outlook.SelectedValue = "";
+            this.cbReligious_belief.SelectedValue = "";
+            this.cbEducation.SelectedValue = "";
+            //查询所有人员信息
+            People p = null;
+            InitListView(p, this.currentPage, this.pageSize);
+        }
+
+        private void pagination_LoadListView(int currentPage, int pageSize, int totalPage)
+        {
+            this.currentPage = currentPage;
+            this.pageSize = pageSize;
+            this.totalPage = totalPage;
+            InitListView(this.people, this.currentPage, this.pageSize);
         }
     }
 }

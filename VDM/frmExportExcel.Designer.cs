@@ -39,48 +39,53 @@
             // labFile_password
             // 
             this.labFile_password.AutoSize = true;
-            this.labFile_password.Location = new System.Drawing.Point(96, 117);
+            this.labFile_password.Font = new System.Drawing.Font("宋体", 12F);
+            this.labFile_password.Location = new System.Drawing.Point(44, 114);
             this.labFile_password.Name = "labFile_password";
-            this.labFile_password.Size = new System.Drawing.Size(130, 24);
+            this.labFile_password.Size = new System.Drawing.Size(175, 33);
             this.labFile_password.TabIndex = 27;
             this.labFile_password.Text = "文件密码：";
             // 
             // labFile_name
             // 
             this.labFile_name.AutoSize = true;
-            this.labFile_name.Location = new System.Drawing.Point(120, 73);
+            this.labFile_name.Font = new System.Drawing.Font("宋体", 12F);
+            this.labFile_name.Location = new System.Drawing.Point(77, 61);
             this.labFile_name.Name = "labFile_name";
-            this.labFile_name.Size = new System.Drawing.Size(106, 24);
+            this.labFile_name.Size = new System.Drawing.Size(143, 33);
             this.labFile_name.TabIndex = 26;
             this.labFile_name.Text = "文件名：";
             // 
             // tbFile_password
             // 
-            this.tbFile_password.Location = new System.Drawing.Point(239, 114);
+            this.tbFile_password.Font = new System.Drawing.Font("宋体", 12F);
+            this.tbFile_password.Location = new System.Drawing.Point(225, 112);
             this.tbFile_password.Name = "tbFile_password";
-            this.tbFile_password.Size = new System.Drawing.Size(213, 35);
+            this.tbFile_password.Size = new System.Drawing.Size(213, 44);
             this.tbFile_password.TabIndex = 25;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(88, 84);
+            this.label3.Location = new System.Drawing.Point(88, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 24);
             this.label3.TabIndex = 24;
             // 
             // tbFile_name
             // 
-            this.tbFile_name.Location = new System.Drawing.Point(239, 73);
+            this.tbFile_name.Font = new System.Drawing.Font("宋体", 12F);
+            this.tbFile_name.Location = new System.Drawing.Point(226, 61);
             this.tbFile_name.Name = "tbFile_name";
-            this.tbFile_name.Size = new System.Drawing.Size(213, 35);
+            this.tbFile_name.Size = new System.Drawing.Size(213, 44);
             this.tbFile_name.TabIndex = 23;
             // 
             // btExport_excel
             // 
-            this.btExport_excel.Location = new System.Drawing.Point(193, 175);
+            this.btExport_excel.Font = new System.Drawing.Font("宋体", 12F);
+            this.btExport_excel.Location = new System.Drawing.Point(140, 190);
             this.btExport_excel.Name = "btExport_excel";
-            this.btExport_excel.Size = new System.Drawing.Size(164, 53);
+            this.btExport_excel.Size = new System.Drawing.Size(229, 46);
             this.btExport_excel.TabIndex = 22;
             this.btExport_excel.Text = "选择目录导出";
             this.btExport_excel.UseVisualStyleBackColor = true;
@@ -97,6 +102,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbFile_name);
             this.Controls.Add(this.btExport_excel);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmExportExcel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "导出Excel";

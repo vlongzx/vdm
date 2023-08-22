@@ -30,7 +30,8 @@ namespace com.vdm.model
         private string skill_type;
         private string employ_guide;
         private string skill_train;
-        private string pq_gettime;
+        private string career_grade;
+        private string career_get_time;
         private string military_service;
         private string disability_type;
         private string is_real_name;
@@ -386,18 +387,33 @@ namespace com.vdm.model
             }
         }
         /// <summary>
-        /// 职称等级及获得时间
+        /// 职称等级
         /// </summary>
-        public string Pq_gettime
+        public string Career_grade
         {
             get
             {
-                return pq_gettime;
+                return career_grade;
             }
 
             set
             {
-                pq_gettime = value;
+                career_grade = value;
+            }
+        }
+        /// <summary>
+        /// 职称获得时间
+        /// </summary>
+        public string Career_get_time
+        {
+            get
+            {
+                return career_get_time;
+            }
+
+            set
+            {
+                career_get_time = value;
             }
         }
         /// <summary>

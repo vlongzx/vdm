@@ -26,26 +26,35 @@ namespace com.vdm.form
         private void btExport_excel_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.ShowNewFolderButton=false;//关闭新建文件夹
             dialog.Description = "请选择一个目录作为导出Excel文件的保存路径：";
             dialog.ShowDialog();
             string mypath = dialog.SelectedPath.Replace('\\', '/');
             string fileName = tbFile_name.Text;
             string password = tbFile_password.Text;
-            try
+            if (!string.IsNullOrWhiteSpace(mypath))
             {
-                if (!string.IsNullOrWhiteSpace(mypath))
+                string pathFinal = mypath + '/' + fileName + ".xlsx";
+                this.Close();
+                if (pathFinal.Trim() == "" || password.Trim() == "")
                 {
-                    string pathFinal = mypath + '/' + fileName + ".xlsx";
-                    this.Close();
-                    ExcelUtil.exportExcel(pathFinal, password);
-                    MessageBox.Show("导出成功");
+                    MessageBox.Show("文件名与密码均需要输入！");
                 }
-        }
-            catch
-            {
-                MessageBox.Show("导出失败");
-            }
+                else
+                {
+                    bool result = ExcelUtil.exportExcel(pathFinal, password);
+                    if (result)
+                    {
+                        MessageBox.Show("导出成功");
+                    }
+                    else
+                    {
+                        MessageBox.Show("导出失败");
+                    }
+                }
 
+            }
+   
 }
 
         private void frmExportExcel_Load(object sender, EventArgs e)
