@@ -302,6 +302,7 @@ namespace com.vdm.form
                     {
                         this.InitListView(people, this.currentPage, this.pageSize);
                         MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        InitListView(this.people, this.currentPage, this.pageSize);
                     }
                     else
                     {
@@ -345,7 +346,7 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btExport_Click(object sender, EventArgs e)
         {
-            ExcelUtil.Lv = lvPeople;
+            ExcelUtil.Lv = this.InitExportListView(this.people);
             frmExportExcel ef = new frmExportExcel();
             ef.ShowDialog();
         }
@@ -465,6 +466,107 @@ namespace com.vdm.form
 
         private void lvPeople_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        /// <summary>
+        /// 初始化要导出的数据
+        /// </summary>
+        /// <param name="p">查询条件</param>
+        /// <returns></returns>
+        public ListView InitExportListView(People p)
+        {
+            ListView lvExport = new ListView();
+            lvExport.Items.Clear();
+            lvExport.Columns.Clear();
+            lvExport.View = View.Details;
+            lvExport.Columns.Add("姓名", 100);
+            lvExport.Columns.Add("身份证号", 260);
+            lvExport.Columns.Add("出生日期", 150);
+            lvExport.Columns.Add("性别", 100);
+            lvExport.Columns.Add("与户主关系", 150, HorizontalAlignment.Center);
+            lvExport.Columns.Add("民族", 100, HorizontalAlignment.Center);
+            lvExport.Columns.Add("政治面貌", 150);
+            lvExport.Columns.Add("入党时间", 150);
+            lvExport.Columns.Add("联系电话", 150);
+            lvExport.Columns.Add("是否实名", 150);
+            lvExport.Columns.Add("所属镇", 150);
+            lvExport.Columns.Add("所属村", 150);
+            lvExport.Columns.Add("宗教信仰", 150);
+            lvExport.Columns.Add("学历", 100);
+            lvExport.Columns.Add("血型", 100);
+            lvExport.Columns.Add("婚姻状况", 150);
+            lvExport.Columns.Add("是否外出", 150);
+            lvExport.Columns.Add("从事行业", 150);
+            lvExport.Columns.Add("工作单位/学校名称", 300);
+            lvExport.Columns.Add("工作地点/学习地点", 300);
+            lvExport.Columns.Add("技能类型", 150);
+            lvExport.Columns.Add("就业指导", 150);
+            lvExport.Columns.Add("技能培训", 150);
+            lvExport.Columns.Add("职称等级", 150);
+            lvExport.Columns.Add("职称获得时间", 200);
+            lvExport.Columns.Add("残疾分类", 150);
+            lvExport.Columns.Add("残疾等级", 150);
+            lvExport.Columns.Add("因何致残", 150);
+            lvExport.Columns.Add("大病救助情况", 200);
+            lvExport.Columns.Add("临时救助情况", 200);
+            lvExport.Columns.Add("是否失能老人", 200);
+            lvExport.Columns.Add("是否易地搬迁户", 200);
+            lvExport.Columns.Add("低保户/五保户", 200);
+            lvExport.Columns.Add("低保等级/五保类别", 300);
+            lvExport.Columns.Add("备注", 100);
+            lvExport.Columns.Add("添加时间", 150);
+            lvExport.Columns.Add("添加人", 100);
+            peopleBLL = new PeopleBLL();
+            //初始化导出ListView数据
+            List<People> list_people;
+            this.peopleBLL = new PeopleBLL();
+            list_people = this.peopleBLL.getAllPeople(p);
+
+            foreach (People people in list_people)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Tag = people.People_id;//存储主键
+                lvi.Text = people.People_name;
+                lvi.SubItems.Add(people.Idcard);
+                lvi.SubItems.Add(people.Birthday);
+                lvi.SubItems.Add(people.Sex);
+                lvi.SubItems.Add(people.Relationship);
+                lvi.SubItems.Add(people.Nation);
+                lvi.SubItems.Add(people.Politcal_outlook);
+                lvi.SubItems.Add(people.Join_party_time);
+                lvi.SubItems.Add(people.Phone_number);
+                lvi.SubItems.Add(people.Is_real_name);
+                lvi.SubItems.Add(people.Town);
+                lvi.SubItems.Add(people.Villiage);
+                lvi.SubItems.Add(people.Religious_belief);
+                lvi.SubItems.Add(people.Education);
+                lvi.SubItems.Add(people.Blood_type);
+                lvi.SubItems.Add(people.Marital_status);
+                lvi.SubItems.Add(people.Work_or_study);//是否外出
+                lvi.SubItems.Add(people.Industry);
+                lvi.SubItems.Add(people.Unit_or_school);
+                lvi.SubItems.Add(people.Work_study_location);
+                lvi.SubItems.Add(people.Skill_type);
+                lvi.SubItems.Add(people.Employ_guide);
+                lvi.SubItems.Add(people.Skill_train);
+                lvi.SubItems.Add(people.Career_grade);
+                lvi.SubItems.Add(people.Career_get_time);
+                lvi.SubItems.Add(people.Disability_type);
+                lvi.SubItems.Add(people.Disability_grade);
+                lvi.SubItems.Add(people.Disability_reason);
+                lvi.SubItems.Add(people.Big_ill_help);
+                lvi.SubItems.Add(people.Temporary_help);
+                lvi.SubItems.Add(people.Is_unable_old);
+                lvi.SubItems.Add(people.Is_relocation);
+                lvi.SubItems.Add(people.Low_five);
+                lvi.SubItems.Add(people.Low_five_grade);
+                lvi.SubItems.Add(people.Remark);
+                lvi.SubItems.Add(people.Create_datetime);
+                lvi.SubItems.Add(people.Creater);
+                lvExport.Items.Add(lvi);
+            }
+            return lvExport;
 
         }
     }

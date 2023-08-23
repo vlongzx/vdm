@@ -73,7 +73,10 @@ namespace com.vdm.form
                 this.cbEmploy_guide.SelectedValue = people.Employ_guide;
                 this.cbSkill_train.SelectedValue = people.Skill_train;
                 this.tbCareer_grade.Text = people.Career_grade;
-                this.dtCareer_get_time.Value = DateTime.Parse(people.Career_get_time);
+                if (people.Career_get_time != null && people.Career_get_time != "")
+                {
+                    this.dtCareer_get_time.Value = DateTime.Parse(people.Career_get_time);
+                }
                 this.cbDisability_type.SelectedValue = people.Disability_type;
                 this.cbDisability_grade.SelectedValue = people.Disability_grade;
                 this.tbDisability_reason.Text = people.Disability_reason;

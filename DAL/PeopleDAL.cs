@@ -189,44 +189,49 @@ namespace com.vdm.dal
         public DataTable getAllPeople(People people)
         {
             string sql = "select * from t_people where 1 = 1";
-            if(people.People_name != "")
+            if(people!=null)
             {
-                sql += "    and people_name = @people_name";
-            }
-            if (people.Sex != "")
-            {
-                sql += "    and sex = @sex";
-            }
-            if (people.Politcal_outlook != "")
-            {
-                sql += "    and politcal_outlook = @politcal_outlook";
-            }
-            if (people.Phone_number != "")
-            {
-                sql += "    and phone_number = @phone_number";
-            }
-            if (people.Idcard != "")
-            {
-                sql += "    and idcard = @idcard";
-            }
-            if (people.Religious_belief != "")
-            {
-                sql += "    and religious_belief = @religious_belief";
-            }
-            if (people.Education != "")
-            {
-                sql += "    and education = @education";
+                if (people.People_name != "")
+                {
+                    sql += "    and people_name = @people_name";
+                }
+                if (people.Sex != "")
+                {
+                    sql += "    and sex = @sex";
+                }
+                if (people.Politcal_outlook != "")
+                {
+                    sql += "    and politcal_outlook = @politcal_outlook";
+                }
+                if (people.Phone_number != "")
+                {
+                    sql += "    and phone_number = @phone_number";
+                }
+                if (people.Idcard != "")
+                {
+                    sql += "    and idcard = @idcard";
+                }
+                if (people.Religious_belief != "")
+                {
+                    sql += "    and religious_belief = @religious_belief";
+                }
+                if (people.Education != "")
+                {
+                    sql += "    and education = @education";
+                }
             }
             sql +=" order by create_datetime desc";
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
-            parameters.Add(new SQLiteParameter("@people_name", people.People_name));
-            parameters.Add(new SQLiteParameter("@sex", people.Sex));
-            parameters.Add(new SQLiteParameter("@politcal_outlook", people.Politcal_outlook));
-            parameters.Add(new SQLiteParameter("@phone_number", people.Phone_number));
-            parameters.Add(new SQLiteParameter("@idcard", people.Idcard));
-            parameters.Add(new SQLiteParameter("@religious_belief", people.Religious_belief));
-            parameters.Add(new SQLiteParameter("@education", people.Education));
-
+            if(people!=null)
+            {
+                parameters.Add(new SQLiteParameter("@people_name", people.People_name));
+                parameters.Add(new SQLiteParameter("@sex", people.Sex));
+                parameters.Add(new SQLiteParameter("@politcal_outlook", people.Politcal_outlook));
+                parameters.Add(new SQLiteParameter("@phone_number", people.Phone_number));
+                parameters.Add(new SQLiteParameter("@idcard", people.Idcard));
+                parameters.Add(new SQLiteParameter("@religious_belief", people.Religious_belief));
+                parameters.Add(new SQLiteParameter("@education", people.Education));
+            }
             return this.sqlDB.ExecuteDataTable(sql,CommandType.Text, parameters);
         }
 
