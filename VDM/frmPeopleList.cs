@@ -457,5 +457,15 @@ namespace com.vdm.form
             this.totalPage = totalPage;
             InitListView(this.people, this.currentPage, this.pageSize);
         }
+
+        private void pagination_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvPeople_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

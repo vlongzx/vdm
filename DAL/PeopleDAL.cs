@@ -34,21 +34,21 @@ namespace com.vdm.dal
         /// <returns></returns>
         public DataTable getAllPeople(int pageIndex, int pageSize)
         {
-            int offset = 1;
+            int offset = 0;
             int totalPeople = this.getTotalPeople();
             if (pageIndex > 1)
             {
-                offset =  (pageIndex-1)* pageSize + 1;
+                offset =  (pageIndex-1)* pageSize;
             }
             int limit = 1;
             int pageCount = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
             if (pageIndex+1 <=  pageCount)
             {
-                limit = pageSize-1;
+                limit = pageSize;
             }
             else
             {
-                limit = totalPeople - (pageCount - 1) * pageSize - 1 ;
+                limit = totalPeople - (pageCount - 1) * pageSize;
             }
             string sql =  "select * from t_people order by create_datetime desc LIMIT " + limit + " OFFSET " + offset + " ";
             DataTable dt = this.sqlDB.ExecuteDataTable(sql);
