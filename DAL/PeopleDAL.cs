@@ -18,6 +18,11 @@ namespace com.vdm.dal
         {
             this.sqlDB = new SqlDbHelper();
         }
+
+        /// <summary>
+        /// 获取所有人员个数
+        /// </summary>
+        /// <returns></returns>
         public int getTotalPeople()
         {
             string sql = "select * from t_people  order by create_datetime desc";
@@ -29,7 +34,59 @@ namespace com.vdm.dal
             return 0;
         }
         /// <summary>
-        ///  获取所有的人员信息
+        /// 获取条件查询所有人员个数
+        /// </summary>
+        /// <returns></returns>
+        public int getTotalPeopleIf(People people)
+        {
+            string sql = "select * from t_people where 1 = 1";
+            if (people.People_name != "")
+            {
+                sql += "    and people_name = @people_name";
+            }
+            if (people.Sex != "")
+            {
+                sql += "    and sex = @sex";
+            }
+            if (people.Politcal_outlook != "")
+            {
+                sql += "    and politcal_outlook = @politcal_outlook";
+            }
+            if (people.Phone_number != "")
+            {
+                sql += "    and phone_number = @phone_number";
+            }
+            if (people.Idcard != "")
+            {
+                sql += "    and idcard = @idcard";
+            }
+            if (people.Religious_belief != "")
+            {
+                sql += "    and religious_belief = @religious_belief";
+            }
+            if (people.Education != "")
+            {
+                sql += "    and education = @education";
+            }
+            sql += " order by create_datetime desc";
+            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
+            parameters.Add(new SQLiteParameter("@people_name", people.People_name));
+            parameters.Add(new SQLiteParameter("@sex", people.Sex));
+            parameters.Add(new SQLiteParameter("@politcal_outlook", people.Politcal_outlook));
+            parameters.Add(new SQLiteParameter("@phone_number", people.Phone_number));
+            parameters.Add(new SQLiteParameter("@idcard", people.Idcard));
+            parameters.Add(new SQLiteParameter("@religious_belief", people.Religious_belief));
+            parameters.Add(new SQLiteParameter("@education", people.Education));
+
+            DataTable dt = this.sqlDB.ExecuteDataTable(sql, CommandType.Text, parameters);
+            if (dt != null)
+            {
+                return dt.Rows.Count;
+            }
+            return 0;
+        }
+        /// <summary>
+        ///  分页查询获取所有的人员信息
         /// </summary>
         /// <returns></returns>
         public DataTable getAllPeople(int pageIndex, int pageSize)
@@ -55,6 +112,80 @@ namespace com.vdm.dal
             return dt;
         }
 
+
+
+        /// <summary>
+        /// 条件+分页 查询人员信息
+        /// </summary>
+        /// <param name="people"></param>
+        /// <returns></returns>
+        public DataTable getAllPeople(People people, int pageIndex, int pageSize)
+        {
+            string sql = "select * from t_people where 1 = 1";
+            if (people.People_name != "")
+            {
+                sql += "    and people_name = @people_name";
+            }
+            if (people.Sex != "")
+            {
+                sql += "    and sex = @sex";
+            }
+            if (people.Politcal_outlook != "")
+            {
+                sql += "    and politcal_outlook = @politcal_outlook";
+            }
+            if (people.Phone_number != "")
+            {
+                sql += "    and phone_number = @phone_number";
+            }
+            if (people.Idcard != "")
+            {
+                sql += "    and idcard = @idcard";
+            }
+            if (people.Religious_belief != "")
+            {
+                sql += "    and religious_belief = @religious_belief";
+            }
+            if (people.Education != "")
+            {
+                sql += "    and education = @education";
+            }
+            sql += " order by create_datetime desc";
+            int offset = 0;
+            int totalPeople = this.getTotalPeopleIf(people);
+            if (pageIndex > 1)
+            {
+                offset = (pageIndex - 1) * pageSize;
+            }
+            int limit = 1;
+            int pageCount = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
+            if (pageIndex + 1 <= pageCount)
+            {
+                limit = pageSize;
+            }
+            else
+            {
+                limit = totalPeople - (pageCount - 1) * pageSize;
+            }
+            sql += "  limit  "+limit;
+            sql += "  offset  "+offset;
+            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
+            parameters.Add(new SQLiteParameter("@people_name", people.People_name));
+            parameters.Add(new SQLiteParameter("@sex", people.Sex));
+            parameters.Add(new SQLiteParameter("@politcal_outlook", people.Politcal_outlook));
+            parameters.Add(new SQLiteParameter("@phone_number", people.Phone_number));
+            parameters.Add(new SQLiteParameter("@idcard", people.Idcard));
+            parameters.Add(new SQLiteParameter("@religious_belief", people.Religious_belief));
+            parameters.Add(new SQLiteParameter("@education", people.Education));
+
+            return this.sqlDB.ExecuteDataTable(sql, CommandType.Text, parameters);
+        }
+
+        /// <summary>
+        /// 条件查询
+        /// </summary>
+        /// <param name="people"></param>
+        /// <returns></returns>
         public DataTable getAllPeople(People people)
         {
             string sql = "select * from t_people where 1 = 1";

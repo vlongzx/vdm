@@ -44,7 +44,7 @@
             // 
             this.btFirst.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btFirst.Location = new System.Drawing.Point(585, 8);
-            this.btFirst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btFirst.Name = "btFirst";
             this.btFirst.Size = new System.Drawing.Size(107, 47);
             this.btFirst.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             this.btPre.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btPre.Location = new System.Drawing.Point(700, 8);
-            this.btPre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btPre.Margin = new System.Windows.Forms.Padding(4);
             this.btPre.Name = "btPre";
             this.btPre.Size = new System.Drawing.Size(105, 47);
             this.btPre.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             this.btNext.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btNext.Location = new System.Drawing.Point(813, 8);
-            this.btNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btNext.Margin = new System.Windows.Forms.Padding(4);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(120, 47);
             this.btNext.TabIndex = 1;
@@ -80,7 +80,7 @@
             // 
             this.btEnd.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btEnd.Location = new System.Drawing.Point(941, 8);
-            this.btEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btEnd.Margin = new System.Windows.Forms.Padding(4);
             this.btEnd.Name = "btEnd";
             this.btEnd.Size = new System.Drawing.Size(133, 47);
             this.btEnd.TabIndex = 1;
@@ -92,16 +92,17 @@
             // 
             this.tbPageIndex.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbPageIndex.Location = new System.Drawing.Point(1083, 12);
-            this.tbPageIndex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPageIndex.Margin = new System.Windows.Forms.Padding(4);
             this.tbPageIndex.Name = "tbPageIndex";
-            this.tbPageIndex.Size = new System.Drawing.Size(79, 35);
+            this.tbPageIndex.Size = new System.Drawing.Size(79, 44);
             this.tbPageIndex.TabIndex = 2;
+            this.tbPageIndex.TextChanged += new System.EventHandler(this.tbPageIndex_TextChanged);
             // 
             // btGo
             // 
             this.btGo.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btGo.Location = new System.Drawing.Point(1168, 8);
-            this.btGo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btGo.Margin = new System.Windows.Forms.Padding(4);
             this.btGo.Name = "btGo";
             this.btGo.Size = new System.Drawing.Size(89, 47);
             this.btGo.TabIndex = 1;
@@ -116,7 +117,7 @@
             this.label1.Location = new System.Drawing.Point(48, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 24);
+            this.label1.Size = new System.Drawing.Size(79, 33);
             this.label1.TabIndex = 3;
             this.label1.Text = "每页";
             // 
@@ -126,9 +127,9 @@
             this.cbPageSize.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbPageSize.FormattingEnabled = true;
             this.cbPageSize.Location = new System.Drawing.Point(115, 16);
-            this.cbPageSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbPageSize.Margin = new System.Windows.Forms.Padding(4);
             this.cbPageSize.Name = "cbPageSize";
-            this.cbPageSize.Size = new System.Drawing.Size(73, 32);
+            this.cbPageSize.Size = new System.Drawing.Size(73, 41);
             this.cbPageSize.TabIndex = 4;
             this.cbPageSize.SelectionChangeCommitted += new System.EventHandler(this.cbPageSize_SelectionChangeCommitted);
             // 
@@ -139,7 +140,7 @@
             this.label2.Location = new System.Drawing.Point(197, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 24);
+            this.label2.Size = new System.Drawing.Size(47, 33);
             this.label2.TabIndex = 3;
             this.label2.Text = "条";
             // 
@@ -150,13 +151,14 @@
             this.labPageIndex.Location = new System.Drawing.Point(284, 21);
             this.labPageIndex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labPageIndex.Name = "labPageIndex";
-            this.labPageIndex.Size = new System.Drawing.Size(70, 24);
+            this.labPageIndex.Size = new System.Drawing.Size(95, 33);
             this.labPageIndex.TabIndex = 3;
             this.labPageIndex.Text = "第1页";
+            this.labPageIndex.Click += new System.EventHandler(this.labPageIndex_Click);
             // 
             // Pagination
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.cbPageSize);
             this.Controls.Add(this.labPageIndex);
@@ -169,7 +171,7 @@
             this.Controls.Add(this.btPre);
             this.Controls.Add(this.btFirst);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Pagination";
             this.Size = new System.Drawing.Size(1279, 65);
             this.Load += new System.EventHandler(this.Pagination_Load);

@@ -165,6 +165,16 @@ namespace PageControl
                 this.LoadListView(this.CurrentPage, this.PageSize, this.TotalPage);
             }
         }
+
+        private void labPageIndex_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPageIndex_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     class KeyValue
     {

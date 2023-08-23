@@ -21,6 +21,16 @@ namespace com.vdm.bll
         {
             return this.peopleDAL.getTotalPeople();
         }
+
+        /// <summary>
+        ///条件查询人员总个数
+        /// </summary>
+        /// <param name="people"></param>
+        /// <returns></returns>
+        public int getTotalPeopleIf(People people)
+        {
+            return this.peopleDAL.getTotalPeopleIf(people);
+        }
         /// <summary>
         ///  获得所有的人员信息
         /// </summary>
@@ -37,6 +47,23 @@ namespace com.vdm.bll
                 {
                     people = MakeObject.MakeObjectToPeople(row);
                     list_people.Add(people);
+                }
+            }
+            return list_people;
+        }
+
+        public List<People> getAllPeople(People people,int pageIndex, int pageSize)
+        {
+            List<People> list_people = new List<People>();
+            DataTable dt = this.peopleDAL.getAllPeople(people,pageIndex, pageSize);
+
+            if (dt != null)
+            {
+                People p = null;
+                foreach (DataRow row in dt.Rows)
+                {
+                    p = MakeObject.MakeObjectToPeople(row);
+                    list_people.Add(p);
                 }
             }
             return list_people;

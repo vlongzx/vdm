@@ -189,12 +189,12 @@ namespace com.vdm.form
             {
                 //获得总页数
                 this.peopleBLL = new PeopleBLL();
-                int totalPeople = this.peopleBLL.getTotalPeople();
+                int totalPeople = this.peopleBLL.getTotalPeopleIf(this.people);
                 this.totalPage = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
                 this.pagination.PageSize = this.pageSize;
                 this.pagination.TotalPage = this.totalPage;
                 this.pagination.InitPagination();
-                list_people = this.peopleBLL.getAllPeople(p);
+                list_people = this.peopleBLL.getAllPeople(p, pageIndex, pageSize);
             }
            
             foreach (People people in list_people)
