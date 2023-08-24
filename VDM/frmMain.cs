@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sunny.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace com.vdm.form
 {
-    public partial class frmMain : Form
+    public partial class frmMain : UIHeaderMainFooterFrame
     {
         public frmMain()
         {
@@ -19,29 +20,37 @@ namespace com.vdm.form
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-       
-            
+            //设置关联
+            Header.TabControl = MainTabControl;
+            Footer.Text = "陕西奥维纳斯软件技术有限公司提供技术支持";
         }
 
         private void OpenForm(Form subForm)
         {
-            foreach (Control item in this.panelMain.Controls)
-            {
-                if (item is Form)
-                {
-                    ((Form)item).Close();
-                }
-            }
-            subForm.TopLevel = false;// 将子窗体设置为非顶级控件
-            subForm.FormBorderStyle = FormBorderStyle.None;//设置无边框
-            subForm.Parent = this.panelMain;//设置窗体容器
-            subForm.Dock = DockStyle.Fill; //容器大小随着调整窗体大小自动变化
-            subForm.Show();
+            //foreach (Control item in this.panelMain.Controls)
+            //{
+            //    if (item is Form)
+            //    {
+            //        ((Form)item).Close();
+            //    }
+            //}
+            //subForm.TopLevel = false;// 将子窗体设置为非顶级控件
+            //subForm.FormBorderStyle = FormBorderStyle.None;//设置无边框
+            //subForm.Parent = this.panelMain;//设置窗体容器
+            //subForm.Dock = DockStyle.Fill; //容器大小随着调整窗体大小自动变化
+            //subForm.Show();
         }
 
         private void tspPeople_Click(object sender, EventArgs e)
         {
-            OpenForm(new frmPeopleList());
+            this.RemoveAllPages();
+             AddPage(new frmPeopleList(), 1001);
+        }
+
+        private void btFamer_Click(object sender, EventArgs e)
+        {
+            this.RemoveAllPages();
+            AddPage(new frmFamerList(), 1002);
         }
     }
 }

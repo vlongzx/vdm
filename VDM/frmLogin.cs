@@ -1,5 +1,6 @@
 ﻿using com.vdm.bll;
 using com.vdm.common;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace com.vdm.form
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : UIForm
     {
         public frmLogin()
         {

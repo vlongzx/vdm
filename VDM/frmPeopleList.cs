@@ -2,6 +2,7 @@
 using com.vdm.common;
 using com.vdm.form.utils;
 using com.vdm.model;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,15 +15,14 @@ using System.Windows.Forms;
 
 namespace com.vdm.form
 {
-    public partial class frmPeopleList : Form
+    public partial class frmPeopleList : UIPage
     {
 
         private DictBLL dictBLL = null;
         private PeopleBLL peopleBLL = null;
         private People people = null;
-        private int currentPage = 1;
-        private int totalPage = 1;
-        private int pageSize = 10;
+        private int pageIndex = 1;
+        private int pageSize = 20;
         public frmPeopleList()
         {
             InitializeComponent();
@@ -41,8 +41,7 @@ namespace com.vdm.form
             formPeopleAdd.ShowDialog();
             if(formPeopleAdd.DialogResult == DialogResult.OK)
             {
-                InitListView(people,this.currentPage,this.pageSize);
-                this.pagination.InitPaginationIf();
+                InitListView(people,this.pageIndex,this.pageSize);
             }
         }
 
@@ -50,8 +49,8 @@ namespace com.vdm.form
         {
             InitControlData();
 
-            InitListView(people, this.currentPage, this.pageSize);
-            this.pagination.InitPagination();
+            InitListView(people, this.pageIndex, this.pageSize);
+
         }
 
         public void InitControlData()
@@ -131,46 +130,47 @@ namespace com.vdm.form
         /// </summary>
         public void InitListView(People p,int pageIndex,int pageSize)
         {
-            this.lvPeople.Items.Clear();
-            this.lvPeople.Columns.Clear();
-            this.lvPeople.View = View.Details;
-            this.lvPeople.Columns.Add("姓名", 100);
-            this.lvPeople.Columns.Add("身份证号", 260);
-            this.lvPeople.Columns.Add("出生日期", 150);
-            this.lvPeople.Columns.Add("性别", 100);
-            this.lvPeople.Columns.Add("与户主关系", 150, HorizontalAlignment.Center);
-            this.lvPeople.Columns.Add("民族", 100, HorizontalAlignment.Center);
-            this.lvPeople.Columns.Add("政治面貌", 150);
-            this.lvPeople.Columns.Add("入党时间", 150);
-            this.lvPeople.Columns.Add("联系电话", 150);
-            this.lvPeople.Columns.Add("是否实名", 150);
-            this.lvPeople.Columns.Add("所属镇", 150);
-            this.lvPeople.Columns.Add("所属村", 150);
-            this.lvPeople.Columns.Add("宗教信仰", 150);
-            this.lvPeople.Columns.Add("学历", 100);
-            this.lvPeople.Columns.Add("血型", 100);
-            this.lvPeople.Columns.Add("婚姻状况", 150);
-            this.lvPeople.Columns.Add("是否外出", 150);
-            this.lvPeople.Columns.Add("从事行业", 150);
-            this.lvPeople.Columns.Add("工作单位/学校名称", 300);
-            this.lvPeople.Columns.Add("工作地点/学习地点", 300);
-            this.lvPeople.Columns.Add("技能类型", 150);
-            this.lvPeople.Columns.Add("就业指导", 150);
-            this.lvPeople.Columns.Add("技能培训", 150);
-            this.lvPeople.Columns.Add("职称等级", 150);
-            this.lvPeople.Columns.Add("职称获得时间", 200);
-            this.lvPeople.Columns.Add("残疾分类", 150);
-            this.lvPeople.Columns.Add("残疾等级", 150);
-            this.lvPeople.Columns.Add("因何致残", 150);
-            this.lvPeople.Columns.Add("大病救助情况", 200);
-            this.lvPeople.Columns.Add("临时救助情况", 200);
-            this.lvPeople.Columns.Add("是否失能老人", 200);
-            this.lvPeople.Columns.Add("是否易地搬迁户", 200);
-            this.lvPeople.Columns.Add("低保户/五保户", 200);
-            this.lvPeople.Columns.Add("低保等级/五保类别", 300);
-            this.lvPeople.Columns.Add("备注", 100);
-            this.lvPeople.Columns.Add("添加时间", 150);
-            this.lvPeople.Columns.Add("添加人", 100);
+            this.dgPeopleList.AutoGenerateColumns = false;
+            this.dgPeopleList.RowTemplate.Height = 45;
+            this.dgPeopleList.Columns.Clear();
+            this.dgPeopleList.AddColumn("编号","People_id");
+            this.dgPeopleList.AddColumn( "姓名", "People_name").SetFixedMode(100);
+            this.dgPeopleList.AddColumn("身份证号","Idcard").SetFixedMode(300);
+            this.dgPeopleList.AddColumn( "出生日期", "Birthday").SetFixedMode(150);
+            this.dgPeopleList.AddColumn( "性别", "Sex");
+            this.dgPeopleList.AddColumn("与户主关系", "Relationship");
+            this.dgPeopleList.AddColumn("民族", "Nation");
+            this.dgPeopleList.AddColumn("政治面貌", "Politcal_outlook");
+            this.dgPeopleList.AddColumn( "入党时间", "Join_party_time");
+            this.dgPeopleList.AddColumn("联系电话", "Phone_number");
+            this.dgPeopleList.AddColumn("是否实名", "Is_real_name");
+            this.dgPeopleList.AddColumn("所属镇", "Town");
+            this.dgPeopleList.AddColumn("所属村", "Villiage");
+            this.dgPeopleList.AddColumn( "宗教信仰","Religious_belief");
+            this.dgPeopleList.AddColumn("学历","Education");
+            this.dgPeopleList.AddColumn("血型", "Blood_type");
+            this.dgPeopleList.AddColumn("婚姻状况", "Marital_status");
+            this.dgPeopleList.AddColumn("是否外出", "Work_or_study");
+            this.dgPeopleList.AddColumn("从事行业", "Industry");
+            this.dgPeopleList.AddColumn("工作单位/学校名称", "Unit_or_school");
+            this.dgPeopleList.AddColumn("工作地点/学习地点", "Work_study_location");
+            this.dgPeopleList.AddColumn("技能类型", "Skill_type");
+            this.dgPeopleList.AddColumn("就业指导", "Employ_guide");
+            this.dgPeopleList.AddColumn("技能培训", "Skill_train");
+            this.dgPeopleList.AddColumn("职称等级", "Career_grade");
+            this.dgPeopleList.AddColumn("职称获得时间", "Career_get_time");
+            this.dgPeopleList.AddColumn("残疾分类", "Disability_type");
+            this.dgPeopleList.AddColumn("残疾等级", "Disability_grade");
+            this.dgPeopleList.AddColumn("因何致残", "Disability_reason");
+            this.dgPeopleList.AddColumn("大病救助情况", "Big_ill_help");
+            this.dgPeopleList.AddColumn("临时救助情况", "Temporary_help");
+            this.dgPeopleList.AddColumn("是否失能老人", "Is_unable_old");
+            this.dgPeopleList.AddColumn("是否易地搬迁户", "Is_relocation");
+            this.dgPeopleList.AddColumn("低保户/五保户", "Low_five");
+            this.dgPeopleList.AddColumn("低保等级/五保类别", "Low_five_grade");
+            this.dgPeopleList.AddColumn("备注", "Remark");
+            this.dgPeopleList.AddColumn("添加时间", "Create_datetime");
+            this.dgPeopleList.AddColumn("添加人", "Creater");
 
             peopleBLL = new PeopleBLL();
             //初始化加载数据
@@ -180,11 +180,9 @@ namespace com.vdm.form
                 //获得总页数
                 this.peopleBLL = new PeopleBLL();
                
-                int totalPeople = this.peopleBLL.getTotalPeople() ;
-                this.totalPage = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
+                int totalCount = this.peopleBLL.getTotalPeople() ;
                 this.pagination.PageSize = this.pageSize;
-                this.pagination.TotalPage = this.totalPage;
-                //this.pagination.InitPagination();
+                this.pagination.TotalCount = totalCount;
                 list_people = this.peopleBLL.getAllPeople(pageIndex,pageSize);
             }
             //条件查询
@@ -192,80 +190,31 @@ namespace com.vdm.form
             {
                 //获得总页数
                 this.peopleBLL = new PeopleBLL();
-                int totalPeople = this.peopleBLL.getTotalPeopleIf(this.people);
-                this.totalPage = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
+                int totalCount = this.peopleBLL.getTotalPeopleIf(this.people);
                 this.pagination.PageSize = this.pageSize;
-                this.pagination.TotalPage = this.totalPage;
-                //this.pagination.InitPagination();
+                this.pagination.TotalCount= totalCount;
                 list_people = this.peopleBLL.getAllPeople(p, pageIndex, pageSize);
             }
-           
-            foreach (People people in list_people)
-            {
-                ListViewItem lvi = new ListViewItem();
-                lvi.Tag = people.People_id;//存储主键
-                lvi.Text = people.People_name;
-                lvi.SubItems.Add(people.Idcard);
-                lvi.SubItems.Add(people.Birthday);
-                lvi.SubItems.Add(people.Sex);
-                lvi.SubItems.Add(people.Relationship);
-                lvi.SubItems.Add(people.Nation);
-                lvi.SubItems.Add(people.Politcal_outlook);
-                lvi.SubItems.Add(people.Join_party_time);
-                lvi.SubItems.Add(people.Phone_number);
-                lvi.SubItems.Add(people.Is_real_name);
-                lvi.SubItems.Add(people.Town);
-                lvi.SubItems.Add(people.Villiage);
-                lvi.SubItems.Add(people.Religious_belief);
-                lvi.SubItems.Add(people.Education);
-                lvi.SubItems.Add(people.Blood_type);
-                lvi.SubItems.Add(people.Marital_status);
-                lvi.SubItems.Add(people.Work_or_study);//是否外出
-                lvi.SubItems.Add(people.Industry);
-                lvi.SubItems.Add(people.Unit_or_school);
-                lvi.SubItems.Add(people.Work_study_location);
-                lvi.SubItems.Add(people.Skill_type);
-                lvi.SubItems.Add(people.Employ_guide);
-                lvi.SubItems.Add(people.Skill_train);
-                lvi.SubItems.Add(people.Career_grade);
-                lvi.SubItems.Add(people.Career_get_time);
-                lvi.SubItems.Add(people.Disability_type);
-                lvi.SubItems.Add(people.Disability_grade);
-                lvi.SubItems.Add(people.Disability_reason);
-                lvi.SubItems.Add(people.Big_ill_help);
-                lvi.SubItems.Add(people.Temporary_help);
-                lvi.SubItems.Add(people.Is_unable_old);
-                lvi.SubItems.Add(people.Is_relocation);
-                lvi.SubItems.Add(people.Low_five);
-                lvi.SubItems.Add(people.Low_five_grade);
-                lvi.SubItems.Add(people.Remark);
-                lvi.SubItems.Add(people.Create_datetime);
-                lvi.SubItems.Add(people.Creater);
-                this.lvPeople.Items.Add(lvi);
-            }
+
+            this.dgPeopleList.DataSource = list_people;
 
         }
 
         private void btEdit_Click(object sender, EventArgs e)
         {
             //获得当前需要编辑的行
-            if (this.lvPeople.SelectedItems.Count == 0)
+            if (this.dgPeopleList.SelectedRows.Count == 0)
             {
                 MessageBox.Show("请选择你要编辑的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            ListViewItem item = this.lvPeople.SelectedItems[0];
-            int people_id = 0;
-            if(item != null)
-            {
-                people_id = int.Parse(item.Tag.ToString());
-            }
+            int people_id = int.Parse(this.dgPeopleList.SelectedRows[0].Cells[0].Value.ToString());
 
             Form formPeopleAdd = new frmPeopleInfo("EDIT", people_id);
             formPeopleAdd.ShowDialog();
             if (formPeopleAdd.DialogResult == DialogResult.OK)
             {
-                InitListView(people, this.currentPage, this.pageSize);
+                InitListView(people, this.pageIndex, this.pageSize);
             }
         }
         /// <summary>
@@ -275,9 +224,14 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btRefresh_Click(object sender, EventArgs e)
         {
-            InitListView(people, this.currentPage, this.pageSize);
+            InitListView(people, this.pageIndex, this.pageSize);
         }
 
+        public override void Init()
+        {
+            base.Init();
+            this.pagination.ActivePage = 1;
+        }
         /// <summary>
         ///  删除数据
         /// </summary>
@@ -286,35 +240,28 @@ namespace com.vdm.form
         private void btDelete_Click(object sender, EventArgs e)
         {
             //获得当前需要删除的行
-         
-            if ( this.lvPeople.SelectedItems.Count == 0)
+
+            //获得当前需要编辑的行
+            if (this.dgPeopleList.SelectedRows.Count == 0)
             {
                 MessageBox.Show("请选择你要删除的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            ListViewItem item = this.lvPeople.SelectedItems[0];
-            int people_id = 0;
-            if (item != null)
+            int people_id = int.Parse(this.dgPeopleList.SelectedRows[0].Cells[0].Value.ToString());
+            if (MessageBox.Show("确认要删除该行数据吗？", "温馨提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                people_id = int.Parse(item.Tag.ToString());
-                if(MessageBox.Show("确认要删除该行数据吗？", "温馨提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                this.peopleBLL = new PeopleBLL();
+                Result result = this.peopleBLL.DelPeople(people_id);
+                if (result.Count == 1)
                 {
-                    this.peopleBLL = new PeopleBLL();
-                    Result result = this.peopleBLL.DelPeople(people_id);
-                    if (result.Count == 1)
-                    {
-                        this.InitListView(people, this.currentPage, this.pageSize);
-                        MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        InitListView(this.people, this.currentPage, this.pageSize);
-                        this.pagination.InitPaginationIf();
-                    }
-                    else
-                    {
-                        MessageBox.Show("删除数据发生异常。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LogHelper.Error(result.Information, result.Exception);
-                    }
+                    MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InitListView(this.people, this.pageIndex, this.pageSize);
                 }
-                
+                else
+                {
+                    MessageBox.Show("删除数据发生异常。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogHelper.Error(result.Information, result.Exception);
+                }
             }
         }
 
@@ -340,9 +287,9 @@ namespace com.vdm.form
             people.Religious_belief = this.cbReligious_belief.SelectedValue.ToString();
             people.Education = this.cbEducation.SelectedValue.ToString();
             //------------------------------------------------------------------
-            this.currentPage = 1;
-            this.InitListView(people, this.currentPage, this.pageSize);
-            this.pagination.InitPaginationIf();
+            this.pageIndex = 1;
+            this.InitListView(people, this.pageIndex, this.pageSize);
+            //this.pagination.InitPaginationIf();
         }
 
         /// <summary>
@@ -420,8 +367,8 @@ namespace com.vdm.form
                     }
                     MessageBox.Show("导入成功");
                     //使用的是全局变量people
-                    InitListView(this.people, this.currentPage, this.pageSize);
-                    this.pagination.InitPagination();
+                    InitListView(this.people, this.pageIndex, this.pageSize);
+                    //this.pagination.InitPagination();
                 }
                     catch
                 {
@@ -455,27 +402,10 @@ namespace com.vdm.form
             this.cbEducation.SelectedValue = "";
             //查询所有人员信息
             this.people=null;
-            InitListView(this.people, this.currentPage, this.pageSize);
-            this.pagination.InitPagination();
+            InitListView(this.people, this.pageIndex, this.pageSize);
+            //this.pagination.InitPagination();
         }
 
-        private void pagination_LoadListView(int currentPage, int pageSize, int totalPage)
-        {
-            this.currentPage = currentPage;
-            this.pageSize = pageSize;
-            this.totalPage = totalPage;
-            InitListView(this.people, this.currentPage, this.pageSize);
-        }
-
-        private void pagination_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lvPeople_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         /// <summary>
         /// 初始化要导出的数据
@@ -576,6 +506,12 @@ namespace com.vdm.form
             }
             return lvExport;
 
+        }
+
+        private void pagination_PageChanged(object sender, object pagingSource, int pageIndex, int count)
+        {
+            this.pageIndex = pageIndex;
+            InitListView(this.people, this.pageIndex, this.pageSize);
         }
     }
 }
