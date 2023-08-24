@@ -447,8 +447,8 @@ namespace com.vdm.form
             this.cbReligious_belief.SelectedValue = "";
             this.cbEducation.SelectedValue = "";
             //查询所有人员信息
-            People p = null;
-            InitListView(p, this.currentPage, this.pageSize);
+            this.people=null;
+            InitListView(this.people, this.currentPage, this.pageSize);
         }
 
         private void pagination_LoadListView(int currentPage, int pageSize, int totalPage)
