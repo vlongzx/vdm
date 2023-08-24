@@ -419,6 +419,7 @@ namespace com.vdm.form
                     MessageBox.Show("导入成功");
                     //使用的是全局变量people
                     InitListView(this.people, this.currentPage, this.pageSize);
+                    this.pagination.InitPagination();
                 }
                     catch
                 {
