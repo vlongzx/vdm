@@ -50,11 +50,12 @@ namespace com.vdm.form
             InitControlData();
 
             InitListView(people, this.currentPage, this.pageSize);
+            this.pagination.InitPagination();
         }
 
         public void InitControlData()
         {
-            //初始胡民族
+            //初始化民族
             this.dictBLL = new DictBLL();
             List<KeyValue> list_nation = dictBLL.getDict("nation");
             list_nation.Add(new KeyValue("", ""));
@@ -182,9 +183,10 @@ namespace com.vdm.form
                 this.totalPage = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
                 this.pagination.PageSize = this.pageSize;
                 this.pagination.TotalPage = this.totalPage;
-                this.pagination.InitPagination();
+                //this.pagination.InitPagination();
                 list_people = this.peopleBLL.getAllPeople(pageIndex,pageSize);
             }
+            //条件查询
             else
             {
                 //获得总页数
@@ -193,7 +195,7 @@ namespace com.vdm.form
                 this.totalPage = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
                 this.pagination.PageSize = this.pageSize;
                 this.pagination.TotalPage = this.totalPage;
-                this.pagination.InitPagination();
+                //this.pagination.InitPagination();
                 list_people = this.peopleBLL.getAllPeople(p, pageIndex, pageSize);
             }
            
@@ -336,7 +338,9 @@ namespace com.vdm.form
             people.Religious_belief = this.cbReligious_belief.SelectedValue.ToString();
             people.Education = this.cbEducation.SelectedValue.ToString();
             //------------------------------------------------------------------
+            this.currentPage = 1;
             this.InitListView(people, this.currentPage, this.pageSize);
+            this.pagination.InitPaginationIf();
         }
 
         /// <summary>

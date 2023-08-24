@@ -81,9 +81,6 @@ namespace PageControl
             this.cbPageSize.DataSource = listPageSize;
             this.cbPageSize.DisplayMember = "value";
             this.cbPageSize.ValueMember = "key";
-
-            
-
         }
         /// <summary>
         ///  初始化控件状态
@@ -91,6 +88,16 @@ namespace PageControl
         public void InitPagination()
         {
             //初始化控件状态
+            this.labPageIndex.Text = "当前第" + this.currentPage + "页，总共" + this.totalPage + "页";
+        }
+        /// <summary>
+        /// 条件查询初始化分页label
+        /// </summary>
+        public void InitPaginationIf()
+        {
+            //初始化控件状态
+            this.currentPage = 1;
+            //this.totalPage = 1;
             this.labPageIndex.Text = "当前第" + this.currentPage + "页，总共" + this.totalPage + "页";
         }
         /// <summary>
@@ -106,6 +113,16 @@ namespace PageControl
             }
             this.labPageIndex.Text = "当前第" + this.currentPage + "页，总共"+ this.totalPage + "页";
             this.LoadListView(this.CurrentPage, this.PageSize, this.TotalPage);
+        }
+        /// <summary>
+        ///  获取分页展示label控件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public Label getLabPageIndex()
+        {
+            return this.labPageIndex;
+
         }
         /// <summary>
         ///  第一页
