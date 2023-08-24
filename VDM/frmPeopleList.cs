@@ -42,6 +42,7 @@ namespace com.vdm.form
             if(formPeopleAdd.DialogResult == DialogResult.OK)
             {
                 InitListView(people,this.currentPage,this.pageSize);
+                this.pagination.InitPaginationIf();
             }
         }
 
@@ -305,6 +306,7 @@ namespace com.vdm.form
                         this.InitListView(people, this.currentPage, this.pageSize);
                         MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         InitListView(this.people, this.currentPage, this.pageSize);
+                        this.pagination.InitPaginationIf();
                     }
                     else
                     {
