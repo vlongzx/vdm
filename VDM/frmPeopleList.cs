@@ -453,6 +453,7 @@ namespace com.vdm.form
             //查询所有人员信息
             this.people=null;
             InitListView(this.people, this.currentPage, this.pageSize);
+            this.pagination.InitPagination();
         }
 
         private void pagination_LoadListView(int currentPage, int pageSize, int totalPage)
