@@ -1,6 +1,7 @@
 ﻿using com.vdm.bll;
 using com.vdm.common;
 using com.vdm.model;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace com.vdm.form
 {
-    public partial class frmPeopleInfo : Form
+    public partial class frmPeopleInfo : UIEditForm
     {
         private DictBLL dictBLL = null;
         private OrgBLL orgBLL = null;
@@ -42,8 +43,8 @@ namespace com.vdm.form
         {
             //初始化节目控件的值
             InitPageControl();
-
-            if(this.opreation_mode == "EDIT")
+            
+            if (this.opreation_mode == "EDIT")
             {
                 peopleBLL = new PeopleBLL();
                 People people = this.peopleBLL.getPeople(this.people_id);
@@ -63,7 +64,7 @@ namespace com.vdm.form
                 this.cbBlood_type.SelectedValue = people.Blood_type;
                 this.tbRemark.Text = people.Remark;
                 this.cbDisability_type.SelectedValue = people.Disability_type;
-                this.tbJoin_party_time.Text = people.Join_party_time;
+                this.dtJoin_party_time.Text = people.Join_party_time;
                 this.cbReligious_belief.SelectedValue = people.Religious_belief;
                 this.cbEducation.SelectedValue = people.Education;
                 this.cbWork_or_study.SelectedValue = people.Work_or_study;
@@ -366,7 +367,7 @@ namespace com.vdm.form
             //------------------------------------------------------------------
             //-----------------政治面貌与宗教信仰
             people.Politcal_outlook = this.cbPolitcal_outlook.SelectedValue.ToString();
-            people.Join_party_time = this.tbJoin_party_time.Text.Trim();
+            people.Join_party_time = this.dtJoin_party_time.Text.Trim();
             people.Religious_belief = this.cbReligious_belief.SelectedValue.ToString();
             people.Education = this.cbEducation.SelectedValue.ToString();
             //------------------------------------------------------------------
@@ -454,6 +455,17 @@ namespace com.vdm.form
                     this.cbVillage.ValueMember = "key";
                 }
             }
+        }
+
+        private void tbIdcard_TextChanged(object sender, EventArgs e)
+        {
+            string strIDCard = this.tbIdcard.Text.Trim();
+            if (strIDCard.Length == 18)
+            {
+                string strBirthday = strIDCard.Substring(6, 4)+"-"+ strIDCard.Substring(10, 2)+"-"+ strIDCard.Substring(12, 2);
+                dtBirthday.Value = DateTime.Parse(strBirthday);
+            }
+
         }
     }
 }

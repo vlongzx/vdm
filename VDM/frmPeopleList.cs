@@ -4,6 +4,7 @@ using com.vdm.form.utils;
 using com.vdm.model;
 using Sunny.UI;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,7 @@ namespace com.vdm.form
 
         private DictBLL dictBLL = null;
         private PeopleBLL peopleBLL = null;
-        private People people = null;
+        private Hashtable condition = null;
         private int pageIndex = 1;
         private int pageSize = 20;
         public frmPeopleList()
@@ -41,7 +42,7 @@ namespace com.vdm.form
             formPeopleAdd.ShowDialog();
             if(formPeopleAdd.DialogResult == DialogResult.OK)
             {
-                InitListView(people,this.pageIndex,this.pageSize);
+                InitListView(null,this.pageIndex,this.pageSize);
             }
         }
 
@@ -49,7 +50,7 @@ namespace com.vdm.form
         {
             InitControlData();
 
-            InitListView(people, this.pageIndex, this.pageSize);
+            InitListView(null, this.pageIndex, this.pageSize);
 
         }
 
@@ -128,7 +129,7 @@ namespace com.vdm.form
         /// <summary>
         ///  初始化ListView
         /// </summary>
-        public void InitListView(People p,int pageIndex,int pageSize)
+        public void InitListView(Hashtable condition,int pageIndex,int pageSize)
         {
             this.dgPeopleList.AutoGenerateColumns = false;
             this.dgPeopleList.RowTemplate.Height = 45;
@@ -141,19 +142,19 @@ namespace com.vdm.form
             this.dgPeopleList.AddColumn("与户主关系", "Relationship");
             this.dgPeopleList.AddColumn("民族", "Nation");
             this.dgPeopleList.AddColumn("政治面貌", "Politcal_outlook");
-            this.dgPeopleList.AddColumn( "入党时间", "Join_party_time");
-            this.dgPeopleList.AddColumn("联系电话", "Phone_number");
+            this.dgPeopleList.AddColumn( "入党时间", "Join_party_time").SetFixedMode(150);
+            this.dgPeopleList.AddColumn("联系电话", "Phone_number").SetFixedMode(180);
             this.dgPeopleList.AddColumn("是否实名", "Is_real_name");
-            this.dgPeopleList.AddColumn("所属镇", "Town");
-            this.dgPeopleList.AddColumn("所属村", "Villiage");
+            this.dgPeopleList.AddColumn("所属镇", "Town").SetFixedMode(200);
+            this.dgPeopleList.AddColumn("所属村", "Villiage").SetFixedMode(200);
             this.dgPeopleList.AddColumn( "宗教信仰","Religious_belief");
             this.dgPeopleList.AddColumn("学历","Education");
             this.dgPeopleList.AddColumn("血型", "Blood_type");
             this.dgPeopleList.AddColumn("婚姻状况", "Marital_status");
-            this.dgPeopleList.AddColumn("是否外出", "Work_or_study");
+            this.dgPeopleList.AddColumn("是否外出", "Work_or_study").SetFixedMode(200);
             this.dgPeopleList.AddColumn("从事行业", "Industry");
-            this.dgPeopleList.AddColumn("工作单位/学校名称", "Unit_or_school");
-            this.dgPeopleList.AddColumn("工作地点/学习地点", "Work_study_location");
+            this.dgPeopleList.AddColumn("工作单位/学校名称", "Unit_or_school").SetFixedMode(200);
+            this.dgPeopleList.AddColumn("工作地点/学习地点", "Work_study_location").SetFixedMode(200);
             this.dgPeopleList.AddColumn("技能类型", "Skill_type");
             this.dgPeopleList.AddColumn("就业指导", "Employ_guide");
             this.dgPeopleList.AddColumn("技能培训", "Skill_train");
@@ -168,14 +169,15 @@ namespace com.vdm.form
             this.dgPeopleList.AddColumn("是否易地搬迁户", "Is_relocation");
             this.dgPeopleList.AddColumn("低保户/五保户", "Low_five");
             this.dgPeopleList.AddColumn("低保等级/五保类别", "Low_five_grade");
-            this.dgPeopleList.AddColumn("备注", "Remark");
-            this.dgPeopleList.AddColumn("添加时间", "Create_datetime");
-            this.dgPeopleList.AddColumn("添加人", "Creater");
+            this.dgPeopleList.AddColumn("备注", "Remark", 100, DataGridViewContentAlignment.MiddleLeft, true).SetFixedMode(500);
+            this.dgPeopleList.AddColumn("添加时间", "Create_datetime").SetFixedMode(200);
+            this.dgPeopleList.AddColumn("添加人", "Creater").SetFixedMode(100);
+
 
             peopleBLL = new PeopleBLL();
             //初始化加载数据
             List<People> list_people;
-            if (p == null)
+            if (condition == null)
             {
                 //获得总页数
                 this.peopleBLL = new PeopleBLL();
@@ -190,10 +192,10 @@ namespace com.vdm.form
             {
                 //获得总页数
                 this.peopleBLL = new PeopleBLL();
-                int totalCount = this.peopleBLL.getTotalPeopleIf(this.people);
+                int totalCount = this.peopleBLL.getTotalPeopleIf(condition);
                 this.pagination.PageSize = this.pageSize;
                 this.pagination.TotalCount= totalCount;
-                list_people = this.peopleBLL.getAllPeople(p, pageIndex, pageSize);
+                list_people = this.peopleBLL.getAllPeople(condition, pageIndex, pageSize);
             }
 
             this.dgPeopleList.DataSource = list_people;
@@ -214,7 +216,7 @@ namespace com.vdm.form
             formPeopleAdd.ShowDialog();
             if (formPeopleAdd.DialogResult == DialogResult.OK)
             {
-                InitListView(people, this.pageIndex, this.pageSize);
+                InitListView(condition, this.pageIndex, this.pageSize);
             }
         }
         /// <summary>
@@ -224,7 +226,7 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btRefresh_Click(object sender, EventArgs e)
         {
-            InitListView(people, this.pageIndex, this.pageSize);
+            InitListView(condition, this.pageIndex, this.pageSize);
         }
 
         public override void Init()
@@ -255,7 +257,7 @@ namespace com.vdm.form
                 if (result.Count == 1)
                 {
                     MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    InitListView(this.people, this.pageIndex, this.pageSize);
+                    InitListView(condition, this.pageIndex, this.pageSize);
                 }
                 else
                 {
@@ -274,22 +276,42 @@ namespace com.vdm.form
         {
             //从界面获取值封装业务对象
             //------------------基础信息部分---------------------------------
-            people = new People();
-            people.People_name = this.tbPeople_name.Text.Trim();
-            people.Sex = this.cbSex.SelectedValue.ToString();
-            people.Nation = this.cbNation.SelectedValue.ToString();
-            people.Relationship = this.cbRelationship.SelectedValue.ToString();
-            people.Idcard = this.tbIdcard.Text.Trim();
-            people.Phone_number = this.tbPhone_number.Text.Trim();
+            condition = new Hashtable();
+            string People_name = this.tbPeople_name.Text.Trim();
+            string Sex = this.cbSex.SelectedValue.ToString();
+            string Nation = this.cbNation.SelectedValue.ToString();
+            string Relationship = this.cbRelationship.SelectedValue.ToString();
+            string Idcard = this.tbIdcard.Text.Trim();
+            string Phone_number = this.tbPhone_number.Text.Trim();
+            string Birthday_From = this.dpBirthday_From.Value.ToString();
+            string Birthday_To = this.dpBirthday_To.Value.ToString();
+            string Age_From = this.tbAge_From.Text.Trim();
+            string Age_To = this.tbAge_To.Text.Trim();
             //------------------------------------------------------------------
             //-----------------政治面貌与宗教信仰
-            people.Politcal_outlook = this.cbPolitcal_outlook.SelectedValue.ToString();
-            people.Religious_belief = this.cbReligious_belief.SelectedValue.ToString();
-            people.Education = this.cbEducation.SelectedValue.ToString();
+            string Politcal_outlook = this.cbPolitcal_outlook.SelectedValue.ToString();
+            string Religious_belief = this.cbReligious_belief.SelectedValue.ToString();
+            string Education = this.cbEducation.SelectedValue.ToString();
+            string Join_party_time_from = this.dpJoin_party_time_from.Value.ToString();
+            string Join_party_time_to = this.dpJoin_party_time_to.Value.ToString();
             //------------------------------------------------------------------
+            condition.Add("People_name", People_name);
+            condition.Add("Sex", Sex);
+            condition.Add("Nation", Nation);
+            condition.Add("Relationship", Relationship);
+            condition.Add("Idcard", Idcard);
+            condition.Add("Phone_number", Phone_number);
+            condition.Add("Birthday_From", Birthday_From);
+            condition.Add("Birthday_To", Birthday_To);
+            condition.Add("Age_From", Age_From);
+            condition.Add("Age_To", Age_To);
+            condition.Add("Politcal_outlook", Politcal_outlook);
+            condition.Add("Religious_belief", Religious_belief);
+            condition.Add("Education", Education);
+            condition.Add("Join_party_time_from", Join_party_time_from);
+            condition.Add("Join_party_time_to", Join_party_time_to);
             this.pageIndex = 1;
-            this.InitListView(people, this.pageIndex, this.pageSize);
-            //this.pagination.InitPaginationIf();
+            this.InitListView(condition, this.pageIndex, this.pageSize);
         }
 
         /// <summary>
@@ -299,7 +321,7 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btExport_Click(object sender, EventArgs e)
         {
-            ExcelUtil.Lv = this.InitExportListView(this.people);
+            ExcelUtil.Lv = this.InitExportListView(null);
             frmExportExcel ef = new frmExportExcel();
             ef.ShowDialog();
         }
@@ -367,7 +389,7 @@ namespace com.vdm.form
                     }
                     MessageBox.Show("导入成功");
                     //使用的是全局变量people
-                    InitListView(this.people, this.pageIndex, this.pageSize);
+                    InitListView(condition, this.pageIndex, this.pageSize);
                     //this.pagination.InitPagination();
                 }
                     catch
@@ -401,9 +423,8 @@ namespace com.vdm.form
             this.cbReligious_belief.SelectedValue = "";
             this.cbEducation.SelectedValue = "";
             //查询所有人员信息
-            this.people=null;
-            InitListView(this.people, this.pageIndex, this.pageSize);
-            //this.pagination.InitPagination();
+            condition = null;
+            InitListView(condition, this.pageIndex, this.pageSize);
         }
 
 
@@ -511,7 +532,7 @@ namespace com.vdm.form
         private void pagination_PageChanged(object sender, object pagingSource, int pageIndex, int count)
         {
             this.pageIndex = pageIndex;
-            InitListView(this.people, this.pageIndex, this.pageSize);
+            InitListView(condition, this.pageIndex, this.pageSize);
         }
     }
 }

@@ -2,6 +2,7 @@
 using com.vdm.dal;
 using com.vdm.model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -27,9 +28,9 @@ namespace com.vdm.bll
         /// </summary>
         /// <param name="people"></param>
         /// <returns></returns>
-        public int getTotalPeopleIf(People people)
+        public int getTotalPeopleIf(Hashtable conditon)
         {
-            return this.peopleDAL.getTotalPeopleIf(people);
+            return this.peopleDAL.getTotalPeopleIf(conditon);
         }
         /// <summary>
         ///  获得所有的人员信息
@@ -52,10 +53,10 @@ namespace com.vdm.bll
             return list_people;
         }
 
-        public List<People> getAllPeople(People people,int pageIndex, int pageSize)
+        public List<People> getAllPeople(Hashtable condition, int pageIndex, int pageSize)
         {
             List<People> list_people = new List<People>();
-            DataTable dt = this.peopleDAL.getAllPeople(people,pageIndex, pageSize);
+            DataTable dt = this.peopleDAL.getAllPeople(condition, pageIndex, pageSize);
 
             if (dt != null)
             {
