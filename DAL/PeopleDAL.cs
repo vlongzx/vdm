@@ -49,6 +49,14 @@ namespace com.vdm.dal
             {
                 sql += "    and sex = @sex";
             }
+            if (condition["Nation"].ToString() != "")
+            {
+                sql += "    and nation = @nation";
+            }
+            if (condition["Relationship"].ToString() != "")
+            {
+                sql += "    and relationship = @relationship";
+            }
             if (condition["Politcal_outlook"].ToString() != "")
             {
                 sql += "    and politcal_outlook = @politcal_outlook";
@@ -69,7 +77,6 @@ namespace com.vdm.dal
             {
                 sql += "    and education = @education";
             }
-
             if (condition["Birthday_From"].ToString() != "" && condition["Birthday_To"].ToString() != null)
             {
                 sql += "  and  birthday BETWEEN '" + condition["Birthday_From"].ToString() + "' AND '" + condition["Birthday_To"].ToString() + "'";
@@ -78,10 +85,11 @@ namespace com.vdm.dal
             {
                 sql += " and   join_party_time BETWEEN '" + condition["Join_party_time_from"].ToString() + "' AND '" + condition["Join_party_time_to"].ToString() + "'";
             }
-
             sql += " order by create_datetime desc";
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
+            parameters.Add(new SQLiteParameter("@nation", condition["nation"]));
+            parameters.Add(new SQLiteParameter("@relationship", condition["relationship"]));
             parameters.Add(new SQLiteParameter("@sex", condition["Sex"]));
             parameters.Add(new SQLiteParameter("@politcal_outlook", condition["Politcal_outlook"]));
             parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
@@ -97,7 +105,7 @@ namespace com.vdm.dal
             return 0;
         }
         /// <summary>
-        ///  分页查询获取所有的人员信息
+        ///  分页查询获取所有的人员信息(空条件查询，重置按钮等使用)
         /// </summary>
         /// <returns></returns>
         public DataTable getAllPeople(int pageIndex, int pageSize)
@@ -126,7 +134,7 @@ namespace com.vdm.dal
 
 
         /// <summary>
-        /// 条件+分页 查询人员信息
+        /// 条件+分页 查询人员信息（查询按钮使用）
         /// </summary>
         /// <param name="people"></param>
         /// <returns></returns>
@@ -140,6 +148,14 @@ namespace com.vdm.dal
             if (condition["Sex"].ToString() != "")
             {
                 sql += "    and sex = @sex";
+            }
+            if (condition["Nation"].ToString() != "")
+            {
+                sql += "    and nation = @nation";
+            }
+            if (condition["Relationship"].ToString() != "")
+            {
+                sql += "    and relationship = @relationship";
             }
             if (condition["Politcal_outlook"].ToString() != "")
             {
@@ -161,6 +177,15 @@ namespace com.vdm.dal
             {
                 sql += "    and education = @education";
             }
+            if (condition["Birthday_From"].ToString() != "" && condition["Birthday_To"].ToString() != null)
+            {
+                sql += "  and  birthday BETWEEN '" + condition["Birthday_From"].ToString() + "' AND '" + condition["Birthday_To"].ToString() + "'";
+            }
+            if (condition["Join_party_time_from"].ToString() != "" && condition["Join_party_time_to"].ToString() != null)
+            {
+                sql += " and   join_party_time BETWEEN '" + condition["Join_party_time_from"].ToString() + "' AND '" + condition["Join_party_time_to"].ToString() + "'";
+            }
+
             sql += " order by create_datetime desc";
             int offset = 0;
             int totalPeople = this.getTotalPeopleIf(condition);
@@ -182,6 +207,8 @@ namespace com.vdm.dal
             sql += "  offset  "+offset;
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
+            parameters.Add(new SQLiteParameter("@nation", condition["nation"]));
+            parameters.Add(new SQLiteParameter("@relationship", condition["relationship"]));
             parameters.Add(new SQLiteParameter("@sex", condition["Sex"]));
             parameters.Add(new SQLiteParameter("@politcal_outlook", condition["Politcal_outlook"]));
             parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
@@ -193,7 +220,7 @@ namespace com.vdm.dal
         }
 
         /// <summary>
-        /// 条件查询(导出时候用)
+        /// 条件查询(导出按钮使用)
         /// </summary>
         /// <param name="people"></param>
         /// <returns></returns>
@@ -207,6 +234,14 @@ namespace com.vdm.dal
             if (condition["Sex"].ToString() != "")
             {
                 sql += "    and sex = @sex";
+            }
+            if (condition["Nation"].ToString() != "")
+            {
+                sql += "    and nation = @nation";
+            }
+            if (condition["Relationship"].ToString() != "")
+            {
+                sql += "    and relationship = @relationship";
             }
             if (condition["Politcal_outlook"].ToString() != "")
             {
@@ -228,7 +263,6 @@ namespace com.vdm.dal
             {
                 sql += "    and education = @education";
             }
-
             if (condition["Birthday_From"].ToString() != "" && condition["Birthday_To"].ToString() != null)
             {
                 sql += "  and  birthday BETWEEN '" + condition["Birthday_From"].ToString() + "' AND '" + condition["Birthday_To"].ToString() + "'";
@@ -241,6 +275,8 @@ namespace com.vdm.dal
             sql += " order by create_datetime desc";
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
+            parameters.Add(new SQLiteParameter("@nation", condition["nation"]));
+            parameters.Add(new SQLiteParameter("@relationship", condition["relationship"]));
             parameters.Add(new SQLiteParameter("@sex", condition["Sex"]));
             parameters.Add(new SQLiteParameter("@politcal_outlook", condition["Politcal_outlook"]));
             parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
