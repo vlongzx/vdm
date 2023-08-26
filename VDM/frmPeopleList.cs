@@ -67,7 +67,10 @@ namespace com.vdm.form
                 this.cbNation.ValueMember = "key";
             }
             this.cbNation.SelectedValue = "";
-            
+            this.dpBirthday_From.Text = "";
+            this.dpBirthday_To.Text = "";
+            this.dpJoin_party_time_from.Text = "";
+            this.dpJoin_party_time_to.Text = "";
 
             //初始化性别
             List<KeyValue> list_sex = new List<KeyValue>();
@@ -136,6 +139,7 @@ namespace com.vdm.form
             this.dgPeopleList.Columns.Clear();
             this.dgPeopleList.AddColumn("编号","People_id");
             this.dgPeopleList.AddColumn( "姓名", "People_name").SetFixedMode(100);
+            this.dgPeopleList.Columns[1].Frozen = true;//冻结前两列
             this.dgPeopleList.AddColumn("身份证号","Idcard").SetFixedMode(300);
             this.dgPeopleList.AddColumn( "出生日期", "Birthday").SetFixedMode(150);
             this.dgPeopleList.AddColumn( "性别", "Sex");
@@ -283,15 +287,15 @@ namespace com.vdm.form
             string Relationship = this.cbRelationship.SelectedValue.ToString();
             string Idcard = this.tbIdcard.Text.Trim();
             string Phone_number = this.tbPhone_number.Text.Trim();
-            string Birthday_From = this.dpBirthday_From.Value.ToString();
-            string Birthday_To = this.dpBirthday_To.Value.ToString();
+            string Birthday_From = this.dpBirthday_From.Text.Trim();
+            string Birthday_To = this.dpBirthday_To.Text.Trim();
             //------------------------------------------------------------------
             //-----------------政治面貌与宗教信仰
             string Politcal_outlook = this.cbPolitcal_outlook.SelectedValue.ToString();
             string Religious_belief = this.cbReligious_belief.SelectedValue.ToString();
             string Education = this.cbEducation.SelectedValue.ToString();
-            string Join_party_time_from = this.dpJoin_party_time_from.Value.ToString();
-            string Join_party_time_to = this.dpJoin_party_time_to.Value.ToString();
+            string Join_party_time_from = this.dpJoin_party_time_from.Text.Trim();
+            string Join_party_time_to = this.dpJoin_party_time_to.Text.Trim();
             //------------------------------------------------------------------
             condition.Add("People_name", People_name);
             condition.Add("Sex", Sex);
@@ -530,5 +534,6 @@ namespace com.vdm.form
             this.pageIndex = pageIndex;
             InitListView(condition, this.pageIndex, this.pageSize);
         }
+
     }
 }

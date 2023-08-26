@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
             this.labSystemName = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
@@ -35,6 +36,7 @@
             this.btLogin = new Sunny.UI.UIButton();
             this.txtPassword = new Sunny.UI.UITextBox();
             this.txtUsername = new Sunny.UI.UITextBox();
+            this.uiStyleManager1 = new Sunny.UI.UIStyleManager(this.components);
             this.uiGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,30 +62,30 @@
             // labSystemName
             // 
             this.labSystemName.Font = new System.Drawing.Font("楷体", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labSystemName.Location = new System.Drawing.Point(238, 60);
+            this.labSystemName.Location = new System.Drawing.Point(73, 60);
             this.labSystemName.Name = "labSystemName";
-            this.labSystemName.Size = new System.Drawing.Size(396, 63);
+            this.labSystemName.Size = new System.Drawing.Size(714, 63);
             this.labSystemName.TabIndex = 11;
             this.labSystemName.Text = "乡村数据采集系统";
-            this.labSystemName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labSystemName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labSystemName.Click += new System.EventHandler(this.uiLabel3_Click);
             // 
             // uiLabel2
             // 
-            this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.Location = new System.Drawing.Point(123, 269);
+            this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel2.Location = new System.Drawing.Point(108, 269);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(116, 43);
+            this.uiLabel2.Size = new System.Drawing.Size(160, 43);
             this.uiLabel2.TabIndex = 10;
             this.uiLabel2.Text = "密    码：";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel1
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.Location = new System.Drawing.Point(123, 185);
+            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel1.Location = new System.Drawing.Point(108, 185);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(116, 43);
+            this.uiLabel1.Size = new System.Drawing.Size(160, 43);
             this.uiLabel1.TabIndex = 10;
             this.uiLabel1.Text = "用户名：";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,6 +140,10 @@
             this.txtUsername.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtUsername.Watermark = "";
             // 
+            // uiStyleManager1
+            // 
+            this.uiStyleManager1.DPIScale = true;
+            // 
             // frmLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -163,5 +169,6 @@
         private Sunny.UI.UITextBox txtPassword;
         private Sunny.UI.UITextBox txtUsername;
         private Sunny.UI.UILabel labSystemName;
+        private Sunny.UI.UIStyleManager uiStyleManager1;
     }
 }
