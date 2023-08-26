@@ -23,6 +23,8 @@ namespace com.vdm.form
             //设置关联
             Header.TabControl = MainTabControl;
             Footer.Text = "陕西奥维纳斯软件技术有限公司提供技术支持";
+            AddPage(new frmPeopleList(), 1001);
+            AddPage(new frmFamerList(), 1002);
         }
 
         private void OpenForm(Form subForm)
@@ -43,14 +45,13 @@ namespace com.vdm.form
 
         private void tspPeople_Click(object sender, EventArgs e)
         {
-            this.RemoveAllPages();
-             AddPage(new frmPeopleList(), 1001);
+            MainTabControl.SelectPage(1001);
+
         }
 
         private void btFamer_Click(object sender, EventArgs e)
         {
-            this.RemoveAllPages();
-            AddPage(new frmFamerList(), 1002);
+            MainTabControl.SelectPage(1002);
         }
     }
 }
