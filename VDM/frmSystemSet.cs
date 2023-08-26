@@ -43,20 +43,17 @@ namespace com.vdm.form
 
             //初始化用户列表
             this.userBLL = new UserBLL();
-            List<User> listUser = this.userBLL.getAllUser();
+            DataTable dt = this.userBLL.getAllUser();
             this.dgUser.AutoGenerateColumns = false;
             this.dgUser.RowTemplate.Height = 45;
-            this.dgUser.AddColumn("用户ID", "user_id");
+            this.dgUser.AddColumn("用户ID", "user_id").SetSortMode(DataGridViewColumnSortMode.Automatic);
             this.dgUser.AddColumn("用户名", "username");
             this.dgUser.AddColumn("账号级别", "level");
             this.dgUser.AddColumn("所在乡镇", "town_name").SetFixedMode(150);
             this.dgUser.AddColumn("所在村", "village_name").SetFixedMode(150);
             this.dgUser.AddColumn("备注", "remark").SetFixedMode(300);
-            if(this.dgUser.Columns[0] != null)
-            {
-                this.dgUser.Columns[0].SortMode = DataGridViewColumnSortMode.Automatic;
-            }
-            this.dgUser.DataSource = listUser;
+
+            this.dgUser.DataSource = dt;
         }
 
         private void btAdd_Click(object sender, EventArgs e)
