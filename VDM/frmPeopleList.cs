@@ -321,7 +321,7 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btExport_Click(object sender, EventArgs e)
         {
-            ExcelUtil.Lv = this.InitExportListView(null);
+            ExcelUtil.Lv = this.InitExportListView(this.condition);
             frmExportExcel ef = new frmExportExcel();
             ef.ShowDialog();
         }
@@ -422,6 +422,10 @@ namespace com.vdm.form
             this.cbPolitcal_outlook.SelectedValue = "";
             this.cbReligious_belief.SelectedValue = "";
             this.cbEducation.SelectedValue = "";
+           this.dpJoin_party_time_from.Text="";
+             this.dpJoin_party_time_to.Text="";
+            this.dpBirthday_From.Text="";
+            this.dpBirthday_To.Text="";
             //查询所有人员信息
             condition = null;
             InitListView(condition, this.pageIndex, this.pageSize);
@@ -433,7 +437,7 @@ namespace com.vdm.form
         /// </summary>
         /// <param name="p">查询条件</param>
         /// <returns></returns>
-        public ListView InitExportListView(People p)
+        public ListView InitExportListView(Hashtable condition)
         {
             ListView lvExport = new ListView();
             lvExport.Items.Clear();
@@ -480,7 +484,7 @@ namespace com.vdm.form
             //初始化导出ListView数据
             List<People> list_people;
             this.peopleBLL = new PeopleBLL();
-            list_people = this.peopleBLL.getAllPeople(p);
+            list_people = this.peopleBLL.getAllPeople(condition);
 
             foreach (People people in list_people)
             {
