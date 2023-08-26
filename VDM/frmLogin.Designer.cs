@@ -28,43 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
             this.btLogin = new Sunny.UI.UIButton();
             this.txtPassword = new Sunny.UI.UITextBox();
             this.txtUsername = new Sunny.UI.UITextBox();
-            this.labSystemName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.uiLabel1 = new Sunny.UI.UILabel();
+            this.uiLabel2 = new Sunny.UI.UILabel();
+            this.uiLabel3 = new Sunny.UI.UILabel();
+            this.uiGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // uiGroupBox1
             // 
-            this.groupBox1.Controls.Add(this.btLogin);
-            this.groupBox1.Controls.Add(this.txtPassword);
-            this.groupBox1.Controls.Add(this.txtUsername);
-            this.groupBox1.Controls.Add(this.labSystemName);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(34, 72);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(853, 441);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "欢迎登录";
+            this.uiGroupBox1.Controls.Add(this.uiLabel3);
+            this.uiGroupBox1.Controls.Add(this.uiLabel2);
+            this.uiGroupBox1.Controls.Add(this.uiLabel1);
+            this.uiGroupBox1.Controls.Add(this.btLogin);
+            this.uiGroupBox1.Controls.Add(this.txtPassword);
+            this.uiGroupBox1.Controls.Add(this.txtUsername);
+            this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiGroupBox1.Location = new System.Drawing.Point(29, 53);
+            this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiGroupBox1.Name = "uiGroupBox1";
+            this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox1.Size = new System.Drawing.Size(873, 486);
+            this.uiGroupBox1.TabIndex = 0;
+            this.uiGroupBox1.Text = "欢迎登录";
+            this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btLogin
             // 
             this.btLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btLogin.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btLogin.Location = new System.Drawing.Point(581, 344);
+            this.btLogin.Location = new System.Drawing.Point(599, 352);
             this.btLogin.MinimumSize = new System.Drawing.Size(1, 1);
             this.btLogin.Name = "btLogin";
-            this.btLogin.Size = new System.Drawing.Size(176, 69);
-            this.btLogin.TabIndex = 6;
+            this.btLogin.Size = new System.Drawing.Size(187, 72);
+            this.btLogin.TabIndex = 9;
             this.btLogin.Text = "登录(&L)";
             this.btLogin.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // txtPassword
             // 
@@ -73,15 +76,15 @@
             this.txtPassword.DoubleValue = 123456D;
             this.txtPassword.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtPassword.IntValue = 123456;
-            this.txtPassword.Location = new System.Drawing.Point(257, 261);
+            this.txtPassword.Location = new System.Drawing.Point(275, 269);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Padding = new System.Windows.Forms.Padding(5);
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.ShowText = false;
-            this.txtPassword.Size = new System.Drawing.Size(500, 40);
-            this.txtPassword.TabIndex = 5;
+            this.txtPassword.Size = new System.Drawing.Size(511, 43);
+            this.txtPassword.TabIndex = 8;
             this.txtPassword.Text = "123456";
             this.txtPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtPassword.Watermark = "";
@@ -91,73 +94,72 @@
             this.txtUsername.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtUsername.Location = new System.Drawing.Point(258, 177);
+            this.txtUsername.Location = new System.Drawing.Point(276, 185);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsername.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Padding = new System.Windows.Forms.Padding(5);
             this.txtUsername.ShowText = false;
-            this.txtUsername.Size = new System.Drawing.Size(500, 40);
-            this.txtUsername.TabIndex = 4;
+            this.txtUsername.Size = new System.Drawing.Size(511, 43);
+            this.txtUsername.TabIndex = 7;
             this.txtUsername.Text = "lisi";
             this.txtUsername.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtUsername.Watermark = "";
             // 
-            // labSystemName
+            // uiLabel1
             // 
-            this.labSystemName.AutoSize = true;
-            this.labSystemName.Font = new System.Drawing.Font("楷体", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labSystemName.Location = new System.Drawing.Point(251, 59);
-            this.labSystemName.Name = "labSystemName";
-            this.labSystemName.Size = new System.Drawing.Size(378, 33);
-            this.labSystemName.TabIndex = 3;
-            this.labSystemName.Text = "万荣县乡村数据采集系统";
+            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel1.Location = new System.Drawing.Point(123, 185);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(116, 43);
+            this.uiLabel1.TabIndex = 10;
+            this.uiLabel1.Text = "用户名：";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // uiLabel2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(127, 267);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 28);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "密  码：";
+            this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel2.Location = new System.Drawing.Point(123, 269);
+            this.uiLabel2.Name = "uiLabel2";
+            this.uiLabel2.Size = new System.Drawing.Size(116, 43);
+            this.uiLabel2.TabIndex = 10;
+            this.uiLabel2.Text = "密    码：";
+            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // uiLabel3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(127, 183);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "用户名：";
+            this.uiLabel3.Font = new System.Drawing.Font("楷体", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel3.Location = new System.Drawing.Point(238, 60);
+            this.uiLabel3.Name = "uiLabel3";
+            this.uiLabel3.Size = new System.Drawing.Size(396, 63);
+            this.uiLabel3.TabIndex = 11;
+            this.uiLabel3.Text = "乡村数据采集系统";
+            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(929, 564);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.uiGroupBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.Text = "用户登录";
             this.ZoomScaleRect = new System.Drawing.Rectangle(22, 22, 929, 564);
             this.Load += new System.EventHandler(this.frmLogin_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.uiGroupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labSystemName;
+        private Sunny.UI.UIGroupBox uiGroupBox1;
+        private Sunny.UI.UILabel uiLabel2;
+        private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UIButton btLogin;
         private Sunny.UI.UITextBox txtPassword;
         private Sunny.UI.UITextBox txtUsername;
+        private Sunny.UI.UILabel uiLabel3;
     }
 }
