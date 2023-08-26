@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new Sunny.UI.UIGroupBox();
             this.dgPeopleList = new Sunny.UI.UIDataGridView();
             this.btAdd = new Sunny.UI.UIButton();
@@ -97,48 +97,48 @@
             // 
             this.dgPeopleList.AllowUserToAddRows = false;
             this.dgPeopleList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgPeopleList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgPeopleList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgPeopleList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgPeopleList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPeopleList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPeopleList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgPeopleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgPeopleList.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgPeopleList.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgPeopleList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgPeopleList.EnableHeadersVisualStyles = false;
             this.dgPeopleList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgPeopleList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgPeopleList.Location = new System.Drawing.Point(4, 32);
             this.dgPeopleList.Name = "dgPeopleList";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPeopleList.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPeopleList.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgPeopleList.RowHeadersVisible = false;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgPeopleList.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgPeopleList.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgPeopleList.RowTemplate.Height = 23;
             this.dgPeopleList.ScrollBarHandleWidth = 40;
             this.dgPeopleList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -283,7 +283,7 @@
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel3.Location = new System.Drawing.Point(405, 83);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(54, 31);
+            this.uiLabel3.Size = new System.Drawing.Size(72, 41);
             this.uiLabel3.TabIndex = 69;
             this.uiLabel3.Text = "(到)";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,7 +294,7 @@
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(39, 82);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(150, 31);
+            this.uiLabel1.Size = new System.Drawing.Size(200, 41);
             this.uiLabel1.TabIndex = 68;
             this.uiLabel1.Text = "出生日期(从)";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -305,7 +305,7 @@
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(41, 36);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(68, 31);
+            this.uiLabel2.Size = new System.Drawing.Size(90, 41);
             this.uiLabel2.TabIndex = 67;
             this.uiLabel2.Text = "姓名:";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -324,6 +324,7 @@
             this.dpBirthday_To.SymbolDropDown = 61555;
             this.dpBirthday_To.SymbolNormal = 61555;
             this.dpBirthday_To.TabIndex = 66;
+            this.dpBirthday_To.Text = "2023-08-25";
             this.dpBirthday_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.dpBirthday_To.Value = new System.DateTime(2023, 8, 25, 20, 18, 35, 482);
             this.dpBirthday_To.Watermark = "";
@@ -342,6 +343,7 @@
             this.dpJoin_party_time_to.SymbolDropDown = 61555;
             this.dpJoin_party_time_to.SymbolNormal = 61555;
             this.dpJoin_party_time_to.TabIndex = 65;
+            this.dpJoin_party_time_to.Text = "2023-08-25";
             this.dpJoin_party_time_to.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.dpJoin_party_time_to.Value = new System.DateTime(2023, 8, 25, 20, 18, 35, 482);
             this.dpJoin_party_time_to.Watermark = "";
@@ -360,8 +362,9 @@
             this.dpBirthday_From.SymbolDropDown = 61555;
             this.dpBirthday_From.SymbolNormal = 61555;
             this.dpBirthday_From.TabIndex = 64;
+            this.dpBirthday_From.Text = "1900-01-01";
             this.dpBirthday_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dpBirthday_From.Value = new System.DateTime(2023, 8, 25, 20, 18, 35, 482);
+            this.dpBirthday_From.Value = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dpBirthday_From.Watermark = "";
             // 
             // dpJoin_party_time_from
@@ -379,6 +382,7 @@
             this.dpJoin_party_time_from.SymbolDropDown = 61555;
             this.dpJoin_party_time_from.SymbolNormal = 61555;
             this.dpJoin_party_time_from.TabIndex = 63;
+            this.dpJoin_party_time_from.Text = "2023-08-25";
             this.dpJoin_party_time_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.dpJoin_party_time_from.Value = new System.DateTime(2023, 8, 25, 20, 18, 35, 482);
             this.dpJoin_party_time_from.Watermark = "";
@@ -554,7 +558,7 @@
             this.label4.Location = new System.Drawing.Point(1141, 36);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 31);
+            this.label4.Size = new System.Drawing.Size(114, 41);
             this.label4.TabIndex = 51;
             this.label4.Text = "性别：";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -566,7 +570,7 @@
             this.label9.Location = new System.Drawing.Point(784, 82);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 31);
+            this.label9.Size = new System.Drawing.Size(178, 41);
             this.label9.TabIndex = 50;
             this.label9.Text = "政治面貌：";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -578,7 +582,7 @@
             this.label3.Location = new System.Drawing.Point(784, 36);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 31);
+            this.label3.Size = new System.Drawing.Size(114, 41);
             this.label3.TabIndex = 49;
             this.label3.Text = "民族：";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -590,7 +594,7 @@
             this.label2.Location = new System.Drawing.Point(405, 35);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 31);
+            this.label2.Size = new System.Drawing.Size(210, 41);
             this.label2.TabIndex = 48;
             this.label2.Text = "与户主关系：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -602,7 +606,7 @@
             this.label15.Location = new System.Drawing.Point(1141, 175);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(86, 31);
+            this.label15.Size = new System.Drawing.Size(114, 41);
             this.label15.TabIndex = 47;
             this.label15.Text = "学历：";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -614,7 +618,7 @@
             this.label10.Location = new System.Drawing.Point(44, 127);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 31);
+            this.label10.Size = new System.Drawing.Size(200, 41);
             this.label10.TabIndex = 46;
             this.label10.Text = "入党时间(从)";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -626,7 +630,7 @@
             this.label14.Location = new System.Drawing.Point(784, 175);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(134, 31);
+            this.label14.Size = new System.Drawing.Size(178, 41);
             this.label14.TabIndex = 45;
             this.label14.Text = "宗教信仰：";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -638,7 +642,7 @@
             this.label13.Location = new System.Drawing.Point(405, 174);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(134, 31);
+            this.label13.Size = new System.Drawing.Size(178, 41);
             this.label13.TabIndex = 44;
             this.label13.Text = "联系电话：";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -650,7 +654,7 @@
             this.label12.Location = new System.Drawing.Point(39, 175);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(134, 31);
+            this.label12.Size = new System.Drawing.Size(178, 41);
             this.label12.TabIndex = 43;
             this.label12.Text = "身份证号：";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -662,7 +666,7 @@
             this.label8.Location = new System.Drawing.Point(405, 125);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 31);
+            this.label8.Size = new System.Drawing.Size(72, 41);
             this.label8.TabIndex = 42;
             this.label8.Text = "(到)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -682,6 +686,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPeopleList";
             this.Text = "人员信息管理";
+            this.Initialize += new System.EventHandler(this.frmPeopleList_Initialize);
             this.Load += new System.EventHandler(this.frmPeople_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgPeopleList)).EndInit();

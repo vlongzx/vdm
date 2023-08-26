@@ -29,6 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.uiLabel4 = new Sunny.UI.UILabel();
+            this.uiLabel3 = new Sunny.UI.UILabel();
+            this.uiLabel2 = new Sunny.UI.UILabel();
+            this.uiLabel6 = new Sunny.UI.UILabel();
+            this.uiLabel10 = new Sunny.UI.UILabel();
+            this.uiLabel13 = new Sunny.UI.UILabel();
+            this.uiLabel12 = new Sunny.UI.UILabel();
+            this.uiLabel11 = new Sunny.UI.UILabel();
+            this.uiLabel9 = new Sunny.UI.UILabel();
+            this.uiLabel8 = new Sunny.UI.UILabel();
+            this.uiLabel5 = new Sunny.UI.UILabel();
+            this.uiLabel1 = new Sunny.UI.UILabel();
             this.dtBirthday = new Sunny.UI.UIDatePicker();
             this.cbRelationship = new Sunny.UI.UIComboBox();
             this.cbBlood_type = new Sunny.UI.UIComboBox();
@@ -40,13 +52,26 @@
             this.cbSex = new Sunny.UI.UIComboBox();
             this.tbIdcard = new Sunny.UI.UITextBox();
             this.tbRemark = new Sunny.UI.UITextBox();
+            this.tbPhone_number = new Sunny.UI.UITextBox();
             this.tbPeople_name = new Sunny.UI.UITextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtJoin_party_time = new Sunny.UI.UIDatePicker();
+            this.uiLabel14 = new Sunny.UI.UILabel();
+            this.uiLabel16 = new Sunny.UI.UILabel();
+            this.uiLabel15 = new Sunny.UI.UILabel();
+            this.uiLabel7 = new Sunny.UI.UILabel();
             this.cbEducation = new Sunny.UI.UIComboBox();
             this.cbReligious_belief = new Sunny.UI.UIComboBox();
             this.cbPolitcal_outlook = new Sunny.UI.UIComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.uiLabel21 = new Sunny.UI.UILabel();
+            this.uiLabel17 = new Sunny.UI.UILabel();
+            this.uiLabel22 = new Sunny.UI.UILabel();
+            this.uiLabel20 = new Sunny.UI.UILabel();
+            this.uiLabel23 = new Sunny.UI.UILabel();
+            this.uiLabel19 = new Sunny.UI.UILabel();
+            this.uiLabel24 = new Sunny.UI.UILabel();
+            this.uiLabel18 = new Sunny.UI.UILabel();
             this.cbSkill_train = new Sunny.UI.UIComboBox();
             this.cbEmploy_guide = new Sunny.UI.UIComboBox();
             this.cbIndustry = new Sunny.UI.UIComboBox();
@@ -57,7 +82,18 @@
             this.cbWork_or_study = new Sunny.UI.UIComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.uiLabel27 = new Sunny.UI.UILabel();
+            this.uiLabel26 = new Sunny.UI.UILabel();
+            this.uiLabel25 = new Sunny.UI.UILabel();
             this.dtCareer_get_time = new Sunny.UI.UIDatePicker();
+            this.uiLabel32 = new Sunny.UI.UILabel();
+            this.uiLabel31 = new Sunny.UI.UILabel();
+            this.uiLabel30 = new Sunny.UI.UILabel();
+            this.uiLabel35 = new Sunny.UI.UILabel();
+            this.uiLabel34 = new Sunny.UI.UILabel();
+            this.uiLabel33 = new Sunny.UI.UILabel();
+            this.uiLabel29 = new Sunny.UI.UILabel();
+            this.uiLabel28 = new Sunny.UI.UILabel();
             this.cbIs_relocation = new Sunny.UI.UIComboBox();
             this.cbMilitary_service = new Sunny.UI.UIComboBox();
             this.cbIs_unable_old = new Sunny.UI.UIComboBox();
@@ -68,42 +104,6 @@
             this.cbLow_five = new Sunny.UI.UIComboBox();
             this.cbBig_ill_help = new Sunny.UI.UIComboBox();
             this.cbDisability_type = new Sunny.UI.UIComboBox();
-            this.tbPhone_number = new Sunny.UI.UITextBox();
-            this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiLabel2 = new Sunny.UI.UILabel();
-            this.uiLabel3 = new Sunny.UI.UILabel();
-            this.uiLabel4 = new Sunny.UI.UILabel();
-            this.uiLabel5 = new Sunny.UI.UILabel();
-            this.uiLabel6 = new Sunny.UI.UILabel();
-            this.uiLabel7 = new Sunny.UI.UILabel();
-            this.uiLabel8 = new Sunny.UI.UILabel();
-            this.uiLabel9 = new Sunny.UI.UILabel();
-            this.uiLabel10 = new Sunny.UI.UILabel();
-            this.uiLabel11 = new Sunny.UI.UILabel();
-            this.uiLabel12 = new Sunny.UI.UILabel();
-            this.uiLabel13 = new Sunny.UI.UILabel();
-            this.uiLabel14 = new Sunny.UI.UILabel();
-            this.uiLabel15 = new Sunny.UI.UILabel();
-            this.uiLabel16 = new Sunny.UI.UILabel();
-            this.uiLabel17 = new Sunny.UI.UILabel();
-            this.uiLabel18 = new Sunny.UI.UILabel();
-            this.uiLabel19 = new Sunny.UI.UILabel();
-            this.uiLabel20 = new Sunny.UI.UILabel();
-            this.uiLabel21 = new Sunny.UI.UILabel();
-            this.uiLabel22 = new Sunny.UI.UILabel();
-            this.uiLabel23 = new Sunny.UI.UILabel();
-            this.uiLabel24 = new Sunny.UI.UILabel();
-            this.uiLabel25 = new Sunny.UI.UILabel();
-            this.uiLabel26 = new Sunny.UI.UILabel();
-            this.uiLabel27 = new Sunny.UI.UILabel();
-            this.uiLabel28 = new Sunny.UI.UILabel();
-            this.uiLabel29 = new Sunny.UI.UILabel();
-            this.uiLabel30 = new Sunny.UI.UILabel();
-            this.uiLabel31 = new Sunny.UI.UILabel();
-            this.uiLabel32 = new Sunny.UI.UILabel();
-            this.uiLabel33 = new Sunny.UI.UILabel();
-            this.uiLabel34 = new Sunny.UI.UILabel();
-            this.uiLabel35 = new Sunny.UI.UILabel();
             this.pnlBtm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -165,6 +165,150 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息";
             // 
+            // uiLabel4
+            // 
+            this.uiLabel4.AutoSize = true;
+            this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel4.Location = new System.Drawing.Point(28, 196);
+            this.uiLabel4.Name = "uiLabel4";
+            this.uiLabel4.Size = new System.Drawing.Size(82, 41);
+            this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel4.TabIndex = 13;
+            this.uiLabel4.Text = "备注";
+            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel3
+            // 
+            this.uiLabel3.AutoSize = true;
+            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel3.Location = new System.Drawing.Point(28, 141);
+            this.uiLabel3.Name = "uiLabel3";
+            this.uiLabel3.Size = new System.Drawing.Size(114, 41);
+            this.uiLabel3.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel3.TabIndex = 13;
+            this.uiLabel3.Text = "所在村";
+            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel2
+            // 
+            this.uiLabel2.AutoSize = true;
+            this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel2.Location = new System.Drawing.Point(28, 93);
+            this.uiLabel2.Name = "uiLabel2";
+            this.uiLabel2.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel2.TabIndex = 13;
+            this.uiLabel2.Text = "身份证号";
+            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel6
+            // 
+            this.uiLabel6.AutoSize = true;
+            this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel6.Location = new System.Drawing.Point(405, 94);
+            this.uiLabel6.Name = "uiLabel6";
+            this.uiLabel6.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel6.TabIndex = 13;
+            this.uiLabel6.Text = "出生日期";
+            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel10
+            // 
+            this.uiLabel10.AutoSize = true;
+            this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel10.Location = new System.Drawing.Point(794, 144);
+            this.uiLabel10.Name = "uiLabel10";
+            this.uiLabel10.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel10.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel10.TabIndex = 13;
+            this.uiLabel10.Text = "实名认证";
+            this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel13
+            // 
+            this.uiLabel13.AutoSize = true;
+            this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel13.Location = new System.Drawing.Point(1196, 144);
+            this.uiLabel13.Name = "uiLabel13";
+            this.uiLabel13.Size = new System.Drawing.Size(82, 41);
+            this.uiLabel13.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel13.TabIndex = 13;
+            this.uiLabel13.Text = "血型";
+            this.uiLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel12
+            // 
+            this.uiLabel12.AutoSize = true;
+            this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel12.Location = new System.Drawing.Point(1196, 96);
+            this.uiLabel12.Name = "uiLabel12";
+            this.uiLabel12.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel12.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel12.TabIndex = 13;
+            this.uiLabel12.Text = "所在乡镇";
+            this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel11
+            // 
+            this.uiLabel11.AutoSize = true;
+            this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel11.Location = new System.Drawing.Point(1196, 45);
+            this.uiLabel11.Name = "uiLabel11";
+            this.uiLabel11.Size = new System.Drawing.Size(178, 41);
+            this.uiLabel11.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel11.TabIndex = 13;
+            this.uiLabel11.Text = "与户主关系";
+            this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel9
+            // 
+            this.uiLabel9.AutoSize = true;
+            this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel9.Location = new System.Drawing.Point(794, 96);
+            this.uiLabel9.Name = "uiLabel9";
+            this.uiLabel9.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel9.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel9.TabIndex = 13;
+            this.uiLabel9.Text = "联系电话";
+            this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel8
+            // 
+            this.uiLabel8.AutoSize = true;
+            this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel8.Location = new System.Drawing.Point(794, 45);
+            this.uiLabel8.Name = "uiLabel8";
+            this.uiLabel8.Size = new System.Drawing.Size(82, 41);
+            this.uiLabel8.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel8.TabIndex = 13;
+            this.uiLabel8.Text = "民族";
+            this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel5
+            // 
+            this.uiLabel5.AutoSize = true;
+            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel5.Location = new System.Drawing.Point(405, 48);
+            this.uiLabel5.Name = "uiLabel5";
+            this.uiLabel5.Size = new System.Drawing.Size(82, 41);
+            this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel5.TabIndex = 13;
+            this.uiLabel5.Text = "性别";
+            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel1
+            // 
+            this.uiLabel1.AutoSize = true;
+            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel1.Location = new System.Drawing.Point(28, 45);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(82, 41);
+            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel1.TabIndex = 13;
+            this.uiLabel1.Text = "姓名";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // dtBirthday
             // 
             this.dtBirthday.FillColor = System.Drawing.Color.White;
@@ -182,7 +326,7 @@
             this.dtBirthday.TabIndex = 4;
             this.dtBirthday.Text = "2023-08-25";
             this.dtBirthday.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dtBirthday.Value = new System.DateTime(2023, 8, 25, 19, 36, 24, 762);
+            this.dtBirthday.Value = new System.DateTime(2023, 8, 25, 0, 0, 0, 0);
             this.dtBirthday.Watermark = "";
             // 
             // cbRelationship
@@ -350,6 +494,23 @@
             this.tbRemark.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbRemark.Watermark = "";
             // 
+            // tbPhone_number
+            // 
+            this.tbPhone_number.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbPhone_number.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPhone_number.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPhone_number.Location = new System.Drawing.Point(935, 96);
+            this.tbPhone_number.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPhone_number.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbPhone_number.Name = "tbPhone_number";
+            this.tbPhone_number.Padding = new System.Windows.Forms.Padding(5);
+            this.tbPhone_number.ShowText = false;
+            this.tbPhone_number.Size = new System.Drawing.Size(200, 29);
+            this.tbPhone_number.Style = Sunny.UI.UIStyle.Custom;
+            this.tbPhone_number.TabIndex = 0;
+            this.tbPhone_number.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPhone_number.Watermark = "";
+            // 
             // tbPeople_name
             // 
             this.tbPeople_name.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
@@ -403,8 +564,56 @@
             this.dtJoin_party_time.TabIndex = 4;
             this.dtJoin_party_time.Text = "2023-08-25";
             this.dtJoin_party_time.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dtJoin_party_time.Value = new System.DateTime(2023, 8, 25, 19, 36, 24, 762);
+            this.dtJoin_party_time.Value = new System.DateTime(2023, 8, 25, 0, 0, 0, 0);
             this.dtJoin_party_time.Watermark = "";
+            // 
+            // uiLabel14
+            // 
+            this.uiLabel14.AutoSize = true;
+            this.uiLabel14.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel14.Location = new System.Drawing.Point(28, 47);
+            this.uiLabel14.Name = "uiLabel14";
+            this.uiLabel14.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel14.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel14.TabIndex = 13;
+            this.uiLabel14.Text = "政治面貌";
+            this.uiLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel16
+            // 
+            this.uiLabel16.AutoSize = true;
+            this.uiLabel16.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel16.Location = new System.Drawing.Point(1196, 47);
+            this.uiLabel16.Name = "uiLabel16";
+            this.uiLabel16.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel16.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel16.TabIndex = 13;
+            this.uiLabel16.Text = "最高学历";
+            this.uiLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel15
+            // 
+            this.uiLabel15.AutoSize = true;
+            this.uiLabel15.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel15.Location = new System.Drawing.Point(794, 47);
+            this.uiLabel15.Name = "uiLabel15";
+            this.uiLabel15.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel15.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel15.TabIndex = 13;
+            this.uiLabel15.Text = "宗教信仰";
+            this.uiLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel7
+            // 
+            this.uiLabel7.AutoSize = true;
+            this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel7.Location = new System.Drawing.Point(416, 49);
+            this.uiLabel7.Name = "uiLabel7";
+            this.uiLabel7.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel7.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel7.TabIndex = 13;
+            this.uiLabel7.Text = "入党时间";
+            this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cbEducation
             // 
@@ -481,6 +690,100 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "职业就业情况";
+            // 
+            // uiLabel21
+            // 
+            this.uiLabel21.AutoSize = true;
+            this.uiLabel21.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel21.Location = new System.Drawing.Point(26, 92);
+            this.uiLabel21.Name = "uiLabel21";
+            this.uiLabel21.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel21.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel21.TabIndex = 13;
+            this.uiLabel21.Text = "技能类型";
+            this.uiLabel21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel17
+            // 
+            this.uiLabel17.AutoSize = true;
+            this.uiLabel17.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel17.Location = new System.Drawing.Point(26, 48);
+            this.uiLabel17.Name = "uiLabel17";
+            this.uiLabel17.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel17.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel17.TabIndex = 13;
+            this.uiLabel17.Text = "是否外出";
+            this.uiLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel22
+            // 
+            this.uiLabel22.AutoSize = true;
+            this.uiLabel22.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel22.Location = new System.Drawing.Point(1196, 94);
+            this.uiLabel22.Name = "uiLabel22";
+            this.uiLabel22.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel22.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel22.TabIndex = 13;
+            this.uiLabel22.Text = "职称等级";
+            this.uiLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel20
+            // 
+            this.uiLabel20.AutoSize = true;
+            this.uiLabel20.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel20.Location = new System.Drawing.Point(1196, 48);
+            this.uiLabel20.Name = "uiLabel20";
+            this.uiLabel20.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel20.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel20.TabIndex = 13;
+            this.uiLabel20.Text = "所在地点";
+            this.uiLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel23
+            // 
+            this.uiLabel23.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel23.Location = new System.Drawing.Point(786, 84);
+            this.uiLabel23.Name = "uiLabel23";
+            this.uiLabel23.Size = new System.Drawing.Size(148, 47);
+            this.uiLabel23.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel23.TabIndex = 13;
+            this.uiLabel23.Text = "技能培训";
+            this.uiLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel19
+            // 
+            this.uiLabel19.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel19.Location = new System.Drawing.Point(786, 40);
+            this.uiLabel19.Name = "uiLabel19";
+            this.uiLabel19.Size = new System.Drawing.Size(148, 47);
+            this.uiLabel19.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel19.TabIndex = 13;
+            this.uiLabel19.Text = "单位/学校";
+            this.uiLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel24
+            // 
+            this.uiLabel24.AutoSize = true;
+            this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel24.Location = new System.Drawing.Point(416, 92);
+            this.uiLabel24.Name = "uiLabel24";
+            this.uiLabel24.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel24.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel24.TabIndex = 13;
+            this.uiLabel24.Text = "就业指导";
+            this.uiLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel18
+            // 
+            this.uiLabel18.AutoSize = true;
+            this.uiLabel18.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel18.Location = new System.Drawing.Point(416, 48);
+            this.uiLabel18.Name = "uiLabel18";
+            this.uiLabel18.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel18.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel18.TabIndex = 13;
+            this.uiLabel18.Text = "从事行业";
+            this.uiLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cbSkill_train
             // 
@@ -620,7 +923,7 @@
             this.label20.Location = new System.Drawing.Point(1027, 195);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(130, 24);
+            this.label20.Size = new System.Drawing.Size(175, 33);
             this.label20.TabIndex = 0;
             this.label20.Text = "技能培训：";
             // 
@@ -657,6 +960,42 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "社会保障情况";
             // 
+            // uiLabel27
+            // 
+            this.uiLabel27.AutoSize = true;
+            this.uiLabel27.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel27.Location = new System.Drawing.Point(28, 133);
+            this.uiLabel27.Name = "uiLabel27";
+            this.uiLabel27.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel27.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel27.TabIndex = 13;
+            this.uiLabel27.Text = "低保五保";
+            this.uiLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel26
+            // 
+            this.uiLabel26.AutoSize = true;
+            this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel26.Location = new System.Drawing.Point(28, 87);
+            this.uiLabel26.Name = "uiLabel26";
+            this.uiLabel26.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel26.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel26.TabIndex = 13;
+            this.uiLabel26.Text = "大病救助";
+            this.uiLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel25
+            // 
+            this.uiLabel25.AutoSize = true;
+            this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel25.Location = new System.Drawing.Point(28, 37);
+            this.uiLabel25.Name = "uiLabel25";
+            this.uiLabel25.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel25.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel25.TabIndex = 13;
+            this.uiLabel25.Text = "残疾分类";
+            this.uiLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // dtCareer_get_time
             // 
             this.dtCareer_get_time.FillColor = System.Drawing.Color.White;
@@ -674,8 +1013,101 @@
             this.dtCareer_get_time.TabIndex = 28;
             this.dtCareer_get_time.Text = "2023-08-25";
             this.dtCareer_get_time.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dtCareer_get_time.Value = new System.DateTime(2023, 8, 25, 19, 36, 24, 762);
+            this.dtCareer_get_time.Value = new System.DateTime(2023, 8, 25, 0, 0, 0, 0);
             this.dtCareer_get_time.Watermark = "";
+            // 
+            // uiLabel32
+            // 
+            this.uiLabel32.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel32.Location = new System.Drawing.Point(786, 81);
+            this.uiLabel32.Name = "uiLabel32";
+            this.uiLabel32.Size = new System.Drawing.Size(148, 47);
+            this.uiLabel32.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel32.TabIndex = 13;
+            this.uiLabel32.Text = "失能老人";
+            this.uiLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel31
+            // 
+            this.uiLabel31.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel31.Location = new System.Drawing.Point(786, 28);
+            this.uiLabel31.Name = "uiLabel31";
+            this.uiLabel31.Size = new System.Drawing.Size(148, 47);
+            this.uiLabel31.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel31.TabIndex = 13;
+            this.uiLabel31.Text = "何时致残";
+            this.uiLabel31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel30
+            // 
+            this.uiLabel30.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel30.Location = new System.Drawing.Point(416, 129);
+            this.uiLabel30.Name = "uiLabel30";
+            this.uiLabel30.Size = new System.Drawing.Size(123, 65);
+            this.uiLabel30.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel30.TabIndex = 13;
+            this.uiLabel30.Text = "低保等级/五保类别";
+            this.uiLabel30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel35
+            // 
+            this.uiLabel35.AutoSize = true;
+            this.uiLabel35.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel35.Location = new System.Drawing.Point(1183, 87);
+            this.uiLabel35.Name = "uiLabel35";
+            this.uiLabel35.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel35.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel35.TabIndex = 13;
+            this.uiLabel35.Text = "易地搬迁";
+            this.uiLabel35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel34
+            // 
+            this.uiLabel34.AutoSize = true;
+            this.uiLabel34.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel34.Location = new System.Drawing.Point(1183, 38);
+            this.uiLabel34.Name = "uiLabel34";
+            this.uiLabel34.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel34.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel34.TabIndex = 13;
+            this.uiLabel34.Text = "职称获得时间";
+            this.uiLabel34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel33
+            // 
+            this.uiLabel33.AutoSize = true;
+            this.uiLabel33.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel33.Location = new System.Drawing.Point(786, 133);
+            this.uiLabel33.Name = "uiLabel33";
+            this.uiLabel33.Size = new System.Drawing.Size(178, 41);
+            this.uiLabel33.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel33.TabIndex = 13;
+            this.uiLabel33.Text = "是否服兵役";
+            this.uiLabel33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel29
+            // 
+            this.uiLabel29.AutoSize = true;
+            this.uiLabel29.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel29.Location = new System.Drawing.Point(416, 85);
+            this.uiLabel29.Name = "uiLabel29";
+            this.uiLabel29.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel29.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel29.TabIndex = 13;
+            this.uiLabel29.Text = "临时救助";
+            this.uiLabel29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel28
+            // 
+            this.uiLabel28.AutoSize = true;
+            this.uiLabel28.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel28.Location = new System.Drawing.Point(416, 36);
+            this.uiLabel28.Name = "uiLabel28";
+            this.uiLabel28.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel28.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel28.TabIndex = 13;
+            this.uiLabel28.Text = "残疾等级";
+            this.uiLabel28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cbIs_relocation
             // 
@@ -837,403 +1269,6 @@
             this.cbDisability_type.TabIndex = 25;
             this.cbDisability_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbDisability_type.Watermark = "";
-            // 
-            // tbPhone_number
-            // 
-            this.tbPhone_number.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbPhone_number.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPhone_number.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPhone_number.Location = new System.Drawing.Point(935, 96);
-            this.tbPhone_number.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbPhone_number.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbPhone_number.Name = "tbPhone_number";
-            this.tbPhone_number.Padding = new System.Windows.Forms.Padding(5);
-            this.tbPhone_number.ShowText = false;
-            this.tbPhone_number.Size = new System.Drawing.Size(200, 29);
-            this.tbPhone_number.Style = Sunny.UI.UIStyle.Custom;
-            this.tbPhone_number.TabIndex = 0;
-            this.tbPhone_number.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbPhone_number.Watermark = "";
-            // 
-            // uiLabel1
-            // 
-            this.uiLabel1.AutoSize = true;
-            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(28, 45);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(62, 31);
-            this.uiLabel1.TabIndex = 13;
-            this.uiLabel1.Text = "姓名";
-            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel2
-            // 
-            this.uiLabel2.AutoSize = true;
-            this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel2.Location = new System.Drawing.Point(28, 93);
-            this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel2.TabIndex = 13;
-            this.uiLabel2.Text = "身份证号";
-            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel3
-            // 
-            this.uiLabel3.AutoSize = true;
-            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel3.Location = new System.Drawing.Point(28, 141);
-            this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(86, 31);
-            this.uiLabel3.TabIndex = 13;
-            this.uiLabel3.Text = "所在村";
-            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel4
-            // 
-            this.uiLabel4.AutoSize = true;
-            this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel4.Location = new System.Drawing.Point(28, 196);
-            this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(62, 31);
-            this.uiLabel4.TabIndex = 13;
-            this.uiLabel4.Text = "备注";
-            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel5
-            // 
-            this.uiLabel5.AutoSize = true;
-            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel5.Location = new System.Drawing.Point(405, 48);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(62, 31);
-            this.uiLabel5.TabIndex = 13;
-            this.uiLabel5.Text = "性别";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel6
-            // 
-            this.uiLabel6.AutoSize = true;
-            this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel6.Location = new System.Drawing.Point(405, 94);
-            this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel6.TabIndex = 13;
-            this.uiLabel6.Text = "出生日期";
-            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel7
-            // 
-            this.uiLabel7.AutoSize = true;
-            this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel7.Location = new System.Drawing.Point(416, 49);
-            this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel7.TabIndex = 13;
-            this.uiLabel7.Text = "入党时间";
-            this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel8
-            // 
-            this.uiLabel8.AutoSize = true;
-            this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel8.Location = new System.Drawing.Point(794, 45);
-            this.uiLabel8.Name = "uiLabel8";
-            this.uiLabel8.Size = new System.Drawing.Size(62, 31);
-            this.uiLabel8.TabIndex = 13;
-            this.uiLabel8.Text = "民族";
-            this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel9
-            // 
-            this.uiLabel9.AutoSize = true;
-            this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel9.Location = new System.Drawing.Point(794, 96);
-            this.uiLabel9.Name = "uiLabel9";
-            this.uiLabel9.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel9.TabIndex = 13;
-            this.uiLabel9.Text = "联系电话";
-            this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel10
-            // 
-            this.uiLabel10.AutoSize = true;
-            this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel10.Location = new System.Drawing.Point(794, 144);
-            this.uiLabel10.Name = "uiLabel10";
-            this.uiLabel10.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel10.TabIndex = 13;
-            this.uiLabel10.Text = "实名认证";
-            this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel11
-            // 
-            this.uiLabel11.AutoSize = true;
-            this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel11.Location = new System.Drawing.Point(1196, 45);
-            this.uiLabel11.Name = "uiLabel11";
-            this.uiLabel11.Size = new System.Drawing.Size(134, 31);
-            this.uiLabel11.TabIndex = 13;
-            this.uiLabel11.Text = "与户主关系";
-            this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel12
-            // 
-            this.uiLabel12.AutoSize = true;
-            this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel12.Location = new System.Drawing.Point(1196, 96);
-            this.uiLabel12.Name = "uiLabel12";
-            this.uiLabel12.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel12.TabIndex = 13;
-            this.uiLabel12.Text = "所在乡镇";
-            this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel13
-            // 
-            this.uiLabel13.AutoSize = true;
-            this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel13.Location = new System.Drawing.Point(1196, 144);
-            this.uiLabel13.Name = "uiLabel13";
-            this.uiLabel13.Size = new System.Drawing.Size(62, 31);
-            this.uiLabel13.TabIndex = 13;
-            this.uiLabel13.Text = "血型";
-            this.uiLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel14
-            // 
-            this.uiLabel14.AutoSize = true;
-            this.uiLabel14.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel14.Location = new System.Drawing.Point(28, 47);
-            this.uiLabel14.Name = "uiLabel14";
-            this.uiLabel14.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel14.TabIndex = 13;
-            this.uiLabel14.Text = "政治面貌";
-            this.uiLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel15
-            // 
-            this.uiLabel15.AutoSize = true;
-            this.uiLabel15.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel15.Location = new System.Drawing.Point(794, 47);
-            this.uiLabel15.Name = "uiLabel15";
-            this.uiLabel15.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel15.TabIndex = 13;
-            this.uiLabel15.Text = "宗教信仰";
-            this.uiLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel16
-            // 
-            this.uiLabel16.AutoSize = true;
-            this.uiLabel16.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel16.Location = new System.Drawing.Point(1196, 47);
-            this.uiLabel16.Name = "uiLabel16";
-            this.uiLabel16.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel16.TabIndex = 13;
-            this.uiLabel16.Text = "最高学历";
-            this.uiLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel17
-            // 
-            this.uiLabel17.AutoSize = true;
-            this.uiLabel17.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel17.Location = new System.Drawing.Point(26, 48);
-            this.uiLabel17.Name = "uiLabel17";
-            this.uiLabel17.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel17.TabIndex = 13;
-            this.uiLabel17.Text = "是否外出";
-            this.uiLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel18
-            // 
-            this.uiLabel18.AutoSize = true;
-            this.uiLabel18.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel18.Location = new System.Drawing.Point(416, 48);
-            this.uiLabel18.Name = "uiLabel18";
-            this.uiLabel18.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel18.TabIndex = 13;
-            this.uiLabel18.Text = "从事行业";
-            this.uiLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel19
-            // 
-            this.uiLabel19.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel19.Location = new System.Drawing.Point(786, 40);
-            this.uiLabel19.Name = "uiLabel19";
-            this.uiLabel19.Size = new System.Drawing.Size(148, 47);
-            this.uiLabel19.TabIndex = 13;
-            this.uiLabel19.Text = "单位/学校";
-            this.uiLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel20
-            // 
-            this.uiLabel20.AutoSize = true;
-            this.uiLabel20.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel20.Location = new System.Drawing.Point(1196, 48);
-            this.uiLabel20.Name = "uiLabel20";
-            this.uiLabel20.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel20.TabIndex = 13;
-            this.uiLabel20.Text = "所在地点";
-            this.uiLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel21
-            // 
-            this.uiLabel21.AutoSize = true;
-            this.uiLabel21.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel21.Location = new System.Drawing.Point(26, 92);
-            this.uiLabel21.Name = "uiLabel21";
-            this.uiLabel21.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel21.TabIndex = 13;
-            this.uiLabel21.Text = "技能类型";
-            this.uiLabel21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel22
-            // 
-            this.uiLabel22.AutoSize = true;
-            this.uiLabel22.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel22.Location = new System.Drawing.Point(1196, 94);
-            this.uiLabel22.Name = "uiLabel22";
-            this.uiLabel22.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel22.TabIndex = 13;
-            this.uiLabel22.Text = "职称等级";
-            this.uiLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel23
-            // 
-            this.uiLabel23.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel23.Location = new System.Drawing.Point(786, 84);
-            this.uiLabel23.Name = "uiLabel23";
-            this.uiLabel23.Size = new System.Drawing.Size(148, 47);
-            this.uiLabel23.TabIndex = 13;
-            this.uiLabel23.Text = "技能培训";
-            this.uiLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel24
-            // 
-            this.uiLabel24.AutoSize = true;
-            this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel24.Location = new System.Drawing.Point(416, 92);
-            this.uiLabel24.Name = "uiLabel24";
-            this.uiLabel24.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel24.TabIndex = 13;
-            this.uiLabel24.Text = "就业指导";
-            this.uiLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel25
-            // 
-            this.uiLabel25.AutoSize = true;
-            this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel25.Location = new System.Drawing.Point(28, 37);
-            this.uiLabel25.Name = "uiLabel25";
-            this.uiLabel25.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel25.TabIndex = 13;
-            this.uiLabel25.Text = "残疾分类";
-            this.uiLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel26
-            // 
-            this.uiLabel26.AutoSize = true;
-            this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel26.Location = new System.Drawing.Point(28, 87);
-            this.uiLabel26.Name = "uiLabel26";
-            this.uiLabel26.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel26.TabIndex = 13;
-            this.uiLabel26.Text = "大病救助";
-            this.uiLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel27
-            // 
-            this.uiLabel27.AutoSize = true;
-            this.uiLabel27.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel27.Location = new System.Drawing.Point(28, 133);
-            this.uiLabel27.Name = "uiLabel27";
-            this.uiLabel27.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel27.TabIndex = 13;
-            this.uiLabel27.Text = "低保五保";
-            this.uiLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel28
-            // 
-            this.uiLabel28.AutoSize = true;
-            this.uiLabel28.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel28.Location = new System.Drawing.Point(416, 36);
-            this.uiLabel28.Name = "uiLabel28";
-            this.uiLabel28.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel28.TabIndex = 13;
-            this.uiLabel28.Text = "残疾等级";
-            this.uiLabel28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel29
-            // 
-            this.uiLabel29.AutoSize = true;
-            this.uiLabel29.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel29.Location = new System.Drawing.Point(416, 85);
-            this.uiLabel29.Name = "uiLabel29";
-            this.uiLabel29.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel29.TabIndex = 13;
-            this.uiLabel29.Text = "临时救助";
-            this.uiLabel29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel30
-            // 
-            this.uiLabel30.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel30.Location = new System.Drawing.Point(416, 129);
-            this.uiLabel30.Name = "uiLabel30";
-            this.uiLabel30.Size = new System.Drawing.Size(123, 65);
-            this.uiLabel30.TabIndex = 13;
-            this.uiLabel30.Text = "低保等级/五保类别";
-            this.uiLabel30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel31
-            // 
-            this.uiLabel31.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel31.Location = new System.Drawing.Point(786, 28);
-            this.uiLabel31.Name = "uiLabel31";
-            this.uiLabel31.Size = new System.Drawing.Size(148, 47);
-            this.uiLabel31.TabIndex = 13;
-            this.uiLabel31.Text = "何时致残";
-            this.uiLabel31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel32
-            // 
-            this.uiLabel32.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel32.Location = new System.Drawing.Point(786, 81);
-            this.uiLabel32.Name = "uiLabel32";
-            this.uiLabel32.Size = new System.Drawing.Size(148, 47);
-            this.uiLabel32.TabIndex = 13;
-            this.uiLabel32.Text = "失能老人";
-            this.uiLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel33
-            // 
-            this.uiLabel33.AutoSize = true;
-            this.uiLabel33.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel33.Location = new System.Drawing.Point(786, 133);
-            this.uiLabel33.Name = "uiLabel33";
-            this.uiLabel33.Size = new System.Drawing.Size(134, 31);
-            this.uiLabel33.TabIndex = 13;
-            this.uiLabel33.Text = "是否服兵役";
-            this.uiLabel33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel34
-            // 
-            this.uiLabel34.AutoSize = true;
-            this.uiLabel34.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel34.Location = new System.Drawing.Point(1183, 38);
-            this.uiLabel34.Name = "uiLabel34";
-            this.uiLabel34.Size = new System.Drawing.Size(158, 31);
-            this.uiLabel34.TabIndex = 13;
-            this.uiLabel34.Text = "职称获得时间";
-            this.uiLabel34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel35
-            // 
-            this.uiLabel35.AutoSize = true;
-            this.uiLabel35.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel35.Location = new System.Drawing.Point(1183, 87);
-            this.uiLabel35.Name = "uiLabel35";
-            this.uiLabel35.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel35.TabIndex = 13;
-            this.uiLabel35.Text = "易地搬迁";
-            this.uiLabel35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmPeopleInfo
             // 
