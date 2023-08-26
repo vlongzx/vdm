@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btPeople = new Sunny.UI.UIHeaderButton();
             this.btFamer = new Sunny.UI.UIHeaderButton();
+            this.uiStyleManager1 = new Sunny.UI.UIStyleManager(this.components);
             this.Header.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +95,10 @@
             this.btFamer.TipsText = "12";
             this.btFamer.Click += new System.EventHandler(this.btFamer_Click);
             // 
+            // uiStyleManager1
+            // 
+            this.uiStyleManager1.DPIScale = true;
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -113,6 +119,7 @@
 
         private Sunny.UI.UIHeaderButton btPeople;
         private Sunny.UI.UIHeaderButton btFamer;
+        private Sunny.UI.UIStyleManager uiStyleManager1;
     }
 }
 
