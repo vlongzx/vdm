@@ -99,6 +99,7 @@
             this.btLogin.TabIndex = 9;
             this.btLogin.Text = "登录(&L)";
             this.btLogin.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // txtPassword
             // 
