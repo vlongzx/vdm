@@ -15,7 +15,12 @@ namespace com.vdm.dal
         {
             this.sqlDB = new SqlDbHelper();
         }
+        public DataTable getAllOrg()
+        {
+            string sql = "select * from t_org";
 
+            return this.sqlDB.ExecuteDataTable(sql);
+        }
         /// <summary>
         ///  根据组织类型获取组织信息
         /// </summary>

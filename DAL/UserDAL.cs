@@ -29,5 +29,17 @@ namespace com.vdm.dal
 
             return dt;
         }
+
+        /// <summary>
+        ///  获得所有用户
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getAllUser()
+        {
+            string sql = "select a.*,b.org_name as town_name,c.org_name as village_name from t_user as a inner join t_org as b on a.town_id = b.org_id left join t_org as c on a.village_id=c.org_id";
+            DataTable dt = this.sdh.ExecuteDataTable(sql);
+
+            return dt;
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using com.vdm.common;
 using com.vdm.dal;
+using com.vdm.model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -17,7 +18,25 @@ namespace com.vdm.bll
         {
             this.orgDAL = new OrgDAL();
         }
-
+        public List<Org> getAllOrg()
+        {
+            List<Org> list_org = new List<Org>();
+            DataTable dt = this.orgDAL.getAllOrg();
+            if (dt != null)
+            {
+                Org org = null;
+                foreach (DataRow row in dt.Rows)
+                {
+                    org = new Org();
+                    org.Org_id = int.Parse(row["org_id"].ToString());
+                    org.Org_name = row["org_name"].ToString();
+                    org.Org_type = row["org_type"].ToString();
+                    org.Org_pre_id = int.Parse(row["org_pre_id"].ToString());
+                    list_org.Add(org);
+                }
+            }
+            return list_org;
+        }
         /// <summary>
         ///  根据组织类型获取组织信息
         /// </summary>

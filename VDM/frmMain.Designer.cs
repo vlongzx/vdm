@@ -40,7 +40,7 @@
             this.btAnimal = new Sunny.UI.UIHeaderButton();
             this.btTour = new Sunny.UI.UIHeaderButton();
             this.btPlant = new Sunny.UI.UIHeaderButton();
-            this.uiHeaderButton8 = new Sunny.UI.UIHeaderButton();
+            this.btSystemSet = new Sunny.UI.UIHeaderButton();
             this.Header.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             // Header
             // 
             this.Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.Header.Controls.Add(this.uiHeaderButton8);
+            this.Header.Controls.Add(this.btSystemSet);
             this.Header.Controls.Add(this.btPlant);
             this.Header.Controls.Add(this.btTour);
             this.Header.Controls.Add(this.btAnimal);
@@ -289,29 +289,29 @@
             this.btPlant.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btPlant.Click += new System.EventHandler(this.btFamer_Click);
             // 
-            // uiHeaderButton8
+            // btSystemSet
             // 
-            this.uiHeaderButton8.CircleColor = System.Drawing.Color.Crimson;
-            this.uiHeaderButton8.CircleHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.uiHeaderButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiHeaderButton8.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiHeaderButton8.Location = new System.Drawing.Point(1079, 12);
-            this.uiHeaderButton8.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiHeaderButton8.Name = "uiHeaderButton8";
-            this.uiHeaderButton8.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
-            this.uiHeaderButton8.Radius = 0;
-            this.uiHeaderButton8.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
-            this.uiHeaderButton8.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
-            this.uiHeaderButton8.ShowCircleHoverColor = true;
-            this.uiHeaderButton8.ShowTips = true;
-            this.uiHeaderButton8.Size = new System.Drawing.Size(100, 88);
-            this.uiHeaderButton8.Style = Sunny.UI.UIStyle.Custom;
-            this.uiHeaderButton8.Symbol = 61459;
-            this.uiHeaderButton8.SymbolSize = 40;
-            this.uiHeaderButton8.TabIndex = 6;
-            this.uiHeaderButton8.Text = "设置";
-            this.uiHeaderButton8.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiHeaderButton8.Click += new System.EventHandler(this.btFamer_Click);
+            this.btSystemSet.CircleColor = System.Drawing.Color.Crimson;
+            this.btSystemSet.CircleHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btSystemSet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSystemSet.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.btSystemSet.Location = new System.Drawing.Point(1079, 12);
+            this.btSystemSet.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btSystemSet.Name = "btSystemSet";
+            this.btSystemSet.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
+            this.btSystemSet.Radius = 0;
+            this.btSystemSet.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
+            this.btSystemSet.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
+            this.btSystemSet.ShowCircleHoverColor = true;
+            this.btSystemSet.ShowTips = true;
+            this.btSystemSet.Size = new System.Drawing.Size(100, 88);
+            this.btSystemSet.Style = Sunny.UI.UIStyle.Custom;
+            this.btSystemSet.Symbol = 61459;
+            this.btSystemSet.SymbolSize = 40;
+            this.btSystemSet.TabIndex = 6;
+            this.btSystemSet.Text = "设置";
+            this.btSystemSet.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btSystemSet.Click += new System.EventHandler(this.btSystemSet_Click);
             // 
             // frmMain
             // 
@@ -334,7 +334,7 @@
         private Sunny.UI.UIHeaderButton btPeople;
         private Sunny.UI.UIHeaderButton btFamer;
         private Sunny.UI.UIStyleManager uiStyleManager1;
-        private Sunny.UI.UIHeaderButton uiHeaderButton8;
+        private Sunny.UI.UIHeaderButton btSystemSet;
         private Sunny.UI.UIHeaderButton btPlant;
         private Sunny.UI.UIHeaderButton btTour;
         private Sunny.UI.UIHeaderButton btAnimal;

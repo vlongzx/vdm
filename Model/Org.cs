@@ -12,7 +12,9 @@ namespace com.vdm.model
         private string org_name;
         private string org_type;
         private int org_pre_id;
-
+        /// <summary>
+        /// 组织ID
+        /// </summary>
         public int Org_id
         {
             get
@@ -25,7 +27,9 @@ namespace com.vdm.model
                 org_id = value;
             }
         }
-
+        /// <summary>
+        /// 组织名称
+        /// </summary>
         public string Org_name
         {
             get
@@ -38,7 +42,9 @@ namespace com.vdm.model
                 org_name = value;
             }
         }
-
+        /// <summary>
+        ///  组织类型
+        /// </summary>
         public string Org_type
         {
             get
@@ -51,7 +57,9 @@ namespace com.vdm.model
                 org_type = value;
             }
         }
-
+        /// <summary>
+        ///  上级组织ID
+        /// </summary>
         public int Org_pre_id
         {
             get

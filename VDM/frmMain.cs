@@ -25,6 +25,7 @@ namespace com.vdm.form
             Footer.Text = "陕西奥维纳斯软件技术有限公司提供技术支持";
             AddPage(new frmPeopleList(), 1001);
             AddPage(new frmFamerList(), 1002);
+            AddPage(new frmSystemSet(), 1009);
         }
 
         private void OpenForm(Form subForm)
@@ -48,10 +49,23 @@ namespace com.vdm.form
             MainTabControl.SelectPage(1001);
 
         }
-
+        /// <summary>
+        ///  农户
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btFamer_Click(object sender, EventArgs e)
         {
             MainTabControl.SelectPage(1002);
+        }
+        /// <summary>
+        ///  系统设置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btSystemSet_Click(object sender, EventArgs e)
+        {
+            MainTabControl.SelectPage(1009);
         }
     }
 }
