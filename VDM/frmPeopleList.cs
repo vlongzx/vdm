@@ -284,7 +284,7 @@ namespace com.vdm.form
             string Idcard = this.tbIdcard.Text.Trim();
             string Phone_number = this.tbPhone_number.Text.Trim();
             string Birthday_From = this.dpBirthday_From.Value.ToString();
-            string Birthday_To = this.dpBirthday_To.Value.ToString();
+            string Birthday_To = this.uiDatePicker1.Value.ToString();
             //------------------------------------------------------------------
             //-----------------政治面貌与宗教信仰
             string Politcal_outlook = this.cbPolitcal_outlook.SelectedValue.ToString();
