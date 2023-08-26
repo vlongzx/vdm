@@ -69,22 +69,16 @@ namespace com.vdm.dal
             {
                 sql += "    and education = @education";
             }
-            if(condition["Birthday_From"].ToString() != "" && condition["Birthday_To"].ToString() != null)
-            {
-                sql += "    birthday BETWEEN '" + condition["Birthday_From"].ToString() + "' AND '"+ condition["Birthday_To"].ToString() + "'";
-            }
+
             if (condition["Birthday_From"].ToString() != "" && condition["Birthday_To"].ToString() != null)
             {
-                sql += "    birthday BETWEEN '" + condition["Birthday_From"].ToString() + "' AND '" + condition["Birthday_To"].ToString() + "'";
+                sql += "  and  birthday BETWEEN '" + condition["Birthday_From"].ToString() + "' AND '" + condition["Birthday_To"].ToString() + "'";
             }
             if (condition["Join_party_time_from"].ToString() != "" && condition["Join_party_time_to"].ToString() != null)
             {
-                sql += "    join_party_time BETWEEN '" + condition["Join_party_time_from"].ToString() + "' AND '" + condition["Join_party_time_to"].ToString() + "'";
+                sql += " and   join_party_time BETWEEN '" + condition["Join_party_time_from"].ToString() + "' AND '" + condition["Join_party_time_to"].ToString() + "'";
             }
-            if (condition["Join_party_time_from"].ToString() != "" && condition["Join_party_time_to"].ToString() != null)
-            {
-                sql += "    join_party_time BETWEEN '" + condition["Join_party_time_from"].ToString() + "' AND '" + condition["Join_party_time_to"].ToString() + "'";
-            }
+
             sql += " order by create_datetime desc";
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
@@ -199,57 +193,62 @@ namespace com.vdm.dal
         }
 
         /// <summary>
-        /// 条件查询
+        /// 条件查询(导出时候用)
         /// </summary>
         /// <param name="people"></param>
         /// <returns></returns>
-        public DataTable getAllPeople(People people)
+        public DataTable getAllPeople(Hashtable condition)
         {
             string sql = "select * from t_people where 1 = 1";
-            if(people!=null)
+            if (condition["People_name"].ToString() != "")
             {
-                if (people.People_name != "")
-                {
-                    sql += "    and people_name = @people_name";
-                }
-                if (people.Sex != "")
-                {
-                    sql += "    and sex = @sex";
-                }
-                if (people.Politcal_outlook != "")
-                {
-                    sql += "    and politcal_outlook = @politcal_outlook";
-                }
-                if (people.Phone_number != "")
-                {
-                    sql += "    and phone_number = @phone_number";
-                }
-                if (people.Idcard != "")
-                {
-                    sql += "    and idcard = @idcard";
-                }
-                if (people.Religious_belief != "")
-                {
-                    sql += "    and religious_belief = @religious_belief";
-                }
-                if (people.Education != "")
-                {
-                    sql += "    and education = @education";
-                }
+                sql += "    and people_name = @people_name";
             }
-            sql +=" order by create_datetime desc";
+            if (condition["Sex"].ToString() != "")
+            {
+                sql += "    and sex = @sex";
+            }
+            if (condition["Politcal_outlook"].ToString() != "")
+            {
+                sql += "    and politcal_outlook = @politcal_outlook";
+            }
+            if (condition["Phone_number"].ToString() != "")
+            {
+                sql += "    and phone_number = @phone_number";
+            }
+            if (condition["Idcard"].ToString() != "")
+            {
+                sql += "    and idcard = @idcard";
+            }
+            if (condition["Religious_belief"].ToString() != "")
+            {
+                sql += "    and religious_belief = @religious_belief";
+            }
+            if (condition["Education"].ToString() != "")
+            {
+                sql += "    and education = @education";
+            }
+
+            if (condition["Birthday_From"].ToString() != "" && condition["Birthday_To"].ToString() != null)
+            {
+                sql += "  and  birthday BETWEEN '" + condition["Birthday_From"].ToString() + "' AND '" + condition["Birthday_To"].ToString() + "'";
+            }
+            if (condition["Join_party_time_from"].ToString() != "" && condition["Join_party_time_to"].ToString() != null)
+            {
+                sql += " and   join_party_time BETWEEN '" + condition["Join_party_time_from"].ToString() + "' AND '" + condition["Join_party_time_to"].ToString() + "'";
+            }
+
+            sql += " order by create_datetime desc";
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
-            if(people!=null)
-            {
-                parameters.Add(new SQLiteParameter("@people_name", people.People_name));
-                parameters.Add(new SQLiteParameter("@sex", people.Sex));
-                parameters.Add(new SQLiteParameter("@politcal_outlook", people.Politcal_outlook));
-                parameters.Add(new SQLiteParameter("@phone_number", people.Phone_number));
-                parameters.Add(new SQLiteParameter("@idcard", people.Idcard));
-                parameters.Add(new SQLiteParameter("@religious_belief", people.Religious_belief));
-                parameters.Add(new SQLiteParameter("@education", people.Education));
-            }
-            return this.sqlDB.ExecuteDataTable(sql,CommandType.Text, parameters);
+            parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
+            parameters.Add(new SQLiteParameter("@sex", condition["Sex"]));
+            parameters.Add(new SQLiteParameter("@politcal_outlook", condition["Politcal_outlook"]));
+            parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
+            parameters.Add(new SQLiteParameter("@idcard", condition["Idcard"]));
+            parameters.Add(new SQLiteParameter("@religious_belief", condition["Religious_belief"]));
+            parameters.Add(new SQLiteParameter("@education", condition["Education"]));
+
+            return  this.sqlDB.ExecuteDataTable(sql, CommandType.Text, parameters);
         }
 
         public DataTable getPeople(int people_id)

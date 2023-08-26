@@ -70,17 +70,18 @@ namespace com.vdm.bll
             return list_people;
         }
 
-        public List<People> getAllPeople(People people)
+        public List<People> getAllPeople(Hashtable condition)
         {
             List<People> list_people = new List<People>();
-            DataTable dt = this.peopleDAL.getAllPeople(people);
+            DataTable dt = this.peopleDAL.getAllPeople(condition);
 
             if (dt != null)
             {
+                People p = null;
                 foreach (DataRow row in dt.Rows)
                 {
-                    people = MakeObject.MakeObjectToPeople(row);
-                    list_people.Add(people);
+                    p = MakeObject.MakeObjectToPeople(row);
+                    list_people.Add(p);
                 }
             }
             return list_people;
