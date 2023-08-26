@@ -54,7 +54,7 @@ namespace com.vdm.form
                 this.cbSex.SelectedValue = people.Sex;
                 this.cbNation.SelectedValue = people.Nation;
                 this.cbRelationship.SelectedValue = people.Relationship;
-                this.dtBirthday.Value = DateTime.Parse(people.Birthday);
+                this.dtBirthday.Text = people.Birthday;
                 this.tbIdcard.Text = people.Idcard;
                 this.tbPhone_number.Text = people.Phone_number;
                 this.cbTown.SelectedValue = people.Town;
@@ -76,7 +76,7 @@ namespace com.vdm.form
                 this.tbCareer_grade.Text = people.Career_grade;
                 if (people.Career_get_time != null && people.Career_get_time != "")
                 {
-                    this.dtCareer_get_time.Value = DateTime.Parse(people.Career_get_time);
+                    this.dtCareer_get_time.Text = people.Career_get_time;
                 }
                 this.cbDisability_type.SelectedValue = people.Disability_type;
                 this.cbDisability_grade.SelectedValue = people.Disability_grade;
@@ -351,11 +351,12 @@ namespace com.vdm.form
             //从界面获取值封装业务对象
             //------------------基础信息部分---------------------------------
             People people = new People();
+            people.People_id = this.people_id;
             people.People_name = this.tbPeople_name.Text.Trim();
             people.Sex = this.cbSex.SelectedValue.ToString();
             people.Nation = this.cbNation.SelectedValue.ToString();
             people.Relationship = this.cbRelationship.SelectedValue.ToString();
-            people.Birthday = this.dtBirthday.Value.ToString();
+            people.Birthday = this.dtBirthday.Text.ToString();
             people.Idcard = this.tbIdcard.Text.Trim();
             people.Phone_number = this.tbPhone_number.Text.Trim();
             people.Town = this.cbTown.SelectedValue.ToString();
@@ -380,7 +381,7 @@ namespace com.vdm.form
             people.Employ_guide = this.cbEmploy_guide.SelectedValue.ToString();
             people.Skill_train = this.cbSkill_train.SelectedValue.ToString();
             people.Career_grade = this.tbCareer_grade.Text.Trim();
-            people.Career_get_time = this.dtCareer_get_time.Value.ToString();
+            people.Career_get_time = this.dtCareer_get_time.Text.ToString();
             //------------------------------------------------------------------
             //-----------------健康信息
             people.Disability_type = this.cbDisability_type.SelectedValue.ToString();
@@ -415,7 +416,7 @@ namespace com.vdm.form
             }
             else
             {
-                Result result = peopleBLL.AddPeople(people);
+                Result result = peopleBLL.EditPeople(people);
                 if (result.Count == 1)
                 {
                     MessageBox.Show("编辑成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);

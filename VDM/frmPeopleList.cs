@@ -539,5 +539,9 @@ namespace com.vdm.form
             InitListView(condition, this.pageIndex, this.pageSize);
         }
 
+        private void frmPeopleList_Initialize(object sender, EventArgs e)
+        {
+
+        }
     }
 }
