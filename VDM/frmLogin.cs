@@ -62,5 +62,10 @@ namespace com.vdm.form
         {
             this.labSystemName.Text = ConfigurationManager.AppSettings["system_name"];
         }
+
+        private void uiLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
