@@ -285,8 +285,6 @@ namespace com.vdm.form
             string Phone_number = this.tbPhone_number.Text.Trim();
             string Birthday_From = this.dpBirthday_From.Value.ToString();
             string Birthday_To = this.dpBirthday_To.Value.ToString();
-            string Age_From = this.tbAge_From.Text.Trim();
-            string Age_To = this.tbAge_To.Text.Trim();
             //------------------------------------------------------------------
             //-----------------政治面貌与宗教信仰
             string Politcal_outlook = this.cbPolitcal_outlook.SelectedValue.ToString();
@@ -303,8 +301,6 @@ namespace com.vdm.form
             condition.Add("Phone_number", Phone_number);
             condition.Add("Birthday_From", Birthday_From);
             condition.Add("Birthday_To", Birthday_To);
-            condition.Add("Age_From", Age_From);
-            condition.Add("Age_To", Age_To);
             condition.Add("Politcal_outlook", Politcal_outlook);
             condition.Add("Religious_belief", Religious_belief);
             condition.Add("Education", Education);
