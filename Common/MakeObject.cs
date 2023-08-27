@@ -49,7 +49,6 @@ namespace com.vdm.common
             people.People_name = row["People_name"].ToString();
             people.Phone_number = row["Phone_number"].ToString();
             people.Politcal_outlook = row["Politcal_outlook"].ToString();
-            people.Is_career_grade = row["Is_career_grade"].ToString();
             people.Career_grade = row["Career_grade"].ToString();
             people.Career_get_time = row["Career_get_time"].ToString();
             people.Relationship = row["Relationship"].ToString();
