@@ -19,6 +19,7 @@ namespace com.vdm.form
         private OrgBLL orgBLL = null;
         private UserBLL userBLL = null;
         private RoleBLL roleBLL = null;
+        private FunctionBLL functionBLL = null;
         public frmSystemSet()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace com.vdm.form
             List<KeyValue> listTown = this.orgBLL.getOrgByType("乡镇");
             if(listTown != null)
             {
+                this.tvOrg.Nodes.Clear();
                 foreach(KeyValue town in listTown)
                 {
                     this.tvOrg.Nodes.Add(town.Key, town.Value);
@@ -41,11 +43,46 @@ namespace com.vdm.form
                     }
                 }
             }
+            this.tvOrg.ExpandAll();//全部节点展开
 
-            InitUserList();
+            //初始化功能权限树
+            functionBLL = new FunctionBLL();
+            DataTable dtFunction = this.functionBLL.getAllFunction();
+            if (dtFunction != null)
+            {
+                this.tvFunction.Nodes.Clear();
+                foreach(DataRow row in dtFunction.Rows)
+                {
+                    string pre_function_id = row["pre_function_id"].ToString();
+                    if(pre_function_id == "0")
+                    {
+                        this.tvFunction.Nodes.Add(row["function_id"].ToString(), row["function_name"].ToString());
+                    }
+                    else
+                    {
+                        TreeNode[] nodes =  this.tvFunction.Nodes.Find(pre_function_id, true);
+                        if(nodes != null && nodes.Length > 0)
+                        {
+                            foreach(TreeNode node in nodes)
+                            {
+                                node.Nodes.Add(row["function_id"].ToString(), row["function_name"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            this.tvFunction.ShowLines = true;//显示结构线条
+            this.tvFunction.ExpandAll(); //全部节点展开
+
+
+
+            InitPage();
         }
 
-        public void InitUserList()
+
+
+
+        public void InitPage()
         {
             //初始化用户列表
             this.userBLL = new UserBLL();
@@ -73,9 +110,30 @@ namespace com.vdm.form
             this.dgRole.AddColumn("角色名称", "role_name");
             this.dgRole.AddColumn("角色类型", "role_type");
             this.dgRole.AddColumn("备注", "remark").SetFixedMode(300);
-            this.Pagination.PageSize = 20;
-            this.Pagination.TotalCount = dtRole.Rows.Count;
-            this.dgRole.DataSource = dtRole;
+            if(dtRole != null)
+            {
+                this.Pagination.PageSize = 20;
+                this.Pagination.TotalCount = dtRole.Rows.Count;
+                this.dgRole.DataSource = dtRole;
+            }
+
+
+            //初始化功能权限列表
+            this.functionBLL = new FunctionBLL();
+            this.dgFunction.AutoGenerateColumns = false;
+            this.dgFunction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgFunction.RowTemplate.Height = 45;
+            this.dgFunction.AddColumn("功能权限ID", "function_id");
+            this.dgFunction.AddColumn("父功能权限ID", "pre_function_id");
+            this.dgFunction.AddColumn("功能权限名称", "function_name");
+            this.dgFunction.AddColumn("备注", "remark");
+            DataTable dtFunction = this.functionBLL.getAllFunction();
+            if (dtFunction != null)
+            {
+                this.Pagination.PageSize = 20;
+                this.Pagination.TotalCount = dtFunction.Rows.Count;
+                this.dgFunction.DataSource = dtFunction;
+            }
         }
 
         private void btAdd_Click(object sender, EventArgs e)
@@ -85,7 +143,7 @@ namespace com.vdm.form
             userInfo.ShowDialog();
             if (userInfo.DialogResult == DialogResult.OK)
             {
-                InitUserList();
+                InitPage();
             }
         }
 
@@ -120,7 +178,7 @@ namespace com.vdm.form
                 if (result.Count == 1)
                 {
                     MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    InitUserList();
+                    InitPage();
                 }
                 else
                 {

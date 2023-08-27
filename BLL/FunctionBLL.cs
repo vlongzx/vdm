@@ -11,12 +11,13 @@ namespace com.vdm.bll
     public class FunctionBLL
     {
         private FunctionDAL functionDAL = null;
-        public FunctionBLL()
+
+        public  FunctionBLL()
         {
             this.functionDAL = new FunctionDAL();
         }
         /// <summary>
-        ///  获取所有的功能权限列表
+        ///  获得所有的功能权限
         /// </summary>
         /// <returns></returns>
         public DataTable getAllFunction()

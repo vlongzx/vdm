@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDAL.cs" />
+    <Compile Include="FunctionDAL.cs" />
     <Compile Include="OrgDAL.cs" />
     <Compile Include="DictDAL.cs" />
     <Compile Include="PeopleDAL.cs" />

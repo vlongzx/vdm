@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DictBLL.cs" />
+    <Compile Include="FunctionBLL.cs" />
     <Compile Include="OrgBLL.cs" />
     <Compile Include="PeopleBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

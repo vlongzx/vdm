@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace com.vdm.model
 {
-    public class Function
+   public  class Function
     {
         private long function_id;
         private long pre_function_id;
-        private string function_code;
         private string function_name;
         private string remark;
 
         /// <summary>
-        /// 功能ID
+        ///  功能权限ID
         /// </summary>
         public long Function_id
         {
@@ -30,7 +29,7 @@ namespace com.vdm.model
             }
         }
         /// <summary>
-        /// 父功能ID
+        ///  父功能柜权限ID
         /// </summary>
         public long Pre_function_id
         {
@@ -45,22 +44,7 @@ namespace com.vdm.model
             }
         }
         /// <summary>
-        ///  功能编码
-        /// </summary>
-        public string Function_code
-        {
-            get
-            {
-                return function_code;
-            }
-
-            set
-            {
-                function_code = value;
-            }
-        }
-        /// <summary>
-        ///  功能名称
+        ///  功能权限名称
         /// </summary>
         public string Function_name
         {
@@ -74,7 +58,9 @@ namespace com.vdm.model
                 function_name = value;
             }
         }
-
+        /// <summary>
+        ///  备注
+        /// </summary>
         public string Remark
         {
             get

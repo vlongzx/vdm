@@ -235,10 +235,6 @@
       <Project>{8db26780-23b3-4624-95c8-c1a2ce08070f}</Project>
       <Name>Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PageControl\PageControl.csproj">
-      <Project>{01734311-3D3E-4451-BABB-5C256EEB5290}</Project>
-      <Name>PageControl</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
