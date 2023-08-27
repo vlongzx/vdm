@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.uiLabel36 = new Sunny.UI.UILabel();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
@@ -55,6 +56,7 @@
             this.tbPhone_number = new Sunny.UI.UITextBox();
             this.tbPeople_name = new Sunny.UI.UITextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbReligious_belief = new Sunny.UI.UITextBox();
             this.dtJoin_party_time = new Sunny.UI.UIDatePicker();
             this.uiLabel14 = new Sunny.UI.UILabel();
             this.uiLabel16 = new Sunny.UI.UILabel();
@@ -63,6 +65,8 @@
             this.cbEducation = new Sunny.UI.UIComboBox();
             this.cbPolitcal_outlook = new Sunny.UI.UIComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tbIndustry = new Sunny.UI.UITextBox();
+            this.tbSkill_type = new Sunny.UI.UITextBox();
             this.uiLabel21 = new Sunny.UI.UILabel();
             this.uiLabel17 = new Sunny.UI.UILabel();
             this.uiLabel22 = new Sunny.UI.UILabel();
@@ -79,6 +83,8 @@
             this.cbWork_or_study = new Sunny.UI.UIComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cbIs_career_grade = new Sunny.UI.UIComboBox();
+            this.uiLabel37 = new Sunny.UI.UILabel();
             this.uiLabel27 = new Sunny.UI.UILabel();
             this.uiLabel26 = new Sunny.UI.UILabel();
             this.uiLabel25 = new Sunny.UI.UILabel();
@@ -101,12 +107,6 @@
             this.cbLow_five = new Sunny.UI.UIComboBox();
             this.cbBig_ill_help = new Sunny.UI.UIComboBox();
             this.cbDisability_type = new Sunny.UI.UIComboBox();
-            this.uiLabel36 = new Sunny.UI.UILabel();
-            this.uiLabel37 = new Sunny.UI.UILabel();
-            this.cbIs_career_grade = new Sunny.UI.UIComboBox();
-            this.tbReligious_belief = new Sunny.UI.UITextBox();
-            this.tbSkill_type = new Sunny.UI.UITextBox();
-            this.tbIndustry = new Sunny.UI.UITextBox();
             this.pnlBtm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -168,6 +168,18 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息";
+            // 
+            // uiLabel36
+            // 
+            this.uiLabel36.AutoSize = true;
+            this.uiLabel36.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel36.Location = new System.Drawing.Point(788, 141);
+            this.uiLabel36.Name = "uiLabel36";
+            this.uiLabel36.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel36.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel36.TabIndex = 14;
+            this.uiLabel36.Text = "实名认证";
+            this.uiLabel36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel4
             // 
@@ -310,6 +322,7 @@
             this.uiLabel1.Size = new System.Drawing.Size(82, 41);
             this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel1.TabIndex = 13;
+            this.uiLabel1.TagString = "";
             this.uiLabel1.Text = "姓名";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -553,6 +566,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "政治面貌与宗教信仰";
             // 
+            // tbReligious_belief
+            // 
+            this.tbReligious_belief.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbReligious_belief.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbReligious_belief.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbReligious_belief.Location = new System.Drawing.Point(935, 52);
+            this.tbReligious_belief.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbReligious_belief.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbReligious_belief.Name = "tbReligious_belief";
+            this.tbReligious_belief.Padding = new System.Windows.Forms.Padding(5);
+            this.tbReligious_belief.ShowText = false;
+            this.tbReligious_belief.Size = new System.Drawing.Size(200, 29);
+            this.tbReligious_belief.Style = Sunny.UI.UIStyle.Custom;
+            this.tbReligious_belief.TabIndex = 20;
+            this.tbReligious_belief.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbReligious_belief.Watermark = "";
+            // 
             // dtJoin_party_time
             // 
             this.dtJoin_party_time.CanEmpty = true;
@@ -653,6 +683,7 @@
             this.cbPolitcal_outlook.TabIndex = 13;
             this.cbPolitcal_outlook.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbPolitcal_outlook.Watermark = "";
+            this.cbPolitcal_outlook.SelectedValueChanged += new System.EventHandler(this.cbPolitcal_outlook_SelectedValueChanged);
             // 
             // groupBox3
             // 
@@ -681,6 +712,40 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "职业就业情况";
+            // 
+            // tbIndustry
+            // 
+            this.tbIndustry.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbIndustry.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbIndustry.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbIndustry.Location = new System.Drawing.Point(558, 58);
+            this.tbIndustry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbIndustry.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbIndustry.Name = "tbIndustry";
+            this.tbIndustry.Padding = new System.Windows.Forms.Padding(5);
+            this.tbIndustry.ShowText = false;
+            this.tbIndustry.Size = new System.Drawing.Size(200, 29);
+            this.tbIndustry.Style = Sunny.UI.UIStyle.Custom;
+            this.tbIndustry.TabIndex = 22;
+            this.tbIndustry.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbIndustry.Watermark = "";
+            // 
+            // tbSkill_type
+            // 
+            this.tbSkill_type.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbSkill_type.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbSkill_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbSkill_type.Location = new System.Drawing.Point(167, 102);
+            this.tbSkill_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbSkill_type.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbSkill_type.Name = "tbSkill_type";
+            this.tbSkill_type.Padding = new System.Windows.Forms.Padding(5);
+            this.tbSkill_type.ShowText = false;
+            this.tbSkill_type.Size = new System.Drawing.Size(200, 29);
+            this.tbSkill_type.Style = Sunny.UI.UIStyle.Custom;
+            this.tbSkill_type.TabIndex = 21;
+            this.tbSkill_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbSkill_type.Watermark = "";
             // 
             // uiLabel21
             // 
@@ -874,6 +939,7 @@
             this.cbWork_or_study.TabIndex = 17;
             this.cbWork_or_study.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbWork_or_study.Watermark = "";
+            this.cbWork_or_study.SelectedValueChanged += new System.EventHandler(this.cbWork_or_study_SelectedValueChanged);
             // 
             // label20
             // 
@@ -920,6 +986,35 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "社会保障情况";
+            // 
+            // cbIs_career_grade
+            // 
+            this.cbIs_career_grade.DataSource = null;
+            this.cbIs_career_grade.FillColor = System.Drawing.Color.White;
+            this.cbIs_career_grade.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbIs_career_grade.Location = new System.Drawing.Point(1361, 134);
+            this.cbIs_career_grade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbIs_career_grade.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbIs_career_grade.Name = "cbIs_career_grade";
+            this.cbIs_career_grade.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbIs_career_grade.Size = new System.Drawing.Size(200, 29);
+            this.cbIs_career_grade.Style = Sunny.UI.UIStyle.Custom;
+            this.cbIs_career_grade.TabIndex = 37;
+            this.cbIs_career_grade.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbIs_career_grade.Watermark = "";
+            this.cbIs_career_grade.SelectedValueChanged += new System.EventHandler(this.cbIs_career_grade_SelectedValueChanged);
+            // 
+            // uiLabel37
+            // 
+            this.uiLabel37.AutoSize = true;
+            this.uiLabel37.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel37.Location = new System.Drawing.Point(1183, 129);
+            this.uiLabel37.Name = "uiLabel37";
+            this.uiLabel37.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel37.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel37.TabIndex = 36;
+            this.uiLabel37.Text = "有无职称";
+            this.uiLabel37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel27
             // 
@@ -1199,6 +1294,7 @@
             this.cbLow_five.TabIndex = 33;
             this.cbLow_five.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbLow_five.Watermark = "";
+            this.cbLow_five.SelectedValueChanged += new System.EventHandler(this.cbLow_five_SelectedValueChanged);
             // 
             // cbBig_ill_help
             // 
@@ -1231,97 +1327,7 @@
             this.cbDisability_type.TabIndex = 25;
             this.cbDisability_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbDisability_type.Watermark = "";
-            // 
-            // uiLabel36
-            // 
-            this.uiLabel36.AutoSize = true;
-            this.uiLabel36.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel36.Location = new System.Drawing.Point(788, 141);
-            this.uiLabel36.Name = "uiLabel36";
-            this.uiLabel36.Size = new System.Drawing.Size(146, 41);
-            this.uiLabel36.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel36.TabIndex = 14;
-            this.uiLabel36.Text = "实名认证";
-            this.uiLabel36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel37
-            // 
-            this.uiLabel37.AutoSize = true;
-            this.uiLabel37.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel37.Location = new System.Drawing.Point(1183, 129);
-            this.uiLabel37.Name = "uiLabel37";
-            this.uiLabel37.Size = new System.Drawing.Size(146, 41);
-            this.uiLabel37.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel37.TabIndex = 36;
-            this.uiLabel37.Text = "有无职称";
-            this.uiLabel37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbIs_career_grade
-            // 
-            this.cbIs_career_grade.DataSource = null;
-            this.cbIs_career_grade.FillColor = System.Drawing.Color.White;
-            this.cbIs_career_grade.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbIs_career_grade.Location = new System.Drawing.Point(1361, 134);
-            this.cbIs_career_grade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbIs_career_grade.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbIs_career_grade.Name = "cbIs_career_grade";
-            this.cbIs_career_grade.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbIs_career_grade.Size = new System.Drawing.Size(200, 29);
-            this.cbIs_career_grade.Style = Sunny.UI.UIStyle.Custom;
-            this.cbIs_career_grade.TabIndex = 37;
-            this.cbIs_career_grade.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbIs_career_grade.Watermark = "";
-            // 
-            // tbReligious_belief
-            // 
-            this.tbReligious_belief.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbReligious_belief.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbReligious_belief.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbReligious_belief.Location = new System.Drawing.Point(935, 52);
-            this.tbReligious_belief.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbReligious_belief.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbReligious_belief.Name = "tbReligious_belief";
-            this.tbReligious_belief.Padding = new System.Windows.Forms.Padding(5);
-            this.tbReligious_belief.ShowText = false;
-            this.tbReligious_belief.Size = new System.Drawing.Size(200, 29);
-            this.tbReligious_belief.Style = Sunny.UI.UIStyle.Custom;
-            this.tbReligious_belief.TabIndex = 20;
-            this.tbReligious_belief.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbReligious_belief.Watermark = "";
-            // 
-            // tbSkill_type
-            // 
-            this.tbSkill_type.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbSkill_type.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSkill_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbSkill_type.Location = new System.Drawing.Point(167, 102);
-            this.tbSkill_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbSkill_type.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbSkill_type.Name = "tbSkill_type";
-            this.tbSkill_type.Padding = new System.Windows.Forms.Padding(5);
-            this.tbSkill_type.ShowText = false;
-            this.tbSkill_type.Size = new System.Drawing.Size(200, 29);
-            this.tbSkill_type.Style = Sunny.UI.UIStyle.Custom;
-            this.tbSkill_type.TabIndex = 21;
-            this.tbSkill_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbSkill_type.Watermark = "";
-            // 
-            // tbIndustry
-            // 
-            this.tbIndustry.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbIndustry.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbIndustry.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbIndustry.Location = new System.Drawing.Point(558, 58);
-            this.tbIndustry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbIndustry.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbIndustry.Name = "tbIndustry";
-            this.tbIndustry.Padding = new System.Windows.Forms.Padding(5);
-            this.tbIndustry.ShowText = false;
-            this.tbIndustry.Size = new System.Drawing.Size(200, 29);
-            this.tbIndustry.Style = Sunny.UI.UIStyle.Custom;
-            this.tbIndustry.TabIndex = 22;
-            this.tbIndustry.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbIndustry.Watermark = "";
+            this.cbDisability_type.SelectedValueChanged += new System.EventHandler(this.cbDisability_type_SelectedValueChanged);
             // 
             // frmPeopleInfo
             // 

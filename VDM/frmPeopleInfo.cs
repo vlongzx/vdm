@@ -587,5 +587,96 @@ namespace com.vdm.form
                 }
             }
         }
+
+        private void cbPolitcal_outlook_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cbPolitcal_outlook.SelectedValue.ToString()!="党员")
+            {
+                dtJoin_party_time.Enabled = false;
+            }
+            else
+            {
+                dtJoin_party_time.Enabled = true;
+            }
+        }
+
+        private void cbWork_or_study_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cbWork_or_study.SelectedValue.ToString()=="")
+            {
+                tbIndustry.Enabled = false;
+                tbUnit_or_school.Enabled = false;
+                tbWork_study_location.Enabled = false;
+            }
+            else  if (cbWork_or_study.SelectedValue.ToString() != "否")
+            {
+                tbIndustry.Enabled = true;
+                tbUnit_or_school.Enabled = true;
+                tbWork_study_location.Enabled = true;
+            }
+            else
+            {
+                tbIndustry.Enabled = false;
+                tbUnit_or_school.Enabled = false;
+                tbWork_study_location.Enabled = false;
+            }
+        }
+
+        private void cbDisability_type_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbDisability_type.SelectedValue.ToString() == "")
+            {
+                tbDisability_reason.Enabled = false;
+                cbDisability_grade.Enabled = false;
+                cbIs_real_name.Enabled = false;
+            }
+          else  if (cbDisability_type.SelectedValue.ToString()!="无")
+            {
+                tbDisability_reason.Enabled = true;
+                cbDisability_grade.Enabled = true;
+                cbIs_real_name.Enabled = true;
+            }
+            else
+            {
+                tbDisability_reason.Enabled = false;
+                cbDisability_grade.Enabled = false;
+                cbIs_real_name.Enabled = false;
+            }
+        }
+
+        private void cbIs_career_grade_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbIs_career_grade.SelectedValue.ToString() == "")
+            {
+                tbCareer_grade.Enabled = false;
+                dtCareer_get_time.Enabled = false;
+            }
+            else if (cbIs_career_grade.SelectedValue.ToString() != "无")
+            {
+                tbCareer_grade.Enabled = true;
+                dtCareer_get_time.Enabled = true;
+            }
+            else
+            {
+                tbCareer_grade.Enabled = false;
+                dtCareer_get_time.Enabled = false;
+            }
+        }
+
+        private void cbLow_five_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbLow_five.SelectedValue.ToString() == "")
+            {
+                cbLow_five_grade.Enabled = false;
+            }
+            else if (cbLow_five.SelectedValue.ToString() != "否")
+            {
+                cbLow_five_grade.Enabled = true;
+            }
+            else
+            {
+                cbLow_five_grade.Enabled = false;
+            }
+        }
     }
 }
