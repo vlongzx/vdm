@@ -95,7 +95,7 @@ namespace com.vdm.bll
         {
             DataTable dt = this.peopleDAL.getPeople(people_id);
             People people = new People();
-            DataTable tblSchema = this.peopleDAL.getTableSchema();
+            DataTable tblSchema = this.peopleDAL.getTableSchema("t_people");
             if (tblSchema != null)
             {
                 foreach (DataRow row in tblSchema.Rows)

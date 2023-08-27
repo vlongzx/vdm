@@ -1,4 +1,5 @@
-﻿using com.vdm.dal;
+﻿using com.vdm.common;
+using com.vdm.dal;
 using com.vdm.model;
 using System;
 using System.Collections.Generic;
@@ -51,31 +52,21 @@ namespace com.vdm.bll
         {
             DataTable dt = this.userDAL.getAllUser();
             List<User> listUser = new List<User>();
-            //User user;
-            //if (dt != null)
-            //{
-            //    foreach(DataRow row in dt.Rows)
-            //    {
-            //        user = new User();
-            //        user.User_id = row["user_id"].ToString();
-            //        user.Username = row["username"].ToString();
-            //        user.Town_id = int.Parse(row["town_id"].ToString());
-            //        user.Village_id = int.Parse(row["village_id"].ToString());
-            //        user.Remark = row["remark"].ToString();
-            //        user.Town_name = row["town_name"].ToString();
-            //        user.Village_name = row["village_name"].ToString();
-            //        if(row["village_id"].ToString() == "0")
-            //        {
-            //            user.Level = "乡镇级";
-            //        }
-            //        else
-            //        {
-            //            user.Level = "村级";
-            //        }
-            //        listUser.Add(user);
-            //    }
-            //}
             return dt;
+        }
+        /// <summary>
+        ///  增加新用户
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public Result addUser(User user)
+        {
+            return this.userDAL.CreateUser(user);
+        }
+
+        public Result delUser(int user_id)
+        {
+            return this.userDAL.DeleteUser(user_id);
         }
     }
 

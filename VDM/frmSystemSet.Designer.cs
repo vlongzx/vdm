@@ -153,6 +153,8 @@
             // 
             // dgUser
             // 
+            this.dgUser.AllowUserToAddRows = false;
+            this.dgUser.AllowUserToDeleteRows = false;
             this.dgUser.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -199,6 +201,7 @@
             this.dgUser.RowTemplate.Height = 30;
             this.dgUser.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgUser.SelectedIndex = -1;
+            this.dgUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgUser.Size = new System.Drawing.Size(1535, 895);
             this.dgUser.TabIndex = 1;
             // 

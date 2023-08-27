@@ -432,31 +432,6 @@ namespace com.vdm.form
            
         }
 
-        private void cbTown_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        /// <summary>
-        ///  乡镇选择发生改变触发该事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void cbTown_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            if (this.cbTown.SelectedValue != null)
-            {
-                orgBLL = new OrgBLL();
-                int select_village = int.Parse(this.cbTown.SelectedValue.ToString());
-                List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
-                if (list_village != null)
-                {
-                    this.cbVillage.DataSource = list_village;
-                    this.cbVillage.DisplayMember = "value";
-                    this.cbVillage.ValueMember = "key";
-                }
-            }
-        }
 
         private void tbIdcard_TextChanged(object sender, EventArgs e)
         {
@@ -467,6 +442,31 @@ namespace com.vdm.form
                 dtBirthday.Value = DateTime.Parse(strBirthday);
             }
 
+        }
+        /// <summary>
+        /// 乡镇选择发生改变触发该事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cbTown_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (this.cbTown.SelectedValue != null)
+            {
+                orgBLL = new OrgBLL();
+                int select_village = 0;
+                if (this.cbTown.SelectedItem != null)
+                {
+                    KeyValue selectValue = (KeyValue)this.cbTown.SelectedItem;
+                    select_village = int.Parse(selectValue.Key);
+                }
+                List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
+                if (list_village != null)
+                {
+                    this.cbVillage.DataSource = list_village;
+                    this.cbVillage.DisplayMember = "value";
+                    this.cbVillage.ValueMember = "key";
+                }
+            }
         }
     }
 }

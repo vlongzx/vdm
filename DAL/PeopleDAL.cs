@@ -11,13 +11,12 @@ using System.Threading.Tasks;
 
 namespace com.vdm.dal
 {
-    public class PeopleDAL
+    public class PeopleDAL: BaseDAL
     {
-        private SqlDbHelper sqlDB;
+        
 
         public PeopleDAL()
         {
-            this.sqlDB = new SqlDbHelper();
         }
 
         /// <summary>
@@ -27,7 +26,7 @@ namespace com.vdm.dal
         public int getTotalPeople()
         {
             string sql = "select * from t_people  order by create_datetime desc";
-            DataTable dt = this.sqlDB.ExecuteDataTable(sql);
+            DataTable dt = this.SqlDbHelper.ExecuteDataTable(sql);
             if(dt != null)
             {
                 return dt.Rows.Count;
@@ -97,7 +96,7 @@ namespace com.vdm.dal
             parameters.Add(new SQLiteParameter("@religious_belief", condition["Religious_belief"]));
             parameters.Add(new SQLiteParameter("@education", condition["Education"]));
 
-            DataTable dt = this.sqlDB.ExecuteDataTable(sql, CommandType.Text, parameters);
+            DataTable dt = this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
             if (dt != null)
             {
                 return dt.Rows.Count;
@@ -127,7 +126,7 @@ namespace com.vdm.dal
                 limit = totalPeople - (pageCount - 1) * pageSize;
             }
             string sql =  "select * from t_people order by create_datetime desc LIMIT " + limit + " OFFSET " + offset + " ";
-            DataTable dt = this.sqlDB.ExecuteDataTable(sql);
+            DataTable dt = this.SqlDbHelper.ExecuteDataTable(sql);
             return dt;
         }
 
@@ -216,7 +215,7 @@ namespace com.vdm.dal
             parameters.Add(new SQLiteParameter("@religious_belief", condition["Religious_belief"]));
             parameters.Add(new SQLiteParameter("@education", condition["Education"]));
 
-            return this.sqlDB.ExecuteDataTable(sql, CommandType.Text, parameters);
+            return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
         }
 
         /// <summary>
@@ -284,25 +283,15 @@ namespace com.vdm.dal
             parameters.Add(new SQLiteParameter("@religious_belief", condition["Religious_belief"]));
             parameters.Add(new SQLiteParameter("@education", condition["Education"]));
 
-            return  this.sqlDB.ExecuteDataTable(sql, CommandType.Text, parameters);
+            return  this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
         }
 
         public DataTable getPeople(int people_id)
         {
             string sql = "select * from t_people where people_id = " + people_id;
-            return this.sqlDB.ExecuteDataTable(sql);
+            return this.SqlDbHelper.ExecuteDataTable(sql);
         }
 
-        /// <summary>
-        ///  获得表结构
-        /// </summary>
-        /// <returns></returns>
-        public DataTable getTableSchema()
-        {
-            string schemaSql = "select * from t_people where 1=0";
-            DataTable tblSchema = this.sqlDB.GetTableSchema(schemaSql);
-            return tblSchema;
-        }
 
 
         /// <summary>
@@ -315,7 +304,7 @@ namespace com.vdm.dal
             //构建sql语句
             List<string> listColumnName = new List<string>();
             List<string> listParameter = new List<string>();
-            DataTable tblSchema = this.getTableSchema();
+            DataTable tblSchema = this.getTableSchema("t_people");
             if (tblSchema != null)
             {
                 foreach (DataRow row in tblSchema.Rows)
@@ -349,7 +338,7 @@ namespace com.vdm.dal
                 }
             }
 
-            return this.sqlDB.ExecuteNonQuery(sql, CommandType.Text, parameters);
+            return this.SqlDbHelper.ExecuteNonQuery(sql, CommandType.Text, parameters);
         }
 
         public Result UpdatePeople(People people)
@@ -357,7 +346,7 @@ namespace com.vdm.dal
             //构建参数值
             List<string> listSetValue = new List<string>();
             SQLiteParameter parameter = null;
-            DataTable tblSchema = this.getTableSchema();
+            DataTable tblSchema = this.getTableSchema("t_people");
             if (tblSchema != null)
             {
                 foreach (DataRow row in tblSchema.Rows)
@@ -383,14 +372,14 @@ namespace com.vdm.dal
                 }
                
             }
-            return this.sqlDB.ExecuteNonQuery(sql, CommandType.Text, parameters);
+            return this.SqlDbHelper.ExecuteNonQuery(sql, CommandType.Text, parameters);
         }
 
 
         public Result DeletePeople(long people_id)
         {
             string sql = "delete from t_people where people_id="+ people_id;
-            return this.sqlDB.ExecuteNonQuery(sql);
+            return this.SqlDbHelper.ExecuteNonQuery(sql);
         }
     }
 }
