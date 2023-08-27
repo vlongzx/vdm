@@ -18,6 +18,7 @@ namespace com.vdm.form
     {
         private OrgBLL orgBLL = null;
         private UserBLL userBLL = null;
+        private RoleBLL roleBLL = null;
         public frmSystemSet()
         {
             InitializeComponent();
@@ -48,7 +49,7 @@ namespace com.vdm.form
         {
             //初始化用户列表
             this.userBLL = new UserBLL();
-            DataTable dt = this.userBLL.getAllUser();
+            DataTable dtUser = this.userBLL.getAllUser();
             this.dgUser.AutoGenerateColumns = false;
             this.dgUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgUser.RowTemplate.Height = 45;
@@ -59,8 +60,22 @@ namespace com.vdm.form
             this.dgUser.AddColumn("所在村", "village_name").SetFixedMode(150);
             this.dgUser.AddColumn("备注", "remark").SetFixedMode(300);
             this.Pagination.PageSize = 20;
-            this.Pagination.TotalCount = dt.Rows.Count;
-            this.dgUser.DataSource = dt;
+            this.Pagination.TotalCount = dtUser.Rows.Count;
+            this.dgUser.DataSource = dtUser;
+
+            //初始化角色列表
+            this.roleBLL = new RoleBLL();
+            DataTable dtRole = this.roleBLL.getAllRole();
+            this.dgRole.AutoGenerateColumns = false;
+            this.dgRole.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgRole.RowTemplate.Height = 45;
+            this.dgRole.AddColumn("角色ID", "role_id");
+            this.dgRole.AddColumn("角色名称", "role_name");
+            this.dgRole.AddColumn("角色类型", "role_type");
+            this.dgRole.AddColumn("备注", "remark").SetFixedMode(300);
+            this.Pagination.PageSize = 20;
+            this.Pagination.TotalCount = dtRole.Rows.Count;
+            this.dgRole.DataSource = dtRole;
         }
 
         private void btAdd_Click(object sender, EventArgs e)
