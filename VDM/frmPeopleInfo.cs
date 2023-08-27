@@ -65,12 +65,12 @@ namespace com.vdm.form
                 this.tbRemark.Text = people.Remark;
                 this.cbDisability_type.SelectedValue = people.Disability_type;
                 this.dtJoin_party_time.Text = people.Join_party_time;
-                this.cbReligious_belief.SelectedValue = people.Religious_belief;
+                this.tbReligious_belief.Text = people.Religious_belief;
                 this.cbEducation.SelectedValue = people.Education;
                 this.cbWork_or_study.SelectedValue = people.Work_or_study;
                 this.tbUnit_or_school.Text = people.Unit_or_school;
                 this.tbWork_study_location.Text = people.Work_study_location;
-                this.cbSkill_type.SelectedValue = people.Skill_type;
+                this.tbSkill_type.Text = people.Skill_type;
                 this.cbEmploy_guide.SelectedValue = people.Employ_guide;
                 this.cbSkill_train.SelectedValue = people.Skill_train;
                 this.tbCareer_grade.Text = people.Career_grade;
@@ -98,6 +98,10 @@ namespace com.vdm.form
         private void InitPageControl()
         {
             dictBLL = new DictBLL();
+            //初始化日期控件
+            dtBirthday.Text = "";
+            dtCareer_get_time.Text = "";
+            dtJoin_party_time.Text = "";
             //初始化血型
             List<KeyValue> list_blood_type = dictBLL.getDict("blood_type");
             if (list_blood_type != null)
@@ -108,13 +112,13 @@ namespace com.vdm.form
             }
 
             //初始化性别
-            List<KeyValue> list_sex = new List<KeyValue>();
-            list_sex.Add(new KeyValue("男", "男"));
-            list_sex.Add(new KeyValue("女", "女"));
-            this.cbSex.DataSource = list_sex;
-            this.cbSex.DisplayMember = "value";
-            this.cbSex.ValueMember = "key";
-
+            List<KeyValue> list_sex = dictBLL.getDict("sex");
+            if (list_sex != null)
+            {
+                this.cbSex.DataSource = list_sex;
+                this.cbSex.DisplayMember = "value";
+                this.cbSex.ValueMember = "key";
+            }
             //初始胡民族
             List<KeyValue> list_nation = dictBLL.getDict("nation");
             if (list_nation != null)
@@ -134,14 +138,14 @@ namespace com.vdm.form
             }
 
             //初始化婚姻关系
-            List<KeyValue> list_marital_status = new List<KeyValue>();
-            list_marital_status.Add(new KeyValue("已婚", "已婚"));
-            list_marital_status.Add(new KeyValue("未婚", "未婚"));
-            list_marital_status.Add(new KeyValue("离异", "离异"));
-            list_marital_status.Add(new KeyValue("丧偶", "丧偶"));
-            this.cbMarital_status.DataSource = list_marital_status;
-            this.cbMarital_status.DisplayMember = "value";
-            this.cbMarital_status.ValueMember = "key";
+            List<KeyValue> list_marital_status = dictBLL.getDict("marital_status");
+            if (list_marital_status != null)
+            {
+                this.cbMarital_status.DataSource = list_marital_status;
+                this.cbMarital_status.DisplayMember = "value";
+                this.cbMarital_status.ValueMember = "key";
+            }
+
 
             //初始化政治面貌
             List<KeyValue> list_politcal_outlook = dictBLL.getDict("politcal_outlook");
@@ -152,13 +156,21 @@ namespace com.vdm.form
                 this.cbPolitcal_outlook.ValueMember = "key";
             }
 
-            //初始化宗教信仰
-            List<KeyValue> list_religious_belief = dictBLL.getDict("religious_belief");
-            if (list_religious_belief != null)
+            ////初始化宗教信仰
+            //List<KeyValue> list_religious_belief = dictBLL.getDict("religious_belief");
+            //if (list_religious_belief != null)
+            //{
+            //    this.cbReligious_belief.DataSource = list_religious_belief;
+            //    this.cbReligious_belief.DisplayMember = "value";
+            //    this.cbReligious_belief.ValueMember = "key";
+            //}
+            //初始化有无职称
+            List<KeyValue> list_is_career_grade = dictBLL.getDict("common_have");
+            if (list_is_career_grade != null)
             {
-                this.cbReligious_belief.DataSource = list_religious_belief;
-                this.cbReligious_belief.DisplayMember = "value";
-                this.cbReligious_belief.ValueMember = "key";
+                this.cbIs_career_grade.DataSource = list_is_career_grade;
+                this.cbIs_career_grade.DisplayMember = "value";
+                this.cbIs_career_grade.ValueMember = "key";
             }
 
             //初始化学历
@@ -197,23 +209,23 @@ namespace com.vdm.form
                 this.cbWork_or_study.ValueMember = "key";
             }
 
-            //初始化从事行业
-            List<KeyValue> list_industry = dictBLL.getDict("industry");
-            if (list_industry != null)
-            {
-                this.cbIndustry.DataSource = list_industry;
-                this.cbIndustry.DisplayMember = "value";
-                this.cbIndustry.ValueMember = "key";
-            }
+            ////初始化从事行业
+            //List<KeyValue> list_industry = dictBLL.getDict("industry");
+            //if (list_industry != null)
+            //{
+            //    this.cbIndustry.DataSource = list_industry;
+            //    this.cbIndustry.DisplayMember = "value";
+            //    this.cbIndustry.ValueMember = "key";
+            //}
 
-            //初始化技能类型
-            List<KeyValue> list_skill_type = dictBLL.getDict("skill_type");
-            if (list_skill_type != null)
-            {
-                this.cbSkill_type.DataSource = list_skill_type;
-                this.cbSkill_type.DisplayMember = "value";
-                this.cbSkill_type.ValueMember = "key";
-            }
+            ////初始化技能类型
+            //List<KeyValue> list_skill_type = dictBLL.getDict("skill_type");
+            //if (list_skill_type != null)
+            //{
+            //    this.cbSkill_type.DataSource = list_skill_type;
+            //    this.cbSkill_type.DisplayMember = "value";
+            //    this.cbSkill_type.ValueMember = "key";
+            //}
 
             //初始化就业指导
             List<KeyValue> list_employ_guide = dictBLL.getDict("employ_guide");
@@ -338,16 +350,100 @@ namespace com.vdm.form
 
             return CheckEmpty(tbPeople_name, "请输入姓名")
                 && CheckIDCard(this.tbIdcard, "您输入的身份证号码不合法，请重新输入。")
+                &&CheckCB(cbRelationship,"请选择与户主关系")
+                && CheckCB(cbNation, "请选择民族")
+                && CheckEmpty(dtBirthday, "请输入出生日期")
+                && CheckEmpty(tbPhone_number, "请输入联系电话")
+                && CheckEmpty(tbReligious_belief, "请输入宗教信仰")
+                && CheckCB(cbEducation, "请选择学历")
+                && CheckCB(cbMarital_status, "请选择婚姻状况")
+                && CheckCB(cbWork_or_study, "请选择是否外出务工/求学")
+                && CheckCB(cbEmploy_guide, "请选择有无参加就业指导")
+                && CheckCB(cbSkill_train, "请选择有无参加技能培训")
+                && CheckCB(cbIs_career_grade, "请选择有无职称")
+                && CheckCB(cbMilitary_service, "请选择是否服兵役")
+                && CheckCB(cbDisability_type, "请选择残疾分类")
+                && CheckCB(cbBig_ill_help, "请选择大病救助情况")
+                && CheckCB(cbTemporary_help, "请选择临时救助情况")
+                && CheckCB(cbIs_unable_old, "请选择是否为失能老人")
+                && CheckCB(cbIs_relocation, "请选择是否易地搬迁户")
+                && CheckCB(cbLow_five, "请选择低保户/五保户")
+                && CheckPolitcal()
+                && CheckWorkStudy()
+                && CheckCareer()
+                && CheckDisability()
+                && CheckLowFive()
                 ;
         }
 
+        //校验下拉框是否选择
+        protected bool CheckCB(UIComboBox uicb, string Message)
+        {
+            if (uicb.Text== "请选择")
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
+        }
+
+        //校验关联字段
+        protected bool CheckPolitcal()
+        {
+            if (cbPolitcal_outlook.Text == "党员")
+            {
+                return CheckEmpty(dtJoin_party_time,"请选择入党时间");
+            }
+            return true;
+        }
+        protected bool CheckWorkStudy()
+        {
+            if (cbWork_or_study.Text != "否")
+            {
+                return CheckEmpty(tbIndustry, "请输入从事行业")
+                    && CheckEmpty(tbUnit_or_school, "请输入工作单位/学校名称")
+                    && CheckEmpty(tbWork_study_location, "请输入工作地点/学习地点")
+                    ;
+            }
+            return true;
+        }
+        protected bool CheckDisability()
+        {
+            if (cbDisability_type.Text != "无")
+            {
+                return CheckCB(cbIs_real_name, "请选择是否实名认证")
+                    && CheckCB(cbDisability_grade, "请选择残疾等级")
+                    && CheckEmpty(tbDisability_reason, "请输入残疾原因")
+                    ;
+            }
+            return true;
+        }
+        protected bool CheckCareer()
+        {
+            if (cbIs_career_grade.Text == "有")
+            {
+                return CheckEmpty(tbCareer_grade, "请输入职称等级")
+                    && CheckEmpty(dtCareer_get_time, "请选择职称等级获得时间")
+                    ;
+            }
+            return true;
+        }
+        protected bool CheckLowFive()
+        {
+            if (cbLow_five.Text != "否")
+            {
+                return CheckCB(cbLow_five_grade, "请选择低保等级/五保类别")
+                    ;
+            }
+            return true;
+        }
         /// <summary>
         ///  验证身份证合法性
         /// </summary>
         /// <param name="tbIDCard"></param>
         /// <param name="Message"></param>
         /// <returns></returns>
-         protected bool CheckIDCard(UITextBox tbIDCard,string Message)
+        protected bool CheckIDCard(UITextBox tbIDCard,string Message)
         {
             //验证输入的身份证是否合法
             if (tbIDCard.Text.Trim() != "" && Utils.IsIDCard(tbIDCard.Text.Trim()) == false)
@@ -391,17 +487,18 @@ namespace com.vdm.form
             //-----------------政治面貌与宗教信仰
             people.Politcal_outlook = this.cbPolitcal_outlook.SelectedValue.ToString();
             people.Join_party_time = this.dtJoin_party_time.Text.Trim();
-            people.Religious_belief = this.cbReligious_belief.SelectedValue.ToString();
+            people.Religious_belief = this.tbReligious_belief.Text.ToString();
             people.Education = this.cbEducation.SelectedValue.ToString();
             //------------------------------------------------------------------
             //-----------------就业社保情况
             people.Work_or_study = this.cbWork_or_study.SelectedValue.ToString();
-            people.Industry = this.cbIndustry.SelectedValue.ToString();
+            people.Industry = this.tbIndustry.Text.ToString();
             people.Unit_or_school = this.tbUnit_or_school.Text.Trim();
             people.Work_study_location = this.tbWork_study_location.Text.Trim();
-            people.Skill_type = this.cbSkill_type.SelectedValue.ToString();
+            people.Skill_type = this.tbSkill_type.Text.ToString();
             people.Employ_guide = this.cbEmploy_guide.SelectedValue.ToString();
             people.Skill_train = this.cbSkill_train.SelectedValue.ToString();
+            people.Is_career_grade = this.cbIs_career_grade.SelectedValue.ToString();
             people.Career_grade = this.tbCareer_grade.Text.Trim();
             people.Career_get_time = this.dtCareer_get_time.Text.ToString();
             //------------------------------------------------------------------
