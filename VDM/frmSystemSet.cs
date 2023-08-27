@@ -20,6 +20,7 @@ namespace com.vdm.form
         private UserBLL userBLL = null;
         private RoleBLL roleBLL = null;
         private FunctionBLL functionBLL = null;
+        public DataAuthBLL dataAuthBLL = null;
         public frmSystemSet()
         {
             InitializeComponent();
@@ -133,9 +134,21 @@ namespace com.vdm.form
             DataTable dtFunction = this.functionBLL.getAllFunction();
             if (dtFunction != null)
             {
-                this.Pagination.PageSize = 20;
-                this.Pagination.TotalCount = dtFunction.Rows.Count;
                 this.dgFunction.DataSource = dtFunction;
+            }
+
+            //初始化所有的数据权限
+            this.dataAuthBLL = new DataAuthBLL();
+            this.dgDataAuth.AutoGenerateColumns = false;
+            this.dgDataAuth.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgDataAuth.RowTemplate.Height = 45;
+            this.dgDataAuth.AddColumn("数据权限ID", "data_authority_id");
+            this.dgDataAuth.AddColumn("数据权限类型", "data_authority_type");
+            this.dgDataAuth.AddColumn("数据权限描述", "data_authority_desc");
+            DataTable dtDataAuth = this.dataAuthBLL.getAllDataAuth();
+            if (dtDataAuth != null)
+            {
+                this.dgDataAuth.DataSource = dtDataAuth;
             }
         }
 

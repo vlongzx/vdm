@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAuthBLL.cs" />
     <Compile Include="DictBLL.cs" />
     <Compile Include="FunctionBLL.cs" />
     <Compile Include="OrgBLL.cs" />
