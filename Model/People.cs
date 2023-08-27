@@ -30,6 +30,7 @@ namespace com.vdm.model
         private string skill_type;
         private string employ_guide;
         private string skill_train;
+        private string is_career_grade;
         private string career_grade;
         private string career_get_time;
         private string military_service;
@@ -387,6 +388,21 @@ namespace com.vdm.model
             }
         }
         /// <summary>
+        /// 有无职称
+        /// </summary>
+        public string Is_career_grade
+        {
+            get
+            {
+                return is_career_grade;
+            }
+
+            set
+            {
+                is_career_grade = value;
+            }
+        }
+        /// <summary>
         /// 职称等级
         /// </summary>
         public string Career_grade
@@ -701,5 +717,6 @@ namespace com.vdm.model
                 villiage = value;
             }
         }
+
     }
 }

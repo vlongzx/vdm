@@ -76,7 +76,7 @@ namespace com.vdm.form
             List<KeyValue> list_sex = new List<KeyValue>();
             list_sex.Add(new KeyValue("男", "男"));
             list_sex.Add(new KeyValue("女", "女"));
-            list_sex.Add(new KeyValue("", ""));
+            list_sex.Add(new KeyValue("", "请选择"));
             this.cbSex.DataSource = list_sex;
             this.cbSex.DisplayMember = "value";
             this.cbSex.ValueMember = "key";
@@ -84,48 +84,48 @@ namespace com.vdm.form
 
             //初始化与户主的关系
             List<KeyValue> list_relationship = dictBLL.getDict("relationship");
-            list_relationship.Add(new KeyValue("", ""));
+           // list_relationship.Add(new KeyValue("", ""));
             if (list_relationship != null)
             {
                 this.cbRelationship.DataSource = list_relationship;
                 this.cbRelationship.DisplayMember = "value";
                 this.cbRelationship.ValueMember = "key";
             }
-            this.cbRelationship.SelectedValue = "";
+           // this.cbRelationship.SelectedValue = "";
 
             //初始化政治面貌
             List<KeyValue> list_politcal_outlook = dictBLL.getDict("politcal_outlook");
-            list_politcal_outlook.Add(new KeyValue("", ""));
+           // list_politcal_outlook.Add(new KeyValue("", ""));
             if (list_politcal_outlook != null)
             {
                 this.cbPolitcal_outlook.DataSource = list_politcal_outlook;
                 this.cbPolitcal_outlook.DisplayMember = "value";
                 this.cbPolitcal_outlook.ValueMember = "key";
             }
-            this.cbPolitcal_outlook.SelectedValue = "";
+            //this.cbPolitcal_outlook.SelectedValue = "";
 
             //初始化宗教信仰
             List<KeyValue> list_religious_belief = dictBLL.getDict("religious_belief");
-            list_religious_belief.Add(new KeyValue("", ""));
+           // list_religious_belief.Add(new KeyValue("", ""));
             if (list_religious_belief != null)
             {
                 this.cbReligious_belief.DataSource = list_religious_belief;
                 this.cbReligious_belief.DisplayMember = "value";
                 this.cbReligious_belief.ValueMember = "key";
             }
-            this.cbReligious_belief.SelectedValue = "";
+         //   this.cbReligious_belief.SelectedValue = "";
 
 
             //初始化学历
             List<KeyValue> list_education = dictBLL.getDict("education");
-            list_education.Add(new KeyValue("", ""));
+           // list_education.Add(new KeyValue("", ""));
             if (list_education != null)
             {
                 this.cbEducation.DataSource = list_education;
                 this.cbEducation.DisplayMember = "value";
                 this.cbEducation.ValueMember = "key";
             }
-            this.cbEducation.SelectedValue = "";
+         //   this.cbEducation.SelectedValue = "";
         }
 
 
@@ -162,6 +162,7 @@ namespace com.vdm.form
             this.dgPeopleList.AddColumn("技能类型", "Skill_type");
             this.dgPeopleList.AddColumn("就业指导", "Employ_guide");
             this.dgPeopleList.AddColumn("技能培训", "Skill_train");
+            this.dgPeopleList.AddColumn("有无职称", "Is_career_grade");
             this.dgPeopleList.AddColumn("职称等级", "Career_grade");
             this.dgPeopleList.AddColumn("职称获得时间", "Career_get_time");
             this.dgPeopleList.AddColumn("残疾分类", "Disability_type");
@@ -377,6 +378,7 @@ namespace com.vdm.form
                         people.Skill_type = dataRow["技能类型"].ToString();
                         people.Employ_guide = dataRow["就业指导"].ToString();
                         people.Skill_train = dataRow["技能培训"].ToString();
+                        people.Is_career_grade=dataRow["有无职称"].ToString();
                         people.Career_grade = dataRow["职称等级"].ToString();
                         people.Career_get_time = dataRow["职称获得时间"].ToString();
                         people.Disability_type = dataRow["残疾分类"].ToString();
@@ -472,6 +474,7 @@ namespace com.vdm.form
             lvExport.Columns.Add("技能类型", 150);
             lvExport.Columns.Add("就业指导", 150);
             lvExport.Columns.Add("技能培训", 150);
+            lvExport.Columns.Add("有无职称", 150);
             lvExport.Columns.Add("职称等级", 150);
             lvExport.Columns.Add("职称获得时间", 200);
             lvExport.Columns.Add("残疾分类", 150);
@@ -519,6 +522,7 @@ namespace com.vdm.form
                 lvi.SubItems.Add(people.Skill_type);
                 lvi.SubItems.Add(people.Employ_guide);
                 lvi.SubItems.Add(people.Skill_train);
+                lvi.SubItems.Add(people.Is_career_grade);
                 lvi.SubItems.Add(people.Career_grade);
                 lvi.SubItems.Add(people.Career_get_time);
                 lvi.SubItems.Add(people.Disability_type);
