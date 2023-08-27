@@ -22,5 +22,16 @@ namespace com.vdm.dal
             string sql = "select * from t_function";
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
+
+        /// <summary>
+        /// 根据父功能权限ID获得其下的所有子功能权限
+        /// </summary>
+        /// <param name="pre_function_id">父功能权限ID</param>
+        /// <returns></returns>
+        public DataTable queryFunctionBypreFunctionID(long pre_function_id)
+        {
+            string sql = "select * from t_function where pre_function_id="+ pre_function_id;
+            return this.SqlDbHelper.ExecuteDataTable(sql);
+        }
     }
 }

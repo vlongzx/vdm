@@ -46,17 +46,19 @@ namespace com.vdm.form
             this.tvOrg.ExpandAll();//全部节点展开
 
             //初始化功能权限树
+           
             functionBLL = new FunctionBLL();
             DataTable dtFunction = this.functionBLL.getAllFunction();
             if (dtFunction != null)
             {
                 this.tvFunction.Nodes.Clear();
-                foreach(DataRow row in dtFunction.Rows)
+                this.tvFunction.Nodes.Add("0", "功能权限树");
+                foreach (DataRow row in dtFunction.Rows)
                 {
                     string pre_function_id = row["pre_function_id"].ToString();
                     if(pre_function_id == "0")
                     {
-                        this.tvFunction.Nodes.Add(row["function_id"].ToString(), row["function_name"].ToString());
+                        this.tvFunction.Nodes[0].Nodes.Add(row["function_id"].ToString(), row["function_name"].ToString());
                     }
                     else
                     {
@@ -125,6 +127,7 @@ namespace com.vdm.form
             this.dgFunction.RowTemplate.Height = 45;
             this.dgFunction.AddColumn("功能权限ID", "function_id");
             this.dgFunction.AddColumn("父功能权限ID", "pre_function_id");
+            this.dgFunction.AddColumn("功能权限编码", "function_code");
             this.dgFunction.AddColumn("功能权限名称", "function_name");
             this.dgFunction.AddColumn("备注", "remark");
             DataTable dtFunction = this.functionBLL.getAllFunction();
@@ -191,6 +194,26 @@ namespace com.vdm.form
         private void dgUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        /// <summary>
+        ///  功能权限树选择后处理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tvFunction_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            TreeNode node = this.tvFunction.SelectedNode;
+            if(node != null)
+            {
+                long pre_function_id = long.Parse(node.Name.ToString());
+                DataTable dtFunction = this.functionBLL.getFunctionBypreFunctionID(pre_function_id);
+                if (dtFunction != null)
+                {
+                    this.Pagination.PageSize = 20;
+                    this.Pagination.TotalCount = dtFunction.Rows.Count;
+                    this.dgFunction.DataSource = dtFunction;
+                }
+            }
         }
     }
 }

@@ -10,6 +10,7 @@ namespace com.vdm.model
     {
         private long function_id;
         private long pre_function_id;
+        private string function_code;
         private string function_name;
         private string remark;
 
@@ -71,6 +72,21 @@ namespace com.vdm.model
             set
             {
                 remark = value;
+            }
+        }
+        /// <summary>
+        ///  功能编码
+        /// </summary>
+        public string Function_code
+        {
+            get
+            {
+                return function_code;
+            }
+
+            set
+            {
+                function_code = value;
             }
         }
     }

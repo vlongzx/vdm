@@ -24,5 +24,15 @@ namespace com.vdm.bll
         {
             return this.functionDAL.queryAllFunction();
         }
+
+        /// <summary>
+        ///  根据父功能权限ID获得其下的所有子功能权限
+        /// </summary>
+        /// <param name="pre_function_id">父功能权限ID</param>
+        /// <returns></returns>
+        public DataTable getFunctionBypreFunctionID(long pre_function_id)
+        {
+            return this.functionDAL.queryFunctionBypreFunctionID(pre_function_id);
+        }
     }
 }
