@@ -36,7 +36,7 @@ namespace com.vdm.bll
         ///  获得所有的人员信息
         /// </summary>
         /// <returns></returns>
-        public List<People> getAllPeople(int pageIndex,int pageSize)
+        public List<People> getAllPeopleList(int pageIndex,int pageSize)
         {
             List<People> list_people = new List<People>();
             DataTable dt = this.peopleDAL.getAllPeople(pageIndex, pageSize);
@@ -53,7 +53,15 @@ namespace com.vdm.bll
             return list_people;
         }
 
-        public List<People> getAllPeople(Hashtable condition, int pageIndex, int pageSize)
+        public DataTable getAllPeopleDataTable(int pageIndex, int pageSize)
+        {
+            List<People> list_people = new List<People>();
+            DataTable dt = this.peopleDAL.getAllPeople(pageIndex, pageSize);
+
+            return dt;
+        }
+
+        public List<People> getAllPeopleList(Hashtable condition, int pageIndex, int pageSize)
         {
             List<People> list_people = new List<People>();
             DataTable dt = this.peopleDAL.getAllPeople(condition, pageIndex, pageSize);
@@ -68,6 +76,14 @@ namespace com.vdm.bll
                 }
             }
             return list_people;
+        }
+
+        
+        public DataTable getAllPeopleDataTable(Hashtable condition, int pageIndex, int pageSize)
+        {
+            List<People> list_people = new List<People>();
+            DataTable dt = this.peopleDAL.getAllPeople(condition, pageIndex, pageSize);
+            return dt;
         }
 
         public List<People> getAllPeople(Hashtable condition)

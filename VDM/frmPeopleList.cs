@@ -141,12 +141,12 @@ namespace com.vdm.form
             this.dgPeopleList.AddColumn( "姓名", "People_name").SetFixedMode(100);
             this.dgPeopleList.Columns[1].Frozen = true;//冻结前两列
             this.dgPeopleList.AddColumn("身份证号","Idcard").SetFixedMode(300);
-            this.dgPeopleList.AddColumn( "出生日期", "Birthday").SetFixedMode(150);
+            this.dgPeopleList.AddColumn( "出生日期", "Birthday").SetFixedMode(150).SetSortMode(DataGridViewColumnSortMode.Automatic); 
             this.dgPeopleList.AddColumn( "性别", "Sex");
             this.dgPeopleList.AddColumn("与户主关系", "Relationship");
             this.dgPeopleList.AddColumn("民族", "Nation");
             this.dgPeopleList.AddColumn("政治面貌", "Politcal_outlook");
-            this.dgPeopleList.AddColumn( "入党时间", "Join_party_time").SetFixedMode(150);
+            this.dgPeopleList.AddColumn( "入党时间", "Join_party_time").SetFixedMode(150).SetSortMode(DataGridViewColumnSortMode.Automatic); ;
             this.dgPeopleList.AddColumn("联系电话", "Phone_number").SetFixedMode(180);
             this.dgPeopleList.AddColumn("是否实名", "Is_real_name");
             this.dgPeopleList.AddColumn("所属镇", "Town").SetFixedMode(200);
@@ -174,13 +174,14 @@ namespace com.vdm.form
             this.dgPeopleList.AddColumn("低保户/五保户", "Low_five");
             this.dgPeopleList.AddColumn("低保等级/五保类别", "Low_five_grade");
             this.dgPeopleList.AddColumn("备注", "Remark", 100, DataGridViewContentAlignment.MiddleLeft, true).SetFixedMode(500);
-            this.dgPeopleList.AddColumn("添加时间", "Create_datetime").SetFixedMode(200);
+            this.dgPeopleList.AddColumn("添加时间", "Create_datetime").SetFixedMode(200).SetSortMode(DataGridViewColumnSortMode.Automatic);
             this.dgPeopleList.AddColumn("添加人", "Creater").SetFixedMode(100);
 
 
             peopleBLL = new PeopleBLL();
             //初始化加载数据
             List<People> list_people;
+            DataTable dt_people;
             if (condition == null)
             {
                 //获得总页数
@@ -189,7 +190,8 @@ namespace com.vdm.form
                 int totalCount = this.peopleBLL.getTotalPeople() ;
                 this.pagination.PageSize = this.pageSize;
                 this.pagination.TotalCount = totalCount;
-                list_people = this.peopleBLL.getAllPeople(pageIndex,pageSize);
+                //  list_people = this.peopleBLL.getAllPeopleList(pageIndex,pageSize);
+                dt_people = this.peopleBLL.getAllPeopleDataTable(pageIndex, pageSize);
             }
             //条件查询
             else
@@ -199,10 +201,12 @@ namespace com.vdm.form
                 int totalCount = this.peopleBLL.getTotalPeopleIf(condition);
                 this.pagination.PageSize = this.pageSize;
                 this.pagination.TotalCount= totalCount;
-                list_people = this.peopleBLL.getAllPeople(condition, pageIndex, pageSize);
+               // list_people = this.peopleBLL.getAllPeopleList(condition, pageIndex, pageSize);
+                dt_people = this.peopleBLL.getAllPeopleDataTable(condition, pageIndex, pageSize);
             }
 
-            this.dgPeopleList.DataSource = list_people;
+            // this.dgPeopleList.DataSource = list_people;
+            this.dgPeopleList.DataSource= dt_people; ;
 
         }
 
@@ -540,6 +544,11 @@ namespace com.vdm.form
         }
 
         private void frmPeopleList_Initialize(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgPeopleList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
