@@ -14,7 +14,7 @@ namespace com.vdm.dal
 
         }
         /// <summary>
-        ///  查询所有的功能权限
+        ///  查询所有的权限树列表
         /// </summary>
         /// <returns></returns>
         public DataTable queryAllFunction()
