@@ -183,7 +183,6 @@ namespace com.vdm.form
 
             peopleBLL = new PeopleBLL();
             //初始化加载数据
-            List<People> list_people;
             DataTable dt_people;
             if (condition == null)
             {
@@ -378,7 +377,7 @@ namespace com.vdm.form
                         people.Skill_type = dataRow["技能类型"].ToString();
                         people.Employ_guide = dataRow["就业指导"].ToString();
                         people.Skill_train = dataRow["技能培训"].ToString();
-                        people.Is_career_grade=dataRow["有无职称"].ToString();
+                        //people.Is_career_grade=dataRow["有无职称"].ToString();
                         people.Career_grade = dataRow["职称等级"].ToString();
                         people.Career_get_time = dataRow["职称获得时间"].ToString();
                         people.Disability_type = dataRow["残疾分类"].ToString();
@@ -522,7 +521,7 @@ namespace com.vdm.form
                 lvi.SubItems.Add(people.Skill_type);
                 lvi.SubItems.Add(people.Employ_guide);
                 lvi.SubItems.Add(people.Skill_train);
-                lvi.SubItems.Add(people.Is_career_grade);
+                //lvi.SubItems.Add(people.Is_career_grade);
                 lvi.SubItems.Add(people.Career_grade);
                 lvi.SubItems.Add(people.Career_get_time);
                 lvi.SubItems.Add(people.Disability_type);
