@@ -28,22 +28,6 @@ namespace com.vdm.form
             AddPage(new frmSystemSet(), 1009);
         }
 
-        private void OpenForm(Form subForm)
-        {
-            //foreach (Control item in this.panelMain.Controls)
-            //{
-            //    if (item is Form)
-            //    {
-            //        ((Form)item).Close();
-            //    }
-            //}
-            //subForm.TopLevel = false;// 将子窗体设置为非顶级控件
-            //subForm.FormBorderStyle = FormBorderStyle.None;//设置无边框
-            //subForm.Parent = this.panelMain;//设置窗体容器
-            //subForm.Dock = DockStyle.Fill; //容器大小随着调整窗体大小自动变化
-            //subForm.Show();
-        }
-
         private void tspPeople_Click(object sender, EventArgs e)
         {
             MainTabControl.SelectPage(1001);
