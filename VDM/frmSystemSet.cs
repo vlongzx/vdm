@@ -41,6 +41,11 @@ namespace com.vdm.form
                 }
             }
 
+            InitUserList();
+        }
+
+        public void InitUserList()
+        {
             //初始化用户列表
             this.userBLL = new UserBLL();
             DataTable dt = this.userBLL.getAllUser();
@@ -63,6 +68,10 @@ namespace com.vdm.form
             frmUserinfo userInfo = new frmUserinfo();
             userInfo.Text = "添加新用户";
             userInfo.ShowDialog();
+            if (userInfo.DialogResult == DialogResult.OK)
+            {
+                InitUserList();
+            }
         }
 
         private void btEdit_Click(object sender, EventArgs e)
@@ -96,6 +105,7 @@ namespace com.vdm.form
                 if (result.Count == 1)
                 {
                     MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InitUserList();
                 }
                 else
                 {
