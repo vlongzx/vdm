@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{8DB26780-23B3-4624-95C8-C1A2CE08070F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageControl", "PageControl\PageControl.csproj", "{01734311-3D3E-4451-BABB-5C256EEB5290}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,14 +61,6 @@ Global
 		{8DB26780-23B3-4624-95C8-C1A2CE08070F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8DB26780-23B3-4624-95C8-C1A2CE08070F}.Release|x64.ActiveCfg = Release|Any CPU
 		{8DB26780-23B3-4624-95C8-C1A2CE08070F}.Release|x64.Build.0 = Release|Any CPU
-		{01734311-3D3E-4451-BABB-5C256EEB5290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01734311-3D3E-4451-BABB-5C256EEB5290}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01734311-3D3E-4451-BABB-5C256EEB5290}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{01734311-3D3E-4451-BABB-5C256EEB5290}.Debug|x64.Build.0 = Debug|Any CPU
-		{01734311-3D3E-4451-BABB-5C256EEB5290}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01734311-3D3E-4451-BABB-5C256EEB5290}.Release|Any CPU.Build.0 = Release|Any CPU
-		{01734311-3D3E-4451-BABB-5C256EEB5290}.Release|x64.ActiveCfg = Release|Any CPU
-		{01734311-3D3E-4451-BABB-5C256EEB5290}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

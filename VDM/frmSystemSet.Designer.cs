@@ -38,6 +38,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiTabControl1 = new Sunny.UI.UITabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -51,13 +56,21 @@
             this.btAdd = new Sunny.UI.UIButton();
             this.Pagination = new Sunny.UI.UIPagination();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.dgRole = new Sunny.UI.UIDataGridView();
             this.uiNavBar2 = new Sunny.UI.UINavBar();
             this.btDelRole = new Sunny.UI.UIButton();
             this.btEditRole = new Sunny.UI.UIButton();
             this.btAddRole = new Sunny.UI.UIButton();
-            this.dgRole = new Sunny.UI.UIDataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.uiSplitContainer2 = new Sunny.UI.UISplitContainer();
+            this.uiTitlePanel1 = new Sunny.UI.UITitlePanel();
+            this.tvFunction = new Sunny.UI.UITreeView();
+            this.uiNavBar3 = new Sunny.UI.UINavBar();
+            this.uiButton1 = new Sunny.UI.UIButton();
+            this.uiButton2 = new Sunny.UI.UIButton();
+            this.uiButton3 = new Sunny.UI.UIButton();
+            this.dgFunction = new Sunny.UI.UIDataGridView();
             this.uiTabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiSplitContainer1)).BeginInit();
@@ -68,8 +81,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgUser)).BeginInit();
             this.uiNavBar1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.uiNavBar2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRole)).BeginInit();
+            this.uiNavBar2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uiSplitContainer2)).BeginInit();
+            this.uiSplitContainer2.Panel1.SuspendLayout();
+            this.uiSplitContainer2.Panel2.SuspendLayout();
+            this.uiSplitContainer2.SuspendLayout();
+            this.uiTitlePanel1.SuspendLayout();
+            this.uiNavBar3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFunction)).BeginInit();
             this.SuspendLayout();
             // 
             // uiTabControl1
@@ -106,7 +127,7 @@
             this.tabPage2.Controls.Add(this.uiSplitContainer1);
             this.tabPage2.Location = new System.Drawing.Point(0, 40);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1920, 1040);
+            this.tabPage2.Size = new System.Drawing.Size(200, 60);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "用户管理";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -128,8 +149,8 @@
             this.uiSplitContainer1.Panel2.Controls.Add(this.uiPanel1);
             this.uiSplitContainer1.Panel2.Controls.Add(this.uiNavBar1);
             this.uiSplitContainer1.Panel2.Controls.Add(this.Pagination);
-            this.uiSplitContainer1.Size = new System.Drawing.Size(1920, 1040);
-            this.uiSplitContainer1.SplitterDistance = 374;
+            this.uiSplitContainer1.Size = new System.Drawing.Size(200, 60);
+            this.uiSplitContainer1.SplitterDistance = 38;
             this.uiSplitContainer1.SplitterWidth = 11;
             this.uiSplitContainer1.TabIndex = 0;
             // 
@@ -144,7 +165,7 @@
             this.tvOrg.Name = "tvOrg";
             this.tvOrg.ShowLines = true;
             this.tvOrg.ShowText = false;
-            this.tvOrg.Size = new System.Drawing.Size(374, 1040);
+            this.tvOrg.Size = new System.Drawing.Size(38, 60);
             this.tvOrg.Style = Sunny.UI.UIStyle.Custom;
             this.tvOrg.TabIndex = 0;
             this.tvOrg.Text = null;
@@ -159,7 +180,7 @@
             this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(1535, 895);
+            this.uiPanel1.Size = new System.Drawing.Size(151, 1);
             this.uiPanel1.TabIndex = 3;
             this.uiPanel1.Text = "uiPanel1";
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -215,7 +236,7 @@
             this.dgUser.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgUser.SelectedIndex = -1;
             this.dgUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgUser.Size = new System.Drawing.Size(1535, 895);
+            this.dgUser.Size = new System.Drawing.Size(151, 1);
             this.dgUser.TabIndex = 1;
             this.dgUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUser_CellContentClick);
             // 
@@ -231,7 +252,7 @@
             this.uiNavBar1.Location = new System.Drawing.Point(0, 0);
             this.uiNavBar1.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
             this.uiNavBar1.Name = "uiNavBar1";
-            this.uiNavBar1.Size = new System.Drawing.Size(1535, 110);
+            this.uiNavBar1.Size = new System.Drawing.Size(151, 110);
             this.uiNavBar1.TabIndex = 2;
             this.uiNavBar1.Text = "uiNavBar1";
             // 
@@ -278,14 +299,14 @@
             // 
             this.Pagination.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Pagination.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Pagination.Location = new System.Drawing.Point(0, 1005);
+            this.Pagination.Location = new System.Drawing.Point(0, 25);
             this.Pagination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Pagination.MinimumSize = new System.Drawing.Size(1, 1);
             this.Pagination.Name = "Pagination";
             this.Pagination.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
             this.Pagination.ShowJumpButton = false;
             this.Pagination.ShowText = false;
-            this.Pagination.Size = new System.Drawing.Size(1535, 35);
+            this.Pagination.Size = new System.Drawing.Size(151, 35);
             this.Pagination.TabIndex = 1;
             this.Pagination.Text = "uiPagination1";
             this.Pagination.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -300,76 +321,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "角色管理";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(0, 40);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(200, 60);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "功能权限";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(0, 40);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(200, 60);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "数据权限";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // uiNavBar2
-            // 
-            this.uiNavBar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.uiNavBar2.Controls.Add(this.btDelRole);
-            this.uiNavBar2.Controls.Add(this.btEditRole);
-            this.uiNavBar2.Controls.Add(this.btAddRole);
-            this.uiNavBar2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uiNavBar2.DropMenuFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiNavBar2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiNavBar2.Location = new System.Drawing.Point(0, 0);
-            this.uiNavBar2.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
-            this.uiNavBar2.Name = "uiNavBar2";
-            this.uiNavBar2.Size = new System.Drawing.Size(1920, 110);
-            this.uiNavBar2.TabIndex = 3;
-            this.uiNavBar2.Text = "uiNavBar2";
-            // 
-            // btDelRole
-            // 
-            this.btDelRole.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btDelRole.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btDelRole.Location = new System.Drawing.Point(346, 27);
-            this.btDelRole.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btDelRole.Name = "btDelRole";
-            this.btDelRole.Size = new System.Drawing.Size(154, 62);
-            this.btDelRole.TabIndex = 7;
-            this.btDelRole.Text = "删除(&D)";
-            this.btDelRole.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            // 
-            // btEditRole
-            // 
-            this.btEditRole.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btEditRole.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btEditRole.Location = new System.Drawing.Point(186, 27);
-            this.btEditRole.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btEditRole.Name = "btEditRole";
-            this.btEditRole.Size = new System.Drawing.Size(154, 62);
-            this.btEditRole.TabIndex = 8;
-            this.btEditRole.Text = "编辑(&E)";
-            this.btEditRole.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            // 
-            // btAddRole
-            // 
-            this.btAddRole.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAddRole.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btAddRole.Location = new System.Drawing.Point(26, 27);
-            this.btAddRole.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btAddRole.Name = "btAddRole";
-            this.btAddRole.Size = new System.Drawing.Size(154, 62);
-            this.btAddRole.TabIndex = 9;
-            this.btAddRole.Text = "新增(&A)";
-            this.btAddRole.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             // 
             // dgRole
             // 
@@ -423,7 +374,240 @@
             this.dgRole.SelectedIndex = -1;
             this.dgRole.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgRole.Size = new System.Drawing.Size(1920, 930);
+            this.dgRole.Style = Sunny.UI.UIStyle.Custom;
             this.dgRole.TabIndex = 4;
+            // 
+            // uiNavBar2
+            // 
+            this.uiNavBar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.uiNavBar2.Controls.Add(this.btDelRole);
+            this.uiNavBar2.Controls.Add(this.btEditRole);
+            this.uiNavBar2.Controls.Add(this.btAddRole);
+            this.uiNavBar2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uiNavBar2.DropMenuFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiNavBar2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiNavBar2.Location = new System.Drawing.Point(0, 0);
+            this.uiNavBar2.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
+            this.uiNavBar2.Name = "uiNavBar2";
+            this.uiNavBar2.Size = new System.Drawing.Size(1920, 110);
+            this.uiNavBar2.TabIndex = 3;
+            this.uiNavBar2.Text = "uiNavBar2";
+            // 
+            // btDelRole
+            // 
+            this.btDelRole.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btDelRole.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btDelRole.Location = new System.Drawing.Point(346, 27);
+            this.btDelRole.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btDelRole.Name = "btDelRole";
+            this.btDelRole.Size = new System.Drawing.Size(154, 62);
+            this.btDelRole.TabIndex = 7;
+            this.btDelRole.Text = "删除(&D)";
+            this.btDelRole.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            // 
+            // btEditRole
+            // 
+            this.btEditRole.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btEditRole.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btEditRole.Location = new System.Drawing.Point(186, 27);
+            this.btEditRole.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btEditRole.Name = "btEditRole";
+            this.btEditRole.Size = new System.Drawing.Size(154, 62);
+            this.btEditRole.TabIndex = 8;
+            this.btEditRole.Text = "编辑(&E)";
+            this.btEditRole.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            // 
+            // btAddRole
+            // 
+            this.btAddRole.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btAddRole.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btAddRole.Location = new System.Drawing.Point(26, 27);
+            this.btAddRole.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btAddRole.Name = "btAddRole";
+            this.btAddRole.Size = new System.Drawing.Size(154, 62);
+            this.btAddRole.TabIndex = 9;
+            this.btAddRole.Text = "新增(&A)";
+            this.btAddRole.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.uiSplitContainer2);
+            this.tabPage4.Location = new System.Drawing.Point(0, 40);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1920, 1040);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "功能权限";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(0, 40);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(200, 60);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "数据权限";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // uiSplitContainer2
+            // 
+            this.uiSplitContainer2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.uiSplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiSplitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.uiSplitContainer2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.uiSplitContainer2.Name = "uiSplitContainer2";
+            // 
+            // uiSplitContainer2.Panel1
+            // 
+            this.uiSplitContainer2.Panel1.Controls.Add(this.uiTitlePanel1);
+            // 
+            // uiSplitContainer2.Panel2
+            // 
+            this.uiSplitContainer2.Panel2.Controls.Add(this.dgFunction);
+            this.uiSplitContainer2.Panel2.Controls.Add(this.uiNavBar3);
+            this.uiSplitContainer2.Size = new System.Drawing.Size(1920, 1040);
+            this.uiSplitContainer2.SplitterDistance = 392;
+            this.uiSplitContainer2.SplitterWidth = 11;
+            this.uiSplitContainer2.TabIndex = 0;
+            // 
+            // uiTitlePanel1
+            // 
+            this.uiTitlePanel1.Controls.Add(this.tvFunction);
+            this.uiTitlePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiTitlePanel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiTitlePanel1.Location = new System.Drawing.Point(0, 0);
+            this.uiTitlePanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiTitlePanel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiTitlePanel1.Name = "uiTitlePanel1";
+            this.uiTitlePanel1.ShowText = false;
+            this.uiTitlePanel1.Size = new System.Drawing.Size(392, 1040);
+            this.uiTitlePanel1.TabIndex = 1;
+            this.uiTitlePanel1.Text = "功能权限树";
+            this.uiTitlePanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tvFunction
+            // 
+            this.tvFunction.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tvFunction.FillColor = System.Drawing.Color.White;
+            this.tvFunction.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tvFunction.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.tvFunction.Location = new System.Drawing.Point(0, 36);
+            this.tvFunction.Margin = new System.Windows.Forms.Padding(1);
+            this.tvFunction.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tvFunction.Name = "tvFunction";
+            this.tvFunction.ShowText = false;
+            this.tvFunction.Size = new System.Drawing.Size(392, 990);
+            this.tvFunction.TabIndex = 0;
+            this.tvFunction.Text = "uiTreeView1";
+            this.tvFunction.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiNavBar3
+            // 
+            this.uiNavBar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.uiNavBar3.Controls.Add(this.uiButton1);
+            this.uiNavBar3.Controls.Add(this.uiButton2);
+            this.uiNavBar3.Controls.Add(this.uiButton3);
+            this.uiNavBar3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uiNavBar3.DropMenuFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiNavBar3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiNavBar3.Location = new System.Drawing.Point(0, 0);
+            this.uiNavBar3.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
+            this.uiNavBar3.Name = "uiNavBar3";
+            this.uiNavBar3.Size = new System.Drawing.Size(1517, 110);
+            this.uiNavBar3.TabIndex = 4;
+            this.uiNavBar3.Text = "uiNavBar3";
+            // 
+            // uiButton1
+            // 
+            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton1.Location = new System.Drawing.Point(346, 27);
+            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton1.Name = "uiButton1";
+            this.uiButton1.Size = new System.Drawing.Size(154, 62);
+            this.uiButton1.TabIndex = 7;
+            this.uiButton1.Text = "删除(&D)";
+            this.uiButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            // 
+            // uiButton2
+            // 
+            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton2.Location = new System.Drawing.Point(186, 27);
+            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton2.Name = "uiButton2";
+            this.uiButton2.Size = new System.Drawing.Size(154, 62);
+            this.uiButton2.TabIndex = 8;
+            this.uiButton2.Text = "编辑(&E)";
+            this.uiButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            // 
+            // uiButton3
+            // 
+            this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton3.Location = new System.Drawing.Point(26, 27);
+            this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton3.Name = "uiButton3";
+            this.uiButton3.Size = new System.Drawing.Size(154, 62);
+            this.uiButton3.TabIndex = 9;
+            this.uiButton3.Text = "新增(&A)";
+            this.uiButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            // 
+            // dgFunction
+            // 
+            this.dgFunction.AllowUserToAddRows = false;
+            this.dgFunction.AllowUserToDeleteRows = false;
+            this.dgFunction.AllowUserToResizeRows = false;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgFunction.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgFunction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgFunction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgFunction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgFunction.ColumnHeadersHeight = 44;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgFunction.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dgFunction.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgFunction.EnableHeadersVisualStyles = false;
+            this.dgFunction.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dgFunction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
+            this.dgFunction.Location = new System.Drawing.Point(0, 110);
+            this.dgFunction.Name = "dgFunction";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgFunction.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dgFunction.RowHeadersWidth = 44;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgFunction.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.dgFunction.RowTemplate.Height = 30;
+            this.dgFunction.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.dgFunction.SelectedIndex = -1;
+            this.dgFunction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgFunction.Size = new System.Drawing.Size(1517, 930);
+            this.dgFunction.Style = Sunny.UI.UIStyle.Custom;
+            this.dgFunction.TabIndex = 5;
             // 
             // frmSystemSet
             // 
@@ -442,8 +626,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgUser)).EndInit();
             this.uiNavBar1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.uiNavBar2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgRole)).EndInit();
+            this.uiNavBar2.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.uiSplitContainer2.Panel1.ResumeLayout(false);
+            this.uiSplitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.uiSplitContainer2)).EndInit();
+            this.uiSplitContainer2.ResumeLayout(false);
+            this.uiTitlePanel1.ResumeLayout(false);
+            this.uiNavBar3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgFunction)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -470,5 +662,13 @@
         private Sunny.UI.UIButton btDelRole;
         private Sunny.UI.UIButton btEditRole;
         private Sunny.UI.UIButton btAddRole;
+        private Sunny.UI.UISplitContainer uiSplitContainer2;
+        private Sunny.UI.UITitlePanel uiTitlePanel1;
+        private Sunny.UI.UITreeView tvFunction;
+        private Sunny.UI.UIDataGridView dgFunction;
+        private Sunny.UI.UINavBar uiNavBar3;
+        private Sunny.UI.UIButton uiButton1;
+        private Sunny.UI.UIButton uiButton2;
+        private Sunny.UI.UIButton uiButton3;
     }
 }
