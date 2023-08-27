@@ -144,6 +144,7 @@ namespace com.vdm.form
             this.dgDataAuth.RowTemplate.Height = 45;
             this.dgDataAuth.AddColumn("数据权限ID", "data_authority_id");
             this.dgDataAuth.AddColumn("数据权限类型", "data_authority_type");
+            this.dgDataAuth.AddColumn("数据权限标识", "data_authority_name");
             this.dgDataAuth.AddColumn("数据权限描述", "data_authority_desc");
             DataTable dtDataAuth = this.dataAuthBLL.getAllDataAuth();
             if (dtDataAuth != null)

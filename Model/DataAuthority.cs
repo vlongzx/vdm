@@ -11,6 +11,7 @@ namespace com.vdm.model
         private long data_authority_id;
         private string data_authority_type;
         private string data_authority_desc;
+        private string data_authority_name;
 
         public long Data_authority_id
         {
@@ -48,6 +49,19 @@ namespace com.vdm.model
             set
             {
                 data_authority_desc = value;
+            }
+        }
+
+        public string Data_authority_name
+        {
+            get
+            {
+                return data_authority_name;
+            }
+
+            set
+            {
+                data_authority_name = value;
             }
         }
     }
