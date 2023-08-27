@@ -328,6 +328,36 @@ namespace com.vdm.form
         {
             this.Close();
         }
+
+       /// <summary>
+       ///  重写数据验证方法
+       /// </summary>
+       /// <returns></returns>
+        protected override bool CheckData()
+        {
+
+            return CheckEmpty(tbPeople_name, "请输入姓名")
+                && CheckIDCard(this.tbIdcard, "您输入的身份证号码不合法，请重新输入。")
+                ;
+        }
+
+        /// <summary>
+        ///  验证身份证合法性
+        /// </summary>
+        /// <param name="tbIDCard"></param>
+        /// <param name="Message"></param>
+        /// <returns></returns>
+         protected bool CheckIDCard(UITextBox tbIDCard,string Message)
+        {
+            //验证输入的身份证是否合法
+            if (tbIDCard.Text.Trim() != "" && Utils.IsIDCard(tbIDCard.Text.Trim()) == false)
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
+        }
+
         /// <summary>
         /// 保存按钮
         /// </summary>
@@ -335,19 +365,11 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btSubmit_Click(object sender, EventArgs e)
         {
-            //数据校验
-            if (this.tbPeople_name.Text.Trim() == "") {
-                MessageBox.Show("姓名不能为空。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            //验证输入的身份证是否合法
-            if (this.tbIdcard.Text.Trim() != "" && Utils.IsIDCard(this.tbIdcard.Text.Trim()) == false)
+            //如果数据校验没有通过则直接返回。
+            if(this.IsOK == false)
             {
-                MessageBox.Show("您输入的身份证号码不合法，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
-
             //从界面获取值封装业务对象
             //------------------基础信息部分---------------------------------
             People people = new People();
