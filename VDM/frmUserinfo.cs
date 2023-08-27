@@ -76,7 +76,6 @@ namespace com.vdm.form
 
         private void frmUserinfo_Load(object sender, EventArgs e)
         {
-
             //初始化所在乡镇所在村
             OrgBLL orgBLL = new OrgBLL();
             List<KeyValue> list_town = orgBLL.getOrgByType("乡镇");
