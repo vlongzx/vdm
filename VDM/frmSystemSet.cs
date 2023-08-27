@@ -104,5 +104,10 @@ namespace com.vdm.form
                 }
             }
         }
+
+        private void dgUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

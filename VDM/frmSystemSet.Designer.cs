@@ -204,6 +204,7 @@
             this.dgUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgUser.Size = new System.Drawing.Size(1535, 895);
             this.dgUser.TabIndex = 1;
+            this.dgUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUser_CellContentClick);
             // 
             // uiNavBar1
             // 
