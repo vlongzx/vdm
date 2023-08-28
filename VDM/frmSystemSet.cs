@@ -186,9 +186,9 @@ namespace com.vdm.form
             this.dgDict.AddColumn("ID", "id");
             this.dgDict.AddColumn("字典项标识", "dict_code");
             this.dgDict.AddColumn("字典项名称", "dict_name");
-            this.dgDict.AddColumn("键", "key");
-            this.dgDict.AddColumn("值", "value");
-            this.dgDict.AddColumn("顺序", "index");
+            this.dgDict.AddColumn("键", "datakey");
+            this.dgDict.AddColumn("值", "datavalue");
+            this.dgDict.AddColumn("顺序", "dataindex");
             DataTable dtDict = this.dictBLL.getAllDict();
             if (dtDict != null)
             {
@@ -266,8 +266,6 @@ namespace com.vdm.form
                 DataTable dtFunction = this.functionBLL.getFunctionBypreFunctionID(pre_function_id);
                 if (dtFunction != null)
                 {
-                    this.Pagination.PageSize = 20;
-                    this.Pagination.TotalCount = dtFunction.Rows.Count;
                     this.dgFunction.DataSource = dtFunction;
                 }
             }
@@ -286,7 +284,11 @@ namespace com.vdm.form
                 }
             }
         }
-
+        /// <summary>
+        ///  新增字典项
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAddDict_Click(object sender, EventArgs e)
         {
             string dict_code = null;
@@ -307,8 +309,28 @@ namespace com.vdm.form
             DialogResult  result = dictInfo.ShowDialog();
             if(result == DialogResult.OK)
             {
-                InitDictList();
+                DataTable dtDict = this.dictBLL.getDictByCode(dict_code);
+                if (dtDict != null)
+                {
+                    this.dgDict.DataSource = dtDict;
+                }
             }
+        }
+        /// <summary>
+        ///  编辑字典项
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btEditDict_Click(object sender, EventArgs e)
+        {
+            //获得当前需要编辑的行
+            if (this.dgDict.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要编辑的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int id = int.Parse(this.dgDict.SelectedRows[0].Cells[0].Value.ToString());
+            Dict dict = this.dictBLL.getDictById(id);
         }
     }
 }

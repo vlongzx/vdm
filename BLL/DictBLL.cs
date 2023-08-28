@@ -42,6 +42,23 @@ namespace com.vdm.bll
             }
             return list;
         }
+
+        public Dict getDictById(int id)
+        {
+            Dict dict = null;
+            DataTable dt =  this.dictDAL.getDictById(id);
+            if(dt != null && dt.Rows.Count > 0)
+            {
+                dict = new Dict();
+                dict.Id = int.Parse(dt.Rows[0]["id"].ToString());
+                dict.Dict_code = dt.Rows[0]["dict_code"].ToString();
+                dict.Dict_name = dt.Rows[0]["dict_name"].ToString();
+                dict.Datakey = dt.Rows[0]["datakey"].ToString();
+                dict.Datavalue = dt.Rows[0]["datavalue"].ToString();
+                dict.Dataindex = int.Parse(dt.Rows[0]["dataindex"].ToString());
+            }
+            return dict;
+        }
         /// <summary>
         ///  获得不重复的字典项
         /// </summary>

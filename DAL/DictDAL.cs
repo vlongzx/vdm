@@ -34,6 +34,12 @@ namespace com.vdm.dal
             sql += " order by `dataindex` asc";
             return this.sqlDB.ExecuteDataTable(sql);
         }
+
+        public DataTable getDictById(int id)
+        {
+            string sql = "select * from t_dict  where id = "+ id;
+            return this.sqlDB.ExecuteDataTable(sql);
+        }
         /// <summary>
         /// 获得不重复的字典项
         /// </summary>
