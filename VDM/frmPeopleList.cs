@@ -18,10 +18,12 @@ namespace com.vdm.form
 {
     public partial class frmPeopleList : UIPage
     {
-
+        private OrgBLL orgBLL = null;
         private DictBLL dictBLL = null;
         private PeopleBLL peopleBLL = null;
         private Hashtable condition = null;
+        //高级查询条件
+        private Hashtable conditionAdvance = new Hashtable();
         private int pageIndex = 1;
         private int pageSize = 20;
         public frmPeopleList()
@@ -53,9 +55,26 @@ namespace com.vdm.form
             InitListView(null, this.pageIndex, this.pageSize);
 
         }
-
+        public void ConditionAdd(string key, string value)
+        {
+            this.conditionAdvance.Add(key, value);
+        }
+        /// <summary>
+        /// 初始化基本查询条件
+        /// </summary>
         public void InitControlData()
         {
+
+            //初始化与户主的关系
+            dictBLL = new DictBLL();
+            List<KeyValue> list_relationship = dictBLL.getDict("relationship");
+            // list_relationship.Add(new KeyValue("", ""));
+            if (list_relationship != null)
+            {
+                this.cbRelationship.DataSource = list_relationship;
+                this.cbRelationship.DisplayMember = "value";
+                this.cbRelationship.ValueMember = "key";
+            }
             //初始化民族
             this.dictBLL = new DictBLL();
             List<KeyValue> list_nation = dictBLL.getDict("nation");
@@ -66,12 +85,6 @@ namespace com.vdm.form
                 this.cbNation.DisplayMember = "value";
                 this.cbNation.ValueMember = "key";
             }
-            this.cbNation.SelectedValue = "";
-            this.dpBirthday_From.Text = "";
-            this.dpBirthday_To.Text = "";
-            this.dpJoin_party_time_from.Text = "";
-            this.dpJoin_party_time_to.Text = "";
-
             //初始化性别
 
             List<KeyValue> list_sex = dictBLL.getDict("sex");
@@ -81,17 +94,11 @@ namespace com.vdm.form
                 this.cbSex.DisplayMember = "value";
                 this.cbSex.ValueMember = "key";
             }
-            //初始化与户主的关系
-            List<KeyValue> list_relationship = dictBLL.getDict("relationship");
-            // list_relationship.Add(new KeyValue("", ""));
-            if (list_relationship != null)
-            {
-                this.cbRelationship.DataSource = list_relationship;
-                this.cbRelationship.DisplayMember = "value";
-                this.cbRelationship.ValueMember = "key";
-            }
-            // this.cbRelationship.SelectedValue = "";
-
+             //初始化日期控件
+            this.dpBirthday_From.Text = "";
+            this.dpBirthday_To.Text = "";
+            this.dpJoin_party_time_from.Text = "";
+            this.dpJoin_party_time_to.Text = "";
             //初始化政治面貌
             List<KeyValue> list_politcal_outlook = dictBLL.getDict("politcal_outlook");
             // list_politcal_outlook.Add(new KeyValue("", ""));
@@ -101,30 +108,39 @@ namespace com.vdm.form
                 this.cbPolitcal_outlook.DisplayMember = "value";
                 this.cbPolitcal_outlook.ValueMember = "key";
             }
-            //this.cbPolitcal_outlook.SelectedValue = "";
-
-            //初始化宗教信仰
-           // List<KeyValue> list_religious_belief = dictBLL.getDict("religious_belief");
-            // list_religious_belief.Add(new KeyValue("", ""));
-            //if (list_religious_belief != null)
-            //{
-            //    this.cbReligious_belief.DataSource = list_religious_belief;
-            //    this.cbReligious_belief.DisplayMember = "value";
-            //    this.cbReligious_belief.ValueMember = "key";
-            //}
-            //   this.cbReligious_belief.SelectedValue = "";
-
-
+            //初始化婚姻关系
+            List<KeyValue> list_marital_status = dictBLL.getDict("marital_status");
+            if (list_marital_status != null)
+            {
+                this.cbMarital_status.DataSource = list_marital_status;
+                this.cbMarital_status.DisplayMember = "value";
+                this.cbMarital_status.ValueMember = "key";
+            }
             //初始化学历
             List<KeyValue> list_education = dictBLL.getDict("education");
-            // list_education.Add(new KeyValue("", ""));
             if (list_education != null)
             {
                 this.cbEducation.DataSource = list_education;
                 this.cbEducation.DisplayMember = "value";
                 this.cbEducation.ValueMember = "key";
             }
-            //   this.cbEducation.SelectedValue = "";
+            //初始化所在乡镇所在村
+            orgBLL = new OrgBLL();
+            List<KeyValue> list_town = orgBLL.getOrgByType("乡镇");
+            if (list_town != null)
+            {
+                this.cbTown.DataSource = list_town;
+                this.cbTown.DisplayMember = "value";
+                this.cbTown.ValueMember = "key";
+            }
+            int select_village = int.Parse(this.cbTown.SelectedValue.ToString());
+            List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
+            if (list_village != null)
+            {
+                this.cbVillage.DataSource = list_village;
+                this.cbVillage.DisplayMember = "value";
+                this.cbVillage.ValueMember = "key";
+            }
         }
 
 
@@ -284,8 +300,7 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btSearch_Click(object sender, EventArgs e)
         {
-            //从界面获取值封装业务对象
-            //------------------基础信息部分---------------------------------
+            //从界面获取值基本查询条件封装业务对象
             condition = new Hashtable();
             string People_name = this.tbPeople_name.Text.Trim();
             string Sex = this.cbSex.SelectedValue.ToString();
@@ -295,13 +310,15 @@ namespace com.vdm.form
             string Phone_number = this.tbPhone_number.Text.Trim();
             string Birthday_From = this.dpBirthday_From.Text.Trim();
             string Birthday_To = this.dpBirthday_To.Text.Trim();
-            //------------------------------------------------------------------
-            //-----------------政治面貌与宗教信仰
+            string Marital_status = cbMarital_status.SelectedValue.ToString();
             string Politcal_outlook = this.cbPolitcal_outlook.SelectedValue.ToString();
-            string Religious_belief = this.tbReligious_belief.Text.ToString();
+            string Skill_type= tbSkill_type.Text.Trim();
             string Education = this.cbEducation.SelectedValue.ToString();
             string Join_party_time_from = this.dpJoin_party_time_from.Text.Trim();
             string Join_party_time_to = this.dpJoin_party_time_to.Text.Trim();
+            string Village = this.cbVillage.SelectedValue.ToString();
+            string Town = this.cbTown.SelectedValue.ToString();
+                
             //------------------------------------------------------------------
             condition.Add("People_name", People_name);
             condition.Add("Sex", Sex);
@@ -312,10 +329,20 @@ namespace com.vdm.form
             condition.Add("Birthday_From", Birthday_From);
             condition.Add("Birthday_To", Birthday_To);
             condition.Add("Politcal_outlook", Politcal_outlook);
-            condition.Add("Religious_belief", Religious_belief);
+           condition.Add("Marital_status", Marital_status);
             condition.Add("Education", Education);
+            condition.Add("Skill_type", Skill_type);
             condition.Add("Join_party_time_from", Join_party_time_from);
             condition.Add("Join_party_time_to", Join_party_time_to);
+            condition.Add("Village", Join_party_time_to);
+            condition.Add("Town", Join_party_time_to);
+            //获取值高级查询条件封装业务对象
+            foreach (DictionaryEntry de in conditionAdvance)
+            {
+                condition.Add(de.Key, de.Value);
+            }
+            //重置高级查询条件
+            conditionAdvance = new Hashtable();
             this.pageIndex = 1;
             this.InitListView(condition, this.pageIndex, this.pageSize);
         }
@@ -427,7 +454,7 @@ namespace com.vdm.form
             this.tbIdcard.Text = "";
             this.tbPhone_number.Text = "";
             this.cbPolitcal_outlook.SelectedValue = "";
-            this.tbReligious_belief.Text = "";
+           // this.tbReligious_belief.Text = "";
             this.cbEducation.SelectedValue = "";
             this.dpJoin_party_time_from.Text = "";
             this.dpJoin_party_time_to.Text = "";
@@ -541,7 +568,31 @@ namespace com.vdm.form
             return lvExport;
 
         }
-
+        /// <summary>
+        /// 乡镇选择发生改变触发该事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cbTown_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (this.cbTown.SelectedValue != null)
+            {
+                orgBLL = new OrgBLL();
+                int select_village = 0;
+                if (this.cbTown.SelectedItem != null)
+                {
+                    KeyValue selectValue = (KeyValue)this.cbTown.SelectedItem;
+                    select_village = int.Parse(selectValue.Key);
+                }
+                List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
+                if (list_village != null)
+                {
+                    this.cbVillage.DataSource = list_village;
+                    this.cbVillage.DisplayMember = "value";
+                    this.cbVillage.ValueMember = "key";
+                }
+            }
+        }
         private void pagination_PageChanged(object sender, object pagingSource, int pageIndex, int count)
         {
             this.pageIndex = pageIndex;
@@ -561,6 +612,12 @@ namespace com.vdm.form
         private void uiGroupBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btAdanceSearch_Click(object sender, EventArgs e)
+        {
+            Form formAdvanceQuery = new frmAdvanceQuery(this);
+            formAdvanceQuery.ShowDialog();
         }
     }
 }
