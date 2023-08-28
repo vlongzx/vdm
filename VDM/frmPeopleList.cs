@@ -557,5 +557,10 @@ namespace com.vdm.form
         {
 
         }
+
+        private void uiGroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

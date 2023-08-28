@@ -70,6 +70,12 @@
             this.label13 = new Sunny.UI.UILabel();
             this.label12 = new Sunny.UI.UILabel();
             this.label8 = new Sunny.UI.UILabel();
+            this.uiTextBox1 = new Sunny.UI.UITextBox();
+            this.uiComboBox3 = new Sunny.UI.UIComboBox();
+            this.uiComboBox2 = new Sunny.UI.UIComboBox();
+            this.uiComboBox1 = new Sunny.UI.UIComboBox();
+            this.uiDatePicker2 = new Sunny.UI.UIDatePicker();
+            this.uiDatePicker1 = new Sunny.UI.UIDatePicker();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPeopleList)).BeginInit();
             this.uiGroupBox1.SuspendLayout();
@@ -237,8 +243,6 @@
             // 
             // uiGroupBox1
             // 
-            this.uiGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiGroupBox1.Controls.Add(this.uiLabel3);
             this.uiGroupBox1.Controls.Add(this.uiLabel1);
             this.uiGroupBox1.Controls.Add(this.uiLabel2);
@@ -273,10 +277,11 @@
             this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox1.Name = "uiGroupBox1";
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(1890, 231);
+            this.uiGroupBox1.Size = new System.Drawing.Size(1890, 223);
             this.uiGroupBox1.TabIndex = 10;
             this.uiGroupBox1.Text = "查询条件";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiGroupBox1.Click += new System.EventHandler(this.uiGroupBox1_Click);
             // 
             // uiLabel3
             // 
@@ -672,6 +677,105 @@
             this.label8.Text = "(到)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // uiTextBox1
+            // 
+            this.uiTextBox1.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.uiTextBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiTextBox1.Location = new System.Drawing.Point(276, 44);
+            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
+            this.uiTextBox1.Name = "uiTextBox1";
+            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox1.ShowText = false;
+            this.uiTextBox1.Size = new System.Drawing.Size(165, 29);
+            this.uiTextBox1.TabIndex = 75;
+            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiTextBox1.Watermark = "";
+            // 
+            // uiComboBox3
+            // 
+            this.uiComboBox3.DataSource = null;
+            this.uiComboBox3.FillColor = System.Drawing.Color.White;
+            this.uiComboBox3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiComboBox3.Location = new System.Drawing.Point(657, 44);
+            this.uiComboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiComboBox3.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiComboBox3.Name = "uiComboBox3";
+            this.uiComboBox3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.uiComboBox3.Size = new System.Drawing.Size(165, 29);
+            this.uiComboBox3.TabIndex = 76;
+            this.uiComboBox3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboBox3.Watermark = "";
+            // 
+            // uiComboBox2
+            // 
+            this.uiComboBox2.DataSource = null;
+            this.uiComboBox2.FillColor = System.Drawing.Color.White;
+            this.uiComboBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiComboBox2.Location = new System.Drawing.Point(1010, 44);
+            this.uiComboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiComboBox2.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiComboBox2.Name = "uiComboBox2";
+            this.uiComboBox2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.uiComboBox2.Size = new System.Drawing.Size(165, 30);
+            this.uiComboBox2.TabIndex = 77;
+            this.uiComboBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboBox2.Watermark = "";
+            // 
+            // uiComboBox1
+            // 
+            this.uiComboBox1.DataSource = null;
+            this.uiComboBox1.FillColor = System.Drawing.Color.White;
+            this.uiComboBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiComboBox1.Location = new System.Drawing.Point(1010, 90);
+            this.uiComboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiComboBox1.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiComboBox1.Name = "uiComboBox1";
+            this.uiComboBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.uiComboBox1.Size = new System.Drawing.Size(165, 29);
+            this.uiComboBox1.TabIndex = 78;
+            this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboBox1.Watermark = "";
+            // 
+            // uiDatePicker2
+            // 
+            this.uiDatePicker2.FillColor = System.Drawing.Color.White;
+            this.uiDatePicker2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiDatePicker2.Location = new System.Drawing.Point(276, 90);
+            this.uiDatePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiDatePicker2.MaxLength = 10;
+            this.uiDatePicker2.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiDatePicker2.Name = "uiDatePicker2";
+            this.uiDatePicker2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.uiDatePicker2.Size = new System.Drawing.Size(165, 29);
+            this.uiDatePicker2.SymbolDropDown = 61555;
+            this.uiDatePicker2.SymbolNormal = 61555;
+            this.uiDatePicker2.TabIndex = 79;
+            this.uiDatePicker2.Text = "1900-01-01";
+            this.uiDatePicker2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiDatePicker2.Value = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.uiDatePicker2.Watermark = "";
+            // 
+            // uiDatePicker1
+            // 
+            this.uiDatePicker1.FillColor = System.Drawing.Color.White;
+            this.uiDatePicker1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiDatePicker1.Location = new System.Drawing.Point(657, 89);
+            this.uiDatePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiDatePicker1.MaxLength = 10;
+            this.uiDatePicker1.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiDatePicker1.Name = "uiDatePicker1";
+            this.uiDatePicker1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.uiDatePicker1.Size = new System.Drawing.Size(165, 29);
+            this.uiDatePicker1.SymbolDropDown = 61555;
+            this.uiDatePicker1.SymbolNormal = 61555;
+            this.uiDatePicker1.TabIndex = 80;
+            this.uiDatePicker1.Text = "2023-08-25";
+            this.uiDatePicker1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiDatePicker1.Value = new System.DateTime(2023, 8, 25, 20, 18, 35, 482);
+            this.uiDatePicker1.Watermark = "";
+            // 
             // frmPeopleList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -735,5 +839,11 @@
         private Sunny.UI.UILabel label13;
         private Sunny.UI.UILabel label12;
         private Sunny.UI.UILabel label8;
+        private Sunny.UI.UITextBox uiTextBox1;
+        private Sunny.UI.UIComboBox uiComboBox3;
+        private Sunny.UI.UIComboBox uiComboBox2;
+        private Sunny.UI.UIComboBox uiComboBox1;
+        private Sunny.UI.UIDatePicker uiDatePicker2;
+        private Sunny.UI.UIDatePicker uiDatePicker1;
     }
 }
