@@ -386,8 +386,8 @@ namespace com.vdm.form
                         people.Nation = dataRow["民族"].ToString();
                         people.Relationship = dataRow["与户主关系"].ToString();
                         people.Birthday = dataRow["出生日期"].ToString();
-                        people.Idcard = this.tbIdcard.Text.Trim();
-                        people.Phone_number = this.tbPhone_number.Text.Trim();
+                        people.Idcard = dataRow["身份证号"].ToString();
+                        people.Phone_number = dataRow["联系电话"].ToString();
                         people.Town = dataRow["所属镇"].ToString();
                         people.Villiage = dataRow["所属村"].ToString();
                         people.Marital_status = dataRow["婚姻状况"].ToString();
