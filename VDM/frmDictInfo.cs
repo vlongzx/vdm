@@ -20,9 +20,15 @@ namespace com.vdm.form
         private string dict_code;
         private string dict_name;
         private DictBLL dictBLL;
+        private int id = 0;
         public frmDictInfo()
         {
             InitializeComponent();
+        }
+        public frmDictInfo(int id)
+        {
+            InitializeComponent();
+            this.id = id;
         }
         public frmDictInfo(string dict_code,string dict_name)
         {
@@ -35,6 +41,16 @@ namespace com.vdm.form
         {
             this.tbDict_code.Text = dict_code;
             this.tbDict_name.Text = dict_name;
+            this.dictBLL = new DictBLL();
+            Dict dict = this.dictBLL.getDictById(id);
+            if (dict != null)
+            {
+                this.tbDict_code.Text = dict.Dict_code;
+                this.tbDict_name.Text = dict.Dict_name;
+                this.btKey.Text = dict.Datakey;
+                this.btValue.Text = dict.Datavalue;
+                this.btIndex.Text = dict.Dataindex.ToString();
+            }
         }
 
         protected override bool CheckData()
@@ -59,6 +75,7 @@ namespace com.vdm.form
             int index = int.Parse(this.btIndex.Text.Trim());
 
             Dict dict = new Dict();
+            dict.Id = id;
             dict.Dict_code = dict_code;
             dict.Dict_name = dict_name;
             dict.Datakey = key;
@@ -66,17 +83,35 @@ namespace com.vdm.form
             dict.Dataindex = index;
 
             this.dictBLL = new DictBLL();
-            Result result = this.dictBLL.addDict(dict);
-            if (result.Count == 1)
+            if(id == 0)//id=0代表新增
             {
-                MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                Result result = this.dictBLL.addDict(dict);
+                if (result.Count == 1)
+                {
+                    MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogHelper.Error(result.Information, result.Exception);
+                }
             }
             else
             {
-                MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LogHelper.Error(result.Information, result.Exception);
+                Result result = this.dictBLL.editDict(dict);
+                if (result.Count == 1)
+                {
+                    MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogHelper.Error(result.Information, result.Exception);
+                }
             }
         }
     }

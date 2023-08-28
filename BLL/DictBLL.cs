@@ -86,5 +86,15 @@ namespace com.vdm.bll
         {
             return this.dictDAL.CreateDict(dict);
         }
+
+        public Result editDict(Dict dict)
+        {
+            return this.dictDAL.UpdateDict(dict);
+        }
+
+        public Result DelDict(int id)
+        {
+            return this.dictDAL.DeleteDict(id);
+        }
     }
 }

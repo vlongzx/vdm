@@ -22,6 +22,8 @@ namespace com.vdm.form
         private FunctionBLL functionBLL = null;
         public DataAuthBLL dataAuthBLL = null;
         private DictBLL dictBLL = null;
+        private string dict_code = null;
+        private string dict_name = null;
         public frmSystemSet()
         {
             InitializeComponent();
@@ -276,7 +278,7 @@ namespace com.vdm.form
             TreeNode node = this.tvDict.SelectedNode;
             if (node != null)
             {
-                string dict_code = node.Name.ToString();
+                dict_code = node.Name.ToString();
                 DataTable dtDict = this.dictBLL.getDictByCode(dict_code);
                 if (dtDict != null)
                 {
@@ -291,8 +293,7 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btAddDict_Click(object sender, EventArgs e)
         {
-            string dict_code = null;
-            string dict_name = null;
+
             TreeNode node = this.tvDict.SelectedNode;
             if (node != null)
             {
@@ -330,7 +331,62 @@ namespace com.vdm.form
                 return;
             }
             int id = int.Parse(this.dgDict.SelectedRows[0].Cells[0].Value.ToString());
-            Dict dict = this.dictBLL.getDictById(id);
+            frmDictInfo dictInfo = new frmDictInfo(id);
+            dictInfo.Render();
+            DialogResult result = dictInfo.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                DataTable dtDict = null;
+                if(dict_code == null)
+                {
+                    dtDict = this.dictBLL.getAllDict();
+                }
+                else
+                {
+                    dtDict = this.dictBLL.getDictByCode(dict_code);
+                }
+                if (dtDict != null)
+                {
+                    this.dgDict.DataSource = dtDict;
+                }
+            }
+        }
+
+        private void btDelDict_Click(object sender, EventArgs e)
+        {
+            if (this.dgDict.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要删除的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int id = int.Parse(this.dgDict.SelectedRows[0].Cells[0].Value.ToString());
+            if (MessageBox.Show("确认要删除该行数据吗？", "温馨提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.dictBLL = new DictBLL();
+                Result result = this.dictBLL.DelDict(id);
+                if (result.Count == 1)
+                {
+                    MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DataTable dtDict = null;
+                    if (dict_code == null)
+                    {
+                        dtDict = this.dictBLL.getAllDict();
+                    }
+                    else
+                    {
+                        dtDict = this.dictBLL.getDictByCode(dict_code);
+                    }
+                    if (dtDict != null)
+                    {
+                        this.dgDict.DataSource = dtDict;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("删除数据发生异常。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogHelper.Error(result.Information, result.Exception);
+                }
+            }
         }
     }
 }

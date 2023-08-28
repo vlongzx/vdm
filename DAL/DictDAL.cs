@@ -111,5 +111,45 @@ namespace com.vdm.dal
 
             return this.SqlDbHelper.ExecuteNonQuery(sql, CommandType.Text, parameters);
         }
+
+        public Result UpdateDict(Dict dict)
+        {
+            //构建参数值
+            List<string> listSetValue = new List<string>();
+            SQLiteParameter parameter = null;
+            DataTable tblSchema = this.getTableSchema("t_dict");
+            if (tblSchema != null)
+            {
+                foreach (DataRow row in tblSchema.Rows)
+                {
+                    //过滤掉主键
+                    if (row["ColumnName"].ToString() == "id")
+                    {
+                        continue;
+                    }
+                    listSetValue.Add(row["ColumnName"].ToString() + "=@" + row["ColumnName"].ToString());
+                }
+            }
+            string sql = "update t_dict set " + Utils.JoinStingListToString(listSetValue) + " where id = " + dict.Id;
+            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
+            if (tblSchema != null)
+            {
+                foreach (DataRow row in tblSchema.Rows)
+                {
+                    string ColumnName = row["ColumnName"].ToString();
+                    string PropertyName = Utils.Capitalize(row["ColumnName"].ToString());
+                    parameter = new SQLiteParameter("@" + ColumnName, dict.GetType().GetProperty(PropertyName).GetValue(dict, null));
+                    parameters.Add(parameter);
+                }
+
+            }
+            return this.SqlDbHelper.ExecuteNonQuery(sql, CommandType.Text, parameters);
+        }
+
+        public Result DeleteDict(int id)
+        {
+            string sql = "delete from t_dict where id = "+ id;
+            return this.SqlDbHelper.ExecuteNonQuery(sql);
+        }
     }
 }
