@@ -263,7 +263,6 @@
             this.cbIs_career_grade.TabIndex = 176;
             this.cbIs_career_grade.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbIs_career_grade.Watermark = "";
-            this.cbIs_career_grade.SelectedValueChanged += new System.EventHandler(this.cbIs_career_grade_SelectedValueChanged);
             // 
             // cbDisability_type
             // 
@@ -279,7 +278,6 @@
             this.cbDisability_type.TabIndex = 170;
             this.cbDisability_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbDisability_type.Watermark = "";
-            this.cbDisability_type.SelectedValueChanged += new System.EventHandler(this.cbDisability_type_SelectedValueChanged);
             // 
             // tbIndustry
             // 
@@ -394,7 +392,6 @@
             this.cbWork_or_study.TabIndex = 165;
             this.cbWork_or_study.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbWork_or_study.Watermark = "";
-            this.cbWork_or_study.SelectedValueChanged += new System.EventHandler(this.cbWork_or_study_SelectedValueChanged);
             // 
             // cbBig_ill_help
             // 
@@ -461,7 +458,6 @@
             this.cbLow_five.TabIndex = 200;
             this.cbLow_five.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbLow_five.Watermark = "";
-            this.cbLow_five.SelectedValueChanged += new System.EventHandler(this.cbLow_five_SelectedValueChanged);
             // 
             // tbReligious_belief
             // 
