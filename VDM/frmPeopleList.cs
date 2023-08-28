@@ -127,24 +127,21 @@ namespace com.vdm.form
             //初始化所在乡镇所在村
             orgBLL = new OrgBLL();
             List<KeyValue> list_town = orgBLL.getOrgByType("乡镇");
-          //  list_town.Add(new KeyValue("", "请选择"));
+            list_town.Add(new KeyValue("", "请选择"));
             if (list_town != null)
             {
                 this.cbTown.DataSource = list_town;
                 this.cbTown.DisplayMember = "value";
                 this.cbTown.ValueMember = "key";
             }
-            //cbTown.SelectedValue="";
-            int select_village = int.Parse(this.cbTown.SelectedValue.ToString());
-            List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
-          //  list_town.Add(new KeyValue("", "请选择"));
-            if (list_village != null)
-            {
-                this.cbVillage.DataSource = list_village;
-                this.cbVillage.DisplayMember = "value";
-                this.cbVillage.ValueMember = "key";
-            }
-            //cbVillage.SelectedValue = "";
+            cbTown.SelectedValue="";
+
+            List<KeyValue> list_village = new List<KeyValue>();
+            list_village.Add(new KeyValue("", "请选择"));
+            this.cbVillage.DataSource = list_village;
+            this.cbVillage.DisplayMember = "value";
+            this.cbVillage.ValueMember = "key";
+
         }
 
 
@@ -583,18 +580,34 @@ namespace com.vdm.form
             {
                 orgBLL = new OrgBLL();
                 int select_village = 0;
-                if (this.cbTown.SelectedItem != null)
+                if (this.cbTown.SelectedItem != null )
                 {
                     KeyValue selectValue = (KeyValue)this.cbTown.SelectedItem;
-                    select_village = int.Parse(selectValue.Key);
+                    if (selectValue.Key != "")
+                    {
+                        select_village = int.Parse(selectValue.Key);
+
+                        List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
+                       
+                        if (list_village != null)
+                        {
+                            list_village.Add(new KeyValue("", "请选择"));
+                            this.cbVillage.DataSource = list_village;
+                            this.cbVillage.DisplayMember = "value";
+                            this.cbVillage.ValueMember = "key";
+                            this.cbVillage.SelectedValue = "";
+                        }
+                    }
+                    else
+                    {
+                        List<KeyValue> list_village = new List<KeyValue>();
+                        list_village.Add(new KeyValue("", "请选择"));
+                        this.cbVillage.DataSource = list_village;
+                        this.cbVillage.DisplayMember = "value";
+                        this.cbVillage.ValueMember = "key";
+                    }
                 }
-                List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
-                if (list_village != null)
-                {
-                    this.cbVillage.DataSource = list_village;
-                    this.cbVillage.DisplayMember = "value";
-                    this.cbVillage.ValueMember = "key";
-                }
+                
             }
         }
         private void pagination_PageChanged(object sender, object pagingSource, int pageIndex, int count)
