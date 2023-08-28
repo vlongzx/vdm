@@ -127,20 +127,24 @@ namespace com.vdm.form
             //初始化所在乡镇所在村
             orgBLL = new OrgBLL();
             List<KeyValue> list_town = orgBLL.getOrgByType("乡镇");
+          //  list_town.Add(new KeyValue("", "请选择"));
             if (list_town != null)
             {
                 this.cbTown.DataSource = list_town;
                 this.cbTown.DisplayMember = "value";
                 this.cbTown.ValueMember = "key";
             }
+            //cbTown.SelectedValue="";
             int select_village = int.Parse(this.cbTown.SelectedValue.ToString());
             List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
+          //  list_town.Add(new KeyValue("", "请选择"));
             if (list_village != null)
             {
                 this.cbVillage.DataSource = list_village;
                 this.cbVillage.DisplayMember = "value";
                 this.cbVillage.ValueMember = "key";
             }
+            //cbVillage.SelectedValue = "";
         }
 
 
