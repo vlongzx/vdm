@@ -461,6 +461,10 @@ namespace com.vdm.form
             this.dpJoin_party_time_to.Text = "";
             this.dpBirthday_From.Text = "";
             this.dpBirthday_To.Text = "";
+            this.cbTown.SelectedValue = "";
+            this.cbVillage.SelectedValue = "";
+            this.tbSkill_type.Text = "";
+            this.cbMarital_status.SelectedValue = "";
             //查询所有人员信息
             condition = null;
             InitListView(condition, this.pageIndex, this.pageSize);

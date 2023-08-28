@@ -486,65 +486,196 @@ namespace com.vdm.dal
         public DataTable getAllPeople(Hashtable condition)
         {
             string sql = "select * from t_people where 1 = 1";
-            if(condition!=null)
+            if (condition!=null)
             {
-                if (condition["People_name"].ToString() != "")
+                if (condition.ContainsKey("People_name") && condition["People_name"].ToString() != "")
                 {
                     sql += "    and people_name = @people_name";
                 }
-                if (condition["Sex"].ToString() != "")
+                if (condition.ContainsKey("Sex") && condition["Sex"].ToString() != "")
                 {
                     sql += "    and sex = @sex";
                 }
-                if (condition["Nation"].ToString() != "")
+                if (condition.ContainsKey("Nation") && condition["Nation"].ToString() != "")
                 {
                     sql += "    and nation = @nation";
                 }
-                if (condition["Relationship"].ToString() != "")
+                if (condition.ContainsKey("Relationship") && condition["Relationship"].ToString() != "")
                 {
                     sql += "    and relationship = @relationship";
                 }
-                if (condition["Politcal_outlook"].ToString() != "")
+                if (condition.ContainsKey("Politcal_outlook") && condition["Politcal_outlook"].ToString() != "")
                 {
                     sql += "    and politcal_outlook = @politcal_outlook";
                 }
-                if (condition["Phone_number"].ToString() != "")
+                if (condition.ContainsKey("Phone_number") && condition["Phone_number"].ToString() != "")
                 {
                     sql += "    and phone_number = @phone_number";
                 }
-                if (condition["Idcard"].ToString() != "")
+                if (condition.ContainsKey("Idcard") && condition["Idcard"].ToString() != "")
                 {
                     sql += "    and idcard = @idcard";
                 }
-                if (condition.ContainsKey("Religious_belief")&&condition["Religious_belief"].ToString() != "")
+                if (condition.ContainsKey("Skill_type") && condition["Skill_type"].ToString() != "")
                 {
-                    sql += "    and religious_belief = @religious_belief";
+                    sql += "    and skill_type = @skill_type";
                 }
-                if (condition["Education"].ToString() != "")
+                if (condition.ContainsKey("Village") && condition["Village"].ToString() != "")
+                {
+                    sql += "    and village = @village";
+                }
+                if (condition.ContainsKey("Town") && condition["Town"].ToString() != "")
+                {
+                    sql += "    and town = @town";
+                }
+                if (condition.ContainsKey("Marital_status") && condition["Marital_status"].ToString() != "")
+                {
+                    sql += "    and marital_status = @marital_status";
+                }
+                if (condition.ContainsKey("Education") && condition["Education"].ToString() != "")
                 {
                     sql += "    and education = @education";
                 }
-                if (condition["Birthday_From"].ToString() != "" && condition["Birthday_To"].ToString() != null)
+                if (condition.ContainsKey("Birthday_From") && condition["Birthday_From"].ToString() != "" && condition.ContainsKey("Birthday_To") && condition["Birthday_To"].ToString() != null)
                 {
                     sql += "  and  birthday BETWEEN '" + condition["Birthday_From"].ToString() + "' AND '" + condition["Birthday_To"].ToString() + "'";
                 }
-                if (condition["Join_party_time_from"].ToString() != "" && condition["Join_party_time_to"].ToString() != null)
+                if (condition.ContainsKey("Join_party_time_from") && condition["Join_party_time_from"].ToString() != "" && condition.ContainsKey("Join_party_time_to") && condition["Join_party_time_to"].ToString() != null)
                 {
                     sql += " and   join_party_time BETWEEN '" + condition["Join_party_time_from"].ToString() + "' AND '" + condition["Join_party_time_to"].ToString() + "'";
                 }
+
+                //高级查询条件
+                if (condition.ContainsKey("Work_or_study") && condition["Work_or_study"].ToString() != "")
+                {
+                    sql += "    and Work_or_study = @Work_or_study";
+                }
+                if (condition.ContainsKey("Religious_belief") && condition["Religious_belief"].ToString() != "")
+                {
+                    sql += "    and Religious_belief = @Religious_belief";
+                }
+                if (condition.ContainsKey("Is_real_name") && condition["Is_real_name"].ToString() != "")
+                {
+                    sql += "    and Is_real_name = @Is_real_name";
+                }
+                if (condition.ContainsKey("Blood_type") && condition["Blood_type"].ToString() != "")
+                {
+                    sql += "    and Blood_type = @Blood_type";
+                }
+                if (condition.ContainsKey("Industry") && condition["Industry"].ToString() != "")
+                {
+                    sql += "    and Industry = @Industry";
+                }
+                if (condition.ContainsKey("Unit_or_school") && condition["Unit_or_school"].ToString() != "")
+                {
+                    sql += "    and Unit_or_school = @Unit_or_school";
+                }
+                if (condition.ContainsKey("Work_study_location") && condition["Work_study_location"].ToString() != "")
+                {
+                    sql += "    and Work_study_location = @Work_study_location";
+                }
+                if (condition.ContainsKey("Employ_guide") && condition["Employ_guide"].ToString() != "")
+                {
+                    sql += "    and Employ_guide = @Employ_guide";
+                }
+                if (condition.ContainsKey("Skill_train") && condition["Skill_train"].ToString() != "")
+                {
+                    sql += "    and Skill_train = @Skill_train";
+                }
+                if (condition.ContainsKey("Is_career_grade") && condition["Is_career_grade"].ToString() != "")
+                {
+                    sql += "    and Is_career_grade = @Is_career_grade";
+                }
+                if (condition.ContainsKey("Career_grade") && condition["Career_grade"].ToString() != "")
+                {
+                    sql += "    and Career_grade = @Career_grade";
+                }
+                if (condition.ContainsKey("Career_get_time") && condition["Career_get_time"].ToString() != "")
+                {
+                    sql += "    and work_or_study = @work_or_study";
+                }
+                if (condition.ContainsKey("Disability_type") && condition["Disability_type"].ToString() != "")
+                {
+                    sql += "    and Disability_type = @Disability_type";
+                }
+                if (condition.ContainsKey("Disability_grade") && condition["Disability_grade"].ToString() != "")
+                {
+                    sql += "    and Disability_grade = @Disability_grade";
+                }
+                if (condition.ContainsKey("Disability_reason") && condition["Disability_reason"].ToString() != "")
+                {
+                    sql += "    and Disability_reason = @Disability_reason";
+                }
+                if (condition.ContainsKey("Big_ill_help") && condition["Big_ill_help"].ToString() != "")
+                {
+                    sql += "    and Big_ill_help = @Big_ill_help";
+                }
+                if (condition.ContainsKey("Temporary_help") && condition["Temporary_help"].ToString() != "")
+                {
+                    sql += "    and Temporary_help = @Temporary_help";
+                }
+                if (condition.ContainsKey("Is_unable_old") && condition["Is_unable_old"].ToString() != "")
+                {
+                    sql += "    and Is_unable_old = @Is_unable_old";
+                }
+                if (condition.ContainsKey("Is_relocation") && condition["Is_relocation"].ToString() != "")
+                {
+                    sql += "    and Is_relocation = @Is_relocation";
+                }
+                if (condition.ContainsKey("Low_five") && condition["Low_five"].ToString() != "")
+                {
+                    sql += "    and Low_five = @Low_five";
+                }
+                if (condition.ContainsKey("Low_five_grade") && condition["Low_five_grade"].ToString() != "")
+                {
+                    sql += "    and Low_five_grade = @Low_five_grade";
+                }
+                if (condition.ContainsKey("Military_service") && condition["Military_service"].ToString() != "")
+                {
+                    sql += "    and Military_service = @Military_service";
+                }
                 List<SQLiteParameter> parameters = new List<SQLiteParameter>();
+
                 parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
-                parameters.Add(new SQLiteParameter("@nation", condition["nation"]));
-                parameters.Add(new SQLiteParameter("@relationship", condition["relationship"]));
+                parameters.Add(new SQLiteParameter("@nation", condition["Nation"]));
+                parameters.Add(new SQLiteParameter("@relationship", condition["Relationship"]));
                 parameters.Add(new SQLiteParameter("@sex", condition["Sex"]));
                 parameters.Add(new SQLiteParameter("@politcal_outlook", condition["Politcal_outlook"]));
                 parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
                 parameters.Add(new SQLiteParameter("@idcard", condition["Idcard"]));
-                parameters.Add(new SQLiteParameter("@religious_belief", condition["Religious_belief"]));
+                parameters.Add(new SQLiteParameter("@marital_status", condition["Marital_status"]));
                 parameters.Add(new SQLiteParameter("@education", condition["Education"]));
-                sql += " order by create_datetime desc";
-                return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
+                parameters.Add(new SQLiteParameter("@skill_type", condition["Skill_type"]));
+                parameters.Add(new SQLiteParameter("@town", condition["Town"]));
+                parameters.Add(new SQLiteParameter("@village", condition["Village"]));
+
+                parameters.Add(new SQLiteParameter("@Work_or_study", condition["Work_or_study"]));
+                parameters.Add(new SQLiteParameter("@Is_real_name", condition["Is_real_name"]));
+                parameters.Add(new SQLiteParameter("@Blood_type", condition["Blood_type"]));
+                parameters.Add(new SQLiteParameter("@Religious_belief", condition["Religious_belief"]));
+                parameters.Add(new SQLiteParameter("@Industry", condition["Industry"]));
+                parameters.Add(new SQLiteParameter("@Unit_or_school", condition["Unit_or_school"]));
+                parameters.Add(new SQLiteParameter("@Work_study_location", condition["Work_study_location"]));
+                parameters.Add(new SQLiteParameter("@Employ_guide", condition["Employ_guide"]));
+                parameters.Add(new SQLiteParameter("@Skill_train", condition["Skill_train"]));
+                parameters.Add(new SQLiteParameter("@Is_career_grade", condition["Is_career_grade"]));
+                parameters.Add(new SQLiteParameter("@Career_grade", condition["Career_grade"]));
+                parameters.Add(new SQLiteParameter("@Career_get_time", condition["Career_get_time"]));
+                parameters.Add(new SQLiteParameter("@Disability_type", condition["Disability_type"]));
+                parameters.Add(new SQLiteParameter("@Disability_grade", condition["Disability_grade"]));
+                parameters.Add(new SQLiteParameter("@Disability_reason", condition["Disability_reason"]));
+                parameters.Add(new SQLiteParameter("@Big_ill_help", condition["Big_ill_help"]));
+                parameters.Add(new SQLiteParameter("@Temporary_help", condition["Temporary_help"]));
+                parameters.Add(new SQLiteParameter("@Is_unable_old", condition["Is_unable_old"]));
+                parameters.Add(new SQLiteParameter("@Is_relocation", condition["Is_relocation"]));
+                parameters.Add(new SQLiteParameter("@Low_five", condition["Low_five"]));
+                parameters.Add(new SQLiteParameter("@Low_five_grade", condition["Low_five_grade"]));
+                parameters.Add(new SQLiteParameter("@Military_service", condition["Military_service"]));
             }
+           
+          
+           
+            
     
             sql += " order by create_datetime desc";
             return this.SqlDbHelper.ExecuteDataTable(sql);
