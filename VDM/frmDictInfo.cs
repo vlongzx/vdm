@@ -61,9 +61,9 @@ namespace com.vdm.form
             Dict dict = new Dict();
             dict.Dict_code = dict_code;
             dict.Dict_name = dict_name;
-            dict.Key = key;
-            dict.Value = value;
-            dict.Index = index;
+            dict.Datakey = key;
+            dict.Datavalue = value;
+            dict.Dataindex = index;
 
             this.dictBLL = new DictBLL();
             Result result = this.dictBLL.addDict(dict);

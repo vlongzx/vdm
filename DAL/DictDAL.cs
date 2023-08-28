@@ -30,8 +30,8 @@ namespace com.vdm.dal
         /// </returns>
         public DataTable getDict(string dict_code)
         {
-            string sql = "select key,value from t_dict where dict_code  in ( '" + dict_code + "','common')";
-            sql += " order by `index` asc";
+            string sql = "select datakey,datavalue from t_dict where dict_code  in ( '" + dict_code + "','common')";
+            sql += " order by `dataindex` asc";
             return this.sqlDB.ExecuteDataTable(sql);
         }
         /// <summary>

@@ -11,9 +11,9 @@ namespace com.vdm.model
        private long id;
         private string dict_code;
         private string dict_name;
-        private string key;
-        private string value;
-        private int index;
+        private string datakey;
+        private string datavalue;
+        private int dataindex;
 
         public long Id
         {
@@ -54,42 +54,42 @@ namespace com.vdm.model
             }
         }
 
-        public string Key
+        public string Datakey
         {
             get
             {
-                return key;
+                return datakey;
             }
 
             set
             {
-                key = value;
+                datakey = value;
             }
         }
 
-        public string Value
+        public string Datavalue
         {
             get
             {
-                return value;
+                return datavalue;
             }
 
             set
             {
-                this.value = value;
+                datavalue = value;
             }
         }
 
-        public int Index
+        public int Dataindex
         {
             get
             {
-                return index;
+                return dataindex;
             }
 
             set
             {
-                index = value;
+                dataindex = value;
             }
         }
     }

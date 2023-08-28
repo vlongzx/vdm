@@ -34,8 +34,8 @@ namespace com.vdm.bll
                 KeyValue kv = null;
                 foreach (DataRow row in dtDict.Rows)
                 {
-                    string key = row["key"].ToString();
-                    string value = row["value"].ToString();
+                    string key = row["datakey"].ToString();
+                    string value = row["datavalue"].ToString();
                     kv = new KeyValue(key, value);
                     list.Add(kv);
                 }
