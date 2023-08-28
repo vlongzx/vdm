@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimalDAL.cs" />
     <Compile Include="BaseDAL.cs" />
     <Compile Include="DataAuthDAL.cs" />
     <Compile Include="FunctionDAL.cs" />

@@ -237,7 +237,7 @@
             this.btAnimal.TabIndex = 6;
             this.btAnimal.Text = "畜牧";
             this.btAnimal.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btAnimal.Click += new System.EventHandler(this.btFamer_Click);
+            this.btAnimal.Click += new System.EventHandler(this.btAnimal_Click);
             // 
             // btTour
             // 
