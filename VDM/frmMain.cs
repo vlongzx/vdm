@@ -26,6 +26,7 @@ namespace com.vdm.form
             AddPage(new frmPeopleList(), 1001);
             AddPage(new frmFamerList(), 1002);
             AddPage(new frmSystemSet(), 1009);
+            AddPage(new frmAnimalList(), 1008);
         }
 
         private void tspPeople_Click(object sender, EventArgs e)
@@ -50,6 +51,16 @@ namespace com.vdm.form
         private void btSystemSet_Click(object sender, EventArgs e)
         {
             MainTabControl.SelectPage(1009);
+        }
+
+        /// <summary>
+        ///  畜牧
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btAnimal_Click(object sender, EventArgs e)
+        {
+            MainTabControl.SelectPage(1008);
         }
     }
 }
