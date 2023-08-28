@@ -8,14 +8,14 @@ namespace com.vdm.model
 {
     public class Dict
     {
-        private int id;
-        private string dict_name;
+       private long id;
         private string dict_code;
+        private string dict_name;
         private string key;
         private string value;
         private int index;
 
-        public int Id
+        public long Id
         {
             get
             {
@@ -25,19 +25,6 @@ namespace com.vdm.model
             set
             {
                 id = value;
-            }
-        }
-
-        public string Dict_name
-        {
-            get
-            {
-                return dict_name;
-            }
-
-            set
-            {
-                dict_name = value;
             }
         }
 
@@ -51,6 +38,19 @@ namespace com.vdm.model
             set
             {
                 dict_code = value;
+            }
+        }
+
+        public string Dict_name
+        {
+            get
+            {
+                return dict_name;
+            }
+
+            set
+            {
+                dict_name = value;
             }
         }
 
@@ -93,4 +93,5 @@ namespace com.vdm.model
             }
         }
     }
+
 }

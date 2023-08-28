@@ -21,6 +21,7 @@ namespace com.vdm.form
         private RoleBLL roleBLL = null;
         private FunctionBLL functionBLL = null;
         public DataAuthBLL dataAuthBLL = null;
+        private DictBLL dictBLL = null;
         public frmSystemSet()
         {
             InitializeComponent();
@@ -77,15 +78,32 @@ namespace com.vdm.form
             this.tvFunction.ShowLines = true;//显示结构线条
             this.tvFunction.ExpandAll(); //全部节点展开
 
+            //初始化数据字典
+            this.dictBLL = new DictBLL();
+            DataTable dtDict = this.dictBLL.getDistinctDict();
+            this.tvDict.Nodes.Clear();
+            this.tvDict.Nodes.Add("0", "所有字典项");
+            if (dtDict != null)
+            {
+                foreach (DataRow row in dtDict.Rows)
+                {
+                    this.tvDict.Nodes[0].Nodes.Add(row["dict_code"].ToString(), row["dict_name"].ToString());
+                }
+            }
+            this.tvDict.ShowLines = true;//显示结构线条
+            this.tvDict.ExpandAll(); //全部节点展开
 
-
-            InitPage();
+            InitUserList();
+            InitRoleList();
+            InitFunctionList();
+            InitDataAuthList();
+            InitDictList();
         }
 
 
 
 
-        public void InitPage()
+        public void InitUserList()
         {
             //初始化用户列表
             this.userBLL = new UserBLL();
@@ -102,7 +120,9 @@ namespace com.vdm.form
             this.Pagination.PageSize = 20;
             this.Pagination.TotalCount = dtUser.Rows.Count;
             this.dgUser.DataSource = dtUser;
-
+        }
+        public void InitRoleList()
+        {
             //初始化角色列表
             this.roleBLL = new RoleBLL();
             DataTable dtRole = this.roleBLL.getAllRole();
@@ -113,14 +133,16 @@ namespace com.vdm.form
             this.dgRole.AddColumn("角色名称", "role_name");
             this.dgRole.AddColumn("角色类型", "role_type");
             this.dgRole.AddColumn("备注", "remark").SetFixedMode(300);
-            if(dtRole != null)
+            if (dtRole != null)
             {
                 this.Pagination.PageSize = 20;
                 this.Pagination.TotalCount = dtRole.Rows.Count;
                 this.dgRole.DataSource = dtRole;
             }
 
-
+        }
+        public void InitFunctionList()
+        {
             //初始化功能权限列表
             this.functionBLL = new FunctionBLL();
             this.dgFunction.AutoGenerateColumns = false;
@@ -136,7 +158,9 @@ namespace com.vdm.form
             {
                 this.dgFunction.DataSource = dtFunction;
             }
-
+        }
+        public void InitDataAuthList()
+        {
             //初始化所有的数据权限
             this.dataAuthBLL = new DataAuthBLL();
             this.dgDataAuth.AutoGenerateColumns = false;
@@ -152,6 +176,25 @@ namespace com.vdm.form
                 this.dgDataAuth.DataSource = dtDataAuth;
             }
         }
+        public void InitDictList()
+        {
+            //初始化字典项列表
+            this.dictBLL = new DictBLL();
+            this.dgDict.AutoGenerateColumns = false;
+            this.dgDict.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgDict.RowTemplate.Height = 45;
+            this.dgDict.AddColumn("ID", "id");
+            this.dgDict.AddColumn("字典项标识", "dict_code");
+            this.dgDict.AddColumn("字典项名称", "dict_name");
+            this.dgDict.AddColumn("键", "key");
+            this.dgDict.AddColumn("值", "value");
+            this.dgDict.AddColumn("顺序", "index");
+            DataTable dtDict = this.dictBLL.getAllDict();
+            if (dtDict != null)
+            {
+                this.dgDict.DataSource = dtDict;
+            }
+        }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
@@ -160,7 +203,7 @@ namespace com.vdm.form
             userInfo.ShowDialog();
             if (userInfo.DialogResult == DialogResult.OK)
             {
-                InitPage();
+                InitUserList();
             }
         }
 
@@ -195,7 +238,7 @@ namespace com.vdm.form
                 if (result.Count == 1)
                 {
                     MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    InitPage();
+                    InitUserList();
                 }
                 else
                 {
@@ -227,6 +270,44 @@ namespace com.vdm.form
                     this.Pagination.TotalCount = dtFunction.Rows.Count;
                     this.dgFunction.DataSource = dtFunction;
                 }
+            }
+        }
+
+        private void tvDict_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            TreeNode node = this.tvDict.SelectedNode;
+            if (node != null)
+            {
+                string dict_code = node.Name.ToString();
+                DataTable dtDict = this.dictBLL.getDictByCode(dict_code);
+                if (dtDict != null)
+                {
+                    this.dgDict.DataSource = dtDict;
+                }
+            }
+        }
+
+        private void btAddDict_Click(object sender, EventArgs e)
+        {
+            string dict_code = null;
+            string dict_name = null;
+            TreeNode node = this.tvDict.SelectedNode;
+            if (node != null)
+            {
+                dict_code = node.Name;
+                dict_name = node.Text;
+            }
+            else
+            {
+                ShowWarningDialog("请选择字典项。");
+                return;
+            }
+            frmDictInfo dictInfo = new frmDictInfo(dict_code, dict_name);
+            dictInfo.Render();
+            DialogResult  result = dictInfo.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                InitDictList();
             }
         }
     }
