@@ -104,14 +104,14 @@ namespace com.vdm.form
             //this.cbPolitcal_outlook.SelectedValue = "";
 
             //初始化宗教信仰
-            List<KeyValue> list_religious_belief = dictBLL.getDict("religious_belief");
+           // List<KeyValue> list_religious_belief = dictBLL.getDict("religious_belief");
             // list_religious_belief.Add(new KeyValue("", ""));
-            if (list_religious_belief != null)
-            {
-                this.cbReligious_belief.DataSource = list_religious_belief;
-                this.cbReligious_belief.DisplayMember = "value";
-                this.cbReligious_belief.ValueMember = "key";
-            }
+            //if (list_religious_belief != null)
+            //{
+            //    this.cbReligious_belief.DataSource = list_religious_belief;
+            //    this.cbReligious_belief.DisplayMember = "value";
+            //    this.cbReligious_belief.ValueMember = "key";
+            //}
             //   this.cbReligious_belief.SelectedValue = "";
 
 
@@ -298,7 +298,7 @@ namespace com.vdm.form
             //------------------------------------------------------------------
             //-----------------政治面貌与宗教信仰
             string Politcal_outlook = this.cbPolitcal_outlook.SelectedValue.ToString();
-            string Religious_belief = this.cbReligious_belief.SelectedValue.ToString();
+            string Religious_belief = this.tbReligious_belief.Text.ToString();
             string Education = this.cbEducation.SelectedValue.ToString();
             string Join_party_time_from = this.dpJoin_party_time_from.Text.Trim();
             string Join_party_time_to = this.dpJoin_party_time_to.Text.Trim();
@@ -427,7 +427,7 @@ namespace com.vdm.form
             this.tbIdcard.Text = "";
             this.tbPhone_number.Text = "";
             this.cbPolitcal_outlook.SelectedValue = "";
-            this.cbReligious_belief.SelectedValue = "";
+            this.tbReligious_belief.Text = "";
             this.cbEducation.SelectedValue = "";
             this.dpJoin_party_time_from.Text = "";
             this.dpJoin_party_time_to.Text = "";
