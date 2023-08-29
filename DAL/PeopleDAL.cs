@@ -634,6 +634,8 @@ namespace com.vdm.dal
                 {
                     sql += "    and Military_service = @Military_service";
                 }
+
+                sql += " order by create_datetime desc";
                 List<SQLiteParameter> parameters = new List<SQLiteParameter>();
 
                 parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
@@ -671,15 +673,11 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@Low_five", condition["Low_five"]));
                 parameters.Add(new SQLiteParameter("@Low_five_grade", condition["Low_five_grade"]));
                 parameters.Add(new SQLiteParameter("@Military_service", condition["Military_service"]));
-            }
-           
-          
-           
-            
-    
+
+                return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
+            }    
             sql += " order by create_datetime desc";
             return this.SqlDbHelper.ExecuteDataTable(sql);
-
         }
 
         public DataTable getPeople(int people_id)
