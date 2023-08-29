@@ -15,6 +15,8 @@ namespace com.vdm.model
         private string breed_type;
         private string manager;
         private string phone_number;
+        private string idcard;
+        private string address;
         private string year_inventory;
         private string year_outbound;
         private float output;
@@ -358,6 +360,32 @@ namespace com.vdm.model
             set
             {
                 last_updater = value;
+            }
+        }
+
+        public string Idcard
+        {
+            get
+            {
+                return idcard;
+            }
+
+            set
+            {
+                idcard = value;
+            }
+        }
+
+        public string Address
+        {
+            get
+            {
+                return address;
+            }
+
+            set
+            {
+                address = value;
             }
         }
     }
