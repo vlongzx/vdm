@@ -335,8 +335,8 @@ namespace com.vdm.form
             condition.Add("Skill_type", Skill_type);
             condition.Add("Join_party_time_from", Join_party_time_from);
             condition.Add("Join_party_time_to", Join_party_time_to);
-            condition.Add("Village", Join_party_time_to);
-            condition.Add("Town", Join_party_time_to);
+            condition.Add("Village", Village);
+            condition.Add("Town", Town);
             //获取值高级查询条件封装业务对象
             foreach (DictionaryEntry de in conditionAdvance)
             {
