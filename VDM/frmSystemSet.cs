@@ -81,7 +81,21 @@ namespace com.vdm.form
             this.tvFunction.ShowLines = true;//显示结构线条
             this.tvFunction.ExpandAll(); //全部节点展开
 
-            //初始化数据字典
+
+            InitOrgTree();
+
+
+            InitUserList();
+            InitRoleList();
+            InitFunctionList();
+            InitDataAuthList();
+
+            InitDictList();
+        }
+
+        public void InitOrgTree()
+        {
+            //初始化数据字典树
             this.dictBLL = new DictBLL();
             DataTable dtDict = this.dictBLL.getDistinctDict();
             this.tvDict.Nodes.Clear();
@@ -95,15 +109,7 @@ namespace com.vdm.form
             }
             this.tvDict.ShowLines = true;//显示结构线条
             this.tvDict.ExpandAll(); //全部节点展开
-
-            InitUserList();
-            InitRoleList();
-            InitFunctionList();
-            InitDataAuthList();
-            InitDictList();
         }
-
-
 
 
         public void InitUserList()
@@ -184,6 +190,7 @@ namespace com.vdm.form
             //初始化字典项列表
             this.dictBLL = new DictBLL();
             this.dgDict.AutoGenerateColumns = false;
+            this.dgDict.Columns.Clear();
             this.dgDict.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgDict.RowTemplate.Height = 45;
             this.dgDict.AddColumn("ID", "id");
@@ -311,10 +318,19 @@ namespace com.vdm.form
             DialogResult  result = dictInfo.ShowDialog();
             if(result == DialogResult.OK)
             {
-                DataTable dtDict = this.dictBLL.getDictByCode(dict_code);
-                if (dtDict != null)
+                
+                if(dict_code == "0")
                 {
-                    this.dgDict.DataSource = dtDict;
+                    InitOrgTree();
+                    InitDictList();
+                }
+                else
+                {
+                    DataTable dtDict = this.dictBLL.getDictByCode(dict_code);
+                    if (dtDict != null)
+                    {
+                        this.dgDict.DataSource = dtDict;
+                    }
                 }
             }
         }
