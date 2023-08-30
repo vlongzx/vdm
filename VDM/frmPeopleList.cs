@@ -559,16 +559,14 @@ namespace com.vdm.form
             if (this.cbTown.SelectedValue != null)
             {
                 orgBLL = new OrgBLL();
-                int select_village = 0;
-                if (this.cbTown.SelectedItem != null )
+                if (this.cbTown.SelectedItem != null)
                 {
                     KeyValue selectValue = (KeyValue)this.cbTown.SelectedItem;
                     if (selectValue.Key != "")
                     {
-                        select_village = int.Parse(selectValue.Key);
-
-                        List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
-                       
+                        string org_code = selectValue.Key;
+                        int pre_org_id = this.orgBLL.getOrgIdByOrgCode(org_code);
+                        List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
                         if (list_village != null)
                         {
                             list_village.Add(new KeyValue("", "请选择"));
@@ -587,7 +585,6 @@ namespace com.vdm.form
                         this.cbVillage.ValueMember = "key";
                     }
                 }
-                
             }
         }
         private void pagination_PageChanged(object sender, object pagingSource, int pageIndex, int count)

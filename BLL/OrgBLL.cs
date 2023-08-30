@@ -46,12 +46,12 @@ namespace com.vdm.bll
         {
             List<KeyValue> list_org = new List<KeyValue>();
             DataTable dt = this.orgDAL.getOrgByType(org_type);
-            if(dt != null)
+            if (dt != null)
             {
                 KeyValue kv = null;
                 foreach (DataRow row in dt.Rows)
                 {
-                    kv = new KeyValue(row["org_id"].ToString(), row["org_name"].ToString());
+                    kv = new KeyValue(row["org_code"].ToString(), row["org_name"].ToString());
                     list_org.Add(kv);
                 }
             }
@@ -77,6 +77,15 @@ namespace com.vdm.bll
                 }
             }
             return list_org;
+        }
+        /// <summary>
+        ///  根据org_code获得id
+        /// </summary>
+        /// <param name="org_code"></param>
+        /// <returns></returns>
+        public int getOrgIdByOrgCode(string org_code)
+        {
+            return this.orgDAL.getOrgIdByOrgCode(org_code);
         }
     }
 }

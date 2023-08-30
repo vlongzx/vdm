@@ -31,62 +31,119 @@ namespace com.vdm.dal
         public int getTotalCount(Hashtable condition)
         {
             string sql = "select * from t_animal where 1 = 1";
-            //if (condition["People_name"].ToString() != "")
-            //{
-            //    sql += "    and people_name = @people_name";
-            //}
-            //if (condition["Sex"].ToString() != "")
-            //{
-            //    sql += "    and sex = @sex";
-            //}
-            //if (condition["Nation"].ToString() != "")
-            //{
-            //    sql += "    and nation = @nation";
-            //}
-            //if (condition["Relationship"].ToString() != "")
-            //{
-            //    sql += "    and relationship = @relationship";
-            //}
-            //if (condition["Politcal_outlook"].ToString() != "")
-            //{
-            //    sql += "    and politcal_outlook = @politcal_outlook";
-            //}
-            //if (condition["Phone_number"].ToString() != "")
-            //{
-            //    sql += "    and phone_number = @phone_number";
-            //}
-            //if (condition["Idcard"].ToString() != "")
-            //{
-            //    sql += "    and idcard = @idcard";
-            //}
-            //if (condition["Religious_belief"].ToString() != "")
-            //{
-            //    sql += "    and religious_belief = @religious_belief";
-            //}
-            //if (condition["Education"].ToString() != "")
-            //{
-            //    sql += "    and education = @education";
-            //}
-            //if (condition["Birthday_From"].ToString() != "" && condition["Birthday_To"].ToString() != null)
-            //{
-            //    sql += "  and  birthday BETWEEN '" + condition["Birthday_From"].ToString() + "' AND '" + condition["Birthday_To"].ToString() + "'";
-            //}
-            //if (condition["Join_party_time_from"].ToString() != "" && condition["Join_party_time_to"].ToString() != null)
-            //{
-            //    sql += " and   join_party_time BETWEEN '" + condition["Join_party_time_from"].ToString() + "' AND '" + condition["Join_party_time_to"].ToString() + "'";
-            //}
+            if (condition != null)
+            {
+                if (condition["breed_name"].ToString() != "")
+                {
+                    sql += "    and breed_name = @breed_name";
+                }
+                if (condition["town"].ToString() != "")
+                {
+                    sql += "    and town = @town";
+                }
+                if (condition["villiage"].ToString() != "")
+                {
+                    sql += "    and villiage = @villiage";
+                }
+                if (condition["breed_type"].ToString() != "")
+                {
+                    sql += "    and breed_type = @breed_type";
+                }
+                if (condition["manager"].ToString() != "")
+                {
+                    sql += "    and manager = @manager";
+                }
+                if (condition["phone_number"].ToString() != "")
+                {
+                    sql += "    and phone_number = @phone_number";
+                }
+                if (condition["Idcard"].ToString() != "")
+                {
+                    sql += "    and idcard = @idcard";
+                }
+                if (condition["address"].ToString() != "")
+                {
+                    sql += "    and address = @address";
+                }
+                if (condition["year_inventory"].ToString() != "")
+                {
+                    sql += "    and year_inventory = @year_inventory";
+                }
+                if (condition["year_outbound"].ToString() != "")
+                {
+                    sql += "    and year_outbound = @year_outbound";
+                }
+                if (condition["output_from"].ToString() != "" && condition["output_to"].ToString() != "")
+                {
+                    sql += "  and  output BETWEEN '" + condition["output_from"].ToString() + "' AND '" + condition["output_to"].ToString() + "'";
+                }
+                if (condition["total_area_from"].ToString() != "" && condition["total_area_to"].ToString() != "")
+                {
+                    sql += " and   total_area BETWEEN '" + condition["total_area_from"].ToString() + "' AND '" + condition["total_area_to"].ToString() + "'";
+                }
+                if (condition["total_area_from"].ToString() != "" && condition["total_area_to"].ToString() != "")
+                {
+                    sql += " and   total_area BETWEEN '" + condition["total_area_from"].ToString() + "' AND '" + condition["total_area_to"].ToString() + "'";
+                }
+                if (condition["pen_area_from"].ToString() != "" && condition["pen_area_to"].ToString() != "")
+                {
+                    sql += " and   pen_area BETWEEN '" + condition["pen_area_from"].ToString() + "' AND '" + condition["pen_area_to"].ToString() + "'";
+                }
+                if (condition["midden_area_from"].ToString() != "" && condition["midden_area_to"].ToString() != "")
+                {
+                    sql += " and   midden_area BETWEEN '" + condition["midden_area_from"].ToString() + "' AND '" + condition["midden_area_to"].ToString() + "'";
+                }
+                if (condition["pullttion_area_from"].ToString() != "" && condition["pullttion_area_to"].ToString() != "")
+                {
+                    sql += " and   pullttion_area_from BETWEEN '" + condition["pullttion_area_from"].ToString() + "' AND '" + condition["pullttion_area_to"].ToString() + "'";
+                }
+                if (condition["cueernt_inventory_from"].ToString() != "" && condition["cueernt_inventory_to"].ToString() != "")
+                {
+                    sql += " and   cueernt_inventory BETWEEN '" + condition["cueernt_inventory_from"].ToString() + "' AND '" + condition["cueernt_inventory_to"].ToString() + "'";
+                }
+                if (condition["animal_qualify"].ToString() != "")
+                {
+                    sql += "    and animal_qualify = @animal_qualify";
+                }
+                if (condition["solid_pollution"].ToString() != "")
+                {
+                    sql += "    and solid_pollution = @solid_pollution";
+                }
+                if (condition["report_or_filings"].ToString() != "")
+                {
+                    sql += "    and report_or_filings = @report_or_filings";
+                }
+            }
             sql += " order by create_datetime desc";
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
-            //parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
-            //parameters.Add(new SQLiteParameter("@nation", condition["nation"]));
-            //parameters.Add(new SQLiteParameter("@relationship", condition["relationship"]));
-            //parameters.Add(new SQLiteParameter("@sex", condition["Sex"]));
-            //parameters.Add(new SQLiteParameter("@politcal_outlook", condition["Politcal_outlook"]));
-            //parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
-            //parameters.Add(new SQLiteParameter("@idcard", condition["Idcard"]));
-            //parameters.Add(new SQLiteParameter("@religious_belief", condition["Religious_belief"]));
-            //parameters.Add(new SQLiteParameter("@education", condition["Education"]));
-
+            if (condition != null)
+            {
+                parameters.Add(new SQLiteParameter("@breed_name", condition["breed_name"]));
+                parameters.Add(new SQLiteParameter("@town", condition["town"]));
+                parameters.Add(new SQLiteParameter("@villiage", condition["villiage"]));
+                parameters.Add(new SQLiteParameter("@breed_type", condition["breed_type"]));
+                parameters.Add(new SQLiteParameter("@manager", condition["manager"]));
+                parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
+                parameters.Add(new SQLiteParameter("@idcard", condition["Idcard"]));
+                parameters.Add(new SQLiteParameter("@address", condition["address"]));
+                parameters.Add(new SQLiteParameter("@year_inventory", condition["year_inventory"]));
+                parameters.Add(new SQLiteParameter("@year_outbound", condition["year_outbound"]));
+                parameters.Add(new SQLiteParameter("@output_from", condition["output_from"]));
+                parameters.Add(new SQLiteParameter("@output_to", condition["output_to"]));
+                parameters.Add(new SQLiteParameter("@total_area_from", condition["total_area_from"]));
+                parameters.Add(new SQLiteParameter("@total_area_to", condition["total_area_to"]));
+                parameters.Add(new SQLiteParameter("@pen_area_from", condition["pen_area_from"]));
+                parameters.Add(new SQLiteParameter("@pen_area_to", condition["pen_area_to"]));
+                parameters.Add(new SQLiteParameter("@midden_area_from", condition["midden_area_from"]));
+                parameters.Add(new SQLiteParameter("@midden_area_to", condition["midden_area_to"]));
+                parameters.Add(new SQLiteParameter("@pullttion_area_from", condition["pullttion_area_from"]));
+                parameters.Add(new SQLiteParameter("@pullttion_area_to", condition["pullttion_area_to"]));
+                parameters.Add(new SQLiteParameter("@cueernt_inventory_from", condition["cueernt_inventory_from"]));
+                parameters.Add(new SQLiteParameter("@cueernt_inventory_to", condition["cueernt_inventory_to"]));
+                parameters.Add(new SQLiteParameter("@animal_qualify", condition["animal_qualify"]));
+                parameters.Add(new SQLiteParameter("@solid_pollution", condition["solid_pollution"]));
+                parameters.Add(new SQLiteParameter("@report_or_filings", condition["report_or_filings"]));
+            }
             DataTable dt = this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
             if (dt != null)
             {
@@ -102,10 +159,90 @@ namespace com.vdm.dal
         public DataTable queryAllAnimal(Hashtable condition, int pageIndex, int pageSize)
         {
             string sql = "select * from t_animal where 1 = 1";
-            if(condition!=null && condition["town"].ToString() != "")
+            if(condition != null)
             {
-                sql += "    and town = @town";
+                if (condition["breed_name"].ToString() != "")
+                {
+                    sql += "    and breed_name = @breed_name";
+                }
+                if (condition["town"].ToString() != "")
+                {
+                    sql += "    and town = @town";
+                }
+                if (condition["villiage"].ToString() != "")
+                {
+                    sql += "    and villiage = @villiage";
+                }
+                if (condition["breed_type"].ToString() != "")
+                {
+                    sql += "    and breed_type = @breed_type";
+                }
+                if (condition["manager"].ToString() != "")
+                {
+                    sql += "    and manager = @manager";
+                }
+                if (condition["phone_number"].ToString() != "")
+                {
+                    sql += "    and phone_number = @phone_number";
+                }
+                if (condition["Idcard"].ToString() != "")
+                {
+                    sql += "    and idcard = @idcard";
+                }
+                if (condition["address"].ToString() != "")
+                {
+                    sql += "    and address = @address";
+                }
+                if (condition["year_inventory"].ToString() != "")
+                {
+                    sql += "    and year_inventory = @year_inventory";
+                }
+                if (condition["year_outbound"].ToString() != "")
+                {
+                    sql += "    and year_outbound = @year_outbound";
+                }
+                if (condition["output_from"].ToString() != "" && condition["output_to"].ToString() != "")
+                {
+                    sql += "  and  output BETWEEN '" + condition["output_from"].ToString() + "' AND '" + condition["output_to"].ToString() + "'";
+                }
+                if (condition["total_area_from"].ToString() != "" && condition["total_area_to"].ToString() != "")
+                {
+                    sql += " and   total_area BETWEEN '" + condition["total_area_from"].ToString() + "' AND '" + condition["total_area_to"].ToString() + "'";
+                }
+                if (condition["total_area_from"].ToString() != "" && condition["total_area_to"].ToString() != "")
+                {
+                    sql += " and   total_area BETWEEN '" + condition["total_area_from"].ToString() + "' AND '" + condition["total_area_to"].ToString() + "'";
+                }
+                if (condition["pen_area_from"].ToString() != "" && condition["pen_area_to"].ToString() != "")
+                {
+                    sql += " and   pen_area BETWEEN '" + condition["pen_area_from"].ToString() + "' AND '" + condition["pen_area_to"].ToString() + "'";
+                }
+                if (condition["midden_area_from"].ToString() != "" && condition["midden_area_to"].ToString() != "")
+                {
+                    sql += " and   midden_area BETWEEN '" + condition["midden_area_from"].ToString() + "' AND '" + condition["midden_area_to"].ToString() + "'";
+                }
+                if (condition["pullttion_area_from"].ToString() != "" && condition["pullttion_area_to"].ToString() != "")
+                {
+                    sql += " and   pullttion_area_from BETWEEN '" + condition["pullttion_area_from"].ToString() + "' AND '" + condition["pullttion_area_to"].ToString() + "'";
+                }
+                if (condition["cueernt_inventory_from"].ToString() != "" && condition["cueernt_inventory_to"].ToString() != "")
+                {
+                    sql += " and   cueernt_inventory BETWEEN '" + condition["cueernt_inventory_from"].ToString() + "' AND '" + condition["cueernt_inventory_to"].ToString() + "'";
+                }
+                if (condition["animal_qualify"].ToString() != "")
+                {
+                    sql += "    and animal_qualify = @animal_qualify";
+                }
+                if (condition["solid_pollution"].ToString() != "")
+                {
+                    sql += "    and solid_pollution = @solid_pollution";
+                }
+                if (condition["report_or_filings"].ToString() != "")
+                {
+                    sql += "    and report_or_filings = @report_or_filings";
+                }
             }
+            
             sql += " order by create_datetime desc";
             int offset = 0;
             int totalPeople = this.getTotalCount(condition);
@@ -128,7 +265,31 @@ namespace com.vdm.dal
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
+                parameters.Add(new SQLiteParameter("@breed_name", condition["breed_name"]));
                 parameters.Add(new SQLiteParameter("@town", condition["town"]));
+                parameters.Add(new SQLiteParameter("@villiage", condition["villiage"]));
+                parameters.Add(new SQLiteParameter("@breed_type", condition["breed_type"]));
+                parameters.Add(new SQLiteParameter("@manager", condition["manager"]));
+                parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
+                parameters.Add(new SQLiteParameter("@idcard", condition["Idcard"]));
+                parameters.Add(new SQLiteParameter("@address", condition["address"]));
+                parameters.Add(new SQLiteParameter("@year_inventory", condition["year_inventory"]));
+                parameters.Add(new SQLiteParameter("@year_outbound", condition["year_outbound"]));
+                parameters.Add(new SQLiteParameter("@output_from", condition["output_from"]));
+                parameters.Add(new SQLiteParameter("@output_to", condition["output_to"]));
+                parameters.Add(new SQLiteParameter("@total_area_from", condition["total_area_from"]));
+                parameters.Add(new SQLiteParameter("@total_area_to", condition["total_area_to"]));
+                parameters.Add(new SQLiteParameter("@pen_area_from", condition["pen_area_from"]));
+                parameters.Add(new SQLiteParameter("@pen_area_to", condition["pen_area_to"]));
+                parameters.Add(new SQLiteParameter("@midden_area_from", condition["midden_area_from"]));
+                parameters.Add(new SQLiteParameter("@midden_area_to", condition["midden_area_to"]));
+                parameters.Add(new SQLiteParameter("@pullttion_area_from", condition["pullttion_area_from"]));
+                parameters.Add(new SQLiteParameter("@pullttion_area_to", condition["pullttion_area_to"]));
+                parameters.Add(new SQLiteParameter("@cueernt_inventory_from", condition["cueernt_inventory_from"]));
+                parameters.Add(new SQLiteParameter("@cueernt_inventory_to", condition["cueernt_inventory_to"]));
+                parameters.Add(new SQLiteParameter("@animal_qualify", condition["animal_qualify"]));
+                parameters.Add(new SQLiteParameter("@solid_pollution", condition["solid_pollution"]));
+                parameters.Add(new SQLiteParameter("@report_or_filings", condition["report_or_filings"]));
             }
             return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
         }

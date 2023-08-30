@@ -154,14 +154,14 @@ namespace com.vdm.form
             if (this.cbTown.SelectedValue != null)
             {
                 orgBLL = new OrgBLL();
-                int select_village = 0;
                 if (this.cbTown.SelectedItem != null)
                 {
                     KeyValue selectValue = (KeyValue)this.cbTown.SelectedItem;
                     if (selectValue.Key != "")
                     {
-                        select_village = int.Parse(selectValue.Key);
-                        List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
+                        string org_code = selectValue.Key;
+                        int pre_org_id = this.orgBLL.getOrgIdByOrgCode(org_code);
+                        List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
                         if (list_village != null)
                         {
                             list_village.Add(new KeyValue("", "请选择"));
@@ -189,10 +189,65 @@ namespace com.vdm.form
        /// <param name="e"></param>
         private void btSearch_Click(object sender, EventArgs e)
         {
-
-
+            string town = this.cbTown.SelectedValue.ToString();
+            string villiage = this.cbVillage.SelectedValue.ToString();
+            string breed_name = this.tbBreed_name.Text.Trim();
+            string breed_type = this.cbBreed_type.SelectedValue.ToString();
+            string manager = this.tbManager.Text.Trim();
+            string idcard = this.tbIdcard.Text.Trim();
+            string address = this.tbAddress.Text.Trim();
+            string phone_number = this.tbPhone_number.Text.Trim();
+            int year_inventory = int.Parse(this.cbYear_inventory.SelectedValue.ToString());
+            int year_outbound = int.Parse(this.cbYear_outbound.SelectedValue.ToString());
+            float output_from = float.Parse(this.tbOutput_From.Text.Trim());
+            float output_to = float.Parse(this.tbOutput_To.Text.Trim());
+            float total_area_from = float.Parse(this.tbPen_area_From.Text.Trim());
+            float total_area_to = float.Parse(this.tbPen_area_To.Text.Trim());
+            float pen_area_from = float.Parse(this.tbPen_area_From.Text.Trim());
+            float pen_area_to = float.Parse(this.tbPen_area_To.Text.Trim());
+            float midden_area_from = float.Parse(this.tbMidden_area_From.Text.Trim());
+            float midden_area_to = float.Parse(this.tbMidden_area_To.Text.Trim());
+            float pullttion_area_from = float.Parse(this.tbPullttion_area_From.Text.Trim());
+            float pullttion_area_to = float.Parse(this.tbPullttion_area_To.Text.Trim());
+            int cueernt_inventory_from = int.Parse(this.tbCueernt_inventory_From.Text.Trim());
+            int cueernt_inventory_to = int.Parse(this.tbCueernt_inventory_To.Text.Trim());
+            string animal_qualify = this.cbAnimal_qualify.SelectedValue.ToString();
+            string solid_pollution = this.cbSolid_pollution.SelectedValue.ToString();
+            string report_or_filings = this.cbReport_or_filings.SelectedValue.ToString();
+            //将查询条件添加到hashtable
             this.condition = new Hashtable();
+            this.condition.Add("town", town);
+            this.condition.Add("villiage", villiage);
+            this.condition.Add("breed_name", breed_name);
+            this.condition.Add("breed_type", breed_type);
+            this.condition.Add("manager", manager);
+            this.condition.Add("idcard", idcard);
+            this.condition.Add("address", address);
+            this.condition.Add("phone_number", phone_number);
+            this.condition.Add("year_inventory", year_inventory);
+            this.condition.Add("year_outbound", year_outbound);
+            this.condition.Add("output_from", output_from);
+            this.condition.Add("output_to", output_to);
+            this.condition.Add("total_area_from", total_area_from);
+            this.condition.Add("total_area_to", total_area_to);
+            this.condition.Add("pen_area_from", pen_area_from);
+            this.condition.Add("pen_area_to", pen_area_to);
+            this.condition.Add("midden_area_from", midden_area_from);
+            this.condition.Add("midden_area_to", midden_area_to);
+            this.condition.Add("pullttion_area_from", pullttion_area_from);
+            this.condition.Add("pullttion_area_to", pullttion_area_to);
+            this.condition.Add("cueernt_inventory_from", cueernt_inventory_from);
+            this.condition.Add("cueernt_inventory_to", cueernt_inventory_to);
+            this.condition.Add("animal_qualify", animal_qualify);
+            this.condition.Add("solid_pollution", solid_pollution);
 
+            animalBLL = new AnimalBLL();
+            DataTable dtAnimal = animalBLL.getAllAnimal(condition, pageIndex, pageSize);
+            //获得总页数
+            int totalCount = this.animalBLL.getTotalCount(condition);
+            this.pagination.PageSize = this.pageSize;
+            this.pagination.TotalCount = totalCount;
+            this.dgAnimalList.DataSource = dtAnimal;
         }
     }
 }
