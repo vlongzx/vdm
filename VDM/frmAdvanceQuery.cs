@@ -19,7 +19,6 @@ namespace com.vdm.form
     {
         frmPeopleList frmpl;
         private DictBLL dictBLL = null;
-        private PeopleBLL peopleBLL = null;
         public frmAdvanceQuery()
         {
             InitializeComponent();

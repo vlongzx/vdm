@@ -19,6 +19,15 @@ namespace com.vdm.bll
             this.animalDAL = new AnimalDAL();
         }
         /// <summary>
+        ///  获得畜牧信息的总数
+        /// </summary>
+        /// <param name="condition"></param>
+        /// <returns></returns>
+        public int getTotalCount(Hashtable condition)
+        {
+            return this.animalDAL.getTotalCount(condition);
+        }
+        /// <summary>
         ///  获得畜牧信息
         /// </summary>
         /// <param name="breed_id"></param>
