@@ -67,6 +67,7 @@
     <Compile Include="AnimalBLL.cs" />
     <Compile Include="DataAuthBLL.cs" />
     <Compile Include="DictBLL.cs" />
+    <Compile Include="FamerBLL.cs" />
     <Compile Include="FunctionBLL.cs" />
     <Compile Include="OrgBLL.cs" />
     <Compile Include="PeopleBLL.cs" />

@@ -477,8 +477,8 @@ namespace com.vdm.form
             people.Birthday = this.dtBirthday.Text.ToString();
             people.Idcard = this.tbIdcard.Text.Trim();
             people.Phone_number = this.tbPhone_number.Text.Trim();
-            people.Town = this.cbTown.SelectedValue.ToString();
-            people.Villiage = this.cbVillage.SelectedValue.ToString();
+            people.Town = this.cbTown.Text.ToString();
+            people.Villiage = this.cbVillage.Text.ToString();
             people.Marital_status = this.cbMarital_status.SelectedValue.ToString();
             people.Is_real_name = this.cbIs_real_name.SelectedValue.ToString();
             people.Blood_type = this.cbBlood_type.SelectedValue.ToString();

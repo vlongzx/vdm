@@ -49,6 +49,7 @@
     <Compile Include="Animal.cs" />
     <Compile Include="DataAuthority.cs" />
     <Compile Include="Dict.cs" />
+    <Compile Include="Famer.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="Org.cs" />
     <Compile Include="People.cs" />
