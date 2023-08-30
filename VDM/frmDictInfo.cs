@@ -34,13 +34,23 @@ namespace com.vdm.form
         {
             this.dict_code = dict_code;
             this.dict_name = dict_name;
+
             InitializeComponent();
         }
 
         private void frmDictInfo_Load(object sender, EventArgs e)
         {
-            this.tbDict_code.Text = dict_code;
-            this.tbDict_name.Text = dict_name;
+
+            if (dict_code == "0")
+            {
+                this.tbDict_code.ReadOnly = false;
+                this.tbDict_name.ReadOnly = false;
+            }
+            else
+            {
+                this.tbDict_code.Text = dict_code;
+                this.tbDict_name.Text = dict_name;
+            }
             this.dictBLL = new DictBLL();
             Dict dict = this.dictBLL.getDictById(id);
             if (dict != null)

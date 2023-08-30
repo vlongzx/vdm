@@ -191,14 +191,12 @@ namespace com.vdm.form
                 this.cbTown.DisplayMember = "value";
                 this.cbTown.ValueMember = "key";
             }
-            int select_village = int.Parse(this.cbTown.SelectedValue.ToString());
-            List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
-            if (list_village != null)
-            {
-                this.cbVillage.DataSource = list_village;
-                this.cbVillage.DisplayMember = "value";
-                this.cbVillage.ValueMember = "key";
-            }
+            cbTown.SelectedValue = "";
+            List<KeyValue> list_village = new List<KeyValue>();
+            list_village.Add(new KeyValue("", "请选择"));
+            this.cbVillage.DataSource = list_village;
+            this.cbVillage.DisplayMember = "value";
+            this.cbVillage.ValueMember = "key";
 
             //初始化是否外出
             List<KeyValue> list_work_or_study = dictBLL.getDict("work_or_study");
@@ -572,18 +570,31 @@ namespace com.vdm.form
             if (this.cbTown.SelectedValue != null)
             {
                 orgBLL = new OrgBLL();
-                int select_village = 0;
                 if (this.cbTown.SelectedItem != null)
                 {
                     KeyValue selectValue = (KeyValue)this.cbTown.SelectedItem;
-                    select_village = int.Parse(selectValue.Key);
-                }
-                List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
-                if (list_village != null)
-                {
-                    this.cbVillage.DataSource = list_village;
-                    this.cbVillage.DisplayMember = "value";
-                    this.cbVillage.ValueMember = "key";
+                    if (selectValue.Key != "")
+                    {
+                        string org_code = selectValue.Key;
+                        int pre_org_id = this.orgBLL.getOrgIdByOrgCode(org_code);
+                        List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
+                        if (list_village != null)
+                        {
+                            list_village.Add(new KeyValue("", "请选择"));
+                            this.cbVillage.DataSource = list_village;
+                            this.cbVillage.DisplayMember = "value";
+                            this.cbVillage.ValueMember = "key";
+                            this.cbVillage.SelectedValue = "";
+                        }
+                    }
+                    else
+                    {
+                        List<KeyValue> list_village = new List<KeyValue>();
+                        list_village.Add(new KeyValue("", "请选择"));
+                        this.cbVillage.DataSource = list_village;
+                        this.cbVillage.DisplayMember = "value";
+                        this.cbVillage.ValueMember = "key";
+                    }
                 }
             }
         }
