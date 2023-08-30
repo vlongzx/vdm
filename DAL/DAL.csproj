@@ -70,6 +70,7 @@
     <Compile Include="AnimalDAL.cs" />
     <Compile Include="BaseDAL.cs" />
     <Compile Include="DataAuthDAL.cs" />
+    <Compile Include="FamerDAL.cs" />
     <Compile Include="FunctionDAL.cs" />
     <Compile Include="OrgDAL.cs" />
     <Compile Include="DictDAL.cs" />
