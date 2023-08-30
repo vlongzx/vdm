@@ -37,7 +37,8 @@ namespace com.vdm.form
                 foreach(KeyValue town in listTown)
                 {
                     this.tvOrg.Nodes.Add(town.Key, town.Value);
-                    List<KeyValue> listVillage = this.orgBLL.getOrgByTown(int.Parse(town.Key));
+                    int pre_org_id = this.orgBLL.getOrgIdByOrgCode(town.Key);
+                    List<KeyValue> listVillage = this.orgBLL.getOrgByTown(pre_org_id);
                     if(listVillage != null)
                     {
                         foreach (KeyValue village in listVillage)

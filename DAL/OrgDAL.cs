@@ -51,11 +51,11 @@ namespace com.vdm.dal
         /// <returns></returns>
         public int getOrgIdByOrgCode(string org_code)
         {
-            string sql = "select id from t_org where org_code = '" + org_code + "'";
+            string sql = "select org_id from t_org where org_code = '" + org_code + "'";
             DataTable dt = this.sqlDB.ExecuteDataTable(sql);
             if(dt != null && dt.Rows.Count>0)
             {
-                return int.Parse(dt.Rows[0]["id"].ToString());
+                return int.Parse(dt.Rows[0]["org_id"].ToString());
             }
             return 0;
         }
