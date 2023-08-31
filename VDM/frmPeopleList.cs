@@ -21,9 +21,8 @@ namespace com.vdm.form
         private OrgBLL orgBLL = null;
         private DictBLL dictBLL = null;
         private PeopleBLL peopleBLL = null;
-
-        //高级查询条件
         private Hashtable condition = null;
+        //高级查询条件
         private Hashtable conditionAdvance = new Hashtable();
         private int pageIndex = 1;
         private int pageSize = 20;
@@ -65,9 +64,9 @@ namespace com.vdm.form
         /// </summary>
         public void InitControlData()
         {
-            dictBLL = new DictBLL();
 
             //初始化与户主的关系
+            dictBLL = new DictBLL();
             List<KeyValue> list_relationship = dictBLL.getDict("relationship");
             // list_relationship.Add(new KeyValue("", ""));
             if (list_relationship != null)
@@ -77,6 +76,7 @@ namespace com.vdm.form
                 this.cbRelationship.ValueMember = "key";
             }
             //初始化民族
+            this.dictBLL = new DictBLL();
             List<KeyValue> list_nation = dictBLL.getDict("nation");
             list_nation.Add(new KeyValue("", ""));
             if (list_nation != null)
@@ -86,6 +86,7 @@ namespace com.vdm.form
                 this.cbNation.ValueMember = "key";
             }
             //初始化性别
+
             List<KeyValue> list_sex = dictBLL.getDict("sex");
             if (list_sex != null)
             {
@@ -198,11 +199,34 @@ namespace com.vdm.form
 
             peopleBLL = new PeopleBLL();
             //初始化加载数据
-            DataTable dt_people= this.peopleBLL.getAllPeopleDataTable(condition, pageIndex, pageSize);
-            int totalCount = this.peopleBLL.getTotalPeopleIf(condition);
-            this.pagination.PageSize = this.pageSize;
-            this.pagination.TotalCount = totalCount;
-            this.dgPeopleList.DataSource = dt_people; 
+            List<People> list_people;
+            DataTable dt_people;
+            if (condition == null)
+            {
+                //获得总页数
+                this.peopleBLL = new PeopleBLL();
+
+                int totalCount = this.peopleBLL.getTotalPeople();
+                this.pagination.PageSize = this.pageSize;
+                this.pagination.TotalCount = totalCount;
+                //  list_people = this.peopleBLL.getAllPeopleList(pageIndex,pageSize);
+                dt_people = this.peopleBLL.getAllPeopleDataTable(pageIndex, pageSize);
+            }
+            //条件查询
+            else
+            {
+                //获得总页数
+                this.peopleBLL = new PeopleBLL();
+                int totalCount = this.peopleBLL.getTotalPeopleIf(condition);
+                this.pagination.PageSize = this.pageSize;
+                this.pagination.TotalCount = totalCount;
+                // list_people = this.peopleBLL.getAllPeopleList(condition, pageIndex, pageSize);
+                dt_people = this.peopleBLL.getAllPeopleDataTable(condition, pageIndex, pageSize);
+            }
+
+            // this.dgPeopleList.DataSource = list_people;
+            this.dgPeopleList.DataSource = dt_people; ;
+
         }
 
         private void btEdit_Click(object sender, EventArgs e)

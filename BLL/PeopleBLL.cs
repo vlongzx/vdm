@@ -32,8 +32,34 @@ namespace com.vdm.bll
         {
             return this.peopleDAL.getTotalPeopleIf(conditon);
         }
+        /// <summary>
+        ///  获得所有的人员信息
+        /// </summary>
+        /// <returns></returns>
+        public List<People> getAllPeopleList(int pageIndex,int pageSize)
+        {
+            List<People> list_people = new List<People>();
+            DataTable dt = this.peopleDAL.getAllPeople(pageIndex, pageSize);
 
+            if(dt != null)
+            {
+                People people = null;
+                foreach(DataRow row in dt.Rows)
+                {
+                    people = MakeObject.MakeObjectToPeople(row);
+                    list_people.Add(people);
+                }
+            }
+            return list_people;
+        }
 
+        public DataTable getAllPeopleDataTable(int pageIndex, int pageSize)
+        {
+            List<People> list_people = new List<People>();
+            DataTable dt = this.peopleDAL.getAllPeople(pageIndex, pageSize);
+
+            return dt;
+        }
 
         public List<People> getAllPeopleList(Hashtable condition, int pageIndex, int pageSize)
         {
