@@ -65,6 +65,15 @@ namespace com.vdm.bll
             return this.animalDAL.queryAllAnimal(condition, PageIndex, PageSize);
         }
         /// <summary>
+        ///  获得畜牧信息的总数
+        /// </summary>
+        /// <param name="condition"></param>
+        /// <returns></returns>
+        public int getTotalCount(Hashtable condition)
+        {
+            return this.animalDAL.getTotalCount(condition);
+        }
+        /// <summary>
         ///  增加畜牧
         /// </summary>
         /// <param name="animal"></param>
