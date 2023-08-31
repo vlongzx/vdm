@@ -170,9 +170,9 @@ namespace com.vdm.form
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            Form formPeopleAdd = new frmPeopleInfo();
-            formPeopleAdd.ShowDialog();
-            if (formPeopleAdd.DialogResult == DialogResult.OK)
+            Form formFamerAdd = new frmFamerInfo();
+            formFamerAdd.ShowDialog();
+            if (formFamerAdd.DialogResult == DialogResult.OK)
             {
                 InitListView(null, this.pageIndex, this.pageSize);
             }
@@ -181,6 +181,46 @@ namespace com.vdm.form
         private void btEdit_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        /// <summary>
+        /// 乡镇选择发生改变触发该事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cbTown_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (this.cbTown.SelectedValue != null)
+            {
+                orgBLL = new OrgBLL();
+                if (this.cbTown.SelectedItem != null)
+                {
+                    KeyValue selectValue = (KeyValue)this.cbTown.SelectedItem;
+                    if (selectValue.Key != "")
+                    {
+                        string org_code = selectValue.Key;
+                        int pre_org_id = this.orgBLL.getOrgIdByOrgCode(org_code);
+                        List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
+                        if (list_village != null)
+                        {
+                            list_village.Add(new KeyValue("", "请选择"));
+                            this.cbVillage.DataSource = list_village;
+                            this.cbVillage.DisplayMember = "value";
+                            this.cbVillage.ValueMember = "key";
+                            this.cbVillage.SelectedValue = "";
+                        }
+                    }
+                    else
+                    {
+                        List<KeyValue> list_village = new List<KeyValue>();
+                        list_village.Add(new KeyValue("", "请选择"));
+                        this.cbVillage.DataSource = list_village;
+                        this.cbVillage.DisplayMember = "value";
+                        this.cbVillage.ValueMember = "key";
+                    }
+                }
+            }
         }
     }
 }

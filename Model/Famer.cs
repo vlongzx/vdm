@@ -14,8 +14,8 @@ namespace com.vdm.model
         private string holder_name;
         private string idcard;
         private string phone_number;
-        private string car_brrand;
-        private long mechine_type;
+        private string car_brand;
+        private string mechine_type;
         private string plant_type;
         private float plant_area;
         private string plant_area_type;
@@ -34,7 +34,8 @@ namespace com.vdm.model
         private long animal_output;
         private string create_datetime;
         private string creater;
-
+        private string last_update_datetime;
+        private string last_updater;
         public long Famer_id
         {
             get
@@ -113,16 +114,16 @@ namespace com.vdm.model
             }
         }
 
-        public string Car_brrand
+        public string Car_brand
         {
             get
             {
-                return car_brrand;
+                return car_brand;
             }
 
             set
             {
-                car_brrand = value;
+                car_brand = value;
             }
         }
 
@@ -362,7 +363,7 @@ namespace com.vdm.model
             }
         }
 
-        public long Mechine_type
+        public string Mechine_type
         {
             get
             {
@@ -372,6 +373,32 @@ namespace com.vdm.model
             set
             {
                 mechine_type = value;
+            }
+        }
+
+        public string Last_update_datetime
+        {
+            get
+            {
+                return last_update_datetime;
+            }
+
+            set
+            {
+                last_update_datetime = value;
+            }
+        }
+
+        public string Last_updater
+        {
+            get
+            {
+                return last_updater;
+            }
+
+            set
+            {
+                last_updater = value;
             }
         }
     }
