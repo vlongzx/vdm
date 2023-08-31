@@ -15,16 +15,16 @@ using System.Windows.Forms;
 
 namespace com.vdm.form
 {
-    public partial class frmAdvanceQuery : UIEditForm
+    public partial class frmPeopleAdvanceQuery : UIEditForm
     {
         frmPeopleList frmpl;
         private DictBLL dictBLL = null;
-        public frmAdvanceQuery()
+        public frmPeopleAdvanceQuery()
         {
             InitializeComponent();
         }
 
-        public frmAdvanceQuery(frmPeopleList frmpl)
+        public frmPeopleAdvanceQuery(frmPeopleList frmpl)
         {
             InitializeComponent();
             this.frmpl = frmpl;

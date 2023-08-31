@@ -1,4 +1,5 @@
-﻿using com.vdm.dal;
+﻿using com.vdm.common;
+using com.vdm.dal;
 using com.vdm.model;
 using System;
 using System.Collections;
@@ -38,5 +39,18 @@ namespace com.vdm.bll
             return dt;
         }
 
+        public Result AddFamer(Famer famer)
+        {
+            return this.famerDAL.CreateFamer(famer);
+        }
+        public Result EditFamer(Famer famer)
+        {
+            return this.famerDAL.UpdateFamer(famer);
+        }
+
+        public Result DelFamer(long famer_id)
+        {
+            return this.famerDAL.DeleteFamer(famer_id);
+        }
     }
 }

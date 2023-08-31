@@ -103,9 +103,7 @@
     <Compile Include="frmAnimalList.Designer.cs">
       <DependentUpon>frmAnimalList.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAdvanceQuery.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="frmAdvanceQuery.cs" />
     <Compile Include="frmAdvanceQuery.Designer.cs">
       <DependentUpon>frmAdvanceQuery.cs</DependentUpon>
     </Compile>

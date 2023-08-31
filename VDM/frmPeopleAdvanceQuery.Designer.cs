@@ -1,6 +1,6 @@
 ﻿namespace com.vdm.form
 {
-    partial class frmAdvanceQuery
+    partial class frmPeopleAdvanceQuery
     {
         /// <summary>
         /// Required designer variable.

@@ -441,9 +441,12 @@ namespace com.vdm.form
             this.cbVillage.SelectedValue = "";
             this.tbSkill_type.Text = "";
             this.cbMarital_status.SelectedValue = "";
+            //清空高级查询条件
+            conditionAdvance = new Hashtable();
             //查询所有人员信息
             condition = null;
             InitListView(condition, this.pageIndex, this.pageSize);
+
         }
 
 
@@ -610,7 +613,7 @@ namespace com.vdm.form
 
         private void btAdanceSearch_Click(object sender, EventArgs e)
         {
-            Form formAdvanceQuery = new frmAdvanceQuery(this);
+            Form formAdvanceQuery = new frmPeopleAdvanceQuery(this);
             formAdvanceQuery.ShowDialog();
         }
     }

@@ -137,7 +137,7 @@ namespace com.vdm.dal
         /// </summary>
         /// <param name="animal"></param>
         /// <returns></returns>
-        public Result CreateAnimal(Famer famer)
+        public Result CreateFamer(Famer famer)
         {
             //构建sql语句
             List<string> listColumnName = new List<string>();
@@ -183,7 +183,7 @@ namespace com.vdm.dal
         /// </summary>
         /// <param name="animal"></param>
         /// <returns></returns>
-        public Result UpdateAnimal(Famer famer)
+        public Result UpdateFamer(Famer famer)
         {
             //构建参数值
             List<string> listSetValue = new List<string>();
@@ -221,7 +221,7 @@ namespace com.vdm.dal
         /// </summary>
         /// <param name="famer_id"></param>
         /// <returns></returns>
-        public Result DeleteAnimal(int famer_id)
+        public Result DeleteFamer(long famer_id)
         {
             string sql = "delete from t_famer where famer_id=" + famer_id;
             return this.SqlDbHelper.ExecuteNonQuery(sql);
