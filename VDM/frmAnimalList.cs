@@ -1,5 +1,6 @@
 ﻿using com.vdm.bll;
 using com.vdm.common;
+using com.vdm.form.utils;
 using Sunny.UI;
 using System;
 using System.Collections;
@@ -389,71 +390,71 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btImport_Click(object sender, EventArgs e)
         {
-            DataTable dt = ExcelUtil.ExcelToDataTable();
-            //若有数据
-            if (dt.Rows.Count != 0)
-            {
-                People people = new People();
-                peopleBLL = new PeopleBLL();
-                try
-                {
-                    foreach (DataRow dataRow in dt.Rows)
-                    {
+            //DataTable dt = ExcelUtil.ExcelToDataTable();
+            ////若有数据
+            //if (dt.Rows.Count != 0)
+            //{
+            //    People people = new People();
+            //    peopleBLL = new PeopleBLL();
+            //    try
+            //    {
+            //        foreach (DataRow dataRow in dt.Rows)
+            //        {
 
-                        //将excel数据值封装业务对象
-                        //------------------基础信息部分---------------------------------
+            //            //将excel数据值封装业务对象
+            //            //------------------基础信息部分---------------------------------
 
-                        people.People_name = dataRow["姓名"].ToString();
-                        people.Sex = dataRow["性别"].ToString();
-                        people.Nation = dataRow["民族"].ToString();
-                        people.Relationship = dataRow["与户主关系"].ToString();
-                        people.Birthday = dataRow["出生日期"].ToString();
-                        people.Idcard = dataRow["身份证号"].ToString();
-                        people.Phone_number = dataRow["联系电话"].ToString();
-                        people.Town = dataRow["所属镇"].ToString();
-                        people.Villiage = dataRow["所属村"].ToString();
-                        people.Marital_status = dataRow["婚姻状况"].ToString();
-                        people.Is_real_name = dataRow["是否实名"].ToString();
-                        people.Blood_type = dataRow["血型"].ToString();
-                        people.Remark = dataRow["备注"].ToString();
-                        people.Politcal_outlook = dataRow["政治面貌"].ToString();
-                        people.Join_party_time = dataRow["入党时间"].ToString();
-                        people.Religious_belief = dataRow["宗教信仰"].ToString();
-                        people.Education = dataRow["学历"].ToString();
-                        people.Work_or_study = dataRow["工作地点/学习地点"].ToString();
-                        people.Industry = dataRow["从事行业"].ToString();
-                        people.Unit_or_school = dataRow["工作单位/学校名称"].ToString();
-                        people.Work_study_location = dataRow["婚姻状况"].ToString();
-                        people.Skill_type = dataRow["技能类型"].ToString();
-                        people.Employ_guide = dataRow["就业指导"].ToString();
-                        people.Skill_train = dataRow["技能培训"].ToString();
-                        people.Is_career_grade = dataRow["有无职称"].ToString();
-                        people.Career_grade = dataRow["职称等级"].ToString();
-                        people.Career_get_time = dataRow["职称获得时间"].ToString();
-                        people.Disability_type = dataRow["残疾分类"].ToString();
-                        people.Disability_grade = dataRow["残疾等级"].ToString();
-                        people.Disability_reason = dataRow["因何致残"].ToString();
-                        people.Big_ill_help = dataRow["大病救助情况"].ToString();
-                        people.Temporary_help = dataRow["临时救助情况"].ToString();
-                        people.Is_unable_old = dataRow["是否失能老人"].ToString();
-                        people.Is_relocation = dataRow["是否易地搬迁户"].ToString();
-                        people.Low_five = dataRow["低保户/五保户"].ToString();
-                        people.Low_five_grade = dataRow["低保等级/五保类别"].ToString();
-                        people.Military_service = dataRow["婚姻状况"].ToString();
-                        people.Creater = LoginInfo.CurrentUser.Account;
-                        people.Create_datetime = DateTime.Now.ToString();
-                        peopleBLL.AddPeople(people);
-                    }
-                    MessageBox.Show("导入成功");
-                    //使用的是全局变量people
-                    InitListView(condition, this.pageIndex, this.pageSize);
-                    //this.pagination.InitPagination();
-                }
-                catch
-                {
-                    MessageBox.Show("导入失败");
-                }
-            }
+            //            people.People_name = dataRow["姓名"].ToString();
+            //            people.Sex = dataRow["性别"].ToString();
+            //            people.Nation = dataRow["民族"].ToString();
+            //            people.Relationship = dataRow["与户主关系"].ToString();
+            //            people.Birthday = dataRow["出生日期"].ToString();
+            //            people.Idcard = dataRow["身份证号"].ToString();
+            //            people.Phone_number = dataRow["联系电话"].ToString();
+            //            people.Town = dataRow["所属镇"].ToString();
+            //            people.Villiage = dataRow["所属村"].ToString();
+            //            people.Marital_status = dataRow["婚姻状况"].ToString();
+            //            people.Is_real_name = dataRow["是否实名"].ToString();
+            //            people.Blood_type = dataRow["血型"].ToString();
+            //            people.Remark = dataRow["备注"].ToString();
+            //            people.Politcal_outlook = dataRow["政治面貌"].ToString();
+            //            people.Join_party_time = dataRow["入党时间"].ToString();
+            //            people.Religious_belief = dataRow["宗教信仰"].ToString();
+            //            people.Education = dataRow["学历"].ToString();
+            //            people.Work_or_study = dataRow["工作地点/学习地点"].ToString();
+            //            people.Industry = dataRow["从事行业"].ToString();
+            //            people.Unit_or_school = dataRow["工作单位/学校名称"].ToString();
+            //            people.Work_study_location = dataRow["婚姻状况"].ToString();
+            //            people.Skill_type = dataRow["技能类型"].ToString();
+            //            people.Employ_guide = dataRow["就业指导"].ToString();
+            //            people.Skill_train = dataRow["技能培训"].ToString();
+            //            people.Is_career_grade = dataRow["有无职称"].ToString();
+            //            people.Career_grade = dataRow["职称等级"].ToString();
+            //            people.Career_get_time = dataRow["职称获得时间"].ToString();
+            //            people.Disability_type = dataRow["残疾分类"].ToString();
+            //            people.Disability_grade = dataRow["残疾等级"].ToString();
+            //            people.Disability_reason = dataRow["因何致残"].ToString();
+            //            people.Big_ill_help = dataRow["大病救助情况"].ToString();
+            //            people.Temporary_help = dataRow["临时救助情况"].ToString();
+            //            people.Is_unable_old = dataRow["是否失能老人"].ToString();
+            //            people.Is_relocation = dataRow["是否易地搬迁户"].ToString();
+            //            people.Low_five = dataRow["低保户/五保户"].ToString();
+            //            people.Low_five_grade = dataRow["低保等级/五保类别"].ToString();
+            //            people.Military_service = dataRow["婚姻状况"].ToString();
+            //            people.Creater = LoginInfo.CurrentUser.Account;
+            //            people.Create_datetime = DateTime.Now.ToString();
+            //            peopleBLL.AddPeople(people);
+            //        }
+            //        MessageBox.Show("导入成功");
+            //        //使用的是全局变量people
+            //        InitListView(condition, this.pageIndex, this.pageSize);
+            //        //this.pagination.InitPagination();
+            //    }
+            //    catch
+            //    {
+            //        MessageBox.Show("导入失败");
+            //    }
+            //}
         }
         /// <summary>
         ///  导出
