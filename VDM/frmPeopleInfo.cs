@@ -21,6 +21,7 @@ namespace com.vdm.form
         private PeopleBLL peopleBLL = null;
         private string opreation_mode = "ADD";//默认增加操作
         private int people_id = 0;
+       // private bool editFlag = false;
         public frmPeopleInfo()
         {
             InitializeComponent();
@@ -48,7 +49,7 @@ namespace com.vdm.form
             {
                 peopleBLL = new PeopleBLL();
                 People people = this.peopleBLL.getPeople(this.people_id);
-
+                //editFlag = true;
                 //界面数据绑定
                 this.tbPeople_name.Text = people.People_name;
                 this.cbSex.SelectedValue = people.Sex;
@@ -62,6 +63,9 @@ namespace com.vdm.form
                 this.cbMarital_status.SelectedValue = people.Marital_status;
                 this.cbIs_real_name.SelectedValue = people.Is_real_name;
                 this.cbBlood_type.SelectedValue = people.Blood_type;
+                this.cbPolitcal_outlook.SelectedValue = people.Politcal_outlook;
+                this.cbIs_career_grade.SelectedValue = people.Is_career_grade;
+                this.tbIndustry.Text = people.Industry;
                 this.tbRemark.Text = people.Remark;
                 this.cbDisability_type.SelectedValue = people.Disability_type;
                 this.dtJoin_party_time.Text = people.Join_party_time;
@@ -191,9 +195,9 @@ namespace com.vdm.form
                 this.cbTown.DisplayMember = "value";
                 this.cbTown.ValueMember = "key";
             }
-            cbTown.SelectedValue = "";
+            //cbTown.SelectedValue = "";
             List<KeyValue> list_village = new List<KeyValue>();
-            list_village.Add(new KeyValue("", "请选择"));
+            //list_village.Add(new KeyValue("", "请选择"));
             this.cbVillage.DataSource = list_village;
             this.cbVillage.DisplayMember = "value";
             this.cbVillage.ValueMember = "key";
@@ -567,6 +571,11 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void cbTown_SelectedValueChanged(object sender, EventArgs e)
         {
+            //if (this.opreation_mode == "EDIT" && editFlag)
+            //{
+            //    editFlag = false;
+            //    return;
+            //}
             if (this.cbTown.SelectedValue != null)
             {
                 orgBLL = new OrgBLL();
@@ -580,7 +589,7 @@ namespace com.vdm.form
                         List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
                         if (list_village != null)
                         {
-                            list_village.Add(new KeyValue("", "请选择"));
+                           // list_village.Add(new KeyValue("", "请选择"));
                             this.cbVillage.DataSource = list_village;
                             this.cbVillage.DisplayMember = "value";
                             this.cbVillage.ValueMember = "key";
