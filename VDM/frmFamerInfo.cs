@@ -39,12 +39,37 @@ namespace com.vdm.form
             if (this.opreation_mode == "EDIT")
             {
                 famerBLL = new FamerBLL();
-                //Famer famer = this.famerBLL.getPeople(this.people_id);
-                //editFlag = true;
+                Famer famer = this.famerBLL.getFamer(this.famer_id);
                 //界面数据绑定
-                //this.tbPeople_name.Text = people.People_name;
-                //this.cbSex.SelectedValue = people.Sex;
-         
+                this.tbHolder_name.Text = famer.Holder_name;
+                tbIdcard.Text = famer.Idcard;
+                tbPhone_number.Text = famer.Phone_number;
+                tbCar_brand.Text = famer.Car_brand;
+                tbMechine_type.Text = famer.Mechine_type;
+                cbPlant_type.SelectedValue = famer.Plant_type;
+
+                tbPlant_area.Text = famer.Plant_area.ToString();
+                tbPlant_yield.Text = famer.Plant_yield.ToString();
+                tbPlant_output.Text = famer.Plant_output.ToString();
+
+                cbPlant_area_type.SelectedValue = famer.Plant_area_type;
+                cbIs_handle_process.SelectedValue = famer.Is_handle_process;
+                cbAnimal_type.SelectedValue = famer.Animal_type;
+
+                tbAnimal_area.Text = famer.Animal_area.ToString();
+                tbAnimal_count.Text = famer.Animal_count.ToString();
+                tbAnimal_vaccinate_count.Text = famer.Animal_vaccinate_count.ToString();
+                tbAnimal_nvaccinate_count.Text = famer.Animal_nvaccinate_count.ToString();
+                tbInventory_count.Text = famer.Inventory_count.ToString();
+                tbOutbound_count.Text = famer.Outbound_count.ToString();
+                tbAnimal_yield.Text = famer.Animal_yield.ToString();
+                tbAnimal_output.Text = famer.Animal_output.ToString();
+
+                cbAnimal_area_type.SelectedValue = famer.Animal_area_type;
+                cbIs_handle_process.SelectedValue = famer.Is_handle_process;
+                this.cbTown.Text = famer.Town;
+                this.cbVillage.Text = famer.Villiage;
+
             }
         }
         /// <summary>
@@ -233,7 +258,7 @@ namespace com.vdm.form
             }
             return true;
         }
-       
+
         /// <summary>
         /// 保存按钮
         /// </summary>
@@ -250,15 +275,15 @@ namespace com.vdm.form
             Famer famer = new Famer();
             famer.Famer_id = this.famer_id;
             famer.Holder_name = tbHolder_name.Text.Trim();
-            famer.Idcard=tbIdcard.Text.Trim();
+            famer.Idcard = tbIdcard.Text.Trim();
             famer.Phone_number = tbPhone_number.Text.Trim();
             famer.Car_brand = tbCar_brand.Text.Trim();
             famer.Mechine_type = tbMechine_type.Text.Trim();
             famer.Plant_type = cbPlant_type.SelectedValue.ToString();
             if (cbPlant_type.Text != "无")
             {
-                famer.Plant_area = float.Parse(tbPlant_area.Text.Trim());
-                famer.Plant_yield = float.Parse(tbPlant_yield.Text.Trim());
+                famer.Plant_area = double.Parse(tbPlant_area.Text.Trim());
+                famer.Plant_yield = double.Parse(tbPlant_yield.Text.Trim());
                 famer.Plant_output = int.Parse(tbPlant_output.Text.Trim());
             }
             famer.Plant_area_type = cbPlant_area_type.SelectedValue.ToString();
@@ -266,8 +291,8 @@ namespace com.vdm.form
             famer.Animal_type = cbAnimal_type.SelectedValue.ToString();
             if (cbAnimal_type.Text != "无")
             {
-              
-                famer.Animal_area = float.Parse(tbAnimal_area.Text.Trim());
+
+                famer.Animal_area = double.Parse(tbAnimal_area.Text.Trim());
                 famer.Animal_count = int.Parse(tbAnimal_count.Text.Trim());
                 famer.Animal_vaccinate_count = int.Parse(tbAnimal_vaccinate_count.Text.Trim());
                 famer.Animal_nvaccinate_count = int.Parse(tbAnimal_nvaccinate_count.Text.Trim());

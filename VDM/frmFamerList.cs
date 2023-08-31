@@ -85,7 +85,7 @@ namespace com.vdm.form
                 this.cbAnimal_area_type.DisplayMember = "value";
                 this.cbAnimal_area_type.ValueMember = "key";
             }
-      
+
             //初始化所在乡镇所在村
             orgBLL = new OrgBLL();
             List<KeyValue> list_town = orgBLL.getOrgByType("乡镇");
@@ -128,7 +128,7 @@ namespace com.vdm.form
             this.dgFamerList.AddColumn("种植产值(元)", "plant_output").SetSortMode(DataGridViewColumnSortMode.Automatic);
             this.dgFamerList.AddColumn("养殖动物类型", "animal_type");
             this.dgFamerList.AddColumn("养殖地面积(亩)", "animal_area").SetSortMode(DataGridViewColumnSortMode.Automatic);
-            this.dgFamerList.AddColumn("养殖数量(头)", "animal_count").SetSortMode(DataGridViewColumnSortMode.Automatic);   
+            this.dgFamerList.AddColumn("养殖数量(头)", "animal_count").SetSortMode(DataGridViewColumnSortMode.Automatic);
             this.dgFamerList.AddColumn("养殖占地地类", "animal_area_type");
             this.dgFamerList.AddColumn("已接种疫苗的动物数量(头/只)", "animal_vaccinate_count").SetSortMode(DataGridViewColumnSortMode.Automatic);
             this.dgFamerList.AddColumn("未接种疫苗的动物数量(头/只)", "animal_nvaccinate_count").SetSortMode(DataGridViewColumnSortMode.Automatic);
@@ -180,7 +180,20 @@ namespace com.vdm.form
 
         private void btEdit_Click(object sender, EventArgs e)
         {
+            //获得当前需要编辑的行
+            if (this.dgFamerList.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要编辑的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int famer_id = int.Parse(this.dgFamerList.SelectedRows[0].Cells[0].Value.ToString());
 
+            Form formFamerEdit = new frmFamerInfo("EDIT", famer_id);
+            formFamerEdit.ShowDialog();
+            if (formFamerEdit.DialogResult == DialogResult.OK)
+            {
+                InitListView(condition, this.pageIndex, this.pageSize);
+            }
         }
 
 
@@ -219,6 +232,34 @@ namespace com.vdm.form
                         this.cbVillage.DisplayMember = "value";
                         this.cbVillage.ValueMember = "key";
                     }
+                }
+            }
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            //获得当前需要删除的行
+
+            //获得当前需要编辑的行
+            if (this.dgFamerList.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要删除的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int famer_id = int.Parse(this.dgFamerList.SelectedRows[0].Cells[0].Value.ToString());
+            if (MessageBox.Show("确认要删除该行数据吗？", "温馨提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.famerBLL = new FamerBLL();
+                Result result = this.famerBLL.DelFamer(famer_id);
+                if (result.Count == 1)
+                {
+                    MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InitListView(condition, this.pageIndex, this.pageSize);
+                }
+                else
+                {
+                    MessageBox.Show("删除数据发生异常。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogHelper.Error(result.Information, result.Exception);
                 }
             }
         }

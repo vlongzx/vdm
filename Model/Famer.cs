@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace com.vdm.model
 {
-   public class Famer
+    public class Famer
     {
         private long famer_id;
         private string town;
@@ -17,13 +17,13 @@ namespace com.vdm.model
         private string car_brand;
         private string mechine_type;
         private string plant_type;
-        private float plant_area;
+        private double plant_area;
         private string plant_area_type;
         private string is_handle_process;
-        private float plant_yield;
+        private double plant_yield;
         private long plant_output;
         private string animal_type;
-        private float animal_area;
+        private double animal_area;
         private long animal_count;
         private string animal_area_type;
         private long animal_vaccinate_count;
@@ -142,18 +142,7 @@ namespace com.vdm.model
             }
         }
 
-        public float Plant_area
-        {
-            get
-            {
-                return plant_area;
-            }
 
-            set
-            {
-                plant_area = value;
-            }
-        }
 
         public string Plant_area_type
         {
@@ -181,18 +170,7 @@ namespace com.vdm.model
             }
         }
 
-        public float Plant_yield
-        {
-            get
-            {
-                return plant_yield;
-            }
 
-            set
-            {
-                plant_yield = value;
-            }
-        }
 
         public long Plant_output
         {
@@ -220,18 +198,6 @@ namespace com.vdm.model
             }
         }
 
-        public float Animal_area
-        {
-            get
-            {
-                return animal_area;
-            }
-
-            set
-            {
-                animal_area = value;
-            }
-        }
 
         public long Animal_count
         {
@@ -399,6 +365,45 @@ namespace com.vdm.model
             set
             {
                 last_updater = value;
+            }
+        }
+
+        public double Plant_area
+        {
+            get
+            {
+                return plant_area;
+            }
+
+            set
+            {
+                plant_area = value;
+            }
+        }
+
+        public double Plant_yield
+        {
+            get
+            {
+                return plant_yield;
+            }
+
+            set
+            {
+                plant_yield = value;
+            }
+        }
+
+        public double Animal_area
+        {
+            get
+            {
+                return animal_area;
+            }
+
+            set
+            {
+                animal_area = value;
             }
         }
     }

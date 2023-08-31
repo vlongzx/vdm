@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace com.vdm.dal
 {
-  public  class FamerDAL:BaseDAL
+    public class FamerDAL : BaseDAL
     {
         /// <summary>
         ///  根据农户ID获取信息
@@ -201,7 +201,7 @@ namespace com.vdm.dal
                     listSetValue.Add(row["ColumnName"].ToString() + "=@" + row["ColumnName"].ToString());
                 }
             }
-            string sql = "update t_famer set " + Utils.JoinStingListToString(listSetValue) + " where breed_id = " + famer.Famer_id;
+            string sql = "update t_famer set " + Utils.JoinStingListToString(listSetValue) + " where famer_id = " + famer.Famer_id;
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (tblSchema != null)
             {
@@ -225,6 +225,11 @@ namespace com.vdm.dal
         {
             string sql = "delete from t_famer where famer_id=" + famer_id;
             return this.SqlDbHelper.ExecuteNonQuery(sql);
+        }
+        public DataTable getFamer(int famer_id)
+        {
+            string sql = "select * from t_famer where famer_id = " + famer_id;
+            return this.SqlDbHelper.ExecuteDataTable(sql);
         }
     }
 }

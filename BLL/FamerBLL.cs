@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace com.vdm.bll
 {
-  public  class FamerBLL
+    public class FamerBLL
     {
         private FamerDAL famerDAL = null;
 
@@ -51,6 +51,37 @@ namespace com.vdm.bll
         public Result DelFamer(long famer_id)
         {
             return this.famerDAL.DeleteFamer(famer_id);
+        }
+        /// <summary>
+        ///  根据famer_id获得人员信息
+        /// </summary>
+        /// <param name="people_id"></param>
+        /// <returns></returns>
+        public Famer getFamer(int famer_id)
+        {
+            DataTable dt = this.famerDAL.getFamer(famer_id);
+            Famer famer = new Famer();
+            DataTable tblSchema = this.famerDAL.getTableSchema("t_famer");
+            if (tblSchema != null)
+            {
+                foreach (DataRow row in tblSchema.Rows)
+                {
+                    string ColumnName = row["ColumnName"].ToString();
+                    string PropertyName = Utils.Capitalize(row["ColumnName"].ToString());
+                    string DataType = row["DataType"].ToString();
+                    if (dt.Rows[0][ColumnName] == System.DBNull.Value)//如果字段值为空则继续执行
+                    {
+                        famer.GetType().GetProperty(PropertyName).SetValue(famer, string.Empty);
+                    }
+                    else
+                    {
+                        famer.GetType().GetProperty(PropertyName).SetValue(famer, dt.Rows[0][ColumnName]);
+                    }
+
+                }
+            }
+
+            return famer;
         }
     }
 }
