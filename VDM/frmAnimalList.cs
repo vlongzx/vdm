@@ -84,6 +84,14 @@ namespace com.vdm.form
                 this.cbSolid_pollution.DisplayMember = "value";
                 this.cbSolid_pollution.ValueMember = "key";
             }
+            //环评保供
+            List<KeyValue> list_report_or_filings = dictBLL.getDict("report_or_filings");
+            if (list_solid_pollution != null)
+            {
+                this.cbReport_or_filings.DataSource = list_report_or_filings;
+                this.cbReport_or_filings.DisplayMember = "value";
+                this.cbReport_or_filings.ValueMember = "key";
+            }
 
             //初始化所在乡镇所在村
             orgBLL = new OrgBLL();
@@ -197,20 +205,77 @@ namespace com.vdm.form
             string idcard = this.tbIdcard.Text.Trim();
             string address = this.tbAddress.Text.Trim();
             string phone_number = this.tbPhone_number.Text.Trim();
-            int year_inventory = int.Parse(this.cbYear_inventory.SelectedValue.ToString());
-            int year_outbound = int.Parse(this.cbYear_outbound.SelectedValue.ToString());
-            float output_from = float.Parse(this.tbOutput_From.Text.Trim());
-            float output_to = float.Parse(this.tbOutput_To.Text.Trim());
-            float total_area_from = float.Parse(this.tbPen_area_From.Text.Trim());
-            float total_area_to = float.Parse(this.tbPen_area_To.Text.Trim());
-            float pen_area_from = float.Parse(this.tbPen_area_From.Text.Trim());
-            float pen_area_to = float.Parse(this.tbPen_area_To.Text.Trim());
-            float midden_area_from = float.Parse(this.tbMidden_area_From.Text.Trim());
-            float midden_area_to = float.Parse(this.tbMidden_area_To.Text.Trim());
-            float pullttion_area_from = float.Parse(this.tbPullttion_area_From.Text.Trim());
-            float pullttion_area_to = float.Parse(this.tbPullttion_area_To.Text.Trim());
-            int cueernt_inventory_from = int.Parse(this.tbCueernt_inventory_From.Text.Trim());
-            int cueernt_inventory_to = int.Parse(this.tbCueernt_inventory_To.Text.Trim());
+            int year_inventory = 0;
+            if (this.cbYear_inventory.SelectedValue.ToString() != "")
+            {
+                year_inventory = int.Parse(this.cbYear_inventory.SelectedValue.ToString());
+            }
+            int year_outbound = 0;
+            if (this.cbYear_outbound.SelectedValue.ToString() != "")
+            {
+                year_outbound = int.Parse(this.cbYear_outbound.SelectedValue.ToString());
+            }
+            float output_from = 0.00f;
+            if(this.tbOutput_From.Text.Trim() != "")
+            {
+                output_from = float.Parse(this.tbOutput_From.Text.Trim());
+            }
+            
+            float output_to = 0.00f;
+            if (this.tbOutput_To.Text.Trim()!="")
+            {
+                output_to = float.Parse(this.tbOutput_To.Text.Trim());
+            }
+            float total_area_from = 0.00f;
+            if (this.tbPen_area_From.Text.Trim()!="")
+            {
+                total_area_from = float.Parse(this.tbPen_area_From.Text.Trim());
+            }
+            float total_area_to = 0.00f;
+            if (this.tbPen_area_To.Text.Trim()!="")
+            {
+                total_area_to = float.Parse(this.tbPen_area_To.Text.Trim());
+            }
+            float pen_area_from = 0.00f;
+            if (this.tbPen_area_From.Text.Trim()!="")
+            {
+                pen_area_from = float.Parse(this.tbPen_area_From.Text.Trim());
+            }
+            float pen_area_to =0.00f;
+            if (this.tbPen_area_To.Text.Trim()!="")
+            {
+                pen_area_to = float.Parse(this.tbPen_area_To.Text.Trim());
+            }
+            float midden_area_from = 0.00f;
+            if (this.tbMidden_area_From.Text.Trim()!="")
+            {
+                midden_area_from = float.Parse(this.tbMidden_area_From.Text.Trim());
+            }
+            float midden_area_to =0.00f;
+            if (this.tbMidden_area_To.Text.Trim()!="")
+            {
+                midden_area_to = float.Parse(this.tbMidden_area_To.Text.Trim());
+            }
+            float pullttion_area_from = 0.00f;
+            if (this.tbPullttion_area_From.Text.Trim()!="")
+            {
+                pullttion_area_from = float.Parse(this.tbPullttion_area_From.Text.Trim());
+            }
+            float pullttion_area_to = 0.00f;
+            if (this.tbPullttion_area_To.Text.Trim()!="")
+            {
+                pullttion_area_to = float.Parse(this.tbPullttion_area_To.Text.Trim());
+            }
+            int cueernt_inventory_from = 0;
+            if (this.tbCueernt_inventory_From.Text.Trim()!="")
+            {
+                cueernt_inventory_from = int.Parse(this.tbCueernt_inventory_From.Text.Trim());
+            }
+            int cueernt_inventory_to = 0;
+            if (this.tbCueernt_inventory_To.Text.Trim()!="")
+            {
+                cueernt_inventory_to = int.Parse(this.tbCueernt_inventory_To.Text.Trim());
+            }
             string animal_qualify = this.cbAnimal_qualify.SelectedValue.ToString();
             string solid_pollution = this.cbSolid_pollution.SelectedValue.ToString();
             string report_or_filings = this.cbReport_or_filings.SelectedValue.ToString();
@@ -240,6 +305,7 @@ namespace com.vdm.form
             this.condition.Add("cueernt_inventory_to", cueernt_inventory_to);
             this.condition.Add("animal_qualify", animal_qualify);
             this.condition.Add("solid_pollution", solid_pollution);
+            this.condition.Add("report_or_filings", report_or_filings);
 
             animalBLL = new AnimalBLL();
             DataTable dtAnimal = animalBLL.getAllAnimal(condition, pageIndex, pageSize);

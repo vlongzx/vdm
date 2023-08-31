@@ -57,7 +57,7 @@ namespace com.vdm.dal
                 {
                     sql += "    and phone_number = @phone_number";
                 }
-                if (condition["Idcard"].ToString() != "")
+                if (condition["idcard"].ToString() != "")
                 {
                     sql += "    and idcard = @idcard";
                 }
@@ -65,39 +65,39 @@ namespace com.vdm.dal
                 {
                     sql += "    and address = @address";
                 }
-                if (condition["year_inventory"].ToString() != "")
+                if (condition["year_inventory"].ToString() != "0")
                 {
                     sql += "    and year_inventory = @year_inventory";
                 }
-                if (condition["year_outbound"].ToString() != "")
+                if (condition["year_outbound"].ToString() != "0")
                 {
                     sql += "    and year_outbound = @year_outbound";
                 }
-                if (condition["output_from"].ToString() != "" && condition["output_to"].ToString() != "")
+                if (condition["output_from"].ToString() != "0" && condition["output_to"].ToString() != "0")
                 {
                     sql += "  and  output BETWEEN '" + condition["output_from"].ToString() + "' AND '" + condition["output_to"].ToString() + "'";
                 }
-                if (condition["total_area_from"].ToString() != "" && condition["total_area_to"].ToString() != "")
+                if (condition["total_area_from"].ToString() != "0" && condition["total_area_to"].ToString() != "0")
                 {
                     sql += " and   total_area BETWEEN '" + condition["total_area_from"].ToString() + "' AND '" + condition["total_area_to"].ToString() + "'";
                 }
-                if (condition["total_area_from"].ToString() != "" && condition["total_area_to"].ToString() != "")
+                if (condition["total_area_from"].ToString() != "0" && condition["total_area_to"].ToString() != "0")
                 {
                     sql += " and   total_area BETWEEN '" + condition["total_area_from"].ToString() + "' AND '" + condition["total_area_to"].ToString() + "'";
                 }
-                if (condition["pen_area_from"].ToString() != "" && condition["pen_area_to"].ToString() != "")
+                if (condition["pen_area_from"].ToString() != "0" && condition["pen_area_to"].ToString() != "0")
                 {
                     sql += " and   pen_area BETWEEN '" + condition["pen_area_from"].ToString() + "' AND '" + condition["pen_area_to"].ToString() + "'";
                 }
-                if (condition["midden_area_from"].ToString() != "" && condition["midden_area_to"].ToString() != "")
+                if (condition["midden_area_from"].ToString() != "0" && condition["midden_area_to"].ToString() != "0")
                 {
                     sql += " and   midden_area BETWEEN '" + condition["midden_area_from"].ToString() + "' AND '" + condition["midden_area_to"].ToString() + "'";
                 }
-                if (condition["pullttion_area_from"].ToString() != "" && condition["pullttion_area_to"].ToString() != "")
+                if (condition["pullttion_area_from"].ToString() != "0" && condition["pullttion_area_to"].ToString() != "0")
                 {
                     sql += " and   pullttion_area_from BETWEEN '" + condition["pullttion_area_from"].ToString() + "' AND '" + condition["pullttion_area_to"].ToString() + "'";
                 }
-                if (condition["cueernt_inventory_from"].ToString() != "" && condition["cueernt_inventory_to"].ToString() != "")
+                if (condition["cueernt_inventory_from"].ToString() != "0" && condition["cueernt_inventory_to"].ToString() != "0")
                 {
                     sql += " and   cueernt_inventory BETWEEN '" + condition["cueernt_inventory_from"].ToString() + "' AND '" + condition["cueernt_inventory_to"].ToString() + "'";
                 }
@@ -185,7 +185,7 @@ namespace com.vdm.dal
                 {
                     sql += "    and phone_number = @phone_number";
                 }
-                if (condition["Idcard"].ToString() != "")
+                if (condition["idcard"].ToString() != "")
                 {
                     sql += "    and idcard = @idcard";
                 }
@@ -193,39 +193,39 @@ namespace com.vdm.dal
                 {
                     sql += "    and address = @address";
                 }
-                if (condition["year_inventory"].ToString() != "")
+                if (condition["year_inventory"].ToString() != "0")
                 {
                     sql += "    and year_inventory = @year_inventory";
                 }
-                if (condition["year_outbound"].ToString() != "")
+                if (condition["year_outbound"].ToString() != "0")
                 {
                     sql += "    and year_outbound = @year_outbound";
                 }
-                if (condition["output_from"].ToString() != "" && condition["output_to"].ToString() != "")
+                if (condition["output_from"].ToString() != "0" && condition["output_to"].ToString() != "0")
                 {
                     sql += "  and  output BETWEEN '" + condition["output_from"].ToString() + "' AND '" + condition["output_to"].ToString() + "'";
                 }
-                if (condition["total_area_from"].ToString() != "" && condition["total_area_to"].ToString() != "")
+                if (condition["total_area_from"].ToString() != "0" && condition["total_area_to"].ToString() != "0")
                 {
                     sql += " and   total_area BETWEEN '" + condition["total_area_from"].ToString() + "' AND '" + condition["total_area_to"].ToString() + "'";
                 }
-                if (condition["total_area_from"].ToString() != "" && condition["total_area_to"].ToString() != "")
+                if (condition["total_area_from"].ToString() != "0" && condition["total_area_to"].ToString() != "0")
                 {
                     sql += " and   total_area BETWEEN '" + condition["total_area_from"].ToString() + "' AND '" + condition["total_area_to"].ToString() + "'";
                 }
-                if (condition["pen_area_from"].ToString() != "" && condition["pen_area_to"].ToString() != "")
+                if (condition["pen_area_from"].ToString() != "0" && condition["pen_area_to"].ToString() != "0")
                 {
                     sql += " and   pen_area BETWEEN '" + condition["pen_area_from"].ToString() + "' AND '" + condition["pen_area_to"].ToString() + "'";
                 }
-                if (condition["midden_area_from"].ToString() != "" && condition["midden_area_to"].ToString() != "")
+                if (condition["midden_area_from"].ToString() != "0" && condition["midden_area_to"].ToString() != "0")
                 {
                     sql += " and   midden_area BETWEEN '" + condition["midden_area_from"].ToString() + "' AND '" + condition["midden_area_to"].ToString() + "'";
                 }
-                if (condition["pullttion_area_from"].ToString() != "" && condition["pullttion_area_to"].ToString() != "")
+                if (condition["pullttion_area_from"].ToString() != "0" && condition["pullttion_area_to"].ToString() != "0")
                 {
                     sql += " and   pullttion_area_from BETWEEN '" + condition["pullttion_area_from"].ToString() + "' AND '" + condition["pullttion_area_to"].ToString() + "'";
                 }
-                if (condition["cueernt_inventory_from"].ToString() != "" && condition["cueernt_inventory_to"].ToString() != "")
+                if (condition["cueernt_inventory_from"].ToString() != "0" && condition["cueernt_inventory_to"].ToString() != "0")
                 {
                     sql += " and   cueernt_inventory BETWEEN '" + condition["cueernt_inventory_from"].ToString() + "' AND '" + condition["cueernt_inventory_to"].ToString() + "'";
                 }
