@@ -18,7 +18,7 @@ namespace com.vdm.dal
         /// </summary>
         /// <param name="breed_id"></param>
         /// <returns></returns>
-        public DataTable queryAnimal(int breed_id)
+        public DataTable queryAnimal(long breed_id)
         {
             string sql = "select * from t_animal where breed_id = " + breed_id;
             return this.SqlDbHelper.ExecuteDataTable(sql);

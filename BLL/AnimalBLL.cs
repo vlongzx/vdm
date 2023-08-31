@@ -32,7 +32,7 @@ namespace com.vdm.bll
         /// </summary>
         /// <param name="breed_id"></param>
         /// <returns></returns>
-        public Animal getAnimal(int breed_id)
+        public Animal getAnimal(long breed_id)
         {
             DataTable dt = this.animalDAL.queryAnimal(breed_id);
             Animal animal = null;
@@ -41,7 +41,7 @@ namespace com.vdm.bll
                 animal = new Animal();
                 animal.Breed_id = long.Parse(dt.Rows[0]["breed_id"].ToString());
                 animal.Town = dt.Rows[0]["town"].ToString();
-                animal.Village = dt.Rows[0]["villiage"].ToString();
+                animal.Villiage = dt.Rows[0]["villiage"].ToString();
                 animal.Breed_name = dt.Rows[0]["breed_name"].ToString();
                 animal.Breed_type = dt.Rows[0]["breed_type"].ToString();
                 animal.Manager = dt.Rows[0]["manager"].ToString();
@@ -59,8 +59,6 @@ namespace com.vdm.bll
                 animal.Report_or_filings = dt.Rows[0]["report_or_filings"].ToString();
                 animal.Create_datetime = dt.Rows[0]["create_datetime"].ToString();
                 animal.Creater = dt.Rows[0]["creater"].ToString();
-                animal.Last_update_datetime = dt.Rows[0]["last_update_datetime"].ToString();
-                animal.Last_updater = dt.Rows[0]["last_updater"].ToString();
             }
             return animal;
         }

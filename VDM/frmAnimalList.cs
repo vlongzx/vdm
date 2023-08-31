@@ -29,7 +29,7 @@ namespace com.vdm.form
 
         private void frmAnimalList_Load(object sender, EventArgs e)
         {
-            InitAnimalList();
+            InitAnimalList(null,pageIndex,pageSize);
 
             InitControls();
         }
@@ -114,7 +114,7 @@ namespace com.vdm.form
         /// <summary>
         ///  初始化畜牧列表
         /// </summary>
-        private void InitAnimalList()
+        private void InitAnimalList(Hashtable condition, int pageIndex, int pageSize)
         {
             //初始化dgAnimal
             this.dgAnimalList.AutoGenerateColumns = false;
@@ -314,6 +314,155 @@ namespace com.vdm.form
             this.pagination.PageSize = this.pageSize;
             this.pagination.TotalCount = totalCount;
             this.dgAnimalList.DataSource = dtAnimal;
+        }
+        /// <summary>
+        ///  新增
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            frmAnimalInfo animalInfo = new frmAnimalInfo();
+            animalInfo.Render();
+            animalInfo.ShowDialog();
+            if (animalInfo.DialogResult == DialogResult.OK)
+            {
+                InitAnimalList(null, this.pageIndex, this.pageSize);
+            }
+        }
+        /// <summary>
+        ///   编辑
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btEdit_Click(object sender, EventArgs e)
+        {
+            //获得当前需要编辑的行
+            if (this.dgAnimalList.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要编辑的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int breed_id = int.Parse(this.dgAnimalList.SelectedRows[0].Cells[0].Value.ToString());
+
+            frmAnimalInfo animalInfo = new frmAnimalInfo(breed_id);
+            animalInfo.ShowDialog();
+            if (animalInfo.DialogResult == DialogResult.OK)
+            {
+                InitAnimalList(condition, this.pageIndex, this.pageSize);
+            }
+        }
+        /// <summary>
+        ///  删除
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            //获得当前需要编辑的行
+            if (this.dgAnimalList.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要删除的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int breed_id = int.Parse(this.dgAnimalList.SelectedRows[0].Cells[0].Value.ToString());
+            if (MessageBox.Show("确认要删除该行数据吗？", "温馨提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.animalBLL = new AnimalBLL();
+                Result result = this.animalBLL.delAnimal(breed_id);
+                if (result.Count == 1)
+                {
+                    MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InitAnimalList(condition, this.pageIndex, this.pageSize);
+                }
+                else
+                {
+                    MessageBox.Show("删除数据发生异常。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogHelper.Error(result.Information, result.Exception);
+                }
+            }
+        }
+        /// <summary>
+        ///  导入
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btImport_Click(object sender, EventArgs e)
+        {
+            DataTable dt = ExcelUtil.ExcelToDataTable();
+            //若有数据
+            if (dt.Rows.Count != 0)
+            {
+                People people = new People();
+                peopleBLL = new PeopleBLL();
+                try
+                {
+                    foreach (DataRow dataRow in dt.Rows)
+                    {
+
+                        //将excel数据值封装业务对象
+                        //------------------基础信息部分---------------------------------
+
+                        people.People_name = dataRow["姓名"].ToString();
+                        people.Sex = dataRow["性别"].ToString();
+                        people.Nation = dataRow["民族"].ToString();
+                        people.Relationship = dataRow["与户主关系"].ToString();
+                        people.Birthday = dataRow["出生日期"].ToString();
+                        people.Idcard = dataRow["身份证号"].ToString();
+                        people.Phone_number = dataRow["联系电话"].ToString();
+                        people.Town = dataRow["所属镇"].ToString();
+                        people.Villiage = dataRow["所属村"].ToString();
+                        people.Marital_status = dataRow["婚姻状况"].ToString();
+                        people.Is_real_name = dataRow["是否实名"].ToString();
+                        people.Blood_type = dataRow["血型"].ToString();
+                        people.Remark = dataRow["备注"].ToString();
+                        people.Politcal_outlook = dataRow["政治面貌"].ToString();
+                        people.Join_party_time = dataRow["入党时间"].ToString();
+                        people.Religious_belief = dataRow["宗教信仰"].ToString();
+                        people.Education = dataRow["学历"].ToString();
+                        people.Work_or_study = dataRow["工作地点/学习地点"].ToString();
+                        people.Industry = dataRow["从事行业"].ToString();
+                        people.Unit_or_school = dataRow["工作单位/学校名称"].ToString();
+                        people.Work_study_location = dataRow["婚姻状况"].ToString();
+                        people.Skill_type = dataRow["技能类型"].ToString();
+                        people.Employ_guide = dataRow["就业指导"].ToString();
+                        people.Skill_train = dataRow["技能培训"].ToString();
+                        people.Is_career_grade = dataRow["有无职称"].ToString();
+                        people.Career_grade = dataRow["职称等级"].ToString();
+                        people.Career_get_time = dataRow["职称获得时间"].ToString();
+                        people.Disability_type = dataRow["残疾分类"].ToString();
+                        people.Disability_grade = dataRow["残疾等级"].ToString();
+                        people.Disability_reason = dataRow["因何致残"].ToString();
+                        people.Big_ill_help = dataRow["大病救助情况"].ToString();
+                        people.Temporary_help = dataRow["临时救助情况"].ToString();
+                        people.Is_unable_old = dataRow["是否失能老人"].ToString();
+                        people.Is_relocation = dataRow["是否易地搬迁户"].ToString();
+                        people.Low_five = dataRow["低保户/五保户"].ToString();
+                        people.Low_five_grade = dataRow["低保等级/五保类别"].ToString();
+                        people.Military_service = dataRow["婚姻状况"].ToString();
+                        people.Creater = LoginInfo.CurrentUser.Account;
+                        people.Create_datetime = DateTime.Now.ToString();
+                        peopleBLL.AddPeople(people);
+                    }
+                    MessageBox.Show("导入成功");
+                    //使用的是全局变量people
+                    InitListView(condition, this.pageIndex, this.pageSize);
+                    //this.pagination.InitPagination();
+                }
+                catch
+                {
+                    MessageBox.Show("导入失败");
+                }
+            }
+        }
+        /// <summary>
+        ///  导出
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btExport_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

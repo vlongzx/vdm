@@ -10,7 +10,7 @@ namespace com.vdm.model
     {
         private long breed_id;
         private string town;
-        private string village;
+        private string villiage;
         private string breed_name;
         private string breed_type;
         private string manager;
@@ -19,11 +19,11 @@ namespace com.vdm.model
         private string address;
         private string year_inventory;
         private string year_outbound;
-        private float output;
-        private float total_area;
-        private float pen_area;
-        private float midden_area;
-        private float pullttion_area;
+        private double output;
+        private double total_area;
+        private double pen_area;
+        private double midden_area;
+        private double pullttion_area;
         private long cueernt_inventory;
         private string animal_qualify;
         private string solid_pollution;
@@ -32,6 +32,7 @@ namespace com.vdm.model
         private string creater;
         private string last_update_datetime;
         private string last_updater;
+        private string remark;
         /// <summary>
         /// 养殖场（户）ID
         /// </summary>
@@ -65,16 +66,16 @@ namespace com.vdm.model
         /// <summary>
         /// 所属村
         /// </summary>
-        public string Village
+        public string Villiage
         {
             get
             {
-                return village;
+                return villiage;
             }
 
             set
             {
-                village = value;
+                villiage = value;
             }
         }
         /// <summary>
@@ -170,7 +171,7 @@ namespace com.vdm.model
         /// <summary>
         /// 产值(万元)
         /// </summary>
-        public float Output
+        public double Output
         {
             get
             {
@@ -185,7 +186,7 @@ namespace com.vdm.model
         /// <summary>
         /// 占地面积
         /// </summary>
-        public float Total_area
+        public double Total_area
         {
             get
             {
@@ -200,7 +201,7 @@ namespace com.vdm.model
         /// <summary>
         /// 圈舍面积
         /// </summary>
-        public float Pen_area
+        public double Pen_area
         {
             get
             {
@@ -215,7 +216,7 @@ namespace com.vdm.model
         /// <summary>
         /// 堆粪场面积
         /// </summary>
-        public float Midden_area
+        public double Midden_area
         {
             get
             {
@@ -230,7 +231,7 @@ namespace com.vdm.model
         /// <summary>
         /// 集污池面积
         /// </summary>
-        public float Pullttion_area
+        public double Pullttion_area
         {
             get
             {
@@ -332,36 +333,6 @@ namespace com.vdm.model
                 creater = value;
             }
         }
-        /// <summary>
-        /// 最后修改时间
-        /// </summary>
-        public string Last_update_datetime
-        {
-            get
-            {
-                return last_update_datetime;
-            }
-
-            set
-            {
-                last_update_datetime = value;
-            }
-        }
-        /// <summary>
-        /// 最后修改人
-        /// </summary>
-        public string Last_updater
-        {
-            get
-            {
-                return last_updater;
-            }
-
-            set
-            {
-                last_updater = value;
-            }
-        }
 
         public string Idcard
         {
@@ -386,6 +357,45 @@ namespace com.vdm.model
             set
             {
                 address = value;
+            }
+        }
+
+        public string Remark
+        {
+            get
+            {
+                return remark;
+            }
+
+            set
+            {
+                remark = value;
+            }
+        }
+
+        public string Last_update_datetime
+        {
+            get
+            {
+                return last_update_datetime;
+            }
+
+            set
+            {
+                last_update_datetime = value;
+            }
+        }
+
+        public string Last_updater
+        {
+            get
+            {
+                return last_updater;
+            }
+
+            set
+            {
+                last_updater = value;
             }
         }
     }
