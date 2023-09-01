@@ -302,7 +302,6 @@ namespace com.vdm.form
                 famer.Animal_output = int.Parse(tbAnimal_output.Text.Trim());
             }
             famer.Animal_area_type = cbAnimal_area_type.SelectedValue.ToString();
-            famer.Is_handle_process = cbIs_handle_process.SelectedValue.ToString();
             famer.Town = this.cbTown.Text.ToString();
             famer.Villiage = this.cbVillage.Text.ToString();
             famer.Creater = LoginInfo.CurrentUser.Account;

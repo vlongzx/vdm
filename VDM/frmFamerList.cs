@@ -36,7 +36,10 @@ namespace com.vdm.form
 
             InitListView(null, this.pageIndex, this.pageSize);
         }
-
+        public void ConditionAdd(string key, string value)
+        {
+            this.conditionAdvance.Add(key, value);
+        }
         /// <summary>
         /// 初始化基本查询条件
         /// </summary>
@@ -152,9 +155,51 @@ namespace com.vdm.form
             this.dgFamerList.DataSource = dt_people;
         }
 
+        /// <summary>
+        /// 查询
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btSearch_Click(object sender, EventArgs e)
         {
+            //从界面获取值基本查询条件封装业务对象
+            condition = new Hashtable();
+            string Holder_name = tbHolder_name.Text.Trim();
+            string Idcard = tbIdcard.Text.Trim();
+            string Phone_number = tbPhone_number.Text.Trim();
+            string Car_brand = tbCar_brand.Text.Trim();
+            string Mechine_type = tbMechine_type.Text.Trim();
+            string Plant_type = cbPlant_type.SelectedValue.ToString();
+            string Plant_area_type = cbPlant_area_type.SelectedValue.ToString();
+            string Is_handle_process = cbIs_handle_process.SelectedValue.ToString();
+            string Animal_type = cbAnimal_type.SelectedValue.ToString();
+            string Animal_area_type = cbAnimal_area_type.SelectedValue.ToString();
+            string Village = this.cbVillage.SelectedValue.ToString();
+            string Town = this.cbTown.SelectedValue.ToString();
 
+            //------------------------------------------------------------------
+            condition.Add("Holder_name", Holder_name);
+            condition.Add("Idcard", Idcard);
+            condition.Add("Phone_number", Phone_number);
+            condition.Add("Car_brand", Car_brand);
+            condition.Add("Mechine_type", Mechine_type);
+            condition.Add("Plant_type", Plant_type);
+            condition.Add("Plant_area_type", Plant_area_type);
+            condition.Add("Is_handle_process", Is_handle_process);
+            condition.Add("Animal_type", Animal_type);
+            condition.Add("Animal_area_type", Animal_area_type);
+            condition.Add("Village", Village);
+            condition.Add("Town", Town);
+            //获取值高级查询条件封装业务对象
+            foreach (DictionaryEntry de in conditionAdvance)
+            {
+                condition.Add(de.Key, de.Value);
+            }
+            //重置高级查询条件
+            conditionAdvance = new Hashtable();
+
+            this.pageIndex = 1;
+            this.InitListView(condition, this.pageIndex, this.pageSize);
         }
 
         private void btExport_Click(object sender, EventArgs e)
@@ -262,6 +307,41 @@ namespace com.vdm.form
                     LogHelper.Error(result.Information, result.Exception);
                 }
             }
+        }
+
+        private void btReset_Click(object sender, EventArgs e)
+        {
+            //清空查询文本框内容
+            string Holder_name = tbHolder_name.Text.Trim();
+            string Idcard = tbIdcard.Text.Trim();
+            string Phone_number = tbPhone_number.Text.Trim();
+            string Car_brand = tbCar_brand.Text.Trim();
+            string Mechine_type = tbMechine_type.Text.Trim();
+            string Plant_type = cbPlant_type.SelectedValue.ToString();
+            string Plant_area_type = cbPlant_area_type.SelectedValue.ToString();
+            string Is_handle_process = cbIs_handle_process.SelectedValue.ToString();
+            string Animal_type = cbAnimal_type.SelectedValue.ToString();
+            string Animal_area_type = cbAnimal_area_type.SelectedValue.ToString();
+            string Village = this.cbVillage.SelectedValue.ToString();
+            string Town = this.cbTown.SelectedValue.ToString();
+
+            this.tbHolder_name.Text = "";
+            this.tbIdcard.Text = "";
+            this.tbPhone_number.Text = "";
+            this.tbCar_brand.Text = "";
+            this.tbMechine_type.Text = "";
+            this.cbPlant_type.SelectedValue = "";
+            this.cbPlant_area_type.SelectedValue = "";
+            this.cbIs_handle_process.SelectedValue = "";
+            this.cbAnimal_type.SelectedValue = "";
+            this.cbAnimal_area_type.SelectedValue = "";
+            this.cbTown.SelectedValue = "";
+            this.cbVillage.SelectedValue = "";
+            //清空高级查询条件
+            conditionAdvance = new Hashtable();
+            //查询所有人员信息
+            condition = null;
+            InitListView(condition, this.pageIndex, this.pageSize);
         }
     }
 }
