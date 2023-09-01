@@ -1,5 +1,7 @@
 ﻿using com.vdm.bll;
 using com.vdm.common;
+using com.vdm.form.utils;
+using com.vdm.model;
 using Sunny.UI;
 using System;
 using System.Collections;
@@ -204,6 +206,88 @@ namespace com.vdm.form
 
         private void btExport_Click(object sender, EventArgs e)
         {
+            ExcelUtil excelUtil = new ExcelUtil();
+            excelUtil.Lv = this.InitExportListView(this.condition);
+            frmExportExcel ef = new frmExportExcel(excelUtil);
+            ef.ShowDialog();
+        }
+
+        /// <summary>
+        /// 初始化要导出的数据
+        /// </summary>
+        /// <param name="p">查询条件</param>
+        /// <returns></returns>
+        public ListView InitExportListView(Hashtable condition)
+        {
+            ListView lvExport = new ListView();
+            lvExport.Items.Clear();
+            lvExport.Columns.Clear();
+            lvExport.View = View.Details;
+
+
+            lvExport.Columns.Add("户主姓名");
+            lvExport.Columns.Add("身份证号");
+            lvExport.Columns.Add("联系电话");
+            lvExport.Columns.Add("家用车辆-品牌");
+            lvExport.Columns.Add("农用机械类型");
+            lvExport.Columns.Add("种植作物种类");
+            lvExport.Columns.Add("占地面积(亩)");
+            lvExport.Columns.Add("种植占地地类");
+            lvExport.Columns.Add("是否办理设施农用地手续");
+            lvExport.Columns.Add("种植产量(斤)");
+            lvExport.Columns.Add("种植产值(元)");
+            lvExport.Columns.Add("养殖动物类型");
+            lvExport.Columns.Add("养殖地面积(亩)");
+            lvExport.Columns.Add("养殖数量(头)");
+            lvExport.Columns.Add("养殖占地地类");
+            lvExport.Columns.Add("已接种疫苗的动物数量(头/只)");
+            lvExport.Columns.Add("未接种疫苗的动物数量(头/只)");
+            lvExport.Columns.Add("存栏数量(头/只)");
+            lvExport.Columns.Add("出栏数量(头/只)");
+            lvExport.Columns.Add("养殖产出产量(头/只)");
+            lvExport.Columns.Add("养殖产出产值(元)");
+            lvExport.Columns.Add("所属镇");
+            lvExport.Columns.Add("所属村");
+            lvExport.Columns.Add("添加时间");
+            lvExport.Columns.Add("添加人");
+            famerBLL = new FamerBLL();
+            //初始化导出ListView数据
+            List<Famer> list_famer;
+            this.famerBLL = new FamerBLL();
+            list_famer = this.famerBLL.getAllFamer(condition);
+
+            foreach (Famer famer in list_famer)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Tag = famer.Famer_id;//存储主键
+                lvi.Text = famer.Holder_name;
+                lvi.SubItems.Add(famer.Idcard);
+                lvi.SubItems.Add(famer.Phone_number);
+                lvi.SubItems.Add(famer.Car_brand);
+                lvi.SubItems.Add(famer.Mechine_type);
+                lvi.SubItems.Add(famer.Plant_type);
+                lvi.SubItems.Add(famer.Plant_area.ToString());
+                lvi.SubItems.Add(famer.Plant_yield.ToString());
+                lvi.SubItems.Add(famer.Plant_output.ToString());
+                lvi.SubItems.Add(famer.Plant_area_type.ToString());
+                lvi.SubItems.Add(famer.Is_handle_process.ToString());
+                lvi.SubItems.Add(famer.Animal_type.ToString());
+                lvi.SubItems.Add(famer.Animal_area.ToString());
+                lvi.SubItems.Add(famer.Animal_count.ToString());
+                lvi.SubItems.Add(famer.Animal_vaccinate_count.ToString());
+                lvi.SubItems.Add(famer.Animal_nvaccinate_count.ToString());
+                lvi.SubItems.Add(famer.Inventory_count.ToString());
+                lvi.SubItems.Add(famer.Outbound_count.ToString());
+                lvi.SubItems.Add(famer.Animal_yield.ToString());
+                lvi.SubItems.Add(famer.Animal_output.ToString());
+                lvi.SubItems.Add(famer.Animal_area_type.ToString());
+                lvi.SubItems.Add(famer.Town);
+                lvi.SubItems.Add(famer.Villiage);
+                lvi.SubItems.Add(famer.Creater);
+                lvi.SubItems.Add(famer.Create_datetime);
+                lvExport.Items.Add(lvi);
+            }
+            return lvExport;
 
         }
 

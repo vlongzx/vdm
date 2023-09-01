@@ -66,5 +66,43 @@ namespace com.vdm.common
 
             return people;
         }
+
+        /// <summary>
+        ///  将datatable封装成famer对象
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
+        public static Famer MakeObjectToFamer(DataRow row)
+        {
+            Famer famer = new Famer();
+            famer.Famer_id = int.Parse(row["Famer_id"].ToString());
+            famer.Holder_name = row["Holder_name"].ToString();
+            famer.Idcard                                                 =                                                                                         row["Idcard"].ToString();
+            famer.Phone_number                                                 =                                                                                         row["Phone_number"].ToString();
+            famer.Car_brand                                                 =                                                                                         row["Car_brand"].ToString();
+            famer.Mechine_type                                                 =                                                                                         row["Mechine_type"].ToString();
+            famer.Plant_type                                                 =                                             row["Plant_type"].ToString();
+            famer.Plant_area                                                 =                                             double.Parse(row["Plant_area"].ToString());
+            famer.Plant_yield                                                 =                                             double.Parse(row["Plant_yield"].ToString());
+            famer.Plant_output                                                 =                                             int.Parse(row["Plant_output"].ToString());
+            famer.Plant_area_type                                                 =                                             row["Plant_area_type"].ToString();
+            famer.Is_handle_process                                                 =                                             row["Is_handle_process"].ToString();
+            famer.Animal_type                                                 =                                             row["Animal_type"].ToString();
+            famer.Animal_area                                                 =                                             double.Parse(row["Animal_area"].ToString());
+            famer.Animal_count                                                 =                                             int.Parse(row["Animal_count"].ToString());
+            famer.Animal_vaccinate_count                                                 =                                             int.Parse(row["Animal_vaccinate_count"].ToString());
+            famer.Animal_nvaccinate_count                                                 =                                             int.Parse(row["Animal_nvaccinate_count"].ToString());
+            famer.Inventory_count                                                 =                                             int.Parse(row["Inventory_count"].ToString());
+            famer.Outbound_count                                                 =                                             int.Parse(row["Outbound_count"].ToString());
+            famer.Animal_yield                                                 =                                             int.Parse(row["Animal_yield"].ToString());
+            famer.Animal_output                                                 =                                             int.Parse(row["Animal_output"].ToString());
+            famer.Animal_area_type                                                 =                                             row["Animal_area_type"].ToString();
+            famer.Town                                                 =                                             row["Town"].ToString();
+            famer.Villiage                                                 =                                             row["Villiage"].ToString();
+            famer.Creater                                                 =                                             row["Creater"].ToString();
+            famer.Create_datetime                                                 =                                             row["Create_datetime"].ToString();
+
+            return famer;
+        }
     }
 }

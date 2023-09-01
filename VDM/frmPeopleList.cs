@@ -355,8 +355,9 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btExport_Click(object sender, EventArgs e)
         {
-            ExcelUtil.Lv = this.InitExportListView(this.condition);
-            frmExportExcel ef = new frmExportExcel();
+            ExcelUtil excelUtil = new ExcelUtil();
+            excelUtil.Lv = this.InitExportListView(this.condition);
+            frmExportExcel ef = new frmExportExcel(excelUtil);
             ef.ShowDialog();
         }
 
@@ -576,6 +577,7 @@ namespace com.vdm.form
             return lvExport;
 
         }
+
         /// <summary>
         /// 乡镇选择发生改变触发该事件
         /// </summary>

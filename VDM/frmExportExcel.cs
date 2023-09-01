@@ -13,11 +13,16 @@ namespace com.vdm.form
 {
     public partial class frmExportExcel : Form
     {
+        ExcelUtil excelUtil;
         public frmExportExcel()
         {
             InitializeComponent();
         }
-
+        public frmExportExcel(ExcelUtil excelUtil)
+        {
+            this.excelUtil = excelUtil;
+            InitializeComponent();
+        }
         /// <summary>
         /// 选择文件导出
         /// </summary>
@@ -42,7 +47,7 @@ namespace com.vdm.form
                 }
                 else
                 {
-                    bool result = ExcelUtil.exportExcel(pathFinal, password);
+                    bool result = this.excelUtil.exportExcel(pathFinal, password);
                     if (result)
                     {
                         MessageBox.Show("导出成功");

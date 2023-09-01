@@ -86,6 +86,8 @@ namespace com.vdm.bll
             return dt;
         }
 
+
+
         public List<People> getAllPeople(Hashtable condition)
         {
             List<People> list_people = new List<People>();
