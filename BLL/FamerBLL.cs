@@ -103,5 +103,14 @@ namespace com.vdm.bll
             }
             return list_famer;
         }
+
+        public SQLStringObject ImportFamerAdd(Famer famer)
+        {
+            return this.famerDAL.ImportFamerAdd(famer);
+        }
+        public Result ImportFamer(List<SQLStringObject> SQLStringObjectList)
+        {
+            return this.famerDAL.ImportFamer(SQLStringObjectList);
+        }
     }
 }
