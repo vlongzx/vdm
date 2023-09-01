@@ -284,29 +284,34 @@ namespace com.vdm.dal
         /// </summary>
         /// <param name="SQLStringList">数据库数组</param>
         /// <returns></returns>
-        public Result ExecuteSqlTran(ArrayList SQLStringList)
+        public Result ExecuteSqlTran(List<SQLStringObject> SQLStringObjectList)
         {
             Result result = new Result();
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
-                SQLiteCommand cmd = new SQLiteCommand();
-                cmd.Connection = conn;
+                SQLiteCommand command = new SQLiteCommand();
+                command.Connection = conn;
                 SQLiteTransaction tx = conn.BeginTransaction();
-                cmd.Transaction = tx;
+                command.Transaction = tx;
                 int count = 0;
                 try
                 {
-                    for (int n = 0; n < SQLStringList.Count; n++)
+                    for (int n = 0; n < SQLStringObjectList.Count; n++)
                     {
-                        string strsql = SQLStringList.ToString();
-                        if (strsql.Trim().Length > 1)
+                        string strsql = SQLStringObjectList[n].StrSql;
+                        List<SQLiteParameter> parameters = SQLStringObjectList[n].Parameter;
+                        command.CommandText = strsql;
+                        if (parameters != null)
                         {
-                            cmd.CommandText = strsql;
-                            count = cmd.ExecuteNonQuery();
+                            foreach (SQLiteParameter parameter in parameters)
+                            {
+                                command.Parameters.Add(parameter);
+                            }
                         }
+                        count += command.ExecuteNonQuery();
                     }
-                    if(count == SQLStringList.Count)
+                    if(count == SQLStringObjectList.Count)
                     {
                         tx.Commit();
                         result.Count = count;
