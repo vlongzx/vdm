@@ -427,5 +427,10 @@ namespace com.vdm.form
             condition = null;
             InitListView(condition, this.pageIndex, this.pageSize);
         }
+
+        private void btImport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

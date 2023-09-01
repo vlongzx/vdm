@@ -150,5 +150,15 @@ namespace com.vdm.bll
         {
             return this.peopleDAL.DeletePeople(people_id);
         }
+
+
+        public SQLStringObject ImportPeopleAdd(People people)
+        {
+            return this.peopleDAL.ImportPeopleAdd(people);
+        }
+        public Result ImportPeople(List<SQLStringObject> SQLStringObjectList)
+        {
+            return this.peopleDAL.ImportPeople(SQLStringObjectList);
+        }
     }
 }

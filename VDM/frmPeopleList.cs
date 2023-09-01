@@ -1,5 +1,6 @@
 ﻿using com.vdm.bll;
 using com.vdm.common;
+using com.vdm.dal;
 using com.vdm.form.utils;
 using com.vdm.model;
 using Sunny.UI;
@@ -369,6 +370,7 @@ namespace com.vdm.form
         private void btImport_Click(object sender, EventArgs e)
         {
             DataTable dt = ExcelUtil.ExcelToDataTable();
+            List<SQLStringObject> sqlso = new List<SQLStringObject>();
             //若有数据
             if (dt.Rows.Count != 0)
             {
@@ -421,9 +423,12 @@ namespace com.vdm.form
                         people.Military_service = dataRow["婚姻状况"].ToString();
                         people.Creater = LoginInfo.CurrentUser.Account;
                         people.Create_datetime = DateTime.Now.ToString();
-                        peopleBLL.AddPeople(people);
+                        //peopleBLL.AddPeople(people);
+                        SQLStringObject s = peopleBLL.ImportPeopleAdd(people);
+                        sqlso.Add(s);
                     }
-                    MessageBox.Show("导入成功");
+                    Result result=  peopleBLL.ImportPeople(sqlso);
+                    MessageBox.Show(result.Information);
                     //使用的是全局变量people
                     InitListView(condition, this.pageIndex, this.pageSize);
                     //this.pagination.InitPagination();
@@ -435,6 +440,9 @@ namespace com.vdm.form
             }
 
         }
+
+
+
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
