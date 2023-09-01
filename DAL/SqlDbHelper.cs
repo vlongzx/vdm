@@ -1,5 +1,6 @@
 ﻿using com.vdm.common;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -277,6 +278,58 @@ namespace com.vdm.dal
                 data = connection.GetSchema("Tables");
             }
             return data;
+        }
+        /// <summary>
+        /// 基于数据库事务执行多条SQL语句
+        /// </summary>
+        /// <param name="SQLStringList">数据库数组</param>
+        /// <returns></returns>
+        public Result ExecuteSqlTran(ArrayList SQLStringList)
+        {
+            Result result = new Result();
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand();
+                cmd.Connection = conn;
+                SQLiteTransaction tx = conn.BeginTransaction();
+                cmd.Transaction = tx;
+                int count = 0;
+                try
+                {
+                    for (int n = 0; n < SQLStringList.Count; n++)
+                    {
+                        string strsql = SQLStringList.ToString();
+                        if (strsql.Trim().Length > 1)
+                        {
+                            cmd.CommandText = strsql;
+                            count = cmd.ExecuteNonQuery();
+                        }
+                    }
+                    if(count == SQLStringList.Count)
+                    {
+                        tx.Commit();
+                        result.Count = count;
+                        result.Information = "批量执行成功";
+                    }
+                    else
+                    {
+                        tx.Rollback();
+                        result.Count = count;
+                        result.Information = "批量执行失败";
+                    }
+                    
+                }
+                catch (System.Data.SqlClient.SqlException E)
+                {
+                    tx.Rollback();
+                    result.Count = count;
+                    result.Information = "批量执行发生异常";
+                    result.Exception = E;
+                }
+            }
+
+            return result;
         }
 
     }
