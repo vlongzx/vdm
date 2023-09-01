@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace com.vdm.form.utils
 {
-    class ExcelUtil
+  public  class ExcelUtil
     {
 
             //要导出的ListView
-            private static ListView lv;
+            private  ListView lv;
 
-            public static ListView Lv
+            public  ListView Lv
             {
                 get
                 {
@@ -34,7 +34,7 @@ namespace com.vdm.form.utils
             /// </summary>
             /// <param name="path">文件完整路径</param>
             /// <param name="password">文件保护密码</param>
-            public static bool exportExcel(string path, string password)
+            public  bool exportExcel(string path, string password)
             {
 
             try
