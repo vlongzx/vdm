@@ -34,7 +34,6 @@ namespace com.vdm.bll
         }
         public DataTable getAllFamerDataTable(Hashtable condition, int pageIndex, int pageSize)
         {
-            List<Famer> list_people = new List<Famer>();
             DataTable dt = this.famerDAL.queryAllFamer(condition, pageIndex, pageSize);
             return dt;
         }
@@ -82,6 +81,27 @@ namespace com.vdm.bll
             }
 
             return famer;
+        }
+
+        /// <summary>
+        /// 导出用
+        /// </summary>
+        /// <param name="condition"></param>
+        /// <returns></returns>
+        public List<Famer> getAllFamer(Hashtable condition)
+        {
+            List<Famer> list_famer = new List<Famer>();
+            DataTable dt = this.famerDAL.getAllFamer(condition);
+            if (dt != null)
+            {
+                Famer p = null;
+                foreach (DataRow row in dt.Rows)
+                {
+                    p = MakeObject.MakeObjectToFamer(row);
+                    list_famer.Add(p);
+                }
+            }
+            return list_famer;
         }
     }
 }
