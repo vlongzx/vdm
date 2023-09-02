@@ -138,5 +138,42 @@ namespace com.vdm.form.utils
             }
             return dataTable;
         }
+
+        public static DataTable ExcelToDataTable(string fileName,string password)
+        {
+            DataTable dataTable = null;
+            string pathFinal = fileName.Replace('\\', '/');
+            Workbook book = new Workbook();
+            if ("" != password)
+            {
+                try
+                {
+                    book.Open(pathFinal, FileFormatType.Excel2007Xlsx, password);
+                }
+                catch
+                {
+                    MessageBox.Show("密码错误");
+                }
+
+                // Excel 中 sheets 数量必须大于 0
+                if (book.Worksheets.Count > 0)
+                {
+                    // 导入 Excel 文件中的第一个 sheets 工作表
+                    Cells cells = book.Worksheets[0].Cells;
+                    // sheets 中的数据必须存在
+                    if (cells.MaxDataRow != -1 && cells.MaxDataColumn != -1)
+                    {
+                        // 方法 ExportDataTable 的参数说明
+                        //  要导出的第一个单元格的行号。
+                        //  要导出的第一个单元格的列号。
+                        //  要导入的行数。
+                        //  要导入的列数。
+                        //  指示第一行的数据是否导出到DataTable的列名。
+                        dataTable = cells.ExportDataTable(0, 0, cells.MaxDataRow + 1, cells.MaxDataColumn + 1, true);
+                    }
+                }
+            }
+            return dataTable;
+        }
     }
 }

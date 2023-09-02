@@ -83,6 +83,15 @@ namespace com.vdm.bll
             return this.animalDAL.CreateAnimal(animal);
         }
         /// <summary>
+        /// 批量增加畜牧
+        /// </summary>
+        /// <param name="animals"></param>
+        /// <returns></returns>
+        public Result BacthAddAnimal(List<Animal> animals)
+        {
+            return this.animalDAL.BatchCreateAnimal(animals);
+        }
+        /// <summary>
         ///  编辑畜牧
         /// </summary>
         /// <param name="animal"></param>
