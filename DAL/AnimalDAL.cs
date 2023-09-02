@@ -294,6 +294,64 @@ namespace com.vdm.dal
             return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
         }
         /// <summary>
+        ///  批量增加畜牧
+        /// </summary>
+        /// <param name="animals"></param>
+        /// <returns></returns>
+        public Result BatchCreateAnimal(List<Animal> animals)
+        {
+            List<SQLStringObject> SQLStringObjectList = null;
+            if (animals != null)
+            {
+                SQLStringObjectList = new List<SQLStringObject>();
+                SQLStringObject sqlStringObject = null;
+                foreach (Animal animal in animals)
+                {
+                    //构建sql语句
+                    List<string> listColumnName = new List<string>();
+                    List<string> listParameter = new List<string>();
+                    DataTable tblSchema = this.getTableSchema("t_animal");
+                    if (tblSchema != null)
+                    {
+                        foreach (DataRow row in tblSchema.Rows)
+                        {
+                            //过滤掉主键
+                            if (row["ColumnName"].ToString() == "breed_id")
+                            {
+                                continue;
+                            }
+                            listColumnName.Add(row["ColumnName"].ToString());
+                            listParameter.Add("@" + row["ColumnName"].ToString());
+                        }
+                    }
+                    string sql = "insert into t_animal(" + Utils.JoinStingListToString(listColumnName) + ") values(" + Utils.JoinStingListToString(listParameter) + ")";
+
+                    //构建参数值
+                    SQLiteParameter parameter = null;
+                    List<SQLiteParameter> parameters = new List<SQLiteParameter>();
+                    if (tblSchema != null)
+                    {
+                        foreach (DataRow row in tblSchema.Rows)
+                        {
+                            if (row["ColumnName"].ToString() == "breed_id")
+                            {
+                                continue;
+                            }
+                            string ColumnName = row["ColumnName"].ToString();
+                            string PropertyName = Utils.Capitalize(row["ColumnName"].ToString());
+                            parameter = new SQLiteParameter("@" + ColumnName, animal.GetType().GetProperty(PropertyName).GetValue(animal, null));
+                            parameters.Add(parameter);
+                        }
+                    }
+                    sqlStringObject = new SQLStringObject();
+                    sqlStringObject.StrSql = sql;
+                    sqlStringObject.Parameter = parameters;
+                    SQLStringObjectList.Add(sqlStringObject);
+                }
+            }
+            return this.SqlDbHelper.ExecuteSqlTran(SQLStringObjectList);
+        }
+        /// <summary>
         /// 创建畜牧
         /// </summary>
         /// <param name="animal"></param>
