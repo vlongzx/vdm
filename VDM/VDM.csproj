@@ -115,6 +115,12 @@
     <Compile Include="frmExportExcel.Designer.cs">
       <DependentUpon>frmExportExcel.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmExportTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExportTemplate.Designer.cs">
+      <DependentUpon>frmExportTemplate.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFamerAdvanceQuery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,11 +139,11 @@
     <Compile Include="frmFamerList.Designer.cs">
       <DependentUpon>frmFamerList.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmImportExcelFile.cs">
+    <Compile Include="frmImportExcelFileFamer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmImportExcelFile.Designer.cs">
-      <DependentUpon>frmImportExcelFile.cs</DependentUpon>
+    <Compile Include="frmImportExcelFileFamer.Designer.cs">
+      <DependentUpon>frmImportExcelFileFamer.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -208,6 +214,9 @@
     <EmbeddedResource Include="frmExportExcel.resx">
       <DependentUpon>frmExportExcel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmExportTemplate.resx">
+      <DependentUpon>frmExportTemplate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFamerAdvanceQuery.resx">
       <DependentUpon>frmFamerAdvanceQuery.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,8 +226,8 @@
     <EmbeddedResource Include="frmFamerList.resx">
       <DependentUpon>frmFamerList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmImportExcelFile.resx">
-      <DependentUpon>frmImportExcelFile.cs</DependentUpon>
+    <EmbeddedResource Include="frmImportExcelFileFamer.resx">
+      <DependentUpon>frmImportExcelFileFamer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -256,6 +265,9 @@
     </Compile>
     <None Include="app.manifest" />
     <None Include="aspose\License.lic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="aspose\人员导入模板.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="db_file\VDM.pdm" />
