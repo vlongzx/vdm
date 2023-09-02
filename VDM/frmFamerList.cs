@@ -1,5 +1,6 @@
 ﻿using com.vdm.bll;
 using com.vdm.common;
+using com.vdm.dal;
 using com.vdm.form.utils;
 using com.vdm.model;
 using Sunny.UI;
@@ -426,6 +427,69 @@ namespace com.vdm.form
             //查询所有人员信息
             condition = null;
             InitListView(condition, this.pageIndex, this.pageSize);
+        }
+
+        /// <summary>
+        /// 导入
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btImport_Click(object sender, EventArgs e)
+        {
+            DataTable dt = ExcelUtil.ExcelToDataTable();
+            List<SQLStringObject> sqlso = new List<SQLStringObject>();
+            //若有数据
+            if (dt.Rows.Count != 0)
+            {
+                Famer famer = new Famer();
+                famerBLL = new FamerBLL();
+                try
+                {
+                    foreach (DataRow dataRow in dt.Rows)
+                    {
+
+                        //将excel数据值封装业务对象
+                        //------------------基础信息部分---------------------------------
+                        famer.Holder_name = dataRow["户主姓名"].ToString();
+                        famer.Idcard = dataRow["身份证号"].ToString();
+                        famer.Phone_number = dataRow["联系电话"].ToString();
+                        famer.Car_brand = dataRow["家用车辆-品牌"].ToString();
+                        famer.Mechine_type = dataRow["农用机械类型"].ToString();
+                        famer.Plant_type = dataRow["种植作物种类"].ToString();
+                        famer.Plant_area = double.Parse(dataRow["占地面积(亩)"].ToString());
+                        famer.Plant_yield = double.Parse(dataRow["种植占地地类"].ToString());
+                        famer.Plant_output = int.Parse(dataRow["是否办理设施农用地手续"].ToString() );
+                        famer.Plant_area_type = dataRow["种植产量(斤)"].ToString();
+                        famer.Is_handle_process = dataRow["种植产值(元)"].ToString();
+                        famer.Animal_type = dataRow["养殖动物类型"].ToString();
+                        famer.Animal_area = double.Parse(dataRow["养殖地面积(亩)"].ToString());
+                        famer.Animal_count = int.Parse(dataRow["养殖数量(头)"].ToString());
+                        famer.Animal_vaccinate_count = int.Parse(dataRow["养殖占地地类"].ToString());
+                        famer.Animal_nvaccinate_count = int.Parse(dataRow["已接种疫苗的动物数量(头/只)"].ToString());
+                        famer.Inventory_count = int.Parse(dataRow["未接种疫苗的动物数量(头/只)"].ToString());
+                        famer.Outbound_count = int.Parse(dataRow["存栏数量(头/只)"].ToString());
+                        famer.Animal_yield = int.Parse(dataRow["出栏数量(头/只)"].ToString());
+                        famer.Animal_output = int.Parse(dataRow["养殖产出产量(头/只)"].ToString());
+                        famer.Animal_area_type = dataRow["养殖产出产值(元)"].ToString();
+                        famer.Town = dataRow["所属镇"].ToString();
+                        famer.Villiage = dataRow["所属村"].ToString();
+                        famer.Creater = LoginInfo.CurrentUser.Account;
+                        famer.Create_datetime = DateTime.Now.ToString();
+              
+                        SQLStringObject s = famerBLL.ImportFamerAdd(famer);
+                        sqlso.Add(s);
+                    }
+                    Result result = famerBLL.ImportFamer(sqlso);
+                    MessageBox.Show(result.Information);
+                    //使用的是全局变量people
+                    InitListView(condition, this.pageIndex, this.pageSize);
+                    //this.pagination.InitPagination();
+                }
+                catch
+                {
+                    MessageBox.Show("导入失败");
+                }
+            }
         }
     }
 }

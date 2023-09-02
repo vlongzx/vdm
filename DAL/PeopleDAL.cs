@@ -731,7 +731,6 @@ namespace com.vdm.dal
                     parameters.Add(parameter);
                 }
             }
-
             return this.SqlDbHelper.ExecuteNonQuery(sql, CommandType.Text, parameters);
         }
 
@@ -769,11 +768,64 @@ namespace com.vdm.dal
             return this.SqlDbHelper.ExecuteNonQuery(sql, CommandType.Text, parameters);
         }
 
-
+        /// <summary>
+        /// 获得excel每条数据的sql
+        /// </summary>
+        /// <param name="people_id"></param>
+        /// <returns></returns>
         public Result DeletePeople(long people_id)
         {
             string sql = "delete from t_people where people_id="+ people_id;
             return this.SqlDbHelper.ExecuteNonQuery(sql);
         }
+
+        public SQLStringObject ImportPeopleAdd(People people)
+        {
+            //构建sql语句
+            List<string> listColumnName = new List<string>();
+            List<string> listParameter = new List<string>();
+            DataTable tblSchema = this.getTableSchema("t_people");
+            if (tblSchema != null)
+            {
+                foreach (DataRow row in tblSchema.Rows)
+                {
+                    //过滤掉主键
+                    if (row["ColumnName"].ToString() == "people_id")
+                    {
+                        continue;
+                    }
+                    listColumnName.Add(row["ColumnName"].ToString());
+                    listParameter.Add("@" + row["ColumnName"].ToString());
+                }
+            }
+            string sql = "insert into t_people(" + Utils.JoinStingListToString(listColumnName) + ") values(" + Utils.JoinStingListToString(listParameter) + ")";
+
+            //构建参数值
+            SQLiteParameter parameter = null;
+            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
+            if (tblSchema != null)
+            {
+                foreach (DataRow row in tblSchema.Rows)
+                {
+                    if (row["ColumnName"].ToString() == "people_id")
+                    {
+                        continue;
+                    }
+                    string ColumnName = row["ColumnName"].ToString();
+                    string PropertyName = Utils.Capitalize(row["ColumnName"].ToString());
+                    parameter = new SQLiteParameter("@" + ColumnName, people.GetType().GetProperty(PropertyName).GetValue(people, null));
+                    parameters.Add(parameter);
+                }
+            }
+            SQLStringObject sqlObject=new SQLStringObject(sql, parameters);
+            return sqlObject;
+        }
+
+        public Result ImportPeople(List<SQLStringObject> SQLStringObjectList)
+        {
+            return this.SqlDbHelper.ExecuteSqlTran(SQLStringObjectList);
+        }
+ 
+
     }
 }

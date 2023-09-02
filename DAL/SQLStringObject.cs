@@ -11,7 +11,16 @@ namespace com.vdm.dal
     {
         string strSql = null;
         List<SQLiteParameter> parameters = null;
+        public SQLStringObject()
+        {
 
+        }
+
+        public SQLStringObject(string strSql, List<SQLiteParameter> parameters)
+        {
+            this.StrSql = strSql;
+            this.Parameter = parameters;
+        }
         /// <summary>
         ///  带有@para的Sql字符串
         /// </summary>

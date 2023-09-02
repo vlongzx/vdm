@@ -518,5 +518,63 @@ namespace com.vdm.dal
             string sql = "select * from t_famer where famer_id = " + famer_id;
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
+        /// <summary>
+        /// 获得excel每条数据的sql
+        /// </summary>
+        /// <param name="people_id"></param>
+        /// <returns></returns>
+        public Result DeletePeople(long people_id)
+        {
+            string sql = "delete from t_people where people_id=" + people_id;
+            return this.SqlDbHelper.ExecuteNonQuery(sql);
+        }
+
+        public SQLStringObject ImportFamerAdd(Famer famer)
+        {
+            //构建sql语句
+            List<string> listColumnName = new List<string>();
+            List<string> listParameter = new List<string>();
+            DataTable tblSchema = this.getTableSchema("t_famer");
+            if (tblSchema != null)
+            {
+                foreach (DataRow row in tblSchema.Rows)
+                {
+                    //过滤掉主键
+                    if (row["ColumnName"].ToString() == "famer_id")
+                    {
+                        continue;
+                    }
+                    listColumnName.Add(row["ColumnName"].ToString());
+                    listParameter.Add("@" + row["ColumnName"].ToString());
+                }
+            }
+            string sql = "insert into t_famer(" + Utils.JoinStingListToString(listColumnName) + ") values(" + Utils.JoinStingListToString(listParameter) + ")";
+
+            //构建参数值
+            SQLiteParameter parameter = null;
+            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
+            if (tblSchema != null)
+            {
+                foreach (DataRow row in tblSchema.Rows)
+                {
+                    if (row["ColumnName"].ToString() == "famer_id")
+                    {
+                        continue;
+                    }
+                    string ColumnName = row["ColumnName"].ToString();
+                    string PropertyName = Utils.Capitalize(row["ColumnName"].ToString());
+                    parameter = new SQLiteParameter("@" + ColumnName, famer.GetType().GetProperty(PropertyName).GetValue(famer, null));
+                    parameters.Add(parameter);
+                }
+            }
+            SQLStringObject sqlObject = new SQLStringObject(sql, parameters);
+            return sqlObject;
+        }
+
+        public Result ImportFamer(List<SQLStringObject> SQLStringObjectList)
+        {
+            return this.SqlDbHelper.ExecuteSqlTran(SQLStringObjectList);
+        }
+
     }
 }
