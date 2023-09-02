@@ -172,6 +172,7 @@ namespace com.vdm.form
             UIForm uifm = new frmExportTemplate();
             this.Hide();
             uifm.ShowDialog();
+            this.Show();
             //Workbook book = new Workbook();
             //book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\模板.xlsx"), FileFormatType.Excel2007Xlsx, "1");
             //book.Save("C:/Users/wang/Desktop/181.xlsx");

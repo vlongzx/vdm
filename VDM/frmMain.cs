@@ -28,6 +28,7 @@ namespace com.vdm.form
             this.lbLoginTime.Text ="登录时间："+ LoginInfo.CurrentUser.LoginTime.ToString();
             AddPage(new frmPeopleList(), 1001);
             AddPage(new frmFamerList(), 1002);
+            AddPage(new frmLandList(), 1003);
             AddPage(new frmSystemSet(), 1009);
             AddPage(new frmAnimalList(), 1008);
             AddPage(new frmTourList(), 1007);
@@ -47,6 +48,10 @@ namespace com.vdm.form
         private void btFamer_Click(object sender, EventArgs e)
         {
             MainTabControl.SelectPage(1002);
+        }
+        private void btLand_Click(object sender, EventArgs e)
+        {
+            MainTabControl.SelectPage(1003);
         }
         /// <summary>
         ///  系统设置
