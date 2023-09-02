@@ -41,11 +41,16 @@
             this.btTour = new Sunny.UI.UIHeaderButton();
             this.btPlant = new Sunny.UI.UIHeaderButton();
             this.btSystemSet = new Sunny.UI.UIHeaderButton();
+            this.labAccountName = new Sunny.UI.UILabel();
+            this.lbLoginTime = new Sunny.UI.UILabel();
+            this.Footer.SuspendLayout();
             this.Header.SuspendLayout();
             this.SuspendLayout();
             // 
             // Footer
             // 
+            this.Footer.Controls.Add(this.lbLoginTime);
+            this.Footer.Controls.Add(this.labAccountName);
             this.Footer.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Footer.Location = new System.Drawing.Point(0, 727);
             this.Footer.Size = new System.Drawing.Size(1797, 56);
@@ -313,6 +318,30 @@
             this.btSystemSet.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btSystemSet.Click += new System.EventHandler(this.btSystemSet_Click);
             // 
+            // labAccountName
+            // 
+            this.labAccountName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labAccountName.AutoSize = true;
+            this.labAccountName.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labAccountName.Location = new System.Drawing.Point(1669, 14);
+            this.labAccountName.Name = "labAccountName";
+            this.labAccountName.Size = new System.Drawing.Size(110, 31);
+            this.labAccountName.TabIndex = 0;
+            this.labAccountName.Text = "当前用户";
+            this.labAccountName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbLoginTime
+            // 
+            this.lbLoginTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbLoginTime.AutoSize = true;
+            this.lbLoginTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbLoginTime.Location = new System.Drawing.Point(22, 14);
+            this.lbLoginTime.Name = "lbLoginTime";
+            this.lbLoginTime.Size = new System.Drawing.Size(110, 31);
+            this.lbLoginTime.TabIndex = 1;
+            this.lbLoginTime.Text = "登录时间";
+            this.lbLoginTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -324,6 +353,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ZoomScaleRect = new System.Drawing.Rectangle(22, 22, 1797, 783);
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.Footer.ResumeLayout(false);
+            this.Footer.PerformLayout();
             this.Header.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -342,6 +373,8 @@
         private Sunny.UI.UIHeaderButton btHouse;
         private Sunny.UI.UIHeaderButton btCompany;
         private Sunny.UI.UIHeaderButton btLand;
+        private Sunny.UI.UILabel labAccountName;
+        private Sunny.UI.UILabel lbLoginTime;
     }
 }
 

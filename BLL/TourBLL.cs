@@ -51,24 +51,21 @@ namespace com.vdm.bll
             if(dt != null && dt.Rows.Count > 0)
             {
                 tour = new Tour();
-                foreach(DataRow row in dt.Rows)
-                {
-                    tour.Address = row["address"].ToString();
-                    tour.Company_id = row["company_id"].ToString();
-                    tour.Creater = row["creater"].ToString();
-                    tour.Create_datetime = row["create_datetime"].ToString();
-                    tour.Legal_name = row["legal_name"].ToString();
-                    tour.Phone_number = row["phone_number"].ToString();
-                    tour.Principal_category = row["principal_category"].ToString();
-                    tour.Principal_name = row["principal_name"].ToString();
-                    tour.Registered_trademark = row["registered_trademark"].ToString();
-                    tour.Tour_id = tour_id;
-                    tour.Town = row["town"].ToString();
-                    tour.Trade_form = row["trade_form"].ToString();
-                    tour.Villiage = row["villiage"].ToString();
-                    tour.Year_person_count = int.Parse(row["year_person_count"].ToString());
-                    tour.Year_trade_income = double.Parse(row["year_trade_income"].ToString());
-                }
+                tour.Address = dt.Rows[0]["address"].ToString();
+                tour.Company_id = dt.Rows[0]["company_id"].ToString();
+                tour.Creater = dt.Rows[0]["creater"].ToString();
+                tour.Create_datetime = dt.Rows[0]["create_datetime"].ToString();
+                tour.Legal_name = dt.Rows[0]["legal_name"].ToString();
+                tour.Phone_number = dt.Rows[0]["phone_number"].ToString();
+                tour.Principal_category = dt.Rows[0]["principal_category"].ToString();
+                tour.Principal_name = dt.Rows[0]["principal_name"].ToString();
+                tour.Registered_trademark = dt.Rows[0]["registered_trademark"].ToString();
+                tour.Tour_id = tour_id;
+                tour.Town = dt.Rows[0]["town"].ToString();
+                tour.Trade_form = dt.Rows[0]["trade_form"].ToString();
+                tour.Villiage = dt.Rows[0]["villiage"].ToString();
+                tour.Year_person_count = int.Parse(dt.Rows[0]["year_person_count"].ToString());
+                tour.Year_trade_income = double.Parse(dt.Rows[0]["year_trade_income"].ToString());
             }
             return tour;
         }

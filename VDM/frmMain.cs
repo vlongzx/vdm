@@ -1,4 +1,5 @@
-﻿using Sunny.UI;
+﻿using com.vdm.common;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,11 +24,14 @@ namespace com.vdm.form
             //设置关联
             Header.TabControl = MainTabControl;
             Footer.Text = "陕西奥维纳斯软件技术有限公司提供技术支持";
+            this.labAccountName.Text ="当前操作员："+ LoginInfo.CurrentUser.AccountName;
+            this.lbLoginTime.Text ="登录时间："+ LoginInfo.CurrentUser.LoginTime.ToString();
             AddPage(new frmPeopleList(), 1001);
             AddPage(new frmFamerList(), 1002);
             AddPage(new frmSystemSet(), 1009);
             AddPage(new frmAnimalList(), 1008);
             AddPage(new frmTourList(), 1007);
+            AddPage(new frmPlantList(), 1006);
         }
 
         private void tspPeople_Click(object sender, EventArgs e)
