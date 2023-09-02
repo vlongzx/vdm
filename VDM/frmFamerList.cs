@@ -398,19 +398,6 @@ namespace com.vdm.form
         private void btReset_Click(object sender, EventArgs e)
         {
             //清空查询文本框内容
-            string Holder_name = tbHolder_name.Text.Trim();
-            string Idcard = tbIdcard.Text.Trim();
-            string Phone_number = tbPhone_number.Text.Trim();
-            string Car_brand = tbCar_brand.Text.Trim();
-            string Mechine_type = tbMechine_type.Text.Trim();
-            string Plant_type = cbPlant_type.SelectedValue.ToString();
-            string Plant_area_type = cbPlant_area_type.SelectedValue.ToString();
-            string Is_handle_process = cbIs_handle_process.SelectedValue.ToString();
-            string Animal_type = cbAnimal_type.SelectedValue.ToString();
-            string Animal_area_type = cbAnimal_area_type.SelectedValue.ToString();
-            string Village = this.cbVillage.SelectedValue.ToString();
-            string Town = this.cbTown.SelectedValue.ToString();
-
             this.tbHolder_name.Text = "";
             this.tbIdcard.Text = "";
             this.tbPhone_number.Text = "";
