@@ -240,6 +240,7 @@ namespace com.vdm.form
         private void btAdd_Click(object sender, EventArgs e)
         {
             frmTourInfo tourInfo = new frmTourInfo();
+            tourInfo.Text = "增加旅游信息";
             tourInfo.Render();
             tourInfo.ShowDialog();
             if (tourInfo.DialogResult == DialogResult.OK)
@@ -263,6 +264,7 @@ namespace com.vdm.form
             int breed_id = int.Parse(this.dgTourList.SelectedRows[0].Cells[0].Value.ToString());
 
             frmTourInfo tourInfo = new frmTourInfo(breed_id);
+            tourInfo.Text = "编辑旅游信息";
             tourInfo.ShowDialog();
             if (tourInfo.DialogResult == DialogResult.OK)
             {

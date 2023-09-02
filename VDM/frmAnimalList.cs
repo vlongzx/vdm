@@ -328,6 +328,7 @@ namespace com.vdm.form
         private void btAdd_Click(object sender, EventArgs e)
         {
             frmAnimalInfo animalInfo = new frmAnimalInfo();
+            animalInfo.Text = "增加畜牧信息";
             animalInfo.Render();
             animalInfo.ShowDialog();
             if (animalInfo.DialogResult == DialogResult.OK)
@@ -351,6 +352,7 @@ namespace com.vdm.form
             int breed_id = int.Parse(this.dgAnimalList.SelectedRows[0].Cells[0].Value.ToString());
 
             frmAnimalInfo animalInfo = new frmAnimalInfo(breed_id);
+            animalInfo.Text = "编辑畜牧信息";
             animalInfo.ShowDialog();
             if (animalInfo.DialogResult == DialogResult.OK)
             {

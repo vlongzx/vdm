@@ -114,7 +114,7 @@ namespace com.vdm.form
         /// <summary>
         ///  初始化ListView
         /// </summary>
-        public void InitListView(Hashtable condition, int pageIndex, int pageSize)
+        public void InitListView(Hashtable condition, int pageIndex=1, int pageSize=20)
         {
             this.dgFamerList.AutoGenerateColumns = false;
             this.dgFamerList.RowTemplate.Height = 45;
@@ -424,8 +424,9 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btImport_Click(object sender, EventArgs e)
         {
-            UIForm ui = new frmImportExcelFileFamer();
-              DialogResult res= ui.ShowDialog();
+            frmImportExcelFileFamer ui = new frmImportExcelFileFamer(Data_Object_Const.FAMER);
+            ui.Owner = this;
+            DialogResult res= ui.ShowDialog();
             if (res == DialogResult.OK)
             {
                 InitListView(condition, this.pageIndex, this.pageSize);
