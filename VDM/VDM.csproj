@@ -175,6 +175,18 @@
     <Compile Include="frmSystemSet.Designer.cs">
       <DependentUpon>frmSystemSet.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTourInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTourInfo.Designer.cs">
+      <DependentUpon>frmTourInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTourList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTourList.Designer.cs">
+      <DependentUpon>frmTourList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUserinfo.cs">
       <SubType>Form</SubType>
     </Compile>
