@@ -28,98 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labFile_password = new System.Windows.Forms.Label();
-            this.labFile_name = new System.Windows.Forms.Label();
-            this.tbFile_password = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbFile_name = new System.Windows.Forms.TextBox();
-            this.btExport_excel = new System.Windows.Forms.Button();
+            this.tbFile_password = new Sunny.UI.UITextBox();
+            this.uiLabel2 = new Sunny.UI.UILabel();
+            this.btExcelExport = new Sunny.UI.UIButton();
+            this.uiGroupBox2 = new Sunny.UI.UIGroupBox();
+            this.lbInformation = new Sunny.UI.UILabel();
+            this.uiGroupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labFile_password
-            // 
-            this.labFile_password.AutoSize = true;
-            this.labFile_password.Font = new System.Drawing.Font("宋体", 12F);
-            this.labFile_password.Location = new System.Drawing.Point(44, 114);
-            this.labFile_password.Name = "labFile_password";
-            this.labFile_password.Size = new System.Drawing.Size(175, 33);
-            this.labFile_password.TabIndex = 27;
-            this.labFile_password.Text = "文件密码：";
-            // 
-            // labFile_name
-            // 
-            this.labFile_name.AutoSize = true;
-            this.labFile_name.Font = new System.Drawing.Font("宋体", 12F);
-            this.labFile_name.Location = new System.Drawing.Point(77, 61);
-            this.labFile_name.Name = "labFile_name";
-            this.labFile_name.Size = new System.Drawing.Size(143, 33);
-            this.labFile_name.TabIndex = 26;
-            this.labFile_name.Text = "文件名：";
             // 
             // tbFile_password
             // 
-            this.tbFile_password.Font = new System.Drawing.Font("宋体", 12F);
-            this.tbFile_password.Location = new System.Drawing.Point(225, 112);
+            this.tbFile_password.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbFile_password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbFile_password.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbFile_password.Location = new System.Drawing.Point(266, 219);
+            this.tbFile_password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbFile_password.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbFile_password.Name = "tbFile_password";
-            this.tbFile_password.Size = new System.Drawing.Size(213, 44);
-            this.tbFile_password.TabIndex = 25;
+            this.tbFile_password.Padding = new System.Windows.Forms.Padding(5);
+            this.tbFile_password.PasswordChar = '*';
+            this.tbFile_password.ShowText = false;
+            this.tbFile_password.Size = new System.Drawing.Size(267, 35);
+            this.tbFile_password.TabIndex = 30;
+            this.tbFile_password.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbFile_password.Watermark = "";
+            this.tbFile_password.TextChanged += new System.EventHandler(this.tbFile_password_TextChanged);
             // 
-            // label3
+            // uiLabel2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(88, 71);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 24);
-            this.label3.TabIndex = 24;
+            this.uiLabel2.AutoSize = true;
+            this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel2.Location = new System.Drawing.Point(61, 213);
+            this.uiLabel2.Name = "uiLabel2";
+            this.uiLabel2.Size = new System.Drawing.Size(274, 41);
+            this.uiLabel2.TabIndex = 29;
+            this.uiLabel2.Text = "设置文件访问密码";
+            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel2.Click += new System.EventHandler(this.uiLabel2_Click);
             // 
-            // tbFile_name
+            // btExcelExport
             // 
-            this.tbFile_name.Font = new System.Drawing.Font("宋体", 12F);
-            this.tbFile_name.Location = new System.Drawing.Point(226, 61);
-            this.tbFile_name.Name = "tbFile_name";
-            this.tbFile_name.Size = new System.Drawing.Size(213, 44);
-            this.tbFile_name.TabIndex = 23;
+            this.btExcelExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btExcelExport.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btExcelExport.Location = new System.Drawing.Point(143, 277);
+            this.btExcelExport.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btExcelExport.Name = "btExcelExport";
+            this.btExcelExport.Size = new System.Drawing.Size(293, 35);
+            this.btExcelExport.TabIndex = 28;
+            this.btExcelExport.Text = "选择目录导出保存";
+            this.btExcelExport.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btExcelExport.Click += new System.EventHandler(this.btExcelExport_Click);
             // 
-            // btExport_excel
+            // uiGroupBox2
             // 
-            this.btExport_excel.Font = new System.Drawing.Font("宋体", 12F);
-            this.btExport_excel.Location = new System.Drawing.Point(140, 190);
-            this.btExport_excel.Name = "btExport_excel";
-            this.btExport_excel.Size = new System.Drawing.Size(229, 46);
-            this.btExport_excel.TabIndex = 22;
-            this.btExport_excel.Text = "选择目录导出";
-            this.btExport_excel.UseVisualStyleBackColor = true;
-            this.btExport_excel.Click += new System.EventHandler(this.btExport_excel_Click);
+            this.uiGroupBox2.Controls.Add(this.lbInformation);
+            this.uiGroupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiGroupBox2.Location = new System.Drawing.Point(34, 52);
+            this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiGroupBox2.Name = "uiGroupBox2";
+            this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox2.Size = new System.Drawing.Size(591, 145);
+            this.uiGroupBox2.TabIndex = 31;
+            this.uiGroupBox2.Text = "温馨提示";
+            this.uiGroupBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbInformation
+            // 
+            this.lbInformation.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbInformation.Location = new System.Drawing.Point(27, 32);
+            this.lbInformation.Name = "lbInformation";
+            this.lbInformation.Size = new System.Drawing.Size(561, 99);
+            this.lbInformation.TabIndex = 3;
+            this.lbInformation.Text = "1、选择目录导出前请输入文件密码。\r\n2、选择目录保存时需要输入文件名。";
+            this.lbInformation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmExportExcel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 300);
-            this.Controls.Add(this.labFile_password);
-            this.Controls.Add(this.labFile_name);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(671, 342);
+            this.Controls.Add(this.uiGroupBox2);
             this.Controls.Add(this.tbFile_password);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbFile_name);
-            this.Controls.Add(this.btExport_excel);
+            this.Controls.Add(this.uiLabel2);
+            this.Controls.Add(this.btExcelExport);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmExportExcel";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "导出Excel";
+            this.ZoomScaleRect = new System.Drawing.Rectangle(30, 30, 540, 300);
             this.Load += new System.EventHandler(this.frmExportExcel_Load_1);
+            this.uiGroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labFile_password;
-        private System.Windows.Forms.Label labFile_name;
-        private System.Windows.Forms.TextBox tbFile_password;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbFile_name;
-        private System.Windows.Forms.Button btExport_excel;
+        private Sunny.UI.UITextBox tbFile_password;
+        private Sunny.UI.UILabel uiLabel2;
+        private Sunny.UI.UIButton btExcelExport;
+        private Sunny.UI.UIGroupBox uiGroupBox2;
+        private Sunny.UI.UILabel lbInformation;
     }
 }
