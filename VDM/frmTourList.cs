@@ -308,7 +308,9 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btImport_Click(object sender, EventArgs e)
         {
-
+            frmImportExcelFileFamer importExcelFile = new frmImportExcelFileFamer(Data_Object_Const.TOUR);
+            importExcelFile.Owner = this;
+            importExcelFile.ShowDialog();
         }
         /// <summary>
         /// 导出
