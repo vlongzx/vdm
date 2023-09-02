@@ -118,14 +118,6 @@ namespace com.vdm.form
                 this.cbManage_skill_method.ValueMember = "key";
             }
 
-            //初始化产值(万元)
-            List<KeyValue> list_output = dictBLL.getDict("output");
-            if (list_output != null)
-            {
-                this.cbOutput.DataSource = list_output;
-                this.cbOutput.DisplayMember = "value";
-                this.cbOutput.ValueMember = "key";
-            }
 
             //初始化种植品种
             List<KeyValue> list_plant_brand = dictBLL.getDict("plant_brand");
@@ -219,7 +211,7 @@ namespace com.vdm.form
             string town = this.cbTown.SelectedValue.ToString();
             string village = this.cbVillage.SelectedValue.ToString();
             double plant_area = 0;
-            if(this.tbPlant_area.Text.Trim() != null)
+            if(this.tbPlant_area.Text.Trim() != "")
             {
                 plant_area = double.Parse(this.tbPlant_area.Text.Trim());
             }
@@ -242,9 +234,9 @@ namespace com.vdm.form
             }
             string sale_way = this.cbSale_way.SelectedValue.ToString();
             double output = 0;
-            if(this.cbOutput.SelectedValue.ToString() != "")
+            if(this.tbOutput.Text.Trim() != "")
             {
-                output = double.Parse(this.cbOutput.SelectedValue.ToString());
+                output = double.Parse(this.tbOutput.Text.Trim());
             }
             string insect_ill = this.cbInsect_ill.SelectedValue.ToString();
             string manage_skill_method = this.cbManage_skill_method.SelectedValue.ToString();
@@ -295,7 +287,7 @@ namespace com.vdm.form
             this.cbInsect_ill.SelectedValue = "";
             this.cbIs_plan.SelectedValue = "";
             this.cbManage_skill_method.SelectedValue = "";
-            this.cbOutput.SelectedValue = "";
+            this.tbOutput.Text = "";
             this.cbPlant_brand.SelectedValue = "";
             this.cbPlant_type.SelectedValue = "";
             this.cbSale_way.SelectedValue = "";
@@ -310,7 +302,14 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btAdd_Click(object sender, EventArgs e)
         {
-
+            frmPlantInfo tourInfo = new frmPlantInfo();
+            tourInfo.Text = "新增种植信息";
+            tourInfo.Render();
+            tourInfo.ShowDialog();
+            if (tourInfo.DialogResult == DialogResult.OK)
+            {
+                InitPlantList(null, this.pageIndex, this.pageSize);
+            }
         }
         /// <summary>
         /// 编辑
@@ -319,7 +318,21 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btEdit_Click(object sender, EventArgs e)
         {
+            //获得当前需要编辑的行
+            if (this.dgPlantList.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要编辑的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int plant_id = int.Parse(this.dgPlantList.SelectedRows[0].Cells[0].Value.ToString());
 
+            frmPlantInfo plantInfo = new frmPlantInfo(plant_id);
+            plantInfo.Text = "编辑种植信息";
+            plantInfo.ShowDialog();
+            if (plantInfo.DialogResult == DialogResult.OK)
+            {
+                InitPlantList(condition, this.pageIndex, this.pageSize);
+            }
         }
         /// <summary>
         /// 删除
@@ -328,7 +341,28 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btDelete_Click(object sender, EventArgs e)
         {
-
+            //获得当前需要编辑的行
+            if (this.dgPlantList.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要删除的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int plant_id = int.Parse(this.dgPlantList.SelectedRows[0].Cells[0].Value.ToString());
+            if (MessageBox.Show("确认要删除该行数据吗？", "温馨提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.plantBLL = new PlantBLL();
+                Result result = this.plantBLL.delPlant(plant_id);
+                if (result.Count == 1)
+                {
+                    MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InitPlantList(condition, this.pageIndex, this.pageSize);
+                }
+                else
+                {
+                    MessageBox.Show("删除数据发生异常。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogHelper.Error(result.Information, result.Exception);
+                }
+            }
         }
         /// <summary>
         /// 导入
