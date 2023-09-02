@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataObject.cs" />
     <Compile Include="KeyValue.cs" />
     <Compile Include="LogHelper.cs" />
     <Compile Include="LoginInfo.cs" />
