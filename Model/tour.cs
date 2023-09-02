@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace com.vdm.model
 {
-    public class tour
+    public class Tour
     {
 
     }
