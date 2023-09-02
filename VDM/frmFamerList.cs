@@ -207,6 +207,7 @@ namespace com.vdm.form
 
         private void btExport_Click(object sender, EventArgs e)
         {
+            
             ExcelUtil excelUtil = new ExcelUtil();
             excelUtil.Lv = this.InitExportListView(this.condition);
             frmExportExcel ef = new frmExportExcel(excelUtil);

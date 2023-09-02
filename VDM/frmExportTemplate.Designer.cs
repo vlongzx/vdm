@@ -38,7 +38,7 @@
             this.tbPassword.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPassword.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPassword.Location = new System.Drawing.Point(288, 87);
+            this.tbPassword.Location = new System.Drawing.Point(332, 73);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPassword.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbPassword.Name = "tbPassword";
@@ -54,7 +54,7 @@
             // 
             this.uiLabel2.AutoSize = true;
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.Location = new System.Drawing.Point(7, 81);
+            this.uiLabel2.Location = new System.Drawing.Point(51, 67);
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(274, 41);
             this.uiLabel2.TabIndex = 6;
@@ -65,7 +65,7 @@
             // 
             this.btTempleExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btTempleExport.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btTempleExport.Location = new System.Drawing.Point(142, 145);
+            this.btTempleExport.Location = new System.Drawing.Point(186, 131);
             this.btTempleExport.MinimumSize = new System.Drawing.Size(1, 1);
             this.btTempleExport.Name = "btTempleExport";
             this.btTempleExport.Size = new System.Drawing.Size(293, 35);
@@ -77,7 +77,7 @@
             // frmExportTemplate
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(559, 241);
+            this.ClientSize = new System.Drawing.Size(649, 206);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.uiLabel2);
             this.Controls.Add(this.btTempleExport);

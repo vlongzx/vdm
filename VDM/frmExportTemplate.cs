@@ -60,5 +60,10 @@ namespace com.vdm.form
                 }
             }
         }
+
+        private void lbInformation_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
