@@ -150,7 +150,7 @@ namespace com.vdm.form.utils
             Workbook book = new Workbook();
             try
             {
-                book.Open(fileName, FileFormatType.Excel2003, password);
+                book.Open(fileName, FileFormatType.Excel2007Xlsx, password);
                 // Excel 中 sheets 数量必须大于 0
                 if (book.Worksheets.Count > 0)
                 {
