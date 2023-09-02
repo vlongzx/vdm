@@ -37,6 +37,7 @@ namespace com.vdm.form
             if(result == 1)
             {
                 LoginInfo.CurrentUser.Account = username;
+                LoginInfo.CurrentUser.AccountName = username;
                 LoginInfo.CurrentUser.LoginTime = DateTime.Now;
                 this.DialogResult = DialogResult.OK;
                 this.Close();

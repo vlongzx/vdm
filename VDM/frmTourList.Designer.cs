@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btImport = new Sunny.UI.UIButton();
             this.groupBox2 = new Sunny.UI.UIGroupBox();
             this.dgTourList = new Sunny.UI.UIDataGridView();
@@ -55,10 +55,13 @@
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
+            this.cbTrade_form = new Sunny.UI.UIComboBox();
             this.cbPrincipal_category = new Sunny.UI.UIComboBox();
             this.tbRegistered_trademark = new Sunny.UI.UITextBox();
             this.tbAddress = new Sunny.UI.UITextBox();
-            this.tbIdcard = new Sunny.UI.UITextBox();
+            this.tbPhone_number = new Sunny.UI.UITextBox();
+            this.tbLegal_name = new Sunny.UI.UITextBox();
+            this.tbCompany_id = new Sunny.UI.UITextBox();
             this.tbPrincipal_name = new Sunny.UI.UITextBox();
             this.uiLabel14 = new Sunny.UI.UILabel();
             this.label9 = new Sunny.UI.UILabel();
@@ -69,9 +72,6 @@
             this.btReset = new Sunny.UI.UIButton();
             this.btSearch = new Sunny.UI.UIButton();
             this.pagination = new Sunny.UI.UIPagination();
-            this.tbCompany_id = new Sunny.UI.UITextBox();
-            this.tbLegal_name = new Sunny.UI.UITextBox();
-            this.cbTrade_form = new Sunny.UI.UIComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTourList)).BeginInit();
             this.uiGroupBox1.SuspendLayout();
@@ -88,6 +88,7 @@
             this.btImport.TabIndex = 90;
             this.btImport.Text = "导入(&I)";
             this.btImport.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btImport.Click += new System.EventHandler(this.btImport_Click);
             // 
             // groupBox2
             // 
@@ -111,48 +112,48 @@
             // 
             this.dgTourList.AllowUserToAddRows = false;
             this.dgTourList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgTourList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgTourList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle36;
             this.dgTourList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgTourList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgTourList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgTourList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.dgTourList.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgTourList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgTourList.DefaultCellStyle = dataGridViewCellStyle38;
             this.dgTourList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgTourList.EnableHeadersVisualStyles = false;
             this.dgTourList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgTourList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgTourList.Location = new System.Drawing.Point(4, 32);
             this.dgTourList.Name = "dgTourList";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgTourList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgTourList.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
             this.dgTourList.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgTourList.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgTourList.RowsDefaultCellStyle = dataGridViewCellStyle40;
             this.dgTourList.RowTemplate.Height = 23;
             this.dgTourList.ScrollBarHandleWidth = 40;
             this.dgTourList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -172,6 +173,7 @@
             this.btExport.TabIndex = 91;
             this.btExport.Text = "导出(&E)";
             this.btExport.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btExport.Click += new System.EventHandler(this.btExport_Click);
             // 
             // btAdd
             // 
@@ -184,6 +186,7 @@
             this.btAdd.TabIndex = 92;
             this.btAdd.Text = "新增(&A)";
             this.btAdd.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // btEdit
             // 
@@ -196,6 +199,7 @@
             this.btEdit.TabIndex = 93;
             this.btEdit.Text = "编辑(&E)";
             this.btEdit.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
             // btDelete
             // 
@@ -208,6 +212,7 @@
             this.btDelete.TabIndex = 94;
             this.btDelete.Text = "删除(&D)";
             this.btDelete.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // uiGroupBox1
             // 
@@ -231,7 +236,7 @@
             this.uiGroupBox1.Controls.Add(this.cbPrincipal_category);
             this.uiGroupBox1.Controls.Add(this.tbRegistered_trademark);
             this.uiGroupBox1.Controls.Add(this.tbAddress);
-            this.uiGroupBox1.Controls.Add(this.tbIdcard);
+            this.uiGroupBox1.Controls.Add(this.tbPhone_number);
             this.uiGroupBox1.Controls.Add(this.tbLegal_name);
             this.uiGroupBox1.Controls.Add(this.tbCompany_id);
             this.uiGroupBox1.Controls.Add(this.tbPrincipal_name);
@@ -365,6 +370,7 @@
             this.cbTown.TabIndex = 170;
             this.cbTown.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbTown.Watermark = "";
+            this.cbTown.SelectedValueChanged += new System.EventHandler(this.cbTown_SelectedValueChanged);
             // 
             // cbVillage
             // 
@@ -438,6 +444,21 @@
             this.uiLabel2.Text = "主体名称";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // cbTrade_form
+            // 
+            this.cbTrade_form.DataSource = null;
+            this.cbTrade_form.FillColor = System.Drawing.Color.White;
+            this.cbTrade_form.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbTrade_form.Location = new System.Drawing.Point(932, 88);
+            this.cbTrade_form.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbTrade_form.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbTrade_form.Name = "cbTrade_form";
+            this.cbTrade_form.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbTrade_form.Size = new System.Drawing.Size(165, 29);
+            this.cbTrade_form.TabIndex = 134;
+            this.cbTrade_form.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbTrade_form.Watermark = "";
+            // 
             // cbPrincipal_category
             // 
             this.cbPrincipal_category.DataSource = null;
@@ -485,21 +506,53 @@
             this.tbAddress.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbAddress.Watermark = "";
             // 
-            // tbIdcard
+            // tbPhone_number
             // 
-            this.tbIdcard.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbIdcard.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbIdcard.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbIdcard.Location = new System.Drawing.Point(578, 88);
-            this.tbIdcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbIdcard.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbIdcard.Name = "tbIdcard";
-            this.tbIdcard.Padding = new System.Windows.Forms.Padding(5);
-            this.tbIdcard.ShowText = false;
-            this.tbIdcard.Size = new System.Drawing.Size(165, 29);
-            this.tbIdcard.TabIndex = 130;
-            this.tbIdcard.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbIdcard.Watermark = "";
+            this.tbPhone_number.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbPhone_number.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPhone_number.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPhone_number.Location = new System.Drawing.Point(578, 88);
+            this.tbPhone_number.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPhone_number.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbPhone_number.Name = "tbPhone_number";
+            this.tbPhone_number.Padding = new System.Windows.Forms.Padding(5);
+            this.tbPhone_number.ShowText = false;
+            this.tbPhone_number.Size = new System.Drawing.Size(165, 29);
+            this.tbPhone_number.TabIndex = 130;
+            this.tbPhone_number.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPhone_number.Watermark = "";
+            // 
+            // tbLegal_name
+            // 
+            this.tbLegal_name.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbLegal_name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbLegal_name.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbLegal_name.Location = new System.Drawing.Point(1281, 44);
+            this.tbLegal_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbLegal_name.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbLegal_name.Name = "tbLegal_name";
+            this.tbLegal_name.Padding = new System.Windows.Forms.Padding(5);
+            this.tbLegal_name.ShowText = false;
+            this.tbLegal_name.Size = new System.Drawing.Size(165, 29);
+            this.tbLegal_name.TabIndex = 130;
+            this.tbLegal_name.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbLegal_name.Watermark = "";
+            // 
+            // tbCompany_id
+            // 
+            this.tbCompany_id.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbCompany_id.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCompany_id.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbCompany_id.Location = new System.Drawing.Point(932, 44);
+            this.tbCompany_id.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbCompany_id.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbCompany_id.Name = "tbCompany_id";
+            this.tbCompany_id.Padding = new System.Windows.Forms.Padding(5);
+            this.tbCompany_id.ShowText = false;
+            this.tbCompany_id.Size = new System.Drawing.Size(165, 29);
+            this.tbCompany_id.TabIndex = 130;
+            this.tbCompany_id.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbCompany_id.Watermark = "";
             // 
             // tbPrincipal_name
             // 
@@ -598,6 +651,7 @@
             this.btReset.TabIndex = 62;
             this.btReset.Text = "重置(&R)";
             this.btReset.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btReset.Click += new System.EventHandler(this.btReset_Click);
             // 
             // btSearch
             // 
@@ -610,6 +664,7 @@
             this.btSearch.TabIndex = 61;
             this.btSearch.Text = "查询(&S)";
             this.btSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // pagination
             // 
@@ -631,53 +686,6 @@
             this.pagination.Text = "uiDataGridPage1";
             this.pagination.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.pagination.TotalCount = 40000;
-            // 
-            // tbCompany_id
-            // 
-            this.tbCompany_id.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbCompany_id.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCompany_id.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbCompany_id.Location = new System.Drawing.Point(932, 44);
-            this.tbCompany_id.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbCompany_id.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbCompany_id.Name = "tbCompany_id";
-            this.tbCompany_id.Padding = new System.Windows.Forms.Padding(5);
-            this.tbCompany_id.ShowText = false;
-            this.tbCompany_id.Size = new System.Drawing.Size(165, 29);
-            this.tbCompany_id.TabIndex = 130;
-            this.tbCompany_id.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbCompany_id.Watermark = "";
-            // 
-            // tbLegal_name
-            // 
-            this.tbLegal_name.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbLegal_name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbLegal_name.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbLegal_name.Location = new System.Drawing.Point(1281, 44);
-            this.tbLegal_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbLegal_name.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbLegal_name.Name = "tbLegal_name";
-            this.tbLegal_name.Padding = new System.Windows.Forms.Padding(5);
-            this.tbLegal_name.ShowText = false;
-            this.tbLegal_name.Size = new System.Drawing.Size(165, 29);
-            this.tbLegal_name.TabIndex = 130;
-            this.tbLegal_name.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbLegal_name.Watermark = "";
-            // 
-            // cbTrade_form
-            // 
-            this.cbTrade_form.DataSource = null;
-            this.cbTrade_form.FillColor = System.Drawing.Color.White;
-            this.cbTrade_form.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTrade_form.Location = new System.Drawing.Point(932, 88);
-            this.cbTrade_form.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbTrade_form.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbTrade_form.Name = "cbTrade_form";
-            this.cbTrade_form.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbTrade_form.Size = new System.Drawing.Size(165, 29);
-            this.cbTrade_form.TabIndex = 134;
-            this.cbTrade_form.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbTrade_form.Watermark = "";
             // 
             // frmTourList
             // 
@@ -730,7 +738,7 @@
         private Sunny.UI.UIComboBox cbPrincipal_category;
         private Sunny.UI.UITextBox tbRegistered_trademark;
         private Sunny.UI.UITextBox tbAddress;
-        private Sunny.UI.UITextBox tbIdcard;
+        private Sunny.UI.UITextBox tbPhone_number;
         private Sunny.UI.UITextBox tbPrincipal_name;
         private Sunny.UI.UILabel uiLabel14;
         private Sunny.UI.UILabel label9;

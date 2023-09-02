@@ -223,7 +223,7 @@ namespace com.vdm.dal
             //构建sql语句
             List<string> listColumnName = new List<string>();
             List<string> listParameter = new List<string>();
-            DataTable tblSchema = this.getTableSchema("t_animal");
+            DataTable tblSchema = this.getTableSchema("t_tour");
             if (tblSchema != null)
             {
                 foreach (DataRow row in tblSchema.Rows)
@@ -276,13 +276,13 @@ namespace com.vdm.dal
                     //构建sql语句
                     List<string> listColumnName = new List<string>();
                     List<string> listParameter = new List<string>();
-                    DataTable tblSchema = this.getTableSchema("t_animal");
+                    DataTable tblSchema = this.getTableSchema("t_tour");
                     if (tblSchema != null)
                     {
                         foreach (DataRow row in tblSchema.Rows)
                         {
                             //过滤掉主键
-                            if (row["ColumnName"].ToString() == "breed_id")
+                            if (row["ColumnName"].ToString() == "tour_id")
                             {
                                 continue;
                             }
@@ -299,7 +299,7 @@ namespace com.vdm.dal
                     {
                         foreach (DataRow row in tblSchema.Rows)
                         {
-                            if (row["ColumnName"].ToString() == "breed_id")
+                            if (row["ColumnName"].ToString() == "tour_id")
                             {
                                 continue;
                             }
@@ -340,7 +340,7 @@ namespace com.vdm.dal
                     listSetValue.Add(row["ColumnName"].ToString() + "=@" + row["ColumnName"].ToString());
                 }
             }
-            string sql = "update t_people set " + Utils.JoinStingListToString(listSetValue) + " where breed_id = " + tour.Tour_id;
+            string sql = "update t_tour set " + Utils.JoinStingListToString(listSetValue) + " where tour_id = " + tour.Tour_id;
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (tblSchema != null)
             {

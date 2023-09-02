@@ -238,6 +238,9 @@
     <EmbeddedResource Include="frmSystemSet.resx">
       <DependentUpon>frmSystemSet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTourInfo.resx">
+      <DependentUpon>frmTourInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTourList.resx">
       <DependentUpon>frmTourList.cs</DependentUpon>
     </EmbeddedResource>

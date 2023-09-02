@@ -57,8 +57,6 @@ namespace com.vdm.bll
                     tour.Company_id = row["company_id"].ToString();
                     tour.Creater = row["creater"].ToString();
                     tour.Create_datetime = row["create_datetime"].ToString();
-                    tour.Last_updater = row["last_updater"].ToString();
-                    tour.Last_update_datetime = row["last_update_datetime"].ToString();
                     tour.Legal_name = row["legal_name"].ToString();
                     tour.Phone_number = row["phone_number"].ToString();
                     tour.Principal_category = row["principal_category"].ToString();
