@@ -25,7 +25,7 @@ namespace com.vdm.form
         private void btSelect_Click(object sender, EventArgs e)
         {
             openFileDialog.InitialDirectory = "c:\\";//注意这里写路径时要用c:\\而不是c:\
-            openFileDialog.Filter = "老版本Excel文件|*.xls|新版本Excel文件|*.xlsx";
+            openFileDialog.Filter = "Excel 2003 文件|*.xls";
             openFileDialog.RestoreDirectory = true;
             openFileDialog.FilterIndex = 1;
 
@@ -35,6 +35,11 @@ namespace com.vdm.form
                 this.tbFileName.Text = openFileDialog.FileName;
             }
         }
+
+        protected override bool CheckData()
+        {
+            return  CheckEmpty(tbFileName, "请选择要导入的文件。");
+        }
         /// <summary>
         ///  解析Excel文件
         /// </summary>
@@ -42,13 +47,18 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if(this.IsOK == false)
+            {
+                return;
+            }
             AnimalBLL animalBLL = null;
             string filename = this.tbFileName.Text;
             string password = this.tbPassword.Text.Trim();
-            DataTable dt = ExcelUtil.ExcelToDataTable(filename, password);
+            string errMessage = null;
+            DataTable dt = ExcelUtil.ExcelToDataTable();
             List<Animal> animals = new List<Animal>();
             //若有数据
-            if (dt != null && dt.Rows.Count != 0)
+            if (dt != null && dt.Rows.Count > 0 && errMessage == "")//errMessage==""代表解析excel文件没有发生异常
             {
                 Animal animal = new Animal();
                 animalBLL = new AnimalBLL();
@@ -89,6 +99,11 @@ namespace com.vdm.form
                 {
                     ShowInfoDialog("导入失败！错误信息是："+result.Exception.Message);
                 }
+            }
+            else
+            {
+                ShowErrorDialog(errMessage);
+                return;
             }
         }
     }
