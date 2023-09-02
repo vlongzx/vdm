@@ -175,6 +175,18 @@
     <Compile Include="frmPeopleInfo.Designer.cs">
       <DependentUpon>frmPeopleInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPlantInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlantInfo.Designer.cs">
+      <DependentUpon>frmPlantInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlantList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlantList.Designer.cs">
+      <DependentUpon>frmPlantList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSystemSet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSystemSet.resx">
       <DependentUpon>frmSystemSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTourInfo.resx">
+      <DependentUpon>frmTourInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTourList.resx">
       <DependentUpon>frmTourList.cs</DependentUpon>

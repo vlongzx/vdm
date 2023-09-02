@@ -220,56 +220,56 @@ namespace com.vdm.form
             {
                 year_outbound = int.Parse(this.cbYear_outbound.SelectedValue.ToString());
             }
-            float output_from = 0.00f;
+            double output_from = 0;
             if(this.tbOutput_From.Text.Trim() != "")
             {
-                output_from = float.Parse(this.tbOutput_From.Text.Trim());
+                output_from = double.Parse(this.tbOutput_From.Text.Trim());
             }
-            
-            float output_to = 0.00f;
+
+            double output_to = 0;
             if (this.tbOutput_To.Text.Trim()!="")
             {
-                output_to = float.Parse(this.tbOutput_To.Text.Trim());
+                output_to = double.Parse(this.tbOutput_To.Text.Trim());
             }
-            float total_area_from = 0.00f;
+            double total_area_from = 0;
             if (this.tbPen_area_From.Text.Trim()!="")
             {
-                total_area_from = float.Parse(this.tbPen_area_From.Text.Trim());
+                total_area_from = double.Parse(this.tbPen_area_From.Text.Trim());
             }
-            float total_area_to = 0.00f;
+            double total_area_to = 0;
             if (this.tbPen_area_To.Text.Trim()!="")
             {
-                total_area_to = float.Parse(this.tbPen_area_To.Text.Trim());
+                total_area_to = double.Parse(this.tbPen_area_To.Text.Trim());
             }
-            float pen_area_from = 0.00f;
+            double pen_area_from = 0;
             if (this.tbPen_area_From.Text.Trim()!="")
             {
-                pen_area_from = float.Parse(this.tbPen_area_From.Text.Trim());
+                pen_area_from = double.Parse(this.tbPen_area_From.Text.Trim());
             }
-            float pen_area_to =0.00f;
+            double pen_area_to =0;
             if (this.tbPen_area_To.Text.Trim()!="")
             {
-                pen_area_to = float.Parse(this.tbPen_area_To.Text.Trim());
+                pen_area_to = double.Parse(this.tbPen_area_To.Text.Trim());
             }
-            float midden_area_from = 0.00f;
+            double midden_area_from = 0;
             if (this.tbMidden_area_From.Text.Trim()!="")
             {
-                midden_area_from = float.Parse(this.tbMidden_area_From.Text.Trim());
+                midden_area_from = double.Parse(this.tbMidden_area_From.Text.Trim());
             }
-            float midden_area_to =0.00f;
+            double midden_area_to =0;
             if (this.tbMidden_area_To.Text.Trim()!="")
             {
-                midden_area_to = float.Parse(this.tbMidden_area_To.Text.Trim());
+                midden_area_to = double.Parse(this.tbMidden_area_To.Text.Trim());
             }
-            float pullttion_area_from = 0.00f;
+            double pullttion_area_from = 0;
             if (this.tbPullttion_area_From.Text.Trim()!="")
             {
-                pullttion_area_from = float.Parse(this.tbPullttion_area_From.Text.Trim());
+                pullttion_area_from = double.Parse(this.tbPullttion_area_From.Text.Trim());
             }
-            float pullttion_area_to = 0.00f;
+            double pullttion_area_to = 0;
             if (this.tbPullttion_area_To.Text.Trim()!="")
             {
-                pullttion_area_to = float.Parse(this.tbPullttion_area_To.Text.Trim());
+                pullttion_area_to = double.Parse(this.tbPullttion_area_To.Text.Trim());
             }
             int cueernt_inventory_from = 0;
             if (this.tbCueernt_inventory_From.Text.Trim()!="")

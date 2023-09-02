@@ -25,7 +25,7 @@ namespace com.vdm.model
         private string last_updater;
         private string town;
         private string villiage;
-
+        private string remark;
         /// <summary>
         /// 旅游信息ID
         /// </summary>
@@ -279,6 +279,19 @@ namespace com.vdm.model
             set
             {
                 villiage = value;
+            }
+        }
+
+        public string Remark
+        {
+            get
+            {
+                return remark;
+            }
+
+            set
+            {
+                remark = value;
             }
         }
     }

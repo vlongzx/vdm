@@ -75,6 +75,7 @@
     <Compile Include="OrgDAL.cs" />
     <Compile Include="DictDAL.cs" />
     <Compile Include="PeopleDAL.cs" />
+    <Compile Include="PlantDAL.cs" />
     <Compile Include="RoleDAL.cs" />
     <Compile Include="SqlDbHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
