@@ -176,5 +176,10 @@ namespace com.vdm.form
             //book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\模板.xlsx"), FileFormatType.Excel2007Xlsx, "1");
             //book.Save("C:/Users/wang/Desktop/181.xlsx");
         }
+
+        private void frmImportExcelFileFamer_Load(object sender, EventArgs e)
+        {
+            this.lbInformation.ForeColor = Color.Red;
+        }
     }
 }

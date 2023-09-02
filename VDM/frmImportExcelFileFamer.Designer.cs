@@ -36,23 +36,28 @@
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.btExportTemplate = new Sunny.UI.UIButton();
-            this.uiLabel3 = new Sunny.UI.UILabel();
+            this.lbInformation = new Sunny.UI.UILabel();
+            this.uiGroupBox2 = new Sunny.UI.UIGroupBox();
             this.pnlBtm.SuspendLayout();
             this.uiGroupBox1.SuspendLayout();
+            this.uiGroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBtm
             // 
-            this.pnlBtm.Location = new System.Drawing.Point(1, 393);
-            this.pnlBtm.Size = new System.Drawing.Size(740, 55);
+            this.pnlBtm.Location = new System.Drawing.Point(1, 532);
+            this.pnlBtm.Size = new System.Drawing.Size(895, 55);
+            this.pnlBtm.Style = Sunny.UI.UIStyle.Custom;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(612, 12);
+            this.btnCancel.Location = new System.Drawing.Point(767, 12);
+            this.btnCancel.Style = Sunny.UI.UIStyle.Custom;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(497, 12);
+            this.btnOK.Location = new System.Drawing.Point(652, 12);
+            this.btnOK.Style = Sunny.UI.UIStyle.Custom;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // uiGroupBox1
@@ -63,12 +68,13 @@
             this.uiGroupBox1.Controls.Add(this.uiLabel2);
             this.uiGroupBox1.Controls.Add(this.uiLabel1);
             this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiGroupBox1.Location = new System.Drawing.Point(6, 136);
+            this.uiGroupBox1.Location = new System.Drawing.Point(31, 270);
             this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox1.Name = "uiGroupBox1";
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(707, 232);
+            this.uiGroupBox1.Size = new System.Drawing.Size(837, 232);
+            this.uiGroupBox1.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox1.TabIndex = 2;
             this.uiGroupBox1.Text = "导入文件";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,6 +87,7 @@
             this.btSelect.MinimumSize = new System.Drawing.Size(1, 1);
             this.btSelect.Name = "btSelect";
             this.btSelect.Size = new System.Drawing.Size(100, 35);
+            this.btSelect.Style = Sunny.UI.UIStyle.Custom;
             this.btSelect.TabIndex = 2;
             this.btSelect.Text = "选择";
             this.btSelect.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -99,6 +106,7 @@
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.ShowText = false;
             this.tbPassword.Size = new System.Drawing.Size(341, 35);
+            this.tbPassword.Style = Sunny.UI.UIStyle.Custom;
             this.tbPassword.TabIndex = 1;
             this.tbPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPassword.Watermark = "";
@@ -116,6 +124,7 @@
             this.tbFileName.ReadOnly = true;
             this.tbFileName.ShowText = false;
             this.tbFileName.Size = new System.Drawing.Size(341, 35);
+            this.tbFileName.Style = Sunny.UI.UIStyle.Custom;
             this.tbFileName.TabIndex = 1;
             this.tbFileName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbFileName.Watermark = "";
@@ -126,7 +135,8 @@
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(35, 136);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel2.Size = new System.Drawing.Size(158, 31);
+            this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel2.TabIndex = 0;
             this.uiLabel2.Text = "文档访问密码";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,7 +147,8 @@
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel1.Location = new System.Drawing.Point(35, 71);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(274, 41);
+            this.uiLabel1.Size = new System.Drawing.Size(206, 31);
+            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel1.TabIndex = 0;
             this.uiLabel1.Text = "选择要导入的文件";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,8 +157,7 @@
             // 
             this.btExportTemplate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btExportTemplate.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btExportTemplate.ForeColor = System.Drawing.Color.Gray;
-            this.btExportTemplate.Location = new System.Drawing.Point(584, 58);
+            this.btExportTemplate.Location = new System.Drawing.Point(622, 41);
             this.btExportTemplate.MinimumSize = new System.Drawing.Size(1, 1);
             this.btExportTemplate.Name = "btExportTemplate";
             this.btExportTemplate.Size = new System.Drawing.Size(145, 35);
@@ -157,36 +167,52 @@
             this.btExportTemplate.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btExportTemplate.Click += new System.EventHandler(this.btExportTemplate_Click);
             // 
-            // uiLabel3
+            // lbInformation
             // 
-            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel3.ForeColor = System.Drawing.Color.Gray;
-            this.uiLabel3.Location = new System.Drawing.Point(2, 49);
-            this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(596, 44);
-            this.uiLabel3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel3.TabIndex = 3;
-            this.uiLabel3.Text = "如需要EXCEL模板，请单击右侧导出模板按钮";
-            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbInformation.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbInformation.ForeColor = System.Drawing.Color.DimGray;
+            this.lbInformation.Location = new System.Drawing.Point(27, 32);
+            this.lbInformation.Name = "lbInformation";
+            this.lbInformation.Size = new System.Drawing.Size(562, 174);
+            this.lbInformation.Style = Sunny.UI.UIStyle.Custom;
+            this.lbInformation.TabIndex = 3;
+            this.lbInformation.Text = "1.如需要EXCEL模板，请单击右侧导出模板按钮。\r\n2.模板文件的标题列不允许修改，不允许删除。\r\n3.模板列数据需要符合列数据格式要求。\r\n4.导入前需要输入" +
+    "文档访问密码。\r\n5.如导入发生错误，请根据错误提示进行修改。";
             // 
-            // frmImportExcelFile
+            // uiGroupBox2
+            // 
+            this.uiGroupBox2.Controls.Add(this.lbInformation);
+            this.uiGroupBox2.Controls.Add(this.btExportTemplate);
+            this.uiGroupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiGroupBox2.Location = new System.Drawing.Point(31, 40);
+            this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiGroupBox2.Name = "uiGroupBox2";
+            this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox2.Size = new System.Drawing.Size(837, 220);
+            this.uiGroupBox2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiGroupBox2.TabIndex = 4;
+            this.uiGroupBox2.Text = "温馨提示";
+            this.uiGroupBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // frmImportExcelFileFamer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(742, 451);
-            this.Controls.Add(this.uiLabel3);
-            this.Controls.Add(this.btExportTemplate);
+            this.ClientSize = new System.Drawing.Size(897, 590);
+            this.Controls.Add(this.uiGroupBox2);
             this.Controls.Add(this.uiGroupBox1);
-            this.Name = "frmImportExcelFile";
+            this.Name = "frmImportExcelFileFamer";
             this.Style = Sunny.UI.UIStyle.Custom;
             this.Text = "文件批量导入";
             this.ZoomScaleRect = new System.Drawing.Rectangle(22, 22, 600, 450);
+            this.Load += new System.EventHandler(this.frmImportExcelFileFamer_Load);
             this.Controls.SetChildIndex(this.pnlBtm, 0);
             this.Controls.SetChildIndex(this.uiGroupBox1, 0);
-            this.Controls.SetChildIndex(this.btExportTemplate, 0);
-            this.Controls.SetChildIndex(this.uiLabel3, 0);
+            this.Controls.SetChildIndex(this.uiGroupBox2, 0);
             this.pnlBtm.ResumeLayout(false);
             this.uiGroupBox1.ResumeLayout(false);
             this.uiGroupBox1.PerformLayout();
+            this.uiGroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -201,6 +227,7 @@
         private Sunny.UI.UILabel uiLabel1;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private Sunny.UI.UIButton btExportTemplate;
-        private Sunny.UI.UILabel uiLabel3;
+        private Sunny.UI.UILabel lbInformation;
+        private Sunny.UI.UIGroupBox uiGroupBox2;
     }
 }
