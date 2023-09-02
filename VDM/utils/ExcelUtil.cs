@@ -138,23 +138,19 @@ namespace com.vdm.form.utils
             }
             return dataTable;
         }
-
-        public static DataTable ExcelToDataTable(string fileName,string password)
+        /// <summary>
+        ///  重新批量导入方法
+        /// </summary>
+        /// <param name="fileName">导入文件的全称</param>
+        /// <param name="password">导入文件的密码</param>
+        /// <returns></returns>
+        public static DataTable ExcelToDataTable(string fileName,string password,out string errMessage)
         {
             DataTable dataTable = null;
-            string pathFinal = fileName.Replace('\\', '/');
             Workbook book = new Workbook();
-            if ("" != password)
+            try
             {
-                try
-                {
-                    book.Open(pathFinal, FileFormatType.Excel2007Xlsx, password);
-                }
-                catch
-                {
-                    MessageBox.Show("密码错误");
-                }
-
+                book.Open(fileName, FileFormatType.Excel2003, password);
                 // Excel 中 sheets 数量必须大于 0
                 if (book.Worksheets.Count > 0)
                 {
@@ -172,6 +168,11 @@ namespace com.vdm.form.utils
                         dataTable = cells.ExportDataTable(0, 0, cells.MaxDataRow + 1, cells.MaxDataColumn + 1, true);
                     }
                 }
+                errMessage = "";
+            }
+            catch (Exception ex)
+            {
+                errMessage = ex.Message;
             }
             return dataTable;
         }
