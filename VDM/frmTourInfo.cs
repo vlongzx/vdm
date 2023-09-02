@@ -165,25 +165,30 @@ namespace com.vdm.form
         private void frmTourInfo_Load(object sender, EventArgs e)
         {
             InitControls();
-            this.tourBLL = new TourBLL();
-            Tour tour = this.tourBLL.getTour(tour_id);
 
-            if(tour != null)
+            if(tour_id != 0)
             {
-                this.tbAddress.Text = tour.Address;
-                this.tbCompany_id.Text = tour.Company_id;
-                this.tbLegal_name.Text = tour.Legal_name;
-                this.tbPhone_number.Text = tour.Phone_number;
-                this.tbPrincipal_name.Text = tour.Principal_name;
-                this.tbRegistered_trademark.Text = tour.Registered_trademark;
-                this.tbYear_person_count.Text = tour.Year_person_count.ToString();
-                this.tbYear_trade_income.Text = tour.Year_trade_income.ToString();
-                this.cbPrincipal_category.SelectedValue = tour.Principal_category;
-                this.cbTown.SelectedValue = tour.Town;
-                this.cbTrade_form.SelectedValue = tour.Trade_form;
-                this.cbVillage.SelectedValue = tour.Villiage;
-                this.tbRemark.Text = tour.Remark;
+                this.tourBLL = new TourBLL();
+                Tour tour = this.tourBLL.getTour(tour_id);
+
+                if (tour != null)
+                {
+                    this.tbAddress.Text = tour.Address;
+                    this.tbCompany_id.Text = tour.Company_id;
+                    this.tbLegal_name.Text = tour.Legal_name;
+                    this.tbPhone_number.Text = tour.Phone_number;
+                    this.tbPrincipal_name.Text = tour.Principal_name;
+                    this.tbRegistered_trademark.Text = tour.Registered_trademark;
+                    this.tbYear_person_count.Text = tour.Year_person_count.ToString();
+                    this.tbYear_trade_income.Text = tour.Year_trade_income.ToString();
+                    this.cbPrincipal_category.SelectedValue = tour.Principal_category;
+                    this.cbTown.SelectedValue = tour.Town;
+                    this.cbTrade_form.SelectedValue = tour.Trade_form;
+                    this.cbVillage.SelectedValue = tour.Villiage;
+                    this.tbRemark.Text = tour.Remark;
+                }
             }
+            
         }
 
         private void cbTown_SelectedValueChanged(object sender, EventArgs e)

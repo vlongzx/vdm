@@ -327,7 +327,7 @@ namespace com.vdm.dal
             //构建参数值
             List<string> listSetValue = new List<string>();
             SQLiteParameter parameter = null;
-            DataTable tblSchema = this.getTableSchema("t_tour");
+            DataTable tblSchema = this.getTableSchema("t_plant");
             if (tblSchema != null)
             {
                 foreach (DataRow row in tblSchema.Rows)

@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pagination = new Sunny.UI.UIPagination();
             this.uiLabel5 = new Sunny.UI.UILabel();
             this.tbYear_yield_to = new Sunny.UI.UITextBox();
@@ -45,11 +45,19 @@
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.btImport = new Sunny.UI.UIButton();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.cbPlant_brand = new Sunny.UI.UIComboBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
+            this.uiLabel9 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
+            this.cbInsect_ill = new Sunny.UI.UIComboBox();
+            this.cbDevelop_willing = new Sunny.UI.UIComboBox();
+            this.cbSale_way = new Sunny.UI.UIComboBox();
+            this.cbManage_skill_method = new Sunny.UI.UIComboBox();
+            this.cbIs_plan = new Sunny.UI.UIComboBox();
             this.cbPlant_type = new Sunny.UI.UIComboBox();
             this.tbAddress = new Sunny.UI.UITextBox();
             this.tbPhone_number = new Sunny.UI.UITextBox();
+            this.tbPlant_area = new Sunny.UI.UITextBox();
             this.tbIdcard = new Sunny.UI.UITextBox();
             this.tbContact_person = new Sunny.UI.UITextBox();
             this.uiLabel14 = new Sunny.UI.UILabel();
@@ -57,6 +65,9 @@
             this.label3 = new Sunny.UI.UILabel();
             this.label2 = new Sunny.UI.UILabel();
             this.label10 = new Sunny.UI.UILabel();
+            this.uiLabel8 = new Sunny.UI.UILabel();
+            this.uiLabel4 = new Sunny.UI.UILabel();
+            this.uiLabel10 = new Sunny.UI.UILabel();
             this.label8 = new Sunny.UI.UILabel();
             this.btReset = new Sunny.UI.UIButton();
             this.btSearch = new Sunny.UI.UIButton();
@@ -66,18 +77,7 @@
             this.dgPlantList = new Sunny.UI.UIDataGridView();
             this.groupBox2 = new Sunny.UI.UIGroupBox();
             this.btEdit = new Sunny.UI.UIButton();
-            this.cbIs_plan = new Sunny.UI.UIComboBox();
-            this.tbPlant_area = new Sunny.UI.UITextBox();
-            this.cbPlant_brand = new Sunny.UI.UIComboBox();
-            this.cbSale_way = new Sunny.UI.UIComboBox();
-            this.uiLabel4 = new Sunny.UI.UILabel();
-            this.cbOutput = new Sunny.UI.UIComboBox();
-            this.uiLabel8 = new Sunny.UI.UILabel();
-            this.cbInsect_ill = new Sunny.UI.UIComboBox();
-            this.cbManage_skill_method = new Sunny.UI.UIComboBox();
-            this.uiLabel9 = new Sunny.UI.UILabel();
-            this.uiLabel10 = new Sunny.UI.UILabel();
-            this.cbDevelop_willing = new Sunny.UI.UIComboBox();
+            this.tbOutput = new Sunny.UI.UITextBox();
             this.uiGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPlantList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -255,7 +255,6 @@
             this.uiGroupBox1.Controls.Add(this.uiLabel9);
             this.uiGroupBox1.Controls.Add(this.uiLabel2);
             this.uiGroupBox1.Controls.Add(this.cbInsect_ill);
-            this.uiGroupBox1.Controls.Add(this.cbOutput);
             this.uiGroupBox1.Controls.Add(this.cbDevelop_willing);
             this.uiGroupBox1.Controls.Add(this.cbSale_way);
             this.uiGroupBox1.Controls.Add(this.cbManage_skill_method);
@@ -263,6 +262,7 @@
             this.uiGroupBox1.Controls.Add(this.cbPlant_type);
             this.uiGroupBox1.Controls.Add(this.tbAddress);
             this.uiGroupBox1.Controls.Add(this.tbPhone_number);
+            this.uiGroupBox1.Controls.Add(this.tbOutput);
             this.uiGroupBox1.Controls.Add(this.tbPlant_area);
             this.uiGroupBox1.Controls.Add(this.tbIdcard);
             this.uiGroupBox1.Controls.Add(this.tbContact_person);
@@ -288,6 +288,21 @@
             this.uiGroupBox1.Text = "查询条件";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cbPlant_brand
+            // 
+            this.cbPlant_brand.DataSource = null;
+            this.cbPlant_brand.FillColor = System.Drawing.Color.White;
+            this.cbPlant_brand.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbPlant_brand.Location = new System.Drawing.Point(1281, 88);
+            this.cbPlant_brand.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbPlant_brand.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbPlant_brand.Name = "cbPlant_brand";
+            this.cbPlant_brand.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbPlant_brand.Size = new System.Drawing.Size(165, 29);
+            this.cbPlant_brand.TabIndex = 170;
+            this.cbPlant_brand.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbPlant_brand.Watermark = "";
+            // 
             // uiLabel1
             // 
             this.uiLabel1.AutoSize = true;
@@ -299,6 +314,17 @@
             this.uiLabel1.Text = "是否符合规划";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // uiLabel9
+            // 
+            this.uiLabel9.AutoSize = true;
+            this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel9.Location = new System.Drawing.Point(36, 188);
+            this.uiLabel9.Name = "uiLabel9";
+            this.uiLabel9.Size = new System.Drawing.Size(182, 31);
+            this.uiLabel9.TabIndex = 145;
+            this.uiLabel9.Text = "主要管理和技术";
+            this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // uiLabel2
             // 
             this.uiLabel2.AutoSize = true;
@@ -309,6 +335,81 @@
             this.uiLabel2.TabIndex = 145;
             this.uiLabel2.Text = "种植类别";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cbInsect_ill
+            // 
+            this.cbInsect_ill.DataSource = null;
+            this.cbInsect_ill.FillColor = System.Drawing.Color.White;
+            this.cbInsect_ill.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbInsect_ill.Location = new System.Drawing.Point(1281, 135);
+            this.cbInsect_ill.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbInsect_ill.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbInsect_ill.Name = "cbInsect_ill";
+            this.cbInsect_ill.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbInsect_ill.Size = new System.Drawing.Size(165, 29);
+            this.cbInsect_ill.TabIndex = 134;
+            this.cbInsect_ill.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbInsect_ill.Watermark = "";
+            // 
+            // cbDevelop_willing
+            // 
+            this.cbDevelop_willing.DataSource = null;
+            this.cbDevelop_willing.FillColor = System.Drawing.Color.White;
+            this.cbDevelop_willing.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbDevelop_willing.Location = new System.Drawing.Point(578, 189);
+            this.cbDevelop_willing.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbDevelop_willing.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbDevelop_willing.Name = "cbDevelop_willing";
+            this.cbDevelop_willing.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbDevelop_willing.Size = new System.Drawing.Size(165, 29);
+            this.cbDevelop_willing.TabIndex = 134;
+            this.cbDevelop_willing.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbDevelop_willing.Watermark = "";
+            // 
+            // cbSale_way
+            // 
+            this.cbSale_way.DataSource = null;
+            this.cbSale_way.FillColor = System.Drawing.Color.White;
+            this.cbSale_way.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbSale_way.Location = new System.Drawing.Point(578, 135);
+            this.cbSale_way.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbSale_way.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbSale_way.Name = "cbSale_way";
+            this.cbSale_way.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbSale_way.Size = new System.Drawing.Size(165, 29);
+            this.cbSale_way.TabIndex = 134;
+            this.cbSale_way.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbSale_way.Watermark = "";
+            // 
+            // cbManage_skill_method
+            // 
+            this.cbManage_skill_method.DataSource = null;
+            this.cbManage_skill_method.FillColor = System.Drawing.Color.White;
+            this.cbManage_skill_method.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbManage_skill_method.Location = new System.Drawing.Point(197, 190);
+            this.cbManage_skill_method.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbManage_skill_method.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbManage_skill_method.Name = "cbManage_skill_method";
+            this.cbManage_skill_method.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbManage_skill_method.Size = new System.Drawing.Size(165, 29);
+            this.cbManage_skill_method.TabIndex = 134;
+            this.cbManage_skill_method.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbManage_skill_method.Watermark = "";
+            // 
+            // cbIs_plan
+            // 
+            this.cbIs_plan.DataSource = null;
+            this.cbIs_plan.FillColor = System.Drawing.Color.White;
+            this.cbIs_plan.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbIs_plan.Location = new System.Drawing.Point(578, 88);
+            this.cbIs_plan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbIs_plan.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbIs_plan.Name = "cbIs_plan";
+            this.cbIs_plan.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbIs_plan.Size = new System.Drawing.Size(165, 29);
+            this.cbIs_plan.TabIndex = 134;
+            this.cbIs_plan.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbIs_plan.Watermark = "";
             // 
             // cbPlant_type
             // 
@@ -356,6 +457,22 @@
             this.tbPhone_number.TabIndex = 130;
             this.tbPhone_number.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPhone_number.Watermark = "";
+            // 
+            // tbPlant_area
+            // 
+            this.tbPlant_area.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbPlant_area.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPlant_area.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPlant_area.Location = new System.Drawing.Point(932, 88);
+            this.tbPlant_area.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPlant_area.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbPlant_area.Name = "tbPlant_area";
+            this.tbPlant_area.Padding = new System.Windows.Forms.Padding(5);
+            this.tbPlant_area.ShowText = false;
+            this.tbPlant_area.Size = new System.Drawing.Size(165, 29);
+            this.tbPlant_area.TabIndex = 130;
+            this.tbPlant_area.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPlant_area.Watermark = "";
             // 
             // tbIdcard
             // 
@@ -449,6 +566,42 @@
             this.label10.Text = "年产量(斤)";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // uiLabel8
+            // 
+            this.uiLabel8.AutoSize = true;
+            this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel8.Location = new System.Drawing.Point(1137, 135);
+            this.uiLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.uiLabel8.Name = "uiLabel8";
+            this.uiLabel8.Size = new System.Drawing.Size(134, 31);
+            this.uiLabel8.TabIndex = 101;
+            this.uiLabel8.Text = "主要虫病害";
+            this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel4
+            // 
+            this.uiLabel4.AutoSize = true;
+            this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel4.Location = new System.Drawing.Point(779, 133);
+            this.uiLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.uiLabel4.Name = "uiLabel4";
+            this.uiLabel4.Size = new System.Drawing.Size(126, 31);
+            this.uiLabel4.TabIndex = 101;
+            this.uiLabel4.Text = "产值(万元)";
+            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel10
+            // 
+            this.uiLabel10.AutoSize = true;
+            this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel10.Location = new System.Drawing.Point(400, 188);
+            this.uiLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.uiLabel10.Name = "uiLabel10";
+            this.uiLabel10.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel10.TabIndex = 101;
+            this.uiLabel10.Text = "发展意愿";
+            this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -530,48 +683,48 @@
             // 
             this.dgPlantList.AllowUserToAddRows = false;
             this.dgPlantList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgPlantList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgPlantList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgPlantList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgPlantList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPlantList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPlantList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgPlantList.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgPlantList.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgPlantList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgPlantList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgPlantList.EnableHeadersVisualStyles = false;
             this.dgPlantList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgPlantList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgPlantList.Location = new System.Drawing.Point(4, 32);
             this.dgPlantList.Name = "dgPlantList";
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPlantList.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPlantList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgPlantList.RowHeadersVisible = false;
-            dataGridViewCellStyle45.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgPlantList.RowsDefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgPlantList.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgPlantList.RowTemplate.Height = 23;
             this.dgPlantList.ScrollBarHandleWidth = 40;
             this.dgPlantList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -611,173 +764,21 @@
             this.btEdit.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
-            // cbIs_plan
+            // tbOutput
             // 
-            this.cbIs_plan.DataSource = null;
-            this.cbIs_plan.FillColor = System.Drawing.Color.White;
-            this.cbIs_plan.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbIs_plan.Location = new System.Drawing.Point(578, 88);
-            this.cbIs_plan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbIs_plan.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbIs_plan.Name = "cbIs_plan";
-            this.cbIs_plan.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbIs_plan.Size = new System.Drawing.Size(165, 29);
-            this.cbIs_plan.TabIndex = 134;
-            this.cbIs_plan.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbIs_plan.Watermark = "";
-            // 
-            // tbPlant_area
-            // 
-            this.tbPlant_area.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbPlant_area.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPlant_area.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPlant_area.Location = new System.Drawing.Point(932, 88);
-            this.tbPlant_area.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbPlant_area.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbPlant_area.Name = "tbPlant_area";
-            this.tbPlant_area.Padding = new System.Windows.Forms.Padding(5);
-            this.tbPlant_area.ShowText = false;
-            this.tbPlant_area.Size = new System.Drawing.Size(165, 29);
-            this.tbPlant_area.TabIndex = 130;
-            this.tbPlant_area.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbPlant_area.Watermark = "";
-            // 
-            // cbPlant_brand
-            // 
-            this.cbPlant_brand.DataSource = null;
-            this.cbPlant_brand.FillColor = System.Drawing.Color.White;
-            this.cbPlant_brand.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbPlant_brand.Location = new System.Drawing.Point(1281, 88);
-            this.cbPlant_brand.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbPlant_brand.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbPlant_brand.Name = "cbPlant_brand";
-            this.cbPlant_brand.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbPlant_brand.Size = new System.Drawing.Size(165, 29);
-            this.cbPlant_brand.TabIndex = 170;
-            this.cbPlant_brand.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbPlant_brand.Watermark = "";
-            // 
-            // cbSale_way
-            // 
-            this.cbSale_way.DataSource = null;
-            this.cbSale_way.FillColor = System.Drawing.Color.White;
-            this.cbSale_way.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbSale_way.Location = new System.Drawing.Point(578, 135);
-            this.cbSale_way.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbSale_way.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbSale_way.Name = "cbSale_way";
-            this.cbSale_way.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbSale_way.Size = new System.Drawing.Size(165, 29);
-            this.cbSale_way.TabIndex = 134;
-            this.cbSale_way.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbSale_way.Watermark = "";
-            // 
-            // uiLabel4
-            // 
-            this.uiLabel4.AutoSize = true;
-            this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel4.Location = new System.Drawing.Point(779, 133);
-            this.uiLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(126, 31);
-            this.uiLabel4.TabIndex = 101;
-            this.uiLabel4.Text = "产值(万元)";
-            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbOutput
-            // 
-            this.cbOutput.DataSource = null;
-            this.cbOutput.FillColor = System.Drawing.Color.White;
-            this.cbOutput.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbOutput.Location = new System.Drawing.Point(932, 133);
-            this.cbOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbOutput.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbOutput.Name = "cbOutput";
-            this.cbOutput.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbOutput.Size = new System.Drawing.Size(165, 29);
-            this.cbOutput.TabIndex = 134;
-            this.cbOutput.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbOutput.Watermark = "";
-            // 
-            // uiLabel8
-            // 
-            this.uiLabel8.AutoSize = true;
-            this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel8.Location = new System.Drawing.Point(1137, 135);
-            this.uiLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.uiLabel8.Name = "uiLabel8";
-            this.uiLabel8.Size = new System.Drawing.Size(134, 31);
-            this.uiLabel8.TabIndex = 101;
-            this.uiLabel8.Text = "主要虫病害";
-            this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbInsect_ill
-            // 
-            this.cbInsect_ill.DataSource = null;
-            this.cbInsect_ill.FillColor = System.Drawing.Color.White;
-            this.cbInsect_ill.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbInsect_ill.Location = new System.Drawing.Point(1281, 135);
-            this.cbInsect_ill.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbInsect_ill.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbInsect_ill.Name = "cbInsect_ill";
-            this.cbInsect_ill.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbInsect_ill.Size = new System.Drawing.Size(165, 29);
-            this.cbInsect_ill.TabIndex = 134;
-            this.cbInsect_ill.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbInsect_ill.Watermark = "";
-            // 
-            // cbManage_skill_method
-            // 
-            this.cbManage_skill_method.DataSource = null;
-            this.cbManage_skill_method.FillColor = System.Drawing.Color.White;
-            this.cbManage_skill_method.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbManage_skill_method.Location = new System.Drawing.Point(197, 190);
-            this.cbManage_skill_method.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbManage_skill_method.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbManage_skill_method.Name = "cbManage_skill_method";
-            this.cbManage_skill_method.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbManage_skill_method.Size = new System.Drawing.Size(165, 29);
-            this.cbManage_skill_method.TabIndex = 134;
-            this.cbManage_skill_method.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbManage_skill_method.Watermark = "";
-            // 
-            // uiLabel9
-            // 
-            this.uiLabel9.AutoSize = true;
-            this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel9.Location = new System.Drawing.Point(36, 188);
-            this.uiLabel9.Name = "uiLabel9";
-            this.uiLabel9.Size = new System.Drawing.Size(182, 31);
-            this.uiLabel9.TabIndex = 145;
-            this.uiLabel9.Text = "主要管理和技术";
-            this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel10
-            // 
-            this.uiLabel10.AutoSize = true;
-            this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel10.Location = new System.Drawing.Point(400, 188);
-            this.uiLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.uiLabel10.Name = "uiLabel10";
-            this.uiLabel10.Size = new System.Drawing.Size(110, 31);
-            this.uiLabel10.TabIndex = 101;
-            this.uiLabel10.Text = "发展意愿";
-            this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbDevelop_willing
-            // 
-            this.cbDevelop_willing.DataSource = null;
-            this.cbDevelop_willing.FillColor = System.Drawing.Color.White;
-            this.cbDevelop_willing.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbDevelop_willing.Location = new System.Drawing.Point(578, 189);
-            this.cbDevelop_willing.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbDevelop_willing.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbDevelop_willing.Name = "cbDevelop_willing";
-            this.cbDevelop_willing.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbDevelop_willing.Size = new System.Drawing.Size(165, 29);
-            this.cbDevelop_willing.TabIndex = 134;
-            this.cbDevelop_willing.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbDevelop_willing.Watermark = "";
+            this.tbOutput.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbOutput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbOutput.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbOutput.Location = new System.Drawing.Point(932, 135);
+            this.tbOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbOutput.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbOutput.Name = "tbOutput";
+            this.tbOutput.Padding = new System.Windows.Forms.Padding(5);
+            this.tbOutput.ShowText = false;
+            this.tbOutput.Size = new System.Drawing.Size(165, 29);
+            this.tbOutput.TabIndex = 130;
+            this.tbOutput.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbOutput.Watermark = "";
             // 
             // frmPlantList
             // 
@@ -840,7 +841,6 @@
         private Sunny.UI.UIComboBox cbPlant_brand;
         private Sunny.UI.UILabel uiLabel9;
         private Sunny.UI.UIComboBox cbInsect_ill;
-        private Sunny.UI.UIComboBox cbOutput;
         private Sunny.UI.UIComboBox cbDevelop_willing;
         private Sunny.UI.UIComboBox cbSale_way;
         private Sunny.UI.UIComboBox cbManage_skill_method;
@@ -849,5 +849,6 @@
         private Sunny.UI.UILabel uiLabel8;
         private Sunny.UI.UILabel uiLabel4;
         private Sunny.UI.UILabel uiLabel10;
+        private Sunny.UI.UITextBox tbOutput;
     }
 }
