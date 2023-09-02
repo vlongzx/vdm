@@ -72,6 +72,7 @@
     <Compile Include="DataAuthDAL.cs" />
     <Compile Include="FamerDAL.cs" />
     <Compile Include="FunctionDAL.cs" />
+    <Compile Include="LandDAL.cs" />
     <Compile Include="OrgDAL.cs" />
     <Compile Include="DictDAL.cs" />
     <Compile Include="PeopleDAL.cs" />

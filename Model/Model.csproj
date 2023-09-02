@@ -51,6 +51,7 @@
     <Compile Include="Dict.cs" />
     <Compile Include="Famer.cs" />
     <Compile Include="Function.cs" />
+    <Compile Include="Land.cs" />
     <Compile Include="Org.cs" />
     <Compile Include="People.cs" />
     <Compile Include="Plant.cs" />

@@ -8,20 +8,18 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace com.vdm.dal
 {
-    public class FamerDAL : BaseDAL
+  public  class LandDAL:BaseDAL
     {
-
         /// <summary>
-        ///  获得农户信息的总数
+        ///  获得信息的总数
         /// </summary>
         /// <param name="condition"></param>
         /// <returns></returns>
         public int getTotalCount(Hashtable condition)
         {
-            string sql = "select * from t_famer where 1 = 1";
+            string sql = "select * from t_land where 1 = 1";
             if (condition != null)
             {
                 if (condition["Holder_name"].ToString() != "")
@@ -149,9 +147,9 @@ namespace com.vdm.dal
         ///  获得所有农户（空条件或者条件查询）
         /// </summary>
         /// <returns></returns>
-        public DataTable queryAllFamer(Hashtable condition, int pageIndex, int pageSize)
+        public DataTable queryAllLand(Hashtable condition, int pageIndex, int pageSize)
         {
-            string sql = "select * from t_famer where 1 = 1";
+            string sql = "select * from t_land where 1 = 1";
             if (condition != null)
             {
                 if (condition["Holder_name"].ToString() != "")
@@ -163,7 +161,7 @@ namespace com.vdm.dal
                     sql += "    and Idcard = @Idcard";
                 }
                 if (condition["Phone_number"].ToString() != "")
-            {
+                {
                     sql += "    and Phone_number = @Phone_number";
                 }
                 if (condition["Car_brand"].ToString() != "")
@@ -203,7 +201,7 @@ namespace com.vdm.dal
                     sql += "    and Town = @Town";
                 }
 
-                if (condition.ContainsKey("tbPlant_area_From") &&condition["tbPlant_area_From"].ToString() != "" && condition["tbPlant_area_To"].ToString() != null)
+                if (condition.ContainsKey("tbPlant_area_From") && condition["tbPlant_area_From"].ToString() != "" && condition["tbPlant_area_To"].ToString() != null)
                 {
                     sql += "  and  plant_area BETWEEN '" + condition["tbPlant_area_From"].ToString() + "' AND '" + condition["tbPlant_area_To"].ToString() + "'";
                 }
@@ -293,119 +291,119 @@ namespace com.vdm.dal
         /// </summary>
         /// <param name="people"></param>
         /// <returns></returns>
-        public DataTable getAllFamer(Hashtable condition)
+        public DataTable getAllLand(Hashtable condition)
         {
-            string sql = "select * from t_famer where 1 = 1";
+            string sql = "select * from t_land where 1 = 1";
             if (condition != null)
             {
-                    if (condition["Holder_name"].ToString() != "")
-                    {
-                        sql += "    and Holder_name = @Holder_name";
-                    }
-                    if (condition["Idcard"].ToString() != "")
-                    {
-                        sql += "    and Idcard = @Idcard";
-                    }
-                    if (condition["Phone_number"].ToString() != "")
-                    {
-                        sql += "    and Phone_number = @Phone_number";
-                    }
-                    if (condition["Car_brand"].ToString() != "")
-                    {
-                        sql += "    and Car_brand =@Car_brand";
-                    }
-                    if (condition["Mechine_type"].ToString() != "")
-                    {
-                        sql += "    and Mechine_type =@Mechine_type";
-                    }
-                    if (condition["Plant_type"].ToString() != "")
-                    {
-                        sql += "    and Plant_type = @Plant_type";
-                    }
-                    if (condition["Plant_area_type"].ToString() != "")
-                    {
-                        sql += "    and Plant_area_type = @Plant_area_type";
-                    }
-                    if (condition["Is_handle_process"].ToString() != "")
-                    {
-                        sql += "    and Is_handle_process = @Is_handle_process";
-                    }
-                    if (condition["Animal_type"].ToString() != "")
-                    {
-                        sql += "    and Animal_type = @Animal_type";
-                    }
-                    if (condition["Animal_area_type"].ToString() != "")
-                    {
-                        sql += "    and Animal_area_type = @Animal_area_type";
-                    }
-                    if (condition["Village"].ToString() != "")
-                    {
-                        sql += "    and Village = @Village";
-                    }
-                    if (condition["Town"].ToString() != "")
-                    {
-                        sql += "    and Town = @Town";
-                    }
+                if (condition["Holder_name"].ToString() != "")
+                {
+                    sql += "    and Holder_name = @Holder_name";
+                }
+                if (condition["Idcard"].ToString() != "")
+                {
+                    sql += "    and Idcard = @Idcard";
+                }
+                if (condition["Phone_number"].ToString() != "")
+                {
+                    sql += "    and Phone_number = @Phone_number";
+                }
+                if (condition["Car_brand"].ToString() != "")
+                {
+                    sql += "    and Car_brand =@Car_brand";
+                }
+                if (condition["Mechine_type"].ToString() != "")
+                {
+                    sql += "    and Mechine_type =@Mechine_type";
+                }
+                if (condition["Plant_type"].ToString() != "")
+                {
+                    sql += "    and Plant_type = @Plant_type";
+                }
+                if (condition["Plant_area_type"].ToString() != "")
+                {
+                    sql += "    and Plant_area_type = @Plant_area_type";
+                }
+                if (condition["Is_handle_process"].ToString() != "")
+                {
+                    sql += "    and Is_handle_process = @Is_handle_process";
+                }
+                if (condition["Animal_type"].ToString() != "")
+                {
+                    sql += "    and Animal_type = @Animal_type";
+                }
+                if (condition["Animal_area_type"].ToString() != "")
+                {
+                    sql += "    and Animal_area_type = @Animal_area_type";
+                }
+                if (condition["Village"].ToString() != "")
+                {
+                    sql += "    and Village = @Village";
+                }
+                if (condition["Town"].ToString() != "")
+                {
+                    sql += "    and Town = @Town";
+                }
 
-                    if (condition.ContainsKey("tbPlant_area_From") && condition["tbPlant_area_From"].ToString() != "" && condition["tbPlant_area_To"].ToString() != null)
-                    {
-                        sql += "  and  plant_area BETWEEN '" + condition["tbPlant_area_From"].ToString() + "' AND '" + condition["tbPlant_area_To"].ToString() + "'";
-                    }
-                    if (condition.ContainsKey("tbPlant_yield_From") && condition["tbPlant_yield_From"].ToString() != "" && condition["tbPlant_yield_To"].ToString() != null)
-                    {
-                        sql += "  and  plant_yield BETWEEN '" + condition["tbPlant_yield_From"].ToString() + "' AND '" + condition["tbPlant_yield_To"].ToString() + "'";
-                    }
-                    if (condition.ContainsKey("tbPlant_output_From") && condition["tbPlant_output_From"].ToString() != "" && condition["tbPlant_output_To"].ToString() != null)
-                    {
-                        sql += "  and  plant_output BETWEEN '" + condition["tbPlant_output_From"].ToString() + "' AND '" + condition["tbPlant_output_To"].ToString() + "'";
-                    }
-                    if (condition.ContainsKey("tbAnimal_area_From") && condition["tbAnimal_area_From"].ToString() != "" && condition["tbAnimal_area_To"].ToString() != null)
-                    {
-                        sql += "  and  Animal_area BETWEEN '" + condition["tbAnimal_area_From"].ToString() + "' AND '" + condition["tbAnimal_area_To"].ToString() + "'";
-                    }
-                    if (condition.ContainsKey("tbAnimal_count_From") && condition["tbAnimal_count_From"].ToString() != "" && condition["tbAnimal_count_To"].ToString() != null)
-                    {
-                        sql += "  and  Animal_count BETWEEN '" + condition["tbAnimal_count_From"].ToString() + "' AND '" + condition["tbAnimal_count_To"].ToString() + "'";
-                    }
-                    if (condition.ContainsKey("tbAnimal_nvaccinate_count_From") && condition["tbAnimal_nvaccinate_count_From"].ToString() != "" && condition["tbAnimal_nvaccinate_count_To"].ToString() != null)
-                    {
-                        sql += "  and  Animal_nvaccinate_count BETWEEN '" + condition["tbAnimal_nvaccinate_count_From"].ToString() + "' AND '" + condition["tbAnimal_nvaccinate_count_To"].ToString() + "'";
-                    }
-                    if (condition.ContainsKey("tbAnimal_output_From") && condition["tbAnimal_output_From"].ToString() != "" && condition["tbAnimal_output_To"].ToString() != null)
-                    {
-                        sql += "  and  Animal_output BETWEEN '" + condition["tbAnimal_output_From"].ToString() + "' AND '" + condition["tbAnimal_output_To"].ToString() + "'";
-                    }
-                    if (condition.ContainsKey("tbAnimal_vaccinate_count_From") && condition["tbAnimal_vaccinate_count_From"].ToString() != "" && condition["tbAnimal_vaccinate_count_To"].ToString() != null)
-                    {
-                        sql += "  and  Animal_vaccinate_count BETWEEN '" + condition["tbAnimal_vaccinate_count_From"].ToString() + "' AND '" + condition["tbAnimal_vaccinate_count_To"].ToString() + "'";
-                    }
-                    if (condition.ContainsKey("tbAnimal_yield_From") && condition["tbAnimal_yield_From"].ToString() != "" && condition["tbAnimal_yield_To"].ToString() != null)
-                    {
-                        sql += "  and  Animal_yield BETWEEN '" + condition["tbAnimal_yield_From"].ToString() + "' AND '" + condition["tbAnimal_yield_To"].ToString() + "'";
-                    }
-                    if (condition.ContainsKey("tbInventory_count_From") && condition["tbInventory_count_From"].ToString() != "" && condition["tbInventory_count_To"].ToString() != null)
-                    {
-                        sql += "  and  Inventory_count BETWEEN '" + condition["tbInventory_count_From"].ToString() + "' AND '" + condition["tbInventory_count_To"].ToString() + "'";
-                    }
-                    if (condition.ContainsKey("tbOutbound_count_From") && condition["tbOutbound_count_From"].ToString() != "" && condition["tbOutbound_count_To"].ToString() != null)
-                    {
-                        sql += "  and  Outbound_count BETWEEN '" + condition["tbOutbound_count_From"].ToString() + "' AND '" + condition["tbOutbound_count_To"].ToString() + "'";
-                    }
+                if (condition.ContainsKey("tbPlant_area_From") && condition["tbPlant_area_From"].ToString() != "" && condition["tbPlant_area_To"].ToString() != null)
+                {
+                    sql += "  and  plant_area BETWEEN '" + condition["tbPlant_area_From"].ToString() + "' AND '" + condition["tbPlant_area_To"].ToString() + "'";
+                }
+                if (condition.ContainsKey("tbPlant_yield_From") && condition["tbPlant_yield_From"].ToString() != "" && condition["tbPlant_yield_To"].ToString() != null)
+                {
+                    sql += "  and  plant_yield BETWEEN '" + condition["tbPlant_yield_From"].ToString() + "' AND '" + condition["tbPlant_yield_To"].ToString() + "'";
+                }
+                if (condition.ContainsKey("tbPlant_output_From") && condition["tbPlant_output_From"].ToString() != "" && condition["tbPlant_output_To"].ToString() != null)
+                {
+                    sql += "  and  plant_output BETWEEN '" + condition["tbPlant_output_From"].ToString() + "' AND '" + condition["tbPlant_output_To"].ToString() + "'";
+                }
+                if (condition.ContainsKey("tbAnimal_area_From") && condition["tbAnimal_area_From"].ToString() != "" && condition["tbAnimal_area_To"].ToString() != null)
+                {
+                    sql += "  and  Animal_area BETWEEN '" + condition["tbAnimal_area_From"].ToString() + "' AND '" + condition["tbAnimal_area_To"].ToString() + "'";
+                }
+                if (condition.ContainsKey("tbAnimal_count_From") && condition["tbAnimal_count_From"].ToString() != "" && condition["tbAnimal_count_To"].ToString() != null)
+                {
+                    sql += "  and  Animal_count BETWEEN '" + condition["tbAnimal_count_From"].ToString() + "' AND '" + condition["tbAnimal_count_To"].ToString() + "'";
+                }
+                if (condition.ContainsKey("tbAnimal_nvaccinate_count_From") && condition["tbAnimal_nvaccinate_count_From"].ToString() != "" && condition["tbAnimal_nvaccinate_count_To"].ToString() != null)
+                {
+                    sql += "  and  Animal_nvaccinate_count BETWEEN '" + condition["tbAnimal_nvaccinate_count_From"].ToString() + "' AND '" + condition["tbAnimal_nvaccinate_count_To"].ToString() + "'";
+                }
+                if (condition.ContainsKey("tbAnimal_output_From") && condition["tbAnimal_output_From"].ToString() != "" && condition["tbAnimal_output_To"].ToString() != null)
+                {
+                    sql += "  and  Animal_output BETWEEN '" + condition["tbAnimal_output_From"].ToString() + "' AND '" + condition["tbAnimal_output_To"].ToString() + "'";
+                }
+                if (condition.ContainsKey("tbAnimal_vaccinate_count_From") && condition["tbAnimal_vaccinate_count_From"].ToString() != "" && condition["tbAnimal_vaccinate_count_To"].ToString() != null)
+                {
+                    sql += "  and  Animal_vaccinate_count BETWEEN '" + condition["tbAnimal_vaccinate_count_From"].ToString() + "' AND '" + condition["tbAnimal_vaccinate_count_To"].ToString() + "'";
+                }
+                if (condition.ContainsKey("tbAnimal_yield_From") && condition["tbAnimal_yield_From"].ToString() != "" && condition["tbAnimal_yield_To"].ToString() != null)
+                {
+                    sql += "  and  Animal_yield BETWEEN '" + condition["tbAnimal_yield_From"].ToString() + "' AND '" + condition["tbAnimal_yield_To"].ToString() + "'";
+                }
+                if (condition.ContainsKey("tbInventory_count_From") && condition["tbInventory_count_From"].ToString() != "" && condition["tbInventory_count_To"].ToString() != null)
+                {
+                    sql += "  and  Inventory_count BETWEEN '" + condition["tbInventory_count_From"].ToString() + "' AND '" + condition["tbInventory_count_To"].ToString() + "'";
+                }
+                if (condition.ContainsKey("tbOutbound_count_From") && condition["tbOutbound_count_From"].ToString() != "" && condition["tbOutbound_count_To"].ToString() != null)
+                {
+                    sql += "  and  Outbound_count BETWEEN '" + condition["tbOutbound_count_From"].ToString() + "' AND '" + condition["tbOutbound_count_To"].ToString() + "'";
+                }
                 sql += " order by create_datetime desc";
                 List<SQLiteParameter> parameters = new List<SQLiteParameter>();
-                    parameters.Add(new SQLiteParameter("@Holder_name", condition["Holder_name"]));
-                    parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
-                    parameters.Add(new SQLiteParameter("@Phone_number", condition["Phone_number"]));
-                    parameters.Add(new SQLiteParameter("@Car_brand", condition["Car_brand"]));
-                    parameters.Add(new SQLiteParameter("@Mechine_type", condition["Mechine_type"]));
-                    parameters.Add(new SQLiteParameter("@Plant_type", condition["Plant_type"]));
-                    parameters.Add(new SQLiteParameter("@Plant_area_type", condition["Plant_area_type"]));
-                    parameters.Add(new SQLiteParameter("@Is_handle_process", condition["Is_handle_process"]));
-                    parameters.Add(new SQLiteParameter("@Animal_type", condition["Animal_type"]));
-                    parameters.Add(new SQLiteParameter("@Animal_area_type", condition["Animal_area_type"]));
-                    parameters.Add(new SQLiteParameter("@Town", condition["Town"]));
-                    parameters.Add(new SQLiteParameter("@Village", condition["Village"]));
-                    return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
+                parameters.Add(new SQLiteParameter("@Holder_name", condition["Holder_name"]));
+                parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
+                parameters.Add(new SQLiteParameter("@Phone_number", condition["Phone_number"]));
+                parameters.Add(new SQLiteParameter("@Car_brand", condition["Car_brand"]));
+                parameters.Add(new SQLiteParameter("@Mechine_type", condition["Mechine_type"]));
+                parameters.Add(new SQLiteParameter("@Plant_type", condition["Plant_type"]));
+                parameters.Add(new SQLiteParameter("@Plant_area_type", condition["Plant_area_type"]));
+                parameters.Add(new SQLiteParameter("@Is_handle_process", condition["Is_handle_process"]));
+                parameters.Add(new SQLiteParameter("@Animal_type", condition["Animal_type"]));
+                parameters.Add(new SQLiteParameter("@Animal_area_type", condition["Animal_area_type"]));
+                parameters.Add(new SQLiteParameter("@Town", condition["Town"]));
+                parameters.Add(new SQLiteParameter("@Village", condition["Village"]));
+                return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
             }
             sql += " order by create_datetime desc";
             return this.SqlDbHelper.ExecuteDataTable(sql);
@@ -415,18 +413,18 @@ namespace com.vdm.dal
         /// </summary>
         /// <param name="animal"></param>
         /// <returns></returns>
-        public Result CreateFamer(Famer famer)
+        public Result CreateLand(Land land)
         {
             //构建sql语句
             List<string> listColumnName = new List<string>();
             List<string> listParameter = new List<string>();
-            DataTable tblSchema = this.getTableSchema("t_famer");
+            DataTable tblSchema = this.getTableSchema("t_land");
             if (tblSchema != null)
             {
                 foreach (DataRow row in tblSchema.Rows)
                 {
                     //过滤掉主键
-                    if (row["ColumnName"].ToString() == "famer_id")
+                    if (row["ColumnName"].ToString() == "land_id")
                     {
                         continue;
                     }
@@ -434,7 +432,7 @@ namespace com.vdm.dal
                     listParameter.Add("@" + row["ColumnName"].ToString());
                 }
             }
-            string sql = "insert into t_famer(" + Utils.JoinStingListToString(listColumnName) + ") values(" + Utils.JoinStingListToString(listParameter) + ")";
+            string sql = "insert into t_land(" + Utils.JoinStingListToString(listColumnName) + ") values(" + Utils.JoinStingListToString(listParameter) + ")";
 
             //构建参数值
             SQLiteParameter parameter = null;
@@ -443,13 +441,13 @@ namespace com.vdm.dal
             {
                 foreach (DataRow row in tblSchema.Rows)
                 {
-                    if (row["ColumnName"].ToString() == "famer_id")
+                    if (row["ColumnName"].ToString() == "land_id")
                     {
                         continue;
                     }
                     string ColumnName = row["ColumnName"].ToString();
                     string PropertyName = Utils.Capitalize(row["ColumnName"].ToString());
-                    parameter = new SQLiteParameter("@" + ColumnName, famer.GetType().GetProperty(PropertyName).GetValue(famer, null));
+                    parameter = new SQLiteParameter("@" + ColumnName, land.GetType().GetProperty(PropertyName).GetValue(land, null));
                     parameters.Add(parameter);
                 }
             }
@@ -461,25 +459,25 @@ namespace com.vdm.dal
         /// </summary>
         /// <param name="animal"></param>
         /// <returns></returns>
-        public Result UpdateFamer(Famer famer)
+        public Result UpdateLand(Land land)
         {
             //构建参数值
             List<string> listSetValue = new List<string>();
             SQLiteParameter parameter = null;
-            DataTable tblSchema = this.getTableSchema("t_famer");
+            DataTable tblSchema = this.getTableSchema("t_land");
             if (tblSchema != null)
             {
                 foreach (DataRow row in tblSchema.Rows)
                 {
                     //过滤掉主键
-                    if (row["ColumnName"].ToString() == "famer_id")
+                    if (row["ColumnName"].ToString() == "land_id")
                     {
                         continue;
                     }
                     listSetValue.Add(row["ColumnName"].ToString() + "=@" + row["ColumnName"].ToString());
                 }
             }
-            string sql = "update t_famer set " + Utils.JoinStingListToString(listSetValue) + " where famer_id = " + famer.Famer_id;
+            string sql = "update t_land set " + Utils.JoinStingListToString(listSetValue) + " where land_id = " + land.Land_id;
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (tblSchema != null)
             {
@@ -487,7 +485,7 @@ namespace com.vdm.dal
                 {
                     string ColumnName = row["ColumnName"].ToString();
                     string PropertyName = Utils.Capitalize(row["ColumnName"].ToString());
-                    parameter = new SQLiteParameter("@" + ColumnName, famer.GetType().GetProperty(PropertyName).GetValue(famer, null));
+                    parameter = new SQLiteParameter("@" + ColumnName, land.GetType().GetProperty(PropertyName).GetValue(land, null));
                     parameters.Add(parameter);
                 }
 
@@ -497,35 +495,36 @@ namespace com.vdm.dal
         /// <summary>
         ///  删除农户
         /// </summary>
-        /// <param name="famer_id"></param>
+        /// <param name="land_id"></param>
         /// <returns></returns>
-        public Result DeleteFamer(long famer_id)
+        public Result DeleteLand(long land_id)
         {
-            string sql = "delete from t_famer where famer_id=" + famer_id;
+            string sql = "delete from t_land where land_id=" + land_id;
             return this.SqlDbHelper.ExecuteNonQuery(sql);
         }
-        public DataTable getFamer(int famer_id)
+        public DataTable getLand(int land_id)
         {
-            string sql = "select * from t_famer where famer_id = " + famer_id;
+            string sql = "select * from t_land where land_id = " + land_id;
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
+
         /// <summary>
         /// 获得excel每条数据的sql
         /// </summary>
         /// <param name="people_id"></param>
-        /// <returns></returns
-        public SQLStringObject ImportFamerAdd(Famer famer)
+        /// <returns></returns>
+        public SQLStringObject ImportLandAdd(Land land)
         {
             //构建sql语句
             List<string> listColumnName = new List<string>();
             List<string> listParameter = new List<string>();
-            DataTable tblSchema = this.getTableSchema("t_famer");
+            DataTable tblSchema = this.getTableSchema("t_land");
             if (tblSchema != null)
             {
                 foreach (DataRow row in tblSchema.Rows)
                 {
                     //过滤掉主键
-                    if (row["ColumnName"].ToString() == "famer_id")
+                    if (row["ColumnName"].ToString() == "land_id")
                     {
                         continue;
                     }
@@ -533,7 +532,7 @@ namespace com.vdm.dal
                     listParameter.Add("@" + row["ColumnName"].ToString());
                 }
             }
-            string sql = "insert into t_famer(" + Utils.JoinStingListToString(listColumnName) + ") values(" + Utils.JoinStingListToString(listParameter) + ")";
+            string sql = "insert into t_land(" + Utils.JoinStingListToString(listColumnName) + ") values(" + Utils.JoinStingListToString(listParameter) + ")";
 
             //构建参数值
             SQLiteParameter parameter = null;
@@ -542,13 +541,13 @@ namespace com.vdm.dal
             {
                 foreach (DataRow row in tblSchema.Rows)
                 {
-                    if (row["ColumnName"].ToString() == "famer_id")
+                    if (row["ColumnName"].ToString() == "land_id")
                     {
                         continue;
                     }
                     string ColumnName = row["ColumnName"].ToString();
                     string PropertyName = Utils.Capitalize(row["ColumnName"].ToString());
-                    parameter = new SQLiteParameter("@" + ColumnName, famer.GetType().GetProperty(PropertyName).GetValue(famer, null));
+                    parameter = new SQLiteParameter("@" + ColumnName, land.GetType().GetProperty(PropertyName).GetValue(land, null));
                     parameters.Add(parameter);
                 }
             }
@@ -556,10 +555,11 @@ namespace com.vdm.dal
             return sqlObject;
         }
 
-        public Result ImportFamer(List<SQLStringObject> SQLStringObjectList)
+        public Result ImportLand(List<SQLStringObject> SQLStringObjectList)
         {
             return this.SqlDbHelper.ExecuteSqlTran(SQLStringObjectList);
         }
 
     }
 }
+
