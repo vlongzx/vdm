@@ -27,6 +27,7 @@ namespace com.vdm.form
             AddPage(new frmFamerList(), 1002);
             AddPage(new frmSystemSet(), 1009);
             AddPage(new frmAnimalList(), 1008);
+            AddPage(new frmTourList(), 1007);
         }
 
         private void tspPeople_Click(object sender, EventArgs e)
@@ -61,6 +62,15 @@ namespace com.vdm.form
         private void btAnimal_Click(object sender, EventArgs e)
         {
             MainTabControl.SelectPage(1008);
+        }
+        /// <summary>
+        /// 旅游
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btTour_Click(object sender, EventArgs e)
+        {
+            MainTabControl.SelectPage(1007);
         }
     }
 }

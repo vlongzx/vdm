@@ -262,7 +262,7 @@
             this.btTour.TabIndex = 6;
             this.btTour.Text = "旅游";
             this.btTour.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btTour.Click += new System.EventHandler(this.btFamer_Click);
+            this.btTour.Click += new System.EventHandler(this.btTour_Click);
             // 
             // btPlant
             // 
