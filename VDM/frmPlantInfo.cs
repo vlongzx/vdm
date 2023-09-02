@@ -13,9 +13,16 @@ namespace com.vdm.form
 {
     public partial class frmPlantInfo : UIEditForm
     {
+        private int plant_id;
         public frmPlantInfo()
         {
             InitializeComponent();
+        }
+
+        public frmPlantInfo(int plant_id)
+        {
+            InitializeComponent();
+            this.plant_id = plant_id;
         }
     }
 }

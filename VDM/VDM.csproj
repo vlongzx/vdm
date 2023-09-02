@@ -256,6 +256,9 @@
     <EmbeddedResource Include="frmPeopleInfo.resx">
       <DependentUpon>frmPeopleInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPlantInfo.resx">
+      <DependentUpon>frmPlantInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPlantList.resx">
       <DependentUpon>frmPlantList.cs</DependentUpon>
     </EmbeddedResource>

@@ -310,7 +310,13 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btAdd_Click(object sender, EventArgs e)
         {
-
+            frmPlantInfo tourInfo = new frmPlantInfo();
+            tourInfo.Render();
+            tourInfo.ShowDialog();
+            if (tourInfo.DialogResult == DialogResult.OK)
+            {
+                InitPlantList(null, this.pageIndex, this.pageSize);
+            }
         }
         /// <summary>
         /// 编辑
@@ -319,7 +325,20 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btEdit_Click(object sender, EventArgs e)
         {
+            //获得当前需要编辑的行
+            if (this.dgPlantList.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要编辑的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int plant_id = int.Parse(this.dgPlantList.SelectedRows[0].Cells[0].Value.ToString());
 
+            frmPlantInfo plantInfo = new frmPlantInfo(plant_id);
+            plantInfo.ShowDialog();
+            if (plantInfo.DialogResult == DialogResult.OK)
+            {
+                InitPlantList(condition, this.pageIndex, this.pageSize);
+            }
         }
         /// <summary>
         /// 删除
@@ -328,7 +347,28 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btDelete_Click(object sender, EventArgs e)
         {
-
+            //获得当前需要编辑的行
+            if (this.dgPlantList.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要删除的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int plant_id = int.Parse(this.dgPlantList.SelectedRows[0].Cells[0].Value.ToString());
+            if (MessageBox.Show("确认要删除该行数据吗？", "温馨提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.plantBLL = new PlantBLL();
+                Result result = this.plantBLL.delPlant(plant_id);
+                if (result.Count == 1)
+                {
+                    MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InitPlantList(condition, this.pageIndex, this.pageSize);
+                }
+                else
+                {
+                    MessageBox.Show("删除数据发生异常。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogHelper.Error(result.Information, result.Exception);
+                }
+            }
         }
         /// <summary>
         /// 导入
