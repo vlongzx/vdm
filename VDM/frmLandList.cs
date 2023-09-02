@@ -49,7 +49,9 @@ namespace com.vdm.form
         public void InitControlData()
         {
             dictBLL = new DictBLL();
-
+            //初始化日期控件
+            this.dpMove_date_From.Text = "";
+            this.dpMove_date_To.Text = "";
             //初始化种是否基本农田
             List<KeyValue> list_is_basic_farmland = dictBLL.getDict("is_basic_farmland");
             if (list_is_basic_farmland != null)
@@ -83,7 +85,7 @@ namespace com.vdm.form
                 this.cbMove_type.DisplayMember = "value";
                 this.cbMove_type.ValueMember = "key";
             }
- 
+
             //初始化所在乡镇所在村
             orgBLL = new OrgBLL();
             List<KeyValue> list_town = orgBLL.getOrgByType("乡镇");
@@ -370,37 +372,36 @@ namespace com.vdm.form
 
         private void btReset_Click(object sender, EventArgs e)
         {
-            ////清空查询文本框内容
-            //string Holder_name = tbName.Text.Trim();
-            //string Idcard = tbIdcard.Text.Trim();
-            //string Phone_number = tbContractor.Text.Trim();
-            //string Car_brand = tbLand_name.Text.Trim();
-            //string Mechine_type = t.Text.Trim();
-            //string Plant_type = cbLand_grade.SelectedValue.ToString();
-            //string Plant_area_type = cbPlant_area_type.SelectedValue.ToString();
-            //string Is_handle_process = cbIs_basic_farmland.SelectedValue.ToString();
-            //string Animal_type = cbAnimal_type.SelectedValue.ToString();
-            //string Animal_area_type = cbAnimal_area_type.SelectedValue.ToString();
-            //string Village = this.cbVillage.SelectedValue.ToString();
-            //string Town = this.cbTown.SelectedValue.ToString();
+            //清空查询文本框内容
+            tbLand_name.Text = "";
+            tbName.Text = "";
+            tbIdcard.Text = "";
+            cbIs_basic_farmland.SelectedValue = "";
+            cbLand_type.SelectedValue = "";
+            cbLand_grade.SelectedValue = "";
+            tbReal_area_To.Text = "";
+            tbReal_area_From.Text = "";
+            tbEast.Text = "";
+            tbWest.Text = "";
+            tbNorth.Text = "";
+            tbSouth.Text = "";
+            tbLand_use_remark.Text = "";
+            tbContractor.Text = "";
+            tbContract_time_To.Text = "";
+            tbContract_time_From.Text = "";
+            tbMove_area_From.Text = "";
+            tbMove_area_To.Text = "";
+            cbMove_type.SelectedValue = "";
+            tbMove_price_From.Text = "";
+            tbMove_price_To.Text = "";
+            dpMove_date_From.Text = "";
+            dpMove_date_To.Text = "";
+            this.cbVillage.SelectedValue = "";
+            this.cbTown.SelectedValue = "";
+            //查询所有信息
+            condition = null;
+            InitListView(condition, this.pageIndex, this.pageSize);
 
-            //this.tbName.Text = "";
-            //this.tbIdcard.Text = "";
-            //this.tbContractor.Text = "";
-            //this.tbLand_name.Text = "";
-            //this.t.Text = "";
-            //this.cbLand_grade.SelectedValue = "";
-            //this.cbPlant_area_type.SelectedValue = "";
-            //this.cbIs_basic_farmland.SelectedValue = "";
-            //this.cbAnimal_type.SelectedValue = "";
-            //this.cbAnimal_area_type.SelectedValue = "";
-            //this.cbTown.SelectedValue = "";
-            //this.cbVillage.SelectedValue = "";
-            ////清空高级查询条件
-            //conditionAdvance = new Hashtable();
-            ////查询所有人员信息
-            //condition = null;
-            //InitListView(condition, this.pageIndex, this.pageSize);
         }
 
         /// <summary>
