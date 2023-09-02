@@ -72,5 +72,10 @@ namespace com.vdm.form
         {
             MainTabControl.SelectPage(1007);
         }
+
+        private void btPlant_Click(object sender, EventArgs e)
+        {
+            MainTabControl.SelectPage(1006);
+        }
     }
 }

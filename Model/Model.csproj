@@ -53,6 +53,7 @@
     <Compile Include="Function.cs" />
     <Compile Include="Org.cs" />
     <Compile Include="People.cs" />
+    <Compile Include="Plant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Tour.cs" />

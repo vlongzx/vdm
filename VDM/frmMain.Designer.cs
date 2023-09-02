@@ -287,7 +287,7 @@
             this.btPlant.TabIndex = 6;
             this.btPlant.Text = "种植";
             this.btPlant.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btPlant.Click += new System.EventHandler(this.btFamer_Click);
+            this.btPlant.Click += new System.EventHandler(this.btPlant_Click);
             // 
             // btSystemSet
             // 

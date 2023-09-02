@@ -169,6 +169,18 @@
     <Compile Include="frmPeopleInfo.Designer.cs">
       <DependentUpon>frmPeopleInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPlantInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlantInfo.Designer.cs">
+      <DependentUpon>frmPlantInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlantList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlantList.Designer.cs">
+      <DependentUpon>frmPlantList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSystemSet.cs">
       <SubType>Form</SubType>
     </Compile>
