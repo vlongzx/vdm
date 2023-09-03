@@ -95,6 +95,16 @@ namespace com.vdm.bll
 
         }
         /// <summary>
+        ///  批量增加种植信息
+        /// </summary>
+        /// <param name="plants">种植信息对象列表</param>
+        /// <returns></returns>
+        public Result batchAddPlant(List<Plant> plants)
+        {
+            return this.plantDAL.batchCreatePlant(plants);
+        }
+
+        /// <summary>
         /// 编辑种植信息
         /// </summary>
         /// <param name="plant">种植信息对象</param>

@@ -10,7 +10,7 @@ namespace com.vdm.model
     {
         private long breed_id;
         private string town;
-        private string villiage;
+        private string village;
         private string breed_name;
         private string breed_type;
         private string manager;
@@ -66,16 +66,16 @@ namespace com.vdm.model
         /// <summary>
         /// 所属村
         /// </summary>
-        public string Villiage
+        public string Village
         {
             get
             {
-                return villiage;
+                return village;
             }
 
             set
             {
-                villiage = value;
+                village = value;
             }
         }
         /// <summary>
