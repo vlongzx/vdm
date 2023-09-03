@@ -1,5 +1,6 @@
 ﻿using com.vdm.bll;
 using com.vdm.common;
+using com.vdm.form.utils;
 using Sunny.UI;
 using System;
 using System.Collections;
@@ -319,7 +320,10 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btExport_Click(object sender, EventArgs e)
         {
-
+            DataTable dt = this.tourBLL.getAllTour(this.condition);
+            ExcelUtil excelUtil = new ExcelUtil(this.dgTourList, dt);
+            frmExportExcel ef = new frmExportExcel(excelUtil, Data_Object_Const.TOUR);
+            ef.ShowDialog();
         }
     }
 }

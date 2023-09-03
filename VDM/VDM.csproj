@@ -139,11 +139,9 @@
     <Compile Include="frmFamerList.Designer.cs">
       <DependentUpon>frmFamerList.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmImportExcelFile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmImportExcelFile.Designer.cs">
-      <DependentUpon>frmImportExcelFile.cs</DependentUpon>
+    <Compile Include="frmImportExcelFileFamer.cs" />
+    <Compile Include="frmImportExcelFileFamer.Designer.cs">
+      <DependentUpon>frmImportExcelFileFamer.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLandInfo.cs">
       <SubType>Form</SubType>
@@ -250,8 +248,8 @@
     <EmbeddedResource Include="frmFamerList.resx">
       <DependentUpon>frmFamerList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmImportExcelFile.resx">
-      <DependentUpon>frmImportExcelFile.cs</DependentUpon>
+    <EmbeddedResource Include="frmImportExcelFileFamer.resx">
+      <DependentUpon>frmImportExcelFileFamer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLandInfo.resx">
       <DependentUpon>frmLandInfo.cs</DependentUpon>
@@ -306,15 +304,12 @@
     <None Include="aspose\License.lic">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="aspose\人员信息导入模板.xlsx">
+    <None Include="aspose\人员导入模板.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="aspose\土地信息导入模板.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="aspose\畜牧信息导入模板.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="aspose\旅游信息导入模板.xlsx" />
+    <None Include="aspose\畜牧信息导入模板.xlsx" />
+    <None Include="aspose\种植信息导入模板.xlsx" />
     <None Include="db_file\VDM.pdm" />
     <None Include="db_file\vdm_data.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -93,10 +93,10 @@ namespace com.vdm.form
                     book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\人员信息导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
                     break;
                 case Data_Object_Const.PLANT:
-                    book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\人员导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
+                    book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\种植信息导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
                     break;
                 case Data_Object_Const.TOUR:
-                    book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\人员导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
+                    book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\旅游信息导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
                     break;
                 default:
                     book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\人员导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
