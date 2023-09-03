@@ -411,12 +411,9 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btImport_Click(object sender, EventArgs e)
         {
-            //UIForm ui = new frmImportExcelFileLand();
-            //DialogResult res = ui.ShowDialog();
-            //if (res == DialogResult.OK)
-            //{
-            //    InitListView(condition, this.pageIndex, this.pageSize);
-            //}
+            frmImportExcelFile importExcelFile = new frmImportExcelFile(Data_Object_Const.LAND);
+            importExcelFile.Owner = this;
+            importExcelFile.ShowDialog();
         }
     }
 }

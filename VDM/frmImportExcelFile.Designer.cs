@@ -1,6 +1,6 @@
 ﻿namespace com.vdm.form
 {
-    partial class frmImportExcelFileFamer
+    partial class frmImportExcelFile
     {
         /// <summary>
         /// Required designer variable.
