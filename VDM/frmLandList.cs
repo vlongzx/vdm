@@ -216,10 +216,9 @@ namespace com.vdm.form
 
         private void btExport_Click(object sender, EventArgs e)
         {
-
-            ExcelUtil excelUtil = new ExcelUtil();
-            excelUtil.Lv = this.InitExportListView(this.condition);
-            frmExportExcel ef = new frmExportExcel(excelUtil,Data_Object_Const.LAND);
+            DataTable dt = this.landBLL.getAllLand(this.condition);
+            ExcelUtil excelUtil = new ExcelUtil(this.dgLandList, dt);
+            frmExportExcel ef = new frmExportExcel(excelUtil, Data_Object_Const.LAND);
             ef.ShowDialog();
         }
 
@@ -263,11 +262,11 @@ namespace com.vdm.form
             lvExport.Columns.Add("添加人");
             landBLL = new LandBLL();
             //初始化导出ListView数据
-            List<Land> list_land;
-            this.landBLL = new LandBLL();
-            list_land = this.landBLL.getAllLand(condition);
+          //  List<Land> list_land;
+         //   this.landBLL = new LandBLL();
+            //list_land = this.landBLL.getAllLand(condition);
 
-            foreach (Land land in list_land)
+        //    foreach (Land land in list_land)
             {
                 //ListViewItem lvi = new ListViewItem();
                 //lvi.Tag = land.Land_id;//存储主键

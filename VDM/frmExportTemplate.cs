@@ -81,7 +81,7 @@ namespace com.vdm.form
                     book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\人员导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
                     break;
                 case Data_Object_Const.FAMER:
-                    book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\人员导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
+                    book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\农户信息导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
                     break;
                 case Data_Object_Const.HOUSE:
                     book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\人员导入模板.xlsx"), FileFormatType.Excel2007Xlsx);

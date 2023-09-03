@@ -88,20 +88,20 @@ namespace com.vdm.bll
         /// </summary>
         /// <param name="condition"></param>
         /// <returns></returns>
-        public List<Land> getAllLand(Hashtable condition)
+        public DataTable getAllLand(Hashtable condition)
         {
             List<Land> list_land = new List<Land>();
             DataTable dt = this.landDAL.getAllLand(condition);
-            if (dt != null)
-            {
-                Land p = null;
-                foreach (DataRow row in dt.Rows)
-                {
-                //    p = MakeObject.MakeObjectToLand(row);
-                    list_land.Add(p);
-                }
-            }
-            return list_land;
+            //if (dt != null)
+            //{
+            //    Land p = null;
+            //    foreach (DataRow row in dt.Rows)
+            //    {
+            //    //    p = MakeObject.MakeObjectToLand(row);
+            //        list_land.Add(p);
+            //    }
+            //}
+            return dt;
         }
 
         public SQLStringObject ImportLandAdd(Land land)
