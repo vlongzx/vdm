@@ -88,20 +88,20 @@ namespace com.vdm.bll
         /// </summary>
         /// <param name="condition"></param>
         /// <returns></returns>
-        public List<Famer> getAllFamer(Hashtable condition)
+        public DataTable getAllFamer(Hashtable condition)
         {
             List<Famer> list_famer = new List<Famer>();
             DataTable dt = this.famerDAL.getAllFamer(condition);
-            if (dt != null)
-            {
-                Famer p = null;
-                foreach (DataRow row in dt.Rows)
-                {
-                    p = MakeObject.MakeObjectToFamer(row);
-                    list_famer.Add(p);
-                }
-            }
-            return list_famer;
+            //if (dt != null)
+            //{
+            //    Famer p = null;
+            //    foreach (DataRow row in dt.Rows)
+            //    {
+            //        p = MakeObject.MakeObjectToFamer(row);
+            //        list_famer.Add(p);
+            //    }
+            //}
+            return dt;
         }
 
         public SQLStringObject ImportFamerAdd(Famer famer)
