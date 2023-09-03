@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimalBLL.cs" />
+    <Compile Include="CompanyBLL.cs" />
     <Compile Include="DataAuthBLL.cs" />
     <Compile Include="DictBLL.cs" />
     <Compile Include="FamerBLL.cs" />

@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="AnimalDAL.cs" />
     <Compile Include="BaseDAL.cs" />
+    <Compile Include="CompanyDAL.cs" />
     <Compile Include="DataAuthDAL.cs" />
     <Compile Include="FamerDAL.cs" />
     <Compile Include="FunctionDAL.cs" />

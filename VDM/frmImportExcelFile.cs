@@ -351,21 +351,29 @@ namespace com.vdm.form
                     famer.Car_brand = dataRow["家用车辆-品牌"].ToString();
                     famer.Mechine_type = dataRow["农用机械类型"].ToString();
                     famer.Plant_type = dataRow["种植作物种类"].ToString();
-                    famer.Plant_area_type = dataRow["种植占地地类"].ToString();
-                    famer.Is_handle_process = dataRow["是否办理设施农用地手续"].ToString();
-                    famer.Plant_area = double.Parse(dataRow["占地面积(亩)"].ToString());
-                    famer.Plant_yield = double.Parse(dataRow["种植产量(斤)"].ToString());
-                    famer.Plant_output = int.Parse(dataRow["种植产值(元)"].ToString());
+                    if (dataRow["种植作物种类"].ToString() != "无")
+                    {
+
+                        famer.Plant_area_type = dataRow["种植占地地类"].ToString();
+                        famer.Is_handle_process = dataRow["是否办理设施农用地手续"].ToString();
+                        famer.Plant_area = double.Parse(dataRow["占地面积(亩)"].ToString());
+                        famer.Plant_yield = double.Parse(dataRow["种植产量(斤)"].ToString());
+                        famer.Plant_output = int.Parse(dataRow["种植产值(元)"].ToString());
+                    }
+
                     famer.Animal_type = dataRow["养殖动物类型"].ToString();
-                    famer.Animal_area = double.Parse(dataRow["养殖地面积(亩)"].ToString());
-                    famer.Animal_count = int.Parse(dataRow["养殖数量(头)"].ToString());
-                    famer.Animal_vaccinate_count = int.Parse(dataRow["已接种疫苗的动物数量(头/只)"].ToString());
-                    famer.Animal_nvaccinate_count = int.Parse(dataRow["未接种疫苗的动物数量(头/只)"].ToString());
-                    famer.Inventory_count = int.Parse(dataRow["存栏数量(头/只)"].ToString());
-                    famer.Outbound_count = int.Parse(dataRow["出栏数量(头/只)"].ToString());
-                    famer.Animal_yield = int.Parse(dataRow["养殖产出产量(头/只)"].ToString());
-                    famer.Animal_output = int.Parse(dataRow["养殖产出产值(元)"].ToString());
-                    famer.Animal_area_type = dataRow["养殖占地地类"].ToString();
+                    if (dataRow["养殖动物类型"].ToString() != "无")
+                    {
+                        famer.Animal_area = double.Parse(dataRow["养殖地面积(亩)"].ToString());
+                        famer.Animal_count = int.Parse(dataRow["养殖数量(头)"].ToString());
+                        famer.Animal_vaccinate_count = int.Parse(dataRow["已接种疫苗的动物数量(头/只)"].ToString());
+                        famer.Animal_nvaccinate_count = int.Parse(dataRow["未接种疫苗的动物数量(头/只)"].ToString());
+                        famer.Inventory_count = int.Parse(dataRow["存栏数量(头/只)"].ToString());
+                        famer.Outbound_count = int.Parse(dataRow["出栏数量(头/只)"].ToString());
+                        famer.Animal_yield = int.Parse(dataRow["养殖产出产量(头/只)"].ToString());
+                        famer.Animal_output = int.Parse(dataRow["养殖产出产值(元)"].ToString());
+                        famer.Animal_area_type = dataRow["养殖占地地类"].ToString();
+                    }
                     famer.Town = dataRow["所属镇"].ToString();
                     famer.Villiage = dataRow["所属村"].ToString();
                     famer.Creater = LoginInfo.CurrentUser.Account;
