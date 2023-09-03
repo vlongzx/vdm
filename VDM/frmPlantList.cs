@@ -49,6 +49,8 @@ namespace com.vdm.form
             this.dgPlantList.AddColumn("种植类别", "plant_type");
             this.dgPlantList.AddColumn("联系人", "contact_person");
             this.dgPlantList.Columns[2].Frozen = true;//冻结前两列
+            this.dgPlantList.AddColumn("所属镇", "town");
+            this.dgPlantList.AddColumn("所属村", "village");
             this.dgPlantList.AddColumn("联系人身份证", "idcard");
             this.dgPlantList.AddColumn("联系电话", "phone_number");
             this.dgPlantList.AddColumn("详细地址", "address");
