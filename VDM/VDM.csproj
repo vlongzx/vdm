@@ -103,6 +103,12 @@
     <Compile Include="frmAnimalList.Designer.cs">
       <DependentUpon>frmAnimalList.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCompanyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompanyList.Designer.cs">
+      <DependentUpon>frmCompanyList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDictInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAnimalList.resx">
       <DependentUpon>frmAnimalList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompanyList.resx">
+      <DependentUpon>frmCompanyList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDictInfo.resx">
       <DependentUpon>frmDictInfo.cs</DependentUpon>
