@@ -31,119 +31,8 @@ namespace com.vdm.dal
         public int getTotalCount(Hashtable condition)
         {
             string sql = "select * from t_animal where 1 = 1";
-            if (condition != null)
-            {
-                if (condition["breed_name"].ToString() != "")
-                {
-                    sql += "    and breed_name = @breed_name";
-                }
-                if (condition["town"].ToString() != "")
-                {
-                    sql += "    and town = @town";
-                }
-                if (condition["villiage"].ToString() != "")
-                {
-                    sql += "    and villiage = @villiage";
-                }
-                if (condition["breed_type"].ToString() != "")
-                {
-                    sql += "    and breed_type = @breed_type";
-                }
-                if (condition["manager"].ToString() != "")
-                {
-                    sql += "    and manager = @manager";
-                }
-                if (condition["phone_number"].ToString() != "")
-                {
-                    sql += "    and phone_number = @phone_number";
-                }
-                if (condition["idcard"].ToString() != "")
-                {
-                    sql += "    and idcard = @idcard";
-                }
-                if (condition["address"].ToString() != "")
-                {
-                    sql += "    and address = @address";
-                }
-                if (condition["year_inventory"].ToString() != "0")
-                {
-                    sql += "    and year_inventory = @year_inventory";
-                }
-                if (condition["year_outbound"].ToString() != "0")
-                {
-                    sql += "    and year_outbound = @year_outbound";
-                }
-                if (condition["output_from"].ToString() != "0" && condition["output_to"].ToString() != "0")
-                {
-                    sql += "  and  output BETWEEN '" + condition["output_from"].ToString() + "' AND '" + condition["output_to"].ToString() + "'";
-                }
-                if (condition["total_area_from"].ToString() != "0" && condition["total_area_to"].ToString() != "0")
-                {
-                    sql += " and   total_area BETWEEN '" + condition["total_area_from"].ToString() + "' AND '" + condition["total_area_to"].ToString() + "'";
-                }
-                if (condition["total_area_from"].ToString() != "0" && condition["total_area_to"].ToString() != "0")
-                {
-                    sql += " and   total_area BETWEEN '" + condition["total_area_from"].ToString() + "' AND '" + condition["total_area_to"].ToString() + "'";
-                }
-                if (condition["pen_area_from"].ToString() != "0" && condition["pen_area_to"].ToString() != "0")
-                {
-                    sql += " and   pen_area BETWEEN '" + condition["pen_area_from"].ToString() + "' AND '" + condition["pen_area_to"].ToString() + "'";
-                }
-                if (condition["midden_area_from"].ToString() != "0" && condition["midden_area_to"].ToString() != "0")
-                {
-                    sql += " and   midden_area BETWEEN '" + condition["midden_area_from"].ToString() + "' AND '" + condition["midden_area_to"].ToString() + "'";
-                }
-                if (condition["pullttion_area_from"].ToString() != "0" && condition["pullttion_area_to"].ToString() != "0")
-                {
-                    sql += " and   pullttion_area_from BETWEEN '" + condition["pullttion_area_from"].ToString() + "' AND '" + condition["pullttion_area_to"].ToString() + "'";
-                }
-                if (condition["cueernt_inventory_from"].ToString() != "0" && condition["cueernt_inventory_to"].ToString() != "0")
-                {
-                    sql += " and   cueernt_inventory BETWEEN '" + condition["cueernt_inventory_from"].ToString() + "' AND '" + condition["cueernt_inventory_to"].ToString() + "'";
-                }
-                if (condition["animal_qualify"].ToString() != "")
-                {
-                    sql += "    and animal_qualify = @animal_qualify";
-                }
-                if (condition["solid_pollution"].ToString() != "")
-                {
-                    sql += "    and solid_pollution = @solid_pollution";
-                }
-                if (condition["report_or_filings"].ToString() != "")
-                {
-                    sql += "    and report_or_filings = @report_or_filings";
-                }
-            }
-            sql += " order by create_datetime desc";
-            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
-            if (condition != null)
-            {
-                parameters.Add(new SQLiteParameter("@breed_name", condition["breed_name"]));
-                parameters.Add(new SQLiteParameter("@town", condition["town"]));
-                parameters.Add(new SQLiteParameter("@villiage", condition["villiage"]));
-                parameters.Add(new SQLiteParameter("@breed_type", condition["breed_type"]));
-                parameters.Add(new SQLiteParameter("@manager", condition["manager"]));
-                parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
-                parameters.Add(new SQLiteParameter("@idcard", condition["Idcard"]));
-                parameters.Add(new SQLiteParameter("@address", condition["address"]));
-                parameters.Add(new SQLiteParameter("@year_inventory", condition["year_inventory"]));
-                parameters.Add(new SQLiteParameter("@year_outbound", condition["year_outbound"]));
-                parameters.Add(new SQLiteParameter("@output_from", condition["output_from"]));
-                parameters.Add(new SQLiteParameter("@output_to", condition["output_to"]));
-                parameters.Add(new SQLiteParameter("@total_area_from", condition["total_area_from"]));
-                parameters.Add(new SQLiteParameter("@total_area_to", condition["total_area_to"]));
-                parameters.Add(new SQLiteParameter("@pen_area_from", condition["pen_area_from"]));
-                parameters.Add(new SQLiteParameter("@pen_area_to", condition["pen_area_to"]));
-                parameters.Add(new SQLiteParameter("@midden_area_from", condition["midden_area_from"]));
-                parameters.Add(new SQLiteParameter("@midden_area_to", condition["midden_area_to"]));
-                parameters.Add(new SQLiteParameter("@pullttion_area_from", condition["pullttion_area_from"]));
-                parameters.Add(new SQLiteParameter("@pullttion_area_to", condition["pullttion_area_to"]));
-                parameters.Add(new SQLiteParameter("@cueernt_inventory_from", condition["cueernt_inventory_from"]));
-                parameters.Add(new SQLiteParameter("@cueernt_inventory_to", condition["cueernt_inventory_to"]));
-                parameters.Add(new SQLiteParameter("@animal_qualify", condition["animal_qualify"]));
-                parameters.Add(new SQLiteParameter("@solid_pollution", condition["solid_pollution"]));
-                parameters.Add(new SQLiteParameter("@report_or_filings", condition["report_or_filings"]));
-            }
+            List<SQLiteParameter> parameters = null;
+            sql += this.getConditonSql(condition, 0, 0, 0, out parameters);
             DataTable dt = this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
             if (dt != null)
             {
@@ -159,7 +48,35 @@ namespace com.vdm.dal
         public DataTable queryAllAnimal(Hashtable condition, int pageIndex, int pageSize)
         {
             string sql = "select * from t_animal where 1 = 1";
-            if(condition != null)
+            List<SQLiteParameter> parameters = null;
+            sql += this.getConditonSql(condition, pageIndex, pageSize,1, out parameters);
+            return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
+        }
+        /// <summary>
+        ///  获得所有的畜牧
+        /// </summary>
+        /// <returns></returns>
+        public DataTable queryAllAnimal(Hashtable condition)
+        {
+            string sql = "select * from t_animal where 1 = 1";
+            List<SQLiteParameter> parameters = null;
+            sql += this.getConditonSql(condition, 0, 0, 0, out parameters);
+            return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
+        }
+
+        /// <summary>
+        ///  生成查询条件和分页部分的SQL语句
+        /// </summary>
+        /// <param name="condition">查询条件</param>
+        /// <param name="pageIndex">页面索引，默认为0</param>
+        /// <param name="pageSize">页面记录数，默认为0</param>
+        /// <param name="mode">模式，0表示不分页，1表示分页</param>
+        /// <param name="parameters">输出参数，SQL参数列表</param>
+        /// <returns></returns>
+        private string getConditonSql(Hashtable condition, int pageIndex, int pageSize, int mode, out List<SQLiteParameter> parameters)
+        {
+            string sql = "";
+            if (condition != null)
             {
                 if (condition["breed_name"].ToString() != "")
                 {
@@ -242,7 +159,7 @@ namespace com.vdm.dal
                     sql += "    and report_or_filings = @report_or_filings";
                 }
             }
-            
+
             sql += " order by create_datetime desc";
             int offset = 0;
             int totalPeople = this.getTotalCount(condition);
@@ -262,7 +179,7 @@ namespace com.vdm.dal
             }
             sql += "  limit  " + limit;
             sql += "  offset  " + offset;
-            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
+            parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
                 parameters.Add(new SQLiteParameter("@breed_name", condition["breed_name"]));
@@ -291,131 +208,7 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@solid_pollution", condition["solid_pollution"]));
                 parameters.Add(new SQLiteParameter("@report_or_filings", condition["report_or_filings"]));
             }
-            return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
-        }
-        /// <summary>
-        ///  获得所有的畜牧
-        /// </summary>
-        /// <returns></returns>
-        public DataTable queryAllAnimal(Hashtable condition)
-        {
-            string sql = "select * from t_animal where 1 = 1";
-            if (condition != null)
-            {
-                if (condition["breed_name"].ToString() != "")
-                {
-                    sql += "    and breed_name = @breed_name";
-                }
-                if (condition["town"].ToString() != "")
-                {
-                    sql += "    and town = @town";
-                }
-                if (condition["villiage"].ToString() != "")
-                {
-                    sql += "    and villiage = @villiage";
-                }
-                if (condition["breed_type"].ToString() != "")
-                {
-                    sql += "    and breed_type = @breed_type";
-                }
-                if (condition["manager"].ToString() != "")
-                {
-                    sql += "    and manager = @manager";
-                }
-                if (condition["phone_number"].ToString() != "")
-                {
-                    sql += "    and phone_number = @phone_number";
-                }
-                if (condition["idcard"].ToString() != "")
-                {
-                    sql += "    and idcard = @idcard";
-                }
-                if (condition["address"].ToString() != "")
-                {
-                    sql += "    and address = @address";
-                }
-                if (condition["year_inventory"].ToString() != "0")
-                {
-                    sql += "    and year_inventory = @year_inventory";
-                }
-                if (condition["year_outbound"].ToString() != "0")
-                {
-                    sql += "    and year_outbound = @year_outbound";
-                }
-                if (condition["output_from"].ToString() != "0" && condition["output_to"].ToString() != "0")
-                {
-                    sql += "  and  output BETWEEN '" + condition["output_from"].ToString() + "' AND '" + condition["output_to"].ToString() + "'";
-                }
-                if (condition["total_area_from"].ToString() != "0" && condition["total_area_to"].ToString() != "0")
-                {
-                    sql += " and   total_area BETWEEN '" + condition["total_area_from"].ToString() + "' AND '" + condition["total_area_to"].ToString() + "'";
-                }
-                if (condition["total_area_from"].ToString() != "0" && condition["total_area_to"].ToString() != "0")
-                {
-                    sql += " and   total_area BETWEEN '" + condition["total_area_from"].ToString() + "' AND '" + condition["total_area_to"].ToString() + "'";
-                }
-                if (condition["pen_area_from"].ToString() != "0" && condition["pen_area_to"].ToString() != "0")
-                {
-                    sql += " and   pen_area BETWEEN '" + condition["pen_area_from"].ToString() + "' AND '" + condition["pen_area_to"].ToString() + "'";
-                }
-                if (condition["midden_area_from"].ToString() != "0" && condition["midden_area_to"].ToString() != "0")
-                {
-                    sql += " and   midden_area BETWEEN '" + condition["midden_area_from"].ToString() + "' AND '" + condition["midden_area_to"].ToString() + "'";
-                }
-                if (condition["pullttion_area_from"].ToString() != "0" && condition["pullttion_area_to"].ToString() != "0")
-                {
-                    sql += " and   pullttion_area_from BETWEEN '" + condition["pullttion_area_from"].ToString() + "' AND '" + condition["pullttion_area_to"].ToString() + "'";
-                }
-                if (condition["cueernt_inventory_from"].ToString() != "0" && condition["cueernt_inventory_to"].ToString() != "0")
-                {
-                    sql += " and   cueernt_inventory BETWEEN '" + condition["cueernt_inventory_from"].ToString() + "' AND '" + condition["cueernt_inventory_to"].ToString() + "'";
-                }
-                if (condition["animal_qualify"].ToString() != "")
-                {
-                    sql += "    and animal_qualify = @animal_qualify";
-                }
-                if (condition["solid_pollution"].ToString() != "")
-                {
-                    sql += "    and solid_pollution = @solid_pollution";
-                }
-                if (condition["report_or_filings"].ToString() != "")
-                {
-                    sql += "    and report_or_filings = @report_or_filings";
-                }
-            }
-
-            sql += " order by create_datetime desc";
-      
-            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
-            if (condition != null)
-            {
-                parameters.Add(new SQLiteParameter("@breed_name", condition["breed_name"]));
-                parameters.Add(new SQLiteParameter("@town", condition["town"]));
-                parameters.Add(new SQLiteParameter("@villiage", condition["villiage"]));
-                parameters.Add(new SQLiteParameter("@breed_type", condition["breed_type"]));
-                parameters.Add(new SQLiteParameter("@manager", condition["manager"]));
-                parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
-                parameters.Add(new SQLiteParameter("@idcard", condition["Idcard"]));
-                parameters.Add(new SQLiteParameter("@address", condition["address"]));
-                parameters.Add(new SQLiteParameter("@year_inventory", condition["year_inventory"]));
-                parameters.Add(new SQLiteParameter("@year_outbound", condition["year_outbound"]));
-                parameters.Add(new SQLiteParameter("@output_from", condition["output_from"]));
-                parameters.Add(new SQLiteParameter("@output_to", condition["output_to"]));
-                parameters.Add(new SQLiteParameter("@total_area_from", condition["total_area_from"]));
-                parameters.Add(new SQLiteParameter("@total_area_to", condition["total_area_to"]));
-                parameters.Add(new SQLiteParameter("@pen_area_from", condition["pen_area_from"]));
-                parameters.Add(new SQLiteParameter("@pen_area_to", condition["pen_area_to"]));
-                parameters.Add(new SQLiteParameter("@midden_area_from", condition["midden_area_from"]));
-                parameters.Add(new SQLiteParameter("@midden_area_to", condition["midden_area_to"]));
-                parameters.Add(new SQLiteParameter("@pullttion_area_from", condition["pullttion_area_from"]));
-                parameters.Add(new SQLiteParameter("@pullttion_area_to", condition["pullttion_area_to"]));
-                parameters.Add(new SQLiteParameter("@cueernt_inventory_from", condition["cueernt_inventory_from"]));
-                parameters.Add(new SQLiteParameter("@cueernt_inventory_to", condition["cueernt_inventory_to"]));
-                parameters.Add(new SQLiteParameter("@animal_qualify", condition["animal_qualify"]));
-                parameters.Add(new SQLiteParameter("@solid_pollution", condition["solid_pollution"]));
-                parameters.Add(new SQLiteParameter("@report_or_filings", condition["report_or_filings"]));
-            }
-            return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
+            return sql;
         }
         /// <summary>
         ///  批量增加畜牧

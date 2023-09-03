@@ -22,13 +22,22 @@ namespace com.vdm.bll
         /// <summary>
         ///  根据查询条件获取旅游信息
         /// </summary>
-        /// <param name="condition"></param>
-        /// <param name="pageIndex"></param>
-        /// <param name="pageSize"></param>
+        /// <param name="condition">查询条件</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面记录数</param>
         /// <returns></returns>
         public DataTable getAllTour(Hashtable condition,int pageIndex,int pageSize)
         {
             return this.tourDAL.queryAllTour(condition, pageIndex, pageSize);
+        }
+        /// <summary>
+        ///  根据条件获得所有的旅游信息
+        /// </summary>
+        /// <param name="condition">查询条件</param>
+        /// <returns></returns>
+        public DataTable getAllTour(Hashtable condition)
+        {
+            return this.tourDAL.queryAllTour(condition);
         }
         /// <summary>
         ///  获得记录总数

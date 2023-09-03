@@ -30,6 +30,16 @@ namespace com.vdm.bll
         {
             return this.plantDAL.queryAllPlant(condition, pageIndex, pageSize);
         }
+        /// <summary>
+        /// 根据条件获得所有的种植信息
+        /// </summary>
+        /// <param name="condition"></param>
+        /// <returns></returns>
+        public DataTable getAllPlant(Hashtable condition)
+        {
+            return this.plantDAL.queryAllPlant(condition);
+        }
+
 
         public Plant getPlant(int plant_id)
         {
