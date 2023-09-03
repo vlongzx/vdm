@@ -83,6 +83,7 @@
             // btnOK
             // 
             this.btnOK.Location = new System.Drawing.Point(1353, 12);
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // dpMove_date
             // 
@@ -230,6 +231,7 @@
             this.tbContractor.TabIndex = 289;
             this.tbContractor.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbContractor.Watermark = "";
+            this.tbContractor.TextChanged += new System.EventHandler(this.tbContractor_TextChanged);
             // 
             // 土地使用说明
             // 
@@ -425,6 +427,7 @@
             this.cbTown.TabIndex = 271;
             this.cbTown.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbTown.Watermark = "";
+            this.cbTown.SelectedIndexChanged += new System.EventHandler(this.cbTown_SelectedValueChanged);
             // 
             // cbVillage
             // 

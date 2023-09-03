@@ -315,20 +315,20 @@ namespace com.vdm.form
 
         private void btEdit_Click(object sender, EventArgs e)
         {
-            ////获得当前需要编辑的行
-            //if (this.dgLandList.SelectedRows.Count == 0)
-            //{
-            //    MessageBox.Show("请选择你要编辑的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    return;
-            //}
-            //int land_id = int.Parse(this.dgLandList.SelectedRows[0].Cells[0].Value.ToString());
+            //获得当前需要编辑的行
+            if (this.dgLandList.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要编辑的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int land_id = int.Parse(this.dgLandList.SelectedRows[0].Cells[0].Value.ToString());
 
-            //Form formLandEdit = new frmLandInfo("EDIT", land_id);
-            //formLandEdit.ShowDialog();
-            //if (formLandEdit.DialogResult == DialogResult.OK)
-            //{
-            //    InitListView(condition, this.pageIndex, this.pageSize);
-            //}
+            Form formLandEdit = new frmLandInfo("EDIT", land_id);
+            formLandEdit.ShowDialog();
+            if (formLandEdit.DialogResult == DialogResult.OK)
+            {
+                InitListView(condition, this.pageIndex, this.pageSize);
+            }
         }
 
 
