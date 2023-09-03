@@ -49,7 +49,7 @@ namespace com.vdm.form
 
         protected override bool CheckData()
         {
-            return  CheckEmpty(tbFileName, "请选择要导入的文件。");
+            return CheckEmpty(tbFileName, "请选择要导入的文件。");
         }
         /// <summary>
         ///  解析Excel文件
@@ -93,7 +93,7 @@ namespace com.vdm.form
                 case Data_Object_Const.TOUR:
                     ImportTourData(dt);
                     break;
-                default ://村情
+                default://村情
                     ImportVilliageData(dt);
                     break;
             }
@@ -226,7 +226,7 @@ namespace com.vdm.form
                     land.Name = dataRow["姓名"].ToString();
                     land.Idcard = dataRow["身份证号"].ToString();
                     land.Land_name = dataRow["地块名称"].ToString();
-                    land.Is_basic_farmland= dataRow["是否基本农田"].ToString();
+                    land.Is_basic_farmland = dataRow["是否基本农田"].ToString();
                     land.Land_type = dataRow["地块类型"].ToString();
                     land.Land_grade = dataRow["地块等级"].ToString();
                     land.Real_area = double.Parse(dataRow["实测面积"].ToString());
@@ -235,8 +235,8 @@ namespace com.vdm.form
                     land.West = dataRow["西至"].ToString();
                     land.North = dataRow["北至"].ToString();
                     land.Land_use_remark = dataRow["土地用途说明"].ToString();
-                    land.Contractor =dataRow["承包方"].ToString();
-                    if(dataRow["承包方"].ToString()!="")
+                    land.Contractor = dataRow["承包方"].ToString();
+                    if (dataRow["承包方"].ToString() != "")
                     {
                         land.Contract_time = dataRow["承包时间"].ToString();
                         land.Move_area = double.Parse(dataRow["流转面积"].ToString());
@@ -244,7 +244,7 @@ namespace com.vdm.form
                         land.Move_price = int.Parse(dataRow["流转价格"].ToString());
                         land.Move_date = dataRow["流转日期"].ToString();
                     }
-               
+
                     land.Town = dataRow["所属镇"].ToString();
                     land.Villiage = dataRow["所属村"].ToString();
                     land.Creater = LoginInfo.CurrentUser.Account;
@@ -258,7 +258,7 @@ namespace com.vdm.form
                 {
                     ShowInfoDialog("导入成功。");
                     frmLandList landList = (frmLandList)this.Owner;
-                    landList.InitListView(null,1,20);
+                    landList.InitListView(null, 1, 20);
                 }
                 else
                 {
@@ -274,7 +274,54 @@ namespace com.vdm.form
 
         private void ImportCompanyData(DataTable dt)
         {
-            throw new NotImplementedException();
+            List<SQLStringObject> sqlso = new List<SQLStringObject>();
+            //若有数据
+            if (dt != null && dt.Rows.Count != 0)
+            {
+                Company company = new Company();
+                CompanyBLL companyBLL = new CompanyBLL();
+                foreach (DataRow dataRow in dt.Rows)
+                {
+                    //将excel数据值封装业务对象
+                    //------------------基础信息部分---------------------------------
+                    company.Company_name = dataRow["企业名称"].ToString();
+                    company.Company_type = dataRow["企业类型"].ToString();
+                    company.Company_address = dataRow["企业地址"].ToString();
+                    company.Credit_code = dataRow["统一社会信用编码"].ToString();
+                    company.Business_code = dataRow["工商注册号"].ToString();
+                    company.License_date = dataRow["营业执照日期"].ToString();
+                    company.Organization_code = dataRow["组织机构代码"].ToString();
+                    company.Establish_date = dataRow["成立时间"].ToString();
+                    company.Legal_name = dataRow["企业法人姓名"].ToString();
+                    company.Legal_idcard = dataRow["企业法人身份证"].ToString();
+                    company.Company_phone = dataRow["企业联系电话"].ToString();
+                    company.Staff_size =int.Parse(dataRow["人员规模"].ToString());
+                    company.Insure_person_count =int.Parse(dataRow["参保人数"].ToString());
+                    company.Output = double.Parse(dataRow["产值(万元)"].ToString());
+                    company.Taxpayer_code = dataRow["纳税人识别号"].ToString();
+                    company.Taxpayer_qualification = dataRow["纳税人资质"].ToString();
+                    company.Is_top_company = dataRow["是否龙头企业"].ToString();
+                    company.Company_status = dataRow["企业经营状态"].ToString();
+                    company.Town = dataRow["所属镇"].ToString();
+                    company.Villiage = dataRow["所属村"].ToString();
+                    company.Creater = LoginInfo.CurrentUser.Account;
+                    company.Create_datetime = DateTime.Now.ToString();
+
+                    SQLStringObject s = companyBLL.ImportCompanyAdd(company);
+                    sqlso.Add(s);
+                }
+                Result result = companyBLL.ImportCompany(sqlso);
+                if (result.Count == sqlso.Count)
+                {
+                    ShowInfoDialog("导入成功。");
+                    frmCompanyList companyList = (frmCompanyList)this.Owner;
+                    companyList.InitListView(null, 1, 20);
+                }
+                else
+                {
+                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                }
+            }
         }
         /// <summary>
         ///  批量导入畜牧信息

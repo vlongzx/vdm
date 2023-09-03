@@ -103,6 +103,12 @@
     <Compile Include="frmAnimalList.Designer.cs">
       <DependentUpon>frmAnimalList.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCompanyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompanyInfo.Designer.cs">
+      <DependentUpon>frmCompanyInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCompanyList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     <EmbeddedResource Include="frmAnimalList.resx">
       <DependentUpon>frmAnimalList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCompanyInfo.resx">
+      <DependentUpon>frmCompanyInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCompanyList.resx">
       <DependentUpon>frmCompanyList.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +325,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="aspose\人员信息导入模板.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="aspose\企业信息导入模板.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="aspose\农户信息导入模板.xlsx">

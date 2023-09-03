@@ -79,6 +79,13 @@ namespace com.vdm.form
                 this.cbCompany_status.DisplayMember = "value";
                 this.cbCompany_status.ValueMember = "key";
             }
+            List<KeyValue> list_taxpayer_qualification = dictBLL.getDict("taxpayer_qualification");
+            if (list_company_status != null)
+            {
+                this.cbTaxpayer_qualification.DataSource = list_taxpayer_qualification;
+                this.cbTaxpayer_qualification.DisplayMember = "value";
+                this.cbTaxpayer_qualification.ValueMember = "key";
+            }
 
             //初始化所在乡镇所在村
             orgBLL = new OrgBLL();
@@ -184,7 +191,7 @@ namespace com.vdm.form
         }
         private void btAdd_Click(object sender, EventArgs e)
         {
-            Form formLandAdd = new frmLandInfo();
+            Form formLandAdd = new frmCompanyInfo();
             formLandAdd.ShowDialog();
             if (formLandAdd.DialogResult == DialogResult.OK)
             {
@@ -200,9 +207,9 @@ namespace com.vdm.form
                 MessageBox.Show("请选择你要编辑的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            int land_id = int.Parse(this.dgCompanyList.SelectedRows[0].Cells[0].Value.ToString());
+            int company_id = int.Parse(this.dgCompanyList.SelectedRows[0].Cells[0].Value.ToString());
 
-            Form formLandEdit = new frmLandInfo("EDIT", land_id);
+            Form formLandEdit = new frmCompanyInfo("EDIT", company_id);
             formLandEdit.ShowDialog();
             if (formLandEdit.DialogResult == DialogResult.OK)
             {
@@ -247,7 +254,7 @@ namespace com.vdm.form
           string Staff_size_From = tbStaff_size_From.Text.Trim();
           string Staff_size_To = tbStaff_size_To.Text.Trim();
           string Taxpayer_code = tbTaxpayer_code.Text.Trim();
-          string Taxpayer_qualification = tbTaxpayer_qualification.Text.Trim();
+          string Taxpayer_qualification = cbTaxpayer_qualification.SelectedValue.ToString();
           string Company_status = cbCompany_status.SelectedValue.ToString();
           string Company_type = cbCompany_type.SelectedValue.ToString();
           string Is_top_company = cbIs_top_company.SelectedValue.ToString();
@@ -335,7 +342,7 @@ namespace com.vdm.form
             tbStaff_size_From.Text = "";
             tbStaff_size_To.Text = "";
             tbTaxpayer_code.Text = "";
-            tbTaxpayer_qualification.Text = "";
+            cbTaxpayer_qualification.SelectedValue = "";
             cbCompany_status.SelectedValue = "";
             cbCompany_type.SelectedValue = "";
             cbIs_top_company.SelectedValue = "";
