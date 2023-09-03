@@ -121,14 +121,14 @@ namespace com.vdm.form
 
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
-                    tour.Address = dataRow["地址"].ToString();
+                    tour.Address = dataRow["联系地址"].ToString();
+                    tour.Company_id = dataRow["统一社会信用代码"].ToString();
                     tour.Legal_name = dataRow["法定代表人姓名"].ToString();
                     tour.Phone_number = dataRow["联系电话"].ToString();
                     tour.Principal_category = dataRow["主体类别"].ToString();
                     tour.Principal_name = dataRow["主体名称"].ToString();
                     tour.Registered_trademark = dataRow["注册商标"].ToString();
                     tour.Remark = dataRow["备注"].ToString();
-                    tour.Company_id = dataRow["负责人"].ToString();
                     tour.Trade_form = dataRow["经营形式"].ToString();
                     tour.Year_person_count = int.Parse(dataRow["年接待旅游（人次）"].ToString());
                     tour.Year_trade_income = double.Parse(dataRow["年经营收入（万元）"].ToString());

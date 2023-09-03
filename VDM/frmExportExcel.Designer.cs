@@ -67,7 +67,7 @@
             this.tbFile_password.PasswordChar = '*';
             this.tbFile_password.ShowText = false;
             this.tbFile_password.Size = new System.Drawing.Size(359, 35);
-            this.tbFile_password.TabIndex = 30;
+            this.tbFile_password.TabIndex = 0;
             this.tbFile_password.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbFile_password.Watermark = "";
             this.tbFile_password.TextChanged += new System.EventHandler(this.tbFile_password_TextChanged);
@@ -132,7 +132,7 @@
             this.tbSavePath.Padding = new System.Windows.Forms.Padding(5);
             this.tbSavePath.ShowText = false;
             this.tbSavePath.Size = new System.Drawing.Size(359, 35);
-            this.tbSavePath.TabIndex = 30;
+            this.tbSavePath.TabIndex = 1;
             this.tbSavePath.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbSavePath.Watermark = "";
             this.tbSavePath.TextChanged += new System.EventHandler(this.tbFile_password_TextChanged);
@@ -145,7 +145,7 @@
             this.btSelect.MinimumSize = new System.Drawing.Size(1, 1);
             this.btSelect.Name = "btSelect";
             this.btSelect.Size = new System.Drawing.Size(100, 35);
-            this.btSelect.TabIndex = 32;
+            this.btSelect.TabIndex = 2;
             this.btSelect.Text = "选择";
             this.btSelect.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btSelect.Click += new System.EventHandler(this.btSelect_Click);
