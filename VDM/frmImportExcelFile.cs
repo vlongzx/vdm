@@ -169,17 +169,17 @@ namespace com.vdm.form
 
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
-                    plant.Address = dataRow["地址"].ToString();
-                    plant.Contact_person = dataRow["法定代表人姓名"].ToString();
+                    plant.Address = dataRow["详细地址"].ToString();
+                    plant.Contact_person = dataRow["联系人"].ToString();
                     plant.Phone_number = dataRow["联系电话"].ToString();
-                    plant.Develop_willing = dataRow["主体类别"].ToString();
-                    plant.Idcard = dataRow["主体名称"].ToString();
-                    plant.Insect_ill = dataRow["注册商标"].ToString();
+                    plant.Develop_willing = dataRow["发展意愿"].ToString();
+                    plant.Idcard = dataRow["联系人身份证"].ToString();
+                    plant.Insect_ill = dataRow["主要虫病害"].ToString();
                     plant.Remark = dataRow["备注"].ToString();
-                    plant.Is_plan = dataRow["负责人"].ToString();
-                    plant.Manage_skill_method = dataRow["经营形式"].ToString();
-                    plant.Output = int.Parse(dataRow["年接待旅游（人次）"].ToString());
-                    plant.Plant_area = double.Parse(dataRow["年经营收入（万元）"].ToString());
+                    plant.Is_plan = dataRow["是否符合规划"].ToString();
+                    plant.Manage_skill_method = dataRow["主要管理和技术措施"].ToString();
+                    plant.Output = int.Parse(dataRow["产值(万元)"].ToString());
+                    plant.Plant_area = double.Parse(dataRow["种植面积"].ToString());
                     plant.Town = dataRow["所属镇"].ToString();
                     plant.Village = dataRow["所属村"].ToString();
                     plant.Plant_brand = dataRow["种植品种"].ToString();

@@ -90,6 +90,8 @@ namespace com.vdm.form
             this.dgTourList.AddColumn("主体类别", "principal_category");
             this.dgTourList.AddColumn("主体名称", "principal_name");
             this.dgTourList.Columns[2].Frozen = true;//冻结前两列
+            this.dgTourList.AddColumn("所属镇", "town");
+            this.dgTourList.AddColumn("所属村", "village");
             this.dgTourList.AddColumn("统一社会信用代码", "company_id");
             this.dgTourList.AddColumn("法定代表人姓名", "legal_name");
             this.dgTourList.AddColumn("注册商标", "registered_trademark");
