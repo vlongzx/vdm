@@ -145,6 +145,12 @@
     <Compile Include="frmImportExcelFileFamer.Designer.cs">
       <DependentUpon>frmImportExcelFileFamer.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLandInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLandInfo.Designer.cs">
+      <DependentUpon>frmLandInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLandList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmImportExcelFileFamer.resx">
       <DependentUpon>frmImportExcelFileFamer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLandInfo.resx">
+      <DependentUpon>frmLandInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLandList.resx">
       <DependentUpon>frmLandList.cs</DependentUpon>

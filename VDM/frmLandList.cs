@@ -305,12 +305,12 @@ namespace com.vdm.form
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            //Form formLandAdd = new frmLandInfo();
-            //formLandAdd.ShowDialog();
-            //if (formLandAdd.DialogResult == DialogResult.OK)
-            //{
-            //    InitListView(null, this.pageIndex, this.pageSize);
-            //}
+            Form formLandAdd = new frmLandInfo();
+            formLandAdd.ShowDialog();
+            if (formLandAdd.DialogResult == DialogResult.OK)
+            {
+                InitListView(null, this.pageIndex, this.pageSize);
+            }
         }
 
         private void btEdit_Click(object sender, EventArgs e)
