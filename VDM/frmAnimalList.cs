@@ -128,6 +128,8 @@ namespace com.vdm.form
             this.dgAnimalList.AddColumn("养殖场（户）ID", "breed_id");
             this.dgAnimalList.AddColumn("养殖场（户）名称", "breed_name");
             this.dgAnimalList.Columns[1].Frozen = true;//冻结前两列
+            this.dgAnimalList.AddColumn("所属镇", "town");
+            this.dgAnimalList.AddColumn("所属村", "village");
             this.dgAnimalList.AddColumn("养殖种类", "breed_type");
             this.dgAnimalList.AddColumn("负责人", "manager");
             this.dgAnimalList.AddColumn("身份证号码", "idcard");
@@ -144,6 +146,7 @@ namespace com.vdm.form
             this.dgAnimalList.AddColumn("动物防疫条件合格证", "animal_qualify");
             this.dgAnimalList.AddColumn("固体污染源排污登记", "solid_pollution");
             this.dgAnimalList.AddColumn("环评报告或备案", "report_or_filings");
+            this.dgAnimalList.AddColumn("备注", "remark");
             this.dgAnimalList.AddColumn("添加时间", "Create_datetime").SetSortMode(DataGridViewColumnSortMode.Automatic);
             this.dgAnimalList.AddColumn("添加人", "Creater");
             //自适应列宽，包括列名和列内容

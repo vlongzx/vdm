@@ -56,7 +56,7 @@ namespace com.vdm.form
                 this.cbReport_or_filings.SelectedValue = animal.Report_or_filings;
                 this.cbSolid_pollution.SelectedValue = animal.Solid_pollution;
                 this.cbTown.SelectedValue = animal.Town;
-                this.cbVillage.SelectedValue = animal.Villiage;
+                this.cbVillage.SelectedValue = animal.Village;
                 this.cbYear_inventory.SelectedValue = animal.Year_inventory;
                 this.cbYear_outbound.SelectedValue = animal.Year_outbound;
             }
@@ -157,7 +157,7 @@ namespace com.vdm.form
             animal.Creater = LoginInfo.CurrentUser.AccountName;
             animal.Create_datetime = DateTime.Now.ToString();
             animal.Town = this.cbTown.SelectedValue.ToString();
-            animal.Villiage = this.cbVillage.SelectedValue.ToString();
+            animal.Village = this.cbVillage.SelectedValue.ToString();
             animal.Cueernt_inventory = 0;
             if (this.tbCueernt_inventory.Text.Trim() != "")
             {

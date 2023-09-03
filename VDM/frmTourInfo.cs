@@ -114,7 +114,7 @@ namespace com.vdm.form
             tour.Remark = remark;
             tour.Town = town;
             tour.Trade_form = trade_form;
-            tour.Villiage = villiage;
+            tour.Village = villiage;
             tour.Year_person_count = year_person_count;
             tour.Year_trade_income = year_trade_income;
 
@@ -184,7 +184,7 @@ namespace com.vdm.form
                     this.cbPrincipal_category.SelectedValue = tour.Principal_category;
                     this.cbTown.SelectedValue = tour.Town;
                     this.cbTrade_form.SelectedValue = tour.Trade_form;
-                    this.cbVillage.SelectedValue = tour.Villiage;
+                    this.cbVillage.SelectedValue = tour.Village;
                     this.tbRemark.Text = tour.Remark;
                 }
             }
