@@ -325,9 +325,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="db_file\VDM.pdm" />
-    <None Include="db_file\vdm_data.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="db_file\vdm_data.db" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
