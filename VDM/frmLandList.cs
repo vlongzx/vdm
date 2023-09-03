@@ -338,7 +338,36 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void cbTown_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            if (this.cbTown.SelectedValue != null)
+            {
+                orgBLL = new OrgBLL();
+                if (this.cbTown.SelectedItem != null)
+                {
+                    KeyValue selectValue = (KeyValue)this.cbTown.SelectedItem;
+                    if (selectValue.Key != "")
+                    {
+                        string org_code = selectValue.Key;
+                        int pre_org_id = this.orgBLL.getOrgIdByOrgCode(org_code);
+                        List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
+                        if (list_village != null)
+                        {
+                            list_village.Add(new KeyValue("", "请选择"));
+                            this.cbVillage.DataSource = list_village;
+                            this.cbVillage.DisplayMember = "value";
+                            this.cbVillage.ValueMember = "key";
+                            this.cbVillage.SelectedValue = "";
+                        }
+                    }
+                    else
+                    {
+                        List<KeyValue> list_village = new List<KeyValue>();
+                        list_village.Add(new KeyValue("", "请选择"));
+                        this.cbVillage.DataSource = list_village;
+                        this.cbVillage.DisplayMember = "value";
+                        this.cbVillage.ValueMember = "key";
+                    }
+                }
+            }
         }
 
         private void btDelete_Click(object sender, EventArgs e)

@@ -31,7 +31,7 @@ namespace com.vdm.form
         }
         private OrgBLL orgBLL = null;
         private DictBLL dictBLL = null;
-        private LandBLL landBLL = null;
+        private CompanyBLL companyBLL = null;
 
         private Hashtable condition = null;
         //高级查询条件
@@ -51,40 +51,33 @@ namespace com.vdm.form
         {
             dictBLL = new DictBLL();
             //初始化日期控件
-            this.dpMove_date_From.Text = "";
-            this.dpMove_date_To.Text = "";
-            //初始化种是否基本农田
-            List<KeyValue> list_is_basic_farmland = dictBLL.getDict("is_basic_farmland");
-            if (list_is_basic_farmland != null)
+            this.dpEstablish_date_From.Text = "";
+            this.dpEstablish_date_To.Text = "";
+            this.dpLicense_date_From.Text = "";
+            this.dpLicense_date_To.Text = "";
+            //初始化企业类型
+            List<KeyValue> list_company_type = dictBLL.getDict("company_type");
+            if (list_company_type != null)
             {
-                this.cbIs_basic_farmland.DataSource = list_is_basic_farmland;
-                this.cbIs_basic_farmland.DisplayMember = "value";
-                this.cbIs_basic_farmland.ValueMember = "key";
+                this.cbCompany_type.DataSource = list_company_type;
+                this.cbCompany_type.DisplayMember = "value";
+                this.cbCompany_type.ValueMember = "key";
             }
-            //初始化地块类型
-            List<KeyValue> list_land_type = dictBLL.getDict("land_type");
-            if (list_land_type != null)
+            //初始化是否龙头企业
+            List<KeyValue> list_is_top_company = dictBLL.getDict("is_top_company");
+            if (list_is_top_company != null)
             {
-                this.cbLand_type.DataSource = list_land_type;
-                this.cbLand_type.DisplayMember = "value";
-                this.cbLand_type.ValueMember = "key";
-            }
-
-            List<KeyValue> list_land_grade = dictBLL.getDict("land_grade");
-            if (list_land_grade != null)
-            {
-                this.cbLand_grade.DataSource = list_land_grade;
-                this.cbLand_grade.DisplayMember = "value";
-                this.cbLand_grade.ValueMember = "key";
+                this.cbIs_top_company.DataSource = list_is_top_company;
+                this.cbIs_top_company.DisplayMember = "value";
+                this.cbIs_top_company.ValueMember = "key";
             }
 
-
-            List<KeyValue> list_move_type = dictBLL.getDict("move_type");
-            if (list_move_type != null)
+            List<KeyValue> list_company_status = dictBLL.getDict("company_status");
+            if (list_company_status != null)
             {
-                this.cbMove_type.DataSource = list_move_type;
-                this.cbMove_type.DisplayMember = "value";
-                this.cbMove_type.ValueMember = "key";
+                this.cbCompany_status.DataSource = list_company_status;
+                this.cbCompany_status.DisplayMember = "value";
+                this.cbCompany_status.ValueMember = "key";
             }
 
             //初始化所在乡镇所在村
@@ -114,118 +107,39 @@ namespace com.vdm.form
             this.dgCompanyList.AutoGenerateColumns = false;
             this.dgCompanyList.RowTemplate.Height = 45;
             this.dgCompanyList.Columns.Clear();
-            this.dgCompanyList.AddColumn("编号", "Land_id");
-            this.dgCompanyList.AddColumn("地块名称", "Land_name");
+            this.dgCompanyList.AddColumn("编号", "Company_id");
+            this.dgCompanyList.AddColumn("企业名称", "Company_name");
             this.dgCompanyList.Columns[1].Frozen = true;//冻结前两列
-            this.dgCompanyList.AddColumn("姓名", "Name");
-            this.dgCompanyList.AddColumn("身份证号", "Idcard");
-            this.dgCompanyList.AddColumn("是否基本农田", "Is_basic_farmland");
-            this.dgCompanyList.AddColumn("地块类型", "Land_type");
-            this.dgCompanyList.AddColumn("地块等级", "Land_grade");
-            this.dgCompanyList.AddColumn("实测面积", "Real_area").SetSortMode(DataGridViewColumnSortMode.Automatic);
-            this.dgCompanyList.AddColumn("东至", "East");
-            this.dgCompanyList.AddColumn("南至", "South");
-            this.dgCompanyList.AddColumn("西至", "West");
-            this.dgCompanyList.AddColumn("北至", "North");
-            this.dgCompanyList.AddColumn("土地用途说明", "Land_use_remark");
-            this.dgCompanyList.AddColumn("承包方", "Contractor");
-            this.dgCompanyList.AddColumn("承包时间", "Contract_time").SetSortMode(DataGridViewColumnSortMode.Automatic);
-            this.dgCompanyList.AddColumn("流转面积", "Move_area").SetSortMode(DataGridViewColumnSortMode.Automatic);
-            this.dgCompanyList.AddColumn("流转形式", "Move_type");
-            this.dgCompanyList.AddColumn("流转价格", "Move_price").SetSortMode(DataGridViewColumnSortMode.Automatic);
-            this.dgCompanyList.AddColumn("流转日期", "Move_date").SetSortMode(DataGridViewColumnSortMode.Automatic);
+            this.dgCompanyList.AddColumn("企业类型", "Company_type");
+            this.dgCompanyList.AddColumn("企业地址", "Company_address");
+            this.dgCompanyList.AddColumn("统一社会信用编码", "Credit_code");
+            this.dgCompanyList.AddColumn("工商注册号", "Business_code");
+            this.dgCompanyList.AddColumn("营业执照日期", "License_date");
+            this.dgCompanyList.AddColumn("组织机构代码", "Organization_code");
+            this.dgCompanyList.AddColumn("成立时间", "Establish_date").SetSortMode(DataGridViewColumnSortMode.Automatic);
+            this.dgCompanyList.AddColumn("企业法人姓名", "Legal_name");
+            this.dgCompanyList.AddColumn("企业法人身份证", "Legal_idcard");
+            this.dgCompanyList.AddColumn("企业联系电话", "Company_phone");
+            this.dgCompanyList.AddColumn("人员规模", "Staff_size").SetSortMode(DataGridViewColumnSortMode.Automatic);
+            this.dgCompanyList.AddColumn("参保人数", "Insure_person_count").SetSortMode(DataGridViewColumnSortMode.Automatic);
+            this.dgCompanyList.AddColumn("产值(万元)", "Output").SetSortMode(DataGridViewColumnSortMode.Automatic).SetSortMode(DataGridViewColumnSortMode.Automatic);
+            this.dgCompanyList.AddColumn("纳税人识别号", "Taxpayer_code");
+            this.dgCompanyList.AddColumn("纳税人资质", "Taxpayer_qualification");
+            this.dgCompanyList.AddColumn("是否龙头企业", "Is_top_company");
+            this.dgCompanyList.AddColumn("企业经营状态", "Company_status");
             this.dgCompanyList.AddColumn("所属镇", "Town");
             this.dgCompanyList.AddColumn("所属村", "Villiage");
-            this.dgCompanyList.AddColumn("添加时间", "Create_datetime").SetSortMode(DataGridViewColumnSortMode.Automatic);
+            this.dgCompanyList.AddColumn("添加时间", "Create_datetime");
             this.dgCompanyList.AddColumn("添加人", "Creater");
             //自适应列宽，包括列名和列内容
             this.dgCompanyList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            landBLL = new LandBLL();
+            companyBLL = new CompanyBLL();
             //初始化加载数据
-            DataTable dt_people = this.landBLL.getAllLandDataTable(condition, pageIndex, pageSize);
-            int totalCount = this.landBLL.getTotalLandCount(condition);
+            DataTable dt_people = this.companyBLL.getAllCompanyDataTable(condition, pageIndex, pageSize);
+            int totalCount = this.companyBLL.getTotalCompanyCount(condition);
             this.pagination.PageSize = this.pageSize;
             this.pagination.TotalCount = totalCount;
             this.dgCompanyList.DataSource = dt_people;
-        }
-
-        /// <summary>
-        /// 初始化要导出的数据
-        /// </summary>
-        /// <param name="p">查询条件</param>
-        /// <returns></returns>
-        public ListView InitExportListView(Hashtable condition)
-        {
-            ListView lvExport = new ListView();
-            lvExport.Items.Clear();
-            lvExport.Columns.Clear();
-            lvExport.View = View.Details;
-
-
-            lvExport.Columns.Add("户主姓名");
-            lvExport.Columns.Add("身份证号");
-            lvExport.Columns.Add("联系电话");
-            lvExport.Columns.Add("家用车辆-品牌");
-            lvExport.Columns.Add("农用机械类型");
-            lvExport.Columns.Add("种植作物种类");
-            lvExport.Columns.Add("占地面积(亩)");
-            lvExport.Columns.Add("种植占地地类");
-            lvExport.Columns.Add("是否办理设施农用地手续");
-            lvExport.Columns.Add("种植产量(斤)");
-            lvExport.Columns.Add("种植产值(元)");
-            lvExport.Columns.Add("养殖动物类型");
-            lvExport.Columns.Add("养殖地面积(亩)");
-            lvExport.Columns.Add("养殖数量(头)");
-            lvExport.Columns.Add("养殖占地地类");
-            lvExport.Columns.Add("已接种疫苗的动物数量(头/只)");
-            lvExport.Columns.Add("未接种疫苗的动物数量(头/只)");
-            lvExport.Columns.Add("存栏数量(头/只)");
-            lvExport.Columns.Add("出栏数量(头/只)");
-            lvExport.Columns.Add("养殖产出产量(头/只)");
-            lvExport.Columns.Add("养殖产出产值(元)");
-            lvExport.Columns.Add("所属镇");
-            lvExport.Columns.Add("所属村");
-            lvExport.Columns.Add("添加时间");
-            lvExport.Columns.Add("添加人");
-            landBLL = new LandBLL();
-            //初始化导出ListView数据
-            //  List<Land> list_land;
-            //   this.landBLL = new LandBLL();
-            //list_land = this.landBLL.getAllLand(condition);
-
-            //    foreach (Land land in list_land)
-            {
-                //ListViewItem lvi = new ListViewItem();
-                //lvi.Tag = land.Land_id;//存储主键
-                //lvi.Text = land.Holder_name;
-                //lvi.SubItems.Add(land.Idcard);
-                //lvi.SubItems.Add(land.Phone_number);
-                //lvi.SubItems.Add(land.Car_brand);
-                //lvi.SubItems.Add(land.Mechine_type);
-                //lvi.SubItems.Add(land.Plant_type);
-                //lvi.SubItems.Add(land.Plant_area.ToString());
-                //lvi.SubItems.Add(land.Plant_yield.ToString());
-                //lvi.SubItems.Add(land.Plant_output.ToString());
-                //lvi.SubItems.Add(land.Plant_area_type.ToString());
-                //lvi.SubItems.Add(land.Is_handle_process.ToString());
-                //lvi.SubItems.Add(land.Animal_type.ToString());
-                //lvi.SubItems.Add(land.Animal_area.ToString());
-                //lvi.SubItems.Add(land.Animal_count.ToString());
-                //lvi.SubItems.Add(land.Animal_vaccinate_count.ToString());
-                //lvi.SubItems.Add(land.Animal_nvaccinate_count.ToString());
-                //lvi.SubItems.Add(land.Inventory_count.ToString());
-                //lvi.SubItems.Add(land.Outbound_count.ToString());
-                //lvi.SubItems.Add(land.Animal_yield.ToString());
-                //lvi.SubItems.Add(land.Animal_output.ToString());
-                //lvi.SubItems.Add(land.Animal_area_type.ToString());
-                //lvi.SubItems.Add(land.Town);
-                //lvi.SubItems.Add(land.Villiage);
-                //lvi.SubItems.Add(land.Creater);
-                //lvi.SubItems.Add(land.Create_datetime);
-                //lvExport.Items.Add(lvi);
-            }
-            return lvExport;
-
         }
 
 
@@ -237,9 +151,71 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void cbTown_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            if (this.cbTown.SelectedValue != null)
+            {
+                orgBLL = new OrgBLL();
+                if (this.cbTown.SelectedItem != null)
+                {
+                    KeyValue selectValue = (KeyValue)this.cbTown.SelectedItem;
+                    if (selectValue.Key != "")
+                    {
+                        string org_code = selectValue.Key;
+                        int pre_org_id = this.orgBLL.getOrgIdByOrgCode(org_code);
+                        List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
+                        if (list_village != null)
+                        {
+                            list_village.Add(new KeyValue("", "请选择"));
+                            this.cbVillage.DataSource = list_village;
+                            this.cbVillage.DisplayMember = "value";
+                            this.cbVillage.ValueMember = "key";
+                            this.cbVillage.SelectedValue = "";
+                        }
+                    }
+                    else
+                    {
+                        List<KeyValue> list_village = new List<KeyValue>();
+                        list_village.Add(new KeyValue("", "请选择"));
+                        this.cbVillage.DataSource = list_village;
+                        this.cbVillage.DisplayMember = "value";
+                        this.cbVillage.ValueMember = "key";
+                    }
+                }
+            }
+        }
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            Form formLandAdd = new frmLandInfo();
+            formLandAdd.ShowDialog();
+            if (formLandAdd.DialogResult == DialogResult.OK)
+            {
+                InitListView(null, this.pageIndex, this.pageSize);
+            }
         }
 
+        private void btEdit_Click(object sender, EventArgs e)
+        {
+            //获得当前需要编辑的行
+            if (this.dgCompanyList.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要编辑的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int land_id = int.Parse(this.dgCompanyList.SelectedRows[0].Cells[0].Value.ToString());
+
+            Form formLandEdit = new frmLandInfo("EDIT", land_id);
+            formLandEdit.ShowDialog();
+            if (formLandEdit.DialogResult == DialogResult.OK)
+            {
+                InitListView(condition, this.pageIndex, this.pageSize);
+            }
+        }
+        private void btExport_Click(object sender, EventArgs e)
+        {
+            DataTable dt = this.companyBLL.getAllCompany(this.condition);
+            ExcelUtil excelUtil = new ExcelUtil(this.dgCompanyList, dt);
+            frmExportExcel ef = new frmExportExcel(excelUtil, Data_Object_Const.COMPANY);
+            ef.ShowDialog();
+        }
         /// <summary>
         /// 导入
         /// </summary>
@@ -247,9 +223,133 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btImport_Click(object sender, EventArgs e)
         {
-            frmImportExcelFile importExcelFile = new frmImportExcelFile(Data_Object_Const.LAND);
+            frmImportExcelFile importExcelFile = new frmImportExcelFile(Data_Object_Const.COMPANY);
             importExcelFile.Owner = this;
             importExcelFile.ShowDialog();
         }
+
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            //从界面获取值基本查询条件封装业务对象
+            condition = new Hashtable();
+          string Business_code= tbBusiness_code.Text.Trim();
+          string Company_address = tbCompany_address.Text.Trim();
+          string Company_name = tbCompany_name.Text.Trim();
+          string Company_phone = tbCompany_phone.Text.Trim();
+          string Credit_code = tbCredit_code.Text.Trim();
+          string Insure_person_count_From = tbInsure_person_count_From.Text.Trim();
+          string Insure_person_count_To = tbInsure_person_count_To.Text.Trim();
+          string Legal_idcard = tbLegal_idcard.Text.Trim();
+          string Legal_name = tbLegal_name.Text.Trim();
+          string Organization_code = tbOrganization_code.Text.Trim();
+          string Output_From = tbOutput_From.Text.Trim();
+          string Output_To = tbOutput_To.Text.Trim();
+          string Staff_size_From = tbStaff_size_From.Text.Trim();
+          string Staff_size_To = tbStaff_size_To.Text.Trim();
+          string Taxpayer_code = tbTaxpayer_code.Text.Trim();
+          string Taxpayer_qualification = tbTaxpayer_qualification.Text.Trim();
+          string Company_status = cbCompany_status.SelectedValue.ToString();
+          string Company_type = cbCompany_type.SelectedValue.ToString();
+          string Is_top_company = cbIs_top_company.SelectedValue.ToString();
+          string Establish_date_From = dpEstablish_date_From.Text.Trim();
+          string Establish_date_To = dpEstablish_date_To.Text.Trim();
+          string License_date_From = dpLicense_date_From.Text.Trim();
+          string License_date_To = dpLicense_date_To.Text.Trim();
+          string Village = this.cbVillage.SelectedValue.ToString();
+          string Town = this.cbTown.SelectedValue.ToString();
+        
+
+            //------------------------------------------------------------------
+            condition.Add("Business_code", Business_code);
+            condition.Add("Company_address", Company_address);
+            condition.Add("Company_name", Company_name);
+            condition.Add("Company_phone", Company_phone);
+            condition.Add("Credit_code", Credit_code);
+            condition.Add("Insure_person_count_From", Insure_person_count_From);
+            condition.Add("Insure_person_count_To", Insure_person_count_To);
+            condition.Add("Legal_idcard", Legal_idcard);
+            condition.Add("Legal_name", Legal_name);
+            condition.Add("Organization_code", Organization_code);
+            condition.Add("Output_From", Output_From);
+            condition.Add("Output_To", Output_To);
+            condition.Add("Staff_size_From", Staff_size_From);
+            condition.Add("Staff_size_To", Staff_size_To);
+            condition.Add("Taxpayer_code", Taxpayer_code);
+            condition.Add("Taxpayer_qualification", Taxpayer_qualification);
+            condition.Add("Company_status", Company_status);
+            condition.Add("Company_type", Company_type);
+            condition.Add("Is_top_company", Is_top_company);
+            condition.Add("Establish_date_From", Establish_date_From);
+            condition.Add("Establish_date_To", Establish_date_To);
+            condition.Add("License_date_From", License_date_From);
+            condition.Add("License_date_To", License_date_To);
+            condition.Add("Village", Village);
+            condition.Add("Town", Town);
+
+            this.pageIndex = 1;
+            this.InitListView(condition, this.pageIndex, this.pageSize);
+        }
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            //获得当前需要删除的行
+
+            //获得当前需要编辑的行
+            if (this.dgCompanyList.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要删除的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int company_id = int.Parse(this.dgCompanyList.SelectedRows[0].Cells[0].Value.ToString());
+            if (MessageBox.Show("确认要删除该行数据吗？", "温馨提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.companyBLL = new CompanyBLL();
+                Result result = this.companyBLL.DelCompany(company_id);
+                if (result.Count == 1)
+                {
+                    MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InitListView(condition, this.pageIndex, this.pageSize);
+                }
+                else
+                {
+                    MessageBox.Show("删除数据发生异常。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogHelper.Error(result.Information, result.Exception);
+                }
+            }
+        }
+
+        private void btReset_Click(object sender, EventArgs e)
+        {
+            //清空查询文本框内容
+            tbBusiness_code.Text = "";
+            tbCompany_address.Text = "";
+            tbCompany_name.Text = "";
+            tbCompany_phone.Text = "";
+            tbCredit_code.Text = "";
+            tbInsure_person_count_From.Text = "";
+            tbInsure_person_count_To.Text = "";
+            tbLegal_idcard.Text = "";
+            tbLegal_name.Text = "";
+            tbOrganization_code.Text = "";
+            tbOutput_From.Text = "";
+            tbOutput_To.Text = "";
+            tbStaff_size_From.Text = "";
+            tbStaff_size_To.Text = "";
+            tbTaxpayer_code.Text = "";
+            tbTaxpayer_qualification.Text = "";
+            cbCompany_status.SelectedValue = "";
+            cbCompany_type.SelectedValue = "";
+            cbIs_top_company.SelectedValue = "";
+            dpEstablish_date_From.Text = "";
+            dpEstablish_date_To.Text = "";
+            dpLicense_date_From.Text = "";
+            dpLicense_date_To.Text = "";
+            this.cbVillage.SelectedValue = "";
+            this.cbTown.SelectedValue = "";
+            //查询所有信息
+            condition = null;
+            InitListView(condition, this.pageIndex, this.pageSize);
+
+        }
+
     }
 }
