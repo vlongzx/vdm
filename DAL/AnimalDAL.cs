@@ -161,24 +161,27 @@ namespace com.vdm.dal
             }
 
             sql += " order by create_datetime desc";
-            int offset = 0;
-            int totalPeople = this.getTotalCount(condition);
-            if (pageIndex > 1)
+            if(mode == 1)
             {
-                offset = (pageIndex - 1) * pageSize;
+                int offset = 0;
+                int totalPeople = this.getTotalCount(condition);
+                if (pageIndex > 1)
+                {
+                    offset = (pageIndex - 1) * pageSize;
+                }
+                int limit = 1;
+                int pageCount = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
+                if (pageIndex + 1 <= pageCount)
+                {
+                    limit = pageSize;
+                }
+                else
+                {
+                    limit = totalPeople - (pageCount - 1) * pageSize;
+                }
+                sql += "  limit  " + limit;
+                sql += "  offset  " + offset;
             }
-            int limit = 1;
-            int pageCount = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
-            if (pageIndex + 1 <= pageCount)
-            {
-                limit = pageSize;
-            }
-            else
-            {
-                limit = totalPeople - (pageCount - 1) * pageSize;
-            }
-            sql += "  limit  " + limit;
-            sql += "  offset  " + offset;
             parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
