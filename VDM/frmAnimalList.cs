@@ -408,7 +408,15 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btExport_Click(object sender, EventArgs e)
         {
+            ExcelUtil excelUtil = new ExcelUtil();
+            excelUtil.Lv = this.InitExportDataTable(this.condition);
+            frmExportExcel ef = new frmExportExcel(excelUtil, Data_Object_Const.ANIMAL);
+            ef.ShowDialog();
+        }
 
+        private ListView InitExportDataTable(Hashtable condition)
+        {
+            throw new NotImplementedException();
         }
     }
 }

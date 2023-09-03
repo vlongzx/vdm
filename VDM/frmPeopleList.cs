@@ -200,7 +200,6 @@ namespace com.vdm.form
 
             peopleBLL = new PeopleBLL();
             //初始化加载数据
-            List<People> list_people;
             DataTable dt_people;
             if (condition == null)
             {
@@ -358,7 +357,7 @@ namespace com.vdm.form
         {
             ExcelUtil excelUtil = new ExcelUtil();
             excelUtil.Lv = this.InitExportListView(this.condition);
-            frmExportExcel ef = new frmExportExcel(excelUtil);
+            frmExportExcel ef = new frmExportExcel(excelUtil,Data_Object_Const.PEOPLE);
             ef.ShowDialog();
         }
 

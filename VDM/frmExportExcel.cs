@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,17 +14,19 @@ using System.Windows.Forms;
 
 namespace com.vdm.form
 {
-    public partial class frmExportExcel : UIForm
+    public partial class frmExportExcel : UIEditForm
     {
-        ExcelUtil excelUtil;
+        private ExcelUtil excelUtil;
+        private string object_name;
         public frmExportExcel()
         {
             InitializeComponent();
         }
-        public frmExportExcel(ExcelUtil excelUtil)
+        public frmExportExcel(ExcelUtil excelUtil,string object_name)
         {
             this.excelUtil = excelUtil;
             InitializeComponent();
+            this.object_name = object_name;
         }
 
 
@@ -86,28 +89,7 @@ namespace com.vdm.form
             DialogResult sdialogresult = sdialog.ShowDialog();
             if (sdialogresult == DialogResult.OK)
             {
-                // 获取用户所选文件的路径
-                string selectedFilePath = sdialog.FileName;
-                string pathFinal = selectedFilePath.Replace('\\', '/');
-                string password = tbFile_password.Text;
-             //   MessageBox.Show(selectedFilePath);
-                this.Close();
-                if (password.Trim() == "")
-                {
-                    MessageBox.Show("请输入密码！");
-                }
-                else
-                {
-                    bool result = this.excelUtil.exportExcel(pathFinal, password);
-                    if (result)
-                    {
-                        MessageBox.Show("导出成功");
-                    }
-                    else
-                    {
-                        MessageBox.Show("导出失败");
-                    }
-                }
+                
             }
         }
 
@@ -119,6 +101,44 @@ namespace com.vdm.form
         private void tbFile_password_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btSelect_Click(object sender, EventArgs e)
+        {
+            DialogResult result = this.folderBrowserDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string selectedPath = this.folderBrowserDialog.SelectedPath;
+                string fileName = object_name + "信息导入模板.xlsx";
+                this.tbSavePath.Text = Path.Combine(selectedPath, fileName);
+            }
+        }
+
+        protected override bool CheckData()
+        {
+            return CheckEmpty(this.tbFile_password,"文件访问密码不能为空，请输入。")
+                && CheckEmpty(this.tbSavePath,"文件保存路径不能为空，请选择。")
+                ;
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if(this.IsOK == false)
+            {
+                return;
+            }
+            // 获取用户所选文件的路径
+            string selectedFilePath = this.tbSavePath.Text;
+            string password = tbFile_password.Text;
+            bool result = this.excelUtil.exportExcel(selectedFilePath, password);
+            if (result)
+            {
+                ShowInfoDialog("导出成功");
+            }
+            else
+            {
+                ShowInfoDialog("导出失败");
+            }
         }
     }
 }

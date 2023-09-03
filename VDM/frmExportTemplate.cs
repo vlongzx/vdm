@@ -33,16 +33,6 @@ namespace com.vdm.form
 
         }
 
-        private void btTempleExport_Click(object sender, EventArgs e)
-        {
-            Aspose.Cells.License li = new Aspose.Cells.License();
-            li.SetLicense(System.IO.Directory.GetCurrentDirectory() + "\\aspose\\License.lic");//破解证书
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.ShowNewFolderButton = false;//关闭新建文件夹
-            dialog.Description = "请选择一个目录作为导出Excel文件的保存路径：";
-            dialog.ShowDialog();
-            
-        }
 
         private void lbInformation_Click(object sender, EventArgs e)
         {
@@ -77,13 +67,15 @@ namespace com.vdm.form
             {
                 return;
             }
+            Aspose.Cells.License li = new Aspose.Cells.License();
+            li.SetLicense(System.IO.Directory.GetCurrentDirectory() + "\\aspose\\License.lic");//破解证书
             string mypath = this.tbSavePath.Text;
             string password = tbPassword.Text;
             Workbook book = new Workbook();
             switch (this.object_name)
             {
                 case Data_Object_Const.ANIMAL:
-                    book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\人员导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
+                    book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\畜牧信息导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
                     break;
                 case Data_Object_Const.COMPANY:
                     book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\人员导入模板.xlsx"), FileFormatType.Excel2007Xlsx);

@@ -300,6 +300,7 @@
     <None Include="aspose\人员导入模板.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="aspose\畜牧信息导入模板.xlsx" />
     <None Include="db_file\VDM.pdm" />
     <None Include="db_file\vdm_data.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
