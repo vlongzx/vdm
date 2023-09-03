@@ -72,7 +72,7 @@ namespace com.vdm.bll
                 tour.Tour_id = tour_id;
                 tour.Town = dt.Rows[0]["town"].ToString();
                 tour.Trade_form = dt.Rows[0]["trade_form"].ToString();
-                tour.Villiage = dt.Rows[0]["villiage"].ToString();
+                tour.Village = dt.Rows[0]["village"].ToString();
                 tour.Year_person_count = int.Parse(dt.Rows[0]["year_person_count"].ToString());
                 tour.Year_trade_income = double.Parse(dt.Rows[0]["year_trade_income"].ToString());
             }

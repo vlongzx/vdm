@@ -39,7 +39,7 @@ namespace com.vdm.form
             InitControls();
         }
 
-        private void InitPlantList(Hashtable condition, int pageIndex, int pageSize)
+        public  void InitPlantList(Hashtable condition, int pageIndex=1, int pageSize=20)
         {
             //初始化dgAnimal
             this.dgPlantList.AutoGenerateColumns = false;

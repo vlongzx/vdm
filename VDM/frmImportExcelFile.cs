@@ -104,14 +104,106 @@ namespace com.vdm.form
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        ///  批量导入旅游信息
+        /// </summary>
+        /// <param name="dt">旅游信息表</param>
         private void ImportTourData(DataTable dt)
         {
-            throw new NotImplementedException();
-        }
+            TourBLL tourBLL = new TourBLL();
+            List<Tour> tours = new List<Tour>();
+            //若有数据
+            if (dt != null && dt.Rows.Count != 0)
+            {
+                Tour tour = new Tour();
+                foreach (DataRow dataRow in dt.Rows)
+                {
 
+                    //将excel数据值封装业务对象
+                    //------------------基础信息部分---------------------------------
+                    tour.Address = dataRow["地址"].ToString();
+                    tour.Legal_name = dataRow["法定代表人姓名"].ToString();
+                    tour.Phone_number = dataRow["联系电话"].ToString();
+                    tour.Principal_category = dataRow["主体类别"].ToString();
+                    tour.Principal_name = dataRow["主体名称"].ToString();
+                    tour.Registered_trademark = dataRow["注册商标"].ToString();
+                    tour.Remark = dataRow["备注"].ToString();
+                    tour.Company_id = dataRow["负责人"].ToString();
+                    tour.Trade_form = dataRow["经营形式"].ToString();
+                    tour.Year_person_count = int.Parse(dataRow["年接待旅游（人次）"].ToString());
+                    tour.Year_trade_income = double.Parse(dataRow["年经营收入（万元）"].ToString());
+                    tour.Town = dataRow["所属镇"].ToString();
+                    tour.Village = dataRow["所属村"].ToString();
+                    tour.Creater = LoginInfo.CurrentUser.Account;
+                    tour.Create_datetime = DateTime.Now.ToString();
+
+                    tours.Add(tour);
+                }
+                Result result = tourBLL.batchAddTour(tours);
+                if (result.Count == tours.Count)
+                {
+                    ShowInfoDialog("导入成功。");
+                    frmTourList tourList = (frmTourList)this.Owner;
+                    tourList.InitTourList(null);
+                }
+                else
+                {
+                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                }
+            }
+        }
+        /// <summary>
+        ///  批量导入种植信息
+        /// </summary>
+        /// <param name="dt"></param>
         private void ImportPlantData(DataTable dt)
         {
-            throw new NotImplementedException();
+            PlantBLL plantBLL = new PlantBLL();
+            List<Plant> plants = new List<Plant>();
+            //若有数据
+            if (dt != null && dt.Rows.Count != 0)
+            {
+                Plant plant = new Plant();
+                foreach (DataRow dataRow in dt.Rows)
+                {
+
+                    //将excel数据值封装业务对象
+                    //------------------基础信息部分---------------------------------
+                    plant.Address = dataRow["地址"].ToString();
+                    plant.Contact_person = dataRow["法定代表人姓名"].ToString();
+                    plant.Phone_number = dataRow["联系电话"].ToString();
+                    plant.Develop_willing = dataRow["主体类别"].ToString();
+                    plant.Idcard = dataRow["主体名称"].ToString();
+                    plant.Insect_ill = dataRow["注册商标"].ToString();
+                    plant.Remark = dataRow["备注"].ToString();
+                    plant.Is_plan = dataRow["负责人"].ToString();
+                    plant.Manage_skill_method = dataRow["经营形式"].ToString();
+                    plant.Output = int.Parse(dataRow["年接待旅游（人次）"].ToString());
+                    plant.Plant_area = double.Parse(dataRow["年经营收入（万元）"].ToString());
+                    plant.Town = dataRow["所属镇"].ToString();
+                    plant.Village = dataRow["所属村"].ToString();
+                    plant.Plant_brand = dataRow["种植品种"].ToString();
+                    plant.Plant_type = dataRow["种植类别"].ToString();
+                    plant.Question = dataRow["需要政府解决的问题"].ToString();
+                    plant.Sale_way = dataRow["销售途径"].ToString();
+                    plant.Year_yield = double.Parse(dataRow["年产量（斤）"].ToString());
+                    plant.Creater = LoginInfo.CurrentUser.Account;
+                    plant.Create_datetime = DateTime.Now.ToString();
+
+                    plants.Add(plant);
+                }
+                Result result = plantBLL.batchAddPlant(plants);
+                if (result.Count == plants.Count)
+                {
+                    ShowInfoDialog("导入成功。");
+                    frmPlantList plantList = (frmPlantList)this.Owner;
+                    plantList.InitPlantList(null);
+                }
+                else
+                {
+                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                }
+            }
         }
 
         private void ImportPeopleData(DataTable dt)
@@ -184,7 +276,10 @@ namespace com.vdm.form
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        ///  批量导入畜牧信息
+        /// </summary>
+        /// <param name="dt">畜牧信息表</param>
         private void ImportAnimalData(DataTable dt)
         {
             AnimalBLL animalBLL = new AnimalBLL();
@@ -193,19 +288,18 @@ namespace com.vdm.form
             if (dt != null && dt.Rows.Count != 0)
             {
                 Animal animal = new Animal();
-                FamerBLL famerBLL = new FamerBLL();
                 foreach (DataRow dataRow in dt.Rows)
                 {
 
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
-                    animal.Address = dataRow["户主姓名"].ToString();
+                    animal.Address = dataRow["地址"].ToString();
                     animal.Idcard = dataRow["身份证号"].ToString();
                     animal.Phone_number = dataRow["联系电话"].ToString();
                     animal.Animal_qualify = dataRow["动物防疫条件合格证"].ToString();
                     animal.Breed_name = dataRow["养殖场（户）名称"].ToString();
                     animal.Breed_type = dataRow["养殖种类"].ToString();
-                    animal.Cueernt_inventory = long.Parse(dataRow["现存栏(亩)"].ToString());
+                    animal.Cueernt_inventory = long.Parse(dataRow["现存栏"].ToString());
                     animal.Manager = dataRow["负责人"].ToString();
                     animal.Midden_area = double.Parse(dataRow["堆粪场面积"].ToString());
                     animal.Output = double.Parse(dataRow["产值(万元)"].ToString());
@@ -218,7 +312,7 @@ namespace com.vdm.form
                     animal.Year_inventory = dataRow["年存栏（设计规模）"].ToString();
                     animal.Year_outbound = dataRow["年出栏（设计规模）"].ToString();
                     animal.Town = dataRow["所属镇"].ToString();
-                    animal.Villiage = dataRow["所属村"].ToString();
+                    animal.Village = dataRow["所属村"].ToString();
                     animal.Creater = LoginInfo.CurrentUser.Account;
                     animal.Create_datetime = DateTime.Now.ToString();
 

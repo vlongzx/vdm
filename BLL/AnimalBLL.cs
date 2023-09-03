@@ -32,7 +32,7 @@ namespace com.vdm.bll
                 animal = new Animal();
                 animal.Breed_id = long.Parse(dt.Rows[0]["breed_id"].ToString());
                 animal.Town = dt.Rows[0]["town"].ToString();
-                animal.Villiage = dt.Rows[0]["villiage"].ToString();
+                animal.Village = dt.Rows[0]["village"].ToString();
                 animal.Breed_name = dt.Rows[0]["breed_name"].ToString();
                 animal.Breed_type = dt.Rows[0]["breed_type"].ToString();
                 animal.Manager = dt.Rows[0]["manager"].ToString();
