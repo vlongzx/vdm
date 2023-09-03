@@ -424,7 +424,7 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btImport_Click(object sender, EventArgs e)
         {
-            frmImportExcelFileFamer ui = new frmImportExcelFileFamer(Data_Object_Const.FAMER);
+            frmImportExcelFile ui = new frmImportExcelFile(Data_Object_Const.FAMER);
             ui.Owner = this;
             DialogResult res= ui.ShowDialog();
             if (res == DialogResult.OK)

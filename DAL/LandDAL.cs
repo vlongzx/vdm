@@ -477,7 +477,7 @@ namespace com.vdm.dal
             return this.SqlDbHelper.ExecuteNonQuery(sql, CommandType.Text, parameters);
         }
         /// <summary>
-        ///  删除农户
+        ///  删除
         /// </summary>
         /// <param name="land_id"></param>
         /// <returns></returns>

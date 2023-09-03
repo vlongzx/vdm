@@ -17,15 +17,15 @@ using System.Windows.Forms;
 
 namespace com.vdm.form
 {
-    public partial class frmImportExcelFileFamer : UIEditForm
+    public partial class frmImportExcelFile : UIEditForm
     {
         private string object_name;
-        public frmImportExcelFileFamer()
+        public frmImportExcelFile()
         {
             InitializeComponent();
         }
 
-        public frmImportExcelFileFamer(string object_name)
+        public frmImportExcelFile(string object_name)
         {
             InitializeComponent();
             this.object_name = object_name;
@@ -121,7 +121,58 @@ namespace com.vdm.form
 
         private void ImportLandData(DataTable dt)
         {
-            throw new NotImplementedException();
+            List<SQLStringObject> sqlso = new List<SQLStringObject>();
+            //若有数据
+            if (dt != null && dt.Rows.Count != 0)
+            {
+                Land land = new Land();
+                LandBLL landBLL = new LandBLL();
+                foreach (DataRow dataRow in dt.Rows)
+                {
+                    //将excel数据值封装业务对象
+                    //------------------基础信息部分---------------------------------
+                    land.Name = dataRow["姓名"].ToString();
+                    land.Idcard = dataRow["身份证号"].ToString();
+                    land.Land_name = dataRow["地块名称"].ToString();
+                    land.Is_basic_farmland= dataRow["是否基本农田"].ToString();
+                    land.Land_type = dataRow["地块类型"].ToString();
+                    land.Land_grade = dataRow["地块等级"].ToString();
+                    land.Real_area = double.Parse(dataRow["实测面积"].ToString());
+                    land.East = dataRow["东至"].ToString();
+                    land.South = dataRow["南至"].ToString();
+                    land.West = dataRow["西至"].ToString();
+                    land.North = dataRow["北至"].ToString();
+                    land.Land_use_remark = dataRow["土地用途说明"].ToString();
+                    land.Contractor =dataRow["承包方"].ToString();
+                    if(dataRow["承包方"].ToString()!="")
+                    {
+                        land.Contract_time = dataRow["承包时间"].ToString();
+                        land.Move_area = double.Parse(dataRow["流转面积"].ToString());
+                        land.Move_type = dataRow["流转形式"].ToString();
+                        land.Move_price = int.Parse(dataRow["流转价格"].ToString());
+                        land.Move_date = dataRow["流转日期"].ToString();
+                    }
+               
+                    land.Town = dataRow["所属镇"].ToString();
+                    land.Villiage = dataRow["所属村"].ToString();
+                    land.Creater = LoginInfo.CurrentUser.Account;
+                    land.Create_datetime = DateTime.Now.ToString();
+
+                    SQLStringObject s = landBLL.ImportLandAdd(land);
+                    sqlso.Add(s);
+                }
+                Result result = landBLL.ImportLand(sqlso);
+                if (result.Count == sqlso.Count)
+                {
+                    ShowInfoDialog("导入成功。");
+                    frmLandList landList = (frmLandList)this.Owner;
+                    landList.InitListView(null,1,20);
+                }
+                else
+                {
+                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                }
+            }
         }
 
         private void ImportHouseData(DataTable dt)
@@ -198,7 +249,6 @@ namespace com.vdm.form
                 FamerBLL famerBLL = new FamerBLL();
                 foreach (DataRow dataRow in dt.Rows)
                 {
-
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
                     famer.Holder_name = dataRow["户主姓名"].ToString();
