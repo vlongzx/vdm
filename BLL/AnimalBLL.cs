@@ -56,13 +56,22 @@ namespace com.vdm.bll
         /// <summary>
         ///  获得所有的畜牧
         /// </summary>
-        /// <param name="condition"></param>
-        /// <param name="PageIndex"></param>
-        /// <param name="PageSize"></param>
+        /// <param name="condition">查询条件</param>
+        /// <param name="PageIndex">页面索引</param>
+        /// <param name="PageSize">页面记录数</param>
         /// <returns></returns>
         public DataTable  getAllAnimal(Hashtable condition,int PageIndex, int PageSize)
         {
             return this.animalDAL.queryAllAnimal(condition, PageIndex, PageSize);
+        }
+        /// <summary>
+        /// 获得所有的畜牧
+        /// </summary>
+        /// <param name="condition">查询条件</param>
+        /// <returns></returns>
+        public DataTable getAllAnimal(Hashtable condition)
+        {
+            return this.animalDAL.queryAllAnimal(condition);
         }
         /// <summary>
         ///  获得畜牧信息的总数

@@ -14,8 +14,8 @@ namespace com.vdm.form.utils
   public  class ExcelUtil
     {
 
-
-
+        private DataTable dt = null;
+        private DataGridView dg = null;
         //要导出的ListView
         private  ListView lv;
 
@@ -31,7 +31,16 @@ namespace com.vdm.form.utils
                     lv = value;
                 }
             }
+        public ExcelUtil()
+        {
 
+        }
+
+        public ExcelUtil(DataGridView dg,DataTable dt)
+        {
+            this.dt = dt;
+            this.dg = dg;
+        }
 
 
         /// <summary>
@@ -52,19 +61,18 @@ namespace com.vdm.form.utils
                 Worksheet sheet = book.Worksheets[0];
 
                 int x = 0;
-                foreach (ColumnHeader header in lv.Columns)
+                foreach (DataGridViewColumn column in dg.Columns)
                 {
-                    sheet.Cells[0, x++].PutValue(header.Text);
+                    sheet.Cells[0, x++].PutValue(column.HeaderText);
                 }
 
                 ////设置excel值
-                int rowLenth = lv.Items.Count;//行数
-                for (int i = 0; i < rowLenth; i++)//遍历listView1的每一行
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
 
-                    for (int j = 0; j < lv.Items[i].SubItems.Count; j++)//每行中的每项
+                    for (int j = 0; j < dg.Columns.Count; j++)//每行中的每项
                     {
-                        sheet.Cells[i + 1, j].PutValue(lv.Items[i].SubItems[j].Text);
+                        sheet.Cells[i + 1, j].PutValue(dt.Rows[i][dg.Columns[j].DataPropertyName].ToString());
                     }
                 }
                 // 指定 XOR 加密类型
@@ -80,7 +88,7 @@ namespace com.vdm.form.utils
                 GC.Collect();
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
                 return false;
             }

@@ -408,8 +408,9 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btExport_Click(object sender, EventArgs e)
         {
-            ExcelUtil excelUtil = new ExcelUtil();
-            excelUtil.Lv = this.InitExportDataTable(this.condition);
+            
+            DataTable dt  = this.animalBLL.getAllAnimal(this.condition);
+            ExcelUtil excelUtil = new ExcelUtil(this.dgAnimalList,dt);
             frmExportExcel ef = new frmExportExcel(excelUtil, Data_Object_Const.ANIMAL);
             ef.ShowDialog();
         }
