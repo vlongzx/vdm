@@ -385,7 +385,7 @@ namespace com.vdm.form
         {
             DataTable dt = this.plantBLL.getAllPlant(this.condition);
             ExcelUtil excelUtil = new ExcelUtil(this.dgPlantList, dt);
-            frmExportExcel ef = new frmExportExcel(excelUtil, Data_Object_Const.ANIMAL);
+            frmExportExcel ef = new frmExportExcel(excelUtil, Data_Object_Const.PLANT);
             ef.ShowDialog();
         }
     }
