@@ -80,6 +80,7 @@
     <Compile Include="RoleBLL.cs" />
     <Compile Include="TourBLL.cs" />
     <Compile Include="UserBLL.cs" />
+    <Compile Include="VillageBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

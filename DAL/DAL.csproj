@@ -86,6 +86,7 @@
     <Compile Include="SQLStringObject.cs" />
     <Compile Include="TourDAL.cs" />
     <Compile Include="UserDAL.cs" />
+    <Compile Include="VillageDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

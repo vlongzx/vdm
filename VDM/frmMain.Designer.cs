@@ -219,7 +219,7 @@
             this.uiHeaderButton4.TabIndex = 6;
             this.uiHeaderButton4.Text = "村情";
             this.uiHeaderButton4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiHeaderButton4.Click += new System.EventHandler(this.btFamer_Click);
+            this.uiHeaderButton4.Click += new System.EventHandler(this.btVillage_Click);
             // 
             // btAnimal
             // 

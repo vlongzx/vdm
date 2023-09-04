@@ -259,6 +259,18 @@
     <Compile Include="frmUserinfo.Designer.cs">
       <DependentUpon>frmUserinfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVillageInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVillageInfo.Designer.cs">
+      <DependentUpon>frmVillageInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVillageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVillageList.Designer.cs">
+      <DependentUpon>frmVillageList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\ExcelUtil.cs" />
@@ -346,6 +358,12 @@
     <EmbeddedResource Include="frmUserinfo.resx">
       <DependentUpon>frmUserinfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVillageInfo.resx">
+      <DependentUpon>frmVillageInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVillageList.resx">
+      <DependentUpon>frmVillageList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -377,6 +395,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="aspose\村干部信息导入模板.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="aspose\村情信息导入模板.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="aspose\畜牧信息导入模板.xlsx">

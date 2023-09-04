@@ -62,6 +62,7 @@
     <Compile Include="Role.cs" />
     <Compile Include="Tour.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="Village.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

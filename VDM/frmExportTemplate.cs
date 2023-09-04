@@ -77,6 +77,9 @@ namespace com.vdm.form
                 case Data_Object_Const.ANIMAL:
                     book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\畜牧信息导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
                     break;
+                case Data_Object_Const.VILLIAGE:
+                    book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\村情信息导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
+                    break;
                 case Data_Object_Const.COMPANY:
                     book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\企业信息导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
                     break;

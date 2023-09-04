@@ -61,21 +61,10 @@ namespace com.vdm.bll
             return dt;
         }
 
-        public List<People> getAllPeopleList(Hashtable condition, int pageIndex, int pageSize)
+        public DataTable getAllPeopleDT(Hashtable condition)
         {
-            List<People> list_people = new List<People>();
-            DataTable dt = this.peopleDAL.getAllPeople(condition, pageIndex, pageSize);
-
-            if (dt != null)
-            {
-                People p = null;
-                foreach (DataRow row in dt.Rows)
-                {
-                    p = MakeObject.MakeObjectToPeople(row);
-                    list_people.Add(p);
-                }
-            }
-            return list_people;
+            DataTable dt = this.peopleDAL.getAllPeople(condition);
+            return dt;
         }
 
         

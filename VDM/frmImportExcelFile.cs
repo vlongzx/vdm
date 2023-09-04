@@ -93,6 +93,12 @@ namespace com.vdm.form
                 case Data_Object_Const.TOUR:
                     ImportTourData(dt);
                     break;
+                case Data_Object_Const.MANAGER:
+                    ImportManagerData(dt);
+                    break;
+                case Data_Object_Const.VILLIAGE:
+                    ImportVillageData(dt);
+                    break;
                 default://村情
                     ImportVilliageData(dt);
                     break;
@@ -208,7 +214,72 @@ namespace com.vdm.form
 
         private void ImportPeopleData(DataTable dt)
         {
-            throw new NotImplementedException();
+            List<SQLStringObject> sqlso = new List<SQLStringObject>();
+            //若有数据
+            if (dt != null && dt.Rows.Count != 0)
+            {
+                People people = new People();
+                PeopleBLL peopleBLL = new PeopleBLL();
+                foreach (DataRow dataRow in dt.Rows)
+                {
+                    //将excel数据值封装业务对象
+                    //------------------基础信息部分---------------------------------
+                    people.People_name = dataRow["姓名 "].ToString();
+                    people.Idcard = dataRow["身份证号"].ToString();
+                    people.Birthday = dataRow["出生日期"].ToString();
+                    people.Sex = dataRow["性别"].ToString();
+                    people.Relationship = dataRow["与户主关系"].ToString();
+                    people.Nation = dataRow["民族"].ToString();
+                    people.Politcal_outlook =dataRow["政治面貌"].ToString();
+                    people.Join_party_time = dataRow["入党时间"].ToString();
+                    people.Phone_number = dataRow["联系电话"].ToString();
+                    people.Is_real_name = dataRow["是否实名"].ToString();
+                    people.Religious_belief = dataRow["宗教信仰"].ToString();
+                    people.Blood_type = dataRow["血型"].ToString();
+                    people.Marital_status = dataRow["婚姻状况"].ToString();
+
+                        people.Work_or_study = dataRow["是否外出"].ToString();
+                        people.Industry = dataRow["从事行业"].ToString();
+                        people.Unit_or_school = dataRow["工作单位/学校名称"].ToString();
+                        people.Work_study_location = dataRow["工作地点/学习地点"].ToString();
+                        people.Skill_type = dataRow["技能类型"].ToString();
+                    people.Employ_guide = dataRow["就业指导"].ToString();
+                    people.Skill_train = dataRow["技能培训"].ToString();
+                    people.Is_career_grade = dataRow["有无职称"].ToString();
+                    people.Career_grade = dataRow["职称等级"].ToString();
+                    people.Career_get_time = dataRow["职称获得时间"].ToString();
+                    people.Disability_type = dataRow["残疾分类"].ToString();
+                    people.Disability_grade = dataRow["残疾等级"].ToString();
+                    people.Disability_reason = dataRow["因何致残"].ToString();
+                    people.Big_ill_help = dataRow["大病救助情况"].ToString();
+                    people.Temporary_help = dataRow["临时救助情况"].ToString();
+                    people.Is_unable_old = dataRow["是否失能老人"].ToString();
+                    people.Is_relocation = dataRow["是否易地搬迁户"].ToString();
+                    people.Low_five_grade = dataRow["低保等级/五保类别"].ToString();
+                    people.Low_five = dataRow["低保户/五保户"].ToString();
+                    people.Remark = dataRow["备注"].ToString();
+
+
+                    people.Town = dataRow["所属镇"].ToString();
+                    people.Villiage = dataRow["所属村"].ToString();
+                    people.Creater = LoginInfo.CurrentUser.Account;
+                    people.Create_datetime = DateTime.Now.ToString();
+
+                    SQLStringObject s = peopleBLL.ImportPeopleAdd(people);
+                    sqlso.Add(s);
+                }
+                Result result = peopleBLL.ImportPeople(sqlso);
+                if (result.Count == sqlso.Count)
+                {
+                    ShowInfoDialog("导入成功。");
+                    frmPeopleList peopleList = (frmPeopleList)this.Owner;
+                    peopleList.InitListView(null, 1, 20);
+                }
+                else
+                {
+                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                }
+            }
         }
 
         private void ImportLandData(DataTable dt)
@@ -266,7 +337,50 @@ namespace com.vdm.form
                 }
             }
         }
+        private void ImportManagerData(DataTable dt)
+        {
+            List<SQLStringObject> sqlso = new List<SQLStringObject>();
+            //若有数据
+            if (dt != null && dt.Rows.Count != 0)
+            {
+                Manager manager = new Manager();
+                ManagerBLL managerBLL = new ManagerBLL();
+                foreach (DataRow dataRow in dt.Rows)
+                {
+                    //将excel数据值封装业务对象
+                    //------------------基础信息部分---------------------------------
+                    manager.Manager_name = dataRow["姓名"].ToString();
+                    manager.Post = dataRow["职务"].ToString();
+                    manager.Employ_date = dataRow["任职时间"].ToString();
+                    manager.Birthday = dataRow["出生日期"].ToString();
+                    manager.Sex = dataRow["性别"].ToString();
+                    manager.Nation = dataRow["民族"].ToString();
+                    manager.Politcal_outlook = dataRow["政治面貌"].ToString();
+                    manager.Join_party_time = dataRow["入党时间"].ToString();
+                    manager.Idcard = dataRow["身份证号"].ToString();
+                    manager.Phone_number = dataRow["联系电话"].ToString();
+                    manager.Education = dataRow["学历"].ToString();
+                    manager.Town = dataRow["所属镇"].ToString();
+                    manager.Villiage = dataRow["所属村"].ToString();
+                    manager.Creater = LoginInfo.CurrentUser.Account;
+                    manager.Create_datetime = DateTime.Now.ToString();
 
+                    SQLStringObject s = managerBLL.ImportManagerAdd(manager);
+                    sqlso.Add(s);
+                }
+                Result result = managerBLL.ImportManager(sqlso);
+                if (result.Count == sqlso.Count)
+                {
+                    ShowInfoDialog("导入成功。");
+                    frmManagerList managerList = (frmManagerList)this.Owner;
+                    managerList.InitListView(null, 1, 20);
+                }
+                else
+                {
+                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                }
+            }
+        }
         private void ImportHouseData(DataTable dt)
         {
             List<SQLStringObject> sqlso = new List<SQLStringObject>();
@@ -312,7 +426,51 @@ namespace com.vdm.form
                 }
             }
         }
+        private void ImportVillageData(DataTable dt)
+        {
+            List<SQLStringObject> sqlso = new List<SQLStringObject>();
+            //若有数据
+            if (dt != null && dt.Rows.Count != 0)
+            {
+                Village village = new Village();
+                VillageBLL villageBLL = new VillageBLL();
+                foreach (DataRow dataRow in dt.Rows)
+                {
+                    //将excel数据值封装业务对象
+                    //------------------基础信息部分---------------------------------
+                    village.Money= double.Parse(dataRow["村集体资金"].ToString());
+                    village.Foreast_area = double.Parse(dataRow["林地面积"].ToString());
+                    village.Confirm_area = double.Parse(dataRow["确权耕地面积"].ToString());
+                    village.Move_area = double.Parse(dataRow["机动耕地面积"].ToString());
+                    village.Mineral_resource = double.Parse(dataRow["矿产资源量"].ToString());
+                    village.Water_resource = double.Parse(dataRow["水资源量"].ToString());
+                    village.Road_length = double.Parse(dataRow["道路长度"].ToString());
+                    village.Shop = double.Parse(dataRow["村集体门店"].ToString());
+                    village.Factory = double.Parse(dataRow["村集体厂房"].ToString());
+                    village.School = double.Parse(dataRow["学校"].ToString());
+                    village.Office = double.Parse(dataRow["村组织办公场所"].ToString());
+                    village.Mechine = dataRow["村集体设施、设备"].ToString();
+                    village.Town = dataRow["所属镇"].ToString();
+                    village.Villiage = dataRow["所属村"].ToString();
+                    village.Creater = LoginInfo.CurrentUser.Account;
+                    village.Create_datetime = DateTime.Now.ToString();
 
+                    SQLStringObject s = villageBLL.ImportVillageAdd(village);
+                    sqlso.Add(s);
+                }
+                Result result = villageBLL.ImportVillage(sqlso);
+                if (result.Count == sqlso.Count)
+                {
+                    ShowInfoDialog("导入成功。");
+                    frmVillageList villageList = (frmVillageList)this.Owner;
+                    villageList.InitListView(null, 1, 20);
+                }
+                else
+                {
+                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                }
+            }
+        }
         private void ImportCompanyData(DataTable dt)
         {
             List<SQLStringObject> sqlso = new List<SQLStringObject>();
