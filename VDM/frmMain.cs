@@ -31,6 +31,7 @@ namespace com.vdm.form
             AddPage(new frmLandList(), 1003);
             AddPage(new frmCompanyList(), 1004);
             AddPage(new frmHouseList(), 1005);
+            AddPage(new frmManagerList(), 1010);
             AddPage(new frmSystemSet(), 1009);
             AddPage(new frmAnimalList(), 1008);
             AddPage(new frmTourList(), 1007);
@@ -41,6 +42,10 @@ namespace com.vdm.form
         {
             MainTabControl.SelectPage(1001);
 
+        }
+        private void btManager_Click(object sender, EventArgs e)
+        {
+            MainTabControl.SelectPage(1010);
         }
         /// <summary>
         ///  农户

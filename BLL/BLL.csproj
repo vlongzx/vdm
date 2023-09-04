@@ -72,6 +72,7 @@
     <Compile Include="FunctionBLL.cs" />
     <Compile Include="HouseBLL.cs" />
     <Compile Include="LandBLL.cs" />
+    <Compile Include="ManagerBLL.cs" />
     <Compile Include="OrgBLL.cs" />
     <Compile Include="PeopleBLL.cs" />
     <Compile Include="PlantBLL.cs" />

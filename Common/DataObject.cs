@@ -29,6 +29,10 @@ namespace com.vdm.common
         /// </summary>
         public const string COMPANY = "企业";
         /// <summary>
+        /// 村干部
+        /// </summary>
+        public const string MANAGER = "村干部";
+        /// <summary>
         /// 村情
         /// </summary>
         public const string VILLIAGE = "村情";

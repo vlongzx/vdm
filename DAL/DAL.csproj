@@ -75,6 +75,7 @@
     <Compile Include="FunctionDAL.cs" />
     <Compile Include="HouseDAL.cs" />
     <Compile Include="LandDAL.cs" />
+    <Compile Include="ManagerDAL.cs" />
     <Compile Include="OrgDAL.cs" />
     <Compile Include="DictDAL.cs" />
     <Compile Include="PeopleDAL.cs" />

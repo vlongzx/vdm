@@ -98,6 +98,9 @@ namespace com.vdm.form
                 case Data_Object_Const.TOUR:
                     book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\旅游信息导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
                     break;
+                case Data_Object_Const.MANAGER:
+                    book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\村干部信息导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
+                    break;
                 default:
                     book.Open((System.IO.Directory.GetCurrentDirectory() + "\\aspose\\人员导入模板.xlsx"), FileFormatType.Excel2007Xlsx);
                     break;

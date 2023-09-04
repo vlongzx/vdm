@@ -54,6 +54,7 @@
     <Compile Include="Function.cs" />
     <Compile Include="House.cs" />
     <Compile Include="Land.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="Org.cs" />
     <Compile Include="People.cs" />
     <Compile Include="Plant.cs" />
