@@ -87,6 +87,7 @@
             // 
             // dpMove_date
             // 
+            this.dpMove_date.CanEmpty = true;
             this.dpMove_date.FillColor = System.Drawing.Color.White;
             this.dpMove_date.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dpMove_date.Location = new System.Drawing.Point(215, 266);

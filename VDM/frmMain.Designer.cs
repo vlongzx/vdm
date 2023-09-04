@@ -192,7 +192,7 @@
             this.btHouse.TabIndex = 6;
             this.btHouse.Text = "房屋";
             this.btHouse.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btHouse.Click += new System.EventHandler(this.btFamer_Click);
+            this.btHouse.Click += new System.EventHandler(this.btHouse_Click);
             // 
             // uiHeaderButton4
             // 

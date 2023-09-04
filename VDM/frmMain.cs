@@ -30,6 +30,7 @@ namespace com.vdm.form
             AddPage(new frmFamerList(), 1002);
             AddPage(new frmLandList(), 1003);
             AddPage(new frmCompanyList(), 1004);
+            AddPage(new frmHouseList(), 1005);
             AddPage(new frmSystemSet(), 1009);
             AddPage(new frmAnimalList(), 1008);
             AddPage(new frmTourList(), 1007);
@@ -49,6 +50,10 @@ namespace com.vdm.form
         private void btFamer_Click(object sender, EventArgs e)
         {
             MainTabControl.SelectPage(1004);
+        }
+        private void btHouse_Click(object sender, EventArgs e)
+        {
+            MainTabControl.SelectPage(1005);
         }
         private void btLand_Click(object sender, EventArgs e)
         {

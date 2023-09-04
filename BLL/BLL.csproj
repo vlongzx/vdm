@@ -70,6 +70,7 @@
     <Compile Include="DictBLL.cs" />
     <Compile Include="FamerBLL.cs" />
     <Compile Include="FunctionBLL.cs" />
+    <Compile Include="HouseBLL.cs" />
     <Compile Include="LandBLL.cs" />
     <Compile Include="OrgBLL.cs" />
     <Compile Include="PeopleBLL.cs" />

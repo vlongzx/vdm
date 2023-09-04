@@ -269,7 +269,48 @@ namespace com.vdm.form
 
         private void ImportHouseData(DataTable dt)
         {
-            throw new NotImplementedException();
+            List<SQLStringObject> sqlso = new List<SQLStringObject>();
+            //若有数据
+            if (dt != null && dt.Rows.Count != 0)
+            {
+                House house = new House();
+                HouseBLL houseBLL = new HouseBLL();
+                foreach (DataRow dataRow in dt.Rows)
+                {
+                    //将excel数据值封装业务对象
+                    //------------------基础信息部分---------------------------------
+                    house.House_owner = dataRow["房屋所有人"].ToString();
+                    house.Idcard = dataRow["身份证号"].ToString();
+                    house.Area = int.Parse(dataRow["房屋面积(平方米)"].ToString());
+                    house.House_type = dataRow["房屋类别"].ToString();
+                    house.House_location = dataRow["房屋具体位置"].ToString();
+                    house.House_struction = dataRow["房屋结构"].ToString();
+                    house.House_safe_grade = dataRow["房屋安全等级"].ToString();
+                    house.House_is_rent = dataRow["房屋是否租赁"].ToString();
+                    house.Is_my_struct = dataRow["房屋是否自建"].ToString();
+                    house.House_build_date = dataRow["房屋建设时间"].ToString();
+                    house.Is_old_house = dataRow["是否古宅"].ToString();
+                    house.Oh_checktime = dataRow["古宅审批时间"].ToString();
+                    house.Town = dataRow["所属镇"].ToString();
+                    house.Villiage = dataRow["所属村"].ToString();
+                    house.Creater = LoginInfo.CurrentUser.Account;
+                    house.Create_datetime = DateTime.Now.ToString();
+
+                    SQLStringObject s = houseBLL.ImportHouseAdd(house);
+                    sqlso.Add(s);
+                }
+                Result result = houseBLL.ImportHouse(sqlso);
+                if (result.Count == sqlso.Count)
+                {
+                    ShowInfoDialog("导入成功。");
+                    frmHouseList houseList = (frmHouseList)this.Owner;
+                    houseList.InitListView(null, 1, 20);
+                }
+                else
+                {
+                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                }
+            }
         }
 
         private void ImportCompanyData(DataTable dt)

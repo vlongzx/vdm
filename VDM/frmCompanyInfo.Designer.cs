@@ -87,6 +87,7 @@
             // 
             // dpEstablish_date
             // 
+            this.dpEstablish_date.CanEmpty = true;
             this.dpEstablish_date.FillColor = System.Drawing.Color.White;
             this.dpEstablish_date.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dpEstablish_date.Location = new System.Drawing.Point(979, 210);
@@ -106,6 +107,7 @@
             // 
             // dpLicense_date
             // 
+            this.dpLicense_date.CanEmpty = true;
             this.dpLicense_date.FillColor = System.Drawing.Color.White;
             this.dpLicense_date.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dpLicense_date.Location = new System.Drawing.Point(281, 210);

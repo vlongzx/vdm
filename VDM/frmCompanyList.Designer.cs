@@ -74,6 +74,7 @@
             this.uiLabel25 = new Sunny.UI.UILabel();
             this.uiLabel26 = new Sunny.UI.UILabel();
             this.cbTown = new Sunny.UI.UIComboBox();
+            this.cbTaxpayer_qualification = new Sunny.UI.UIComboBox();
             this.cbCompany_type = new Sunny.UI.UIComboBox();
             this.cbCompany_status = new Sunny.UI.UIComboBox();
             this.cbIs_top_company = new Sunny.UI.UIComboBox();
@@ -93,7 +94,6 @@
             this.btSearch = new Sunny.UI.UIButton();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.btDelete = new Sunny.UI.UIButton();
-            this.cbTaxpayer_qualification = new Sunny.UI.UIComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgCompanyList)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.uiGroupBox1.SuspendLayout();
@@ -495,6 +495,7 @@
             // 
             // dpEstablish_date_To
             // 
+            this.dpEstablish_date_To.CanEmpty = true;
             this.dpEstablish_date_To.FillColor = System.Drawing.Color.White;
             this.dpEstablish_date_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dpEstablish_date_To.Location = new System.Drawing.Point(1037, 140);
@@ -514,6 +515,7 @@
             // 
             // dpEstablish_date_From
             // 
+            this.dpEstablish_date_From.CanEmpty = true;
             this.dpEstablish_date_From.FillColor = System.Drawing.Color.White;
             this.dpEstablish_date_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dpEstablish_date_From.Location = new System.Drawing.Point(915, 135);
@@ -533,6 +535,7 @@
             // 
             // dpLicense_date_To
             // 
+            this.dpLicense_date_To.CanEmpty = true;
             this.dpLicense_date_To.FillColor = System.Drawing.Color.White;
             this.dpLicense_date_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dpLicense_date_To.Location = new System.Drawing.Point(297, 138);
@@ -552,6 +555,7 @@
             // 
             // dpLicense_date_From
             // 
+            this.dpLicense_date_From.CanEmpty = true;
             this.dpLicense_date_From.FillColor = System.Drawing.Color.White;
             this.dpLicense_date_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dpLicense_date_From.Location = new System.Drawing.Point(175, 133);
@@ -773,6 +777,21 @@
             this.cbTown.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbTown.Watermark = "";
             this.cbTown.SelectedValueChanged += new System.EventHandler(this.cbTown_SelectedValueChanged);
+            // 
+            // cbTaxpayer_qualification
+            // 
+            this.cbTaxpayer_qualification.DataSource = null;
+            this.cbTaxpayer_qualification.FillColor = System.Drawing.Color.White;
+            this.cbTaxpayer_qualification.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbTaxpayer_qualification.Location = new System.Drawing.Point(557, 240);
+            this.cbTaxpayer_qualification.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbTaxpayer_qualification.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbTaxpayer_qualification.Name = "cbTaxpayer_qualification";
+            this.cbTaxpayer_qualification.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbTaxpayer_qualification.Size = new System.Drawing.Size(140, 29);
+            this.cbTaxpayer_qualification.TabIndex = 153;
+            this.cbTaxpayer_qualification.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbTaxpayer_qualification.Watermark = "";
             // 
             // cbCompany_type
             // 
@@ -1026,21 +1045,6 @@
             this.btDelete.Text = "删除(&D)";
             this.btDelete.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
-            // 
-            // cbTaxpayer_qualification
-            // 
-            this.cbTaxpayer_qualification.DataSource = null;
-            this.cbTaxpayer_qualification.FillColor = System.Drawing.Color.White;
-            this.cbTaxpayer_qualification.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTaxpayer_qualification.Location = new System.Drawing.Point(557, 240);
-            this.cbTaxpayer_qualification.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbTaxpayer_qualification.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbTaxpayer_qualification.Name = "cbTaxpayer_qualification";
-            this.cbTaxpayer_qualification.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbTaxpayer_qualification.Size = new System.Drawing.Size(140, 29);
-            this.cbTaxpayer_qualification.TabIndex = 153;
-            this.cbTaxpayer_qualification.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbTaxpayer_qualification.Watermark = "";
             // 
             // frmCompanyList
             // 
