@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btImport = new Sunny.UI.UIButton();
             this.dgCompanyList = new Sunny.UI.UIDataGridView();
             this.btExport = new Sunny.UI.UIButton();
@@ -55,6 +55,10 @@
             this.uiLabel10 = new Sunny.UI.UILabel();
             this.tbTaxpayer_code = new Sunny.UI.UITextBox();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.tbInsure_person_count_From = new Sunny.UI.UITextBox();
+            this.cbCompany_status = new Sunny.UI.UIComboBox();
+            this.cbIs_top_company = new Sunny.UI.UIComboBox();
+            this.tbCompany_phone = new Sunny.UI.UITextBox();
             this.dpEstablish_date_To = new Sunny.UI.UIDatePicker();
             this.dpEstablish_date_From = new Sunny.UI.UIDatePicker();
             this.dpLicense_date_To = new Sunny.UI.UIDatePicker();
@@ -65,7 +69,6 @@
             this.tbOutput_To = new Sunny.UI.UITextBox();
             this.tbOutput_From = new Sunny.UI.UITextBox();
             this.tbInsure_person_count_To = new Sunny.UI.UITextBox();
-            this.tbInsure_person_count_From = new Sunny.UI.UITextBox();
             this.tbStaff_size_To = new Sunny.UI.UITextBox();
             this.tbStaff_size_From = new Sunny.UI.UITextBox();
             this.tbCompany_address = new Sunny.UI.UITextBox();
@@ -76,11 +79,8 @@
             this.cbTown = new Sunny.UI.UIComboBox();
             this.cbTaxpayer_qualification = new Sunny.UI.UIComboBox();
             this.cbCompany_type = new Sunny.UI.UIComboBox();
-            this.cbCompany_status = new Sunny.UI.UIComboBox();
-            this.cbIs_top_company = new Sunny.UI.UIComboBox();
             this.cbVillage = new Sunny.UI.UIComboBox();
             this.uiLabel2 = new Sunny.UI.UILabel();
-            this.tbCompany_phone = new Sunny.UI.UITextBox();
             this.tbLegal_name = new Sunny.UI.UITextBox();
             this.tbCompany_name = new Sunny.UI.UITextBox();
             this.uiLabel9 = new Sunny.UI.UILabel();
@@ -116,48 +116,48 @@
             // 
             this.dgCompanyList.AllowUserToAddRows = false;
             this.dgCompanyList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgCompanyList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgCompanyList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgCompanyList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgCompanyList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCompanyList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCompanyList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgCompanyList.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgCompanyList.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgCompanyList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgCompanyList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgCompanyList.EnableHeadersVisualStyles = false;
             this.dgCompanyList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgCompanyList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgCompanyList.Location = new System.Drawing.Point(4, 32);
             this.dgCompanyList.Name = "dgCompanyList";
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCompanyList.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCompanyList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgCompanyList.RowHeadersVisible = false;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgCompanyList.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgCompanyList.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgCompanyList.RowTemplate.Height = 23;
             this.dgCompanyList.ScrollBarHandleWidth = 40;
             this.dgCompanyList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -493,6 +493,68 @@
             this.uiGroupBox1.Text = "查询条件";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tbInsure_person_count_From
+            // 
+            this.tbInsure_person_count_From.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbInsure_person_count_From.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbInsure_person_count_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbInsure_person_count_From.Location = new System.Drawing.Point(905, 190);
+            this.tbInsure_person_count_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbInsure_person_count_From.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbInsure_person_count_From.Name = "tbInsure_person_count_From";
+            this.tbInsure_person_count_From.Padding = new System.Windows.Forms.Padding(5);
+            this.tbInsure_person_count_From.ShowText = false;
+            this.tbInsure_person_count_From.Size = new System.Drawing.Size(119, 29);
+            this.tbInsure_person_count_From.TabIndex = 219;
+            this.tbInsure_person_count_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbInsure_person_count_From.Watermark = "";
+            // 
+            // cbCompany_status
+            // 
+            this.cbCompany_status.DataSource = null;
+            this.cbCompany_status.FillColor = System.Drawing.Color.White;
+            this.cbCompany_status.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbCompany_status.Location = new System.Drawing.Point(1371, 133);
+            this.cbCompany_status.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbCompany_status.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbCompany_status.Name = "cbCompany_status";
+            this.cbCompany_status.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbCompany_status.Size = new System.Drawing.Size(160, 29);
+            this.cbCompany_status.TabIndex = 153;
+            this.cbCompany_status.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbCompany_status.Watermark = "";
+            // 
+            // cbIs_top_company
+            // 
+            this.cbIs_top_company.DataSource = null;
+            this.cbIs_top_company.FillColor = System.Drawing.Color.White;
+            this.cbIs_top_company.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbIs_top_company.Location = new System.Drawing.Point(1371, 88);
+            this.cbIs_top_company.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbIs_top_company.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbIs_top_company.Name = "cbIs_top_company";
+            this.cbIs_top_company.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbIs_top_company.Size = new System.Drawing.Size(160, 29);
+            this.cbIs_top_company.TabIndex = 153;
+            this.cbIs_top_company.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbIs_top_company.Watermark = "";
+            // 
+            // tbCompany_phone
+            // 
+            this.tbCompany_phone.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbCompany_phone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCompany_phone.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbCompany_phone.Location = new System.Drawing.Point(194, 189);
+            this.tbCompany_phone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbCompany_phone.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbCompany_phone.Name = "tbCompany_phone";
+            this.tbCompany_phone.Padding = new System.Windows.Forms.Padding(5);
+            this.tbCompany_phone.ShowText = false;
+            this.tbCompany_phone.Size = new System.Drawing.Size(165, 29);
+            this.tbCompany_phone.TabIndex = 131;
+            this.tbCompany_phone.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbCompany_phone.Watermark = "";
+            // 
             // dpEstablish_date_To
             // 
             this.dpEstablish_date_To.CanEmpty = true;
@@ -654,22 +716,6 @@
             this.tbInsure_person_count_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbInsure_person_count_To.Watermark = "";
             // 
-            // tbInsure_person_count_From
-            // 
-            this.tbInsure_person_count_From.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbInsure_person_count_From.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbInsure_person_count_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbInsure_person_count_From.Location = new System.Drawing.Point(905, 190);
-            this.tbInsure_person_count_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbInsure_person_count_From.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbInsure_person_count_From.Name = "tbInsure_person_count_From";
-            this.tbInsure_person_count_From.Padding = new System.Windows.Forms.Padding(5);
-            this.tbInsure_person_count_From.ShowText = false;
-            this.tbInsure_person_count_From.Size = new System.Drawing.Size(119, 29);
-            this.tbInsure_person_count_From.TabIndex = 219;
-            this.tbInsure_person_count_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbInsure_person_count_From.Watermark = "";
-            // 
             // tbStaff_size_To
             // 
             this.tbStaff_size_To.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
@@ -808,36 +854,6 @@
             this.cbCompany_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbCompany_type.Watermark = "";
             // 
-            // cbCompany_status
-            // 
-            this.cbCompany_status.DataSource = null;
-            this.cbCompany_status.FillColor = System.Drawing.Color.White;
-            this.cbCompany_status.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbCompany_status.Location = new System.Drawing.Point(1371, 133);
-            this.cbCompany_status.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbCompany_status.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbCompany_status.Name = "cbCompany_status";
-            this.cbCompany_status.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbCompany_status.Size = new System.Drawing.Size(160, 29);
-            this.cbCompany_status.TabIndex = 153;
-            this.cbCompany_status.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbCompany_status.Watermark = "";
-            // 
-            // cbIs_top_company
-            // 
-            this.cbIs_top_company.DataSource = null;
-            this.cbIs_top_company.FillColor = System.Drawing.Color.White;
-            this.cbIs_top_company.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbIs_top_company.Location = new System.Drawing.Point(1371, 88);
-            this.cbIs_top_company.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbIs_top_company.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbIs_top_company.Name = "cbIs_top_company";
-            this.cbIs_top_company.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbIs_top_company.Size = new System.Drawing.Size(160, 29);
-            this.cbIs_top_company.TabIndex = 153;
-            this.cbIs_top_company.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbIs_top_company.Watermark = "";
-            // 
             // cbVillage
             // 
             this.cbVillage.DataSource = null;
@@ -863,22 +879,6 @@
             this.uiLabel2.TabIndex = 145;
             this.uiLabel2.Text = "企业名称";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tbCompany_phone
-            // 
-            this.tbCompany_phone.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbCompany_phone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCompany_phone.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbCompany_phone.Location = new System.Drawing.Point(194, 189);
-            this.tbCompany_phone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbCompany_phone.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbCompany_phone.Name = "tbCompany_phone";
-            this.tbCompany_phone.Padding = new System.Windows.Forms.Padding(5);
-            this.tbCompany_phone.ShowText = false;
-            this.tbCompany_phone.Size = new System.Drawing.Size(165, 29);
-            this.tbCompany_phone.TabIndex = 131;
-            this.tbCompany_phone.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbCompany_phone.Watermark = "";
             // 
             // tbLegal_name
             // 
@@ -955,9 +955,9 @@
             this.uiLabel7.Location = new System.Drawing.Point(1173, 175);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(82, 41);
+            this.uiLabel7.Size = new System.Drawing.Size(168, 41);
             this.uiLabel7.TabIndex = 113;
-            this.uiLabel7.Text = "产值";
+            this.uiLabel7.Text = "产值(万元)";
             this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label15
