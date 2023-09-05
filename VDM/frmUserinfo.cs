@@ -18,6 +18,8 @@ namespace com.vdm.form
     {
         private int user_id = 0;
         private UserBLL userBLL = null;
+        private RoleBLL roleBLL = null;
+        private OrgBLL orgBLL = null;
         public frmUserinfo()
         {
             InitializeComponent();
@@ -34,12 +36,14 @@ namespace com.vdm.form
             string password = this.tbPassword.Text;
             string confirm_password = this.tbConfirmPassword.Text;
             string remark = this.tbRemark.Text.Trim();
-            int town_id = int.Parse(this.cbTown.SelectedValue.ToString());
-            int village_id = 0;
-            if(this.cbVillage.SelectedValue.ToString() != ""){
-                village_id = int.Parse(this.cbVillage.SelectedValue.ToString());
+            string town  =this.cbTown.SelectedValue.ToString();
+            string village = this.cbVillage.SelectedValue.ToString();
+            int character_id = 0;
+            if(this.cbRoel.SelectedValue.ToString() != "")
+            {
+                character_id = int.Parse(this.cbRoel.SelectedValue.ToString());
             }
-            if(password.Equals(confirm_password) == false)
+            if (password.Equals(confirm_password) == false)
             {
                 MessageBox.Show("输入密码和确认密码不一致，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -47,10 +51,11 @@ namespace com.vdm.form
             User user = new User();
             user.Username = username;
             user.Password = password;
-            user.Town_id = town_id;
-            user.Village_id = village_id;
+            user.Town = town;
+            user.Village = village;
+            user.Character_id = character_id;
             user.Remark = remark;
-            if(village_id == 0)
+            if(village == "")
             {
                 user.Level = "乡镇级";
             }
@@ -77,22 +82,36 @@ namespace com.vdm.form
         private void frmUserinfo_Load(object sender, EventArgs e)
         {
             //初始化所在乡镇所在村
-            OrgBLL orgBLL = new OrgBLL();
+            orgBLL = new OrgBLL();
             List<KeyValue> list_town = orgBLL.getOrgByType("乡镇");
+            list_town.Add(new KeyValue("", "请选择"));
             if (list_town != null)
             {
                 this.cbTown.DataSource = list_town;
                 this.cbTown.DisplayMember = "value";
                 this.cbTown.ValueMember = "key";
             }
-            int select_village = int.Parse(this.cbTown.SelectedValue.ToString());
-            List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
-            if (list_village != null)
-            {
-                this.cbVillage.DataSource = list_village;
-                this.cbVillage.DisplayMember = "value";
-                this.cbVillage.ValueMember = "key";
+            cbTown.SelectedValue = "";
+
+            List<KeyValue> list_village = new List<KeyValue>();
+            list_village.Add(new KeyValue("", "请选择"));
+            this.cbVillage.DataSource = list_village;
+            this.cbVillage.DisplayMember = "value";
+
+            roleBLL = new RoleBLL();
+            DataTable dt = this.roleBLL.getAllRole();
+
+            if (dt != null && dt.Rows.Count > 0) {
+                foreach(DataRow row in dt.Rows)
+                {
+                    this.cbRoel.Items.Add(new KeyValue(row["role_id"].ToString(), row["role_name"].ToString()));
+                }
+                this.cbRoel.DisplayMember = "value";
+                this.cbRoel.ValueMember = "key";
             }
+
+
+
             this.tbUsername.Focus();
         }
 
@@ -100,19 +119,32 @@ namespace com.vdm.form
         {
             if (this.cbTown.SelectedValue != null)
             {
-                OrgBLL orgBLL = new OrgBLL();
-                int select_village = 0;
+                orgBLL = new OrgBLL();
                 if (this.cbTown.SelectedItem != null)
                 {
                     KeyValue selectValue = (KeyValue)this.cbTown.SelectedItem;
-                    select_village = int.Parse(selectValue.Key);
-                }
-                List<KeyValue> list_village = orgBLL.getOrgByTown(select_village);
-                if (list_village != null)
-                {
-                    this.cbVillage.DataSource = list_village;
-                    this.cbVillage.DisplayMember = "value";
-                    this.cbVillage.ValueMember = "key";
+                    if (selectValue.Key != "")
+                    {
+                        string org_code = selectValue.Key;
+                        int pre_org_id = this.orgBLL.getOrgIdByOrgCode(org_code);
+                        List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
+                        if (list_village != null)
+                        {
+                            list_village.Add(new KeyValue("", "请选择"));
+                            this.cbVillage.DataSource = list_village;
+                            this.cbVillage.DisplayMember = "value";
+                            this.cbVillage.ValueMember = "key";
+                            this.cbVillage.SelectedValue = "";
+                        }
+                    }
+                    else
+                    {
+                        List<KeyValue> list_village = new List<KeyValue>();
+                        list_village.Add(new KeyValue("", "请选择"));
+                        this.cbVillage.DataSource = list_village;
+                        this.cbVillage.DisplayMember = "value";
+                        this.cbVillage.ValueMember = "key";
+                    }
                 }
             }
         }

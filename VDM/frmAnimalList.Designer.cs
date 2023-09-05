@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiLabel24 = new Sunny.UI.UILabel();
             this.uiLabel23 = new Sunny.UI.UILabel();
             this.uiLabel25 = new Sunny.UI.UILabel();
@@ -378,48 +378,48 @@
             // 
             this.dgAnimalList.AllowUserToAddRows = false;
             this.dgAnimalList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgAnimalList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgAnimalList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgAnimalList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgAnimalList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgAnimalList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgAnimalList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgAnimalList.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgAnimalList.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgAnimalList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgAnimalList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgAnimalList.EnableHeadersVisualStyles = false;
             this.dgAnimalList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgAnimalList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgAnimalList.Location = new System.Drawing.Point(4, 32);
             this.dgAnimalList.Name = "dgAnimalList";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgAnimalList.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgAnimalList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgAnimalList.RowHeadersVisible = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgAnimalList.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgAnimalList.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgAnimalList.RowTemplate.Height = 23;
             this.dgAnimalList.ScrollBarHandleWidth = 40;
             this.dgAnimalList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -658,6 +658,7 @@
             this.tbMidden_area_To.Size = new System.Drawing.Size(62, 29);
             this.tbMidden_area_To.TabIndex = 131;
             this.tbMidden_area_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbMidden_area_To.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbMidden_area_To.Watermark = "";
             // 
             // tbPen_area_To
@@ -674,6 +675,7 @@
             this.tbPen_area_To.Size = new System.Drawing.Size(62, 29);
             this.tbPen_area_To.TabIndex = 131;
             this.tbPen_area_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPen_area_To.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbPen_area_To.Watermark = "";
             // 
             // tbCueernt_inventory_To
@@ -690,6 +692,7 @@
             this.tbCueernt_inventory_To.Size = new System.Drawing.Size(62, 29);
             this.tbCueernt_inventory_To.TabIndex = 131;
             this.tbCueernt_inventory_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbCueernt_inventory_To.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbCueernt_inventory_To.Watermark = "";
             // 
             // tbTotal_area_To
@@ -706,6 +709,7 @@
             this.tbTotal_area_To.Size = new System.Drawing.Size(62, 29);
             this.tbTotal_area_To.TabIndex = 131;
             this.tbTotal_area_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbTotal_area_To.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbTotal_area_To.Watermark = "";
             // 
             // tbPullttion_area_To
@@ -722,6 +726,7 @@
             this.tbPullttion_area_To.Size = new System.Drawing.Size(62, 29);
             this.tbPullttion_area_To.TabIndex = 131;
             this.tbPullttion_area_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPullttion_area_To.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbPullttion_area_To.Watermark = "";
             // 
             // tbOutput_To
@@ -738,6 +743,7 @@
             this.tbOutput_To.Size = new System.Drawing.Size(62, 29);
             this.tbOutput_To.TabIndex = 131;
             this.tbOutput_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbOutput_To.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbOutput_To.Watermark = "";
             // 
             // tbMidden_area_From
@@ -754,6 +760,7 @@
             this.tbMidden_area_From.Size = new System.Drawing.Size(62, 29);
             this.tbMidden_area_From.TabIndex = 131;
             this.tbMidden_area_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbMidden_area_From.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbMidden_area_From.Watermark = "";
             // 
             // tbPen_area_From
@@ -770,6 +777,7 @@
             this.tbPen_area_From.Size = new System.Drawing.Size(62, 29);
             this.tbPen_area_From.TabIndex = 131;
             this.tbPen_area_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPen_area_From.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbPen_area_From.Watermark = "";
             // 
             // tbCueernt_inventory_From
@@ -786,6 +794,7 @@
             this.tbCueernt_inventory_From.Size = new System.Drawing.Size(62, 29);
             this.tbCueernt_inventory_From.TabIndex = 131;
             this.tbCueernt_inventory_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbCueernt_inventory_From.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbCueernt_inventory_From.Watermark = "";
             // 
             // tbTotal_area_From
@@ -802,6 +811,7 @@
             this.tbTotal_area_From.Size = new System.Drawing.Size(62, 29);
             this.tbTotal_area_From.TabIndex = 131;
             this.tbTotal_area_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbTotal_area_From.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbTotal_area_From.Watermark = "";
             // 
             // tbPullttion_area_From
@@ -818,6 +828,7 @@
             this.tbPullttion_area_From.Size = new System.Drawing.Size(62, 29);
             this.tbPullttion_area_From.TabIndex = 131;
             this.tbPullttion_area_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPullttion_area_From.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbPullttion_area_From.Watermark = "";
             // 
             // tbOutput_From
@@ -834,6 +845,7 @@
             this.tbOutput_From.Size = new System.Drawing.Size(62, 29);
             this.tbOutput_From.TabIndex = 131;
             this.tbOutput_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbOutput_From.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbOutput_From.Watermark = "";
             // 
             // uiLabel6

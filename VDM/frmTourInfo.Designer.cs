@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbRemark = new Sunny.UI.UITextBox();
-            this.uiLabel20 = new Sunny.UI.UILabel();
             this.tbYear_trade_income = new Sunny.UI.UITextBox();
             this.tbYear_person_count = new Sunny.UI.UITextBox();
             this.uiLabel6 = new Sunny.UI.UILabel();
@@ -55,6 +53,8 @@
             this.label2 = new Sunny.UI.UILabel();
             this.label10 = new Sunny.UI.UILabel();
             this.label8 = new Sunny.UI.UILabel();
+            this.tbRemark = new Sunny.UI.UITextBox();
+            this.uiLabel20 = new Sunny.UI.UILabel();
             this.pnlBtm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -110,37 +110,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "旅游信息";
             // 
-            // tbRemark
-            // 
-            this.tbRemark.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbRemark.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbRemark.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbRemark.Location = new System.Drawing.Point(242, 333);
-            this.tbRemark.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbRemark.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbRemark.Multiline = true;
-            this.tbRemark.Name = "tbRemark";
-            this.tbRemark.Padding = new System.Windows.Forms.Padding(5);
-            this.tbRemark.ShowScrollBar = true;
-            this.tbRemark.ShowText = false;
-            this.tbRemark.Size = new System.Drawing.Size(1253, 173);
-            this.tbRemark.Style = Sunny.UI.UIStyle.Custom;
-            this.tbRemark.TabIndex = 20;
-            this.tbRemark.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbRemark.Watermark = "";
-            // 
-            // uiLabel20
-            // 
-            this.uiLabel20.AutoSize = true;
-            this.uiLabel20.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel20.Location = new System.Drawing.Point(94, 333);
-            this.uiLabel20.Name = "uiLabel20";
-            this.uiLabel20.Size = new System.Drawing.Size(62, 31);
-            this.uiLabel20.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel20.TabIndex = 13;
-            this.uiLabel20.Text = "备注";
-            this.uiLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // tbYear_trade_income
             // 
             this.tbYear_trade_income.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
@@ -155,6 +124,7 @@
             this.tbYear_trade_income.Size = new System.Drawing.Size(165, 29);
             this.tbYear_trade_income.TabIndex = 187;
             this.tbYear_trade_income.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbYear_trade_income.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbYear_trade_income.Watermark = "";
             // 
             // tbYear_person_count
@@ -171,6 +141,7 @@
             this.tbYear_person_count.Size = new System.Drawing.Size(165, 29);
             this.tbYear_person_count.TabIndex = 190;
             this.tbYear_person_count.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbYear_person_count.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbYear_person_count.Watermark = "";
             // 
             // uiLabel6
@@ -467,6 +438,37 @@
             this.label8.TabIndex = 175;
             this.label8.Text = "年经营收入(万元)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tbRemark
+            // 
+            this.tbRemark.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbRemark.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbRemark.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbRemark.Location = new System.Drawing.Point(242, 333);
+            this.tbRemark.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbRemark.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbRemark.Multiline = true;
+            this.tbRemark.Name = "tbRemark";
+            this.tbRemark.Padding = new System.Windows.Forms.Padding(5);
+            this.tbRemark.ShowScrollBar = true;
+            this.tbRemark.ShowText = false;
+            this.tbRemark.Size = new System.Drawing.Size(1253, 173);
+            this.tbRemark.Style = Sunny.UI.UIStyle.Custom;
+            this.tbRemark.TabIndex = 20;
+            this.tbRemark.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbRemark.Watermark = "";
+            // 
+            // uiLabel20
+            // 
+            this.uiLabel20.AutoSize = true;
+            this.uiLabel20.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel20.Location = new System.Drawing.Point(94, 333);
+            this.uiLabel20.Name = "uiLabel20";
+            this.uiLabel20.Size = new System.Drawing.Size(62, 31);
+            this.uiLabel20.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel20.TabIndex = 13;
+            this.uiLabel20.Text = "备注";
+            this.uiLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmTourInfo
             // 
