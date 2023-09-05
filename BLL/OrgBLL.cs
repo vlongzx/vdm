@@ -72,7 +72,7 @@ namespace com.vdm.bll
                 KeyValue kv = null;
                 foreach (DataRow row in dt.Rows)
                 {
-                    kv = new KeyValue(row["org_id"].ToString(), row["org_name"].ToString());
+                    kv = new KeyValue(row["org_code"].ToString(), row["org_name"].ToString());
                     list_org.Add(kv);
                 }
             }

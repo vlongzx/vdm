@@ -27,6 +27,7 @@ namespace com.vdm.form
 
         public frmUserinfo(int user_id)
         {
+            InitializeComponent();
             this.user_id = user_id;
         }
 
@@ -64,7 +65,17 @@ namespace com.vdm.form
                 user.Level = "村级";
             }
             this.userBLL = new UserBLL();
-            Result result = this.userBLL.addUser(user);
+            Result result = null;
+
+            if(user_id == 0)
+            {
+                result = this.userBLL.addUser(user);
+            }
+            else
+            {
+                user.User_id = user_id;
+                result = this.userBLL.editUser(user);
+            }
 
             if (result.Count == 1)
             {
@@ -81,6 +92,18 @@ namespace com.vdm.form
 
         private void frmUserinfo_Load(object sender, EventArgs e)
         {
+            if(user_id != 0)
+            {
+                this.userBLL = new UserBLL();
+                User user = this.userBLL.getUser(user_id);
+                this.tbUsername.Text = user.Username;
+                this.tbRemark.Text = user.Remark;
+                this.cbRoel.SelectedValue = user.Character_id;
+                this.cbTown.SelectedValue = user.Town;
+                this.cbVillage.SelectedValue = user.Village;
+                this.tbPassword.Enabled = false;
+                this.tbConfirmPassword.Enabled = false;
+            }
             //初始化所在乡镇所在村
             orgBLL = new OrgBLL();
             List<KeyValue> list_town = orgBLL.getOrgByType("乡镇");
@@ -97,22 +120,16 @@ namespace com.vdm.form
             list_village.Add(new KeyValue("", "请选择"));
             this.cbVillage.DataSource = list_village;
             this.cbVillage.DisplayMember = "value";
+            this.cbVillage.ValueMember = "key";
 
             roleBLL = new RoleBLL();
             DataTable dt = this.roleBLL.getAllRole();
 
             if (dt != null && dt.Rows.Count > 0) {
-                foreach(DataRow row in dt.Rows)
-                {
-                    this.cbRoel.Items.Add(new KeyValue(row["role_id"].ToString(), row["role_name"].ToString()));
-                }
-                this.cbRoel.DisplayMember = "value";
-                this.cbRoel.ValueMember = "key";
+                this.cbRoel.DataSource = dt;
+                this.cbRoel.DisplayMember = "role_name";
+                this.cbRoel.ValueMember = "role_id";
             }
-
-
-
-            this.tbUsername.Focus();
         }
 
         private void cbTown_SelectedValueChanged(object sender, EventArgs e)

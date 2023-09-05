@@ -44,6 +44,25 @@ namespace com.vdm.bll
             return -1;
         }
 
+
+        public User getUser(int user_id)
+        {
+            DataTable dt = this.userDAL.getUser(user_id);
+            User user = null;
+            if(dt != null && dt.Rows.Count > 0)
+            {
+                user = new User();
+                user.User_id = user_id;
+                user.Username = dt.Rows[0]["username"].ToString();
+                user.Village = dt.Rows[0]["village"].ToString();
+                user.Town = dt.Rows[0]["town"].ToString();
+                user.Level = dt.Rows[0]["level"].ToString();
+                user.Remark = dt.Rows[0]["remark"].ToString();
+                user.Character_id =int.Parse(dt.Rows[0]["character_id"].ToString());
+            }
+            return user;
+        }
+
         /// <summary>
         ///  获得所有的用户
         /// </summary>
@@ -62,6 +81,11 @@ namespace com.vdm.bll
         public Result addUser(User user)
         {
             return this.userDAL.CreateUser(user);
+        }
+
+        public Result editUser(User user)
+        {
+            return this.userDAL.UpdateUser(user);
         }
 
         public Result delUser(int user_id)

@@ -85,6 +85,7 @@
             // cbVillage
             // 
             this.cbVillage.DataSource = null;
+            this.cbVillage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbVillage.Location = new System.Drawing.Point(167, 236);
@@ -100,6 +101,7 @@
             // cbTown
             // 
             this.cbTown.DataSource = null;
+            this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTown.Location = new System.Drawing.Point(167, 191);
@@ -261,6 +263,7 @@
             // cbRoel
             // 
             this.cbRoel.DataSource = null;
+            this.cbRoel.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbRoel.FillColor = System.Drawing.Color.White;
             this.cbRoel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbRoel.Location = new System.Drawing.Point(167, 278);
