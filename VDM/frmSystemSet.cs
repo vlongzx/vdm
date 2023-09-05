@@ -231,7 +231,12 @@ namespace com.vdm.form
             frmUserinfo userInfo = new frmUserinfo(user_id);
             userInfo.Text = "编辑用户信息";
             userInfo.ShowDialog();
-        }
+            if (userInfo.DialogResult == DialogResult.OK)
+            {
+                InitUserList();
+            }
+        
+    }
 
         private void btDelete_Click(object sender, EventArgs e)
         {

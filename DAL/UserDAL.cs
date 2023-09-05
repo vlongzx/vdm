@@ -33,6 +33,14 @@ namespace com.vdm.dal
             return dt;
         }
 
+        public DataTable getUser(int user_id)
+        {
+            string sql = "select * from t_user where user_id = " + user_id;
+            DataTable dt = this.sdh.ExecuteDataTable(sql);
+
+            return dt;
+        }
+
         /// <summary>
         ///  获得所有用户
         /// </summary>
@@ -91,6 +99,46 @@ namespace com.vdm.dal
 
             return this.SqlDbHelper.ExecuteNonQuery(sql, CommandType.Text, parameters);
         }
+
+        public Result UpdateUser(User user)
+        {
+            //构建参数值
+            List<string> listSetValue = new List<string>();
+            SQLiteParameter parameter = null;
+            DataTable tblSchema = this.getTableSchema("t_user");
+            if (tblSchema != null)
+            {
+                foreach (DataRow row in tblSchema.Rows)
+                {
+                    //过滤掉主键
+                    if (row["ColumnName"].ToString() == "user_id")
+                    {
+                        continue;
+                    }
+                    if (row["ColumnName"].ToString() == "password")
+                    {
+                        continue;
+                    }
+                    listSetValue.Add(row["ColumnName"].ToString() + "=@" + row["ColumnName"].ToString());
+                }
+            }
+            string sql = "update t_user set " + Utils.JoinStingListToString(listSetValue) + " where user_id = " + user.User_id;
+            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
+            if (tblSchema != null)
+            {
+                foreach (DataRow row in tblSchema.Rows)
+                {
+                    string ColumnName = row["ColumnName"].ToString();
+                    string PropertyName = Utils.Capitalize(row["ColumnName"].ToString());
+                    parameter = new SQLiteParameter("@" + ColumnName, user.GetType().GetProperty(PropertyName).GetValue(user, null));
+                    parameters.Add(parameter);
+                }
+
+            }
+            return this.SqlDbHelper.ExecuteNonQuery(sql, CommandType.Text, parameters);
+        }
+
+
         /// <summary>
         ///  根据用户ID删除用户
         /// </summary>

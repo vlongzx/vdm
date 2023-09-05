@@ -8,7 +8,7 @@ namespace com.vdm.model
 {
     public class User
     {
-        private string user_id;
+        private int user_id;
         private string username;
         private string password;
         private string level;
@@ -20,7 +20,7 @@ namespace com.vdm.model
         /// <summary>
         ///  用户ID
         /// </summary>
-        public string User_id
+        public int User_id
         {
             get
             {
