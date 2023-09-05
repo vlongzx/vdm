@@ -116,10 +116,12 @@
             // tbArea
             // 
             this.tbArea.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbArea.CanEmpty = true;
             this.tbArea.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbArea.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbArea.Location = new System.Drawing.Point(953, 94);
             this.tbArea.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbArea.Minimum = 0D;
             this.tbArea.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbArea.Name = "tbArea";
             this.tbArea.Padding = new System.Windows.Forms.Padding(5);
@@ -127,6 +129,7 @@
             this.tbArea.Size = new System.Drawing.Size(157, 29);
             this.tbArea.TabIndex = 279;
             this.tbArea.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbArea.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbArea.Watermark = "";
             // 
             // tbIdcard

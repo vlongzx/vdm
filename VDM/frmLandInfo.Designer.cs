@@ -108,10 +108,12 @@
             // tbReal_area
             // 
             this.tbReal_area.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbReal_area.CanEmpty = true;
             this.tbReal_area.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbReal_area.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbReal_area.Location = new System.Drawing.Point(215, 213);
             this.tbReal_area.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbReal_area.Minimum = 0D;
             this.tbReal_area.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbReal_area.Name = "tbReal_area";
             this.tbReal_area.Padding = new System.Windows.Forms.Padding(5);
@@ -119,15 +121,18 @@
             this.tbReal_area.Size = new System.Drawing.Size(158, 29);
             this.tbReal_area.TabIndex = 282;
             this.tbReal_area.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbReal_area.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbReal_area.Watermark = "";
             // 
             // tbMove_price
             // 
             this.tbMove_price.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbMove_price.CanEmpty = true;
             this.tbMove_price.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbMove_price.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbMove_price.Location = new System.Drawing.Point(1299, 215);
             this.tbMove_price.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbMove_price.Minimum = 0D;
             this.tbMove_price.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbMove_price.Name = "tbMove_price";
             this.tbMove_price.Padding = new System.Windows.Forms.Padding(5);
@@ -135,15 +140,18 @@
             this.tbMove_price.Size = new System.Drawing.Size(140, 29);
             this.tbMove_price.TabIndex = 294;
             this.tbMove_price.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbMove_price.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbMove_price.Watermark = "";
             // 
             // tbMove_area
             // 
             this.tbMove_area.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbMove_area.CanEmpty = true;
             this.tbMove_area.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbMove_area.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbMove_area.Location = new System.Drawing.Point(950, 215);
             this.tbMove_area.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbMove_area.Minimum = 0D;
             this.tbMove_area.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbMove_area.Name = "tbMove_area";
             this.tbMove_area.Padding = new System.Windows.Forms.Padding(5);
@@ -151,6 +159,7 @@
             this.tbMove_area.Size = new System.Drawing.Size(139, 29);
             this.tbMove_area.TabIndex = 291;
             this.tbMove_area.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbMove_area.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbMove_area.Watermark = "";
             // 
             // uiLabel24
