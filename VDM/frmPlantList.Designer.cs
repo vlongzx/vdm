@@ -110,7 +110,7 @@
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel5.Location = new System.Drawing.Point(266, 133);
             this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel5.Size = new System.Drawing.Size(32, 41);
             this.uiLabel5.TabIndex = 174;
             this.uiLabel5.Text = "-";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,7 +129,6 @@
             this.tbYear_yield_to.Size = new System.Drawing.Size(62, 29);
             this.tbYear_yield_to.TabIndex = 131;
             this.tbYear_yield_to.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbYear_yield_to.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbYear_yield_to.Watermark = "";
             // 
             // tbYear_yield_from
@@ -146,7 +145,6 @@
             this.tbYear_yield_from.Size = new System.Drawing.Size(62, 29);
             this.tbYear_yield_from.TabIndex = 131;
             this.tbYear_yield_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbYear_yield_from.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbYear_yield_from.Watermark = "";
             // 
             // uiLabel6
@@ -155,7 +153,7 @@
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel6.Location = new System.Drawing.Point(1137, 188);
             this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(86, 31);
+            this.uiLabel6.Size = new System.Drawing.Size(114, 41);
             this.uiLabel6.TabIndex = 173;
             this.uiLabel6.Text = "所属村";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,7 +196,7 @@
             this.uiLabel7.Location = new System.Drawing.Point(779, 190);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(86, 31);
+            this.uiLabel7.Size = new System.Drawing.Size(114, 41);
             this.uiLabel7.TabIndex = 167;
             this.uiLabel7.Text = "所属镇";
             this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,7 +208,7 @@
             this.uiLabel23.Location = new System.Drawing.Point(36, 88);
             this.uiLabel23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel23.Name = "uiLabel23";
-            this.uiLabel23.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel23.Size = new System.Drawing.Size(146, 41);
             this.uiLabel23.TabIndex = 163;
             this.uiLabel23.Text = "详细地址";
             this.uiLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -221,7 +219,7 @@
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel3.Location = new System.Drawing.Point(779, 88);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(150, 31);
+            this.uiLabel3.Size = new System.Drawing.Size(200, 41);
             this.uiLabel3.TabIndex = 147;
             this.uiLabel3.Text = "种植面积(亩)";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,7 +309,7 @@
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(400, 88);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(158, 31);
+            this.uiLabel1.Size = new System.Drawing.Size(210, 41);
             this.uiLabel1.TabIndex = 146;
             this.uiLabel1.Text = "是否符合规划";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -322,7 +320,7 @@
             this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel9.Location = new System.Drawing.Point(36, 188);
             this.uiLabel9.Name = "uiLabel9";
-            this.uiLabel9.Size = new System.Drawing.Size(182, 31);
+            this.uiLabel9.Size = new System.Drawing.Size(242, 41);
             this.uiLabel9.TabIndex = 145;
             this.uiLabel9.Text = "主要管理和技术";
             this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,7 +331,7 @@
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(36, 42);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel2.Size = new System.Drawing.Size(146, 41);
             this.uiLabel2.TabIndex = 145;
             this.uiLabel2.Text = "种植类别";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -474,7 +472,6 @@
             this.tbOutput.Size = new System.Drawing.Size(165, 29);
             this.tbOutput.TabIndex = 130;
             this.tbOutput.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbOutput.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbOutput.Watermark = "";
             // 
             // tbPlant_area
@@ -491,7 +488,6 @@
             this.tbPlant_area.Size = new System.Drawing.Size(165, 29);
             this.tbPlant_area.TabIndex = 130;
             this.tbPlant_area.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbPlant_area.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbPlant_area.Watermark = "";
             // 
             // tbIdcard
@@ -533,7 +529,7 @@
             this.uiLabel14.Location = new System.Drawing.Point(779, 41);
             this.uiLabel14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel14.Name = "uiLabel14";
-            this.uiLabel14.Size = new System.Drawing.Size(182, 31);
+            this.uiLabel14.Size = new System.Drawing.Size(242, 41);
             this.uiLabel14.TabIndex = 116;
             this.uiLabel14.Text = "联系人身份证号";
             this.uiLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -545,7 +541,7 @@
             this.label9.Location = new System.Drawing.Point(1137, 41);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 31);
+            this.label9.Size = new System.Drawing.Size(146, 41);
             this.label9.TabIndex = 116;
             this.label9.Text = "联系电话";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -557,7 +553,7 @@
             this.label3.Location = new System.Drawing.Point(1137, 88);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 31);
+            this.label3.Size = new System.Drawing.Size(146, 41);
             this.label3.TabIndex = 115;
             this.label3.Text = "种植品种";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -569,7 +565,7 @@
             this.label2.Location = new System.Drawing.Point(400, 42);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 31);
+            this.label2.Size = new System.Drawing.Size(114, 41);
             this.label2.TabIndex = 114;
             this.label2.Text = "联系人";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -581,7 +577,7 @@
             this.label10.Location = new System.Drawing.Point(36, 134);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 31);
+            this.label10.Size = new System.Drawing.Size(168, 41);
             this.label10.TabIndex = 111;
             this.label10.Text = "年产量(斤)";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -593,7 +589,7 @@
             this.uiLabel8.Location = new System.Drawing.Point(1137, 135);
             this.uiLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel8.Name = "uiLabel8";
-            this.uiLabel8.Size = new System.Drawing.Size(134, 31);
+            this.uiLabel8.Size = new System.Drawing.Size(178, 41);
             this.uiLabel8.TabIndex = 101;
             this.uiLabel8.Text = "主要虫病害";
             this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -605,7 +601,7 @@
             this.uiLabel4.Location = new System.Drawing.Point(779, 133);
             this.uiLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(126, 31);
+            this.uiLabel4.Size = new System.Drawing.Size(168, 41);
             this.uiLabel4.TabIndex = 101;
             this.uiLabel4.Text = "产值(万元)";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -617,7 +613,7 @@
             this.uiLabel10.Location = new System.Drawing.Point(400, 188);
             this.uiLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel10.Name = "uiLabel10";
-            this.uiLabel10.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel10.Size = new System.Drawing.Size(146, 41);
             this.uiLabel10.TabIndex = 101;
             this.uiLabel10.Text = "发展意愿";
             this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -629,7 +625,7 @@
             this.label8.Location = new System.Drawing.Point(400, 134);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 31);
+            this.label8.Size = new System.Drawing.Size(146, 41);
             this.label8.TabIndex = 101;
             this.label8.Text = "销售途径";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

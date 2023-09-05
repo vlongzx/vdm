@@ -478,10 +478,13 @@
             // tbPlant_yield
             // 
             this.tbPlant_yield.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbPlant_yield.CanEmpty = true;
             this.tbPlant_yield.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPlant_yield.DecimalPlaces = 1;
             this.tbPlant_yield.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbPlant_yield.Location = new System.Drawing.Point(250, 223);
             this.tbPlant_yield.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPlant_yield.Minimum = 0D;
             this.tbPlant_yield.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbPlant_yield.Name = "tbPlant_yield";
             this.tbPlant_yield.Padding = new System.Windows.Forms.Padding(5);
@@ -489,6 +492,7 @@
             this.tbPlant_yield.Size = new System.Drawing.Size(165, 29);
             this.tbPlant_yield.TabIndex = 175;
             this.tbPlant_yield.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPlant_yield.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbPlant_yield.Watermark = "";
             // 
             // uiLabel16
@@ -505,10 +509,12 @@
             // tbAnimal_count
             // 
             this.tbAnimal_count.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbAnimal_count.CanEmpty = true;
             this.tbAnimal_count.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAnimal_count.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbAnimal_count.Location = new System.Drawing.Point(1024, 282);
             this.tbAnimal_count.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbAnimal_count.Minimum = 0D;
             this.tbAnimal_count.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbAnimal_count.Name = "tbAnimal_count";
             this.tbAnimal_count.Padding = new System.Windows.Forms.Padding(5);
@@ -516,15 +522,18 @@
             this.tbAnimal_count.Size = new System.Drawing.Size(148, 29);
             this.tbAnimal_count.TabIndex = 186;
             this.tbAnimal_count.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbAnimal_count.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbAnimal_count.Watermark = "";
             // 
             // tbAnimal_area
             // 
             this.tbAnimal_area.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbAnimal_area.CanEmpty = true;
             this.tbAnimal_area.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAnimal_area.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbAnimal_area.Location = new System.Drawing.Point(641, 282);
             this.tbAnimal_area.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbAnimal_area.Minimum = 0D;
             this.tbAnimal_area.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbAnimal_area.Name = "tbAnimal_area";
             this.tbAnimal_area.Padding = new System.Windows.Forms.Padding(5);
@@ -532,6 +541,7 @@
             this.tbAnimal_area.Size = new System.Drawing.Size(158, 29);
             this.tbAnimal_area.TabIndex = 185;
             this.tbAnimal_area.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbAnimal_area.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbAnimal_area.Watermark = "";
             // 
             // uiLabel8
@@ -549,10 +559,12 @@
             // tbPlant_output
             // 
             this.tbPlant_output.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbPlant_output.CanEmpty = true;
             this.tbPlant_output.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPlant_output.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbPlant_output.Location = new System.Drawing.Point(641, 222);
             this.tbPlant_output.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPlant_output.Minimum = 0D;
             this.tbPlant_output.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbPlant_output.Name = "tbPlant_output";
             this.tbPlant_output.Padding = new System.Windows.Forms.Padding(5);
@@ -560,6 +572,7 @@
             this.tbPlant_output.Size = new System.Drawing.Size(158, 29);
             this.tbPlant_output.TabIndex = 175;
             this.tbPlant_output.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPlant_output.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbPlant_output.Watermark = "";
             // 
             // uiLabel11
@@ -601,10 +614,12 @@
             // tbAnimal_vaccinate_count
             // 
             this.tbAnimal_vaccinate_count.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbAnimal_vaccinate_count.CanEmpty = true;
             this.tbAnimal_vaccinate_count.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAnimal_vaccinate_count.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbAnimal_vaccinate_count.Location = new System.Drawing.Point(1453, 276);
             this.tbAnimal_vaccinate_count.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbAnimal_vaccinate_count.Minimum = 0D;
             this.tbAnimal_vaccinate_count.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbAnimal_vaccinate_count.Name = "tbAnimal_vaccinate_count";
             this.tbAnimal_vaccinate_count.Padding = new System.Windows.Forms.Padding(5);
@@ -612,15 +627,18 @@
             this.tbAnimal_vaccinate_count.Size = new System.Drawing.Size(140, 29);
             this.tbAnimal_vaccinate_count.TabIndex = 175;
             this.tbAnimal_vaccinate_count.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbAnimal_vaccinate_count.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbAnimal_vaccinate_count.Watermark = "";
             // 
             // tbAnimal_nvaccinate_count
             // 
             this.tbAnimal_nvaccinate_count.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbAnimal_nvaccinate_count.CanEmpty = true;
             this.tbAnimal_nvaccinate_count.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAnimal_nvaccinate_count.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbAnimal_nvaccinate_count.Location = new System.Drawing.Point(250, 368);
             this.tbAnimal_nvaccinate_count.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbAnimal_nvaccinate_count.Minimum = 0D;
             this.tbAnimal_nvaccinate_count.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbAnimal_nvaccinate_count.Name = "tbAnimal_nvaccinate_count";
             this.tbAnimal_nvaccinate_count.Padding = new System.Windows.Forms.Padding(5);
@@ -628,15 +646,18 @@
             this.tbAnimal_nvaccinate_count.Size = new System.Drawing.Size(165, 29);
             this.tbAnimal_nvaccinate_count.TabIndex = 175;
             this.tbAnimal_nvaccinate_count.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbAnimal_nvaccinate_count.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbAnimal_nvaccinate_count.Watermark = "";
             // 
             // tbInventory_count
             // 
             this.tbInventory_count.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbInventory_count.CanEmpty = true;
             this.tbInventory_count.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbInventory_count.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbInventory_count.Location = new System.Drawing.Point(641, 367);
             this.tbInventory_count.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbInventory_count.Minimum = 0D;
             this.tbInventory_count.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbInventory_count.Name = "tbInventory_count";
             this.tbInventory_count.Padding = new System.Windows.Forms.Padding(5);
@@ -644,6 +665,7 @@
             this.tbInventory_count.Size = new System.Drawing.Size(158, 29);
             this.tbInventory_count.TabIndex = 185;
             this.tbInventory_count.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbInventory_count.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbInventory_count.Watermark = "";
             // 
             // uiLabel14
@@ -673,10 +695,12 @@
             // tbOutbound_count
             // 
             this.tbOutbound_count.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbOutbound_count.CanEmpty = true;
             this.tbOutbound_count.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbOutbound_count.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbOutbound_count.Location = new System.Drawing.Point(1024, 366);
             this.tbOutbound_count.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbOutbound_count.Minimum = 0D;
             this.tbOutbound_count.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbOutbound_count.Name = "tbOutbound_count";
             this.tbOutbound_count.Padding = new System.Windows.Forms.Padding(5);
@@ -684,15 +708,18 @@
             this.tbOutbound_count.Size = new System.Drawing.Size(148, 29);
             this.tbOutbound_count.TabIndex = 174;
             this.tbOutbound_count.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbOutbound_count.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbOutbound_count.Watermark = "";
             // 
             // tbAnimal_yield
             // 
             this.tbAnimal_yield.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbAnimal_yield.CanEmpty = true;
             this.tbAnimal_yield.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAnimal_yield.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbAnimal_yield.Location = new System.Drawing.Point(1453, 366);
             this.tbAnimal_yield.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbAnimal_yield.Minimum = 0D;
             this.tbAnimal_yield.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbAnimal_yield.Name = "tbAnimal_yield";
             this.tbAnimal_yield.Padding = new System.Windows.Forms.Padding(5);
@@ -700,15 +727,18 @@
             this.tbAnimal_yield.Size = new System.Drawing.Size(140, 29);
             this.tbAnimal_yield.TabIndex = 175;
             this.tbAnimal_yield.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbAnimal_yield.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbAnimal_yield.Watermark = "";
             // 
             // tbAnimal_output
             // 
             this.tbAnimal_output.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbAnimal_output.CanEmpty = true;
             this.tbAnimal_output.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAnimal_output.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbAnimal_output.Location = new System.Drawing.Point(250, 442);
             this.tbAnimal_output.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbAnimal_output.Minimum = 0D;
             this.tbAnimal_output.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbAnimal_output.Name = "tbAnimal_output";
             this.tbAnimal_output.Padding = new System.Windows.Forms.Padding(5);
@@ -716,6 +746,7 @@
             this.tbAnimal_output.Size = new System.Drawing.Size(165, 29);
             this.tbAnimal_output.TabIndex = 175;
             this.tbAnimal_output.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbAnimal_output.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbAnimal_output.Watermark = "";
             // 
             // uiLabel18

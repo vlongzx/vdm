@@ -76,10 +76,13 @@
             // tbFactory
             // 
             this.tbFactory.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbFactory.CanEmpty = true;
             this.tbFactory.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbFactory.DecimalPlaces = 1;
             this.tbFactory.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbFactory.Location = new System.Drawing.Point(1313, 144);
             this.tbFactory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbFactory.Minimum = 0D;
             this.tbFactory.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbFactory.Name = "tbFactory";
             this.tbFactory.Padding = new System.Windows.Forms.Padding(5);
@@ -87,15 +90,18 @@
             this.tbFactory.Size = new System.Drawing.Size(165, 29);
             this.tbFactory.TabIndex = 200;
             this.tbFactory.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbFactory.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbFactory.Watermark = "";
             // 
             // tbMove_area
             // 
             this.tbMove_area.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbMove_area.CanEmpty = true;
             this.tbMove_area.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbMove_area.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbMove_area.Location = new System.Drawing.Point(1313, 97);
             this.tbMove_area.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbMove_area.Minimum = 0D;
             this.tbMove_area.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbMove_area.Name = "tbMove_area";
             this.tbMove_area.Padding = new System.Windows.Forms.Padding(5);
@@ -103,15 +109,18 @@
             this.tbMove_area.Size = new System.Drawing.Size(165, 29);
             this.tbMove_area.TabIndex = 199;
             this.tbMove_area.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbMove_area.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbMove_area.Watermark = "";
             // 
             // tbConfirm_area
             // 
             this.tbConfirm_area.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbConfirm_area.CanEmpty = true;
             this.tbConfirm_area.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbConfirm_area.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbConfirm_area.Location = new System.Drawing.Point(954, 97);
             this.tbConfirm_area.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbConfirm_area.Minimum = 0D;
             this.tbConfirm_area.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbConfirm_area.Name = "tbConfirm_area";
             this.tbConfirm_area.Padding = new System.Windows.Forms.Padding(5);
@@ -119,15 +128,18 @@
             this.tbConfirm_area.Size = new System.Drawing.Size(165, 29);
             this.tbConfirm_area.TabIndex = 198;
             this.tbConfirm_area.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbConfirm_area.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbConfirm_area.Watermark = "";
             // 
             // tbForeast_area
             // 
             this.tbForeast_area.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbForeast_area.CanEmpty = true;
             this.tbForeast_area.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbForeast_area.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbForeast_area.Location = new System.Drawing.Point(623, 99);
             this.tbForeast_area.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbForeast_area.Minimum = 0D;
             this.tbForeast_area.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbForeast_area.Name = "tbForeast_area";
             this.tbForeast_area.Padding = new System.Windows.Forms.Padding(5);
@@ -135,15 +147,19 @@
             this.tbForeast_area.Size = new System.Drawing.Size(142, 29);
             this.tbForeast_area.TabIndex = 197;
             this.tbForeast_area.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbForeast_area.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbForeast_area.Watermark = "";
             // 
             // tbOffice
             // 
             this.tbOffice.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbOffice.CanEmpty = true;
             this.tbOffice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbOffice.DecimalPlaces = 1;
             this.tbOffice.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbOffice.Location = new System.Drawing.Point(623, 183);
             this.tbOffice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbOffice.Minimum = 0D;
             this.tbOffice.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbOffice.Name = "tbOffice";
             this.tbOffice.Padding = new System.Windows.Forms.Padding(5);
@@ -151,6 +167,7 @@
             this.tbOffice.Size = new System.Drawing.Size(142, 29);
             this.tbOffice.TabIndex = 196;
             this.tbOffice.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbOffice.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbOffice.Watermark = "";
             // 
             // tbMoney
@@ -158,7 +175,6 @@
             this.tbMoney.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbMoney.CanEmpty = true;
             this.tbMoney.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbMoney.DoubleValue = 2D;
             this.tbMoney.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbMoney.Location = new System.Drawing.Point(219, 101);
             this.tbMoney.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -169,7 +185,6 @@
             this.tbMoney.ShowText = false;
             this.tbMoney.Size = new System.Drawing.Size(165, 29);
             this.tbMoney.TabIndex = 193;
-            this.tbMoney.Text = "2.00";
             this.tbMoney.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbMoney.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbMoney.Watermark = "";
@@ -177,10 +192,13 @@
             // tbShop
             // 
             this.tbShop.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbShop.CanEmpty = true;
             this.tbShop.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbShop.DecimalPlaces = 1;
             this.tbShop.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbShop.Location = new System.Drawing.Point(954, 144);
             this.tbShop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbShop.Minimum = 0D;
             this.tbShop.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbShop.Name = "tbShop";
             this.tbShop.Padding = new System.Windows.Forms.Padding(5);
@@ -188,15 +206,18 @@
             this.tbShop.Size = new System.Drawing.Size(165, 29);
             this.tbShop.TabIndex = 192;
             this.tbShop.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbShop.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbShop.Watermark = "";
             // 
             // tbWater_resource
             // 
             this.tbWater_resource.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbWater_resource.CanEmpty = true;
             this.tbWater_resource.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbWater_resource.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbWater_resource.Location = new System.Drawing.Point(623, 138);
             this.tbWater_resource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbWater_resource.Minimum = 0D;
             this.tbWater_resource.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbWater_resource.Name = "tbWater_resource";
             this.tbWater_resource.Padding = new System.Windows.Forms.Padding(5);
@@ -204,15 +225,19 @@
             this.tbWater_resource.Size = new System.Drawing.Size(142, 29);
             this.tbWater_resource.TabIndex = 189;
             this.tbWater_resource.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbWater_resource.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbWater_resource.Watermark = "";
             // 
             // tbMineral_resource
             // 
             this.tbMineral_resource.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbMineral_resource.CanEmpty = true;
             this.tbMineral_resource.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbMineral_resource.DecimalPlaces = 1;
             this.tbMineral_resource.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbMineral_resource.Location = new System.Drawing.Point(219, 142);
             this.tbMineral_resource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbMineral_resource.Minimum = 0D;
             this.tbMineral_resource.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbMineral_resource.Name = "tbMineral_resource";
             this.tbMineral_resource.Padding = new System.Windows.Forms.Padding(5);
@@ -220,15 +245,19 @@
             this.tbMineral_resource.Size = new System.Drawing.Size(165, 29);
             this.tbMineral_resource.TabIndex = 182;
             this.tbMineral_resource.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbMineral_resource.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbMineral_resource.Watermark = "";
             // 
             // tbSchool
             // 
             this.tbSchool.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbSchool.CanEmpty = true;
             this.tbSchool.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbSchool.DecimalPlaces = 1;
             this.tbSchool.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbSchool.Location = new System.Drawing.Point(219, 183);
             this.tbSchool.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbSchool.Minimum = 0D;
             this.tbSchool.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbSchool.Name = "tbSchool";
             this.tbSchool.Padding = new System.Windows.Forms.Padding(5);
@@ -236,6 +265,7 @@
             this.tbSchool.Size = new System.Drawing.Size(165, 29);
             this.tbSchool.TabIndex = 183;
             this.tbSchool.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbSchool.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbSchool.Watermark = "";
             // 
             // tbMechine
@@ -243,7 +273,7 @@
             this.tbMechine.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbMechine.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbMechine.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbMechine.Location = new System.Drawing.Point(954, 193);
+            this.tbMechine.Location = new System.Drawing.Point(1313, 195);
             this.tbMechine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbMechine.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbMechine.Name = "tbMechine";
@@ -383,7 +413,7 @@
             // 
             this.uiLabel4.AutoSize = true;
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel4.Location = new System.Drawing.Point(801, 182);
+            this.uiLabel4.Location = new System.Drawing.Point(1160, 184);
             this.uiLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(274, 41);
@@ -441,7 +471,7 @@
             // 
             this.uiLabel5.AutoSize = true;
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel5.Location = new System.Drawing.Point(1160, 183);
+            this.uiLabel5.Location = new System.Drawing.Point(801, 183);
             this.uiLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(232, 41);
@@ -452,10 +482,13 @@
             // tbRoad_length
             // 
             this.tbRoad_length.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbRoad_length.CanEmpty = true;
             this.tbRoad_length.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbRoad_length.DecimalPlaces = 1;
             this.tbRoad_length.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbRoad_length.Location = new System.Drawing.Point(1313, 194);
+            this.tbRoad_length.Location = new System.Drawing.Point(954, 194);
             this.tbRoad_length.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbRoad_length.Minimum = 0D;
             this.tbRoad_length.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbRoad_length.Name = "tbRoad_length";
             this.tbRoad_length.Padding = new System.Windows.Forms.Padding(5);
@@ -463,6 +496,7 @@
             this.tbRoad_length.Size = new System.Drawing.Size(165, 29);
             this.tbRoad_length.TabIndex = 185;
             this.tbRoad_length.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbRoad_length.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbRoad_length.Watermark = "";
             // 
             // frmVillageInfo
