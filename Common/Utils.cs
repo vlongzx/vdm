@@ -40,6 +40,25 @@ namespace com.vdm.common
         #endregion
 
         /// <summary>
+        ///  (?=.*[a-z])：至少包含一个小写字母
+        /// (?=.*[A-Z])：至少包含一个大写字母
+        /// (?=.*\d)：至少包含一个数字
+        /// (?=.*\d)：至少包含一个数字
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public static bool IsPasswordValid(string password)
+        {
+            // 密码复杂性校验的正则表达式
+            string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$";
+
+            // 使用正则表达式进行匹配
+            Match match = Regex.Match(password, pattern);
+
+            return match.Success;
+        }
+
+        /// <summary>
         /// 将字符串首字母转换为大写
         /// </summary>
         public static string Capitalize( string s)

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.cbRoel = new Sunny.UI.UIComboBox();
             this.cbVillage = new Sunny.UI.UIComboBox();
             this.cbTown = new Sunny.UI.UIComboBox();
             this.tbRemark = new Sunny.UI.UITextBox();
@@ -36,13 +37,12 @@
             this.tbPassword = new Sunny.UI.UITextBox();
             this.tbUsername = new Sunny.UI.UITextBox();
             this.uiLabel6 = new Sunny.UI.UILabel();
+            this.uiLabel7 = new Sunny.UI.UILabel();
             this.uiLabel5 = new Sunny.UI.UILabel();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiLabel7 = new Sunny.UI.UILabel();
-            this.cbRoel = new Sunny.UI.UIComboBox();
             this.pnlBtm.SuspendLayout();
             this.uiGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +81,22 @@
             this.uiGroupBox1.TabIndex = 3;
             this.uiGroupBox1.Text = "用户信息";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbRoel
+            // 
+            this.cbRoel.DataSource = null;
+            this.cbRoel.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.cbRoel.FillColor = System.Drawing.Color.White;
+            this.cbRoel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbRoel.Location = new System.Drawing.Point(167, 278);
+            this.cbRoel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbRoel.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbRoel.Name = "cbRoel";
+            this.cbRoel.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbRoel.Size = new System.Drawing.Size(289, 29);
+            this.cbRoel.TabIndex = 4;
+            this.cbRoel.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbRoel.Watermark = "";
             // 
             // cbVillage
             // 
@@ -166,6 +182,7 @@
             this.tbPassword.TabIndex = 1;
             this.tbPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPassword.Watermark = "";
+            this.tbPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
             // 
             // tbUsername
             // 
@@ -193,6 +210,17 @@
             this.uiLabel6.TabIndex = 0;
             this.uiLabel6.Text = "备注：";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel7
+            // 
+            this.uiLabel7.AutoSize = true;
+            this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel7.Location = new System.Drawing.Point(50, 276);
+            this.uiLabel7.Name = "uiLabel7";
+            this.uiLabel7.Size = new System.Drawing.Size(62, 31);
+            this.uiLabel7.TabIndex = 0;
+            this.uiLabel7.Text = "角色";
+            this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel5
             // 
@@ -248,33 +276,6 @@
             this.uiLabel1.TabIndex = 0;
             this.uiLabel1.Text = "用户名";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel7
-            // 
-            this.uiLabel7.AutoSize = true;
-            this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel7.Location = new System.Drawing.Point(50, 276);
-            this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(62, 31);
-            this.uiLabel7.TabIndex = 0;
-            this.uiLabel7.Text = "角色";
-            this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbRoel
-            // 
-            this.cbRoel.DataSource = null;
-            this.cbRoel.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
-            this.cbRoel.FillColor = System.Drawing.Color.White;
-            this.cbRoel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbRoel.Location = new System.Drawing.Point(167, 278);
-            this.cbRoel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbRoel.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbRoel.Name = "cbRoel";
-            this.cbRoel.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbRoel.Size = new System.Drawing.Size(289, 29);
-            this.cbRoel.TabIndex = 4;
-            this.cbRoel.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbRoel.Watermark = "";
             // 
             // frmUserinfo
             // 

@@ -49,6 +49,7 @@ namespace com.vdm.form
                 MessageBox.Show("输入密码和确认密码不一致，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            
             User user = new User();
             user.Username = username;
             user.Password = password;
@@ -163,6 +164,15 @@ namespace com.vdm.form
                         this.cbVillage.ValueMember = "key";
                     }
                 }
+            }
+        }
+
+        private void tbPassword_Leave(object sender, EventArgs e)
+        {
+            if (Utils.IsPasswordValid(this.tbPassword.Text) == false)
+            {
+                ShowErrorDialog("密码必须至少有一个大写字母、一个小写字母、一个数字并且长度要大于8位。");
+                this.tbPassword.Focus();
             }
         }
     }
