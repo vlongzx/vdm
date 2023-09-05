@@ -128,10 +128,12 @@
             // tbOutput
             // 
             this.tbOutput.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbOutput.CanEmpty = true;
             this.tbOutput.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbOutput.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbOutput.Location = new System.Drawing.Point(1327, 263);
             this.tbOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbOutput.Minimum = 0D;
             this.tbOutput.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbOutput.Name = "tbOutput";
             this.tbOutput.Padding = new System.Windows.Forms.Padding(5);
@@ -139,15 +141,18 @@
             this.tbOutput.Size = new System.Drawing.Size(139, 29);
             this.tbOutput.TabIndex = 287;
             this.tbOutput.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbOutput.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbOutput.Watermark = "";
             // 
             // tbInsure_person_count
             // 
             this.tbInsure_person_count.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbInsure_person_count.CanEmpty = true;
             this.tbInsure_person_count.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbInsure_person_count.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbInsure_person_count.Location = new System.Drawing.Point(978, 265);
             this.tbInsure_person_count.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbInsure_person_count.Minimum = 0D;
             this.tbInsure_person_count.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbInsure_person_count.Name = "tbInsure_person_count";
             this.tbInsure_person_count.Padding = new System.Windows.Forms.Padding(5);
@@ -155,15 +160,18 @@
             this.tbInsure_person_count.Size = new System.Drawing.Size(140, 29);
             this.tbInsure_person_count.TabIndex = 291;
             this.tbInsure_person_count.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbInsure_person_count.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbInsure_person_count.Watermark = "";
             // 
             // tbStaff_size
             // 
             this.tbStaff_size.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbStaff_size.CanEmpty = true;
             this.tbStaff_size.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbStaff_size.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbStaff_size.Location = new System.Drawing.Point(606, 265);
             this.tbStaff_size.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbStaff_size.Minimum = 0D;
             this.tbStaff_size.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbStaff_size.Name = "tbStaff_size";
             this.tbStaff_size.Padding = new System.Windows.Forms.Padding(5);
@@ -171,6 +179,7 @@
             this.tbStaff_size.Size = new System.Drawing.Size(151, 29);
             this.tbStaff_size.TabIndex = 292;
             this.tbStaff_size.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbStaff_size.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbStaff_size.Watermark = "";
             // 
             // tbLegal_idcard
@@ -571,9 +580,9 @@
             this.uiLabel7.Location = new System.Drawing.Point(1128, 253);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(82, 41);
+            this.uiLabel7.Size = new System.Drawing.Size(168, 41);
             this.uiLabel7.TabIndex = 259;
-            this.uiLabel7.Text = "产值";
+            this.uiLabel7.Text = "产值(万元)";
             this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label15

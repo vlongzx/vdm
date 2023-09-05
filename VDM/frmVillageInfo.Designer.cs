@@ -156,17 +156,22 @@
             // tbMoney
             // 
             this.tbMoney.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbMoney.CanEmpty = true;
             this.tbMoney.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbMoney.DoubleValue = 2D;
             this.tbMoney.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbMoney.Location = new System.Drawing.Point(219, 101);
             this.tbMoney.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbMoney.Minimum = 0D;
             this.tbMoney.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbMoney.Name = "tbMoney";
             this.tbMoney.Padding = new System.Windows.Forms.Padding(5);
             this.tbMoney.ShowText = false;
             this.tbMoney.Size = new System.Drawing.Size(165, 29);
             this.tbMoney.TabIndex = 193;
+            this.tbMoney.Text = "2.00";
             this.tbMoney.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbMoney.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbMoney.Watermark = "";
             // 
             // tbShop
