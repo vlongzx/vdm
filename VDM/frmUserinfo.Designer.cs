@@ -41,13 +41,15 @@
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
+            this.uiLabel7 = new Sunny.UI.UILabel();
+            this.cbRoel = new Sunny.UI.UIComboBox();
             this.pnlBtm.SuspendLayout();
             this.uiGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBtm
             // 
-            this.pnlBtm.Location = new System.Drawing.Point(1, 417);
+            this.pnlBtm.Location = new System.Drawing.Point(1, 465);
             // 
             // btnOK
             // 
@@ -55,6 +57,7 @@
             // 
             // uiGroupBox1
             // 
+            this.uiGroupBox1.Controls.Add(this.cbRoel);
             this.uiGroupBox1.Controls.Add(this.cbVillage);
             this.uiGroupBox1.Controls.Add(this.cbTown);
             this.uiGroupBox1.Controls.Add(this.tbRemark);
@@ -62,6 +65,7 @@
             this.uiGroupBox1.Controls.Add(this.tbPassword);
             this.uiGroupBox1.Controls.Add(this.tbUsername);
             this.uiGroupBox1.Controls.Add(this.uiLabel6);
+            this.uiGroupBox1.Controls.Add(this.uiLabel7);
             this.uiGroupBox1.Controls.Add(this.uiLabel5);
             this.uiGroupBox1.Controls.Add(this.uiLabel4);
             this.uiGroupBox1.Controls.Add(this.uiLabel3);
@@ -73,7 +77,7 @@
             this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox1.Name = "uiGroupBox1";
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(568, 356);
+            this.uiGroupBox1.Size = new System.Drawing.Size(568, 399);
             this.uiGroupBox1.TabIndex = 3;
             this.uiGroupBox1.Text = "用户信息";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,7 +118,7 @@
             this.tbRemark.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbRemark.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbRemark.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbRemark.Location = new System.Drawing.Point(167, 276);
+            this.tbRemark.Location = new System.Drawing.Point(167, 325);
             this.tbRemark.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbRemark.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbRemark.Multiline = true;
@@ -181,7 +185,7 @@
             // 
             this.uiLabel6.AutoSize = true;
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel6.Location = new System.Drawing.Point(50, 276);
+            this.uiLabel6.Location = new System.Drawing.Point(50, 325);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(86, 31);
             this.uiLabel6.TabIndex = 0;
@@ -194,9 +198,9 @@
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel5.Location = new System.Drawing.Point(50, 234);
             this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel5.Size = new System.Drawing.Size(86, 31);
             this.uiLabel5.TabIndex = 0;
-            this.uiLabel5.Text = "所属村：";
+            this.uiLabel5.Text = "所属村";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel4
@@ -205,9 +209,9 @@
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel4.Location = new System.Drawing.Point(50, 191);
             this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(134, 31);
+            this.uiLabel4.Size = new System.Drawing.Size(110, 31);
             this.uiLabel4.TabIndex = 0;
-            this.uiLabel4.Text = "所属乡镇：";
+            this.uiLabel4.Text = "所属乡镇";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel3
@@ -216,9 +220,9 @@
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel3.Location = new System.Drawing.Point(50, 145);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(134, 31);
+            this.uiLabel3.Size = new System.Drawing.Size(110, 31);
             this.uiLabel3.TabIndex = 0;
-            this.uiLabel3.Text = "确认密码：";
+            this.uiLabel3.Text = "确认密码";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel2
@@ -227,9 +231,9 @@
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel2.Location = new System.Drawing.Point(50, 106);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(86, 31);
+            this.uiLabel2.Size = new System.Drawing.Size(62, 31);
             this.uiLabel2.TabIndex = 0;
-            this.uiLabel2.Text = "密码：";
+            this.uiLabel2.Text = "密码";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel1
@@ -238,15 +242,41 @@
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(50, 61);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel1.Size = new System.Drawing.Size(86, 31);
             this.uiLabel1.TabIndex = 0;
-            this.uiLabel1.Text = "用户名：";
+            this.uiLabel1.Text = "用户名";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel7
+            // 
+            this.uiLabel7.AutoSize = true;
+            this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel7.Location = new System.Drawing.Point(50, 276);
+            this.uiLabel7.Name = "uiLabel7";
+            this.uiLabel7.Size = new System.Drawing.Size(62, 31);
+            this.uiLabel7.TabIndex = 0;
+            this.uiLabel7.Text = "角色";
+            this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cbRoel
+            // 
+            this.cbRoel.DataSource = null;
+            this.cbRoel.FillColor = System.Drawing.Color.White;
+            this.cbRoel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbRoel.Location = new System.Drawing.Point(167, 278);
+            this.cbRoel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbRoel.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbRoel.Name = "cbRoel";
+            this.cbRoel.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbRoel.Size = new System.Drawing.Size(289, 29);
+            this.cbRoel.TabIndex = 4;
+            this.cbRoel.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbRoel.Watermark = "";
             // 
             // frmUserinfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(600, 475);
+            this.ClientSize = new System.Drawing.Size(600, 523);
             this.Controls.Add(this.uiGroupBox1);
             this.Name = "frmUserinfo";
             this.Text = "frmUserinfo";
@@ -276,5 +306,7 @@
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UILabel uiLabel1;
+        private Sunny.UI.UIComboBox cbRoel;
+        private Sunny.UI.UILabel uiLabel7;
     }
 }

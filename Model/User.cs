@@ -12,11 +12,10 @@ namespace com.vdm.model
         private string username;
         private string password;
         private string level;
-        private int town_id;
-        private string town_name;
-        private string village_name;
-        private int village_id;
+        private string  town;
+        private string  village;
         private string remark;
+        private int character_id;
 
         /// <summary>
         ///  用户ID
@@ -63,36 +62,7 @@ namespace com.vdm.model
                 password = value;
             }
         }
-        /// <summary>
-        ///  所在乡镇ID
-        /// </summary>
-        public int Town_id
-        {
-            get
-            {
-                return town_id;
-            }
 
-            set
-            {
-                town_id = value;
-            }
-        }
-        /// <summary>
-        ///  所在村ID
-        /// </summary>
-        public int Village_id
-        {
-            get
-            {
-                return village_id;
-            }
-
-            set
-            {
-                village_id = value;
-            }
-        }
         /// <summary>
         ///  备注
         /// </summary>
@@ -108,36 +78,7 @@ namespace com.vdm.model
                 remark = value;
             }
         }
-        /// <summary>
-        ///  所在乡镇名称
-        /// </summary>
-        public string Town_name
-        {
-            get
-            {
-                return town_name;
-            }
-
-            set
-            {
-                town_name = value;
-            }
-        }
-        /// <summary>
-        ///  所在村名称
-        /// </summary>
-        public string Village_name
-        {
-            get
-            {
-                return village_name;
-            }
-
-            set
-            {
-                village_name = value;
-            }
-        }
+   
         /// <summary>
         /// 账号所在级别
         /// </summary>
@@ -151,6 +92,47 @@ namespace com.vdm.model
             set
             {
                 level = value;
+            }
+        }
+        /// <summary>
+        ///  角色ID
+        /// </summary>
+        public int Character_id
+        {
+            get
+            {
+                return character_id;
+            }
+
+            set
+            {
+                character_id = value;
+            }
+        }
+
+        public string Town
+        {
+            get
+            {
+                return town;
+            }
+
+            set
+            {
+                town = value;
+            }
+        }
+
+        public string Village
+        {
+            get
+            {
+                return village;
+            }
+
+            set
+            {
+                village = value;
             }
         }
     }

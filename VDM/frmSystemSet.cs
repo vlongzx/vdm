@@ -120,11 +120,13 @@ namespace com.vdm.form
             this.dgUser.AutoGenerateColumns = false;
             this.dgUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgUser.RowTemplate.Height = 45;
+            this.dgUser.Columns.Clear();
             this.dgUser.AddColumn("用户ID", "user_id");
             this.dgUser.AddColumn("用户名", "username");
             this.dgUser.AddColumn("账号级别", "level");
-            this.dgUser.AddColumn("所在乡镇", "town_name").SetFixedMode(150);
-            this.dgUser.AddColumn("所在村", "village_name").SetFixedMode(150);
+            this.dgUser.AddColumn("角色", "role_name");
+            this.dgUser.AddColumn("所在乡镇", "town").SetFixedMode(150);
+            this.dgUser.AddColumn("所在村", "village").SetFixedMode(150);
             this.dgUser.AddColumn("备注", "remark").SetFixedMode(300);
             this.Pagination.PageSize = 20;
             this.Pagination.TotalCount = dtUser.Rows.Count;
