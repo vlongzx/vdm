@@ -144,6 +144,7 @@
             this.tbYear_yield.Size = new System.Drawing.Size(165, 29);
             this.tbYear_yield.TabIndex = 9;
             this.tbYear_yield.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbYear_yield.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbYear_yield.Watermark = "";
             // 
             // uiLabel6
@@ -407,6 +408,7 @@
             this.tbOutput.Size = new System.Drawing.Size(165, 29);
             this.tbOutput.TabIndex = 11;
             this.tbOutput.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbOutput.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbOutput.Watermark = "";
             // 
             // tbPlant_area
@@ -423,6 +425,7 @@
             this.tbPlant_area.Size = new System.Drawing.Size(165, 29);
             this.tbPlant_area.TabIndex = 7;
             this.tbPlant_area.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPlant_area.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbPlant_area.Watermark = "";
             // 
             // tbIdcard

@@ -57,6 +57,7 @@
             this.cbPlant_type = new Sunny.UI.UIComboBox();
             this.tbAddress = new Sunny.UI.UITextBox();
             this.tbPhone_number = new Sunny.UI.UITextBox();
+            this.tbOutput = new Sunny.UI.UITextBox();
             this.tbPlant_area = new Sunny.UI.UITextBox();
             this.tbIdcard = new Sunny.UI.UITextBox();
             this.tbContact_person = new Sunny.UI.UITextBox();
@@ -77,7 +78,6 @@
             this.dgPlantList = new Sunny.UI.UIDataGridView();
             this.groupBox2 = new Sunny.UI.UIGroupBox();
             this.btEdit = new Sunny.UI.UIButton();
-            this.tbOutput = new Sunny.UI.UITextBox();
             this.uiGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPlantList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -129,6 +129,7 @@
             this.tbYear_yield_to.Size = new System.Drawing.Size(62, 29);
             this.tbYear_yield_to.TabIndex = 131;
             this.tbYear_yield_to.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbYear_yield_to.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbYear_yield_to.Watermark = "";
             // 
             // tbYear_yield_from
@@ -145,6 +146,7 @@
             this.tbYear_yield_from.Size = new System.Drawing.Size(62, 29);
             this.tbYear_yield_from.TabIndex = 131;
             this.tbYear_yield_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbYear_yield_from.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbYear_yield_from.Watermark = "";
             // 
             // uiLabel6
@@ -458,6 +460,23 @@
             this.tbPhone_number.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPhone_number.Watermark = "";
             // 
+            // tbOutput
+            // 
+            this.tbOutput.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbOutput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbOutput.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbOutput.Location = new System.Drawing.Point(932, 135);
+            this.tbOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbOutput.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbOutput.Name = "tbOutput";
+            this.tbOutput.Padding = new System.Windows.Forms.Padding(5);
+            this.tbOutput.ShowText = false;
+            this.tbOutput.Size = new System.Drawing.Size(165, 29);
+            this.tbOutput.TabIndex = 130;
+            this.tbOutput.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbOutput.Type = Sunny.UI.UITextBox.UIEditType.Double;
+            this.tbOutput.Watermark = "";
+            // 
             // tbPlant_area
             // 
             this.tbPlant_area.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
@@ -472,6 +491,7 @@
             this.tbPlant_area.Size = new System.Drawing.Size(165, 29);
             this.tbPlant_area.TabIndex = 130;
             this.tbPlant_area.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPlant_area.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbPlant_area.Watermark = "";
             // 
             // tbIdcard
@@ -763,22 +783,6 @@
             this.btEdit.Text = "编辑(&E)";
             this.btEdit.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
-            // 
-            // tbOutput
-            // 
-            this.tbOutput.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbOutput.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbOutput.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbOutput.Location = new System.Drawing.Point(932, 135);
-            this.tbOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbOutput.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbOutput.Name = "tbOutput";
-            this.tbOutput.Padding = new System.Windows.Forms.Padding(5);
-            this.tbOutput.ShowText = false;
-            this.tbOutput.Size = new System.Drawing.Size(165, 29);
-            this.tbOutput.TabIndex = 130;
-            this.tbOutput.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbOutput.Watermark = "";
             // 
             // frmPlantList
             // 

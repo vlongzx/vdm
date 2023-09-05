@@ -80,7 +80,7 @@ namespace com.vdm.dal
             {
                 if (condition["breed_name"].ToString() != "")
                 {
-                    sql += "    and breed_name = @breed_name";
+                    sql += "    and breed_name like @breed_name";
                 }
                 if (condition["town"].ToString() != "")
                 {
@@ -185,7 +185,7 @@ namespace com.vdm.dal
             parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
-                parameters.Add(new SQLiteParameter("@breed_name", condition["breed_name"]));
+                parameters.Add(new SQLiteParameter("@breed_name", "%"+condition["breed_name"]+"%"));
                 parameters.Add(new SQLiteParameter("@town", condition["town"]));
                 parameters.Add(new SQLiteParameter("@villiage", condition["villiage"]));
                 parameters.Add(new SQLiteParameter("@breed_type", condition["breed_type"]));
