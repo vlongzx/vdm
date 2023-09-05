@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiLabel25 = new Sunny.UI.UILabel();
             this.cbTown = new Sunny.UI.UIComboBox();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
@@ -103,7 +103,7 @@
             // 
             this.uiLabel25.AutoSize = true;
             this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel25.Location = new System.Drawing.Point(1087, 228);
+            this.uiLabel25.Location = new System.Drawing.Point(1126, 228);
             this.uiLabel25.Name = "uiLabel25";
             this.uiLabel25.Size = new System.Drawing.Size(114, 41);
             this.uiLabel25.TabIndex = 154;
@@ -115,12 +115,12 @@
             this.cbTown.DataSource = null;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTown.Location = new System.Drawing.Point(932, 236);
+            this.cbTown.Location = new System.Drawing.Point(932, 232);
             this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbTown.Name = "cbTown";
             this.cbTown.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbTown.Size = new System.Drawing.Size(148, 29);
+            this.cbTown.Size = new System.Drawing.Size(156, 29);
             this.cbTown.TabIndex = 152;
             this.cbTown.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbTown.Watermark = "";
@@ -197,13 +197,13 @@
             this.dpMove_date_To.CanEmpty = true;
             this.dpMove_date_To.FillColor = System.Drawing.Color.White;
             this.dpMove_date_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpMove_date_To.Location = new System.Drawing.Point(297, 189);
+            this.dpMove_date_To.Location = new System.Drawing.Point(277, 189);
             this.dpMove_date_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpMove_date_To.MaxLength = 10;
             this.dpMove_date_To.MinimumSize = new System.Drawing.Size(63, 0);
             this.dpMove_date_To.Name = "dpMove_date_To";
             this.dpMove_date_To.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.dpMove_date_To.Size = new System.Drawing.Size(71, 29);
+            this.dpMove_date_To.Size = new System.Drawing.Size(120, 29);
             this.dpMove_date_To.SymbolDropDown = 61555;
             this.dpMove_date_To.SymbolNormal = 61555;
             this.dpMove_date_To.TabIndex = 255;
@@ -217,13 +217,13 @@
             this.dpMove_date_From.CanEmpty = true;
             this.dpMove_date_From.FillColor = System.Drawing.Color.White;
             this.dpMove_date_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpMove_date_From.Location = new System.Drawing.Point(175, 184);
+            this.dpMove_date_From.Location = new System.Drawing.Point(137, 189);
             this.dpMove_date_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpMove_date_From.MaxLength = 10;
             this.dpMove_date_From.MinimumSize = new System.Drawing.Size(63, 0);
             this.dpMove_date_From.Name = "dpMove_date_From";
             this.dpMove_date_From.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.dpMove_date_From.Size = new System.Drawing.Size(81, 29);
+            this.dpMove_date_From.Size = new System.Drawing.Size(119, 29);
             this.dpMove_date_From.SymbolDropDown = 61555;
             this.dpMove_date_From.SymbolNormal = 61555;
             this.dpMove_date_From.TabIndex = 254;
@@ -236,7 +236,7 @@
             // 
             this.uiLabel12.AutoSize = true;
             this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel12.Location = new System.Drawing.Point(1347, 136);
+            this.uiLabel12.Location = new System.Drawing.Point(1394, 136);
             this.uiLabel12.Name = "uiLabel12";
             this.uiLabel12.Size = new System.Drawing.Size(32, 41);
             this.uiLabel12.TabIndex = 253;
@@ -248,13 +248,13 @@
             this.tbReal_area_To.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbReal_area_To.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbReal_area_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbReal_area_To.Location = new System.Drawing.Point(297, 136);
+            this.tbReal_area_To.Location = new System.Drawing.Point(277, 136);
             this.tbReal_area_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbReal_area_To.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbReal_area_To.Name = "tbReal_area_To";
             this.tbReal_area_To.Padding = new System.Windows.Forms.Padding(5);
             this.tbReal_area_To.ShowText = false;
-            this.tbReal_area_To.Size = new System.Drawing.Size(62, 29);
+            this.tbReal_area_To.Size = new System.Drawing.Size(120, 29);
             this.tbReal_area_To.TabIndex = 203;
             this.tbReal_area_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbReal_area_To.Watermark = "";
@@ -263,7 +263,7 @@
             // 
             this.uiLabel13.AutoSize = true;
             this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel13.Location = new System.Drawing.Point(998, 136);
+            this.uiLabel13.Location = new System.Drawing.Point(996, 133);
             this.uiLabel13.Name = "uiLabel13";
             this.uiLabel13.Size = new System.Drawing.Size(32, 41);
             this.uiLabel13.TabIndex = 252;
@@ -275,13 +275,13 @@
             this.tbReal_area_From.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbReal_area_From.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbReal_area_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbReal_area_From.Location = new System.Drawing.Point(194, 136);
+            this.tbReal_area_From.Location = new System.Drawing.Point(137, 138);
             this.tbReal_area_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbReal_area_From.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbReal_area_From.Name = "tbReal_area_From";
             this.tbReal_area_From.Padding = new System.Windows.Forms.Padding(5);
             this.tbReal_area_From.ShowText = false;
-            this.tbReal_area_From.Size = new System.Drawing.Size(62, 29);
+            this.tbReal_area_From.Size = new System.Drawing.Size(119, 29);
             this.tbReal_area_From.TabIndex = 202;
             this.tbReal_area_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbReal_area_From.Watermark = "";
@@ -301,7 +301,7 @@
             // 
             this.uiLabel16.AutoSize = true;
             this.uiLabel16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel16.Location = new System.Drawing.Point(263, 181);
+            this.uiLabel16.Location = new System.Drawing.Point(253, 181);
             this.uiLabel16.Name = "uiLabel16";
             this.uiLabel16.Size = new System.Drawing.Size(32, 41);
             this.uiLabel16.TabIndex = 249;
@@ -312,7 +312,7 @@
             // 
             this.uiLabel17.AutoSize = true;
             this.uiLabel17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel17.Location = new System.Drawing.Point(263, 136);
+            this.uiLabel17.Location = new System.Drawing.Point(254, 136);
             this.uiLabel17.Name = "uiLabel17";
             this.uiLabel17.Size = new System.Drawing.Size(32, 41);
             this.uiLabel17.TabIndex = 248;
@@ -324,7 +324,7 @@
             this.tbMove_price_To.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbMove_price_To.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbMove_price_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbMove_price_To.Location = new System.Drawing.Point(1381, 138);
+            this.tbMove_price_To.Location = new System.Drawing.Point(1414, 138);
             this.tbMove_price_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbMove_price_To.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbMove_price_To.Name = "tbMove_price_To";
@@ -340,13 +340,13 @@
             this.tbMove_area_To.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbMove_area_To.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbMove_area_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbMove_area_To.Location = new System.Drawing.Point(1032, 138);
+            this.tbMove_area_To.Location = new System.Drawing.Point(1028, 138);
             this.tbMove_area_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbMove_area_To.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbMove_area_To.Name = "tbMove_area_To";
             this.tbMove_area_To.Padding = new System.Windows.Forms.Padding(5);
             this.tbMove_area_To.ShowText = false;
-            this.tbMove_area_To.Size = new System.Drawing.Size(62, 29);
+            this.tbMove_area_To.Size = new System.Drawing.Size(60, 29);
             this.tbMove_area_To.TabIndex = 225;
             this.tbMove_area_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbMove_area_To.Watermark = "";
@@ -356,7 +356,7 @@
             this.tbMove_price_From.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbMove_price_From.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbMove_price_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbMove_price_From.Location = new System.Drawing.Point(1278, 138);
+            this.tbMove_price_From.Location = new System.Drawing.Point(1325, 138);
             this.tbMove_price_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbMove_price_From.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbMove_price_From.Name = "tbMove_price_From";
@@ -387,7 +387,7 @@
             // 
             this.uiLabel24.AutoSize = true;
             this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel24.Location = new System.Drawing.Point(1087, 128);
+            this.uiLabel24.Location = new System.Drawing.Point(1126, 128);
             this.uiLabel24.Name = "uiLabel24";
             this.uiLabel24.Size = new System.Drawing.Size(293, 41);
             this.uiLabel24.TabIndex = 241;
@@ -398,7 +398,7 @@
             // 
             this.uiLabel22.AutoSize = true;
             this.uiLabel22.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel22.Location = new System.Drawing.Point(408, 181);
+            this.uiLabel22.Location = new System.Drawing.Point(397, 181);
             this.uiLabel22.Name = "uiLabel22";
             this.uiLabel22.Size = new System.Drawing.Size(146, 41);
             this.uiLabel22.TabIndex = 239;
@@ -415,7 +415,7 @@
             this.cbMove_type.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbMove_type.Name = "cbMove_type";
             this.cbMove_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbMove_type.Size = new System.Drawing.Size(165, 29);
+            this.cbMove_type.Size = new System.Drawing.Size(158, 29);
             this.cbMove_type.TabIndex = 236;
             this.cbMove_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbMove_type.Watermark = "";
@@ -436,13 +436,13 @@
             this.tbLand_use_remark.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbLand_use_remark.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbLand_use_remark.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbLand_use_remark.Location = new System.Drawing.Point(1278, 91);
+            this.tbLand_use_remark.Location = new System.Drawing.Point(1325, 91);
             this.tbLand_use_remark.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbLand_use_remark.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbLand_use_remark.Name = "tbLand_use_remark";
             this.tbLand_use_remark.Padding = new System.Windows.Forms.Padding(5);
             this.tbLand_use_remark.ShowText = false;
-            this.tbLand_use_remark.Size = new System.Drawing.Size(140, 29);
+            this.tbLand_use_remark.Size = new System.Drawing.Size(151, 29);
             this.tbLand_use_remark.TabIndex = 214;
             this.tbLand_use_remark.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbLand_use_remark.Watermark = "";
@@ -458,7 +458,7 @@
             this.tbContractor.Name = "tbContractor";
             this.tbContractor.Padding = new System.Windows.Forms.Padding(5);
             this.tbContractor.ShowText = false;
-            this.tbContractor.Size = new System.Drawing.Size(139, 29);
+            this.tbContractor.Size = new System.Drawing.Size(159, 29);
             this.tbContractor.TabIndex = 213;
             this.tbContractor.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbContractor.Watermark = "";
@@ -467,7 +467,7 @@
             // 
             this.土地使用说明.AutoSize = true;
             this.土地使用说明.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.土地使用说明.Location = new System.Drawing.Point(1079, 86);
+            this.土地使用说明.Location = new System.Drawing.Point(1126, 86);
             this.土地使用说明.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.土地使用说明.Name = "土地使用说明";
             this.土地使用说明.Size = new System.Drawing.Size(210, 41);
@@ -504,7 +504,7 @@
             this.tbContract_time_To.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbContract_time_To.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbContract_time_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbContract_time_To.Location = new System.Drawing.Point(678, 136);
+            this.tbContract_time_To.Location = new System.Drawing.Point(671, 133);
             this.tbContract_time_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbContract_time_To.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbContract_time_To.Name = "tbContract_time_To";
@@ -547,12 +547,12 @@
             this.cbIs_basic_farmland.DataSource = null;
             this.cbIs_basic_farmland.FillColor = System.Drawing.Color.White;
             this.cbIs_basic_farmland.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbIs_basic_farmland.Location = new System.Drawing.Point(1278, 52);
+            this.cbIs_basic_farmland.Location = new System.Drawing.Point(1325, 52);
             this.cbIs_basic_farmland.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbIs_basic_farmland.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbIs_basic_farmland.Name = "cbIs_basic_farmland";
             this.cbIs_basic_farmland.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbIs_basic_farmland.Size = new System.Drawing.Size(140, 29);
+            this.cbIs_basic_farmland.Size = new System.Drawing.Size(151, 29);
             this.cbIs_basic_farmland.TabIndex = 88;
             this.cbIs_basic_farmland.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbIs_basic_farmland.Watermark = "";
@@ -562,13 +562,13 @@
             this.tbNorth.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbNorth.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNorth.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbNorth.Location = new System.Drawing.Point(575, 236);
+            this.tbNorth.Location = new System.Drawing.Point(575, 232);
             this.tbNorth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbNorth.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbNorth.Name = "tbNorth";
             this.tbNorth.Padding = new System.Windows.Forms.Padding(5);
             this.tbNorth.ShowText = false;
-            this.tbNorth.Size = new System.Drawing.Size(140, 29);
+            this.tbNorth.Size = new System.Drawing.Size(158, 29);
             this.tbNorth.TabIndex = 162;
             this.tbNorth.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbNorth.Watermark = "";
@@ -578,13 +578,13 @@
             this.tbWest.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbWest.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbWest.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbWest.Location = new System.Drawing.Point(194, 228);
+            this.tbWest.Location = new System.Drawing.Point(137, 232);
             this.tbWest.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbWest.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbWest.Name = "tbWest";
             this.tbWest.Padding = new System.Windows.Forms.Padding(5);
             this.tbWest.ShowText = false;
-            this.tbWest.Size = new System.Drawing.Size(140, 29);
+            this.tbWest.Size = new System.Drawing.Size(260, 29);
             this.tbWest.TabIndex = 162;
             this.tbWest.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbWest.Watermark = "";
@@ -594,13 +594,13 @@
             this.tbSouth.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbSouth.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbSouth.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbSouth.Location = new System.Drawing.Point(1278, 193);
+            this.tbSouth.Location = new System.Drawing.Point(1325, 189);
             this.tbSouth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbSouth.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbSouth.Name = "tbSouth";
             this.tbSouth.Padding = new System.Windows.Forms.Padding(5);
             this.tbSouth.ShowText = false;
-            this.tbSouth.Size = new System.Drawing.Size(140, 29);
+            this.tbSouth.Size = new System.Drawing.Size(151, 29);
             this.tbSouth.TabIndex = 162;
             this.tbSouth.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbSouth.Watermark = "";
@@ -616,7 +616,7 @@
             this.tbEast.Name = "tbEast";
             this.tbEast.Padding = new System.Windows.Forms.Padding(5);
             this.tbEast.ShowText = false;
-            this.tbEast.Size = new System.Drawing.Size(140, 29);
+            this.tbEast.Size = new System.Drawing.Size(158, 29);
             this.tbEast.TabIndex = 162;
             this.tbEast.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbEast.Watermark = "";
@@ -632,7 +632,7 @@
             this.tbLand_name.Name = "tbLand_name";
             this.tbLand_name.Padding = new System.Windows.Forms.Padding(5);
             this.tbLand_name.ShowText = false;
-            this.tbLand_name.Size = new System.Drawing.Size(140, 29);
+            this.tbLand_name.Size = new System.Drawing.Size(160, 29);
             this.tbLand_name.TabIndex = 162;
             this.tbLand_name.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbLand_name.Watermark = "";
@@ -653,12 +653,12 @@
             this.cbVillage.DataSource = null;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbVillage.Location = new System.Drawing.Point(1278, 232);
+            this.cbVillage.Location = new System.Drawing.Point(1325, 232);
             this.cbVillage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVillage.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbVillage.Name = "cbVillage";
             this.cbVillage.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbVillage.Size = new System.Drawing.Size(140, 29);
+            this.cbVillage.Size = new System.Drawing.Size(151, 29);
             this.cbVillage.TabIndex = 153;
             this.cbVillage.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbVillage.Watermark = "";
@@ -679,12 +679,12 @@
             this.cbLand_type.DataSource = null;
             this.cbLand_type.FillColor = System.Drawing.Color.White;
             this.cbLand_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbLand_type.Location = new System.Drawing.Point(194, 94);
+            this.cbLand_type.Location = new System.Drawing.Point(137, 94);
             this.cbLand_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbLand_type.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbLand_type.Name = "cbLand_type";
             this.cbLand_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbLand_type.Size = new System.Drawing.Size(158, 29);
+            this.cbLand_type.Size = new System.Drawing.Size(260, 29);
             this.cbLand_type.TabIndex = 138;
             this.cbLand_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbLand_type.Watermark = "";
@@ -725,13 +725,13 @@
             this.tbName.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbName.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbName.Location = new System.Drawing.Point(194, 47);
+            this.tbName.Location = new System.Drawing.Point(137, 47);
             this.tbName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbName.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbName.Name = "tbName";
             this.tbName.Padding = new System.Windows.Forms.Padding(5);
             this.tbName.ShowText = false;
-            this.tbName.Size = new System.Drawing.Size(165, 29);
+            this.tbName.Size = new System.Drawing.Size(260, 29);
             this.tbName.TabIndex = 130;
             this.tbName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbName.Watermark = "";
@@ -740,7 +740,7 @@
             // 
             this.uiLabel9.AutoSize = true;
             this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel9.Location = new System.Drawing.Point(408, 228);
+            this.uiLabel9.Location = new System.Drawing.Point(397, 228);
             this.uiLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel9.Name = "uiLabel9";
             this.uiLabel9.Size = new System.Drawing.Size(82, 41);
@@ -764,7 +764,7 @@
             // 
             this.uiLabel6.AutoSize = true;
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel6.Location = new System.Drawing.Point(1076, 44);
+            this.uiLabel6.Location = new System.Drawing.Point(1123, 44);
             this.uiLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(210, 41);
@@ -776,7 +776,7 @@
             // 
             this.uiLabel7.AutoSize = true;
             this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel7.Location = new System.Drawing.Point(1087, 178);
+            this.uiLabel7.Location = new System.Drawing.Point(1126, 177);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(82, 41);
@@ -916,48 +916,48 @@
             // 
             this.dgLandList.AllowUserToAddRows = false;
             this.dgLandList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgLandList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgLandList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgLandList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgLandList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgLandList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLandList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgLandList.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgLandList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgLandList.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgLandList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgLandList.EnableHeadersVisualStyles = false;
             this.dgLandList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgLandList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgLandList.Location = new System.Drawing.Point(4, 32);
             this.dgLandList.Name = "dgLandList";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgLandList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLandList.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgLandList.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgLandList.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgLandList.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dgLandList.RowTemplate.Height = 23;
             this.dgLandList.ScrollBarHandleWidth = 40;
             this.dgLandList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));

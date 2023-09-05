@@ -253,7 +253,7 @@
             // 
             this.uiLabel6.AutoSize = true;
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel6.Location = new System.Drawing.Point(420, 243);
+            this.uiLabel6.Location = new System.Drawing.Point(422, 231);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(114, 41);
             this.uiLabel6.TabIndex = 210;
@@ -281,12 +281,12 @@
             this.cbVilliage.DataSource = null;
             this.cbVilliage.FillColor = System.Drawing.Color.White;
             this.cbVilliage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbVilliage.Location = new System.Drawing.Point(575, 243);
+            this.cbVilliage.Location = new System.Drawing.Point(623, 243);
             this.cbVilliage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVilliage.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbVilliage.Name = "cbVilliage";
             this.cbVilliage.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbVilliage.Size = new System.Drawing.Size(165, 29);
+            this.cbVilliage.Size = new System.Drawing.Size(142, 29);
             this.cbVilliage.TabIndex = 209;
             this.cbVilliage.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbVilliage.Watermark = "";
@@ -295,7 +295,7 @@
             // 
             this.uiLabel7.AutoSize = true;
             this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel7.Location = new System.Drawing.Point(71, 233);
+            this.uiLabel7.Location = new System.Drawing.Point(41, 231);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(114, 41);
@@ -307,7 +307,7 @@
             // 
             this.uiLabel2.AutoSize = true;
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.Location = new System.Drawing.Point(58, 90);
+            this.uiLabel2.Location = new System.Drawing.Point(41, 90);
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(264, 41);
             this.uiLabel2.TabIndex = 203;
@@ -366,7 +366,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(58, 182);
+            this.label10.Location = new System.Drawing.Point(41, 182);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(200, 41);
@@ -424,7 +424,7 @@
             // 
             this.uiLabel23.AutoSize = true;
             this.uiLabel23.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel23.Location = new System.Drawing.Point(58, 136);
+            this.uiLabel23.Location = new System.Drawing.Point(41, 136);
             this.uiLabel23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel23.Name = "uiLabel23";
             this.uiLabel23.Size = new System.Drawing.Size(356, 41);

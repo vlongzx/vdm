@@ -55,6 +55,10 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btFamer_Click(object sender, EventArgs e)
         {
+            MainTabControl.SelectPage(1002);
+        }
+        private void btCompany_Click(object sender, EventArgs e)
+        {
             MainTabControl.SelectPage(1004);
         }
         private void btVillage_Click(object sender, EventArgs e)

@@ -157,7 +157,7 @@
             // 
             this.uiLabel24.AutoSize = true;
             this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel24.Location = new System.Drawing.Point(1108, 205);
+            this.uiLabel24.Location = new System.Drawing.Point(1097, 213);
             this.uiLabel24.Name = "uiLabel24";
             this.uiLabel24.Size = new System.Drawing.Size(293, 41);
             this.uiLabel24.TabIndex = 298;
@@ -168,7 +168,7 @@
             // 
             this.uiLabel22.AutoSize = true;
             this.uiLabel22.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel22.Location = new System.Drawing.Point(429, 258);
+            this.uiLabel22.Location = new System.Drawing.Point(418, 258);
             this.uiLabel22.Name = "uiLabel22";
             this.uiLabel22.Size = new System.Drawing.Size(146, 41);
             this.uiLabel22.TabIndex = 297;
@@ -194,7 +194,7 @@
             // 
             this.uiLabel27.AutoSize = true;
             this.uiLabel27.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel27.Location = new System.Drawing.Point(797, 168);
+            this.uiLabel27.Location = new System.Drawing.Point(800, 168);
             this.uiLabel27.Name = "uiLabel27";
             this.uiLabel27.Size = new System.Drawing.Size(114, 41);
             this.uiLabel27.TabIndex = 295;
@@ -238,7 +238,7 @@
             // 
             this.土地使用说明.AutoSize = true;
             this.土地使用说明.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.土地使用说明.Location = new System.Drawing.Point(1100, 163);
+            this.土地使用说明.Location = new System.Drawing.Point(1097, 163);
             this.土地使用说明.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.土地使用说明.Name = "土地使用说明";
             this.土地使用说明.Size = new System.Drawing.Size(210, 41);
@@ -250,7 +250,7 @@
             // 
             this.uiLabel32.AutoSize = true;
             this.uiLabel32.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel32.Location = new System.Drawing.Point(797, 214);
+            this.uiLabel32.Location = new System.Drawing.Point(800, 214);
             this.uiLabel32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel32.Name = "uiLabel32";
             this.uiLabel32.Size = new System.Drawing.Size(200, 41);
@@ -396,7 +396,7 @@
             // 
             this.uiLabel25.AutoSize = true;
             this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel25.Location = new System.Drawing.Point(1108, 305);
+            this.uiLabel25.Location = new System.Drawing.Point(1097, 305);
             this.uiLabel25.Name = "uiLabel25";
             this.uiLabel25.Size = new System.Drawing.Size(114, 41);
             this.uiLabel25.TabIndex = 273;
@@ -522,7 +522,7 @@
             // 
             this.uiLabel9.AutoSize = true;
             this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel9.Location = new System.Drawing.Point(429, 305);
+            this.uiLabel9.Location = new System.Drawing.Point(418, 305);
             this.uiLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel9.Name = "uiLabel9";
             this.uiLabel9.Size = new System.Drawing.Size(82, 41);
@@ -558,7 +558,7 @@
             // 
             this.uiLabel7.AutoSize = true;
             this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel7.Location = new System.Drawing.Point(1108, 255);
+            this.uiLabel7.Location = new System.Drawing.Point(1097, 255);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(82, 41);

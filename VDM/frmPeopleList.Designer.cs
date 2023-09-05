@@ -818,9 +818,9 @@
             this.uiLabel4.Location = new System.Drawing.Point(779, 134);
             this.uiLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(154, 41);
+            this.uiLabel4.Size = new System.Drawing.Size(146, 41);
             this.uiLabel4.TabIndex = 108;
-            this.uiLabel4.Text = "技能类型:";
+            this.uiLabel4.Text = "技能类型";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label13

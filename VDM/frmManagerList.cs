@@ -349,5 +349,10 @@ namespace com.vdm.form
             frmExportExcel ef = new frmExportExcel(excelUtil, Data_Object_Const.MANAGER);
             ef.ShowDialog();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
