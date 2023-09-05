@@ -271,11 +271,16 @@ namespace com.vdm.dal
         public DataTable getAllPeople(Hashtable condition, int pageIndex, int pageSize)
         {
             string sql = "select * from t_people where 1 = 1";
-           //基本查询条件
+            //基本查询条件
             if (condition["People_name"].ToString() != "")
             {
                 sql += "    and people_name = @people_name";
             }
+            //if (condition["People_name"].ToString() != "")
+            //{
+            //    sql += "    and people_name like `%`@people_name`%`";
+            //}
+
             if (condition["Sex"].ToString() != "")
             {
                 sql += "    and sex = @sex";

@@ -307,5 +307,10 @@ namespace com.vdm.form
             InitListView(condition, this.pageIndex, this.pageSize);
 
         }
+
+        private void uiCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
