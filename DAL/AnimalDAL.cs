@@ -140,7 +140,7 @@ namespace com.vdm.dal
                 }
                 if (condition["pullttion_area_from"].ToString() != "0" && condition["pullttion_area_to"].ToString() != "0")
                 {
-                    sql += " and   pullttion_area_from BETWEEN '" + condition["pullttion_area_from"].ToString() + "' AND '" + condition["pullttion_area_to"].ToString() + "'";
+                    sql += " and   pullttion_area BETWEEN '" + condition["pullttion_area_from"].ToString() + "' AND '" + condition["pullttion_area_to"].ToString() + "'";
                 }
                 if (condition["cueernt_inventory_from"].ToString() != "0" && condition["cueernt_inventory_to"].ToString() != "0")
                 {
@@ -195,18 +195,6 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@address", "%"+condition["address"]+"%"));
                 parameters.Add(new SQLiteParameter("@year_inventory", condition["year_inventory"]));
                 parameters.Add(new SQLiteParameter("@year_outbound", condition["year_outbound"]));
-                parameters.Add(new SQLiteParameter("@output_from", condition["output_from"]));
-                parameters.Add(new SQLiteParameter("@output_to", condition["output_to"]));
-                parameters.Add(new SQLiteParameter("@total_area_from", condition["total_area_from"]));
-                parameters.Add(new SQLiteParameter("@total_area_to", condition["total_area_to"]));
-                parameters.Add(new SQLiteParameter("@pen_area_from", condition["pen_area_from"]));
-                parameters.Add(new SQLiteParameter("@pen_area_to", condition["pen_area_to"]));
-                parameters.Add(new SQLiteParameter("@midden_area_from", condition["midden_area_from"]));
-                parameters.Add(new SQLiteParameter("@midden_area_to", condition["midden_area_to"]));
-                parameters.Add(new SQLiteParameter("@pullttion_area_from", condition["pullttion_area_from"]));
-                parameters.Add(new SQLiteParameter("@pullttion_area_to", condition["pullttion_area_to"]));
-                parameters.Add(new SQLiteParameter("@cueernt_inventory_from", condition["cueernt_inventory_from"]));
-                parameters.Add(new SQLiteParameter("@cueernt_inventory_to", condition["cueernt_inventory_to"]));
                 parameters.Add(new SQLiteParameter("@animal_qualify", condition["animal_qualify"]));
                 parameters.Add(new SQLiteParameter("@solid_pollution", condition["solid_pollution"]));
                 parameters.Add(new SQLiteParameter("@report_or_filings", condition["report_or_filings"]));

@@ -165,10 +165,6 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@address", "%"+condition["address"]+"%"));
                 parameters.Add(new SQLiteParameter("@phone_number","%"+condition["phone_number"]+"%"));
                 parameters.Add(new SQLiteParameter("@trade_form", condition["trade_form"]));
-                parameters.Add(new SQLiteParameter("@year_person_count_from", condition["year_person_count_from"]));
-                parameters.Add(new SQLiteParameter("@year_person_count_to", condition["year_person_count_to"]));
-                parameters.Add(new SQLiteParameter("@year_trade_income_from", condition["year_trade_income_from"]));
-                parameters.Add(new SQLiteParameter("@year_trade_income_to", condition["year_trade_income_to"]));
             }
             return sql;
         }

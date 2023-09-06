@@ -54,38 +54,55 @@ namespace com.vdm.dal
             string sql = "";
             if (condition != null)
             {
-                if (condition["company_id"].ToString() != "")
+                if (condition["plant_area"].ToString() != "")
                 {
-                    sql += "    and company_id = @company_id";
+                    sql += "    and plant_area = @plant_area";
                 }
-                if (condition["principal_category"].ToString() != "")
+                if (condition["plant_brand"].ToString() != "")
                 {
-                    sql += "    and principal_category = @principal_category";
+                    sql += "    and plant_brand = @plant_brand";
                 }
-                if (condition["principal_name"].ToString() != "")
+                if (condition["plant_type"].ToString() != "")
                 {
-                    sql += "    and principal_name = @principal_name";
+                    sql += "    and plant_type = @plant_type";
                 }
-                if (condition["legal_name"].ToString() != "")
+                if (condition["contact_person"].ToString() != "")
                 {
-                    sql += "    and legal_name = @legal_name";
-                }
-                if (condition["registered_trademark"].ToString() != "")
-                {
-                    sql += "    and registered_trademark = @registered_trademark";
+                    sql += "    and contact_person like @contact_person";
                 }
                 if (condition["phone_number"].ToString() != "")
                 {
-                    sql += "    and phone_number = @phone_number";
-                }
-                if (condition["trade_form"].ToString() != "")
-                {
-                    sql += "    and trade_form = @trade_form";
+                    sql += "    and phone_number like @phone_number";
                 }
                 if (condition["address"].ToString() != "")
                 {
-                    sql += "    and address = @address";
+                    sql += "    and address like @address";
                 }
+                if (condition["is_plan"].ToString() != "")
+                {
+                    sql += "    and is_plan = @is_plan";
+                }
+                if (condition["sale_way"].ToString() != "")
+                {
+                    sql += "    and sale_way = @sale_way";
+                }
+                if (condition["output"].ToString() != "")
+                {
+                    sql += "    and output = @output";
+                }
+                if (condition["insect_ill"].ToString() != "")
+                {
+                    sql += "    and insect_ill = @insect_ill";
+                }
+                if (condition["manage_skill_method"].ToString() != "")
+                {
+                    sql += "    and manage_skill_method = @manage_skill_method";
+                }
+                if (condition["develop_willing"].ToString() != "")
+                {
+                    sql += "    and develop_willing = @develop_willing";
+                }
+
                 if (condition["town"].ToString() != "")
                 {
                     sql += "    and town = @town";
@@ -94,13 +111,9 @@ namespace com.vdm.dal
                 {
                     sql += "    and villiage = @villiage";
                 }
-                if (condition["year_person_count_from"].ToString() != "0" && condition["year_person_count_to"].ToString() != "0")
+                if (condition["year_yield_from"].ToString() != "0" && condition["year_yield_to"].ToString() != "0")
                 {
-                    sql += "  and  year_person_count BETWEEN '" + condition["year_person_count_from"].ToString() + "' AND '" + condition["year_person_count_to"].ToString() + "'";
-                }
-                if (condition["year_trade_income_from"].ToString() != "0" && condition["year_trade_income_to"].ToString() != "0")
-                {
-                    sql += " and   year_trade_income BETWEEN '" + condition["year_trade_income_from"].ToString() + "' AND '" + condition["year_trade_income_to"].ToString() + "'";
+                    sql += "  and  year_yield BETWEEN '" + condition["year_yield_from"].ToString() + "' AND '" + condition["year_yield_to"].ToString() + "'";
                 }
             }
             sql += " order by create_datetime desc";
@@ -129,20 +142,20 @@ namespace com.vdm.dal
             parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
-                parameters.Add(new SQLiteParameter("@company_id", condition["company_id"]));
+                parameters.Add(new SQLiteParameter("@plant_area", condition["plant_area"]));
+                parameters.Add(new SQLiteParameter("@plant_brand", condition["plant_brand"]));
+                parameters.Add(new SQLiteParameter("@plant_type", condition["plant_type"]));
+                parameters.Add(new SQLiteParameter("@contact_person", "%"+condition["contact_person"]+"%"));
+                parameters.Add(new SQLiteParameter("@phone_number", "%"+condition["phone_number"]+"%"));
+                parameters.Add(new SQLiteParameter("@address", "%"+condition["address"]+"%"));
+                parameters.Add(new SQLiteParameter("@is_plan", condition["is_plan"]));
+                parameters.Add(new SQLiteParameter("@sale_way", condition["sale_way"]));
+                parameters.Add(new SQLiteParameter("@output", condition["output"]));
+                parameters.Add(new SQLiteParameter("@insect_ill", condition["insect_ill"]));
+                parameters.Add(new SQLiteParameter("@manage_skill_method", condition["manage_skill_method"]));
+                parameters.Add(new SQLiteParameter("@develop_willing", condition["develop_willing"]));
                 parameters.Add(new SQLiteParameter("@town", condition["town"]));
-                parameters.Add(new SQLiteParameter("@villiage", condition["villiage"]));
-                parameters.Add(new SQLiteParameter("@principal_category", condition["principal_category"]));
-                parameters.Add(new SQLiteParameter("@principal_name", condition["principal_name"]));
-                parameters.Add(new SQLiteParameter("@legal_name", condition["legal_name"]));
-                parameters.Add(new SQLiteParameter("@registered_trademark", condition["registered_trademark"]));
-                parameters.Add(new SQLiteParameter("@address", condition["address"]));
-                parameters.Add(new SQLiteParameter("@phone_number", condition["phone_number"]));
-                parameters.Add(new SQLiteParameter("@trade_form", condition["trade_form"]));
-                parameters.Add(new SQLiteParameter("@year_person_count_from", condition["year_person_count_from"]));
-                parameters.Add(new SQLiteParameter("@year_person_count_to", condition["year_person_count_to"]));
-                parameters.Add(new SQLiteParameter("@year_trade_income_from", condition["year_trade_income_from"]));
-                parameters.Add(new SQLiteParameter("@year_trade_income_to", condition["year_trade_income_to"]));
+                parameters.Add(new SQLiteParameter("@village", condition["village"]));
 
             }
             return sql;

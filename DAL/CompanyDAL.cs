@@ -361,7 +361,7 @@ namespace com.vdm.dal
                 }
                 if (condition["Establish_date_From"].ToString() != "" && condition["Establish_date_To"].ToString() != null)
                 {
-                    sql += "  and  License_date BETWEEN '" + condition["License_date_From"].ToString() + "' AND '" + condition["Establish_date_To"].ToString() + "'";
+                    sql += "  and  Establish_date BETWEEN '" + condition["Establish_date_From"].ToString() + "' AND '" + condition["Establish_date_To"].ToString() + "'";
                 }
                 if (condition["License_date_From"].ToString() != "" && condition["License_date_To"].ToString() != null)
                 {
