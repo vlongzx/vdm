@@ -91,11 +91,11 @@ namespace com.vdm.dal
                 }
                 if (condition["principal_name"].ToString() != "")
                 {
-                    sql += "    and principal_name = @principal_name";
+                    sql += "    and principal_name like @principal_name";
                 }
                 if (condition["legal_name"].ToString() != "")
                 {
-                    sql += "    and legal_name = @legal_name";
+                    sql += "    and legal_name like @legal_name";
                 }
                 if (condition["registered_trademark"].ToString() != "")
                 {
@@ -103,7 +103,7 @@ namespace com.vdm.dal
                 }
                 if (condition["phone_number"].ToString() != "")
                 {
-                    sql += "    and phone_number = @phone_number";
+                    sql += "    and phone_number like @phone_number";
                 }
                 if (condition["trade_form"].ToString() != "")
                 {
@@ -111,7 +111,7 @@ namespace com.vdm.dal
                 }
                 if (condition["address"].ToString() != "")
                 {
-                    sql += "    and address = @address";
+                    sql += "    and address like @address";
                 }
                 if (condition["town"].ToString() != "")
                 {
@@ -159,11 +159,11 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@town", condition["town"]));
                 parameters.Add(new SQLiteParameter("@villiage", condition["villiage"]));
                 parameters.Add(new SQLiteParameter("@principal_category", condition["principal_category"]));
-                parameters.Add(new SQLiteParameter("@principal_name", condition["principal_name"]));
-                parameters.Add(new SQLiteParameter("@legal_name", condition["legal_name"]));
+                parameters.Add(new SQLiteParameter("@principal_name", "%"+condition["principal_name"]+"%"));
+                parameters.Add(new SQLiteParameter("@legal_name", "%"+condition["legal_name"]+"%"));
                 parameters.Add(new SQLiteParameter("@registered_trademark", condition["registered_trademark"]));
-                parameters.Add(new SQLiteParameter("@address", condition["address"]));
-                parameters.Add(new SQLiteParameter("@phone_number", condition["phone_number"]));
+                parameters.Add(new SQLiteParameter("@address", "%"+condition["address"]+"%"));
+                parameters.Add(new SQLiteParameter("@phone_number","%"+condition["phone_number"]+"%"));
                 parameters.Add(new SQLiteParameter("@trade_form", condition["trade_form"]));
                 parameters.Add(new SQLiteParameter("@year_person_count_from", condition["year_person_count_from"]));
                 parameters.Add(new SQLiteParameter("@year_person_count_to", condition["year_person_count_to"]));

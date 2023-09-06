@@ -27,15 +27,15 @@ namespace com.vdm.dal
             {
                 if (condition["House_location"].ToString() != "")
                 {
-                    sql += "    and House_location = @House_location";
+                    sql += "    and House_location like @House_location";
                 }
                 if (condition["House_owner"].ToString() != "")
                 {
-                    sql += "    and House_owner = @House_owner";
+                    sql += "    and House_owner like @House_owner";
                 }
                 if (condition["Idcard"].ToString() != "")
                 {
-                    sql += "    and Idcard =@Idcard";
+                    sql += "    and Idcard like @Idcard";
                 }
                 if (condition["House_is_rent"].ToString() != "")
                 {
@@ -87,13 +87,13 @@ namespace com.vdm.dal
             }
 
             sql += " order by create_datetime desc";
-        
+
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
-                parameters.Add(new SQLiteParameter("@House_location", condition["House_location"]));
-                parameters.Add(new SQLiteParameter("@House_owner", condition["House_owner"]));
-                parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
+                parameters.Add(new SQLiteParameter("@House_location", "%" + condition["House_location"] + "%"));
+                parameters.Add(new SQLiteParameter("@House_owner", "%" + condition["House_owner"] + "%"));
+                parameters.Add(new SQLiteParameter("@Idcard", "%" + condition["Idcard"] + "%"));
                 parameters.Add(new SQLiteParameter("@House_is_rent", condition["House_is_rent"]));
                 parameters.Add(new SQLiteParameter("@House_safe_grade", condition["House_safe_grade"]));
                 parameters.Add(new SQLiteParameter("@House_struction", condition["House_struction"]));
@@ -112,7 +112,7 @@ namespace com.vdm.dal
         }
 
         /// <summary>
-        ///  获得所有农户（空条件或者条件查询）
+        ///  获得所有房屋（空条件或者条件查询）
         /// </summary>
         /// <returns></returns>
         public DataTable queryAllHouse(Hashtable condition, int pageIndex, int pageSize)
@@ -122,15 +122,15 @@ namespace com.vdm.dal
             {
                 if (condition["House_location"].ToString() != "")
                 {
-                    sql += "    and House_location = @House_location";
+                    sql += "    and House_location like @House_location";
                 }
                 if (condition["House_owner"].ToString() != "")
                 {
-                    sql += "    and House_owner = @House_owner";
+                    sql += "    and House_owner like @House_owner";
                 }
                 if (condition["Idcard"].ToString() != "")
                 {
-                    sql += "    and Idcard =@Idcard";
+                    sql += "    and Idcard like @Idcard";
                 }
                 if (condition["House_is_rent"].ToString() != "")
                 {
@@ -203,9 +203,9 @@ namespace com.vdm.dal
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
-                parameters.Add(new SQLiteParameter("@House_location", condition["House_location"]));
-                parameters.Add(new SQLiteParameter("@House_owner", condition["House_owner"]));
-                parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
+                parameters.Add(new SQLiteParameter("@House_location", "%"+condition["House_location"]+"%"));
+                parameters.Add(new SQLiteParameter("@House_owner", "%" + condition["House_owner"]+"%"));
+                parameters.Add(new SQLiteParameter("@Idcard", "%"+condition["Idcard"]+"%"));
                 parameters.Add(new SQLiteParameter("@House_is_rent", condition["House_is_rent"]));
                 parameters.Add(new SQLiteParameter("@House_safe_grade", condition["House_safe_grade"]));
                 parameters.Add(new SQLiteParameter("@House_struction", condition["House_struction"]));
@@ -228,57 +228,41 @@ namespace com.vdm.dal
             string sql = "select * from t_house where 1 = 1";
             if (condition != null)
             {
-                if (condition["House_name"].ToString() != "")
+                if (condition["House_location"].ToString() != "")
                 {
-                    sql += "    and House_name = @House_name";
+                    sql += "    and House_location like @House_location";
                 }
-                if (condition["Name"].ToString() != "")
+                if (condition["House_owner"].ToString() != "")
                 {
-                    sql += "    and Name = @Name";
+                    sql += "    and House_owner like @House_owner";
                 }
                 if (condition["Idcard"].ToString() != "")
                 {
-                    sql += "    and Idcard = @Idcard";
+                    sql += "    and Idcard like @Idcard";
                 }
-                if (condition["Is_basic_farmhouse"].ToString() != "")
+                if (condition["House_is_rent"].ToString() != "")
                 {
-                    sql += "    and Is_basic_farmhouse =@Is_basic_farmhouse";
+                    sql += "    and House_is_rent =@House_is_rent";
+                }
+                if (condition["House_safe_grade"].ToString() != "")
+                {
+                    sql += "    and House_safe_grade = @House_safe_grade";
+                }
+                if (condition["House_struction"].ToString() != "")
+                {
+                    sql += "    and House_struction = @House_struction";
                 }
                 if (condition["House_type"].ToString() != "")
                 {
-                    sql += "    and House_type =@House_type";
+                    sql += "    and House_type = @House_type";
                 }
-                if (condition["House_grade"].ToString() != "")
+                if (condition["Is_my_struct"].ToString() != "")
                 {
-                    sql += "    and House_grade = @House_grade";
+                    sql += "    and Is_my_struct = @Is_my_struct";
                 }
-                if (condition["East"].ToString() != "")
+                if (condition["Is_old_house"].ToString() != "")
                 {
-                    sql += "    and East = @East";
-                }
-                if (condition["West"].ToString() != "")
-                {
-                    sql += "    and West = @West";
-                }
-                if (condition["North"].ToString() != "")
-                {
-                    sql += "    and North = @North";
-                }
-                if (condition["South"].ToString() != "")
-                {
-                    sql += "    and South = @South";
-                }
-                if (condition["House_use_remark"].ToString() != "")
-                {
-                    sql += "    and House_use_remark = @House_use_remark";
-                }
-                if (condition["Contractor"].ToString() != "")
-                {
-                    sql += "    and Contractor = @Contractor";
-                }
-                if (condition["Move_type"].ToString() != "")
-                {
-                    sql += "    and Move_type = @Move_type";
+                    sql += "    and Is_old_house = @Is_old_house";
                 }
 
                 if (condition["Village"].ToString() != "")
@@ -290,47 +274,35 @@ namespace com.vdm.dal
                     sql += "    and Town = @Town";
                 }
 
-                if (condition["Real_area_From"].ToString() != "" && condition["Real_area_To"].ToString() != null)
+                if (condition["House_build_date_From"].ToString() != "" && condition["House_build_date_To"].ToString() != null)
                 {
-                    sql += "  and  Real_area BETWEEN '" + condition["Real_area_From"].ToString() + "' AND '" + condition["Real_area_To"].ToString() + "'";
+                    sql += "  and  House_build_date BETWEEN '" + condition["House_build_date_From"].ToString() + "' AND '" + condition["House_build_date_To"].ToString() + "'";
                 }
-                if (condition["Contract_time_From"].ToString() != "" && condition["Contract_time_To"].ToString() != null)
+                if (condition["Oh_checktime_From"].ToString() != "" && condition["Oh_checktime_To"].ToString() != null)
                 {
-                    sql += "  and  Contract_time BETWEEN '" + condition["Contract_time_From"].ToString() + "' AND '" + condition["Contract_time_To"].ToString() + "'";
+                    sql += "  and  Oh_checktime BETWEEN '" + condition["Oh_checktime_From"].ToString() + "' AND '" + condition["Oh_checktime_To"].ToString() + "'";
                 }
-                if (condition["Move_area_From"].ToString() != "" && condition["Move_area_To"].ToString() != null)
+                if (condition["Area_From"].ToString() != "" && condition["Area_To"].ToString() != null)
                 {
-                    sql += "  and  Move_area BETWEEN '" + condition["Move_area_From"].ToString() + "' AND '" + condition["Move_area_To"].ToString() + "'";
+                    sql += "  and  Area BETWEEN '" + condition["Area_From"].ToString() + "' AND '" + condition["Area_To"].ToString() + "'";
                 }
-                if (condition["Move_price_From"].ToString() != "" && condition["Move_price_To"].ToString() != null)
-                {
-                    sql += "  and  Move_price BETWEEN '" + condition["Move_price_From"].ToString() + "' AND '" + condition["Move_price_To"].ToString() + "'";
-                }
-                if (condition["Move_date_From"].ToString() != "" && condition["Move_date_To"].ToString() != null)
-                {
-                    sql += "  and  Move_date BETWEEN '" + condition["Move_date_From"].ToString() + "' AND '" + condition["Move_date_To"].ToString() + "'";
-                }
-
 
             }
 
             sql += " order by create_datetime desc";
+
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
-                parameters.Add(new SQLiteParameter("@House_name", condition["House_name"]));
-                parameters.Add(new SQLiteParameter("@Name", condition["Name"]));
-                parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
-                parameters.Add(new SQLiteParameter("@Is_basic_farmhouse", condition["Is_basic_farmhouse"]));
+                parameters.Add(new SQLiteParameter("@House_location", "%" + condition["House_location"] + "%"));
+                parameters.Add(new SQLiteParameter("@House_owner", "%" + condition["House_owner"] + "%"));
+                parameters.Add(new SQLiteParameter("@Idcard", "%" + condition["Idcard"] + "%"));
+                parameters.Add(new SQLiteParameter("@House_is_rent", condition["House_is_rent"]));
+                parameters.Add(new SQLiteParameter("@House_safe_grade", condition["House_safe_grade"]));
+                parameters.Add(new SQLiteParameter("@House_struction", condition["House_struction"]));
                 parameters.Add(new SQLiteParameter("@House_type", condition["House_type"]));
-                parameters.Add(new SQLiteParameter("@House_grade", condition["House_grade"]));
-                parameters.Add(new SQLiteParameter("@East", condition["East"]));
-                parameters.Add(new SQLiteParameter("@West", condition["West"]));
-                parameters.Add(new SQLiteParameter("@North", condition["North"]));
-                parameters.Add(new SQLiteParameter("@South", condition["South"]));
-                parameters.Add(new SQLiteParameter("@House_use_remark", condition["House_use_remark"]));
-                parameters.Add(new SQLiteParameter("@Contractor", condition["Contractor"]));
-                parameters.Add(new SQLiteParameter("@Move_type", condition["Move_type"]));
+                parameters.Add(new SQLiteParameter("@Is_my_struct", condition["Is_my_struct"]));
+                parameters.Add(new SQLiteParameter("@Is_old_house", condition["Is_old_house"]));
                 parameters.Add(new SQLiteParameter("@Town", condition["Town"]));
                 parameters.Add(new SQLiteParameter("@Village", condition["Village"]));
             }

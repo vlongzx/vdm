@@ -31,7 +31,7 @@ namespace com.vdm.dal
                 }
                 if (condition["Company_address"].ToString() != "")
                 {
-                    sql += "    and Company_address = @Company_address";
+                    sql += "    and Company_address like @Company_address";
                 }
                 if (condition["Company_name"].ToString() != "")
                 {
@@ -51,7 +51,7 @@ namespace com.vdm.dal
                 }
                 if (condition["Legal_name"].ToString() != "")
                 {
-                    sql += "    and Legal_name = @Legal_name";
+                    sql += "    and Legal_name like @Legal_name";
                 }
                 if (condition["Organization_code"].ToString() != "")
                 {
@@ -116,12 +116,12 @@ namespace com.vdm.dal
             if (condition != null)
             {
                 parameters.Add(new SQLiteParameter("@Business_code", condition["Business_code"]));
-                parameters.Add(new SQLiteParameter("@Company_address", condition["Company_address"]));
+                parameters.Add(new SQLiteParameter("@Company_address","%"+ condition["Company_address"]+"%"));
                 parameters.Add(new SQLiteParameter("@Company_name", condition["Company_name"]));
                 parameters.Add(new SQLiteParameter("@Company_phone", condition["Company_phone"]));
                 parameters.Add(new SQLiteParameter("@Credit_code", condition["Credit_code"]));
                 parameters.Add(new SQLiteParameter("@Legal_idcard", condition["Legal_idcard"]));
-                parameters.Add(new SQLiteParameter("@Legal_name", condition["Legal_name"]));
+                parameters.Add(new SQLiteParameter("@Legal_name", "%"+condition["Legal_name"]+"%"));
                 parameters.Add(new SQLiteParameter("@Organization_code", condition["Organization_code"]));
                 parameters.Add(new SQLiteParameter("@Taxpayer_code", condition["Taxpayer_code"]));
                 parameters.Add(new SQLiteParameter("@Taxpayer_qualification", condition["Taxpayer_qualification"]));
@@ -154,7 +154,7 @@ namespace com.vdm.dal
                 }
                 if (condition["Company_address"].ToString() != "")
                 {
-                    sql += "    and Company_address = @Company_address";
+                    sql += "    and Company_address like @Company_address";
                 }
                 if (condition["Company_name"].ToString() != "")
                 {
@@ -174,7 +174,7 @@ namespace com.vdm.dal
                 }
                 if (condition["Legal_name"].ToString() != "")
                 {
-                    sql += "    and Legal_name = @Legal_name";
+                    sql += "    and Legal_name like @Legal_name";
                 }
                 if (condition["Organization_code"].ToString() != "")
                 {
@@ -257,12 +257,12 @@ namespace com.vdm.dal
             if (condition != null)
             {
                 parameters.Add(new SQLiteParameter("@Business_code", condition["Business_code"]));
-                parameters.Add(new SQLiteParameter("@Company_address", condition["Company_address"]));
+                parameters.Add(new SQLiteParameter("@Company_address", "%" + condition["Company_address"] + "%"));
                 parameters.Add(new SQLiteParameter("@Company_name", condition["Company_name"]));
                 parameters.Add(new SQLiteParameter("@Company_phone", condition["Company_phone"]));
                 parameters.Add(new SQLiteParameter("@Credit_code", condition["Credit_code"]));
                 parameters.Add(new SQLiteParameter("@Legal_idcard", condition["Legal_idcard"]));
-                parameters.Add(new SQLiteParameter("@Legal_name", condition["Legal_name"]));
+                parameters.Add(new SQLiteParameter("@Legal_name", "%" + condition["Legal_name"] + "%"));
                 parameters.Add(new SQLiteParameter("@Organization_code", condition["Organization_code"]));
                 parameters.Add(new SQLiteParameter("@Taxpayer_code", condition["Taxpayer_code"]));
                 parameters.Add(new SQLiteParameter("@Taxpayer_qualification", condition["Taxpayer_qualification"]));
@@ -285,57 +285,57 @@ namespace com.vdm.dal
             string sql = "select * from t_company where 1 = 1";
             if (condition != null)
             {
+                if (condition["Business_code"].ToString() != "")
+                {
+                    sql += "    and Business_code = @Business_code";
+                }
+                if (condition["Company_address"].ToString() != "")
+                {
+                    sql += "    and Company_address like @Company_address";
+                }
                 if (condition["Company_name"].ToString() != "")
                 {
                     sql += "    and Company_name = @Company_name";
                 }
-                if (condition["Name"].ToString() != "")
+                if (condition["Company_phone"].ToString() != "")
                 {
-                    sql += "    and Name = @Name";
+                    sql += "    and Company_phone =@Company_phone";
                 }
-                if (condition["Idcard"].ToString() != "")
+                if (condition["Credit_code"].ToString() != "")
                 {
-                    sql += "    and Idcard = @Idcard";
+                    sql += "    and Credit_code =@Credit_code";
                 }
-                if (condition["Is_basic_farmcompany"].ToString() != "")
+                if (condition["Legal_idcard"].ToString() != "")
                 {
-                    sql += "    and Is_basic_farmcompany =@Is_basic_farmcompany";
+                    sql += "    and Legal_idcard = @Legal_idcard";
+                }
+                if (condition["Legal_name"].ToString() != "")
+                {
+                    sql += "    and Legal_name like @Legal_name";
+                }
+                if (condition["Organization_code"].ToString() != "")
+                {
+                    sql += "    and Organization_code = @Organization_code";
+                }
+                if (condition["Taxpayer_code"].ToString() != "")
+                {
+                    sql += "    and Taxpayer_code = @Taxpayer_code";
+                }
+                if (condition["Taxpayer_qualification"].ToString() != "")
+                {
+                    sql += "    and Taxpayer_qualification = @Taxpayer_qualification";
+                }
+                if (condition["Company_status"].ToString() != "")
+                {
+                    sql += "    and Company_status = @Company_status";
                 }
                 if (condition["Company_type"].ToString() != "")
                 {
-                    sql += "    and Company_type =@Company_type";
+                    sql += "    and Company_type = @Company_type";
                 }
-                if (condition["Company_grade"].ToString() != "")
+                if (condition["Is_top_company"].ToString() != "")
                 {
-                    sql += "    and Company_grade = @Company_grade";
-                }
-                if (condition["East"].ToString() != "")
-                {
-                    sql += "    and East = @East";
-                }
-                if (condition["West"].ToString() != "")
-                {
-                    sql += "    and West = @West";
-                }
-                if (condition["North"].ToString() != "")
-                {
-                    sql += "    and North = @North";
-                }
-                if (condition["South"].ToString() != "")
-                {
-                    sql += "    and South = @South";
-                }
-                if (condition["Company_use_remark"].ToString() != "")
-                {
-                    sql += "    and Company_use_remark = @Company_use_remark";
-                }
-                if (condition["Contractor"].ToString() != "")
-                {
-                    sql += "    and Contractor = @Contractor";
-                }
-                if (condition["Move_type"].ToString() != "")
-                {
-                    sql += "    and Move_type = @Move_type";
+                    sql += "    and Is_top_company = @Is_top_company";
                 }
 
                 if (condition["Village"].ToString() != "")
@@ -347,47 +347,48 @@ namespace com.vdm.dal
                     sql += "    and Town = @Town";
                 }
 
-                if (condition["Real_area_From"].ToString() != "" && condition["Real_area_To"].ToString() != null)
+                if (condition["Insure_person_count_From"].ToString() != "" && condition["Insure_person_count_To"].ToString() != null)
                 {
-                    sql += "  and  Real_area BETWEEN '" + condition["Real_area_From"].ToString() + "' AND '" + condition["Real_area_To"].ToString() + "'";
+                    sql += "  and  Insure_person BETWEEN '" + condition["Insure_person_count_From"].ToString() + "' AND '" + condition["Insure_person_count_To"].ToString() + "'";
                 }
-                if (condition["Contract_time_From"].ToString() != "" && condition["Contract_time_To"].ToString() != null)
+                if (condition["Output_From"].ToString() != "" && condition["Output_To"].ToString() != null)
                 {
-                    sql += "  and  Contract_time BETWEEN '" + condition["Contract_time_From"].ToString() + "' AND '" + condition["Contract_time_To"].ToString() + "'";
+                    sql += "  and  Output BETWEEN '" + condition["Output_From"].ToString() + "' AND '" + condition["Output_To"].ToString() + "'";
                 }
-                if (condition["Move_area_From"].ToString() != "" && condition["Move_area_To"].ToString() != null)
+                if (condition["Staff_size_From"].ToString() != "" && condition["Staff_size_To"].ToString() != null)
                 {
-                    sql += "  and  Move_area BETWEEN '" + condition["Move_area_From"].ToString() + "' AND '" + condition["Move_area_To"].ToString() + "'";
+                    sql += "  and  Staff_size BETWEEN '" + condition["Staff_size_From"].ToString() + "' AND '" + condition["Staff_size_To"].ToString() + "'";
                 }
-                if (condition["Move_price_From"].ToString() != "" && condition["Move_price_To"].ToString() != null)
+                if (condition["Establish_date_From"].ToString() != "" && condition["Establish_date_To"].ToString() != null)
                 {
-                    sql += "  and  Move_price BETWEEN '" + condition["Move_price_From"].ToString() + "' AND '" + condition["Move_price_To"].ToString() + "'";
+                    sql += "  and  License_date BETWEEN '" + condition["License_date_From"].ToString() + "' AND '" + condition["Establish_date_To"].ToString() + "'";
                 }
-                if (condition["Move_date_From"].ToString() != "" && condition["Move_date_To"].ToString() != null)
+                if (condition["License_date_From"].ToString() != "" && condition["License_date_To"].ToString() != null)
                 {
-                    sql += "  and  Move_date BETWEEN '" + condition["Move_date_From"].ToString() + "' AND '" + condition["Move_date_To"].ToString() + "'";
+                    sql += "  and  License_date BETWEEN '" + condition["License_date_From"].ToString() + "' AND '" + condition["License_date_To"].ToString() + "'";
                 }
 
 
             }
 
             sql += " order by create_datetime desc";
+
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
+                parameters.Add(new SQLiteParameter("@Business_code", condition["Business_code"]));
+                parameters.Add(new SQLiteParameter("@Company_address", "%" + condition["Company_address"] + "%"));
                 parameters.Add(new SQLiteParameter("@Company_name", condition["Company_name"]));
-                parameters.Add(new SQLiteParameter("@Name", condition["Name"]));
-                parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
-                parameters.Add(new SQLiteParameter("@Is_basic_farmcompany", condition["Is_basic_farmcompany"]));
+                parameters.Add(new SQLiteParameter("@Company_phone", condition["Company_phone"]));
+                parameters.Add(new SQLiteParameter("@Credit_code", condition["Credit_code"]));
+                parameters.Add(new SQLiteParameter("@Legal_idcard", condition["Legal_idcard"]));
+                parameters.Add(new SQLiteParameter("@Legal_name", "%" + condition["Legal_name"] + "%"));
+                parameters.Add(new SQLiteParameter("@Organization_code", condition["Organization_code"]));
+                parameters.Add(new SQLiteParameter("@Taxpayer_code", condition["Taxpayer_code"]));
+                parameters.Add(new SQLiteParameter("@Taxpayer_qualification", condition["Taxpayer_qualification"]));
+                parameters.Add(new SQLiteParameter("@Company_status", condition["Company_status"]));
                 parameters.Add(new SQLiteParameter("@Company_type", condition["Company_type"]));
-                parameters.Add(new SQLiteParameter("@Company_grade", condition["Company_grade"]));
-                parameters.Add(new SQLiteParameter("@East", condition["East"]));
-                parameters.Add(new SQLiteParameter("@West", condition["West"]));
-                parameters.Add(new SQLiteParameter("@North", condition["North"]));
-                parameters.Add(new SQLiteParameter("@South", condition["South"]));
-                parameters.Add(new SQLiteParameter("@Company_use_remark", condition["Company_use_remark"]));
-                parameters.Add(new SQLiteParameter("@Contractor", condition["Contractor"]));
-                parameters.Add(new SQLiteParameter("@Move_type", condition["Move_type"]));
+                parameters.Add(new SQLiteParameter("@Is_top_company", condition["Is_top_company"]));
                 parameters.Add(new SQLiteParameter("@Town", condition["Town"]));
                 parameters.Add(new SQLiteParameter("@Village", condition["Village"]));
             }

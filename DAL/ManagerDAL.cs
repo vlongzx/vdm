@@ -25,9 +25,9 @@ namespace com.vdm.dal
             string sql = "select * from t_manager where 1 = 1";
             if (condition != null)
             {
-                if (condition.ContainsKey("People_name") && condition["People_name"].ToString() != "")
+                if (condition.ContainsKey("Manager_name") && condition["Manager_name"].ToString() != "")
                 {
-                    sql += "    and people_name = @people_name";
+                    sql += "    and manager_name like @manager_name";
                 }
                 if (condition.ContainsKey("Sex") && condition["Sex"].ToString() != "")
                 {
@@ -39,7 +39,7 @@ namespace com.vdm.dal
                 }
                 if (condition.ContainsKey(" Post") && condition["Post"].ToString() != "")
                 {
-                    sql += "    and Post = @Post";
+                    sql += "    and Post like @Post";
                 }
                 if (condition.ContainsKey("Politcal_outlook") && condition["Politcal_outlook"].ToString() != "")
                 {
@@ -83,9 +83,9 @@ namespace com.vdm.dal
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
-                parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
+                parameters.Add(new SQLiteParameter("@manager_name", "%" + condition["Manager_name"] + "%"));
                 parameters.Add(new SQLiteParameter("@nation", condition["Nation"]));
-                parameters.Add(new SQLiteParameter("@post", condition["Post"]));
+                parameters.Add(new SQLiteParameter("@post", "%" + condition["Post"] + "%"));
                 parameters.Add(new SQLiteParameter("@sex", condition["Sex"]));
                 parameters.Add(new SQLiteParameter("@politcal_outlook", condition["Politcal_outlook"]));
                 parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
@@ -111,9 +111,9 @@ namespace com.vdm.dal
             string sql = "select * from t_manager where 1 = 1";
             if (condition != null)
             {
-                if (condition.ContainsKey("People_name") && condition["People_name"].ToString() != "")
+                if (condition.ContainsKey("Manager_name") && condition["Manager_name"].ToString() != "")
                 {
-                    sql += "    and people_name = @people_name";
+                    sql += "    and manager_name like @manager_name";
                 }
                 if (condition.ContainsKey("Sex") && condition["Sex"].ToString() != "")
                 {
@@ -125,7 +125,7 @@ namespace com.vdm.dal
                 }
                 if (condition.ContainsKey(" Post") && condition["Post"].ToString() != "")
                 {
-                    sql += "    and Post = @Post";
+                    sql += "    and Post like @Post";
                 }
                 if (condition.ContainsKey("Politcal_outlook") && condition["Politcal_outlook"].ToString() != "")
                 {
@@ -186,9 +186,9 @@ namespace com.vdm.dal
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
-                parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
+                parameters.Add(new SQLiteParameter("@manager_name", "%"+condition["Manager_name"]+"%"));
                 parameters.Add(new SQLiteParameter("@nation", condition["Nation"]));
-                parameters.Add(new SQLiteParameter("@post", condition["Post"]));
+                parameters.Add(new SQLiteParameter("@post", "%"+condition["Post"]+"%"));
                 parameters.Add(new SQLiteParameter("@sex", condition["Sex"]));
                 parameters.Add(new SQLiteParameter("@politcal_outlook", condition["Politcal_outlook"]));
                 parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
@@ -210,9 +210,9 @@ namespace com.vdm.dal
             string sql = "select * from t_manager where 1 = 1";
             if (condition != null)
             {
-                if (condition.ContainsKey("People_name") && condition["People_name"].ToString() != "")
+                if (condition.ContainsKey("Manager_name") && condition["Manager_name"].ToString() != "")
                 {
-                    sql += "    and people_name = @people_name";
+                    sql += "    and manager_name like @manager_name";
                 }
                 if (condition.ContainsKey("Sex") && condition["Sex"].ToString() != "")
                 {
@@ -224,7 +224,7 @@ namespace com.vdm.dal
                 }
                 if (condition.ContainsKey(" Post") && condition["Post"].ToString() != "")
                 {
-                    sql += "    and Post = @Post";
+                    sql += "    and Post like @Post";
                 }
                 if (condition.ContainsKey("Politcal_outlook") && condition["Politcal_outlook"].ToString() != "")
                 {
@@ -268,9 +268,9 @@ namespace com.vdm.dal
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
-                parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
+                parameters.Add(new SQLiteParameter("@manager_name", "%" + condition["Manager_name"] + "%"));
                 parameters.Add(new SQLiteParameter("@nation", condition["Nation"]));
-                parameters.Add(new SQLiteParameter("@post", condition["Post"]));
+                parameters.Add(new SQLiteParameter("@post", "%" + condition["Post"] + "%"));
                 parameters.Add(new SQLiteParameter("@sex", condition["Sex"]));
                 parameters.Add(new SQLiteParameter("@politcal_outlook", condition["Politcal_outlook"]));
                 parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLandInfo));
             this.dpMove_date = new Sunny.UI.UIDatePicker();
             this.tbReal_area = new Sunny.UI.UITextBox();
             this.tbMove_price = new Sunny.UI.UITextBox();
@@ -68,12 +69,18 @@
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.label12 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
+            this.cbgLand_tpye = new Sunny.UI.UICheckBoxGroup();
+            this.uiCheckBox4 = new Sunny.UI.UICheckBox();
+            this.uiCheckBox3 = new Sunny.UI.UICheckBox();
+            this.uiCheckBox2 = new Sunny.UI.UICheckBox();
+            this.uiCheckBox1 = new Sunny.UI.UICheckBox();
             this.pnlBtm.SuspendLayout();
+            this.cbgLand_tpye.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBtm
             // 
-            this.pnlBtm.Location = new System.Drawing.Point(1, 469);
+            this.pnlBtm.Location = new System.Drawing.Point(1, 865);
             this.pnlBtm.Size = new System.Drawing.Size(1596, 55);
             // 
             // btnCancel
@@ -652,10 +659,74 @@
             this.uiLabel1.Text = "实测面积(亩）";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // cbgLand_tpye
+            // 
+            this.cbgLand_tpye.ColumnCount = 5;
+            this.cbgLand_tpye.Controls.Add(this.uiCheckBox4);
+            this.cbgLand_tpye.Controls.Add(this.uiCheckBox3);
+            this.cbgLand_tpye.Controls.Add(this.uiCheckBox2);
+            this.cbgLand_tpye.Controls.Add(this.uiCheckBox1);
+            this.cbgLand_tpye.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbgLand_tpye.Location = new System.Drawing.Point(537, 594);
+            this.cbgLand_tpye.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbgLand_tpye.MinimumSize = new System.Drawing.Size(1, 1);
+            this.cbgLand_tpye.Name = "cbgLand_tpye";
+            this.cbgLand_tpye.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.cbgLand_tpye.SelectedIndexes = ((System.Collections.Generic.List<int>)(resources.GetObject("cbgLand_tpye.SelectedIndexes")));
+            this.cbgLand_tpye.Size = new System.Drawing.Size(409, 171);
+            this.cbgLand_tpye.TabIndex = 305;
+            this.cbgLand_tpye.Text = "地块类型";
+            this.cbgLand_tpye.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiCheckBox4
+            // 
+            this.uiCheckBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiCheckBox4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiCheckBox4.Location = new System.Drawing.Point(309, 51);
+            this.uiCheckBox4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiCheckBox4.Name = "uiCheckBox4";
+            this.uiCheckBox4.Size = new System.Drawing.Size(68, 29);
+            this.uiCheckBox4.TabIndex = 0;
+            this.uiCheckBox4.Text = "D";
+            // 
+            // uiCheckBox3
+            // 
+            this.uiCheckBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiCheckBox3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiCheckBox3.Location = new System.Drawing.Point(223, 51);
+            this.uiCheckBox3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiCheckBox3.Name = "uiCheckBox3";
+            this.uiCheckBox3.Size = new System.Drawing.Size(68, 29);
+            this.uiCheckBox3.TabIndex = 0;
+            this.uiCheckBox3.Text = "C";
+            // 
+            // uiCheckBox2
+            // 
+            this.uiCheckBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiCheckBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiCheckBox2.Location = new System.Drawing.Point(137, 51);
+            this.uiCheckBox2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiCheckBox2.Name = "uiCheckBox2";
+            this.uiCheckBox2.Size = new System.Drawing.Size(68, 29);
+            this.uiCheckBox2.TabIndex = 0;
+            this.uiCheckBox2.Text = "B";
+            // 
+            // uiCheckBox1
+            // 
+            this.uiCheckBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiCheckBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiCheckBox1.Location = new System.Drawing.Point(52, 51);
+            this.uiCheckBox1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiCheckBox1.Name = "uiCheckBox1";
+            this.uiCheckBox1.Size = new System.Drawing.Size(68, 29);
+            this.uiCheckBox1.TabIndex = 0;
+            this.uiCheckBox1.Text = "A";
+            // 
             // frmLandInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1598, 527);
+            this.ClientSize = new System.Drawing.Size(1598, 923);
+            this.Controls.Add(this.cbgLand_tpye);
             this.Controls.Add(this.dpMove_date);
             this.Controls.Add(this.tbReal_area);
             this.Controls.Add(this.tbMove_price);
@@ -741,7 +812,9 @@
             this.Controls.SetChildIndex(this.tbMove_price, 0);
             this.Controls.SetChildIndex(this.tbReal_area, 0);
             this.Controls.SetChildIndex(this.dpMove_date, 0);
+            this.Controls.SetChildIndex(this.cbgLand_tpye, 0);
             this.pnlBtm.ResumeLayout(false);
+            this.cbgLand_tpye.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -789,5 +862,10 @@
         private Sunny.UI.UILabel uiLabel4;
         private Sunny.UI.UILabel label12;
         private Sunny.UI.UILabel uiLabel1;
+        private Sunny.UI.UICheckBoxGroup cbgLand_tpye;
+        private Sunny.UI.UICheckBox uiCheckBox4;
+        private Sunny.UI.UICheckBox uiCheckBox3;
+        private Sunny.UI.UICheckBox uiCheckBox2;
+        private Sunny.UI.UICheckBox uiCheckBox1;
     }
 }

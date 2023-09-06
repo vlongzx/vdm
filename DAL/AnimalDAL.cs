@@ -96,11 +96,11 @@ namespace com.vdm.dal
                 }
                 if (condition["manager"].ToString() != "")
                 {
-                    sql += "    and manager = @manager";
+                    sql += "    and manager like @manager";
                 }
                 if (condition["phone_number"].ToString() != "")
                 {
-                    sql += "    and phone_number = @phone_number";
+                    sql += "    and phone_number like @phone_number";
                 }
                 if (condition["idcard"].ToString() != "")
                 {
@@ -108,7 +108,7 @@ namespace com.vdm.dal
                 }
                 if (condition["address"].ToString() != "")
                 {
-                    sql += "    and address = @address";
+                    sql += "    and address like @address";
                 }
                 if (condition["year_inventory"].ToString() != "0")
                 {
@@ -189,10 +189,10 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@town", condition["town"]));
                 parameters.Add(new SQLiteParameter("@villiage", condition["villiage"]));
                 parameters.Add(new SQLiteParameter("@breed_type", condition["breed_type"]));
-                parameters.Add(new SQLiteParameter("@manager", condition["manager"]));
-                parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
+                parameters.Add(new SQLiteParameter("@manager","%"+condition["manager"]+"%"));
+                parameters.Add(new SQLiteParameter("@phone_number", "%"+condition["Phone_number"]+"%"));
                 parameters.Add(new SQLiteParameter("@idcard", condition["Idcard"]));
-                parameters.Add(new SQLiteParameter("@address", condition["address"]));
+                parameters.Add(new SQLiteParameter("@address", "%"+condition["address"]+"%"));
                 parameters.Add(new SQLiteParameter("@year_inventory", condition["year_inventory"]));
                 parameters.Add(new SQLiteParameter("@year_outbound", condition["year_outbound"]));
                 parameters.Add(new SQLiteParameter("@output_from", condition["output_from"]));

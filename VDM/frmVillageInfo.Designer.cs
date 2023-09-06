@@ -61,7 +61,7 @@
             // 
             // pnlBtm
             // 
-            this.pnlBtm.Location = new System.Drawing.Point(1, 316);
+            this.pnlBtm.Location = new System.Drawing.Point(1, 309);
             this.pnlBtm.Size = new System.Drawing.Size(1538, 55);
             // 
             // btnCancel
@@ -504,7 +504,7 @@
             // frmVillageInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1540, 374);
+            this.ClientSize = new System.Drawing.Size(1540, 367);
             this.Controls.Add(this.tbFactory);
             this.Controls.Add(this.tbMove_area);
             this.Controls.Add(this.cbTown);

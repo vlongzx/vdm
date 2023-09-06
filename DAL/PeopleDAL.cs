@@ -43,7 +43,7 @@ namespace com.vdm.dal
             //基本查询条件
             if (condition["People_name"].ToString() != "")
             {
-                sql += "    and people_name = @people_name";
+                sql += "    and people_name like @people_name";
             }
             if (condition["Sex"].ToString() != "")
             {
@@ -63,11 +63,11 @@ namespace com.vdm.dal
             }
             if (condition["Phone_number"].ToString() != "")
             {
-                sql += "    and phone_number = @phone_number";
+                sql += "    and phone_number like @phone_number";
             }
             if (condition["Idcard"].ToString() != "")
             {
-                sql += "    and idcard = @idcard";
+                sql += "    and idcard like @idcard";
             }
             if (condition["Skill_type"].ToString() != "")
             {
@@ -105,7 +105,7 @@ namespace com.vdm.dal
             }
             if (condition.ContainsKey("Religious_belief") && condition["Religious_belief"].ToString() != "")
             {
-                sql += "    and Religious_belief = @Religious_belief";
+                sql += "    and Religious_belief like @Religious_belief";
             }
             if (condition.ContainsKey("Is_real_name") && condition["Is_real_name"].ToString() != "")
             {
@@ -117,15 +117,15 @@ namespace com.vdm.dal
             }
             if (condition.ContainsKey("Industry") && condition["Industry"].ToString() != "")
             {
-                sql += "    and Industry = @Industry";
+                sql += "    and Industry like @Industry";
             }
             if (condition.ContainsKey("Unit_or_school") && condition["Unit_or_school"].ToString() != "")
             {
-                sql += "    and Unit_or_school = @Unit_or_school";
+                sql += "    and Unit_or_school like @Unit_or_school";
             }
             if (condition.ContainsKey("Work_study_location") && condition["Work_study_location"].ToString() != "")
             {
-                sql += "    and Work_study_location = @Work_study_location";
+                sql += "    and Work_study_location like @Work_study_location";
             }
             if (condition.ContainsKey("Employ_guide") && condition["Employ_guide"].ToString() != "")
             {
@@ -141,7 +141,7 @@ namespace com.vdm.dal
             }
             if (condition.ContainsKey("Career_grade") && condition["Career_grade"].ToString() != "")
             {
-                sql += "    and Career_grade = @Career_grade";
+                sql += "    and Career_grade like @Career_grade";
             }
             if (condition.ContainsKey("Career_get_time") && condition["Career_get_time"].ToString() != "")
             {
@@ -157,7 +157,7 @@ namespace com.vdm.dal
             }
             if (condition.ContainsKey("Disability_reason") && condition["Disability_reason"].ToString() != "")
             {
-                sql += "    and Disability_reason = @Disability_reason";
+                sql += "    and Disability_reason like @Disability_reason";
             }
             if (condition.ContainsKey("Big_ill_help") && condition["Big_ill_help"].ToString() != "")
             {
@@ -189,14 +189,15 @@ namespace com.vdm.dal
             }
 
             sql += " order by create_datetime desc";
+
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
-            parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
+            parameters.Add(new SQLiteParameter("@people_name", "%" + condition["People_name"] + "%"));
             parameters.Add(new SQLiteParameter("@nation", condition["Nation"]));
             parameters.Add(new SQLiteParameter("@relationship", condition["Relationship"]));
             parameters.Add(new SQLiteParameter("@sex", condition["Sex"]));
             parameters.Add(new SQLiteParameter("@politcal_outlook", condition["Politcal_outlook"]));
-            parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
-            parameters.Add(new SQLiteParameter("@idcard", condition["Idcard"]));
+            parameters.Add(new SQLiteParameter("@phone_number", "%" + condition["Phone_number"] + "%"));
+            parameters.Add(new SQLiteParameter("@idcard", "%" + condition["Idcard"] + "%"));
             parameters.Add(new SQLiteParameter("@marital_status", condition["Marital_status"]));
             parameters.Add(new SQLiteParameter("@education", condition["Education"]));
             parameters.Add(new SQLiteParameter("@skill_type", condition["Skill_type"]));
@@ -206,10 +207,14 @@ namespace com.vdm.dal
             parameters.Add(new SQLiteParameter("@Work_or_study", condition["Work_or_study"]));
             parameters.Add(new SQLiteParameter("@Is_real_name", condition["Is_real_name"]));
             parameters.Add(new SQLiteParameter("@Blood_type", condition["Blood_type"]));
-            parameters.Add(new SQLiteParameter("@Religious_belief", condition["Religious_belief"]));
-            parameters.Add(new SQLiteParameter("@Industry", condition["Industry"]));
-            parameters.Add(new SQLiteParameter("@Unit_or_school", condition["Unit_or_school"]));
-            parameters.Add(new SQLiteParameter("@Work_study_location", condition["Work_study_location"]));
+            parameters.Add(new SQLiteParameter("@Religious_belief", "%" + condition["Religious_belief"] + "%"));
+            parameters.Add(new SQLiteParameter("@Industry", "%" + condition["Industry"] + "%"));
+
+            parameters.Add(new SQLiteParameter("@Unit_or_school", "%" + condition["Unit_or_school"] + "%"));
+            parameters.Add(new SQLiteParameter("@Work_study_location", "%" + condition["Work_study_location"] + "%"));
+            parameters.Add(new SQLiteParameter("@Career_grade", "%" + condition["Career_grade"] + "%"));
+            parameters.Add(new SQLiteParameter("@Disability_reason", "%" + condition["Disability_reason"] + "%"));
+
             parameters.Add(new SQLiteParameter("@Employ_guide", condition["Employ_guide"]));
             parameters.Add(new SQLiteParameter("@Skill_train", condition["Skill_train"]));
             parameters.Add(new SQLiteParameter("@Is_career_grade", condition["Is_career_grade"]));
@@ -217,7 +222,6 @@ namespace com.vdm.dal
             parameters.Add(new SQLiteParameter("@Career_get_time", condition["Career_get_time"]));
             parameters.Add(new SQLiteParameter("@Disability_type", condition["Disability_type"]));
             parameters.Add(new SQLiteParameter("@Disability_grade", condition["Disability_grade"]));
-            parameters.Add(new SQLiteParameter("@Disability_reason", condition["Disability_reason"]));
             parameters.Add(new SQLiteParameter("@Big_ill_help", condition["Big_ill_help"]));
             parameters.Add(new SQLiteParameter("@Temporary_help", condition["Temporary_help"]));
             parameters.Add(new SQLiteParameter("@Is_unable_old", condition["Is_unable_old"]));
@@ -274,13 +278,8 @@ namespace com.vdm.dal
             //基本查询条件
             if (condition["People_name"].ToString() != "")
             {
-                sql += "    and people_name = @people_name";
+                sql += "    and people_name like @people_name";
             }
-            //if (condition["People_name"].ToString() != "")
-            //{
-            //    sql += "    and people_name like `%`@people_name`%`";
-            //}
-
             if (condition["Sex"].ToString() != "")
             {
                 sql += "    and sex = @sex";
@@ -299,11 +298,11 @@ namespace com.vdm.dal
             }
             if (condition["Phone_number"].ToString() != "")
             {
-                sql += "    and phone_number = @phone_number";
+                sql += "    and phone_number like @phone_number";
             }
             if (condition["Idcard"].ToString() != "")
             {
-                sql += "    and idcard = @idcard";
+                sql += "    and idcard like @idcard";
             }
             if (condition["Skill_type"].ToString() != "")
             {
@@ -341,7 +340,7 @@ namespace com.vdm.dal
             }
             if (condition.ContainsKey("Religious_belief") && condition["Religious_belief"].ToString() != "")
             {
-                sql += "    and Religious_belief = @Religious_belief";
+                sql += "    and Religious_belief like @Religious_belief";
             }
             if (condition.ContainsKey("Is_real_name") && condition["Is_real_name"].ToString() != "")
             {
@@ -353,15 +352,15 @@ namespace com.vdm.dal
             }
             if (condition.ContainsKey("Industry") && condition["Industry"].ToString() != "")
             {
-                sql += "    and Industry = @Industry";
+                sql += "    and Industry like @Industry";
             }
             if (condition.ContainsKey("Unit_or_school") && condition["Unit_or_school"].ToString() != "")
             {
-                sql += "    and Unit_or_school = @Unit_or_school";
+                sql += "    and Unit_or_school like @Unit_or_school";
             }
             if (condition.ContainsKey("Work_study_location") && condition["Work_study_location"].ToString() != "")
             {
-                sql += "    and Work_study_location = @Work_study_location";
+                sql += "    and Work_study_location like @Work_study_location";
             }
             if (condition.ContainsKey("Employ_guide") && condition["Employ_guide"].ToString() != "")
             {
@@ -377,7 +376,7 @@ namespace com.vdm.dal
             }
             if (condition.ContainsKey("Career_grade") && condition["Career_grade"].ToString() != "")
             {
-                sql += "    and Career_grade = @Career_grade";
+                sql += "    and Career_grade like @Career_grade";
             }
             if (condition.ContainsKey("Career_get_time") && condition["Career_get_time"].ToString() != "")
             {
@@ -393,7 +392,7 @@ namespace com.vdm.dal
             }
             if (condition.ContainsKey("Disability_reason") && condition["Disability_reason"].ToString() != "")
             {
-                sql += "    and Disability_reason = @Disability_reason";
+                sql += "    and Disability_reason like @Disability_reason";
             }
             if (condition.ContainsKey("Big_ill_help") && condition["Big_ill_help"].ToString() != "")
             {
@@ -444,13 +443,13 @@ namespace com.vdm.dal
             sql += "  limit  " + limit;
             sql += "  offset  " + offset;
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
-            parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
+            parameters.Add(new SQLiteParameter("@people_name","%"+ condition["People_name"]+"%"));
             parameters.Add(new SQLiteParameter("@nation", condition["Nation"]));
             parameters.Add(new SQLiteParameter("@relationship", condition["Relationship"]));
             parameters.Add(new SQLiteParameter("@sex", condition["Sex"]));
             parameters.Add(new SQLiteParameter("@politcal_outlook", condition["Politcal_outlook"]));
-            parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
-            parameters.Add(new SQLiteParameter("@idcard", condition["Idcard"]));
+            parameters.Add(new SQLiteParameter("@phone_number", "%" + condition["Phone_number"] + "%"));
+            parameters.Add(new SQLiteParameter("@idcard", "%" + condition["Idcard"] + "%"));
             parameters.Add(new SQLiteParameter("@marital_status", condition["Marital_status"]));
             parameters.Add(new SQLiteParameter("@education", condition["Education"]));
             parameters.Add(new SQLiteParameter("@skill_type", condition["Skill_type"]));
@@ -460,10 +459,14 @@ namespace com.vdm.dal
             parameters.Add(new SQLiteParameter("@Work_or_study", condition["Work_or_study"]));
             parameters.Add(new SQLiteParameter("@Is_real_name", condition["Is_real_name"]));
             parameters.Add(new SQLiteParameter("@Blood_type", condition["Blood_type"]));
-            parameters.Add(new SQLiteParameter("@Religious_belief", condition["Religious_belief"]));
-            parameters.Add(new SQLiteParameter("@Industry", condition["Industry"]));
-            parameters.Add(new SQLiteParameter("@Unit_or_school", condition["Unit_or_school"]));
-            parameters.Add(new SQLiteParameter("@Work_study_location", condition["Work_study_location"]));
+            parameters.Add(new SQLiteParameter("@Religious_belief", "%" + condition["Religious_belief"] + "%"));
+            parameters.Add(new SQLiteParameter("@Industry", "%" + condition["Industry"] + "%"));
+
+            parameters.Add(new SQLiteParameter("@Unit_or_school", "%" + condition["Unit_or_school"] + "%"));
+            parameters.Add(new SQLiteParameter("@Work_study_location", "%" + condition["Work_study_location"] + "%"));
+            parameters.Add(new SQLiteParameter("@Career_grade", "%" + condition["Career_grade"] + "%"));
+            parameters.Add(new SQLiteParameter("@Disability_reason", "%" + condition["Disability_reason"] + "%"));
+
             parameters.Add(new SQLiteParameter("@Employ_guide", condition["Employ_guide"]));
             parameters.Add(new SQLiteParameter("@Skill_train", condition["Skill_train"]));
             parameters.Add(new SQLiteParameter("@Is_career_grade", condition["Is_career_grade"]));
@@ -471,7 +474,6 @@ namespace com.vdm.dal
             parameters.Add(new SQLiteParameter("@Career_get_time", condition["Career_get_time"]));
             parameters.Add(new SQLiteParameter("@Disability_type", condition["Disability_type"]));
             parameters.Add(new SQLiteParameter("@Disability_grade", condition["Disability_grade"]));
-            parameters.Add(new SQLiteParameter("@Disability_reason", condition["Disability_reason"]));
             parameters.Add(new SQLiteParameter("@Big_ill_help", condition["Big_ill_help"]));
             parameters.Add(new SQLiteParameter("@Temporary_help", condition["Temporary_help"]));
             parameters.Add(new SQLiteParameter("@Is_unable_old", condition["Is_unable_old"]));
@@ -493,59 +495,60 @@ namespace com.vdm.dal
             string sql = "select * from t_people where 1 = 1";
             if (condition!=null)
             {
-                if (condition.ContainsKey("People_name") && condition["People_name"].ToString() != "")
+                //基本查询条件
+                if (condition["People_name"].ToString() != "")
                 {
-                    sql += "    and people_name = @people_name";
+                    sql += "    and people_name like @people_name";
                 }
-                if (condition.ContainsKey("Sex") && condition["Sex"].ToString() != "")
+                if (condition["Sex"].ToString() != "")
                 {
                     sql += "    and sex = @sex";
                 }
-                if (condition.ContainsKey("Nation") && condition["Nation"].ToString() != "")
+                if (condition["Nation"].ToString() != "")
                 {
                     sql += "    and nation = @nation";
                 }
-                if (condition.ContainsKey("Relationship") && condition["Relationship"].ToString() != "")
+                if (condition["Relationship"].ToString() != "")
                 {
                     sql += "    and relationship = @relationship";
                 }
-                if (condition.ContainsKey("Politcal_outlook") && condition["Politcal_outlook"].ToString() != "")
+                if (condition["Politcal_outlook"].ToString() != "")
                 {
                     sql += "    and politcal_outlook = @politcal_outlook";
                 }
-                if (condition.ContainsKey("Phone_number") && condition["Phone_number"].ToString() != "")
+                if (condition["Phone_number"].ToString() != "")
                 {
-                    sql += "    and phone_number = @phone_number";
+                    sql += "    and phone_number like @phone_number";
                 }
-                if (condition.ContainsKey("Idcard") && condition["Idcard"].ToString() != "")
+                if (condition["Idcard"].ToString() != "")
                 {
-                    sql += "    and idcard = @idcard";
+                    sql += "    and idcard like @idcard";
                 }
-                if (condition.ContainsKey("Skill_type") && condition["Skill_type"].ToString() != "")
+                if (condition["Skill_type"].ToString() != "")
                 {
                     sql += "    and skill_type = @skill_type";
                 }
-                if (condition.ContainsKey("Village") && condition["Village"].ToString() != "")
+                if (condition["Village"].ToString() != "")
                 {
                     sql += "    and village = @village";
                 }
-                if (condition.ContainsKey("Town") && condition["Town"].ToString() != "")
+                if (condition["Town"].ToString() != "")
                 {
                     sql += "    and town = @town";
                 }
-                if (condition.ContainsKey("Marital_status") && condition["Marital_status"].ToString() != "")
+                if (condition["Marital_status"].ToString() != "")
                 {
                     sql += "    and marital_status = @marital_status";
                 }
-                if (condition.ContainsKey("Education") && condition["Education"].ToString() != "")
+                if (condition["Education"].ToString() != "")
                 {
                     sql += "    and education = @education";
                 }
-                if (condition.ContainsKey("Birthday_From") && condition["Birthday_From"].ToString() != "" && condition.ContainsKey("Birthday_To") && condition["Birthday_To"].ToString() != null)
+                if (condition["Birthday_From"].ToString() != "" && condition["Birthday_To"].ToString() != null)
                 {
                     sql += "  and  birthday BETWEEN '" + condition["Birthday_From"].ToString() + "' AND '" + condition["Birthday_To"].ToString() + "'";
                 }
-                if (condition.ContainsKey("Join_party_time_from") && condition["Join_party_time_from"].ToString() != "" && condition.ContainsKey("Join_party_time_to") && condition["Join_party_time_to"].ToString() != null)
+                if (condition["Join_party_time_from"].ToString() != "" && condition["Join_party_time_to"].ToString() != null)
                 {
                     sql += " and   join_party_time BETWEEN '" + condition["Join_party_time_from"].ToString() + "' AND '" + condition["Join_party_time_to"].ToString() + "'";
                 }
@@ -557,7 +560,7 @@ namespace com.vdm.dal
                 }
                 if (condition.ContainsKey("Religious_belief") && condition["Religious_belief"].ToString() != "")
                 {
-                    sql += "    and Religious_belief = @Religious_belief";
+                    sql += "    and Religious_belief like @Religious_belief";
                 }
                 if (condition.ContainsKey("Is_real_name") && condition["Is_real_name"].ToString() != "")
                 {
@@ -569,15 +572,15 @@ namespace com.vdm.dal
                 }
                 if (condition.ContainsKey("Industry") && condition["Industry"].ToString() != "")
                 {
-                    sql += "    and Industry = @Industry";
+                    sql += "    and Industry like @Industry";
                 }
                 if (condition.ContainsKey("Unit_or_school") && condition["Unit_or_school"].ToString() != "")
                 {
-                    sql += "    and Unit_or_school = @Unit_or_school";
+                    sql += "    and Unit_or_school like @Unit_or_school";
                 }
                 if (condition.ContainsKey("Work_study_location") && condition["Work_study_location"].ToString() != "")
                 {
-                    sql += "    and Work_study_location = @Work_study_location";
+                    sql += "    and Work_study_location like @Work_study_location";
                 }
                 if (condition.ContainsKey("Employ_guide") && condition["Employ_guide"].ToString() != "")
                 {
@@ -593,7 +596,7 @@ namespace com.vdm.dal
                 }
                 if (condition.ContainsKey("Career_grade") && condition["Career_grade"].ToString() != "")
                 {
-                    sql += "    and Career_grade = @Career_grade";
+                    sql += "    and Career_grade like @Career_grade";
                 }
                 if (condition.ContainsKey("Career_get_time") && condition["Career_get_time"].ToString() != "")
                 {
@@ -609,7 +612,7 @@ namespace com.vdm.dal
                 }
                 if (condition.ContainsKey("Disability_reason") && condition["Disability_reason"].ToString() != "")
                 {
-                    sql += "    and Disability_reason = @Disability_reason";
+                    sql += "    and Disability_reason like @Disability_reason";
                 }
                 if (condition.ContainsKey("Big_ill_help") && condition["Big_ill_help"].ToString() != "")
                 {
@@ -641,15 +644,15 @@ namespace com.vdm.dal
                 }
 
                 sql += " order by create_datetime desc";
-                List<SQLiteParameter> parameters = new List<SQLiteParameter>();
 
-                parameters.Add(new SQLiteParameter("@people_name", condition["People_name"]));
+                List<SQLiteParameter> parameters = new List<SQLiteParameter>();
+                parameters.Add(new SQLiteParameter("@people_name", "%" + condition["People_name"] + "%"));
                 parameters.Add(new SQLiteParameter("@nation", condition["Nation"]));
                 parameters.Add(new SQLiteParameter("@relationship", condition["Relationship"]));
                 parameters.Add(new SQLiteParameter("@sex", condition["Sex"]));
                 parameters.Add(new SQLiteParameter("@politcal_outlook", condition["Politcal_outlook"]));
-                parameters.Add(new SQLiteParameter("@phone_number", condition["Phone_number"]));
-                parameters.Add(new SQLiteParameter("@idcard", condition["Idcard"]));
+                parameters.Add(new SQLiteParameter("@phone_number", "%" + condition["Phone_number"] + "%"));
+                parameters.Add(new SQLiteParameter("@idcard", "%" + condition["Idcard"] + "%"));
                 parameters.Add(new SQLiteParameter("@marital_status", condition["Marital_status"]));
                 parameters.Add(new SQLiteParameter("@education", condition["Education"]));
                 parameters.Add(new SQLiteParameter("@skill_type", condition["Skill_type"]));
@@ -659,10 +662,14 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@Work_or_study", condition["Work_or_study"]));
                 parameters.Add(new SQLiteParameter("@Is_real_name", condition["Is_real_name"]));
                 parameters.Add(new SQLiteParameter("@Blood_type", condition["Blood_type"]));
-                parameters.Add(new SQLiteParameter("@Religious_belief", condition["Religious_belief"]));
-                parameters.Add(new SQLiteParameter("@Industry", condition["Industry"]));
-                parameters.Add(new SQLiteParameter("@Unit_or_school", condition["Unit_or_school"]));
-                parameters.Add(new SQLiteParameter("@Work_study_location", condition["Work_study_location"]));
+                parameters.Add(new SQLiteParameter("@Religious_belief", "%" + condition["Religious_belief"] + "%"));
+                parameters.Add(new SQLiteParameter("@Industry", "%" + condition["Industry"] + "%"));
+
+                parameters.Add(new SQLiteParameter("@Unit_or_school", "%" + condition["Unit_or_school"] + "%"));
+                parameters.Add(new SQLiteParameter("@Work_study_location", "%" + condition["Work_study_location"] + "%"));
+                parameters.Add(new SQLiteParameter("@Career_grade", "%" + condition["Career_grade"] + "%"));
+                parameters.Add(new SQLiteParameter("@Disability_reason", "%" + condition["Disability_reason"] + "%"));
+
                 parameters.Add(new SQLiteParameter("@Employ_guide", condition["Employ_guide"]));
                 parameters.Add(new SQLiteParameter("@Skill_train", condition["Skill_train"]));
                 parameters.Add(new SQLiteParameter("@Is_career_grade", condition["Is_career_grade"]));
@@ -670,7 +677,6 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@Career_get_time", condition["Career_get_time"]));
                 parameters.Add(new SQLiteParameter("@Disability_type", condition["Disability_type"]));
                 parameters.Add(new SQLiteParameter("@Disability_grade", condition["Disability_grade"]));
-                parameters.Add(new SQLiteParameter("@Disability_reason", condition["Disability_reason"]));
                 parameters.Add(new SQLiteParameter("@Big_ill_help", condition["Big_ill_help"]));
                 parameters.Add(new SQLiteParameter("@Temporary_help", condition["Temporary_help"]));
                 parameters.Add(new SQLiteParameter("@Is_unable_old", condition["Is_unable_old"]));
