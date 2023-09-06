@@ -109,6 +109,7 @@
             // cbPlant_area_type
             // 
             this.cbPlant_area_type.DataSource = null;
+            this.cbPlant_area_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbPlant_area_type.FillColor = System.Drawing.Color.White;
             this.cbPlant_area_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbPlant_area_type.Location = new System.Drawing.Point(1024, 145);
@@ -178,6 +179,7 @@
             // cbTown
             // 
             this.cbTown.DataSource = null;
+            this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTown.Location = new System.Drawing.Point(641, 455);
@@ -194,6 +196,7 @@
             // cbVillage
             // 
             this.cbVillage.DataSource = null;
+            this.cbVillage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbVillage.Location = new System.Drawing.Point(1024, 452);
@@ -220,6 +223,7 @@
             // cbAnimal_area_type
             // 
             this.cbAnimal_area_type.DataSource = null;
+            this.cbAnimal_area_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbAnimal_area_type.FillColor = System.Drawing.Color.White;
             this.cbAnimal_area_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbAnimal_area_type.Location = new System.Drawing.Point(250, 294);
@@ -235,6 +239,7 @@
             // cbAnimal_type
             // 
             this.cbAnimal_type.DataSource = null;
+            this.cbAnimal_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbAnimal_type.FillColor = System.Drawing.Color.White;
             this.cbAnimal_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbAnimal_type.Location = new System.Drawing.Point(1453, 223);
@@ -251,6 +256,7 @@
             // cbPlant_type
             // 
             this.cbPlant_type.DataSource = null;
+            this.cbPlant_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbPlant_type.FillColor = System.Drawing.Color.White;
             this.cbPlant_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbPlant_type.Location = new System.Drawing.Point(641, 143);

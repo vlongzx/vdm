@@ -303,6 +303,7 @@
             // cbIs_relocation
             // 
             this.cbIs_relocation.DataSource = null;
+            this.cbIs_relocation.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbIs_relocation.FillColor = System.Drawing.Color.White;
             this.cbIs_relocation.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbIs_relocation.Location = new System.Drawing.Point(960, 144);
@@ -365,6 +366,7 @@
             // cbRelationship
             // 
             this.cbRelationship.DataSource = null;
+            this.cbRelationship.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbRelationship.FillColor = System.Drawing.Color.White;
             this.cbRelationship.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbRelationship.Location = new System.Drawing.Point(1361, 48);
@@ -381,6 +383,7 @@
             // cbBlood_type
             // 
             this.cbBlood_type.DataSource = null;
+            this.cbBlood_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbBlood_type.FillColor = System.Drawing.Color.White;
             this.cbBlood_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbBlood_type.Location = new System.Drawing.Point(1361, 144);
@@ -397,6 +400,7 @@
             // cbTown
             // 
             this.cbTown.DataSource = null;
+            this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTown.Location = new System.Drawing.Point(1361, 96);
@@ -430,6 +434,7 @@
             // cbMarital_status
             // 
             this.cbMarital_status.DataSource = null;
+            this.cbMarital_status.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbMarital_status.FillColor = System.Drawing.Color.White;
             this.cbMarital_status.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbMarital_status.Location = new System.Drawing.Point(558, 144);
@@ -446,6 +451,7 @@
             // cbVillage
             // 
             this.cbVillage.DataSource = null;
+            this.cbVillage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbVillage.Location = new System.Drawing.Point(167, 144);
@@ -462,6 +468,7 @@
             // cbSex
             // 
             this.cbSex.DataSource = null;
+            this.cbSex.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbSex.FillColor = System.Drawing.Color.White;
             this.cbSex.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbSex.Location = new System.Drawing.Point(558, 48);
@@ -561,6 +568,7 @@
             // cbIs_real_name
             // 
             this.cbIs_real_name.DataSource = null;
+            this.cbIs_real_name.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbIs_real_name.FillColor = System.Drawing.Color.White;
             this.cbIs_real_name.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbIs_real_name.Location = new System.Drawing.Point(558, 37);
@@ -682,6 +690,7 @@
             // cbEducation
             // 
             this.cbEducation.DataSource = null;
+            this.cbEducation.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbEducation.FillColor = System.Drawing.Color.White;
             this.cbEducation.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbEducation.Location = new System.Drawing.Point(1361, 49);
@@ -698,6 +707,7 @@
             // cbPolitcal_outlook
             // 
             this.cbPolitcal_outlook.DataSource = null;
+            this.cbPolitcal_outlook.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbPolitcal_outlook.FillColor = System.Drawing.Color.White;
             this.cbPolitcal_outlook.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbPolitcal_outlook.Location = new System.Drawing.Point(167, 49);
@@ -766,6 +776,7 @@
             // cbIs_career_grade
             // 
             this.cbIs_career_grade.DataSource = null;
+            this.cbIs_career_grade.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbIs_career_grade.FillColor = System.Drawing.Color.White;
             this.cbIs_career_grade.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbIs_career_grade.Location = new System.Drawing.Point(167, 148);
@@ -927,9 +938,10 @@
             // cbMilitary_service
             // 
             this.cbMilitary_service.DataSource = null;
+            this.cbMilitary_service.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbMilitary_service.FillColor = System.Drawing.Color.White;
             this.cbMilitary_service.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbMilitary_service.Location = new System.Drawing.Point(1337, 94);
+            this.cbMilitary_service.Location = new System.Drawing.Point(1361, 102);
             this.cbMilitary_service.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbMilitary_service.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbMilitary_service.Name = "cbMilitary_service";
@@ -967,6 +979,7 @@
             // cbSkill_train
             // 
             this.cbSkill_train.DataSource = null;
+            this.cbSkill_train.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbSkill_train.FillColor = System.Drawing.Color.White;
             this.cbSkill_train.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbSkill_train.Location = new System.Drawing.Point(935, 94);
@@ -983,6 +996,7 @@
             // cbEmploy_guide
             // 
             this.cbEmploy_guide.DataSource = null;
+            this.cbEmploy_guide.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbEmploy_guide.FillColor = System.Drawing.Color.White;
             this.cbEmploy_guide.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbEmploy_guide.Location = new System.Drawing.Point(558, 94);
@@ -1050,6 +1064,7 @@
             // cbWork_or_study
             // 
             this.cbWork_or_study.DataSource = null;
+            this.cbWork_or_study.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbWork_or_study.FillColor = System.Drawing.Color.White;
             this.cbWork_or_study.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbWork_or_study.Location = new System.Drawing.Point(167, 58);
@@ -1189,6 +1204,7 @@
             // cbIs_unable_old
             // 
             this.cbIs_unable_old.DataSource = null;
+            this.cbIs_unable_old.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbIs_unable_old.FillColor = System.Drawing.Color.White;
             this.cbIs_unable_old.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbIs_unable_old.Location = new System.Drawing.Point(978, 87);
@@ -1205,6 +1221,7 @@
             // cbLow_five_grade
             // 
             this.cbLow_five_grade.DataSource = null;
+            this.cbLow_five_grade.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbLow_five_grade.FillColor = System.Drawing.Color.White;
             this.cbLow_five_grade.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbLow_five_grade.Location = new System.Drawing.Point(558, 134);
@@ -1221,6 +1238,7 @@
             // cbTemporary_help
             // 
             this.cbTemporary_help.DataSource = null;
+            this.cbTemporary_help.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTemporary_help.FillColor = System.Drawing.Color.White;
             this.cbTemporary_help.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTemporary_help.Location = new System.Drawing.Point(558, 87);
@@ -1237,6 +1255,7 @@
             // cbDisability_grade
             // 
             this.cbDisability_grade.DataSource = null;
+            this.cbDisability_grade.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbDisability_grade.FillColor = System.Drawing.Color.White;
             this.cbDisability_grade.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbDisability_grade.Location = new System.Drawing.Point(968, 35);
@@ -1270,6 +1289,7 @@
             // cbLow_five
             // 
             this.cbLow_five.DataSource = null;
+            this.cbLow_five.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbLow_five.FillColor = System.Drawing.Color.White;
             this.cbLow_five.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbLow_five.Location = new System.Drawing.Point(167, 134);
@@ -1287,6 +1307,7 @@
             // cbBig_ill_help
             // 
             this.cbBig_ill_help.DataSource = null;
+            this.cbBig_ill_help.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbBig_ill_help.FillColor = System.Drawing.Color.White;
             this.cbBig_ill_help.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbBig_ill_help.Location = new System.Drawing.Point(167, 87);
@@ -1303,6 +1324,7 @@
             // cbDisability_type
             // 
             this.cbDisability_type.DataSource = null;
+            this.cbDisability_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbDisability_type.FillColor = System.Drawing.Color.White;
             this.cbDisability_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbDisability_type.Location = new System.Drawing.Point(167, 38);

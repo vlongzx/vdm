@@ -187,6 +187,7 @@
             // cbMove_type
             // 
             this.cbMove_type.DataSource = null;
+            this.cbMove_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbMove_type.FillColor = System.Drawing.Color.White;
             this.cbMove_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbMove_type.Location = new System.Drawing.Point(596, 266);
@@ -309,6 +310,7 @@
             // cbIs_basic_farmland
             // 
             this.cbIs_basic_farmland.DataSource = null;
+            this.cbIs_basic_farmland.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbIs_basic_farmland.FillColor = System.Drawing.Color.White;
             this.cbIs_basic_farmland.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbIs_basic_farmland.Location = new System.Drawing.Point(1299, 129);
@@ -426,6 +428,7 @@
             // cbTown
             // 
             this.cbTown.DataSource = null;
+            this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTown.Location = new System.Drawing.Point(953, 313);
@@ -442,6 +445,7 @@
             // cbVillage
             // 
             this.cbVillage.DataSource = null;
+            this.cbVillage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbVillage.Location = new System.Drawing.Point(1299, 309);
@@ -468,6 +472,7 @@
             // cbLand_type
             // 
             this.cbLand_type.DataSource = null;
+            this.cbLand_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbLand_type.FillColor = System.Drawing.Color.White;
             this.cbLand_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbLand_type.Location = new System.Drawing.Point(215, 171);
@@ -483,6 +488,7 @@
             // cbLand_grade
             // 
             this.cbLand_grade.DataSource = null;
+            this.cbLand_grade.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbLand_grade.FillColor = System.Drawing.Color.White;
             this.cbLand_grade.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbLand_grade.Location = new System.Drawing.Point(596, 171);

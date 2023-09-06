@@ -405,6 +405,7 @@
             // cbTown
             // 
             this.cbTown.DataSource = null;
+            this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTown.Location = new System.Drawing.Point(978, 311);
@@ -421,6 +422,7 @@
             // cbCompany_type
             // 
             this.cbCompany_type.DataSource = null;
+            this.cbCompany_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbCompany_type.FillColor = System.Drawing.Color.White;
             this.cbCompany_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbCompany_type.Location = new System.Drawing.Point(606, 122);
@@ -436,6 +438,7 @@
             // cbCompany_status
             // 
             this.cbCompany_status.DataSource = null;
+            this.cbCompany_status.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbCompany_status.FillColor = System.Drawing.Color.White;
             this.cbCompany_status.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbCompany_status.Location = new System.Drawing.Point(1327, 211);
@@ -451,6 +454,7 @@
             // cbIs_top_company
             // 
             this.cbIs_top_company.DataSource = null;
+            this.cbIs_top_company.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbIs_top_company.FillColor = System.Drawing.Color.White;
             this.cbIs_top_company.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbIs_top_company.Location = new System.Drawing.Point(1327, 166);
@@ -466,6 +470,7 @@
             // cbVillage
             // 
             this.cbVillage.DataSource = null;
+            this.cbVillage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbVillage.Location = new System.Drawing.Point(1327, 307);
@@ -635,6 +640,7 @@
             // cbTaxpayer_qualification
             // 
             this.cbTaxpayer_qualification.DataSource = null;
+            this.cbTaxpayer_qualification.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTaxpayer_qualification.FillColor = System.Drawing.Color.White;
             this.cbTaxpayer_qualification.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTaxpayer_qualification.Location = new System.Drawing.Point(606, 307);
