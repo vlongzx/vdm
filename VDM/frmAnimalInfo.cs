@@ -57,8 +57,8 @@ namespace com.vdm.form
                 this.cbSolid_pollution.SelectedValue = animal.Solid_pollution;
                 this.cbTown.SelectedValue = animal.Town;
                 this.cbVillage.SelectedValue = animal.Village;
-                this.cbYear_inventory.SelectedValue = animal.Year_inventory;
-                this.cbYear_outbound.SelectedValue = animal.Year_outbound;
+                this.tbYear_inventory.Text = animal.Year_inventory;
+                this.tbYear_outbound.Text = animal.Year_outbound;
             }
 
         }
@@ -78,23 +78,6 @@ namespace com.vdm.form
                 this.cbBreed_type.ValueMember = "key";
             }
 
-            //年存栏（设计规模）
-            List<KeyValue> list_year_inventory = dictBLL.getDict("year_inventory");
-            if (list_year_inventory != null)
-            {
-                this.cbYear_inventory.DataSource = list_year_inventory;
-                this.cbYear_inventory.DisplayMember = "value";
-                this.cbYear_inventory.ValueMember = "key";
-            }
-
-            //年出栏（设计规模）
-            List<KeyValue> list_year_outbound = dictBLL.getDict("year_outbound");
-            if (list_year_outbound != null)
-            {
-                this.cbYear_outbound.DataSource = list_year_outbound;
-                this.cbYear_outbound.DisplayMember = "value";
-                this.cbYear_outbound.ValueMember = "key";
-            }
 
             //动物防疫条件合格证
             List<KeyValue> list_animal_qualify = dictBLL.getDict("animal_qualify");
@@ -191,8 +174,8 @@ namespace com.vdm.form
             {
                 animal.Total_area = double.Parse(this.tbTotal_area.Text.Trim());
             }
-            animal.Year_inventory = this.cbYear_inventory.SelectedValue.ToString();
-            animal.Year_outbound = this.cbYear_outbound.SelectedValue.ToString();
+            animal.Year_inventory = this.tbYear_inventory.Text;
+            animal.Year_outbound = this.tbYear_outbound.Text;
             animal.Solid_pollution = this.cbSolid_pollution.SelectedValue.ToString();
             animal.Report_or_filings = this.cbReport_or_filings.SelectedValue.ToString();
             animal.Remark = this.tbRemark.Text;

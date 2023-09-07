@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiLabel24 = new Sunny.UI.UILabel();
             this.uiLabel23 = new Sunny.UI.UILabel();
             this.uiLabel25 = new Sunny.UI.UILabel();
@@ -42,7 +42,6 @@
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
-            this.cbYear_outbound = new Sunny.UI.UIComboBox();
             this.cbBreed_type = new Sunny.UI.UIComboBox();
             this.tbBreed_name = new Sunny.UI.UITextBox();
             this.label9 = new Sunny.UI.UILabel();
@@ -87,13 +86,18 @@
             this.cbVillage = new Sunny.UI.UIComboBox();
             this.uiLabel7 = new Sunny.UI.UILabel();
             this.uiLabel8 = new Sunny.UI.UILabel();
-            this.cbYear_inventory = new Sunny.UI.UIComboBox();
             this.tbManager = new Sunny.UI.UITextBox();
             this.tbAddress = new Sunny.UI.UITextBox();
             this.tbPhone_number = new Sunny.UI.UITextBox();
             this.tbIdcard = new Sunny.UI.UITextBox();
             this.uiLabel14 = new Sunny.UI.UILabel();
             this.pagination = new Sunny.UI.UIPagination();
+            this.tbYear_inventory_from = new Sunny.UI.UITextBox();
+            this.tbYear_inventory_to = new Sunny.UI.UITextBox();
+            this.uiLabel15 = new Sunny.UI.UILabel();
+            this.tbYear_outbound_from = new Sunny.UI.UITextBox();
+            this.tbYear_outbound_to = new Sunny.UI.UITextBox();
+            this.uiLabel16 = new Sunny.UI.UILabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgAnimalList)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.uiGroupBox1.SuspendLayout();
@@ -147,6 +151,7 @@
             // cbAnimal_qualify
             // 
             this.cbAnimal_qualify.DataSource = null;
+            this.cbAnimal_qualify.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbAnimal_qualify.FillColor = System.Drawing.Color.White;
             this.cbAnimal_qualify.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbAnimal_qualify.Location = new System.Drawing.Point(932, 181);
@@ -162,6 +167,7 @@
             // cbSolid_pollution
             // 
             this.cbSolid_pollution.DataSource = null;
+            this.cbSolid_pollution.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbSolid_pollution.FillColor = System.Drawing.Color.White;
             this.cbSolid_pollution.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbSolid_pollution.Location = new System.Drawing.Point(1281, 181);
@@ -207,24 +213,10 @@
             this.uiLabel2.Text = "养殖场（户）";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cbYear_outbound
-            // 
-            this.cbYear_outbound.DataSource = null;
-            this.cbYear_outbound.FillColor = System.Drawing.Color.White;
-            this.cbYear_outbound.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbYear_outbound.Location = new System.Drawing.Point(1281, 43);
-            this.cbYear_outbound.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbYear_outbound.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbYear_outbound.Name = "cbYear_outbound";
-            this.cbYear_outbound.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbYear_outbound.Size = new System.Drawing.Size(165, 29);
-            this.cbYear_outbound.TabIndex = 138;
-            this.cbYear_outbound.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbYear_outbound.Watermark = "";
-            // 
             // cbBreed_type
             // 
             this.cbBreed_type.DataSource = null;
+            this.cbBreed_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbBreed_type.FillColor = System.Drawing.Color.White;
             this.cbBreed_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbBreed_type.Location = new System.Drawing.Point(578, 43);
@@ -360,6 +352,7 @@
             this.btReset.TabIndex = 62;
             this.btReset.Text = "重置(&R)";
             this.btReset.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btReset.Click += new System.EventHandler(this.btReset_Click);
             // 
             // btSearch
             // 
@@ -378,48 +371,48 @@
             // 
             this.dgAnimalList.AllowUserToAddRows = false;
             this.dgAnimalList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgAnimalList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgAnimalList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgAnimalList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgAnimalList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgAnimalList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgAnimalList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgAnimalList.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgAnimalList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgAnimalList.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgAnimalList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgAnimalList.EnableHeadersVisualStyles = false;
             this.dgAnimalList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgAnimalList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgAnimalList.Location = new System.Drawing.Point(4, 32);
             this.dgAnimalList.Name = "dgAnimalList";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgAnimalList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgAnimalList.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgAnimalList.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgAnimalList.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgAnimalList.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgAnimalList.RowTemplate.Height = 23;
             this.dgAnimalList.ScrollBarHandleWidth = 40;
             this.dgAnimalList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -516,12 +509,16 @@
             this.uiGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiGroupBox1.Controls.Add(this.uiLabel11);
+            this.uiGroupBox1.Controls.Add(this.uiLabel16);
+            this.uiGroupBox1.Controls.Add(this.uiLabel15);
             this.uiGroupBox1.Controls.Add(this.uiLabel10);
             this.uiGroupBox1.Controls.Add(this.uiLabel13);
             this.uiGroupBox1.Controls.Add(this.uiLabel9);
             this.uiGroupBox1.Controls.Add(this.uiLabel12);
             this.uiGroupBox1.Controls.Add(this.uiLabel5);
             this.uiGroupBox1.Controls.Add(this.tbMidden_area_To);
+            this.uiGroupBox1.Controls.Add(this.tbYear_outbound_to);
+            this.uiGroupBox1.Controls.Add(this.tbYear_inventory_to);
             this.uiGroupBox1.Controls.Add(this.tbPen_area_To);
             this.uiGroupBox1.Controls.Add(this.tbCueernt_inventory_To);
             this.uiGroupBox1.Controls.Add(this.tbTotal_area_To);
@@ -548,11 +545,11 @@
             this.uiGroupBox1.Controls.Add(this.uiLabel3);
             this.uiGroupBox1.Controls.Add(this.uiLabel1);
             this.uiGroupBox1.Controls.Add(this.uiLabel2);
-            this.uiGroupBox1.Controls.Add(this.cbYear_inventory);
-            this.uiGroupBox1.Controls.Add(this.cbYear_outbound);
             this.uiGroupBox1.Controls.Add(this.cbBreed_type);
             this.uiGroupBox1.Controls.Add(this.tbManager);
             this.uiGroupBox1.Controls.Add(this.tbAddress);
+            this.uiGroupBox1.Controls.Add(this.tbYear_outbound_from);
+            this.uiGroupBox1.Controls.Add(this.tbYear_inventory_from);
             this.uiGroupBox1.Controls.Add(this.tbPhone_number);
             this.uiGroupBox1.Controls.Add(this.tbIdcard);
             this.uiGroupBox1.Controls.Add(this.tbBreed_name);
@@ -657,6 +654,7 @@
             this.tbMidden_area_To.ShowText = false;
             this.tbMidden_area_To.Size = new System.Drawing.Size(62, 29);
             this.tbMidden_area_To.TabIndex = 131;
+            this.tbMidden_area_To.Text = "0.00";
             this.tbMidden_area_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbMidden_area_To.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbMidden_area_To.Watermark = "";
@@ -674,6 +672,7 @@
             this.tbPen_area_To.ShowText = false;
             this.tbPen_area_To.Size = new System.Drawing.Size(62, 29);
             this.tbPen_area_To.TabIndex = 131;
+            this.tbPen_area_To.Text = "0.00";
             this.tbPen_area_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPen_area_To.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbPen_area_To.Watermark = "";
@@ -691,6 +690,7 @@
             this.tbCueernt_inventory_To.ShowText = false;
             this.tbCueernt_inventory_To.Size = new System.Drawing.Size(62, 29);
             this.tbCueernt_inventory_To.TabIndex = 131;
+            this.tbCueernt_inventory_To.Text = "0";
             this.tbCueernt_inventory_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbCueernt_inventory_To.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbCueernt_inventory_To.Watermark = "";
@@ -708,6 +708,7 @@
             this.tbTotal_area_To.ShowText = false;
             this.tbTotal_area_To.Size = new System.Drawing.Size(62, 29);
             this.tbTotal_area_To.TabIndex = 131;
+            this.tbTotal_area_To.Text = "0.00";
             this.tbTotal_area_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbTotal_area_To.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbTotal_area_To.Watermark = "";
@@ -725,6 +726,7 @@
             this.tbPullttion_area_To.ShowText = false;
             this.tbPullttion_area_To.Size = new System.Drawing.Size(62, 29);
             this.tbPullttion_area_To.TabIndex = 131;
+            this.tbPullttion_area_To.Text = "0.00";
             this.tbPullttion_area_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPullttion_area_To.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbPullttion_area_To.Watermark = "";
@@ -742,6 +744,7 @@
             this.tbOutput_To.ShowText = false;
             this.tbOutput_To.Size = new System.Drawing.Size(62, 29);
             this.tbOutput_To.TabIndex = 131;
+            this.tbOutput_To.Text = "0.00";
             this.tbOutput_To.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbOutput_To.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbOutput_To.Watermark = "";
@@ -759,6 +762,7 @@
             this.tbMidden_area_From.ShowText = false;
             this.tbMidden_area_From.Size = new System.Drawing.Size(62, 29);
             this.tbMidden_area_From.TabIndex = 131;
+            this.tbMidden_area_From.Text = "0.00";
             this.tbMidden_area_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbMidden_area_From.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbMidden_area_From.Watermark = "";
@@ -776,6 +780,7 @@
             this.tbPen_area_From.ShowText = false;
             this.tbPen_area_From.Size = new System.Drawing.Size(62, 29);
             this.tbPen_area_From.TabIndex = 131;
+            this.tbPen_area_From.Text = "0.00";
             this.tbPen_area_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPen_area_From.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbPen_area_From.Watermark = "";
@@ -793,6 +798,7 @@
             this.tbCueernt_inventory_From.ShowText = false;
             this.tbCueernt_inventory_From.Size = new System.Drawing.Size(62, 29);
             this.tbCueernt_inventory_From.TabIndex = 131;
+            this.tbCueernt_inventory_From.Text = "0";
             this.tbCueernt_inventory_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbCueernt_inventory_From.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbCueernt_inventory_From.Watermark = "";
@@ -810,6 +816,7 @@
             this.tbTotal_area_From.ShowText = false;
             this.tbTotal_area_From.Size = new System.Drawing.Size(62, 29);
             this.tbTotal_area_From.TabIndex = 131;
+            this.tbTotal_area_From.Text = "0.00";
             this.tbTotal_area_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbTotal_area_From.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbTotal_area_From.Watermark = "";
@@ -827,6 +834,7 @@
             this.tbPullttion_area_From.ShowText = false;
             this.tbPullttion_area_From.Size = new System.Drawing.Size(62, 29);
             this.tbPullttion_area_From.TabIndex = 131;
+            this.tbPullttion_area_From.Text = "0.00";
             this.tbPullttion_area_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPullttion_area_From.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbPullttion_area_From.Watermark = "";
@@ -844,6 +852,7 @@
             this.tbOutput_From.ShowText = false;
             this.tbOutput_From.Size = new System.Drawing.Size(62, 29);
             this.tbOutput_From.TabIndex = 131;
+            this.tbOutput_From.Text = "0.00";
             this.tbOutput_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbOutput_From.Type = Sunny.UI.UITextBox.UIEditType.Double;
             this.tbOutput_From.Watermark = "";
@@ -862,6 +871,7 @@
             // cbReport_or_filings
             // 
             this.cbReport_or_filings.DataSource = null;
+            this.cbReport_or_filings.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbReport_or_filings.FillColor = System.Drawing.Color.White;
             this.cbReport_or_filings.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbReport_or_filings.Location = new System.Drawing.Point(197, 225);
@@ -877,6 +887,7 @@
             // cbTown
             // 
             this.cbTown.DataSource = null;
+            this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTown.Location = new System.Drawing.Point(578, 225);
@@ -893,6 +904,7 @@
             // cbVillage
             // 
             this.cbVillage.DataSource = null;
+            this.cbVillage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbVillage.Location = new System.Drawing.Point(932, 226);
@@ -928,21 +940,6 @@
             this.uiLabel8.TabIndex = 166;
             this.uiLabel8.Text = "环评报告";
             this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbYear_inventory
-            // 
-            this.cbYear_inventory.DataSource = null;
-            this.cbYear_inventory.FillColor = System.Drawing.Color.White;
-            this.cbYear_inventory.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbYear_inventory.Location = new System.Drawing.Point(932, 44);
-            this.cbYear_inventory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbYear_inventory.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbYear_inventory.Name = "cbYear_inventory";
-            this.cbYear_inventory.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbYear_inventory.Size = new System.Drawing.Size(165, 29);
-            this.cbYear_inventory.TabIndex = 138;
-            this.cbYear_inventory.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbYear_inventory.Watermark = "";
             // 
             // tbManager
             // 
@@ -1041,6 +1038,100 @@
             this.pagination.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.pagination.TotalCount = 40000;
             // 
+            // tbYear_inventory_from
+            // 
+            this.tbYear_inventory_from.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbYear_inventory_from.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbYear_inventory_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbYear_inventory_from.Location = new System.Drawing.Point(932, 43);
+            this.tbYear_inventory_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbYear_inventory_from.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbYear_inventory_from.Name = "tbYear_inventory_from";
+            this.tbYear_inventory_from.Padding = new System.Windows.Forms.Padding(5);
+            this.tbYear_inventory_from.ShowText = false;
+            this.tbYear_inventory_from.Size = new System.Drawing.Size(62, 29);
+            this.tbYear_inventory_from.TabIndex = 130;
+            this.tbYear_inventory_from.Text = "0";
+            this.tbYear_inventory_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbYear_inventory_from.Type = Sunny.UI.UITextBox.UIEditType.Integer;
+            this.tbYear_inventory_from.Watermark = "";
+            // 
+            // tbYear_inventory_to
+            // 
+            this.tbYear_inventory_to.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbYear_inventory_to.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbYear_inventory_to.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbYear_inventory_to.Location = new System.Drawing.Point(1035, 43);
+            this.tbYear_inventory_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbYear_inventory_to.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbYear_inventory_to.Name = "tbYear_inventory_to";
+            this.tbYear_inventory_to.Padding = new System.Windows.Forms.Padding(5);
+            this.tbYear_inventory_to.ShowText = false;
+            this.tbYear_inventory_to.Size = new System.Drawing.Size(62, 29);
+            this.tbYear_inventory_to.TabIndex = 131;
+            this.tbYear_inventory_to.Text = "0";
+            this.tbYear_inventory_to.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbYear_inventory_to.Type = Sunny.UI.UITextBox.UIEditType.Integer;
+            this.tbYear_inventory_to.Watermark = "";
+            // 
+            // uiLabel15
+            // 
+            this.uiLabel15.AutoSize = true;
+            this.uiLabel15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel15.Location = new System.Drawing.Point(1001, 41);
+            this.uiLabel15.Name = "uiLabel15";
+            this.uiLabel15.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel15.TabIndex = 174;
+            this.uiLabel15.Text = "-";
+            this.uiLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tbYear_outbound_from
+            // 
+            this.tbYear_outbound_from.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbYear_outbound_from.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbYear_outbound_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbYear_outbound_from.Location = new System.Drawing.Point(1281, 42);
+            this.tbYear_outbound_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbYear_outbound_from.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbYear_outbound_from.Name = "tbYear_outbound_from";
+            this.tbYear_outbound_from.Padding = new System.Windows.Forms.Padding(5);
+            this.tbYear_outbound_from.ShowText = false;
+            this.tbYear_outbound_from.Size = new System.Drawing.Size(62, 29);
+            this.tbYear_outbound_from.TabIndex = 130;
+            this.tbYear_outbound_from.Text = "0";
+            this.tbYear_outbound_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbYear_outbound_from.Type = Sunny.UI.UITextBox.UIEditType.Integer;
+            this.tbYear_outbound_from.Watermark = "";
+            // 
+            // tbYear_outbound_to
+            // 
+            this.tbYear_outbound_to.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbYear_outbound_to.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbYear_outbound_to.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbYear_outbound_to.Location = new System.Drawing.Point(1384, 42);
+            this.tbYear_outbound_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbYear_outbound_to.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbYear_outbound_to.Name = "tbYear_outbound_to";
+            this.tbYear_outbound_to.Padding = new System.Windows.Forms.Padding(5);
+            this.tbYear_outbound_to.ShowText = false;
+            this.tbYear_outbound_to.Size = new System.Drawing.Size(62, 29);
+            this.tbYear_outbound_to.TabIndex = 131;
+            this.tbYear_outbound_to.Text = "0";
+            this.tbYear_outbound_to.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbYear_outbound_to.Type = Sunny.UI.UITextBox.UIEditType.Integer;
+            this.tbYear_outbound_to.Watermark = "";
+            // 
+            // uiLabel16
+            // 
+            this.uiLabel16.AutoSize = true;
+            this.uiLabel16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel16.Location = new System.Drawing.Point(1350, 40);
+            this.uiLabel16.Name = "uiLabel16";
+            this.uiLabel16.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel16.TabIndex = 174;
+            this.uiLabel16.Text = "-";
+            this.uiLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmAnimalList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1074,7 +1165,6 @@
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UILabel uiLabel2;
-        private Sunny.UI.UIComboBox cbYear_outbound;
         private Sunny.UI.UIComboBox cbBreed_type;
         private Sunny.UI.UITextBox tbBreed_name;
         private Sunny.UI.UILabel label9;
@@ -1124,7 +1214,12 @@
         private Sunny.UI.UITextBox tbOutput_From;
         private Sunny.UI.UIComboBox cbReport_or_filings;
         private Sunny.UI.UITextBox tbTotal_area_From;
-        private Sunny.UI.UIComboBox cbYear_inventory;
         private Sunny.UI.UILabel uiLabel14;
+        private Sunny.UI.UILabel uiLabel16;
+        private Sunny.UI.UILabel uiLabel15;
+        private Sunny.UI.UITextBox tbYear_outbound_to;
+        private Sunny.UI.UITextBox tbYear_inventory_to;
+        private Sunny.UI.UITextBox tbYear_outbound_from;
+        private Sunny.UI.UITextBox tbYear_inventory_from;
     }
 }

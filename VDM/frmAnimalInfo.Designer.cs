@@ -39,7 +39,6 @@
             this.cbReport_or_filings = new Sunny.UI.UIComboBox();
             this.cbSolid_pollution = new Sunny.UI.UIComboBox();
             this.cbAnimal_qualify = new Sunny.UI.UIComboBox();
-            this.cbYear_inventory = new Sunny.UI.UIComboBox();
             this.uiLabel15 = new Sunny.UI.UILabel();
             this.uiLabel14 = new Sunny.UI.UILabel();
             this.uiLabel7 = new Sunny.UI.UILabel();
@@ -61,7 +60,6 @@
             this.uiLabel35 = new Sunny.UI.UILabel();
             this.uiLabel11 = new Sunny.UI.UILabel();
             this.uiLabel8 = new Sunny.UI.UILabel();
-            this.cbYear_outbound = new Sunny.UI.UIComboBox();
             this.uiLabel5 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.cbTown = new Sunny.UI.UIComboBox();
@@ -69,6 +67,8 @@
             this.cbBreed_type = new Sunny.UI.UIComboBox();
             this.tbAddress = new Sunny.UI.UITextBox();
             this.tbPhone_number = new Sunny.UI.UITextBox();
+            this.tbYear_inventory = new Sunny.UI.UITextBox();
+            this.tbYear_outbound = new Sunny.UI.UITextBox();
             this.pnlBtm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -101,7 +101,6 @@
             this.groupBox1.Controls.Add(this.cbReport_or_filings);
             this.groupBox1.Controls.Add(this.cbSolid_pollution);
             this.groupBox1.Controls.Add(this.cbAnimal_qualify);
-            this.groupBox1.Controls.Add(this.cbYear_inventory);
             this.groupBox1.Controls.Add(this.uiLabel15);
             this.groupBox1.Controls.Add(this.uiLabel14);
             this.groupBox1.Controls.Add(this.uiLabel7);
@@ -123,13 +122,14 @@
             this.groupBox1.Controls.Add(this.uiLabel35);
             this.groupBox1.Controls.Add(this.uiLabel11);
             this.groupBox1.Controls.Add(this.uiLabel8);
-            this.groupBox1.Controls.Add(this.cbYear_outbound);
             this.groupBox1.Controls.Add(this.uiLabel5);
             this.groupBox1.Controls.Add(this.uiLabel1);
             this.groupBox1.Controls.Add(this.cbTown);
             this.groupBox1.Controls.Add(this.cbVillage);
             this.groupBox1.Controls.Add(this.cbBreed_type);
+            this.groupBox1.Controls.Add(this.tbYear_outbound);
             this.groupBox1.Controls.Add(this.tbAddress);
+            this.groupBox1.Controls.Add(this.tbYear_inventory);
             this.groupBox1.Controls.Add(this.tbPhone_number);
             this.groupBox1.Location = new System.Drawing.Point(19, 45);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -324,29 +324,13 @@
             this.cbAnimal_qualify.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbAnimal_qualify.Watermark = "";
             // 
-            // cbYear_inventory
-            // 
-            this.cbYear_inventory.DataSource = null;
-            this.cbYear_inventory.FillColor = System.Drawing.Color.White;
-            this.cbYear_inventory.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbYear_inventory.Location = new System.Drawing.Point(169, 176);
-            this.cbYear_inventory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbYear_inventory.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbYear_inventory.Name = "cbYear_inventory";
-            this.cbYear_inventory.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbYear_inventory.Size = new System.Drawing.Size(200, 29);
-            this.cbYear_inventory.Style = Sunny.UI.UIStyle.Custom;
-            this.cbYear_inventory.TabIndex = 9;
-            this.cbYear_inventory.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbYear_inventory.Watermark = "";
-            // 
             // uiLabel15
             // 
             this.uiLabel15.AutoSize = true;
             this.uiLabel15.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel15.Location = new System.Drawing.Point(765, 243);
             this.uiLabel15.Name = "uiLabel15";
-            this.uiLabel15.Size = new System.Drawing.Size(232, 41);
+            this.uiLabel15.Size = new System.Drawing.Size(174, 31);
             this.uiLabel15.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel15.TabIndex = 13;
             this.uiLabel15.Text = "集污池面积(㎡)";
@@ -358,7 +342,7 @@
             this.uiLabel14.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel14.Location = new System.Drawing.Point(393, 243);
             this.uiLabel14.Name = "uiLabel14";
-            this.uiLabel14.Size = new System.Drawing.Size(232, 41);
+            this.uiLabel14.Size = new System.Drawing.Size(174, 31);
             this.uiLabel14.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel14.TabIndex = 13;
             this.uiLabel14.Text = "堆粪场面积(㎡)";
@@ -370,7 +354,7 @@
             this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel7.Location = new System.Drawing.Point(16, 243);
             this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(200, 41);
+            this.uiLabel7.Size = new System.Drawing.Size(150, 31);
             this.uiLabel7.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel7.TabIndex = 13;
             this.uiLabel7.Text = "圈舍面积(亩)";
@@ -382,7 +366,7 @@
             this.uiLabel20.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel20.Location = new System.Drawing.Point(28, 374);
             this.uiLabel20.Name = "uiLabel20";
-            this.uiLabel20.Size = new System.Drawing.Size(82, 41);
+            this.uiLabel20.Size = new System.Drawing.Size(62, 31);
             this.uiLabel20.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel20.TabIndex = 13;
             this.uiLabel20.Text = "备注";
@@ -394,7 +378,7 @@
             this.uiLabel16.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel16.Location = new System.Drawing.Point(1190, 241);
             this.uiLabel16.Name = "uiLabel16";
-            this.uiLabel16.Size = new System.Drawing.Size(214, 41);
+            this.uiLabel16.Size = new System.Drawing.Size(160, 31);
             this.uiLabel16.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel16.TabIndex = 13;
             this.uiLabel16.Text = "现存栏(头/只)";
@@ -457,7 +441,7 @@
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel4.Location = new System.Drawing.Point(1196, 174);
             this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(200, 41);
+            this.uiLabel4.Size = new System.Drawing.Size(150, 31);
             this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel4.TabIndex = 13;
             this.uiLabel4.Text = "占地面积(亩)";
@@ -469,7 +453,7 @@
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel3.Location = new System.Drawing.Point(1196, 105);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(114, 41);
+            this.uiLabel3.Size = new System.Drawing.Size(86, 31);
             this.uiLabel3.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel3.TabIndex = 13;
             this.uiLabel3.Text = "所在村";
@@ -481,7 +465,7 @@
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel2.Location = new System.Drawing.Point(28, 105);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel2.Size = new System.Drawing.Size(110, 31);
             this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel2.TabIndex = 13;
             this.uiLabel2.Text = "联系电话";
@@ -493,7 +477,7 @@
             this.uiLabel19.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel19.Location = new System.Drawing.Point(757, 312);
             this.uiLabel19.Name = "uiLabel19";
-            this.uiLabel19.Size = new System.Drawing.Size(242, 41);
+            this.uiLabel19.Size = new System.Drawing.Size(182, 31);
             this.uiLabel19.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel19.TabIndex = 13;
             this.uiLabel19.Text = "环评报告或备案";
@@ -516,7 +500,7 @@
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel6.Location = new System.Drawing.Point(405, 106);
             this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel6.Size = new System.Drawing.Size(110, 31);
             this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel6.TabIndex = 13;
             this.uiLabel6.Text = "联系地址";
@@ -528,7 +512,7 @@
             this.uiLabel17.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel17.Location = new System.Drawing.Point(16, 314);
             this.uiLabel17.Name = "uiLabel17";
-            this.uiLabel17.Size = new System.Drawing.Size(242, 41);
+            this.uiLabel17.Size = new System.Drawing.Size(182, 31);
             this.uiLabel17.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel17.TabIndex = 13;
             this.uiLabel17.Text = "动物防疫合格证";
@@ -540,7 +524,7 @@
             this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel10.Location = new System.Drawing.Point(16, 176);
             this.uiLabel10.Name = "uiLabel10";
-            this.uiLabel10.Size = new System.Drawing.Size(200, 41);
+            this.uiLabel10.Size = new System.Drawing.Size(150, 31);
             this.uiLabel10.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel10.TabIndex = 13;
             this.uiLabel10.Text = "年存栏(规模)";
@@ -552,7 +536,7 @@
             this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel13.Location = new System.Drawing.Point(794, 176);
             this.uiLabel13.Name = "uiLabel13";
-            this.uiLabel13.Size = new System.Drawing.Size(168, 41);
+            this.uiLabel13.Size = new System.Drawing.Size(126, 31);
             this.uiLabel13.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel13.TabIndex = 13;
             this.uiLabel13.Text = "产值(万元)";
@@ -564,7 +548,7 @@
             this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel12.Location = new System.Drawing.Point(794, 106);
             this.uiLabel12.Name = "uiLabel12";
-            this.uiLabel12.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel12.Size = new System.Drawing.Size(110, 31);
             this.uiLabel12.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel12.TabIndex = 13;
             this.uiLabel12.Text = "所在乡镇";
@@ -576,7 +560,7 @@
             this.uiLabel35.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel35.Location = new System.Drawing.Point(393, 176);
             this.uiLabel35.Name = "uiLabel35";
-            this.uiLabel35.Size = new System.Drawing.Size(200, 41);
+            this.uiLabel35.Size = new System.Drawing.Size(150, 31);
             this.uiLabel35.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel35.TabIndex = 13;
             this.uiLabel35.Text = "年出栏(规模)";
@@ -588,7 +572,7 @@
             this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel11.Location = new System.Drawing.Point(1196, 45);
             this.uiLabel11.Name = "uiLabel11";
-            this.uiLabel11.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel11.Size = new System.Drawing.Size(110, 31);
             this.uiLabel11.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel11.TabIndex = 13;
             this.uiLabel11.Text = "身份证号";
@@ -600,27 +584,11 @@
             this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel8.Location = new System.Drawing.Point(794, 45);
             this.uiLabel8.Name = "uiLabel8";
-            this.uiLabel8.Size = new System.Drawing.Size(114, 41);
+            this.uiLabel8.Size = new System.Drawing.Size(86, 31);
             this.uiLabel8.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel8.TabIndex = 13;
             this.uiLabel8.Text = "负责人";
             this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbYear_outbound
-            // 
-            this.cbYear_outbound.DataSource = null;
-            this.cbYear_outbound.FillColor = System.Drawing.Color.White;
-            this.cbYear_outbound.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbYear_outbound.Location = new System.Drawing.Point(558, 176);
-            this.cbYear_outbound.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbYear_outbound.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbYear_outbound.Name = "cbYear_outbound";
-            this.cbYear_outbound.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbYear_outbound.Size = new System.Drawing.Size(200, 29);
-            this.cbYear_outbound.Style = Sunny.UI.UIStyle.Custom;
-            this.cbYear_outbound.TabIndex = 10;
-            this.cbYear_outbound.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbYear_outbound.Watermark = "";
             // 
             // uiLabel5
             // 
@@ -628,7 +596,7 @@
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel5.Location = new System.Drawing.Point(405, 48);
             this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel5.Size = new System.Drawing.Size(110, 31);
             this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel5.TabIndex = 13;
             this.uiLabel5.Text = "养殖种类";
@@ -640,7 +608,7 @@
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(28, 45);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(168, 41);
+            this.uiLabel1.Size = new System.Drawing.Size(126, 31);
             this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel1.TabIndex = 13;
             this.uiLabel1.TagString = "";
@@ -733,6 +701,44 @@
             this.tbPhone_number.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPhone_number.Watermark = "";
             // 
+            // tbYear_inventory
+            // 
+            this.tbYear_inventory.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbYear_inventory.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbYear_inventory.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbYear_inventory.Location = new System.Drawing.Point(167, 176);
+            this.tbYear_inventory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbYear_inventory.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbYear_inventory.Name = "tbYear_inventory";
+            this.tbYear_inventory.Padding = new System.Windows.Forms.Padding(5);
+            this.tbYear_inventory.ShowText = false;
+            this.tbYear_inventory.Size = new System.Drawing.Size(200, 29);
+            this.tbYear_inventory.Style = Sunny.UI.UIStyle.Custom;
+            this.tbYear_inventory.TabIndex = 4;
+            this.tbYear_inventory.Text = "0";
+            this.tbYear_inventory.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbYear_inventory.Type = Sunny.UI.UITextBox.UIEditType.Integer;
+            this.tbYear_inventory.Watermark = "";
+            // 
+            // tbYear_outbound
+            // 
+            this.tbYear_outbound.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbYear_outbound.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbYear_outbound.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbYear_outbound.Location = new System.Drawing.Point(558, 176);
+            this.tbYear_outbound.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbYear_outbound.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbYear_outbound.Name = "tbYear_outbound";
+            this.tbYear_outbound.Padding = new System.Windows.Forms.Padding(5);
+            this.tbYear_outbound.ShowText = false;
+            this.tbYear_outbound.Size = new System.Drawing.Size(200, 29);
+            this.tbYear_outbound.Style = Sunny.UI.UIStyle.Custom;
+            this.tbYear_outbound.TabIndex = 5;
+            this.tbYear_outbound.Text = "0";
+            this.tbYear_outbound.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbYear_outbound.Type = Sunny.UI.UITextBox.UIEditType.Integer;
+            this.tbYear_outbound.Watermark = "";
+            // 
             // frmAnimalInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -764,11 +770,9 @@
         private Sunny.UI.UILabel uiLabel35;
         private Sunny.UI.UILabel uiLabel11;
         private Sunny.UI.UILabel uiLabel8;
-        private Sunny.UI.UIComboBox cbYear_outbound;
         private Sunny.UI.UILabel uiLabel5;
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UIComboBox cbTown;
-        private Sunny.UI.UIComboBox cbYear_inventory;
         private Sunny.UI.UIComboBox cbVillage;
         private Sunny.UI.UIComboBox cbBreed_type;
         private Sunny.UI.UITextBox tbPhone_number;
@@ -794,5 +798,7 @@
         private Sunny.UI.UITextBox tbAddress;
         private Sunny.UI.UITextBox tbIdcard;
         private Sunny.UI.UITextBox tbManager;
+        private Sunny.UI.UITextBox tbYear_outbound;
+        private Sunny.UI.UITextBox tbYear_inventory;
     }
 }

@@ -110,14 +110,16 @@ namespace com.vdm.dal
                 {
                     sql += "    and address like @address";
                 }
-                if (condition["year_inventory"].ToString() != "0")
+
+                if (condition["year_inventory_from"].ToString() != "0" && condition["year_inventory_to"].ToString() != "0")
                 {
-                    sql += "    and year_inventory = @year_inventory";
+                    sql += "  and  year_inventory BETWEEN '" + condition["year_inventory_from"].ToString() + "' AND '" + condition["year_inventory_to"].ToString() + "'";
                 }
-                if (condition["year_outbound"].ToString() != "0")
+                if (condition["year_outbound_from"].ToString() != "0" && condition["year_outbound_to"].ToString() != "0")
                 {
-                    sql += "    and year_outbound = @year_outbound";
+                    sql += "  and  year_outbound BETWEEN '" + condition["year_outbound_from"].ToString() + "' AND '" + condition["year_outbound_to"].ToString() + "'";
                 }
+
                 if (condition["output_from"].ToString() != "0" && condition["output_to"].ToString() != "0")
                 {
                     sql += "  and  output BETWEEN '" + condition["output_from"].ToString() + "' AND '" + condition["output_to"].ToString() + "'";
