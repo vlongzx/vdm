@@ -46,7 +46,7 @@ namespace com.vdm.form
             this.dictBLL = new DictBLL();
 
             //初始化养殖类型
-            List<KeyValue> list_breed_type = dictBLL.getDict("breed_type");
+            List<KeyValue> list_breed_type = dictBLL.getDict("animal_type");
             if (list_breed_type != null)
             {
                 this.cbBreed_type.DataSource = list_breed_type;

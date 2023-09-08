@@ -71,7 +71,56 @@ namespace com.vdm.form
             this.cbVillage.DisplayMember = "value";
             this.cbVillage.ValueMember = "key";
         }
+        /// <summary>
+        ///  重写数据验证方法
+        /// </summary>
+        /// <returns></returns>
+        protected override bool CheckData()
+        {
 
+            return CheckEmpty(tbAddress, "请输入地址")
+                 && CheckEmpty(this.tbCompany_id, "请输入统一社会信用代码")
+                && CheckIDCard(this.tbLegal_name, "请输入法定代表人姓名")
+                && CheckEmpty(tbPhone_number, "请输入联系电话")
+                && CheckEmpty(tbPrincipal_name, "请输入主体名称")
+                   && CheckEmpty(tbRegistered_trademark, "请输入注册商标")
+                    && CheckEmpty(tbYear_person_count, "请输入年接待旅游（人次）")
+                   && CheckEmpty(tbYear_trade_income, "请输入年经营收入（万元）")
+                   && CheckCB(cbPrincipal_category, "请选择主体类别")
+                      && CheckCB(cbTrade_form, "请选择经营形式")
+                      && CheckCB(cbTown, "请选择所属镇")
+                       && CheckCB(cbVillage, "请选择所属村")
+
+                ;
+        }
+
+        //校验下拉框是否选择
+        protected bool CheckCB(UIComboBox uicb, string Message)
+        {
+            if (uicb.Text == "请选择")
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        ///  验证身份证合法性
+        /// </summary>
+        /// <param name="tbIDCard"></param>
+        /// <param name="Message"></param>
+        /// <returns></returns>
+        protected bool CheckIDCard(UITextBox tbIDCard, string Message)
+        {
+            //验证输入的身份证是否合法
+            if (tbIDCard.Text.Trim() != "" && Utils.IsIDCard(tbIDCard.Text.Trim()) == false)
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
+        }
         private void btnOK_Click(object sender, EventArgs e)
         {
             //如果数据校验没有通过则直接返回。

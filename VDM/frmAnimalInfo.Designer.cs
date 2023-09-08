@@ -691,7 +691,6 @@
             this.tbYear_outbound.Size = new System.Drawing.Size(200, 29);
             this.tbYear_outbound.Style = Sunny.UI.UIStyle.Custom;
             this.tbYear_outbound.TabIndex = 5;
-            this.tbYear_outbound.Text = "0";
             this.tbYear_outbound.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbYear_outbound.Type = Sunny.UI.UITextBox.UIEditType.Integer;
             this.tbYear_outbound.Watermark = "";

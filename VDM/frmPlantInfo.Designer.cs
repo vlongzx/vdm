@@ -60,18 +60,18 @@
             this.label8 = new Sunny.UI.UILabel();
             this.tbRemark = new Sunny.UI.UITextBox();
             this.uiLabel11 = new Sunny.UI.UILabel();
-            this.tbQuestion = new Sunny.UI.UITextBox();
             this.uiLabel20 = new Sunny.UI.UILabel();
             this.ctvPlant_type = new Sunny.UI.UIComboTreeView();
             this.ctvSale_way = new Sunny.UI.UIComboTreeView();
             this.ctvManage_skill_method = new Sunny.UI.UIComboTreeView();
+            this.cbQuestion = new Sunny.UI.UIComboBox();
             this.pnlBtm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBtm
             // 
-            this.pnlBtm.Location = new System.Drawing.Point(1, 885);
+            this.pnlBtm.Location = new System.Drawing.Point(1, 705);
             this.pnlBtm.Size = new System.Drawing.Size(1625, 55);
             // 
             // btnCancel
@@ -100,6 +100,7 @@
             this.groupBox1.Controls.Add(this.uiLabel9);
             this.groupBox1.Controls.Add(this.uiLabel2);
             this.groupBox1.Controls.Add(this.cbInsect_ill);
+            this.groupBox1.Controls.Add(this.cbQuestion);
             this.groupBox1.Controls.Add(this.cbDevelop_willing);
             this.groupBox1.Controls.Add(this.cbIs_plan);
             this.groupBox1.Controls.Add(this.tbAddress);
@@ -119,13 +120,12 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.tbRemark);
             this.groupBox1.Controls.Add(this.uiLabel11);
-            this.groupBox1.Controls.Add(this.tbQuestion);
             this.groupBox1.Controls.Add(this.uiLabel20);
             this.groupBox1.Location = new System.Drawing.Point(19, 51);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1589, 814);
+            this.groupBox1.Size = new System.Drawing.Size(1589, 626);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "种植信息";
@@ -541,7 +541,7 @@
             this.tbRemark.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbRemark.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbRemark.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbRemark.Location = new System.Drawing.Point(207, 527);
+            this.tbRemark.Location = new System.Drawing.Point(211, 384);
             this.tbRemark.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbRemark.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbRemark.Multiline = true;
@@ -549,7 +549,7 @@
             this.tbRemark.Padding = new System.Windows.Forms.Padding(5);
             this.tbRemark.ShowScrollBar = true;
             this.tbRemark.ShowText = false;
-            this.tbRemark.Size = new System.Drawing.Size(1253, 183);
+            this.tbRemark.Size = new System.Drawing.Size(1253, 213);
             this.tbRemark.Style = Sunny.UI.UIStyle.Custom;
             this.tbRemark.TabIndex = 18;
             this.tbRemark.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -559,7 +559,7 @@
             // 
             this.uiLabel11.AutoSize = true;
             this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel11.Location = new System.Drawing.Point(46, 527);
+            this.uiLabel11.Location = new System.Drawing.Point(50, 384);
             this.uiLabel11.Name = "uiLabel11";
             this.uiLabel11.Size = new System.Drawing.Size(82, 41);
             this.uiLabel11.Style = Sunny.UI.UIStyle.Custom;
@@ -567,31 +567,12 @@
             this.uiLabel11.Text = "备注";
             this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tbQuestion
-            // 
-            this.tbQuestion.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbQuestion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbQuestion.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbQuestion.Location = new System.Drawing.Point(207, 319);
-            this.tbQuestion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbQuestion.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbQuestion.Multiline = true;
-            this.tbQuestion.Name = "tbQuestion";
-            this.tbQuestion.Padding = new System.Windows.Forms.Padding(5);
-            this.tbQuestion.ShowScrollBar = true;
-            this.tbQuestion.ShowText = false;
-            this.tbQuestion.Size = new System.Drawing.Size(1253, 183);
-            this.tbQuestion.Style = Sunny.UI.UIStyle.Custom;
-            this.tbQuestion.TabIndex = 17;
-            this.tbQuestion.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbQuestion.Watermark = "";
-            // 
             // uiLabel20
             // 
             this.uiLabel20.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel20.Location = new System.Drawing.Point(46, 319);
+            this.uiLabel20.Location = new System.Drawing.Point(46, 306);
             this.uiLabel20.Name = "uiLabel20";
-            this.uiLabel20.Size = new System.Drawing.Size(154, 74);
+            this.uiLabel20.Size = new System.Drawing.Size(306, 46);
             this.uiLabel20.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel20.TabIndex = 13;
             this.uiLabel20.Text = "需要政府解决的问题";
@@ -648,10 +629,26 @@
             this.ctvManage_skill_method.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.ctvManage_skill_method.Watermark = "";
             // 
+            // cbQuestion
+            // 
+            this.cbQuestion.DataSource = null;
+            this.cbQuestion.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.cbQuestion.FillColor = System.Drawing.Color.White;
+            this.cbQuestion.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbQuestion.Location = new System.Drawing.Point(207, 323);
+            this.cbQuestion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbQuestion.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbQuestion.Name = "cbQuestion";
+            this.cbQuestion.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbQuestion.Size = new System.Drawing.Size(165, 29);
+            this.cbQuestion.TabIndex = 14;
+            this.cbQuestion.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbQuestion.Watermark = "";
+            // 
             // frmPlantInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1627, 943);
+            this.ClientSize = new System.Drawing.Size(1627, 763);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPlantInfo";
             this.Text = "frmPlantInfo";
@@ -669,7 +666,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private Sunny.UI.UITextBox tbQuestion;
         private Sunny.UI.UILabel uiLabel20;
         private Sunny.UI.UITextBox tbYear_yield;
         private Sunny.UI.UILabel uiLabel6;
@@ -705,5 +701,6 @@
         private Sunny.UI.UIComboTreeView ctvSale_way;
         private Sunny.UI.UIComboTreeView ctvPlant_type;
         private Sunny.UI.UIComboTreeView ctvManage_skill_method;
+        private Sunny.UI.UIComboBox cbQuestion;
     }
 }

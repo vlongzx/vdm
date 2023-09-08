@@ -64,7 +64,7 @@ namespace com.vdm.dal
                 }
                 if (condition["plant_type"].ToString() != "")
                 {
-                    sql += "    and plant_type = @plant_type";
+                    sql += "    and plant_type like @plant_type";
                 }
                 if (condition["contact_person"].ToString() != "")
                 {
@@ -84,7 +84,7 @@ namespace com.vdm.dal
                 }
                 if (condition["sale_way"].ToString() != "")
                 {
-                    sql += "    and sale_way = @sale_way";
+                    sql += "    and sale_way like @sale_way";
                 }
                 if (condition["output"].ToString() != "")
                 {
@@ -96,7 +96,7 @@ namespace com.vdm.dal
                 }
                 if (condition["manage_skill_method"].ToString() != "")
                 {
-                    sql += "    and manage_skill_method = @manage_skill_method";
+                    sql += "    and manage_skill_method like @manage_skill_method";
                 }
                 if (condition["develop_willing"].ToString() != "")
                 {
@@ -144,15 +144,15 @@ namespace com.vdm.dal
             {
                 parameters.Add(new SQLiteParameter("@plant_area", condition["plant_area"]));
                 parameters.Add(new SQLiteParameter("@plant_brand", condition["plant_brand"]));
-                parameters.Add(new SQLiteParameter("@plant_type", condition["plant_type"]));
+                parameters.Add(new SQLiteParameter("@plant_type","%"+ condition["plant_type"]+"%"));
                 parameters.Add(new SQLiteParameter("@contact_person", "%"+condition["contact_person"]+"%"));
                 parameters.Add(new SQLiteParameter("@phone_number", "%"+condition["phone_number"]+"%"));
                 parameters.Add(new SQLiteParameter("@address", "%"+condition["address"]+"%"));
                 parameters.Add(new SQLiteParameter("@is_plan", condition["is_plan"]));
-                parameters.Add(new SQLiteParameter("@sale_way", condition["sale_way"]));
+                parameters.Add(new SQLiteParameter("@sale_way","%"+ condition["sale_way"]+"%"));
                 parameters.Add(new SQLiteParameter("@output", condition["output"]));
                 parameters.Add(new SQLiteParameter("@insect_ill", condition["insect_ill"]));
-                parameters.Add(new SQLiteParameter("@manage_skill_method", condition["manage_skill_method"]));
+                parameters.Add(new SQLiteParameter("@manage_skill_method", "%"+condition["manage_skill_method"]+"%"));
                 parameters.Add(new SQLiteParameter("@develop_willing", condition["develop_willing"]));
                 parameters.Add(new SQLiteParameter("@town", condition["town"]));
                 parameters.Add(new SQLiteParameter("@village", condition["village"]));

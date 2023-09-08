@@ -51,7 +51,7 @@ namespace com.vdm.form
                     this.tbOutput.Text = plant.Output.ToString();
                     this.tbPhone_number.Text = plant.Phone_number;
                     this.tbPlant_area.Text = plant.Plant_area.ToString();
-                    this.tbQuestion.Text = plant.Question;
+                    this.cbQuestion.SelectedValue = plant.Question;
                     this.tbRemark.Text = plant.Remark;
                     this.tbYear_yield.Text = plant.Year_yield.ToString();
                     this.cbDevelop_willing.SelectedValue = plant.Develop_willing;
@@ -81,6 +81,14 @@ namespace com.vdm.form
                 this.cbDevelop_willing.DataSource = list_develop_willing;
                 this.cbDevelop_willing.DisplayMember = "value";
                 this.cbDevelop_willing.ValueMember = "key";
+            }
+            //初始化需要政府解决的问题
+            List<KeyValue> list_question = dictBLL.getDict("question");
+            if (list_question != null)
+            {
+                this.cbQuestion.DataSource = list_question;
+                this.cbQuestion.DisplayMember = "value";
+                this.cbQuestion.ValueMember = "key";
             }
 
             //初始化主要虫病害
@@ -168,6 +176,67 @@ namespace com.vdm.form
             this.cbVillage.ValueMember = "key";
         }
 
+        protected override bool CheckData()
+        {
+
+            return CheckEmpty(tbAddress, "请输入详细地址")
+                 && CheckEmpty(this.tbContact_person, "请输入联系人")
+                && CheckIDCard(this.tbIdcard, "您输入的身份证号码不合法，请重新输入。")
+                && CheckEmpty(tbOutput, "请输入产值(万元)")
+                && CheckEmpty(tbPlant_area, "请输入种植面积")
+
+                    && CheckEmpty(tbYear_yield, "请输入年产量（斤）")
+                   && CheckEmpty(tbPhone_number, "请输入联系电话")
+                       && CheckCTV(ctvManage_skill_method, "请选择主要管理和技术措施")
+                    && CheckCTV(ctvPlant_type, "请选择种植类别")
+                   && CheckCTV(ctvSale_way, "请选择销售途径")
+                            && CheckCB(cbQuestion, "请选择需要政府解决的问题")
+         && CheckCB(cbDevelop_willing, "请选择发展意愿")
+           && CheckCB(cbInsect_ill, "请选择主要虫病害")
+                       && CheckCB(cbIs_plan, "请选择是否符合规划")
+                                     && CheckCB(cbPlant_brand, "请选择种植品种")
+                      && CheckCB(cbTown, "请选择所属镇")
+                       && CheckCB(cbVillage, "请选择所属村")
+
+                ;
+        }
+
+        //校验下拉框是否选择
+        protected bool CheckCB(UIComboBox uicb, string Message)
+        {
+            if (uicb.Text == "请选择")
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
+        }
+        protected bool CheckCTV(UIComboTreeView uictv, string Message)
+        {
+            if (uictv.Text == "")
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        ///  验证身份证合法性
+        /// </summary>
+        /// <param name="tbIDCard"></param>
+        /// <param name="Message"></param>
+        /// <returns></returns>
+        protected bool CheckIDCard(UITextBox tbIDCard, string Message)
+        {
+            //验证输入的身份证是否合法
+            if (tbIDCard.Text.Trim() != "" && Utils.IsIDCard(tbIDCard.Text.Trim()) == false)
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
+        }
         /// <summary>
         ///  确定按钮
         /// </summary>
@@ -175,6 +244,11 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btnOK_Click(object sender, EventArgs e)
         {
+            //如果数据校验没有通过则直接返回。
+            if (this.IsOK == false)
+            {
+                return;
+            }
             string town = this.cbTown.SelectedValue.ToString();
             string village = this.cbVillage.SelectedValue.ToString();
             double plant_area = 0;
@@ -199,7 +273,7 @@ namespace com.vdm.form
             string insect_ill = this.cbInsect_ill.SelectedValue.ToString();
             string manage_skill_method = this.ctvManage_skill_method.Text.ToString();
             string develop_willing = this.cbDevelop_willing.SelectedValue.ToString();
-            string question = this.tbQuestion.Text;
+            string question = this.cbQuestion.SelectedValue.ToString();
             string remark = this.tbRemark.Text;
 
             Plant plant = new Plant();

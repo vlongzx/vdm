@@ -70,7 +70,7 @@ namespace com.vdm.form
         {
             dictBLL = new DictBLL();
             //养殖种类
-            List<KeyValue> list_breed_type = dictBLL.getDict("breed_type");
+            List<KeyValue> list_breed_type = dictBLL.getDict("animal_type");
             if (list_breed_type != null)
             {
                 this.cbBreed_type.DataSource = list_breed_type;
@@ -121,6 +121,60 @@ namespace com.vdm.form
             this.cbVillage.DataSource = list_village;
             this.cbVillage.DisplayMember = "value";
             this.cbVillage.ValueMember = "key";
+        }
+
+        protected override bool CheckData()
+        {
+
+            return CheckEmpty(tbAddress, "请输入养殖场（户）地址")
+                 && CheckEmpty(this.tbBreed_name, "请输入养殖场（户）名称")
+                && CheckIDCard(this.tbIdcard, "您输入的身份证号码不合法，请重新输入。")
+                && CheckEmpty(tbCueernt_inventory, "请输入现存栏")
+                && CheckEmpty(tbManager, "请输入负责人")
+                   && CheckEmpty(tbMidden_area, "请输入堆粪场面积")
+                    && CheckEmpty(tbOutput, "请输入产值(万元)")
+                   && CheckEmpty(tbPen_area, "请输入圈舍面积")
+                   && CheckEmpty(tbPhone_number, "请输入联系电话")
+                      && CheckEmpty(tbPullttion_area, "请输入集污池面积")
+              && CheckEmpty(tbTotal_area, "请输入占地面积")
+                              && CheckEmpty(tbYear_inventory, "请输入年存栏（设计规模）")
+                && CheckEmpty(tbYear_outbound, "请输入年出栏（设计规模）")
+                             && CheckCB(cbAnimal_qualify, "请选择房屋类别")
+                  && CheckCB(cbBreed_type, "请选择养殖种类")
+         && CheckCB(cbReport_or_filings, "请选择环评报告或备案")
+           && CheckCB(cbSolid_pollution, "请选择固体污染源排污登记")
+                       && CheckCB(cbAnimal_qualify, "请选择动物防疫条件合格证")
+                      && CheckCB(cbTown, "请选择所属镇")
+                       && CheckCB(cbVillage, "请选择所属村")
+
+                ;
+        }
+
+        //校验下拉框是否选择
+        protected bool CheckCB(UIComboBox uicb, string Message)
+        {
+            if (uicb.Text == "请选择")
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
+        }
+        /// <summary>
+        ///  验证身份证合法性
+        /// </summary>
+        /// <param name="tbIDCard"></param>
+        /// <param name="Message"></param>
+        /// <returns></returns>
+        protected bool CheckIDCard(UITextBox tbIDCard, string Message)
+        {
+            //验证输入的身份证是否合法
+            if (tbIDCard.Text.Trim() != "" && Utils.IsIDCard(tbIDCard.Text.Trim()) == false)
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
         }
 
         private void btnOK_Click(object sender, EventArgs e)
