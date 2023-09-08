@@ -443,6 +443,11 @@ namespace com.vdm.form
             importExcelFile.Owner = this;
             importExcelFile.ShowDialog();
         }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
