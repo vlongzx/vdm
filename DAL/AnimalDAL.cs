@@ -23,6 +23,17 @@ namespace com.vdm.dal
             string sql = "select * from t_animal where breed_id = " + breed_id;
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
+
+        /// <summary>
+        ///  根据IDcard查询畜牧信息
+        /// </summary>
+        /// <param name="IdCard"></param>
+        /// <returns></returns>
+        public DataTable queryAnimalByIdCard(string IdCard)
+        {
+            string sql = "select * from t_animal where idcard = " + IdCard;
+            return this.SqlDbHelper.ExecuteDataTable(sql);
+        }
         /// <summary>
         ///  获得畜牧信息的总数
         /// </summary>

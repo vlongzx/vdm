@@ -56,6 +56,21 @@ namespace com.vdm.bll
             return animal;
         }
         /// <summary>
+        ///  判断指定身份证号码是否存在畜牧登记信息
+        /// </summary>
+        /// <param name="IdCard">身份证号码</param>
+        /// <returns></returns>
+        public bool getAnimalByIdCard(string IdCard)
+        {
+            DataTable dt = this.animalDAL.queryAnimalByIdCard(IdCard);
+
+            if(dt != null && dt.Rows.Count > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+        /// <summary>
         ///  获得所有的畜牧
         /// </summary>
         /// <param name="condition">查询条件</param>
