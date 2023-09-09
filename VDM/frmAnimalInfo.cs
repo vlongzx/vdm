@@ -252,6 +252,7 @@ namespace com.vdm.form
             }
             else
             {
+                animal.Breed_id = breed_id;
                 Result result = animalBLL.editAnimal(animal);
                 if (result.Count == 1)
                 {
