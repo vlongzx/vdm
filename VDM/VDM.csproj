@@ -406,6 +406,9 @@
     <None Include="aspose\种植信息导入模板.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="AutoUpdater.Config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="db_file\VDM.pdm" />
     <None Include="db_file\vdm_data.db" />
     <None Include="packages.config">
@@ -447,6 +450,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\AutoUpdater\AutoUpdater.csproj">
+      <Project>{4ba4719c-c6ab-49ba-9754-848ca24c1fd6}</Project>
+      <Name>AutoUpdater</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{c4846e87-dd9b-4a68-86d4-ccaf57e21e94}</Project>
       <Name>BLL</Name>
