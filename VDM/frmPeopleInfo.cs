@@ -351,7 +351,8 @@ namespace com.vdm.form
         {
 
             return CheckEmpty(tbPeople_name, "请输入姓名")
-                && CheckIDCard(this.tbIdcard, "您输入的身份证号码不合法，请重新输入。")
+                     && CheckEmpty(tbIdcard, "请输入身份证号码")
+                && CheckIDCard(this.tbIdcard, "您输入的身份证号码不合法，请重新输入")
                 &&CheckCB(cbRelationship,"请选择与户主关系")
                 && CheckCB(cbNation, "请选择民族")
                 && CheckEmpty(dtBirthday, "请输入出生日期")
