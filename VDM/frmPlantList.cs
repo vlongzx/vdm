@@ -258,7 +258,7 @@ namespace com.vdm.form
 
             Hashtable condition = new Hashtable();
             condition.Add("town", town);
-            condition.Add("village ", village);
+            condition.Add("village", village);
             condition.Add("plant_area", plant_area);
             condition.Add("plant_brand", plant_brand);
             condition.Add("plant_type", plant_type);
