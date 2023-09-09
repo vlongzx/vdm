@@ -432,5 +432,10 @@ namespace com.vdm.dal
         {
             return this.SqlDbHelper.ExecuteSqlTran(SQLStringObjectList);
         }
+        public DataTable QueryByIdcard(string idcard)
+        {
+            string sql = "select * from t_manager where idcard = " + idcard;
+            return this.SqlDbHelper.ExecuteDataTable(sql);
+        }
     }
 }

@@ -333,6 +333,11 @@ namespace com.vdm.dal
             }
             return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
         }
+        public DataTable QueryByIdcard(string idcard)
+        {
+            string sql = "select * from t_land where idcard = " + idcard;
+            return this.SqlDbHelper.ExecuteDataTable(sql);
+        }
     }
 }
 

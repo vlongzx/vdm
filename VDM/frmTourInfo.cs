@@ -175,18 +175,26 @@ namespace com.vdm.form
                 tour.Creater = LoginInfo.CurrentUser.AccountName;
                 tour.Create_datetime = DateTime.Now.ToString();
 
-                Result result = this.tourBLL.addTour(tour);
-                if (result.Count == 1)
+                if (tourBLL.QueryByCompanyId(tour.Company_id).Rows.Count != 0)
                 {
-                    MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    MessageBox.Show("该统一社会信用码已存在！请检查信息是否正确");
                 }
                 else
                 {
-                    MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LogHelper.Error(result.Information, result.Exception);
+                    Result result = this.tourBLL.addTour(tour);
+                    if (result.Count == 1)
+                    {
+                        MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LogHelper.Error(result.Information, result.Exception);
+                    }
                 }
+           
             }
             else
             {

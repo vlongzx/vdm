@@ -223,7 +223,8 @@ namespace com.vdm.form
         {
 
             return CheckEmpty(tbHolder_name, "请输入农户姓名")
-                && CheckIDCard(this.tbIdcard, "您输入的身份证号码不合法，请重新输入。")
+                        && CheckEmpty(this.tbIdcard, "请输入身份证号码")
+                && CheckIDCard(this.tbIdcard, "您输入的身份证号码不合法，请重新输入")
                 && CheckEmpty(tbPhone_number, "请输入联系电话")
                 && CheckCTV(ctvPlant_type, "请选择种植物种类")
                  && CheckCTV(ctvAnimal_type, "请选择种养殖动物类型类")
@@ -354,18 +355,27 @@ namespace com.vdm.form
 
             if (this.opreation_mode == "ADD")
             {
-                Result result = famerBLL.AddFamer(famer);
-                if (result.Count == 1)
+
+                if (famerBLL.QueryByIdcard(famer.Idcard).Rows.Count != 0)
                 {
-                    MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    MessageBox.Show("该身份证号码已存在！请检查信息是否正确");
                 }
                 else
                 {
-                    MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LogHelper.Error(result.Information, result.Exception);
+                    Result result = famerBLL.AddFamer(famer);
+                    if (result.Count == 1)
+                    {
+                        MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LogHelper.Error(result.Information, result.Exception);
+                    }
                 }
+              
             }
             else
             {

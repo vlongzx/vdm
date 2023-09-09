@@ -106,5 +106,9 @@ namespace com.vdm.bll
         {
             return this.managerDAL.ImportManager(SQLStringObjectList);
         }
+        public DataTable QueryByIdcard(string idcard)
+        {
+            return this.managerDAL.QueryByIdcard(idcard);
+        }
     }
 }

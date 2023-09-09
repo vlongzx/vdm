@@ -115,5 +115,9 @@ namespace com.vdm.bll
         {
             return this.tourDAL.DeleteTour(tour_id);
         }
+        public DataTable QueryByCompanyId(string companyId)
+        {
+            return this.tourDAL.QueryByCompanyId(companyId);
+        }
     }
 }

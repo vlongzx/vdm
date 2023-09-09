@@ -112,5 +112,9 @@ namespace com.vdm.bll
         {
             return this.famerDAL.ImportFamer(SQLStringObjectList);
         }
+        public DataTable QueryByIdcard(string idcard)
+        {
+            return this.famerDAL.QueryByIdcard(idcard);
+        }
     }
 }

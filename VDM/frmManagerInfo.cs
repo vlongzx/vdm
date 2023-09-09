@@ -172,6 +172,7 @@ namespace com.vdm.form
         {
 
             return CheckEmpty(tbManager_name, "请输入姓名")
+                && CheckEmpty(tbIdcard, "请输入身份证号码")
                 && CheckIDCard(this.tbIdcard, "您输入的身份证号码不合法，请重新输入。")
                 && CheckCB(cbNation, "请选择民族")
                            && CheckCB(cbSex, "请选择性别")
@@ -276,18 +277,26 @@ namespace com.vdm.form
 
             if (this.opreation_mode == "ADD")
             {
-                Result result = managerBLL.AddManager(manager);
-                if (result.Count == 1)
+                if (managerBLL.QueryByIdcard(manager.Idcard).Rows.Count != 0)
                 {
-                    MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    MessageBox.Show("该身份证号码已存在！请检查信息是否正确");
                 }
                 else
                 {
-                    MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LogHelper.Error(result.Information, result.Exception);
+                    Result result = managerBLL.AddManager(manager);
+                    if (result.Count == 1)
+                    {
+                        MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LogHelper.Error(result.Information, result.Exception);
+                    }
                 }
+              
             }
             else
             {
