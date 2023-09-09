@@ -68,7 +68,6 @@
             this.labSystemName.TabIndex = 11;
             this.labSystemName.Text = "乡村数据采集系统";
             this.labSystemName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labSystemName.Click += new System.EventHandler(this.uiLabel3_Click);
             // 
             // uiLabel2
             // 

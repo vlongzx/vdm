@@ -54,7 +54,7 @@ namespace com.vdm.dal
             string sql = "";
             if (condition != null)
             {
-                if (condition["plant_area"].ToString() != "")
+                if (condition["plant_area"].ToString() != "0")
                 {
                     sql += "    and plant_area = @plant_area";
                 }
@@ -86,7 +86,7 @@ namespace com.vdm.dal
                 {
                     sql += "    and sale_way = @sale_way";
                 }
-                if (condition["output"].ToString() != "")
+                if (condition["output"].ToString() != "0")
                 {
                     sql += "    and output = @output";
                 }
