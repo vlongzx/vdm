@@ -207,7 +207,8 @@ namespace com.vdm.form
                 }
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                    //  ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
                 }
             }
         }
@@ -333,7 +334,8 @@ namespace com.vdm.form
                 }
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                    //ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
                 }
             }
         }
