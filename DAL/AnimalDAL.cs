@@ -341,7 +341,7 @@ namespace com.vdm.dal
                     listSetValue.Add(row["ColumnName"].ToString() + "=@" + row["ColumnName"].ToString());
                 }
             }
-            string sql = "update t_people set " + Utils.JoinStingListToString(listSetValue) + " where breed_id = " + animal.Breed_id;
+            string sql = "update t_animal set " + Utils.JoinStingListToString(listSetValue) + " where breed_id = " + animal.Breed_id;
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (tblSchema != null)
             {

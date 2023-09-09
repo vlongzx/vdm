@@ -146,15 +146,15 @@ namespace com.vdm.form
                        && CheckCB(cbAnimal_qualify, "请选择动物防疫条件合格证")
                       && CheckCB(cbTown, "请选择所属镇")
                        && CheckCB(cbVillage, "请选择所属村")
-                       && IsExistRecord(this.tbIdcard.Text.Trim());
+                       && IsExistRecord(this.tbIdcard.Text.Trim(),this.breed_id);
 
                 ;
         }
 
-        public bool IsExistRecord(string IdCard)
+        public bool IsExistRecord(string IdCard,long Breed_id)
         {
             //判断当前增加的身份证号码有没有畜牧登记信息，如果有给与提示
-            bool isExist = this.animalBLL.getAnimalByIdCard(IdCard);
+            bool isExist = this.animalBLL.getAnimalByIdCard(IdCard, Breed_id);
 
             if (isExist == true)
             {
@@ -255,8 +255,6 @@ namespace com.vdm.form
             animalBLL = new AnimalBLL();
             if (this.breed_id == 0)//代表是新增
             {
-
-
                 Result result = animalBLL.addAnimal(animal);
                 if (result.Count == 1)
                 {

@@ -60,12 +60,20 @@ namespace com.vdm.bll
         /// </summary>
         /// <param name="IdCard">身份证号码</param>
         /// <returns></returns>
-        public bool getAnimalByIdCard(string IdCard)
+        public bool getAnimalByIdCard(string IdCard,long Breed_id)
         {
             DataTable dt = this.animalDAL.queryAnimalByIdCard(IdCard);
 
             if(dt != null && dt.Rows.Count > 0)
             {
+                //判断是否是当前编辑的记录
+                foreach (DataRow row in dt.Rows)
+                {
+                    if (row["breed_id"].ToString() == Breed_id.ToString())
+                    {
+                        return false;
+                    }
+                }
                 return true;
             }
             return false;
