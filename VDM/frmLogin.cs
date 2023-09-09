@@ -32,12 +32,14 @@ namespace com.vdm.form
 
             UserBLL userBLL = new UserBLL();
 
-            int result = userBLL.Login(username, password);
-
-            if(result == 1)
+            //int result = userBLL.Login(username, password);
+            DataTable userdt= userBLL.Login(username, password);
+            if (userdt != null)
             {
                 LoginInfo.CurrentUser.Account = username;
                 LoginInfo.CurrentUser.AccountName = username;
+                LoginInfo.CurrentUser.Town = userdt.Rows[0]["town"].ToString();
+                LoginInfo.CurrentUser.Village = userdt.Rows[0]["village"].ToString();
                 LoginInfo.CurrentUser.LoginTime = DateTime.Now;
                 this.DialogResult = DialogResult.OK;
                 this.Close();

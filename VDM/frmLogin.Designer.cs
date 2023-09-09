@@ -107,9 +107,7 @@
             // 
             this.txtPassword.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.DoubleValue = 123456D;
             this.txtPassword.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPassword.IntValue = 123456;
             this.txtPassword.Location = new System.Drawing.Point(275, 269);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 16);
@@ -119,7 +117,7 @@
             this.txtPassword.ShowText = false;
             this.txtPassword.Size = new System.Drawing.Size(511, 43);
             this.txtPassword.TabIndex = 8;
-            this.txtPassword.Text = "123456";
+            this.txtPassword.Text = "Wwb12345";
             this.txtPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtPassword.Watermark = "";
             // 
@@ -136,7 +134,7 @@
             this.txtUsername.ShowText = false;
             this.txtUsername.Size = new System.Drawing.Size(511, 43);
             this.txtUsername.TabIndex = 7;
-            this.txtUsername.Text = "lisi";
+            this.txtUsername.Text = "王五";
             this.txtUsername.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtUsername.Watermark = "";
             // 

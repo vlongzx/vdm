@@ -162,6 +162,7 @@ namespace com.vdm.form
                 this.cbTown.ValueMember = "key";
             }
             //cbTown.SelectedValue = "";
+            cbTown.SelectedValue = LoginInfo.CurrentUser.Town;
             List<KeyValue> list_village = new List<KeyValue>();
             //list_village.Add(new KeyValue("", "请选择"));
             this.cbVillage.DataSource = list_village;
@@ -199,7 +200,8 @@ namespace com.vdm.form
                             this.cbVillage.DataSource = list_village;
                             this.cbVillage.DisplayMember = "value";
                             this.cbVillage.ValueMember = "key";
-                            this.cbVillage.SelectedValue = "";
+                            //   this.cbVillage.SelectedValue = "";
+                            cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;
                         }
                     }
                     else

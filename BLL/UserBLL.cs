@@ -29,21 +29,34 @@ namespace com.vdm.bll
         ///  return 0 表示用户名密码不正确
         ///  return -1 表示存在多个同样用户名的用户
         /// </returns>
-        public int Login(string username,string password)
+        //public int Login(string username,string password)
+        //{
+        //    DataTable dt = this.userDAL.getUserInfo(username);
+
+        //    if(dt != null && dt.Rows.Count == 1)
+        //    {
+        //        if(dt.Rows[0]["password"].ToString() == password)
+        //        {
+        //            return 1;
+        //        }
+               
+        //    }
+        //    return -1;
+        //}
+        public DataTable Login(string username, string password)
         {
             DataTable dt = this.userDAL.getUserInfo(username);
 
-            if(dt != null && dt.Rows.Count == 1)
+            if (dt != null && dt.Rows.Count == 1)
             {
-                if(dt.Rows[0]["password"].ToString() == password)
+                if (dt.Rows[0]["password"].ToString() == password)
                 {
-                    return 1;
+                    return dt;
                 }
-               
-            }
-            return -1;
-        }
 
+            }
+            return null;
+        }
 
         public User getUser(int user_id)
         {

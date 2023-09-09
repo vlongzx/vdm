@@ -57,16 +57,17 @@ namespace com.vdm.form
             //初始化所在乡镇所在村
             orgBLL = new OrgBLL();
             List<KeyValue> list_town = orgBLL.getOrgByType("乡镇");
-            list_town.Add(new KeyValue("", "请选择"));
+           // list_town.Add(new KeyValue("", "请选择"));
             if (list_town != null)
             {
                 this.cbTown.DataSource = list_town;
                 this.cbTown.DisplayMember = "value";
                 this.cbTown.ValueMember = "key";
             }
-            cbTown.SelectedValue = "";
+            // cbTown.SelectedValue = "";
+            cbTown.SelectedValue = LoginInfo.CurrentUser.Town;
             List<KeyValue> list_village = new List<KeyValue>();
-            list_village.Add(new KeyValue("", "请选择"));
+          //  list_village.Add(new KeyValue("", "请选择"));
             this.cbVillage.DataSource = list_village;
             this.cbVillage.DisplayMember = "value";
             this.cbVillage.ValueMember = "key";
@@ -255,11 +256,12 @@ namespace com.vdm.form
                         List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
                         if (list_village != null)
                         {
-                            list_village.Add(new KeyValue("", "请选择"));
+                            //list_village.Add(new KeyValue("", "请选择"));
                             this.cbVillage.DataSource = list_village;
                             this.cbVillage.DisplayMember = "value";
                             this.cbVillage.ValueMember = "key";
-                            this.cbVillage.SelectedValue = "";
+                            //  this.cbVillage.SelectedValue = "";
+                            cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;
                         }
                     }
                     else
