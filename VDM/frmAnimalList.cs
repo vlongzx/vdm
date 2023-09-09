@@ -46,7 +46,7 @@ namespace com.vdm.form
             this.dictBLL = new DictBLL();
 
             //初始化养殖类型
-            List<KeyValue> list_breed_type = dictBLL.getDict("breed_type");
+            List<KeyValue> list_breed_type = dictBLL.getDict("animal_type");
             if (list_breed_type != null)
             {
                 this.cbBreed_type.DataSource = list_breed_type;
@@ -195,10 +195,29 @@ namespace com.vdm.form
             string idcard = this.tbIdcard.Text.Trim();
             string address = this.tbAddress.Text.Trim();
             string phone_number = this.tbPhone_number.Text.Trim();
-            int year_inventory_from = int.Parse(this.tbYear_inventory_from.Text);
-            int year_inventory_to = int.Parse(this.tbYear_inventory_to.Text);
-            int year_outbound_from = int.Parse(this.tbYear_outbound_from.Text);
-            int year_outbound_to = int.Parse(this.tbYear_outbound_to.Text);
+            int year_inventory_from = 0;
+            if (this.tbYear_inventory_from.Text.Trim() != "")
+            {
+                year_inventory_from = int.Parse(this.tbYear_inventory_from.Text);
+            }
+            int year_inventory_to = 0;
+            if (this.tbYear_inventory_to.Text.Trim() != "")
+            {
+                year_inventory_to = int.Parse(this.tbYear_inventory_to.Text);
+            }
+
+            int year_outbound_from = 0;
+            if (this.tbYear_outbound_from.Text.Trim() != "")
+            {
+                year_outbound_from = int.Parse(this.tbYear_outbound_from.Text);
+            }
+            int year_outbound_to = 0;
+            if (this.tbYear_outbound_to.Text.Trim() != "")
+            {
+                year_outbound_to = int.Parse(this.tbYear_outbound_to.Text);
+            }
+
+ 
             double output_from = 0;
             if(this.tbOutput_From.Text.Trim() != "")
             {
@@ -405,25 +424,25 @@ namespace com.vdm.form
         {
             this.tbAddress.Text = "";
             this.tbBreed_name.Text = "";
-            this.tbCueernt_inventory_From.Text = "0";
-            this.tbCueernt_inventory_To.Text = "0";
+            this.tbCueernt_inventory_From.Text = "";
+            this.tbCueernt_inventory_To.Text = "";
             this.tbIdcard.Text = "";
             this.tbManager.Text = "";
-            this.tbMidden_area_From.Text = "0.00";
-            this.tbMidden_area_To.Text = "0.00";
-            this.tbOutput_From.Text = "0.00";
-            this.tbOutput_To.Text = "0.00";
-            this.tbPen_area_From.Text = "0.00";
-            this.tbPen_area_To.Text = "0.00";
+            this.tbMidden_area_From.Text = "";
+            this.tbMidden_area_To.Text = "";
+            this.tbOutput_From.Text = "";
+            this.tbOutput_To.Text = "";
+            this.tbPen_area_From.Text = "";
+            this.tbPen_area_To.Text = "";
             this.tbPhone_number.Text = "";
-            this.tbPullttion_area_From.Text = "0.00";
-            this.tbPullttion_area_To.Text = "0.00";
-            this.tbTotal_area_From.Text = "0.00";
-            this.tbTotal_area_To.Text = "0.00";
-            this.tbYear_inventory_from.Text = "0";
-            this.tbYear_inventory_to.Text = "0";
-            this.tbYear_outbound_from.Text = "0";
-            this.tbYear_outbound_to.Text = "0";
+            this.tbPullttion_area_From.Text = "";
+            this.tbPullttion_area_To.Text = "";
+            this.tbTotal_area_From.Text = "";
+            this.tbTotal_area_To.Text = "";
+            this.tbYear_inventory_from.Text = "";
+            this.tbYear_inventory_to.Text = "";
+            this.tbYear_outbound_from.Text = "";
+            this.tbYear_outbound_to.Text = "";
             this.cbAnimal_qualify.SelectedValue = "";
             this.cbBreed_type.SelectedValue = "";
             this.cbReport_or_filings.SelectedValue = "";

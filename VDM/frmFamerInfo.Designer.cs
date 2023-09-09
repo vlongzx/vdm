@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.cbIs_handle_process = new Sunny.UI.UIComboBox();
-            this.cbPlant_area_type = new Sunny.UI.UIComboBox();
             this.tbCar_brand = new Sunny.UI.UITextBox();
             this.tbMechine_type = new Sunny.UI.UITextBox();
             this.uiLabel25 = new Sunny.UI.UILabel();
@@ -37,9 +36,6 @@
             this.cbTown = new Sunny.UI.UIComboBox();
             this.cbVillage = new Sunny.UI.UIComboBox();
             this.uiLabel2 = new Sunny.UI.UILabel();
-            this.cbAnimal_area_type = new Sunny.UI.UIComboBox();
-            this.cbAnimal_type = new Sunny.UI.UIComboBox();
-            this.cbPlant_type = new Sunny.UI.UIComboBox();
             this.tbPhone_number = new Sunny.UI.UITextBox();
             this.tbIdcard = new Sunny.UI.UITextBox();
             this.uiLabel3 = new Sunny.UI.UILabel();
@@ -74,6 +70,10 @@
             this.tbAnimal_yield = new Sunny.UI.UITextBox();
             this.tbAnimal_output = new Sunny.UI.UITextBox();
             this.uiLabel18 = new Sunny.UI.UILabel();
+            this.ctvPlant_type = new Sunny.UI.UIComboTreeView();
+            this.ctvPlant_area_type = new Sunny.UI.UIComboTreeView();
+            this.ctvAnimal_type = new Sunny.UI.UIComboTreeView();
+            this.ctvAnimal_area_type = new Sunny.UI.UIComboTreeView();
             this.pnlBtm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,22 +105,6 @@
             this.cbIs_handle_process.TabIndex = 163;
             this.cbIs_handle_process.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbIs_handle_process.Watermark = "";
-            // 
-            // cbPlant_area_type
-            // 
-            this.cbPlant_area_type.DataSource = null;
-            this.cbPlant_area_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
-            this.cbPlant_area_type.FillColor = System.Drawing.Color.White;
-            this.cbPlant_area_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbPlant_area_type.Location = new System.Drawing.Point(1024, 145);
-            this.cbPlant_area_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbPlant_area_type.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbPlant_area_type.Name = "cbPlant_area_type";
-            this.cbPlant_area_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbPlant_area_type.Size = new System.Drawing.Size(148, 29);
-            this.cbPlant_area_type.TabIndex = 164;
-            this.cbPlant_area_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbPlant_area_type.Watermark = "";
             // 
             // tbCar_brand
             // 
@@ -220,56 +204,6 @@
             this.uiLabel2.Text = "户主姓名";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cbAnimal_area_type
-            // 
-            this.cbAnimal_area_type.DataSource = null;
-            this.cbAnimal_area_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
-            this.cbAnimal_area_type.FillColor = System.Drawing.Color.White;
-            this.cbAnimal_area_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbAnimal_area_type.Location = new System.Drawing.Point(250, 294);
-            this.cbAnimal_area_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbAnimal_area_type.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbAnimal_area_type.Name = "cbAnimal_area_type";
-            this.cbAnimal_area_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbAnimal_area_type.Size = new System.Drawing.Size(165, 29);
-            this.cbAnimal_area_type.TabIndex = 179;
-            this.cbAnimal_area_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbAnimal_area_type.Watermark = "";
-            // 
-            // cbAnimal_type
-            // 
-            this.cbAnimal_type.DataSource = null;
-            this.cbAnimal_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
-            this.cbAnimal_type.FillColor = System.Drawing.Color.White;
-            this.cbAnimal_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbAnimal_type.Location = new System.Drawing.Point(1453, 223);
-            this.cbAnimal_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbAnimal_type.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbAnimal_type.Name = "cbAnimal_type";
-            this.cbAnimal_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbAnimal_type.Size = new System.Drawing.Size(140, 29);
-            this.cbAnimal_type.TabIndex = 178;
-            this.cbAnimal_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbAnimal_type.Watermark = "";
-            this.cbAnimal_type.SelectedValueChanged += new System.EventHandler(this.cbAnimal_type_SelectedValueChanged);
-            // 
-            // cbPlant_type
-            // 
-            this.cbPlant_type.DataSource = null;
-            this.cbPlant_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
-            this.cbPlant_type.FillColor = System.Drawing.Color.White;
-            this.cbPlant_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbPlant_type.Location = new System.Drawing.Point(641, 143);
-            this.cbPlant_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbPlant_type.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbPlant_type.Name = "cbPlant_type";
-            this.cbPlant_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbPlant_type.Size = new System.Drawing.Size(158, 29);
-            this.cbPlant_type.TabIndex = 177;
-            this.cbPlant_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbPlant_type.Watermark = "";
-            this.cbPlant_type.SelectedValueChanged += new System.EventHandler(this.cbPlant_type_SelectedValueChanged);
-            // 
             // tbPhone_number
             // 
             this.tbPhone_number.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
@@ -306,7 +240,7 @@
             // 
             this.uiLabel3.AutoSize = true;
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel3.Location = new System.Drawing.Point(32, 295);
+            this.uiLabel3.Location = new System.Drawing.Point(32, 281);
             this.uiLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(210, 41);
@@ -766,13 +700,86 @@
             this.uiLabel18.Text = "出栏数量(头/只)";
             this.uiLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // ctvPlant_type
+            // 
+            this.ctvPlant_type.CheckBoxes = true;
+            this.ctvPlant_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.ctvPlant_type.FillColor = System.Drawing.Color.White;
+            this.ctvPlant_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ctvPlant_type.Location = new System.Drawing.Point(641, 148);
+            this.ctvPlant_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctvPlant_type.MinimumSize = new System.Drawing.Size(63, 0);
+            this.ctvPlant_type.Name = "ctvPlant_type";
+            this.ctvPlant_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.ctvPlant_type.ShowSelectedAllCheckBox = false;
+            this.ctvPlant_type.Size = new System.Drawing.Size(158, 29);
+            this.ctvPlant_type.TabIndex = 307;
+            this.ctvPlant_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctvPlant_type.Watermark = "";
+            this.ctvPlant_type.TextChanged += new System.EventHandler(this.cbPlant_type_SelectedValueChanged);
+            // 
+            // ctvPlant_area_type
+            // 
+            this.ctvPlant_area_type.CheckBoxes = true;
+            this.ctvPlant_area_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.ctvPlant_area_type.FillColor = System.Drawing.Color.White;
+            this.ctvPlant_area_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ctvPlant_area_type.Location = new System.Drawing.Point(1024, 143);
+            this.ctvPlant_area_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctvPlant_area_type.MinimumSize = new System.Drawing.Size(63, 0);
+            this.ctvPlant_area_type.Name = "ctvPlant_area_type";
+            this.ctvPlant_area_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.ctvPlant_area_type.ShowSelectedAllCheckBox = false;
+            this.ctvPlant_area_type.Size = new System.Drawing.Size(148, 29);
+            this.ctvPlant_area_type.TabIndex = 307;
+            this.ctvPlant_area_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctvPlant_area_type.Watermark = "";
+            // 
+            // ctvAnimal_type
+            // 
+            this.ctvAnimal_type.CheckBoxes = true;
+            this.ctvAnimal_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.ctvAnimal_type.FillColor = System.Drawing.Color.White;
+            this.ctvAnimal_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ctvAnimal_type.Location = new System.Drawing.Point(1453, 215);
+            this.ctvAnimal_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctvAnimal_type.MinimumSize = new System.Drawing.Size(63, 0);
+            this.ctvAnimal_type.Name = "ctvAnimal_type";
+            this.ctvAnimal_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.ctvAnimal_type.ShowSelectedAllCheckBox = false;
+            this.ctvAnimal_type.Size = new System.Drawing.Size(140, 29);
+            this.ctvAnimal_type.TabIndex = 307;
+            this.ctvAnimal_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctvAnimal_type.Watermark = "";
+            this.ctvAnimal_type.TextChanged += new System.EventHandler(this.cbAnimal_type_SelectedValueChanged);
+            // 
+            // ctvAnimal_area_type
+            // 
+            this.ctvAnimal_area_type.CheckBoxes = true;
+            this.ctvAnimal_area_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.ctvAnimal_area_type.FillColor = System.Drawing.Color.White;
+            this.ctvAnimal_area_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ctvAnimal_area_type.Location = new System.Drawing.Point(250, 287);
+            this.ctvAnimal_area_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctvAnimal_area_type.MinimumSize = new System.Drawing.Size(63, 0);
+            this.ctvAnimal_area_type.Name = "ctvAnimal_area_type";
+            this.ctvAnimal_area_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.ctvAnimal_area_type.ShowSelectedAllCheckBox = false;
+            this.ctvAnimal_area_type.Size = new System.Drawing.Size(165, 29);
+            this.ctvAnimal_area_type.TabIndex = 307;
+            this.ctvAnimal_area_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctvAnimal_area_type.Watermark = "";
+            // 
             // frmFamerInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1675, 604);
+            this.Controls.Add(this.ctvAnimal_area_type);
+            this.Controls.Add(this.ctvAnimal_type);
+            this.Controls.Add(this.ctvPlant_area_type);
+            this.Controls.Add(this.ctvPlant_type);
             this.Controls.Add(this.tbOutbound_count);
             this.Controls.Add(this.cbIs_handle_process);
-            this.Controls.Add(this.cbPlant_area_type);
             this.Controls.Add(this.tbInventory_count);
             this.Controls.Add(this.tbAnimal_area);
             this.Controls.Add(this.tbCar_brand);
@@ -785,9 +792,6 @@
             this.Controls.Add(this.uiLabel18);
             this.Controls.Add(this.uiLabel16);
             this.Controls.Add(this.uiLabel2);
-            this.Controls.Add(this.cbAnimal_area_type);
-            this.Controls.Add(this.cbAnimal_type);
-            this.Controls.Add(this.cbPlant_type);
             this.Controls.Add(this.tbPhone_number);
             this.Controls.Add(this.tbAnimal_nvaccinate_count);
             this.Controls.Add(this.tbAnimal_output);
@@ -848,9 +852,6 @@
             this.Controls.SetChildIndex(this.tbAnimal_output, 0);
             this.Controls.SetChildIndex(this.tbAnimal_nvaccinate_count, 0);
             this.Controls.SetChildIndex(this.tbPhone_number, 0);
-            this.Controls.SetChildIndex(this.cbPlant_type, 0);
-            this.Controls.SetChildIndex(this.cbAnimal_type, 0);
-            this.Controls.SetChildIndex(this.cbAnimal_area_type, 0);
             this.Controls.SetChildIndex(this.uiLabel2, 0);
             this.Controls.SetChildIndex(this.uiLabel16, 0);
             this.Controls.SetChildIndex(this.uiLabel18, 0);
@@ -863,10 +864,13 @@
             this.Controls.SetChildIndex(this.tbCar_brand, 0);
             this.Controls.SetChildIndex(this.tbAnimal_area, 0);
             this.Controls.SetChildIndex(this.tbInventory_count, 0);
-            this.Controls.SetChildIndex(this.cbPlant_area_type, 0);
             this.Controls.SetChildIndex(this.cbIs_handle_process, 0);
             this.Controls.SetChildIndex(this.pnlBtm, 0);
             this.Controls.SetChildIndex(this.tbOutbound_count, 0);
+            this.Controls.SetChildIndex(this.ctvPlant_type, 0);
+            this.Controls.SetChildIndex(this.ctvPlant_area_type, 0);
+            this.Controls.SetChildIndex(this.ctvAnimal_type, 0);
+            this.Controls.SetChildIndex(this.ctvAnimal_area_type, 0);
             this.pnlBtm.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -876,7 +880,6 @@
         #endregion
 
         private Sunny.UI.UIComboBox cbIs_handle_process;
-        private Sunny.UI.UIComboBox cbPlant_area_type;
         private Sunny.UI.UITextBox tbCar_brand;
         private Sunny.UI.UITextBox tbMechine_type;
         private Sunny.UI.UILabel uiLabel25;
@@ -884,9 +887,6 @@
         private Sunny.UI.UIComboBox cbTown;
         private Sunny.UI.UIComboBox cbVillage;
         private Sunny.UI.UILabel uiLabel2;
-        private Sunny.UI.UIComboBox cbAnimal_area_type;
-        private Sunny.UI.UIComboBox cbAnimal_type;
-        private Sunny.UI.UIComboBox cbPlant_type;
         private Sunny.UI.UITextBox tbPhone_number;
         private Sunny.UI.UITextBox tbIdcard;
         private Sunny.UI.UILabel uiLabel3;
@@ -921,5 +921,9 @@
         private Sunny.UI.UITextBox tbAnimal_yield;
         private Sunny.UI.UITextBox tbAnimal_output;
         private Sunny.UI.UILabel uiLabel18;
+        private Sunny.UI.UIComboTreeView ctvPlant_type;
+        private Sunny.UI.UIComboTreeView ctvPlant_area_type;
+        private Sunny.UI.UIComboTreeView ctvAnimal_type;
+        private Sunny.UI.UIComboTreeView ctvAnimal_area_type;
     }
 }

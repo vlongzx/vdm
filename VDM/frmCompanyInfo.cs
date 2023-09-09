@@ -3,6 +3,7 @@ using com.vdm.common;
 using com.vdm.model;
 using Sunny.UI;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,14 +56,15 @@ namespace com.vdm.form
                 tbOutput.Text = company.Output.ToString();
                 tbStaff_size.Text = company.Staff_size.ToString();
                 tbTaxpayer_code.Text = company.Taxpayer_code;
-                cbTaxpayer_qualification.Text = company.Taxpayer_qualification;
+                cbTaxpayer_qualification.SelectedValue = company.Taxpayer_qualification;
                 cbCompany_status.SelectedValue = company.Company_status;
-                cbCompany_type.SelectedValue = company.Company_type;
+                // cbCompany_type.SelectedValue = company.Company_type;
+                ctvCompany_type.Text = company.Company_type;
                 cbIs_top_company.SelectedValue = company.Is_top_company;
                 dpEstablish_date.Text = company.Establish_date;
                 dpLicense_date.Text = company.License_date;
-                this.cbTown.Text = company.Town;
-                this.cbVillage.Text = company.Villiage;
+                this.cbTown.SelectedValue = company.Town;
+                this.cbVillage.SelectedValue = company.Villiage;
 
 
             }
@@ -77,12 +79,26 @@ namespace com.vdm.form
             this.dpLicense_date.Text = "";
             //初始化企业类型
             List<KeyValue> list_company_type = dictBLL.getDict("company_type");
+            //if (list_company_type != null)
+            //{
+            //    this.cbCompany_type.DataSource = list_company_type;
+            //    this.cbCompany_type.DisplayMember = "value";
+            //    this.cbCompany_type.ValueMember = "key";
+            //}
             if (list_company_type != null)
             {
-                this.cbCompany_type.DataSource = list_company_type;
-                this.cbCompany_type.DisplayMember = "value";
-                this.cbCompany_type.ValueMember = "key";
+                foreach(KeyValue kv in list_company_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvCompany_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                  }
             }
+ 
+
+
+
             //初始化是否龙头企业
             List<KeyValue> list_is_top_company = dictBLL.getDict("is_top_company");
             if (list_is_top_company != null)
@@ -111,17 +127,17 @@ namespace com.vdm.form
             //初始化所在乡镇所在村
             orgBLL = new OrgBLL();
             List<KeyValue> list_town = orgBLL.getOrgByType("乡镇");
-            list_town.Add(new KeyValue("", "请选择"));
+           // list_town.Add(new KeyValue("", "请选择"));
             if (list_town != null)
             {
                 this.cbTown.DataSource = list_town;
                 this.cbTown.DisplayMember = "value";
                 this.cbTown.ValueMember = "key";
             }
-            cbTown.SelectedValue = "";
+            cbTown.SelectedValue = LoginInfo.CurrentUser.Town;
 
             List<KeyValue> list_village = new List<KeyValue>();
-            list_village.Add(new KeyValue("", "请选择"));
+           // list_village.Add(new KeyValue("", "请选择"));
             this.cbVillage.DataSource = list_village;
             this.cbVillage.DisplayMember = "value";
             this.cbVillage.ValueMember = "key";
@@ -151,7 +167,8 @@ namespace com.vdm.form
                             this.cbVillage.DataSource = list_village;
                             this.cbVillage.DisplayMember = "value";
                             this.cbVillage.ValueMember = "key";
-                            this.cbVillage.SelectedValue = "";
+                            //this.cbVillage.SelectedValue = "";
+                            cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;
                         }
                     }
                     else
@@ -187,7 +204,8 @@ namespace com.vdm.form
                      && CheckCB(cbTaxpayer_qualification, "请选择纳税人资质")
                               && CheckCB(cbCompany_status, "请选择企业经营状态")
                                                     && CheckCB(cbIs_top_company, "请选择是否龙头企业")
-                                                             && CheckCB(cbCompany_type, "请选择企业类型")
+                                                          //   && CheckCB(cbCompany_type, "请选择企业类型")
+                                                          && CheckCTV(ctvCompany_type, "请选择企业类型")
                       && CheckCB(cbTown, "请选择所属镇")
                        && CheckCB(cbVillage, "请选择所属村")
                 ;
@@ -197,6 +215,15 @@ namespace com.vdm.form
         protected bool CheckCB(UIComboBox uicb, string Message)
         {
             if (uicb.Text == "请选择")
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
+        }
+        protected bool CheckCTV(UIComboTreeView uictv, string Message)
+        {
+            if (uictv.Text == "")
             {
                 ShowWarningDialog(Message);
                 return false;
@@ -224,6 +251,7 @@ namespace com.vdm.form
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
+
             //如果数据校验没有通过则直接返回。
             if (this.IsOK == false)
             {
@@ -250,7 +278,8 @@ namespace com.vdm.form
             company.License_date = dpLicense_date.Text;
             company.Taxpayer_qualification = cbTaxpayer_qualification.Text;
             company.Company_status = cbCompany_status.SelectedValue.ToString();
-            company.Company_type = cbCompany_type.SelectedValue.ToString();
+           // company.Company_type = cbCompany_type.SelectedValue.ToString();
+            company.Company_type = ctvCompany_type.Text;
             company.Is_top_company = cbIs_top_company.SelectedValue.ToString();
             company.Town = this.cbTown.Text.ToString();
             company.Villiage = this.cbVillage.Text.ToString();

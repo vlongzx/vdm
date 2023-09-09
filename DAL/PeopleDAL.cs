@@ -697,7 +697,11 @@ namespace com.vdm.dal
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
 
-
+        public DataTable QueryByIdcard(string idcard)
+        {
+            string sql = "select * from t_people where idcard = " + idcard;
+            return this.SqlDbHelper.ExecuteDataTable(sql);
+        }
 
         /// <summary>
         ///  创建一个人员信息

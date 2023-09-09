@@ -107,9 +107,9 @@ namespace com.vdm.dal
                 {
                     sql += "    and town = @town";
                 }
-                if (condition["villiage"].ToString() != "")
+                if (condition["village"].ToString() != "")
                 {
-                    sql += "    and villiage = @villiage";
+                    sql += "    and village = @village";
                 }
                 if (condition["year_yield_from"].ToString() != "0" && condition["year_yield_to"].ToString() != "0")
                 {
@@ -152,7 +152,7 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@sale_way", condition["sale_way"]));
                 parameters.Add(new SQLiteParameter("@output", condition["output"]));
                 parameters.Add(new SQLiteParameter("@insect_ill", condition["insect_ill"]));
-                parameters.Add(new SQLiteParameter("@manage_skill_method", condition["manage_skill_method"]));
+                parameters.Add(new SQLiteParameter("@manage_skill_method",condition["manage_skill_method"]));
                 parameters.Add(new SQLiteParameter("@develop_willing", condition["develop_willing"]));
                 parameters.Add(new SQLiteParameter("@town", condition["town"]));
                 parameters.Add(new SQLiteParameter("@village", condition["village"]));

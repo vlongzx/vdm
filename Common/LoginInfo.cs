@@ -16,8 +16,10 @@ namespace com.vdm.common
         //用户名
         private string _AccountName = "";
         public string AccountName { get { return _AccountName; } set { _AccountName = value; } }
-
-
+        //用户所属乡镇
+        private string _Town= "";
+        //用户所属村
+        private string _Village = "";
         //登录时间
         private DateTime _LoginTime;
         public DateTime LoginTime { get { return _LoginTime; } set { _LoginTime = value; } }
@@ -34,6 +36,32 @@ namespace com.vdm.common
                 if (_CurrentUser == null)
                     _CurrentUser = new LoginInfo();
                 return _CurrentUser;
+            }
+        }
+
+        public string Town
+        {
+            get
+            {
+                return _Town;
+            }
+
+            set
+            {
+                _Town = value;
+            }
+        }
+
+        public string Village
+        {
+            get
+            {
+                return _Village;
+            }
+
+            set
+            {
+                _Village = value;
             }
         }
     }

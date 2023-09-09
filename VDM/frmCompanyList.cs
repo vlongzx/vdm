@@ -59,9 +59,13 @@ namespace com.vdm.form
             List<KeyValue> list_company_type = dictBLL.getDict("company_type");
             if (list_company_type != null)
             {
-                this.cbCompany_type.DataSource = list_company_type;
-                this.cbCompany_type.DisplayMember = "value";
-                this.cbCompany_type.ValueMember = "key";
+                foreach (KeyValue kv in list_company_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvCompany_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
             //初始化是否龙头企业
             List<KeyValue> list_is_top_company = dictBLL.getDict("is_top_company");
@@ -256,7 +260,7 @@ namespace com.vdm.form
           string Taxpayer_code = tbTaxpayer_code.Text.Trim();
           string Taxpayer_qualification = cbTaxpayer_qualification.SelectedValue.ToString();
           string Company_status = cbCompany_status.SelectedValue.ToString();
-          string Company_type = cbCompany_type.SelectedValue.ToString();
+          string Company_type = ctvCompany_type.Text.ToString();
           string Is_top_company = cbIs_top_company.SelectedValue.ToString();
           string Establish_date_From = dpEstablish_date_From.Text.Trim();
           string Establish_date_To = dpEstablish_date_To.Text.Trim();
@@ -344,7 +348,7 @@ namespace com.vdm.form
             tbTaxpayer_code.Text = "";
             cbTaxpayer_qualification.SelectedValue = "";
             cbCompany_status.SelectedValue = "";
-            cbCompany_type.SelectedValue = "";
+            ctvCompany_type.Text = "";
             cbIs_top_company.SelectedValue = "";
             dpEstablish_date_From.Text = "";
             dpEstablish_date_To.Text = "";

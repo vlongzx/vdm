@@ -54,17 +54,26 @@ namespace com.vdm.form
             List<KeyValue> list_plant_type = dictBLL.getDict("plant_type_famer");
             if (list_plant_type != null)
             {
-                this.cbPlant_type.DataSource = list_plant_type;
-                this.cbPlant_type.DisplayMember = "value";
-                this.cbPlant_type.ValueMember = "key";
+                foreach (KeyValue kv in list_plant_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvPlant_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
-            //初始化占地地类
+
+
             List<KeyValue> list_plant_area_type = dictBLL.getDict("plant_area_type");
             if (list_plant_area_type != null)
             {
-                this.cbPlant_area_type.DataSource = list_plant_area_type;
-                this.cbPlant_area_type.DisplayMember = "value";
-                this.cbPlant_area_type.ValueMember = "key";
+                foreach (KeyValue kv in list_plant_area_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvPlant_area_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
             //初始化是否办理设施农用地手续
             List<KeyValue> list_is_handle_process = dictBLL.getDict("is_handle_process");
@@ -75,22 +84,31 @@ namespace com.vdm.form
                 this.cbIs_handle_process.ValueMember = "key";
             }
 
-            //初始化政治面貌
+
             List<KeyValue> list_animal_type = dictBLL.getDict("animal_type_famer");
             if (list_animal_type != null)
             {
-                this.cbAnimal_type.DataSource = list_animal_type;
-                this.cbAnimal_type.DisplayMember = "value";
-                this.cbAnimal_type.ValueMember = "key";
+                foreach (KeyValue kv in list_animal_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvAnimal_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
             //初始化养殖占地地类
             List<KeyValue> list_animal_area_type = dictBLL.getDict("animal_area_type");
             if (list_animal_area_type != null)
             {
-                this.cbAnimal_area_type.DataSource = list_animal_area_type;
-                this.cbAnimal_area_type.DisplayMember = "value";
-                this.cbAnimal_area_type.ValueMember = "key";
+                foreach (KeyValue kv in list_animal_area_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvAnimal_area_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
+
 
             //初始化所在乡镇所在村
             orgBLL = new OrgBLL();
@@ -172,11 +190,11 @@ namespace com.vdm.form
             string Phone_number = tbPhone_number.Text.Trim();
             string Car_brand = tbCar_brand.Text.Trim();
             string Mechine_type = tbMechine_type.Text.Trim();
-            string Plant_type = cbPlant_type.SelectedValue.ToString();
-            string Plant_area_type = cbPlant_area_type.SelectedValue.ToString();
+            string Plant_type = ctvPlant_type.Text.ToString();
+            string Plant_area_type = ctvPlant_area_type.Text.ToString();
             string Is_handle_process = cbIs_handle_process.SelectedValue.ToString();
-            string Animal_type = cbAnimal_type.SelectedValue.ToString();
-            string Animal_area_type = cbAnimal_area_type.SelectedValue.ToString();
+            string Animal_type = ctvAnimal_type.Text.ToString();
+            string Animal_area_type = ctvAnimal_area_type.Text.ToString();
             string Village = this.cbVillage.SelectedValue.ToString();
             string Town = this.cbTown.SelectedValue.ToString();
 
@@ -403,11 +421,11 @@ namespace com.vdm.form
             this.tbPhone_number.Text = "";
             this.tbCar_brand.Text = "";
             this.tbMechine_type.Text = "";
-            this.cbPlant_type.SelectedValue = "";
-            this.cbPlant_area_type.SelectedValue = "";
+            this.ctvPlant_type.Text = "";
+            this.ctvPlant_area_type.Text = "";
             this.cbIs_handle_process.SelectedValue = "";
-            this.cbAnimal_type.SelectedValue = "";
-            this.cbAnimal_area_type.SelectedValue = "";
+            this.ctvAnimal_type.Text = "";
+            this.ctvAnimal_area_type.Text = "";
             this.cbTown.SelectedValue = "";
             this.cbVillage.SelectedValue = "";
             //清空高级查询条件

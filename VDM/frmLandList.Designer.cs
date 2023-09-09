@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiLabel25 = new Sunny.UI.UILabel();
             this.cbTown = new Sunny.UI.UIComboBox();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
@@ -51,7 +51,6 @@
             this.tbMove_area_From = new Sunny.UI.UITextBox();
             this.uiLabel24 = new Sunny.UI.UILabel();
             this.uiLabel22 = new Sunny.UI.UILabel();
-            this.cbMove_type = new Sunny.UI.UIComboBox();
             this.uiLabel27 = new Sunny.UI.UILabel();
             this.tbLand_use_remark = new Sunny.UI.UITextBox();
             this.tbContractor = new Sunny.UI.UITextBox();
@@ -70,8 +69,6 @@
             this.uiLabel26 = new Sunny.UI.UILabel();
             this.cbVillage = new Sunny.UI.UIComboBox();
             this.uiLabel2 = new Sunny.UI.UILabel();
-            this.cbLand_type = new Sunny.UI.UIComboBox();
-            this.cbLand_grade = new Sunny.UI.UIComboBox();
             this.tbIdcard = new Sunny.UI.UITextBox();
             this.tbName = new Sunny.UI.UITextBox();
             this.uiLabel9 = new Sunny.UI.UILabel();
@@ -94,6 +91,9 @@
             this.btEdit = new Sunny.UI.UIButton();
             this.btDelete = new Sunny.UI.UIButton();
             this.pagination = new Sunny.UI.UIPagination();
+            this.ctvMove_type = new Sunny.UI.UIComboTreeView();
+            this.ctvLand_type = new Sunny.UI.UIComboTreeView();
+            this.ctvLand_grade = new Sunny.UI.UIComboTreeView();
             this.uiGroupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgLandList)).BeginInit();
@@ -129,6 +129,9 @@
             // 
             this.uiGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiGroupBox1.Controls.Add(this.ctvMove_type);
+            this.uiGroupBox1.Controls.Add(this.ctvLand_type);
+            this.uiGroupBox1.Controls.Add(this.ctvLand_grade);
             this.uiGroupBox1.Controls.Add(this.dpMove_date_To);
             this.uiGroupBox1.Controls.Add(this.dpMove_date_From);
             this.uiGroupBox1.Controls.Add(this.uiLabel12);
@@ -144,7 +147,6 @@
             this.uiGroupBox1.Controls.Add(this.tbMove_area_From);
             this.uiGroupBox1.Controls.Add(this.uiLabel24);
             this.uiGroupBox1.Controls.Add(this.uiLabel22);
-            this.uiGroupBox1.Controls.Add(this.cbMove_type);
             this.uiGroupBox1.Controls.Add(this.uiLabel27);
             this.uiGroupBox1.Controls.Add(this.tbLand_use_remark);
             this.uiGroupBox1.Controls.Add(this.tbContractor);
@@ -165,8 +167,6 @@
             this.uiGroupBox1.Controls.Add(this.cbTown);
             this.uiGroupBox1.Controls.Add(this.cbVillage);
             this.uiGroupBox1.Controls.Add(this.uiLabel2);
-            this.uiGroupBox1.Controls.Add(this.cbLand_type);
-            this.uiGroupBox1.Controls.Add(this.cbLand_grade);
             this.uiGroupBox1.Controls.Add(this.tbIdcard);
             this.uiGroupBox1.Controls.Add(this.tbName);
             this.uiGroupBox1.Controls.Add(this.uiLabel9);
@@ -404,21 +404,6 @@
             this.uiLabel22.TabIndex = 239;
             this.uiLabel22.Text = "流转形式";
             this.uiLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbMove_type
-            // 
-            this.cbMove_type.DataSource = null;
-            this.cbMove_type.FillColor = System.Drawing.Color.White;
-            this.cbMove_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbMove_type.Location = new System.Drawing.Point(575, 189);
-            this.cbMove_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbMove_type.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbMove_type.Name = "cbMove_type";
-            this.cbMove_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbMove_type.Size = new System.Drawing.Size(158, 29);
-            this.cbMove_type.TabIndex = 236;
-            this.cbMove_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbMove_type.Watermark = "";
             // 
             // uiLabel27
             // 
@@ -674,36 +659,6 @@
             this.uiLabel2.Text = "姓名";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cbLand_type
-            // 
-            this.cbLand_type.DataSource = null;
-            this.cbLand_type.FillColor = System.Drawing.Color.White;
-            this.cbLand_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbLand_type.Location = new System.Drawing.Point(137, 94);
-            this.cbLand_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbLand_type.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbLand_type.Name = "cbLand_type";
-            this.cbLand_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbLand_type.Size = new System.Drawing.Size(260, 29);
-            this.cbLand_type.TabIndex = 138;
-            this.cbLand_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbLand_type.Watermark = "";
-            // 
-            // cbLand_grade
-            // 
-            this.cbLand_grade.DataSource = null;
-            this.cbLand_grade.FillColor = System.Drawing.Color.White;
-            this.cbLand_grade.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbLand_grade.Location = new System.Drawing.Point(575, 94);
-            this.cbLand_grade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbLand_grade.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbLand_grade.Name = "cbLand_grade";
-            this.cbLand_grade.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbLand_grade.Size = new System.Drawing.Size(158, 29);
-            this.cbLand_grade.TabIndex = 138;
-            this.cbLand_grade.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbLand_grade.Watermark = "";
-            // 
             // tbIdcard
             // 
             this.tbIdcard.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
@@ -916,48 +871,48 @@
             // 
             this.dgLandList.AllowUserToAddRows = false;
             this.dgLandList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgLandList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgLandList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgLandList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgLandList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgLandList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLandList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgLandList.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgLandList.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgLandList.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgLandList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgLandList.EnableHeadersVisualStyles = false;
             this.dgLandList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgLandList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgLandList.Location = new System.Drawing.Point(4, 32);
             this.dgLandList.Name = "dgLandList";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgLandList.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLandList.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgLandList.RowHeadersVisible = false;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgLandList.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgLandList.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgLandList.RowTemplate.Height = 23;
             this.dgLandList.ScrollBarHandleWidth = 40;
             this.dgLandList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -1039,6 +994,57 @@
             this.pagination.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.pagination.TotalCount = 40000;
             // 
+            // ctvMove_type
+            // 
+            this.ctvMove_type.CheckBoxes = true;
+            this.ctvMove_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.ctvMove_type.FillColor = System.Drawing.Color.White;
+            this.ctvMove_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ctvMove_type.Location = new System.Drawing.Point(575, 189);
+            this.ctvMove_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctvMove_type.MinimumSize = new System.Drawing.Size(63, 0);
+            this.ctvMove_type.Name = "ctvMove_type";
+            this.ctvMove_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.ctvMove_type.ShowSelectedAllCheckBox = false;
+            this.ctvMove_type.Size = new System.Drawing.Size(158, 29);
+            this.ctvMove_type.TabIndex = 309;
+            this.ctvMove_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctvMove_type.Watermark = "";
+            // 
+            // ctvLand_type
+            // 
+            this.ctvLand_type.CheckBoxes = true;
+            this.ctvLand_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.ctvLand_type.FillColor = System.Drawing.Color.White;
+            this.ctvLand_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ctvLand_type.Location = new System.Drawing.Point(137, 91);
+            this.ctvLand_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctvLand_type.MinimumSize = new System.Drawing.Size(63, 0);
+            this.ctvLand_type.Name = "ctvLand_type";
+            this.ctvLand_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.ctvLand_type.ShowSelectedAllCheckBox = false;
+            this.ctvLand_type.Size = new System.Drawing.Size(260, 29);
+            this.ctvLand_type.TabIndex = 310;
+            this.ctvLand_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctvLand_type.Watermark = "";
+            // 
+            // ctvLand_grade
+            // 
+            this.ctvLand_grade.CheckBoxes = true;
+            this.ctvLand_grade.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.ctvLand_grade.FillColor = System.Drawing.Color.White;
+            this.ctvLand_grade.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ctvLand_grade.Location = new System.Drawing.Point(575, 97);
+            this.ctvLand_grade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctvLand_grade.MinimumSize = new System.Drawing.Size(63, 0);
+            this.ctvLand_grade.Name = "ctvLand_grade";
+            this.ctvLand_grade.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.ctvLand_grade.ShowSelectedAllCheckBox = false;
+            this.ctvLand_grade.Size = new System.Drawing.Size(158, 29);
+            this.ctvLand_grade.TabIndex = 311;
+            this.ctvLand_grade.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctvLand_grade.Watermark = "";
+            // 
             // frmLandList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1071,7 +1077,6 @@
         private Sunny.UI.UILabel uiLabel26;
         private Sunny.UI.UIComboBox cbVillage;
         private Sunny.UI.UILabel uiLabel2;
-        private Sunny.UI.UIComboBox cbLand_grade;
         private Sunny.UI.UITextBox tbIdcard;
         private Sunny.UI.UITextBox tbName;
         private Sunny.UI.UILabel label9;
@@ -1089,7 +1094,6 @@
         private Sunny.UI.UIButton btEdit;
         private Sunny.UI.UIButton btDelete;
         private Sunny.UI.UIPagination pagination;
-        private Sunny.UI.UIComboBox cbLand_type;
         private Sunny.UI.UITextBox tbNorth;
         private Sunny.UI.UITextBox tbWest;
         private Sunny.UI.UITextBox tbSouth;
@@ -1114,7 +1118,6 @@
         private Sunny.UI.UITextBox tbMove_area_From;
         private Sunny.UI.UILabel uiLabel24;
         private Sunny.UI.UILabel uiLabel22;
-        private Sunny.UI.UIComboBox cbMove_type;
         private Sunny.UI.UILabel uiLabel27;
         private Sunny.UI.UITextBox tbLand_use_remark;
         private Sunny.UI.UITextBox tbContractor;
@@ -1124,5 +1127,8 @@
         private Sunny.UI.UILabel uiLabel6;
         private Sunny.UI.UIDatePicker dpMove_date_To;
         private Sunny.UI.UIDatePicker dpMove_date_From;
+        private Sunny.UI.UIComboTreeView ctvMove_type;
+        private Sunny.UI.UIComboTreeView ctvLand_type;
+        private Sunny.UI.UIComboTreeView ctvLand_grade;
     }
 }

@@ -19,118 +19,8 @@ namespace com.vdm.dal
         /// <returns></returns>
         public int getTotalCount(Hashtable condition)
         {
-            string sql = "select * from t_land where 1 = 1";
-            if (condition != null)
-            {
-                if (condition["Land_name"].ToString() != "")
-                {
-                    sql += "    and Land_name like @Land_name";
-                }
-                if (condition["Name"].ToString() != "")
-                {
-                    sql += "    and Name like @Name";
-                }
-                if (condition["Idcard"].ToString() != "")
-                {
-                    sql += "    and Idcard = @Idcard";
-                }
-                if (condition["Is_basic_farmland"].ToString() != "")
-                {
-                    sql += "    and Is_basic_farmland =@Is_basic_farmland";
-                }
-                if (condition["Land_type"].ToString() != "")
-                {
-                    sql += "    and Land_type =@Land_type";
-                }
-                if (condition["Land_grade"].ToString() != "")
-                {
-                    sql += "    and Land_grade = @Land_grade";
-                }
-                if (condition["East"].ToString() != "")
-                {
-                    sql += "    and East = @East";
-                }
-                if (condition["West"].ToString() != "")
-                {
-                    sql += "    and West = @West";
-                }
-                if (condition["North"].ToString() != "")
-                {
-                    sql += "    and North = @North";
-                }
-                if (condition["South"].ToString() != "")
-                {
-                    sql += "    and South = @South";
-                }
-                if (condition["Land_use_remark"].ToString() != "")
-                {
-                    sql += "    and Land_use_remark like @Land_use_remark";
-                }
-                if (condition["Contractor"].ToString() != "")
-                {
-                    sql += "    and Contractor like @Contractor";
-                }
-                if (condition["Move_type"].ToString() != "")
-                {
-                    sql += "    and Move_type = @Move_type";
-                }
 
-                if (condition["Village"].ToString() != "")
-                {
-                    sql += "    and Village = @Village";
-                }
-                if (condition["Town"].ToString() != "")
-                {
-                    sql += "    and Town = @Town";
-                }
-
-                if (condition["Real_area_From"].ToString() != "" && condition["Real_area_To"].ToString() != null)
-                {
-                    sql += "  and  Real_area BETWEEN '" + condition["Real_area_From"].ToString() + "' AND '" + condition["Real_area_To"].ToString() + "'";
-                }
-                if (condition["Contract_time_From"].ToString() != "" && condition["Contract_time_To"].ToString() != null)
-                {
-                    sql += "  and  Contract_time BETWEEN '" + condition["Contract_time_From"].ToString() + "' AND '" + condition["Contract_time_To"].ToString() + "'";
-                }
-                if (condition["Move_area_From"].ToString() != "" && condition["Move_area_To"].ToString() != null)
-                {
-                    sql += "  and  Move_area BETWEEN '" + condition["Move_area_From"].ToString() + "' AND '" + condition["Move_area_To"].ToString() + "'";
-                }
-                if (condition["Move_price_From"].ToString() != "" && condition["Move_price_To"].ToString() != null)
-                {
-                    sql += "  and  Move_price BETWEEN '" + condition["Move_price_From"].ToString() + "' AND '" + condition["Move_price_To"].ToString() + "'";
-                }
-                if (condition["Move_date_From"].ToString() != "" && condition["Move_date_To"].ToString() != null)
-                {
-                    sql += "  and  Move_date BETWEEN '" + condition["Move_date_From"].ToString() + "' AND '" + condition["Move_date_To"].ToString() + "'";
-                }
-
-
-            }
-
-            sql += " order by create_datetime desc";
-
-            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
-            if (condition != null)
-            {
-                parameters.Add(new SQLiteParameter("@Land_name", "%" + condition["Land_name"] + "%"));
-                parameters.Add(new SQLiteParameter("@Name", "%" + condition["Name"] + "%"));
-                parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
-                parameters.Add(new SQLiteParameter("@Is_basic_farmland", condition["Is_basic_farmland"]));
-                parameters.Add(new SQLiteParameter("@Land_type", condition["Land_type"]));
-                parameters.Add(new SQLiteParameter("@Land_grade", condition["Land_grade"]));
-                parameters.Add(new SQLiteParameter("@East", condition["East"]));
-                parameters.Add(new SQLiteParameter("@West", condition["West"]));
-                parameters.Add(new SQLiteParameter("@North", condition["North"]));
-                parameters.Add(new SQLiteParameter("@South", condition["South"]));
-                parameters.Add(new SQLiteParameter("@Land_use_remark", "%" + condition["Land_use_remark"] + "%"));
-                parameters.Add(new SQLiteParameter("@Contractor", "%" + condition["Contractor"] + "%"));
-                parameters.Add(new SQLiteParameter("@Move_type", condition["Move_type"]));
-                parameters.Add(new SQLiteParameter("@Town", condition["Town"]));
-                parameters.Add(new SQLiteParameter("@Village", condition["Village"]));
-            }
-
-            DataTable dt = this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
+            DataTable dt = queryAllLandCommon(condition, -1, -1);
             if (dt != null)
             {
                 return dt.Rows.Count;
@@ -144,134 +34,7 @@ namespace com.vdm.dal
         /// <returns></returns>
         public DataTable queryAllLand(Hashtable condition, int pageIndex, int pageSize)
         {
-            string sql = "select * from t_land where 1 = 1";
-            if (condition != null)
-            {
-                if (condition["Land_name"].ToString() != "")
-                {
-                    sql += "    and Land_name like @Land_name";
-                }
-                if (condition["Name"].ToString() != "")
-                {
-                    sql += "    and Name like @Name";
-                }
-                if (condition["Idcard"].ToString() != "")
-                {
-                    sql += "    and Idcard = @Idcard";
-                }
-                if (condition["Is_basic_farmland"].ToString() != "")
-                {
-                    sql += "    and Is_basic_farmland =@Is_basic_farmland";
-                }
-                if (condition["Land_type"].ToString() != "")
-                {
-                    sql += "    and Land_type =@Land_type";
-                }
-                if (condition["Land_grade"].ToString() != "")
-                {
-                    sql += "    and Land_grade = @Land_grade";
-                }
-                if (condition["East"].ToString() != "")
-                {
-                    sql += "    and East = @East";
-                }
-                if (condition["West"].ToString() != "")
-                {
-                    sql += "    and West = @West";
-                }
-                if (condition["North"].ToString() != "")
-                {
-                    sql += "    and North = @North";
-                }
-                if (condition["South"].ToString() != "")
-                {
-                    sql += "    and South = @South";
-                }
-                if (condition["Land_use_remark"].ToString() != "")
-                {
-                    sql += "    and Land_use_remark like @Land_use_remark";
-                }
-                if (condition["Contractor"].ToString() != "")
-                {
-                    sql += "    and Contractor like @Contractor";
-                }
-                if (condition["Move_type"].ToString() != "")
-                {
-                    sql += "    and Move_type = @Move_type";
-                }
-
-                if (condition["Village"].ToString() != "")
-                {
-                    sql += "    and Village = @Village";
-                }
-                if (condition["Town"].ToString() != "")
-                {
-                    sql += "    and Town = @Town";
-                }
-
-                if ( condition["Real_area_From"].ToString() != "" && condition["Real_area_To"].ToString() != null)
-                {
-                    sql += "  and  Real_area BETWEEN '" + condition["Real_area_From"].ToString() + "' AND '" + condition["Real_area_To"].ToString() + "'";
-                }
-                if ( condition["Contract_time_From"].ToString() != "" && condition["Contract_time_To"].ToString() != null)
-                {
-                    sql += "  and  Contract_time BETWEEN '" + condition["Contract_time_From"].ToString() + "' AND '" + condition["Contract_time_To"].ToString() + "'";
-                }
-                if (condition["Move_area_From"].ToString() != "" && condition["Move_area_To"].ToString() != null)
-                {
-                    sql += "  and  Move_area BETWEEN '" + condition["Move_area_From"].ToString() + "' AND '" + condition["Move_area_To"].ToString() + "'";
-                }
-                if ( condition["Move_price_From"].ToString() != "" && condition["Move_price_To"].ToString() != null)
-                {
-                    sql += "  and  Move_price BETWEEN '" + condition["Move_price_From"].ToString() + "' AND '" + condition["Move_price_To"].ToString() + "'";
-                }
-                if ( condition["Move_date_From"].ToString() != "" && condition["Move_date_To"].ToString() != null)
-                {
-                    sql += "  and  Move_date BETWEEN '" + condition["Move_date_From"].ToString() + "' AND '" + condition["Move_date_To"].ToString() + "'";
-                }
-           
-
-            }
-
-            sql += " order by create_datetime desc";
-            int offset = 0;
-            int totalPeople = this.getTotalCount(condition);
-            if (pageIndex > 1)
-            {
-                offset = (pageIndex - 1) * pageSize;
-            }
-            int limit = 1;
-            int pageCount = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
-            if (pageIndex + 1 <= pageCount)
-            {
-                limit = pageSize;
-            }
-            else
-            {
-                limit = totalPeople - (pageCount - 1) * pageSize;
-            }
-            sql += "  limit  " + limit;
-            sql += "  offset  " + offset;
-            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
-            if (condition != null)
-            {
-                parameters.Add(new SQLiteParameter("@Land_name", "%"+condition["Land_name"]+"%"));
-                parameters.Add(new SQLiteParameter("@Name", "%"+condition["Name"]+"%"));
-                parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
-                parameters.Add(new SQLiteParameter("@Is_basic_farmland", condition["Is_basic_farmland"]));
-                parameters.Add(new SQLiteParameter("@Land_type", condition["Land_type"]));
-                parameters.Add(new SQLiteParameter("@Land_grade", condition["Land_grade"]));
-                parameters.Add(new SQLiteParameter("@East", condition["East"]));
-                parameters.Add(new SQLiteParameter("@West", condition["West"]));
-                parameters.Add(new SQLiteParameter("@North", condition["North"]));
-                parameters.Add(new SQLiteParameter("@South", condition["South"]));
-                parameters.Add(new SQLiteParameter("@Land_use_remark", "%"+condition["Land_use_remark"]+"%"));
-                parameters.Add(new SQLiteParameter("@Contractor","%"+ condition["Contractor"]+"%"));
-                parameters.Add(new SQLiteParameter("@Move_type", condition["Move_type"]));
-                parameters.Add(new SQLiteParameter("@Town", condition["Town"]));
-                parameters.Add(new SQLiteParameter("@Village", condition["Village"]));
-            }
-            return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
+            return queryAllLandCommon(condition,pageIndex,pageSize);
         }
 
         /// <summary>
@@ -281,117 +44,7 @@ namespace com.vdm.dal
         /// <returns></returns>
         public DataTable getAllLand(Hashtable condition)
         {
-            string sql = "select * from t_land where 1 = 1";
-            if (condition != null)
-            {
-                if (condition["Land_name"].ToString() != "")
-                {
-                    sql += "    and Land_name like @Land_name";
-                }
-                if (condition["Name"].ToString() != "")
-                {
-                    sql += "    and Name like @Name";
-                }
-                if (condition["Idcard"].ToString() != "")
-                {
-                    sql += "    and Idcard = @Idcard";
-                }
-                if (condition["Is_basic_farmland"].ToString() != "")
-                {
-                    sql += "    and Is_basic_farmland =@Is_basic_farmland";
-                }
-                if (condition["Land_type"].ToString() != "")
-                {
-                    sql += "    and Land_type =@Land_type";
-                }
-                if (condition["Land_grade"].ToString() != "")
-                {
-                    sql += "    and Land_grade = @Land_grade";
-                }
-                if (condition["East"].ToString() != "")
-                {
-                    sql += "    and East = @East";
-                }
-                if (condition["West"].ToString() != "")
-                {
-                    sql += "    and West = @West";
-                }
-                if (condition["North"].ToString() != "")
-                {
-                    sql += "    and North = @North";
-                }
-                if (condition["South"].ToString() != "")
-                {
-                    sql += "    and South = @South";
-                }
-                if (condition["Land_use_remark"].ToString() != "")
-                {
-                    sql += "    and Land_use_remark like @Land_use_remark";
-                }
-                if (condition["Contractor"].ToString() != "")
-                {
-                    sql += "    and Contractor like @Contractor";
-                }
-                if (condition["Move_type"].ToString() != "")
-                {
-                    sql += "    and Move_type = @Move_type";
-                }
-
-                if (condition["Village"].ToString() != "")
-                {
-                    sql += "    and Village = @Village";
-                }
-                if (condition["Town"].ToString() != "")
-                {
-                    sql += "    and Town = @Town";
-                }
-
-                if (condition["Real_area_From"].ToString() != "" && condition["Real_area_To"].ToString() != null)
-                {
-                    sql += "  and  Real_area BETWEEN '" + condition["Real_area_From"].ToString() + "' AND '" + condition["Real_area_To"].ToString() + "'";
-                }
-                if (condition["Contract_time_From"].ToString() != "" && condition["Contract_time_To"].ToString() != null)
-                {
-                    sql += "  and  Contract_time BETWEEN '" + condition["Contract_time_From"].ToString() + "' AND '" + condition["Contract_time_To"].ToString() + "'";
-                }
-                if (condition["Move_area_From"].ToString() != "" && condition["Move_area_To"].ToString() != null)
-                {
-                    sql += "  and  Move_area BETWEEN '" + condition["Move_area_From"].ToString() + "' AND '" + condition["Move_area_To"].ToString() + "'";
-                }
-                if (condition["Move_price_From"].ToString() != "" && condition["Move_price_To"].ToString() != null)
-                {
-                    sql += "  and  Move_price BETWEEN '" + condition["Move_price_From"].ToString() + "' AND '" + condition["Move_price_To"].ToString() + "'";
-                }
-                if (condition["Move_date_From"].ToString() != "" && condition["Move_date_To"].ToString() != null)
-                {
-                    sql += "  and  Move_date BETWEEN '" + condition["Move_date_From"].ToString() + "' AND '" + condition["Move_date_To"].ToString() + "'";
-                }
-
-
-            }
-
-            sql += " order by create_datetime desc";
-
-            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
-            if (condition != null)
-            {
-                parameters.Add(new SQLiteParameter("@Land_name", "%" + condition["Land_name"] + "%"));
-                parameters.Add(new SQLiteParameter("@Name", "%" + condition["Name"] + "%"));
-                parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
-                parameters.Add(new SQLiteParameter("@Is_basic_farmland", condition["Is_basic_farmland"]));
-                parameters.Add(new SQLiteParameter("@Land_type", condition["Land_type"]));
-                parameters.Add(new SQLiteParameter("@Land_grade", condition["Land_grade"]));
-                parameters.Add(new SQLiteParameter("@East", condition["East"]));
-                parameters.Add(new SQLiteParameter("@West", condition["West"]));
-                parameters.Add(new SQLiteParameter("@North", condition["North"]));
-                parameters.Add(new SQLiteParameter("@South", condition["South"]));
-                parameters.Add(new SQLiteParameter("@Land_use_remark", "%" + condition["Land_use_remark"] + "%"));
-                parameters.Add(new SQLiteParameter("@Contractor", "%" + condition["Contractor"] + "%"));
-                parameters.Add(new SQLiteParameter("@Move_type", condition["Move_type"]));
-                parameters.Add(new SQLiteParameter("@Town", condition["Town"]));
-                parameters.Add(new SQLiteParameter("@Village", condition["Village"]));
-            }
-            return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
+            return queryAllLandCommon(condition, -1, -1);
         }
         /// <summary>
         /// 创建农户
@@ -544,7 +197,147 @@ namespace com.vdm.dal
         {
             return this.SqlDbHelper.ExecuteSqlTran(SQLStringObjectList);
         }
+        public DataTable queryAllLandCommon(Hashtable condition, int pageIndex, int pageSize)
+        {
+            string sql = "select * from t_land where 1 = 1";
+            if (condition != null)
+            {
+                if (condition["Land_name"].ToString() != "")
+                {
+                    sql += "    and Land_name like @Land_name";
+                }
+                if (condition["Name"].ToString() != "")
+                {
+                    sql += "    and Name like @Name";
+                }
+                if (condition["Idcard"].ToString() != "")
+                {
+                    sql += "    and Idcard = @Idcard";
+                }
+                if (condition["Is_basic_farmland"].ToString() != "")
+                {
+                    sql += "    and Is_basic_farmland =@Is_basic_farmland";
+                }
+                if (condition["Land_type"].ToString() != "")
+                {
+                    sql += "    and Land_type = @Land_type";
+                }
+                if (condition["Land_grade"].ToString() != "")
+                {
+                    sql += "    and Land_grade = @Land_grade";
+                }
+                if (condition["East"].ToString() != "")
+                {
+                    sql += "    and East = @East";
+                }
+                if (condition["West"].ToString() != "")
+                {
+                    sql += "    and West = @West";
+                }
+                if (condition["North"].ToString() != "")
+                {
+                    sql += "    and North = @North";
+                }
+                if (condition["South"].ToString() != "")
+                {
+                    sql += "    and South = @South";
+                }
+                if (condition["Land_use_remark"].ToString() != "")
+                {
+                    sql += "    and Land_use_remark like @Land_use_remark";
+                }
+                if (condition["Contractor"].ToString() != "")
+                {
+                    sql += "    and Contractor like @Contractor";
+                }
+                if (condition["Move_type"].ToString() != "")
+                {
+                    sql += "    and Move_type = @Move_type";
+                }
 
+                if (condition["Village"].ToString() != "")
+                {
+                    sql += "    and Village = @Village";
+                }
+                if (condition["Town"].ToString() != "")
+                {
+                    sql += "    and Town = @Town";
+                }
+
+                if (condition["Real_area_From"].ToString() != "" && condition["Real_area_To"].ToString() != null)
+                {
+                    sql += "  and  Real_area BETWEEN '" + condition["Real_area_From"].ToString() + "' AND '" + condition["Real_area_To"].ToString() + "'";
+                }
+                if (condition["Contract_time_From"].ToString() != "" && condition["Contract_time_To"].ToString() != null)
+                {
+                    sql += "  and  Contract_time BETWEEN '" + condition["Contract_time_From"].ToString() + "' AND '" + condition["Contract_time_To"].ToString() + "'";
+                }
+                if (condition["Move_area_From"].ToString() != "" && condition["Move_area_To"].ToString() != null)
+                {
+                    sql += "  and  Move_area BETWEEN '" + condition["Move_area_From"].ToString() + "' AND '" + condition["Move_area_To"].ToString() + "'";
+                }
+                if (condition["Move_price_From"].ToString() != "" && condition["Move_price_To"].ToString() != null)
+                {
+                    sql += "  and  Move_price BETWEEN '" + condition["Move_price_From"].ToString() + "' AND '" + condition["Move_price_To"].ToString() + "'";
+                }
+                if (condition["Move_date_From"].ToString() != "" && condition["Move_date_To"].ToString() != null)
+                {
+                    sql += "  and  Move_date BETWEEN '" + condition["Move_date_From"].ToString() + "' AND '" + condition["Move_date_To"].ToString() + "'";
+                }
+
+
+            }
+
+            sql += " order by create_datetime desc";
+
+            if(pageSize!=-1&&pageIndex!=-1)
+            {
+                int offset = 0;
+                int totalPeople = this.getTotalCount(condition);
+                if (pageIndex > 1)
+                {
+                    offset = (pageIndex - 1) * pageSize;
+                }
+                int limit = 1;
+                int pageCount = totalPeople % pageSize > 0 ? totalPeople / pageSize + 1 : totalPeople / pageSize;
+                if (pageIndex + 1 <= pageCount)
+                {
+                    limit = pageSize;
+                }
+                else
+                {
+                    limit = totalPeople - (pageCount - 1) * pageSize;
+                }
+                sql += "  limit  " + limit;
+                sql += "  offset  " + offset;
+            }
+     
+            List<SQLiteParameter> parameters = new List<SQLiteParameter>();
+            if (condition != null)
+            {
+                parameters.Add(new SQLiteParameter("@Land_name", "%" + condition["Land_name"] + "%"));
+                parameters.Add(new SQLiteParameter("@Name", "%" + condition["Name"] + "%"));
+                parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
+                parameters.Add(new SQLiteParameter("@Is_basic_farmland", condition["Is_basic_farmland"]));
+                parameters.Add(new SQLiteParameter("@Land_type",  condition["Land_type"] ));
+                parameters.Add(new SQLiteParameter("@Land_grade", condition["Land_grade"] ));
+                parameters.Add(new SQLiteParameter("@East", condition["East"]));
+                parameters.Add(new SQLiteParameter("@West", condition["West"]));
+                parameters.Add(new SQLiteParameter("@North", condition["North"]));
+                parameters.Add(new SQLiteParameter("@South", condition["South"]));
+                parameters.Add(new SQLiteParameter("@Land_use_remark", "%" + condition["Land_use_remark"] + "%"));
+                parameters.Add(new SQLiteParameter("@Contractor", "%" + condition["Contractor"] + "%"));
+                parameters.Add(new SQLiteParameter("@Move_type",  condition["Move_type"]));
+                parameters.Add(new SQLiteParameter("@Town", condition["Town"]));
+                parameters.Add(new SQLiteParameter("@Village", condition["Village"]));
+            }
+            return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
+        }
+        public DataTable QueryByIdcard(string idcard)
+        {
+            string sql = "select * from t_land where idcard = " + idcard;
+            return this.SqlDbHelper.ExecuteDataTable(sql);
+        }
     }
 }
 

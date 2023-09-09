@@ -195,7 +195,7 @@ namespace com.vdm.form
                 this.cbTown.DisplayMember = "value";
                 this.cbTown.ValueMember = "key";
             }
-            //cbTown.SelectedValue = "";
+            cbTown.SelectedValue = LoginInfo.CurrentUser.Town;
             List<KeyValue> list_village = new List<KeyValue>();
             //list_village.Add(new KeyValue("", "请选择"));
             this.cbVillage.DataSource = list_village;
@@ -522,18 +522,26 @@ namespace com.vdm.form
 
             if(this.opreation_mode == "ADD")
             {
-                Result result = peopleBLL.AddPeople(people);
-                if (result.Count == 1)
+                if (people.Idcard!=""&&(peopleBLL.QueryByIdcard(people.Idcard).Rows.Count != 0))
                 {
-                    MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                }
+                    MessageBox.Show("该身份证号码已存在！请检查信息是否正确");
+                }     
                 else
                 {
-                    MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LogHelper.Error(result.Information, result.Exception);
+                    Result result = peopleBLL.AddPeople(people);
+                    if (result.Count == 1)
+                    {
+                        MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LogHelper.Error(result.Information, result.Exception);
+                    }
                 }
+
             }
             else
             {
@@ -589,11 +597,13 @@ namespace com.vdm.form
                         List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
                         if (list_village != null)
                         {
-                           // list_village.Add(new KeyValue("", "请选择"));
+
+                            // list_village.Add(new KeyValue("", "请选择"));
                             this.cbVillage.DataSource = list_village;
                             this.cbVillage.DisplayMember = "value";
                             this.cbVillage.ValueMember = "key";
-                            this.cbVillage.SelectedValue = "";
+                          //  this.cbVillage.SelectedValue = "";
+                             cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;
                         }
                     }
                     else

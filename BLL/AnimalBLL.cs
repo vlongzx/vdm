@@ -31,6 +31,8 @@ namespace com.vdm.bll
             {
                 animal = new Animal();
                 animal.Breed_id = long.Parse(dt.Rows[0]["breed_id"].ToString());
+                animal.Address = dt.Rows[0]["address"].ToString();
+                animal.Idcard = dt.Rows[0]["idcard"].ToString();
                 animal.Town = dt.Rows[0]["town"].ToString();
                 animal.Village = dt.Rows[0]["village"].ToString();
                 animal.Breed_name = dt.Rows[0]["breed_name"].ToString();
@@ -118,5 +120,6 @@ namespace com.vdm.bll
         {
             return this.animalDAL.DeleteAnimal(breed_id);
         }
+
     }
 }

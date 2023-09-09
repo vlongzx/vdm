@@ -46,15 +46,15 @@ namespace com.vdm.form
                 tbPhone_number.Text = famer.Phone_number;
                 tbCar_brand.Text = famer.Car_brand;
                 tbMechine_type.Text = famer.Mechine_type;
-                cbPlant_type.SelectedValue = famer.Plant_type;
+                ctvPlant_type.Text = famer.Plant_type;
 
                 tbPlant_area.Text = famer.Plant_area.ToString();
                 tbPlant_yield.Text = famer.Plant_yield.ToString();
                 tbPlant_output.Text = famer.Plant_output.ToString();
 
-                cbPlant_area_type.SelectedValue = famer.Plant_area_type;
+                ctvPlant_area_type.Text = famer.Plant_area_type;
                 cbIs_handle_process.SelectedValue = famer.Is_handle_process;
-                cbAnimal_type.SelectedValue = famer.Animal_type;
+                ctvAnimal_type.Text = famer.Animal_type;
 
                 tbAnimal_area.Text = famer.Animal_area.ToString();
                 tbAnimal_count.Text = famer.Animal_count.ToString();
@@ -65,10 +65,10 @@ namespace com.vdm.form
                 tbAnimal_yield.Text = famer.Animal_yield.ToString();
                 tbAnimal_output.Text = famer.Animal_output.ToString();
 
-                cbAnimal_area_type.SelectedValue = famer.Animal_area_type;
+                ctvAnimal_area_type.Text = famer.Animal_area_type;
                 cbIs_handle_process.SelectedValue = famer.Is_handle_process;
-                this.cbTown.Text = famer.Town;
-                this.cbVillage.Text = famer.Villiage;
+                this.cbTown.SelectedValue = famer.Town;
+                this.cbVillage.SelectedValue = famer.Villiage;
 
             }
         }
@@ -77,23 +77,46 @@ namespace com.vdm.form
         /// </summary>
         private void InitPageControl()
         {
+            tbAnimal_area.Enabled = false;
+            tbAnimal_count.Enabled = false;
+            ctvAnimal_area_type.Enabled = false;
+            tbAnimal_vaccinate_count.Enabled = false;
+            tbAnimal_nvaccinate_count.Enabled = false;
+            tbInventory_count.Enabled = false;
+            tbOutbound_count.Enabled = false;
+            tbAnimal_yield.Enabled = false;
+            tbAnimal_output.Enabled = false;
+            tbPlant_area.Enabled = false;
+            ctvPlant_area_type.Enabled = false;
+            cbIs_handle_process.Enabled = false;
+            tbPlant_yield.Enabled = false;
+            tbPlant_output.Enabled = false;
             dictBLL = new DictBLL();
 
             //初始化种植作物种类
             List<KeyValue> list_plant_type = dictBLL.getDict("plant_type_famer");
             if (list_plant_type != null)
             {
-                this.cbPlant_type.DataSource = list_plant_type;
-                this.cbPlant_type.DisplayMember = "value";
-                this.cbPlant_type.ValueMember = "key";
+                foreach (KeyValue kv in list_plant_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvPlant_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
-            //初始化占地地类
+
+  
             List<KeyValue> list_plant_area_type = dictBLL.getDict("plant_area_type");
             if (list_plant_area_type != null)
             {
-                this.cbPlant_area_type.DataSource = list_plant_area_type;
-                this.cbPlant_area_type.DisplayMember = "value";
-                this.cbPlant_area_type.ValueMember = "key";
+                foreach (KeyValue kv in list_plant_area_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvPlant_area_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
             //初始化是否办理设施农用地手续
             List<KeyValue> list_is_handle_process = dictBLL.getDict("is_handle_process");
@@ -104,21 +127,29 @@ namespace com.vdm.form
                 this.cbIs_handle_process.ValueMember = "key";
             }
 
-            //初始化政治面貌
+
             List<KeyValue> list_animal_type = dictBLL.getDict("animal_type_famer");
             if (list_animal_type != null)
             {
-                this.cbAnimal_type.DataSource = list_animal_type;
-                this.cbAnimal_type.DisplayMember = "value";
-                this.cbAnimal_type.ValueMember = "key";
+                foreach (KeyValue kv in list_animal_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvAnimal_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
             //初始化养殖占地地类
             List<KeyValue> list_animal_area_type = dictBLL.getDict("animal_area_type");
             if (list_animal_area_type != null)
             {
-                this.cbAnimal_area_type.DataSource = list_animal_area_type;
-                this.cbAnimal_area_type.DisplayMember = "value";
-                this.cbAnimal_area_type.ValueMember = "key";
+                foreach (KeyValue kv in list_animal_area_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvAnimal_area_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
 
             //初始化所在乡镇所在村
@@ -131,6 +162,7 @@ namespace com.vdm.form
                 this.cbTown.ValueMember = "key";
             }
             //cbTown.SelectedValue = "";
+            cbTown.SelectedValue = LoginInfo.CurrentUser.Town;
             List<KeyValue> list_village = new List<KeyValue>();
             //list_village.Add(new KeyValue("", "请选择"));
             this.cbVillage.DataSource = list_village;
@@ -168,7 +200,8 @@ namespace com.vdm.form
                             this.cbVillage.DataSource = list_village;
                             this.cbVillage.DisplayMember = "value";
                             this.cbVillage.ValueMember = "key";
-                            this.cbVillage.SelectedValue = "";
+                            //   this.cbVillage.SelectedValue = "";
+                            cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;
                         }
                     }
                     else
@@ -190,10 +223,11 @@ namespace com.vdm.form
         {
 
             return CheckEmpty(tbHolder_name, "请输入农户姓名")
-                && CheckIDCard(this.tbIdcard, "您输入的身份证号码不合法，请重新输入。")
+                        && CheckEmpty(this.tbIdcard, "请输入身份证号码")
+                && CheckIDCard(this.tbIdcard, "您输入的身份证号码不合法，请重新输入")
                 && CheckEmpty(tbPhone_number, "请输入联系电话")
-                && CheckCB(cbPlant_type, "请选择种植物种类")
-                 && CheckCB(cbAnimal_type, "请选择种养殖动物类型类")
+                && CheckCTV(ctvPlant_type, "请选择种植物种类")
+                 && CheckCTV(ctvAnimal_type, "请选择种养殖动物类型类")
                  && CheckPlant()
                  && CheckAnimal()
 
@@ -210,14 +244,24 @@ namespace com.vdm.form
             }
             return true;
         }
+        protected bool CheckCTV(UIComboTreeView uictv, string Message)
+        {
+            if (uictv.Text == "")
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
+        }
+
 
         //校验关联字段
         protected bool CheckPlant()
         {
-            if (cbPlant_type.Text != "无")
+            if (ctvPlant_type.Text != "")
             {
                 return CheckEmpty(tbPlant_area, "请输入种植物占地面积")
-                    && CheckCB(cbPlant_area_type, "请选择种植占地地类")
+                    && CheckCTV(ctvPlant_area_type, "请选择种植占地地类")
                     && CheckCB(cbIs_handle_process, "请选择是否办理设施农用地手续")
                     && CheckEmpty(tbPlant_yield, "请输入种植产量")
                      && CheckEmpty(tbPlant_output, "请输入种植产值")
@@ -227,11 +271,11 @@ namespace com.vdm.form
         }
         protected bool CheckAnimal()
         {
-            if (cbAnimal_type.Text != "无")
+            if (ctvAnimal_type.Text != "")
             {
                 return CheckEmpty(tbAnimal_area, "请输入养殖地面积")
                     && CheckEmpty(tbAnimal_count, "请输入养殖数量")
-                    && CheckCB(cbAnimal_area_type, "请选择养殖占地地类")
+                    && CheckCTV(ctvAnimal_area_type, "请选择养殖占地地类")
                     && CheckEmpty(tbAnimal_vaccinate_count, "请输入已接种疫苗的动物数量")
                     && CheckEmpty(tbAnimal_nvaccinate_count, "请输入未接种疫苗的动物数量")
                     && CheckEmpty(tbInventory_count, "请输入存栏数量")
@@ -266,7 +310,8 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void btnOK_Click(object sender, EventArgs e)
         {
-            //如果数据校验没有通过则直接返回。
+            //MessageBox.Show(ctvPlant_type.Text ); 
+                //如果数据校验没有通过则直接返回。
             if (this.IsOK == false)
             {
                 return;
@@ -279,17 +324,17 @@ namespace com.vdm.form
             famer.Phone_number = tbPhone_number.Text.Trim();
             famer.Car_brand = tbCar_brand.Text.Trim();
             famer.Mechine_type = tbMechine_type.Text.Trim();
-            famer.Plant_type = cbPlant_type.SelectedValue.ToString();
-            if (cbPlant_type.Text != "无")
+            famer.Plant_type = ctvPlant_type.Text.ToString();
+            if (ctvPlant_type.Text != "无; ")
             {
                 famer.Plant_area = double.Parse(tbPlant_area.Text.Trim());
                 famer.Plant_yield = double.Parse(tbPlant_yield.Text.Trim());
                 famer.Plant_output = int.Parse(tbPlant_output.Text.Trim());
             }
-            famer.Plant_area_type = cbPlant_area_type.SelectedValue.ToString();
+            famer.Plant_area_type = ctvPlant_area_type.Text.ToString();
             famer.Is_handle_process = cbIs_handle_process.SelectedValue.ToString();
-            famer.Animal_type = cbAnimal_type.SelectedValue.ToString();
-            if (cbAnimal_type.Text != "无")
+            famer.Animal_type = ctvAnimal_type.Text.ToString();
+            if (ctvAnimal_type.Text != "无; ")
             {
 
                 famer.Animal_area = double.Parse(tbAnimal_area.Text.Trim());
@@ -301,7 +346,7 @@ namespace com.vdm.form
                 famer.Animal_yield = int.Parse(tbAnimal_yield.Text.Trim());
                 famer.Animal_output = int.Parse(tbAnimal_output.Text.Trim());
             }
-            famer.Animal_area_type = cbAnimal_area_type.SelectedValue.ToString();
+            famer.Animal_area_type = ctvAnimal_area_type.Text.ToString();
             famer.Town = this.cbTown.Text.ToString();
             famer.Villiage = this.cbVillage.Text.ToString();
             famer.Creater = LoginInfo.CurrentUser.Account;
@@ -310,18 +355,27 @@ namespace com.vdm.form
 
             if (this.opreation_mode == "ADD")
             {
-                Result result = famerBLL.AddFamer(famer);
-                if (result.Count == 1)
+
+                if (famerBLL.QueryByIdcard(famer.Idcard).Rows.Count != 0)
                 {
-                    MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    MessageBox.Show("该身份证号码已存在！请检查信息是否正确");
                 }
                 else
                 {
-                    MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LogHelper.Error(result.Information, result.Exception);
+                    Result result = famerBLL.AddFamer(famer);
+                    if (result.Count == 1)
+                    {
+                        MessageBox.Show("保存成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(result.Information, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LogHelper.Error(result.Information, result.Exception);
+                    }
                 }
+              
             }
             else
             {
@@ -343,18 +397,18 @@ namespace com.vdm.form
         private void cbPlant_type_SelectedValueChanged(object sender, EventArgs e)
         {
 
-            if (cbPlant_type.SelectedValue.ToString() == "")
+            if (ctvPlant_type.Text.ToString() == "")
             {
                 tbPlant_area.Enabled = false;
-                cbPlant_area_type.Enabled = false;
+                ctvPlant_area_type.Enabled = false;
                 cbIs_handle_process.Enabled = false;
                 tbPlant_yield.Enabled = false;
                 tbPlant_output.Enabled = false;
             }
-            else if (cbPlant_type.SelectedValue.ToString() != "无")
+            else if (ctvPlant_type.Text != "无; ")
             {
                 tbPlant_area.Enabled = true;
-                cbPlant_area_type.Enabled = true;
+                ctvPlant_area_type.Enabled = true;
                 cbIs_handle_process.Enabled = true;
                 tbPlant_yield.Enabled = true;
                 tbPlant_output.Enabled = true;
@@ -362,7 +416,7 @@ namespace com.vdm.form
             else
             {
                 tbPlant_area.Enabled = false;
-                cbPlant_area_type.Enabled = false;
+                ctvPlant_area_type.Enabled = false;
                 cbIs_handle_process.Enabled = false;
                 tbPlant_yield.Enabled = false;
                 tbPlant_output.Enabled = false;
@@ -371,11 +425,11 @@ namespace com.vdm.form
 
         private void cbAnimal_type_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (cbAnimal_type.SelectedValue.ToString() == "")
+            if (ctvAnimal_type.Text.ToString() == "")
             {
                 tbAnimal_area.Enabled = false;
                 tbAnimal_count.Enabled = false;
-                cbAnimal_area_type.Enabled = false;
+                ctvAnimal_area_type.Enabled = false;
                 tbAnimal_vaccinate_count.Enabled = false;
                 tbAnimal_nvaccinate_count.Enabled = false;
                 tbInventory_count.Enabled = false;
@@ -383,11 +437,11 @@ namespace com.vdm.form
                 tbAnimal_yield.Enabled = false;
                 tbAnimal_output.Enabled = false;
             }
-            else if (cbAnimal_type.SelectedValue.ToString() != "无")
+            else if (ctvAnimal_type.Text.ToString() != "无; ")
             {
                 tbAnimal_area.Enabled = true;
                 tbAnimal_count.Enabled = true;
-                cbAnimal_area_type.Enabled = true;
+                ctvAnimal_area_type.Enabled = true;
                 tbAnimal_vaccinate_count.Enabled = true;
                 tbAnimal_nvaccinate_count.Enabled = true;
                 tbInventory_count.Enabled = true;
@@ -399,7 +453,7 @@ namespace com.vdm.form
             {
                 tbAnimal_area.Enabled = false;
                 tbAnimal_count.Enabled = false;
-                cbAnimal_area_type.Enabled = false;
+                ctvAnimal_area_type.Enabled = false;
                 tbAnimal_vaccinate_count.Enabled = false;
                 tbAnimal_nvaccinate_count.Enabled = false;
                 tbInventory_count.Enabled = false;

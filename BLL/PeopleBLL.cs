@@ -129,7 +129,10 @@ namespace com.vdm.bll
         {
             return this.peopleDAL.CreatePeople(people);
         }
-
+        public DataTable QueryByIdcard(string idcard)
+        {
+            return this.peopleDAL.QueryByIdcard(idcard);
+        }
         public Result EditPeople(People people)
         {
             return this.peopleDAL.UpdatePeople(people);

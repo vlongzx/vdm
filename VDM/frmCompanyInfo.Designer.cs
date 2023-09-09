@@ -51,7 +51,6 @@
             this.uiLabel25 = new Sunny.UI.UILabel();
             this.uiLabel26 = new Sunny.UI.UILabel();
             this.cbTown = new Sunny.UI.UIComboBox();
-            this.cbCompany_type = new Sunny.UI.UIComboBox();
             this.cbCompany_status = new Sunny.UI.UIComboBox();
             this.cbIs_top_company = new Sunny.UI.UIComboBox();
             this.cbVillage = new Sunny.UI.UIComboBox();
@@ -68,6 +67,7 @@
             this.label12 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.cbTaxpayer_qualification = new Sunny.UI.UIComboBox();
+            this.ctvCompany_type = new Sunny.UI.UIComboTreeView();
             this.pnlBtm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -419,22 +419,6 @@
             this.cbTown.Watermark = "";
             this.cbTown.SelectedValueChanged += new System.EventHandler(this.cbTown_SelectedValueChanged);
             // 
-            // cbCompany_type
-            // 
-            this.cbCompany_type.DataSource = null;
-            this.cbCompany_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
-            this.cbCompany_type.FillColor = System.Drawing.Color.White;
-            this.cbCompany_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbCompany_type.Location = new System.Drawing.Point(606, 122);
-            this.cbCompany_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbCompany_type.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbCompany_type.Name = "cbCompany_type";
-            this.cbCompany_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbCompany_type.Size = new System.Drawing.Size(151, 29);
-            this.cbCompany_type.TabIndex = 268;
-            this.cbCompany_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbCompany_type.Watermark = "";
-            // 
             // cbCompany_status
             // 
             this.cbCompany_status.DataSource = null;
@@ -653,10 +637,28 @@
             this.cbTaxpayer_qualification.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbTaxpayer_qualification.Watermark = "";
             // 
+            // ctvCompany_type
+            // 
+            this.ctvCompany_type.CheckBoxes = true;
+            this.ctvCompany_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.ctvCompany_type.FillColor = System.Drawing.Color.White;
+            this.ctvCompany_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ctvCompany_type.Location = new System.Drawing.Point(606, 119);
+            this.ctvCompany_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctvCompany_type.MinimumSize = new System.Drawing.Size(63, 0);
+            this.ctvCompany_type.Name = "ctvCompany_type";
+            this.ctvCompany_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.ctvCompany_type.ShowSelectedAllCheckBox = false;
+            this.ctvCompany_type.Size = new System.Drawing.Size(151, 29);
+            this.ctvCompany_type.TabIndex = 306;
+            this.ctvCompany_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctvCompany_type.Watermark = "";
+            // 
             // frmCompanyInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1612, 542);
+            this.Controls.Add(this.ctvCompany_type);
             this.Controls.Add(this.dpEstablish_date);
             this.Controls.Add(this.dpLicense_date);
             this.Controls.Add(this.tbOutput);
@@ -676,7 +678,6 @@
             this.Controls.Add(this.uiLabel26);
             this.Controls.Add(this.cbTown);
             this.Controls.Add(this.cbTaxpayer_qualification);
-            this.Controls.Add(this.cbCompany_type);
             this.Controls.Add(this.cbCompany_status);
             this.Controls.Add(this.cbIs_top_company);
             this.Controls.Add(this.cbVillage);
@@ -722,7 +723,6 @@
             this.Controls.SetChildIndex(this.cbVillage, 0);
             this.Controls.SetChildIndex(this.cbIs_top_company, 0);
             this.Controls.SetChildIndex(this.cbCompany_status, 0);
-            this.Controls.SetChildIndex(this.cbCompany_type, 0);
             this.Controls.SetChildIndex(this.cbTaxpayer_qualification, 0);
             this.Controls.SetChildIndex(this.cbTown, 0);
             this.Controls.SetChildIndex(this.uiLabel26, 0);
@@ -742,6 +742,7 @@
             this.Controls.SetChildIndex(this.tbOutput, 0);
             this.Controls.SetChildIndex(this.dpLicense_date, 0);
             this.Controls.SetChildIndex(this.dpEstablish_date, 0);
+            this.Controls.SetChildIndex(this.ctvCompany_type, 0);
             this.pnlBtm.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -773,7 +774,6 @@
         private Sunny.UI.UILabel uiLabel25;
         private Sunny.UI.UILabel uiLabel26;
         private Sunny.UI.UIComboBox cbTown;
-        private Sunny.UI.UIComboBox cbCompany_type;
         private Sunny.UI.UIComboBox cbCompany_status;
         private Sunny.UI.UIComboBox cbIs_top_company;
         private Sunny.UI.UIComboBox cbVillage;
@@ -790,5 +790,6 @@
         private Sunny.UI.UILabel label12;
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UIComboBox cbTaxpayer_qualification;
+        private Sunny.UI.UIComboTreeView ctvCompany_type;
     }
 }

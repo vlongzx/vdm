@@ -106,5 +106,9 @@ namespace com.vdm.bll
         {
             return this.houseDAL.ImportHouse(SQLStringObjectList);
         }
+        public DataTable QueryByIdcard(string idcard)
+        {
+            return this.houseDAL.QueryByIdcard(idcard);
+        }
     }
 }

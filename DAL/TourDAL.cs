@@ -320,5 +320,11 @@ namespace com.vdm.dal
             string sql = "delete from t_tour where tour_id=" + tour_id;
             return this.SqlDbHelper.ExecuteNonQuery(sql);
         }
+        
+        public DataTable QueryByCompanyId(string companyId)
+        {
+            string sql = "select * from t_tour where idcard = " + companyId;
+            return this.SqlDbHelper.ExecuteDataTable(sql);
+        }
     }
 }

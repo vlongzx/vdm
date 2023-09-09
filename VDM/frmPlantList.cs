@@ -112,13 +112,16 @@ namespace com.vdm.form
                 this.cbIs_plan.ValueMember = "key";
             }
 
-            //初始化是否符合规划
             List<KeyValue> list_manage_skill_method = dictBLL.getDict("manage_skill_method");
             if (list_manage_skill_method != null)
             {
-                this.cbManage_skill_method.DataSource = list_manage_skill_method;
-                this.cbManage_skill_method.DisplayMember = "value";
-                this.cbManage_skill_method.ValueMember = "key";
+                foreach (KeyValue kv in list_manage_skill_method)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvManage_skill_method.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
 
 
@@ -135,18 +138,26 @@ namespace com.vdm.form
             List<KeyValue> list_plant_type = dictBLL.getDict("plant_type");
             if (list_plant_type != null)
             {
-                this.cbPlant_type.DataSource = list_plant_type;
-                this.cbPlant_type.DisplayMember = "value";
-                this.cbPlant_type.ValueMember = "key";
+                foreach (KeyValue kv in list_plant_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvPlant_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
 
             //初始化销售途径
             List<KeyValue> list_sale_way = dictBLL.getDict("sale_way");
             if (list_sale_way != null)
             {
-                this.cbSale_way.DataSource = list_sale_way;
-                this.cbSale_way.DisplayMember = "value";
-                this.cbSale_way.ValueMember = "key";
+                foreach (KeyValue kv in list_sale_way)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvSale_way.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
 
             //初始化所在乡镇所在村
@@ -219,7 +230,7 @@ namespace com.vdm.form
                 plant_area = double.Parse(this.tbPlant_area.Text.Trim());
             }
             string plant_brand = this.cbPlant_brand.SelectedValue.ToString();
-            string plant_type = this.cbPlant_type.SelectedValue.ToString();
+            string plant_type = this.ctvPlant_type.Text.ToString();
             string contact_person = this.tbContact_person.Text.Trim();
             string idcard = this.tbIdcard.Text.Trim();
             string phone_number = this.tbPhone_number.Text.Trim();
@@ -235,14 +246,14 @@ namespace com.vdm.form
             {
                 year_yield_to = double.Parse(this.tbYear_yield_to.Text.Trim());
             }
-            string sale_way = this.cbSale_way.SelectedValue.ToString();
+            string sale_way = this.ctvSale_way.Text.ToString();
             double output = 0;
             if(this.tbOutput.Text.Trim() != "")
             {
                 output = double.Parse(this.tbOutput.Text.Trim());
             }
             string insect_ill = this.cbInsect_ill.SelectedValue.ToString();
-            string manage_skill_method = this.cbManage_skill_method.SelectedValue.ToString();
+            string manage_skill_method = this.ctvManage_skill_method.Text.ToString();
             string develop_willing = this.cbDevelop_willing.SelectedValue.ToString();
 
             Hashtable condition = new Hashtable();
@@ -288,11 +299,11 @@ namespace com.vdm.form
             this.cbDevelop_willing.SelectedValue = "";
             this.cbInsect_ill.SelectedValue = "";
             this.cbIs_plan.SelectedValue = "";
-            this.cbManage_skill_method.SelectedValue = "";
+            this.ctvManage_skill_method.Text = "";
             this.tbOutput.Text = "";
             this.cbPlant_brand.SelectedValue = "";
-            this.cbPlant_type.SelectedValue = "";
-            this.cbSale_way.SelectedValue = "";
+            this.ctvPlant_type.Text = "";
+            this.ctvSale_way.Text = "";
             this.cbTown.SelectedValue = "";
             this.cbVillage.SelectedValue = "";
             

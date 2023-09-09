@@ -112,6 +112,10 @@ namespace com.vdm.bll
         {
             return this.landDAL.ImportLand(SQLStringObjectList);
         }
+        public DataTable QueryByIdcard(string idcard)
+        {
+            return this.landDAL.QueryByIdcard(idcard);
+        }
     }
 }
 

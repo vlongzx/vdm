@@ -43,6 +43,27 @@ namespace com.vdm.bll
             return list;
         }
 
+        /// <summary>
+        ///  根据字典项标识获取值(不获取键)
+        /// </summary>
+        /// <param name="dict_code">字典项标识</param>
+        /// <returns></returns>
+        public List<string> getDictCheckBox(string dict_code)
+        {
+            DataTable dtDict = this.dictDAL.getDictCheckBox(dict_code);
+            List<string> list = new List<string>();
+            if (dtDict != null)
+            {
+                foreach (DataRow row in dtDict.Rows)
+                {
+                    string dataValue = row["datavalue"].ToString();
+                    list.Add(dataValue);
+                }
+            }
+            return list;
+        }
+
+
         public Dict getDictById(int id)
         {
             Dict dict = null;

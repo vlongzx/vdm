@@ -34,7 +34,12 @@ namespace com.vdm.dal
             sql += " order by `dataindex` asc";
             return this.sqlDB.ExecuteDataTable(sql);
         }
-
+        public DataTable getDictCheckBox(string dict_code)
+        {
+            string sql = "select datavalue from t_dict where dict_code ="+"'"+dict_code+"'";
+            sql += " order by `dataindex` asc";
+            return this.sqlDB.ExecuteDataTable(sql);
+        }
         public DataTable getDictById(int id)
         {
             string sql = "select * from t_dict  where id = "+ id;
