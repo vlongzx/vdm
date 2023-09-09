@@ -81,7 +81,7 @@ namespace com.vdm.form
 
             return CheckEmpty(tbAddress, "请输入地址")
                  && CheckEmpty(this.tbCompany_id, "请输入统一社会信用代码")
-                && CheckIDCard(this.tbLegal_name, "请输入法定代表人姓名")
+                && CheckEmpty(this.tbLegal_name, "请输入法定代表人姓名")
                 && CheckEmpty(tbPhone_number, "请输入联系电话")
                 && CheckEmpty(tbPrincipal_name, "请输入主体名称")
                    && CheckEmpty(tbRegistered_trademark, "请输入注册商标")
