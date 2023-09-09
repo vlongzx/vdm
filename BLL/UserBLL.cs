@@ -49,7 +49,7 @@ namespace com.vdm.bll
 
             if (dt != null && dt.Rows.Count == 1)
             {
-                if (dt.Rows[0]["password"].ToString() == password)
+                if (dt.Rows[0]["password"].ToString() == MD5Encrypt.MD5Encrypt32(password))
                 {
                     return dt;
                 }
