@@ -68,6 +68,7 @@
     <Compile Include="LogHelper.cs" />
     <Compile Include="LoginInfo.cs" />
     <Compile Include="MakeObject.cs" />
+    <Compile Include="MD5Encrypt.cs" />
     <Compile Include="Result.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

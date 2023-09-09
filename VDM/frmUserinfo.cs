@@ -52,7 +52,7 @@ namespace com.vdm.form
             
             User user = new User();
             user.Username = username;
-            user.Password = password;
+            user.Password = MD5Encrypt.MD5Encrypt32(password);
             user.Town = town;
             user.Village = village;
             user.Character_id = character_id;
