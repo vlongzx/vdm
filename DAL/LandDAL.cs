@@ -220,11 +220,11 @@ namespace com.vdm.dal
                 }
                 if (condition["Land_type"].ToString() != "")
                 {
-                    sql += "    and Land_type like @Land_type";
+                    sql += "    and Land_type = @Land_type";
                 }
                 if (condition["Land_grade"].ToString() != "")
                 {
-                    sql += "    and Land_grade like @Land_grade";
+                    sql += "    and Land_grade = @Land_grade";
                 }
                 if (condition["East"].ToString() != "")
                 {
@@ -252,7 +252,7 @@ namespace com.vdm.dal
                 }
                 if (condition["Move_type"].ToString() != "")
                 {
-                    sql += "    and Move_type like @Move_type";
+                    sql += "    and Move_type = @Move_type";
                 }
 
                 if (condition["Village"].ToString() != "")
@@ -319,15 +319,15 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@Name", "%" + condition["Name"] + "%"));
                 parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
                 parameters.Add(new SQLiteParameter("@Is_basic_farmland", condition["Is_basic_farmland"]));
-                parameters.Add(new SQLiteParameter("@Land_type", "%" + condition["Land_type"] + "%"));
-                parameters.Add(new SQLiteParameter("@Land_grade", "%" + condition["Land_grade"] + "%"));
+                parameters.Add(new SQLiteParameter("@Land_type",  condition["Land_type"] ));
+                parameters.Add(new SQLiteParameter("@Land_grade", condition["Land_grade"] ));
                 parameters.Add(new SQLiteParameter("@East", condition["East"]));
                 parameters.Add(new SQLiteParameter("@West", condition["West"]));
                 parameters.Add(new SQLiteParameter("@North", condition["North"]));
                 parameters.Add(new SQLiteParameter("@South", condition["South"]));
                 parameters.Add(new SQLiteParameter("@Land_use_remark", "%" + condition["Land_use_remark"] + "%"));
                 parameters.Add(new SQLiteParameter("@Contractor", "%" + condition["Contractor"] + "%"));
-                parameters.Add(new SQLiteParameter("@Move_type", "%" + condition["Move_type"] + "%"));
+                parameters.Add(new SQLiteParameter("@Move_type",  condition["Move_type"]));
                 parameters.Add(new SQLiteParameter("@Town", condition["Town"]));
                 parameters.Add(new SQLiteParameter("@Village", condition["Village"]));
             }

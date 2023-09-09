@@ -64,26 +64,41 @@ namespace com.vdm.form
             List<KeyValue> list_land_type = dictBLL.getDict("land_type");
             if (list_land_type != null)
             {
-                this.cbLand_type.DataSource = list_land_type;
-                this.cbLand_type.DisplayMember = "value";
-                this.cbLand_type.ValueMember = "key";
+                foreach (KeyValue kv in list_land_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvLand_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
+
+
 
             List<KeyValue> list_land_grade = dictBLL.getDict("land_grade");
             if (list_land_grade != null)
             {
-                this.cbLand_grade.DataSource = list_land_grade;
-                this.cbLand_grade.DisplayMember = "value";
-                this.cbLand_grade.ValueMember = "key";
+                foreach (KeyValue kv in list_land_grade)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvLand_grade.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
+
 
 
             List<KeyValue> list_move_type = dictBLL.getDict("move_type");
             if (list_move_type != null)
             {
-                this.cbMove_type.DataSource = list_move_type;
-                this.cbMove_type.DisplayMember = "value";
-                this.cbMove_type.ValueMember = "key";
+                foreach (KeyValue kv in list_move_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvMove_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
             }
 
             //初始化所在乡镇所在村
@@ -161,8 +176,8 @@ namespace com.vdm.form
             string Name = tbName.Text.Trim();
             string Idcard = tbIdcard.Text.Trim();
             string Is_basic_farmland = cbIs_basic_farmland.SelectedValue.ToString();
-            string Land_type = cbLand_type.SelectedValue.ToString();
-            string Land_grade = cbLand_grade.SelectedValue.ToString();
+            string Land_type = ctvLand_type.Text.ToString();
+            string Land_grade = ctvLand_grade.Text.ToString();
             string Real_area_To = tbReal_area_To.Text.Trim();
             string Real_area_From = tbReal_area_From.Text.Trim();
             string East = tbEast.Text.Trim();
@@ -175,7 +190,7 @@ namespace com.vdm.form
             string Contract_time_From = tbContract_time_From.Text.Trim();
             string Move_area_From = tbMove_area_From.Text.Trim();
             string Move_area_To = tbMove_area_To.Text.Trim();
-            string Move_type = cbMove_type.SelectedValue.ToString();
+            string Move_type = ctvMove_type.Text.ToString();
             string Move_price_From = tbMove_price_From.Text.Trim();
             string Move_price_To = tbMove_price_To.Text.Trim();
             string Move_date_From = dpMove_date_From.Text.Trim();
@@ -405,8 +420,8 @@ namespace com.vdm.form
             tbName.Text = "";
             tbIdcard.Text = "";
             cbIs_basic_farmland.SelectedValue = "";
-            cbLand_type.SelectedValue = "";
-            cbLand_grade.SelectedValue = "";
+            ctvLand_type.Text = "";
+            ctvLand_grade.Text = "";
             tbReal_area_To.Text = "";
             tbReal_area_From.Text = "";
             tbEast.Text = "";
@@ -419,7 +434,7 @@ namespace com.vdm.form
             tbContract_time_From.Text = "";
             tbMove_area_From.Text = "";
             tbMove_area_To.Text = "";
-            cbMove_type.SelectedValue = "";
+            ctvMove_type.Text = "";
             tbMove_price_From.Text = "";
             tbMove_price_To.Text = "";
             dpMove_date_From.Text = "";

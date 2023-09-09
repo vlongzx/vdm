@@ -251,7 +251,7 @@ namespace com.vdm.dal
                 }
                 if (condition["Company_type"].ToString() != "")
                 {
-                    sql += "    and Company_type like @Company_type";
+                    sql += "    and Company_type = @Company_type";
                 }
                 if (condition["Is_top_company"].ToString() != "")
                 {
@@ -329,7 +329,7 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@Taxpayer_code", condition["Taxpayer_code"]));
                 parameters.Add(new SQLiteParameter("@Taxpayer_qualification", condition["Taxpayer_qualification"]));
                 parameters.Add(new SQLiteParameter("@Company_status", condition["Company_status"]));
-                parameters.Add(new SQLiteParameter("@Company_type", "%" + condition["Company_type"] + "%"));
+                parameters.Add(new SQLiteParameter("@Company_type",  condition["Company_type"]));
                 parameters.Add(new SQLiteParameter("@Is_top_company", condition["Is_top_company"]));
                 parameters.Add(new SQLiteParameter("@Town", condition["Town"]));
                 parameters.Add(new SQLiteParameter("@Village", condition["Village"]));

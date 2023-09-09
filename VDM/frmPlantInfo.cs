@@ -109,7 +109,7 @@ namespace com.vdm.form
                 this.cbIs_plan.ValueMember = "key";
             }
 
-            //初始化是否符合规划
+  
             List<KeyValue> list_manage_skill_method = dictBLL.getDict("manage_skill_method");
             if (list_manage_skill_method != null)
             {

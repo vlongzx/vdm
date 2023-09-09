@@ -422,7 +422,7 @@ namespace com.vdm.form
             this.tbTotal_area_To.Text = "0.00";
             this.tbYear_inventory_from.Text = "0";
             this.tbYear_inventory_to.Text = "0";
-            this.tbYear_outbound_from.Text = "0";
+            this.tbYear_outbound_from.Text = "";
             this.tbYear_outbound_to.Text = "0";
             this.cbAnimal_qualify.SelectedValue = "";
             this.cbBreed_type.SelectedValue = "";

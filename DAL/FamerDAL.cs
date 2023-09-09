@@ -226,11 +226,11 @@ namespace com.vdm.dal
                 }
                 if (condition["Plant_type"].ToString() != "")
                 {
-                    sql += "    and Plant_type like @Plant_type";
+                    sql += "    and Plant_type = @Plant_type";
                 }
                 if (condition["Plant_area_type"].ToString() != "")
                 {
-                    sql += "    and Plant_area_type like @Plant_area_type";
+                    sql += "    and Plant_area_type = @Plant_area_type";
                 }
                 if (condition["Is_handle_process"].ToString() != "")
                 {
@@ -238,11 +238,11 @@ namespace com.vdm.dal
                 }
                 if (condition["Animal_type"].ToString() != "")
                 {
-                    sql += "    and Animal_type like @Animal_type";
+                    sql += "    and Animal_type = @Animal_type";
                 }
                 if (condition["Animal_area_type"].ToString() != "")
                 {
-                    sql += "    and Animal_area_type like @Animal_area_type";
+                    sql += "    and Animal_area_type = @Animal_area_type";
                 }
                 if (condition["Village"].ToString() != "")
                 {
@@ -332,11 +332,11 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@Phone_number", condition["Phone_number"]));
                 parameters.Add(new SQLiteParameter("@Car_brand", condition["Car_brand"]));
                 parameters.Add(new SQLiteParameter("@Mechine_type", "%" + condition["Mechine_type"] + "%"));
-                parameters.Add(new SQLiteParameter("@Plant_type", "%"+condition["Plant_type"]+"%"));
-                parameters.Add(new SQLiteParameter("@Plant_area_type", "%" + condition["Plant_area_type"] + "%"));
+                parameters.Add(new SQLiteParameter("@Plant_type", condition["Plant_type"]));
+                parameters.Add(new SQLiteParameter("@Plant_area_type", condition["Plant_area_type"]));
                 parameters.Add(new SQLiteParameter("@Is_handle_process", condition["Is_handle_process"]));
-                parameters.Add(new SQLiteParameter("@Animal_type", "%"+condition["Animal_type"]+"%"));
-                parameters.Add(new SQLiteParameter("@Animal_area_type", "%"+condition["Animal_area_type"]+"%"));
+                parameters.Add(new SQLiteParameter("@Animal_type", condition["Animal_type"]));
+                parameters.Add(new SQLiteParameter("@Animal_area_type", condition["Animal_area_type"]));
                 parameters.Add(new SQLiteParameter("@Town", condition["Town"]));
                 parameters.Add(new SQLiteParameter("@Village", condition["Village"]));
             }

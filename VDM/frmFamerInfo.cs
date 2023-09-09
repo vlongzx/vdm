@@ -106,7 +106,7 @@ namespace com.vdm.form
                 }
             }
 
-            //初始化占地地类
+  
             List<KeyValue> list_plant_area_type = dictBLL.getDict("plant_area_type");
             if (list_plant_area_type != null)
             {
@@ -127,7 +127,7 @@ namespace com.vdm.form
                 this.cbIs_handle_process.ValueMember = "key";
             }
 
-            //初始化政治面貌
+
             List<KeyValue> list_animal_type = dictBLL.getDict("animal_type_famer");
             if (list_animal_type != null)
             {
