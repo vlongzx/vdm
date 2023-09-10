@@ -412,5 +412,19 @@ namespace com.vdm.form
                 }
             }
         }
+        /// <summary>
+        ///  设置数据权限
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btDataPower_Click(object sender, EventArgs e)
+        {
+            if (this.dgDict.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要设置的用户。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int id = int.Parse(this.dgDict.SelectedRows[0].Cells[0].Value.ToString());
+        }
     }
 }

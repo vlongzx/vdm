@@ -89,6 +89,7 @@
             this.uiButton3 = new Sunny.UI.UIButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dgDataAuth = new Sunny.UI.UIDataGridView();
+            this.btDataPower = new Sunny.UI.UIButton();
             this.uiTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiSplitContainer3)).BeginInit();
@@ -419,6 +420,7 @@
             // uiNavBar1
             // 
             this.uiNavBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.uiNavBar1.Controls.Add(this.btDataPower);
             this.uiNavBar1.Controls.Add(this.btDelete);
             this.uiNavBar1.Controls.Add(this.btEdit);
             this.uiNavBar1.Controls.Add(this.btAdd);
@@ -842,6 +844,22 @@
             this.dgDataAuth.Style = Sunny.UI.UIStyle.Custom;
             this.dgDataAuth.TabIndex = 6;
             // 
+            // btDataPower
+            // 
+            this.btDataPower.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btDataPower.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btDataPower.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btDataPower.ForeColor = System.Drawing.Color.Black;
+            this.btDataPower.Location = new System.Drawing.Point(506, 27);
+            this.btDataPower.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btDataPower.Name = "btDataPower";
+            this.btDataPower.Size = new System.Drawing.Size(217, 62);
+            this.btDataPower.Style = Sunny.UI.UIStyle.Custom;
+            this.btDataPower.TabIndex = 7;
+            this.btDataPower.Text = "设置数据权限(&P)";
+            this.btDataPower.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btDataPower.Click += new System.EventHandler(this.btDataPower_Click);
+            // 
             // frmSystemSet
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -920,5 +938,6 @@
         private Sunny.UI.UIButton btDelDict;
         private Sunny.UI.UIButton btEditDict;
         private Sunny.UI.UIButton btAddDict;
+        private Sunny.UI.UIButton btDataPower;
     }
 }
