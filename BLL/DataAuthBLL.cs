@@ -24,5 +24,10 @@ namespace com.vdm.bll
         {
             return this.dataAuthDAL.queryAllDataAuth();
         }
+
+        public DataTable getDataAuthByType(string type)
+        {
+            return this.dataAuthDAL.queryDataAuthByType(type);
+        }
     }
 }

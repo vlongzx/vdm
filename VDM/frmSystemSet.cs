@@ -425,6 +425,25 @@ namespace com.vdm.form
                 return;
             }
             int id = int.Parse(this.dgDict.SelectedRows[0].Cells[0].Value.ToString());
+            frmSetDataPower setDataPower = new frmSetDataPower(id);
+            DialogResult result = setDataPower.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                DataTable dtDict = null;
+                if (dict_code == null)
+                {
+                    dtDict = this.dictBLL.getAllDict();
+                }
+                else
+                {
+                    dtDict = this.dictBLL.getDictByCode(dict_code);
+                }
+                if (dtDict != null)
+                {
+                    this.dgDict.DataSource = dtDict;
+                }
+            }
+
         }
     }
 }

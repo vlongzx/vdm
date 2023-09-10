@@ -380,6 +380,9 @@
     <EmbeddedResource Include="frmPlantList.resx">
       <DependentUpon>frmPlantList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSetDataPower.resx">
+      <DependentUpon>frmSetDataPower.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSystemSet.resx">
       <DependentUpon>frmSystemSet.cs</DependentUpon>
     </EmbeddedResource>

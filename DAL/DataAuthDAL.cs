@@ -18,5 +18,11 @@ namespace com.vdm.dal
             string sql = "select * from t_data_authority";
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
+
+        public DataTable queryDataAuthByType(string type)
+        {
+            string sql = "select * from t_data_authority where data_authority_type = '"+ type + "'";
+            return this.SqlDbHelper.ExecuteDataTable(sql);
+        }
     }
 }
