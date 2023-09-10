@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInitUserAccount));
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiRadioButtonGroup1 = new Sunny.UI.UIRadioButtonGroup();
@@ -275,6 +276,7 @@
             this.Controls.Add(this.uiGroupBox2);
             this.Controls.Add(this.uiRadioButtonGroup1);
             this.Controls.Add(this.uiGroupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInitUserAccount";
             this.Text = "初始化用户账号";
             this.ZoomScaleRect = new System.Drawing.Rectangle(22, 22, 600, 450);
