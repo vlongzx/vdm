@@ -286,6 +286,7 @@ namespace com.vdm.dal
         /// <returns></returns>
         public Result ExecuteSqlTran(List<SQLStringObject> SQLStringObjectList)
         {
+            string msg="";
             Result result = new Result();
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
@@ -309,7 +310,12 @@ namespace com.vdm.dal
                                 command.Parameters.Add(parameter);
                             }
                         }
-                        count += command.ExecuteNonQuery();
+                        int resultCount= command.ExecuteNonQuery();
+                        if(resultCount==0)
+                        {
+                            msg += parameters[1].Value.ToString()+ parameters[2].Value.ToString();
+                        }
+                        count += resultCount;
                     }
                     if(count == SQLStringObjectList.Count)
                     {
@@ -321,7 +327,8 @@ namespace com.vdm.dal
                     {
                         tx.Rollback();
                         result.Count = count;
-                        result.Information = "批量执行失败";
+                        result.Information = "批量执行失败"+msg;
+                      
                     }
                     
                 }
