@@ -25,12 +25,12 @@ namespace com.vdm.form
             }
 
             frmLogin login = new frmLogin();
-            //login.InitCheckUpdate();
-            login.ShowDialog();
-            if (login.DialogResult == DialogResult.OK)
-            {
-                Application.Run(new frmMain());
-            }
+            login.InitCheckUpdate();
+            //login.ShowDialog();
+            //if (login.DialogResult == DialogResult.OK)
+            //{
+            //    Application.Run(new frmMain());
+            //}
 
         }
 
