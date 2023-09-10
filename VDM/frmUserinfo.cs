@@ -31,6 +31,13 @@ namespace com.vdm.form
             this.user_id = user_id;
         }
 
+        protected override bool CheckData()
+        {
+            return CheckEmpty(this.tbUsername,"用户名不能为空。")
+                && CheckEmpty(this.tbPassword, "密码不能为空。")
+                ;
+        }
+
         private void btnOK_Click(object sender, EventArgs e)
         {
             string username = this.tbUsername.Text.Trim();

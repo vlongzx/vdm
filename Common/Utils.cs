@@ -582,9 +582,32 @@ namespace com.vdm.common
         }
         #endregion
 
-        
 
-        
+        //字符串 
+        public static string GenerateStringID()
+        {
+            long i = 1;
+            foreach (byte b in Guid.NewGuid().ToByteArray())
+            {
+                i *= ((int)b + 1);
+            }
+            return string.Format("{0:x}", i - DateTime.Now.Ticks);
+        }
+        //数字
+        public static long GenerateIntID()
+        {
+            byte[] buffer = Guid.NewGuid().ToByteArray();
+            return BitConverter.ToInt64(buffer, 0);
+        }
+        //利用时间
+        public static string GenerateOrderNumber()
+        {
+            Random R = new Random();
+            string strDateTimeNumber = DateTime.Now.ToString("yyyyMMddHHmmssms");
+            string strRandomResult = R.Next(1, 1000).ToString();
+            return strDateTimeNumber + strRandomResult;
+        }
+
 
         #region 上传配置
         /// <summary>
@@ -763,33 +786,6 @@ namespace com.vdm.common
         {
             DateTime Jan1st1970 = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
             return (long)(time.AddHours(-8) - Jan1st1970).TotalMilliseconds;
-        }
-        #endregion
-
-        #region  生成唯一数
-        /// <summary>
-        /// 生成唯一数
-        /// </summary>
-        public class UniqueData
-        {
-            private static object obj = new object();
-            private static int _sn = 0;
-            public static string Gener()
-            {
-                lock (obj)
-                {
-                    if (_sn == int.MaxValue)
-                    {
-                        _sn = 0;
-                    }
-                    else
-                    {
-                        _sn++;
-                    }
-                    //Thread.Sleep(100);
-                    return DateTime.Now.ToString("yyyyMMdd") + _sn.ToString().PadLeft(5, '0');
-                }
-            }
         }
         #endregion
 

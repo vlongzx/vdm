@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
+    <Compile Include="Character_funtion_authority.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="DataAuthority.cs" />
     <Compile Include="Dict.cs" />

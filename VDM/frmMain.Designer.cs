@@ -115,7 +115,6 @@
             this.btFamer.TabIndex = 6;
             this.btFamer.Text = "农户";
             this.btFamer.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btFamer.TipsText = "12";
             this.btFamer.Click += new System.EventHandler(this.btFamer_Click);
             // 
             // uiStyleManager1
@@ -327,7 +326,7 @@
             this.labAccountName.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labAccountName.Location = new System.Drawing.Point(1669, 14);
             this.labAccountName.Name = "labAccountName";
-            this.labAccountName.Size = new System.Drawing.Size(146, 41);
+            this.labAccountName.Size = new System.Drawing.Size(110, 31);
             this.labAccountName.TabIndex = 0;
             this.labAccountName.Text = "当前用户";
             this.labAccountName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -339,7 +338,7 @@
             this.lbLoginTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbLoginTime.Location = new System.Drawing.Point(22, 14);
             this.lbLoginTime.Name = "lbLoginTime";
-            this.lbLoginTime.Size = new System.Drawing.Size(146, 41);
+            this.lbLoginTime.Size = new System.Drawing.Size(110, 31);
             this.lbLoginTime.TabIndex = 1;
             this.lbLoginTime.Text = "登录时间";
             this.lbLoginTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -37,10 +37,17 @@ namespace com.vdm.form
             {
                 for(int i = 0; i < dt.Rows.Count; i++)
                 {
-                    UICheckBox uc = new UICheckBox();
-                    uc.Text = dt.Rows[i]["data_authority_desc"].ToString();
-                    uc.Tag = dt.Rows[i]["data_authority_name"].ToString();
-                    this.cbgOrgDataAuthor.Items.Add(uc);
+                    this.cbgOrgDataAuthor.Items.Add(dt.Rows[i]["data_authority_name"].ToString());
+                }
+            }
+
+            dt = this.dataAuthBLL.getDataAuthByType("对象类");
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    this.cbgObjDataAuthor.Items.Add(dt.Rows[i]["data_authority_name"].ToString());
                 }
             }
         }

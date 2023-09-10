@@ -88,7 +88,9 @@ namespace com.vdm.form
             InitUserList();
             InitRoleList();
             InitFunctionList();
-            InitDataAuthList();
+
+            //this.tabPage5.Hide();
+            //InitDataAuthList();
 
             InitDictList();
         }
@@ -140,6 +142,7 @@ namespace com.vdm.form
             this.dgRole.AutoGenerateColumns = false;
             this.dgRole.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgRole.RowTemplate.Height = 45;
+            this.dgRole.Columns.Clear();
             this.dgRole.AddColumn("角色ID", "role_id");
             this.dgRole.AddColumn("角色名称", "role_name");
             this.dgRole.AddColumn("角色类型", "role_type");
@@ -173,19 +176,19 @@ namespace com.vdm.form
         public void InitDataAuthList()
         {
             //初始化所有的数据权限
-            this.dataAuthBLL = new DataAuthBLL();
-            this.dgDataAuth.AutoGenerateColumns = false;
-            this.dgDataAuth.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgDataAuth.RowTemplate.Height = 45;
-            this.dgDataAuth.AddColumn("数据权限ID", "data_authority_id");
-            this.dgDataAuth.AddColumn("数据权限类型", "data_authority_type");
-            this.dgDataAuth.AddColumn("数据权限标识", "data_authority_name");
-            this.dgDataAuth.AddColumn("数据权限描述", "data_authority_desc");
-            DataTable dtDataAuth = this.dataAuthBLL.getAllDataAuth();
-            if (dtDataAuth != null)
-            {
-                this.dgDataAuth.DataSource = dtDataAuth;
-            }
+            //this.dataAuthBLL = new DataAuthBLL();
+            //this.dgDataAuth.AutoGenerateColumns = false;
+            //this.dgDataAuth.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //this.dgDataAuth.RowTemplate.Height = 45;
+            //this.dgDataAuth.AddColumn("数据权限ID", "data_authority_id");
+            //this.dgDataAuth.AddColumn("数据权限类型", "data_authority_type");
+            //this.dgDataAuth.AddColumn("数据权限标识", "data_authority_name");
+            //this.dgDataAuth.AddColumn("数据权限描述", "data_authority_desc");
+            //DataTable dtDataAuth = this.dataAuthBLL.getAllDataAuth();
+            //if (dtDataAuth != null)
+            //{
+            //    this.dgDataAuth.DataSource = dtDataAuth;
+            //}
         }
         public void InitDictList()
         {
@@ -279,7 +282,7 @@ namespace com.vdm.form
             TreeNode node = this.tvFunction.SelectedNode;
             if(node != null)
             {
-                long pre_function_id = long.Parse(node.Name.ToString());
+                string pre_function_id = node.Name.ToString();
                 DataTable dtFunction = this.functionBLL.getFunctionBypreFunctionID(pre_function_id);
                 if (dtFunction != null)
                 {
@@ -425,6 +428,7 @@ namespace com.vdm.form
                 return;
             }
             int id = int.Parse(this.dgDict.SelectedRows[0].Cells[0].Value.ToString());
+ 
             frmSetDataPower setDataPower = new frmSetDataPower(id);
             DialogResult result = setDataPower.ShowDialog();
             if (result == DialogResult.OK)
@@ -444,6 +448,84 @@ namespace com.vdm.form
                 }
             }
 
+        }
+
+        private void uiButton4_Click(object sender, EventArgs e)
+        {
+            if (this.dgRole.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要设置的角色。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            string  role_id = this.dgRole.SelectedRows[0].Cells[0].Value.ToString();
+            string role_type = this.dgRole.SelectedRows[0].Cells[2].Value.ToString();
+            if (role_type == "系统角色")
+            {
+                MessageBox.Show("系统角色不允许设置权限。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            frmSetFuncPower setDataPower = new frmSetFuncPower(role_id);
+            DialogResult result = setDataPower.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                MessageBox.Show("功能权限设置成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btAddRole_Click(object sender, EventArgs e)
+        {
+            frmSetFuncPower setFuncPower = new frmSetFuncPower();
+            setFuncPower.ShowDialog();
+            if (setFuncPower.DialogResult == DialogResult.OK)
+            {
+                InitRoleList();
+            }
+        }
+
+        private void btEditRole_Click(object sender, EventArgs e)
+        {
+            if (this.dgRole.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要设置的角色。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            string role_id = this.dgRole.SelectedRows[0].Cells[0].Value.ToString();
+            string role_type = this.dgRole.SelectedRows[0].Cells[2].Value.ToString();
+            if (role_type == "系统角色")
+            {
+                MessageBox.Show("系统角色不允许设置权限。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            frmSetFuncPower setDataPower = new frmSetFuncPower(role_id);
+            DialogResult result = setDataPower.ShowDialog();
+           
+        }
+
+        private void btDelRole_Click(object sender, EventArgs e)
+        {
+            //获得当前需要编辑的行
+            if (this.dgRole.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选择你要删除的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int role_id = int.Parse(this.dgRole.SelectedRows[0].Cells[0].Value.ToString());
+
+            if (MessageBox.Show("确认要删除该行数据吗？", "温馨提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.roleBLL = new RoleBLL();
+                Result result = this.roleBLL.delRole(role_id);
+                if (result.Count == 1)
+                {
+                    MessageBox.Show("删除成功。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InitUserList();
+                }
+                else
+                {
+                    MessageBox.Show("删除数据发生异常。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LogHelper.Error(result.Information, result.Exception);
+                }
+            }
         }
     }
 }

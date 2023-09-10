@@ -30,9 +30,14 @@ namespace com.vdm.bll
         /// </summary>
         /// <param name="pre_function_id">父功能权限ID</param>
         /// <returns></returns>
-        public DataTable getFunctionBypreFunctionID(long pre_function_id)
+        public DataTable getFunctionBypreFunctionID(string pre_function_id)
         {
             return this.functionDAL.queryFunctionBypreFunctionID(pre_function_id);
+        }
+
+        public DataTable getFunctionBypreFunctionCode(string function_code)
+        {
+            return this.functionDAL.queryFunctionBypreFunctionCode(function_code);
         }
     }
 }

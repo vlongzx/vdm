@@ -317,7 +317,7 @@ namespace com.vdm.dal
                         }
                         count += resultCount;
                     }
-                    if (count == SQLStringObjectList.Count)
+                    if (count >= SQLStringObjectList.Count)
                     {
                         tx.Commit();
                         result.Count = count;

@@ -49,6 +49,7 @@
             // 
             // cbgOrgDataAuthor
             // 
+            this.cbgOrgDataAuthor.ColumnCount = 3;
             this.cbgOrgDataAuthor.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbgOrgDataAuthor.Location = new System.Drawing.Point(20, 40);
             this.cbgOrgDataAuthor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -63,6 +64,7 @@
             // 
             // cbgObjDataAuthor
             // 
+            this.cbgObjDataAuthor.ColumnCount = 4;
             this.cbgObjDataAuthor.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbgObjDataAuthor.Location = new System.Drawing.Point(20, 239);
             this.cbgObjDataAuthor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

@@ -8,8 +8,8 @@ namespace com.vdm.model
 {
    public  class Function
     {
-        private long function_id;
-        private long pre_function_id;
+        private string function_id;
+        private string pre_function_id;
         private string function_code;
         private string function_name;
         private string remark;
@@ -17,7 +17,7 @@ namespace com.vdm.model
         /// <summary>
         ///  功能权限ID
         /// </summary>
-        public long Function_id
+        public string Function_id
         {
             get
             {
@@ -32,7 +32,7 @@ namespace com.vdm.model
         /// <summary>
         ///  父功能柜权限ID
         /// </summary>
-        public long Pre_function_id
+        public string Pre_function_id
         {
             get
             {

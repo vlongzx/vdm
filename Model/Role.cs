@@ -8,12 +8,12 @@ namespace com.vdm.model
 {
     public class Role
     {
-        private long role_id;
+        private string role_id;
         private string role_name;
         private string role_type;
         private string remark;
 
-        public long Role_id
+        public string Role_id
         {
             get
             {
