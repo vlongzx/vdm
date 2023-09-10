@@ -26,20 +26,20 @@ namespace com.vdm.form
                 return;
             }
             IAutoUpdater autoUpdater = new com.vdm.AutoUpdater.AutoUpdater();
-            int fileCount = autoUpdater.CheckUpdaterFileCount();//检查需要更新的文件数量
-            if (fileCount>0)
-            {
-                Process.Start(System.IO.Directory.GetCurrentDirectory() + "\\AutoUpdater.exe");
-            }
-            else
-            {
+            //int fileCount = autoUpdater.CheckUpdaterFileCount();//检查需要更新的文件数量
+            //if (fileCount>0)
+            //{
+            //    Process.Start(System.IO.Directory.GetCurrentDirectory() + "\\AutoUpdater.exe");
+            //}
+            //else
+            //{
                 frmLogin login = new frmLogin();
                 login.ShowDialog();
                 if (login.DialogResult == DialogResult.OK)
                 {
                     Application.Run(new frmMain());
                 }
-            }
+            //}
         }
 
     }

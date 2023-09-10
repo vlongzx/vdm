@@ -27,8 +27,8 @@ namespace com.vdm.dal
         /// </summary>
         public SqlDbHelper()
         {
-            this.ConnectionString = "Data Source="+System.IO.Directory.GetCurrentDirectory() + "\\db_file\\vdm_data.db;";
-            
+            this.ConnectionString = "Data Source=" + System.IO.Directory.GetCurrentDirectory() + "\\db_file\\vdm_data.db;";
+
         }
         /// <summary>
         /// 构造函数
@@ -64,12 +64,12 @@ namespace com.vdm.dal
         /// <param name="commandType">要执行的查询语句的类型，如存储过程或者SQL文本命令</param>
         /// <param name="parameters">Transact-SQL 语句或存储过程的参数数组</param>
         /// <returns></returns>
-        public DataTable ExecuteDataTable(string sql, CommandType commandType,List<SQLiteParameter> parameters)
+        public DataTable ExecuteDataTable(string sql, CommandType commandType, List<SQLiteParameter> parameters)
         {
             DataTable data = new DataTable();//实例化DataTable，用于装载查询结果集
-            using (SQLiteConnection  connection = new SQLiteConnection (connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                using (SQLiteCommand  command = new SQLiteCommand (sql, connection))
+                using (SQLiteCommand command = new SQLiteCommand(sql, connection))
                 {
                     command.CommandType = commandType;//设置command的CommandType为指定的CommandType
                     //如果同时传入了参数，则添加这些参数
@@ -116,8 +116,8 @@ namespace com.vdm.dal
         /// <returns></returns>
         public SQLiteDataReader ExecuteReader(string sql, CommandType commandType, List<SQLiteParameter> parameters)
         {
-            SQLiteConnection  connection = new SQLiteConnection (connectionString);
-            SQLiteCommand  command = new SQLiteCommand (sql, connection);
+            SQLiteConnection connection = new SQLiteConnection(connectionString);
+            SQLiteCommand command = new SQLiteCommand(sql, connection);
             //如果同时传入了参数，则添加这些参数
             if (parameters != null)
             {
@@ -189,7 +189,7 @@ namespace com.vdm.dal
             object result = null;
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                using (SQLiteCommand  command = new SQLiteCommand (sql, connection))
+                using (SQLiteCommand command = new SQLiteCommand(sql, connection))
                 {
                     command.CommandType = commandType;//设置command的CommandType为指定的CommandType
                     //如果同时传入了参数，则添加这些参数
@@ -221,7 +221,7 @@ namespace com.vdm.dal
         /// <param name="sql">要执行的SQL语句</param>
         /// <param name="commandType">要执行的查询语句的类型，如存储过程或者SQL文本命令</param>
         /// <returns></returns>
-        public Result  ExecuteNonQuery(string sql, CommandType commandType)
+        public Result ExecuteNonQuery(string sql, CommandType commandType)
         {
             return ExecuteNonQuery(sql, commandType, null);
         }
@@ -253,16 +253,16 @@ namespace com.vdm.dal
                         }
 
                         result.Count = command.ExecuteNonQuery();
-                        
+
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 result.Exception = ex;
                 result.Information = ex.Message;
             }
-            
+
             return result;//返回执行增删改操作之后，数据库中受影响的行数
         }
         /// <summary>
@@ -272,7 +272,7 @@ namespace com.vdm.dal
         public DataTable GetTables()
         {
             DataTable data = null;
-            using (SQLiteConnection  connection = new SQLiteConnection (connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();//打开数据库连接
                 data = connection.GetSchema("Tables");
@@ -286,7 +286,7 @@ namespace com.vdm.dal
         /// <returns></returns>
         public Result ExecuteSqlTran(List<SQLStringObject> SQLStringObjectList)
         {
-            string msg="";
+            string msg = "";
             Result result = new Result();
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
@@ -310,14 +310,14 @@ namespace com.vdm.dal
                                 command.Parameters.Add(parameter);
                             }
                         }
-                        int resultCount= command.ExecuteNonQuery();
-                        if(resultCount==0)
+                        int resultCount = command.ExecuteNonQuery();
+                        if (resultCount == 0)
                         {
-                            msg += parameters[1].Value.ToString()+ parameters[2].Value.ToString();
+                            msg += parameters[1].Value.ToString() + "," + parameters[2].Value.ToString() + "......;" + "\r\n";
                         }
                         count += resultCount;
                     }
-                    if(count == SQLStringObjectList.Count)
+                    if (count == SQLStringObjectList.Count)
                     {
                         tx.Commit();
                         result.Count = count;
@@ -327,10 +327,10 @@ namespace com.vdm.dal
                     {
                         tx.Rollback();
                         result.Count = count;
-                        result.Information = "批量执行失败"+msg;
-                      
+                        result.Information = "批量执行失败" + "\r\n" + msg + "以上数据存在问题，请检查";
+
                     }
-                    
+
                 }
                 catch (System.Data.SqlClient.SqlException E)
                 {

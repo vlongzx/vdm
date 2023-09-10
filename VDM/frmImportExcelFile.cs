@@ -154,7 +154,7 @@ namespace com.vdm.form
                 }
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
                 }
             }
         }
@@ -184,7 +184,7 @@ namespace com.vdm.form
                     plant.Remark = dataRow["备注"].ToString();
                     plant.Is_plan = dataRow["是否符合规划"].ToString();
                     plant.Manage_skill_method = dataRow["主要管理和技术措施"].ToString();
-                    plant.Output = int.Parse(dataRow["产值(万元)"].ToString());
+                    plant.Output = double.Parse(dataRow["产值(万元)"].ToString());
                     plant.Plant_area = double.Parse(dataRow["种植面积"].ToString());
                     plant.Town = dataRow["所属镇"].ToString();
                     plant.Village = dataRow["所属村"].ToString();
@@ -231,7 +231,7 @@ namespace com.vdm.form
                     people.Sex = dataRow["性别"].ToString();
                     people.Relationship = dataRow["与户主关系"].ToString();
                     people.Nation = dataRow["民族"].ToString();
-                    people.Politcal_outlook =dataRow["政治面貌"].ToString();
+                    people.Politcal_outlook = dataRow["政治面貌"].ToString();
                     people.Join_party_time = dataRow["入党时间"].ToString();
                     people.Phone_number = dataRow["联系电话"].ToString();
                     people.Is_real_name = dataRow["是否实名"].ToString();
@@ -239,11 +239,11 @@ namespace com.vdm.form
                     people.Blood_type = dataRow["血型"].ToString();
                     people.Marital_status = dataRow["婚姻状况"].ToString();
 
-                        people.Work_or_study = dataRow["是否外出"].ToString();
-                        people.Industry = dataRow["从事行业"].ToString();
-                        people.Unit_or_school = dataRow["工作单位/学校名称"].ToString();
-                        people.Work_study_location = dataRow["工作地点/学习地点"].ToString();
-                        people.Skill_type = dataRow["技能类型"].ToString();
+                    people.Work_or_study = dataRow["是否外出"].ToString();
+                    people.Industry = dataRow["从事行业"].ToString();
+                    people.Unit_or_school = dataRow["工作单位/学校名称"].ToString();
+                    people.Work_study_location = dataRow["工作地点/学习地点"].ToString();
+                    people.Skill_type = dataRow["技能类型"].ToString();
                     people.Employ_guide = dataRow["就业指导"].ToString();
                     people.Skill_train = dataRow["技能培训"].ToString();
                     people.Is_career_grade = dataRow["有无职称"].ToString();
@@ -278,7 +278,7 @@ namespace com.vdm.form
                 }
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
                 }
             }
         }
@@ -379,7 +379,7 @@ namespace com.vdm.form
                 }
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
                 }
             }
         }
@@ -424,7 +424,7 @@ namespace com.vdm.form
                 }
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
                 }
             }
         }
@@ -440,7 +440,7 @@ namespace com.vdm.form
                 {
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
-                    village.Money= double.Parse(dataRow["村集体资金"].ToString());
+                    village.Money = double.Parse(dataRow["村集体资金"].ToString());
                     village.Foreast_area = double.Parse(dataRow["林地面积"].ToString());
                     village.Confirm_area = double.Parse(dataRow["确权耕地面积"].ToString());
                     village.Move_area = double.Parse(dataRow["机动耕地面积"].ToString());
@@ -469,7 +469,7 @@ namespace com.vdm.form
                 }
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
                 }
             }
         }
@@ -496,8 +496,8 @@ namespace com.vdm.form
                     company.Legal_name = dataRow["企业法人姓名"].ToString();
                     company.Legal_idcard = dataRow["企业法人身份证"].ToString();
                     company.Company_phone = dataRow["企业联系电话"].ToString();
-                    company.Staff_size =int.Parse(dataRow["人员规模"].ToString());
-                    company.Insure_person_count =int.Parse(dataRow["参保人数"].ToString());
+                    company.Staff_size = int.Parse(dataRow["人员规模"].ToString());
+                    company.Insure_person_count = int.Parse(dataRow["参保人数"].ToString());
                     company.Output = double.Parse(dataRow["产值(万元)"].ToString());
                     company.Taxpayer_code = dataRow["纳税人识别号"].ToString();
                     company.Taxpayer_qualification = dataRow["纳税人资质"].ToString();
@@ -520,7 +520,7 @@ namespace com.vdm.form
                 }
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
                 }
             }
         }
@@ -575,7 +575,7 @@ namespace com.vdm.form
                 }
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
                 }
             }
 
@@ -639,7 +639,7 @@ namespace com.vdm.form
                 }
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
                 }
             }
         }
