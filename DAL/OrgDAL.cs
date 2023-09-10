@@ -38,9 +38,9 @@ namespace com.vdm.dal
         /// </summary>
         /// <param name="org_pre_id"></param>
         /// <returns></returns>
-        public DataTable getOrgByTown(int org_pre_id)
+        public DataTable getOrgByTown(string org_pre_id)
         {
-            string sql = "select * from t_org where org_pre_id = " + org_pre_id ;
+            string sql = "select * from t_org where org_pre_id = '" + org_pre_id+"'" ;
 
             return this.sqlDB.ExecuteDataTable(sql);
         }
@@ -49,15 +49,15 @@ namespace com.vdm.dal
         /// </summary>
         /// <param name="org_code"></param>
         /// <returns></returns>
-        public int getOrgIdByOrgCode(string org_code)
+        public string  getOrgIdByOrgCode(string org_code)
         {
             string sql = "select org_id from t_org where org_code = '" + org_code + "'";
             DataTable dt = this.sqlDB.ExecuteDataTable(sql);
             if(dt != null && dt.Rows.Count>0)
             {
-                return int.Parse(dt.Rows[0]["org_id"].ToString());
+                return dt.Rows[0]["org_id"].ToString();
             }
-            return 0;
+            return "0";
         }
     }
 }

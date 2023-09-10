@@ -37,7 +37,7 @@ namespace com.vdm.form
                 foreach(KeyValue town in listTown)
                 {
                     this.tvOrg.Nodes.Add(town.Key, town.Value);
-                    int pre_org_id = this.orgBLL.getOrgIdByOrgCode(town.Key);
+                    string pre_org_id = this.orgBLL.getOrgIdByOrgCode(town.Key);
                     List<KeyValue> listVillage = this.orgBLL.getOrgByTown(pre_org_id);
                     if(listVillage != null)
                     {
@@ -249,6 +249,14 @@ namespace com.vdm.form
                 MessageBox.Show("请选择你要删除的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            //判断删除的是不是系统管理员
+            string username = this.dgUser.SelectedRows[0].Cells[1].Value.ToString();
+            if(username == "admin")
+            {
+                MessageBox.Show("系统管理员不允许删除。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             int user_id = int.Parse(this.dgUser.SelectedRows[0].Cells[0].Value.ToString());
 
             if (MessageBox.Show("确认要删除该行数据吗？", "温馨提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -509,7 +517,7 @@ namespace com.vdm.form
                 MessageBox.Show("请选择你要删除的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            int role_id = int.Parse(this.dgRole.SelectedRows[0].Cells[0].Value.ToString());
+            string role_id = this.dgRole.SelectedRows[0].Cells[0].Value.ToString();
 
             if (MessageBox.Show("确认要删除该行数据吗？", "温馨提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {

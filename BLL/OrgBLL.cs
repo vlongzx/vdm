@@ -28,10 +28,10 @@ namespace com.vdm.bll
                 foreach (DataRow row in dt.Rows)
                 {
                     org = new Org();
-                    org.Org_id = int.Parse(row["org_id"].ToString());
+                    org.Org_id = row["org_id"].ToString();
                     org.Org_name = row["org_name"].ToString();
                     org.Org_type = row["org_type"].ToString();
-                    org.Org_pre_id = int.Parse(row["org_pre_id"].ToString());
+                    org.Org_pre_id = row["org_pre_id"].ToString();
                     list_org.Add(org);
                 }
             }
@@ -63,7 +63,7 @@ namespace com.vdm.bll
         /// </summary>
         /// <param name="org_pre_id"></param>
         /// <returns></returns>
-        public List<KeyValue> getOrgByTown(int org_pre_id)
+        public List<KeyValue> getOrgByTown(string org_pre_id)
         {
             List<KeyValue> list_org = new List<KeyValue>();
             DataTable dt = this.orgDAL.getOrgByTown(org_pre_id);
@@ -83,7 +83,7 @@ namespace com.vdm.bll
         /// </summary>
         /// <param name="org_code"></param>
         /// <returns></returns>
-        public int getOrgIdByOrgCode(string org_code)
+        public string getOrgIdByOrgCode(string org_code)
         {
             return this.orgDAL.getOrgIdByOrgCode(org_code);
         }

@@ -15,7 +15,7 @@ namespace com.vdm.model
         private string  town;
         private string  village;
         private string remark;
-        private int character_id;
+        private string character_id;
 
         /// <summary>
         ///  用户ID
@@ -97,7 +97,7 @@ namespace com.vdm.model
         /// <summary>
         ///  角色ID
         /// </summary>
-        public int Character_id
+        public string Character_id
         {
             get
             {

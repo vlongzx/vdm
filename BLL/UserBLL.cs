@@ -71,7 +71,7 @@ namespace com.vdm.bll
                 user.Town = dt.Rows[0]["town"].ToString();
                 user.Level = dt.Rows[0]["level"].ToString();
                 user.Remark = dt.Rows[0]["remark"].ToString();
-                user.Character_id =int.Parse(dt.Rows[0]["character_id"].ToString());
+                user.Character_id = dt.Rows[0]["character_id"].ToString();
             }
             return user;
         }

@@ -312,7 +312,7 @@ namespace com.vdm.form
                     if (selectValue.Key != "")
                     {
                         string org_code = selectValue.Key;
-                        int pre_org_id = this.orgBLL.getOrgIdByOrgCode(org_code);
+                        string pre_org_id = this.orgBLL.getOrgIdByOrgCode(org_code);
                         List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
                         if (list_village != null)
                         {

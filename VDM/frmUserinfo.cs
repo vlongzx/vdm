@@ -46,11 +46,7 @@ namespace com.vdm.form
             string remark = this.tbRemark.Text.Trim();
             string town  =this.cbTown.SelectedValue.ToString();
             string village = this.cbVillage.SelectedValue.ToString();
-            int character_id = 0;
-            if(this.cbRoel.SelectedValue.ToString() != "")
-            {
-                character_id = int.Parse(this.cbRoel.SelectedValue.ToString());
-            }
+            string  character_id = this.cbRoel.SelectedValue.ToString();
             if (password.Equals(confirm_password) == false)
             {
                 MessageBox.Show("输入密码和确认密码不一致，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -151,7 +147,7 @@ namespace com.vdm.form
                     if (selectValue.Key != "")
                     {
                         string org_code = selectValue.Key;
-                        int pre_org_id = this.orgBLL.getOrgIdByOrgCode(org_code);
+                        string pre_org_id = this.orgBLL.getOrgIdByOrgCode(org_code);
                         List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
                         if (list_village != null)
                         {

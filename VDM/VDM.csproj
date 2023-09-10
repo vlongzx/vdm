@@ -197,6 +197,12 @@
     <Compile Include="frmImportExcelFile.Designer.cs">
       <DependentUpon>frmImportExcelFile.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInitUserAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInitUserAccount.Designer.cs">
+      <DependentUpon>frmInitUserAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLandInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmImportExcelFile.resx">
       <DependentUpon>frmImportExcelFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInitUserAccount.resx">
+      <DependentUpon>frmInitUserAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLandInfo.resx">
       <DependentUpon>frmLandInfo.cs</DependentUpon>

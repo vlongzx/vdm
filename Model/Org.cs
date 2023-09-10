@@ -8,14 +8,14 @@ namespace com.vdm.model
 {
     public  class Org
     {
-        private int org_id;
+        private string org_id;
         private string org_name;
         private string org_type;
-        private int org_pre_id;
+        private string org_pre_id;
         /// <summary>
         /// 组织ID
         /// </summary>
-        public int Org_id
+        public string Org_id
         {
             get
             {
@@ -60,7 +60,7 @@ namespace com.vdm.model
         /// <summary>
         ///  上级组织ID
         /// </summary>
-        public int Org_pre_id
+        public string Org_pre_id
         {
             get
             {

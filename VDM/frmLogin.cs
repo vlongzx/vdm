@@ -33,6 +33,17 @@ namespace com.vdm.form
             string username = this.txtUsername.Text.Trim();
             string password = this.txtPassword.Text.Trim();
 
+            if(username == "")
+            {
+                MessageBox.Show("请输入登录用户名！", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (password == "")
+            {
+                MessageBox.Show("请输入登录密码！", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             UserBLL userBLL = new UserBLL();
 
             //int result = userBLL.Login(username, password);

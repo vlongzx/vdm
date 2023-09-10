@@ -28,7 +28,7 @@ namespace com.vdm.bll
             return this.roleDAL.queryRoleFuncPower(role_id);
         }
 
-        public Result delRole(int role_id)
+        public Result delRole(string role_id)
         {
             return this.roleDAL.deleteRole(role_id);
         }

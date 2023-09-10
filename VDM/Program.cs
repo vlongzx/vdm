@@ -1,6 +1,8 @@
 ﻿using com.vdm.AutoUpdater;
+using com.vdm.bll;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -25,6 +27,16 @@ namespace com.vdm.form
                 MessageBox.Show("数据库文件不存在或路径不正确，请检查。", "运行错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            //判断是否需要初始化账户信息
+            UserBLL userBLL = new UserBLL();
+
+            DataTable  dt = userBLL.getAllUser();
+            if(dt != null && dt.Rows.Count == 0)
+            {
+                frmInitUserAccount initUserAccount = new frmInitUserAccount();
+                initUserAccount.ShowDialog();
+            }
+
             IAutoUpdater autoUpdater = new com.vdm.AutoUpdater.AutoUpdater();
             //int fileCount = autoUpdater.CheckUpdaterFileCount();//检查需要更新的文件数量
             //if (fileCount>0)

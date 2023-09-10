@@ -154,7 +154,7 @@ namespace com.vdm.dal
             return this.SqlDbHelper.ExecuteSqlTran(listSSO);
         }
 
-        public Result deleteRole(int role_id)
+        public Result deleteRole(string  role_id)
         {
             List<SQLStringObject> listSSO = new List<SQLStringObject>();
             //先删除关系表
