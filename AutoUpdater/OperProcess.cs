@@ -14,9 +14,9 @@ namespace com.vdm.AutoUpdater
         #region init update env
         public void InitUpdateEnvironment()
         {
-            if (IfExist("MainProgram"))
+            if (IfExist("VDM"))
             {
-                CloseExe("MainProgram");
+                CloseExe("VDM");
             }
         }
         #endregion init update env
@@ -24,10 +24,10 @@ namespace com.vdm.AutoUpdater
         #region updated start process
         public void StartProcess()
         {
-            string path = System.Environment.CurrentDirectory;
-            if (!IfExist("vdm"))
+            string path = System.IO.Directory.GetCurrentDirectory();//System.Environment.CurrentDirectory;
+            if (!IfExist("VDM"))
             {
-                StartExe(path, "vdm.exe");
+                StartExe(path, "VDM.exe");
             }
             //CloseExe("KnightsWarrior");
         }

@@ -16,16 +16,17 @@ namespace com.vdm.AutoUpdater
 {
     public partial class DownloadProgress : Form
     {
-        #region The private fields
+
         private bool isFinished = false;
         private List<DownloadFileInfo> downloadFileList = null;
         private List<DownloadFileInfo> allFileList = null;
         private ManualResetEvent evtDownload = null;
         private ManualResetEvent evtPerDonwload = null;
         private WebClient clientDownload = null;
-        #endregion
 
-        #region The constructor of DownloadProgress
+        long total = 0;
+        long nDownloadedTotal = 0;
+
         public DownloadProgress(List<DownloadFileInfo> downloadFileListTemp)
         {
             InitializeComponent();
@@ -37,9 +38,12 @@ namespace com.vdm.AutoUpdater
                 allFileList.Add(file);
             }
         }
-        #endregion
 
-        #region The method and event
+        /// <summary>
+        ///  窗体关闭事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnFormClosing(object sender, FormClosingEventArgs e)
         {
             if (!isFinished && DialogResult.No == MessageBox.Show(ConstFile.CANCELORNOT, ConstFile.MESSAGETITLE, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
@@ -57,6 +61,11 @@ namespace com.vdm.AutoUpdater
             }
         }
 
+        /// <summary>
+        ///  窗体加载事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnFormLoad(object sender, EventArgs e)
         {
             evtDownload = new ManualResetEvent(true);
@@ -64,8 +73,6 @@ namespace com.vdm.AutoUpdater
             ThreadPool.QueueUserWorkItem(new WaitCallback(this.ProcDownload));
         }
 
-        long total = 0;
-        long nDownloadedTotal = 0;
 
         private void ProcDownload(object o)
         {
@@ -74,10 +81,7 @@ namespace com.vdm.AutoUpdater
             {
                 Directory.CreateDirectory(tempFolderPath);
             }
-
-
             evtPerDonwload = new ManualResetEvent(false);
-
             foreach (DownloadFileInfo file in this.downloadFileList)
             {
                 total += file.Size;
@@ -88,33 +92,22 @@ namespace com.vdm.AutoUpdater
                 {
                     if (this.downloadFileList.Count == 0)
                         break;
-
                     DownloadFileInfo file = this.downloadFileList[0];
-
-
-                    //Debug.WriteLine(String.Format("Start Download:{0}", file.FileName));
-
                     this.ShowCurrentDownloadFileName(file.FileName);
-
-                    //Download
+                    //下载
                     clientDownload = new WebClient();
-
-                    //Added the function to support proxy
-                    //clientDownload.Proxy = System.Net.WebProxy.GetDefaultProxy();
                     clientDownload.Proxy = WebRequest.GetSystemWebProxy();
                     clientDownload.Proxy.Credentials = CredentialCache.DefaultCredentials;
                     clientDownload.Credentials = System.Net.CredentialCache.DefaultCredentials;
-                    //End added
-
                     clientDownload.DownloadProgressChanged += (object sender, DownloadProgressChangedEventArgs e) =>
                     {
                         try
                         {
                             this.SetProcessBar(e.ProgressPercentage, (int)((nDownloadedTotal + e.BytesReceived) * 100 / total));
                         }
-                        catch
+                        catch(Exception ex)
                         {
-                            //log the error message,you can use the application's log code
+                            MessageBox.Show(ex.Message);
                         }
 
                     };
@@ -129,9 +122,9 @@ namespace com.vdm.AutoUpdater
                             this.SetProcessBar(0, (int)(nDownloadedTotal * 100 / total));
                             evtPerDonwload.Set();
                         }
-                        catch (Exception)
+                        catch (Exception ex )
                         {
-                            //log the error message,you can use the application's log code
+                            MessageBox.Show(ex.Message);
                         }
 
                     };
@@ -162,10 +155,10 @@ namespace com.vdm.AutoUpdater
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 ShowErrorAndRestartApplication();
-                //throw;
+                MessageBox.Show(ex.Message);
             }
 
             //When the files have not downloaded,return.
@@ -218,7 +211,6 @@ namespace com.vdm.AutoUpdater
                             File.Move(newfilepath, newPath);
                         }
                     }
-                    //End added
 
                     if (File.Exists(oldPath))
                     {
@@ -226,7 +218,6 @@ namespace com.vdm.AutoUpdater
                     }
                     else
                     {
-                        //Edit for config_ file
                         if (!string.IsNullOrEmpty(tempUrlPath))
                         {
                             if (!Directory.Exists(CommonUnitity.SystemBinUrl + tempUrlPath.Substring(1)))
@@ -248,20 +239,18 @@ namespace com.vdm.AutoUpdater
 
                     }
                 }
-                catch (Exception exp)
+                catch (Exception ex)
                 {
-                    //log the error message,you can use the application's log code
+                    MessageBox.Show(ex.Message);
                 }
 
             }
-
-            //After dealed with all files, clear the data
             this.allFileList.Clear();
 
-            if (this.downloadFileList.Count == 0)
-                Exit(true);
-            else
-                Exit(false);
+            //if (this.downloadFileList.Count == 0)
+            //    Exit(true);
+            //else
+            //    Exit(false);
 
             evtDownload.Set();
         }
@@ -353,9 +342,9 @@ namespace com.vdm.AutoUpdater
         private void ShowErrorAndRestartApplication()
         {
             MessageBox.Show(ConstFile.NOTNETWORK, ConstFile.MESSAGETITLE, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            CommonUnitity.RestartApplication();
-        }
+            //CommonUnitity.RestartApplication();
 
-        #endregion
+            Exit(true);
+        }
     }
 }

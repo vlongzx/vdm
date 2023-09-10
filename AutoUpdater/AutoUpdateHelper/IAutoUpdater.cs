@@ -10,6 +10,8 @@ namespace com.vdm.AutoUpdater
     {
         void Update();
 
+        int CheckUpdaterFileCount();
+
         void RollBack();
     }
 }

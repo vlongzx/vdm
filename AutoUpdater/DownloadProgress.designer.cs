@@ -64,11 +64,11 @@
             // buttonOk
             // 
             this.buttonOk.Location = new System.Drawing.Point(578, 14);
-            this.buttonOk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(4);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(124, 34);
             this.buttonOk.TabIndex = 2;
-            this.buttonOk.Text = "Cancel";
+            this.buttonOk.Text = "确定";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.OnCancel);
             // 
@@ -80,7 +80,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(747, 94);
             this.panel1.TabIndex = 3;
@@ -89,7 +89,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(614, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(118, 82);
             this.pictureBox1.TabIndex = 1;
@@ -127,7 +127,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.panel2.Location = new System.Drawing.Point(-4, 99);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(753, 200);
             this.panel2.TabIndex = 4;
@@ -135,7 +135,7 @@
             // progressBarTotal
             // 
             this.progressBarTotal.Location = new System.Drawing.Point(50, 130);
-            this.progressBarTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.progressBarTotal.Margin = new System.Windows.Forms.Padding(4);
             this.progressBarTotal.Name = "progressBarTotal";
             this.progressBarTotal.Size = new System.Drawing.Size(657, 18);
             this.progressBarTotal.Step = 1;
@@ -144,7 +144,7 @@
             // progressBarCurrent
             // 
             this.progressBarCurrent.Location = new System.Drawing.Point(48, 70);
-            this.progressBarCurrent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.progressBarCurrent.Margin = new System.Windows.Forms.Padding(4);
             this.progressBarCurrent.Name = "progressBarCurrent";
             this.progressBarCurrent.Size = new System.Drawing.Size(657, 18);
             this.progressBarCurrent.Step = 1;
@@ -176,9 +176,9 @@
             this.label5.Location = new System.Drawing.Point(368, 14);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(206, 18);
+            this.label5.Size = new System.Drawing.Size(179, 18);
             this.label5.TabIndex = 0;
-            this.label5.Text = "From:    Remote Server";
+            this.label5.Text = "From:    远程服务器";
             // 
             // label7
             // 
@@ -186,9 +186,9 @@
             this.label7.Location = new System.Drawing.Point(48, 14);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(233, 18);
+            this.label7.Size = new System.Drawing.Size(206, 18);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Name:  KnightsWarrior.exe";
+            this.label7.Text = "程序：乡村数据采集系统";
             // 
             // label6
             // 
@@ -205,7 +205,7 @@
             this.panel3.Controls.Add(this.buttonOk);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 300);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(747, 63);
             this.panel3.TabIndex = 4;
@@ -215,7 +215,7 @@
             this.splitter1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter1.Location = new System.Drawing.Point(0, 94);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(747, 3);
             this.splitter1.TabIndex = 5;
@@ -226,7 +226,7 @@
             this.splitter2.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.splitter2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.splitter2.Location = new System.Drawing.Point(0, 297);
-            this.splitter2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitter2.Margin = new System.Windows.Forms.Padding(4);
             this.splitter2.Name = "splitter2";
             this.splitter2.Size = new System.Drawing.Size(747, 3);
             this.splitter2.TabIndex = 6;
@@ -245,7 +245,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelCurrentItem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DownloadProgress";

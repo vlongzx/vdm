@@ -1,5 +1,7 @@
-﻿using System;
+﻿using com.vdm.AutoUpdater;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -23,15 +25,21 @@ namespace com.vdm.form
                 MessageBox.Show("数据库文件不存在或路径不正确，请检查。", "运行错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            frmLogin login = new frmLogin();
-            login.InitCheckUpdate();
-            //login.ShowDialog();
-            //if (login.DialogResult == DialogResult.OK)
-            //{
-            //    Application.Run(new frmMain());
-            //}
-
+            IAutoUpdater autoUpdater = new com.vdm.AutoUpdater.AutoUpdater();
+            int fileCount = autoUpdater.CheckUpdaterFileCount();//检查需要更新的文件数量
+            if (fileCount>0)
+            {
+                Process.Start(System.IO.Directory.GetCurrentDirectory() + "\\AutoUpdater.exe");
+            }
+            else
+            {
+                frmLogin login = new frmLogin();
+                login.ShowDialog();
+                if (login.DialogResult == DialogResult.OK)
+                {
+                    Application.Run(new frmMain());
+                }
+            }
         }
 
     }

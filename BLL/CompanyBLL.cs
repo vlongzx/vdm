@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 using com.vdm.common;
 using com.vdm.dal;
 using com.vdm.model;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Data;
 
 namespace com.vdm.bll
