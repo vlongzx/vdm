@@ -165,6 +165,8 @@ namespace com.vdm.form
         private void ImportPlantData(DataTable dt)
         {
             PlantBLL plantBLL = new PlantBLL();
+            ////删除原来表所有数据
+            //plantBLL.deleteAll();
             List<Plant> plants = new List<Plant>();
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
@@ -531,6 +533,7 @@ namespace com.vdm.form
         private void ImportAnimalData(DataTable dt)
         {
             AnimalBLL animalBLL = new AnimalBLL();
+            //删除原来表所有数据
             List<Animal> animals = new List<Animal>();
             //若有数据
             if (dt != null && dt.Rows.Count != 0)

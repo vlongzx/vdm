@@ -344,5 +344,77 @@ namespace com.vdm.dal
             return result;
         }
 
+        /// <summary>
+        /// 种植和畜牧导入时使用
+        /// </summary>
+        /// <param name="SQLStringObjectList"></param>
+        /// <returns></returns>
+        public Result ExecuteSqlTranAnimalOrPlant(List<SQLStringObject> SQLStringObjectList,string tableName)
+        {
+            string msg = "";
+            Result result = new Result();
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                SQLiteCommand command = new SQLiteCommand();
+                command.Connection = conn;
+                SQLiteTransaction tx = conn.BeginTransaction();
+                command.Transaction = tx;
+                int count = 0;
+
+                try
+                {
+                        //删除表格全部数据
+                        string sql = "delete from " + tableName;
+                        command.CommandText = sql;
+                        command.ExecuteNonQuery();
+
+                    
+                    for (int n = 0; n < SQLStringObjectList.Count; n++)
+                    {
+                        string strsql = SQLStringObjectList[n].StrSql;
+                        List<SQLiteParameter> parameters = SQLStringObjectList[n].Parameter;
+                        command.CommandText = strsql;
+                        if (parameters != null)
+                        {
+                            foreach (SQLiteParameter parameter in parameters)
+                            {
+                                command.Parameters.Add(parameter);
+                            }
+                        }
+                        int resultCount = command.ExecuteNonQuery();
+                        if (resultCount == 0)
+                        {
+                            msg += parameters[1].Value.ToString() + "," + parameters[2].Value.ToString() + "......;" + "\r\n";
+                        }
+                        count += resultCount;
+                    }
+                    if (count >= SQLStringObjectList.Count)
+                    {
+                        tx.Commit();
+                        result.Count = count;
+                        result.Information = "批量执行成功";
+                    }
+                    else
+                    {
+                        tx.Rollback();
+                        result.Count = count;
+                        result.Information = "批量执行失败" + "\r\n" + msg + "以上数据存在问题，请检查";
+
+                    }
+
+                }
+                catch (System.Data.SqlClient.SqlException E)
+                {
+                    tx.Rollback();
+                    result.Count = count;
+                    result.Information = "批量执行发生异常";
+                    result.Exception = E;
+                }
+            }
+
+            return result;
+        }
+
     }
 }

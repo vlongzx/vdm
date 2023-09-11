@@ -91,19 +91,91 @@ namespace com.vdm.form
             }
         }
 
+
+
+        protected  bool CheckData()
+        {
+
+            return  CheckRBG(uiRadioButtonGroup1, "请选择账号级别！")
+                   && CheckTB(tbPassword, "密码不能设置为空!")
+                    && CheckConfirmPassword(tbPassword,tbConfirmPassword,"输入密码和确认密码不一致，请重新输入！")
+                      && CheckTownAndVillage(cbTown, cbVillage, "请选择账号所属乡镇！", "请选择账号所属村！")
+                ;
+        }
+
+
+    protected bool CheckConfirmPassword(UITextBox uitbPassword, UITextBox uitbConfirmPassword,string Message)
+    {
+
+                if ((uitbPassword.Text).Equals(uitbConfirmPassword.Text) == false)
+                {
+                    MessageBox.Show(Message, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+        return true;
+    }
+
+    protected bool CheckTownAndVillage(UIComboBox uicbTown, UIComboBox uicbVillage, string Message1, string Message2)
+        {
+            //若选择乡镇级
+            if (this.uiRadioButtonGroup1.SelectedIndex == 0)
+            {
+                if (uicbTown.Text == "请选择")
+                {
+                    ShowWarningDialog(Message1);
+                    return false;
+                }
+                return true;
+            }
+            //若选择村级
+            else
+            {
+                if (uicbTown.Text == "请选择")
+                {
+                    ShowWarningDialog(Message1);
+                    return false;
+                }
+                if (uicbVillage.Text == "请选择")
+                {
+                    ShowWarningDialog(Message2);
+                    return false;
+                }
+                return true;
+            }
+        }
+        //校验TextBox是否为空
+        protected bool CheckTB(UITextBox uitb, string Message)
+        {
+            if (uitb.Text == "")
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
+        }
+        //校验下拉框是否选择
+        protected bool CheckRBG(UIRadioButtonGroup uirbg, string Message)
+        {
+            if (uirbg.SelectedIndex!=0&& uirbg.SelectedIndex != 1)
+            {
+                ShowWarningDialog(Message);
+                return false;
+            }
+            return true;
+        }
+
         private void btInit_Click(object sender, EventArgs e)
         {
+            if(!CheckData())
+            {
+                return;
+            }
             string username = this.tbUsername.Text.Trim();
             string password = this.tbPassword.Text;
             string confirm_password = this.tbConfirmPassword.Text;
             string town = this.cbTown.SelectedValue.ToString();
             string village = this.cbVillage.SelectedValue.ToString();
             string character_id = "sys_admin";
-            if (password.Equals(confirm_password) == false)
-            {
-                MessageBox.Show("输入密码和确认密码不一致，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
 
             User user = new User();
             user.Username = username;

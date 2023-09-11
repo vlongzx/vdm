@@ -122,5 +122,15 @@ namespace com.vdm.bll
         {
             return this.plantDAL.deletePlant(plant_id);
         }
+        /// <summary>
+        ///  删除所有种植信息
+        /// </summary>
+        /// <returns></returns>
+        public Result deleteAll()
+        {
+            return this.plantDAL.deleteAll();
+        }
+
+
     }
 }

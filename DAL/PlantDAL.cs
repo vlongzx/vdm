@@ -289,7 +289,7 @@ namespace com.vdm.dal
                     SQLStringObjectList.Add(sqlStringObject);
                 }
             }
-            return this.SqlDbHelper.ExecuteSqlTran(SQLStringObjectList);
+            return this.SqlDbHelper.ExecuteSqlTranAnimalOrPlant(SQLStringObjectList,"t_plant");
         }
         /// <summary>
         /// 更新种植信息
@@ -337,6 +337,12 @@ namespace com.vdm.dal
         public Result deletePlant(int plant_id)
         {
             string sql = "delete from t_plant where plant_id=" + plant_id;
+            return this.SqlDbHelper.ExecuteNonQuery(sql);
+        }
+
+        public Result deleteAll()
+        {
+            string sql = "delete from t_plant";
             return this.SqlDbHelper.ExecuteNonQuery(sql);
         }
     }

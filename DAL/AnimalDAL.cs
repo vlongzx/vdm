@@ -270,7 +270,7 @@ namespace com.vdm.dal
                     SQLStringObjectList.Add(sqlStringObject);
                 }
             }
-            return this.SqlDbHelper.ExecuteSqlTran(SQLStringObjectList);
+            return this.SqlDbHelper.ExecuteSqlTranAnimalOrPlant(SQLStringObjectList, "t_animal");
         }
         /// <summary>
         /// 创建畜牧
