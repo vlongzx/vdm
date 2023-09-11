@@ -40,7 +40,7 @@
             this.uiLabel17 = new Sunny.UI.UILabel();
             this.tbLegal_idcard = new Sunny.UI.UITextBox();
             this.uiLabel24 = new Sunny.UI.UILabel();
-            this.groupBox2 = new Sunny.UI.UIGroupBox();
+            this.gbResult = new Sunny.UI.UIGroupBox();
             this.btAdd = new Sunny.UI.UIButton();
             this.btEdit = new Sunny.UI.UIButton();
             this.pagination = new Sunny.UI.UIPagination();
@@ -54,7 +54,8 @@
             this.tbOrganization_code = new Sunny.UI.UITextBox();
             this.uiLabel10 = new Sunny.UI.UILabel();
             this.tbTaxpayer_code = new Sunny.UI.UITextBox();
-            this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.gbSearch = new Sunny.UI.UIGroupBox();
+            this.ctvCompany_type = new Sunny.UI.UIComboTreeView();
             this.tbInsure_person_count_From = new Sunny.UI.UITextBox();
             this.cbCompany_status = new Sunny.UI.UIComboBox();
             this.cbIs_top_company = new Sunny.UI.UIComboBox();
@@ -93,10 +94,9 @@
             this.btSearch = new Sunny.UI.UIButton();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.btDelete = new Sunny.UI.UIButton();
-            this.ctvCompany_type = new Sunny.UI.UIComboTreeView();
             ((System.ComponentModel.ISupportInitialize)(this.dgCompanyList)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.uiGroupBox1.SuspendLayout();
+            this.gbResult.SuspendLayout();
+            this.gbSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // btImport
@@ -185,7 +185,7 @@
             this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel13.Location = new System.Drawing.Point(1020, 136);
             this.uiLabel13.Name = "uiLabel13";
-            this.uiLabel13.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel13.Size = new System.Drawing.Size(24, 31);
             this.uiLabel13.TabIndex = 252;
             this.uiLabel13.Text = "-";
             this.uiLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,7 +196,7 @@
             this.uiLabel17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel17.Location = new System.Drawing.Point(1020, 92);
             this.uiLabel17.Name = "uiLabel17";
-            this.uiLabel17.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel17.Size = new System.Drawing.Size(24, 31);
             this.uiLabel17.TabIndex = 248;
             this.uiLabel17.Text = "-";
             this.uiLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,28 +223,28 @@
             this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel24.Location = new System.Drawing.Point(417, 86);
             this.uiLabel24.Name = "uiLabel24";
-            this.uiLabel24.Size = new System.Drawing.Size(242, 41);
+            this.uiLabel24.Size = new System.Drawing.Size(182, 31);
             this.uiLabel24.TabIndex = 241;
             this.uiLabel24.Text = "企业法人身份证";
             this.uiLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // groupBox2
+            // gbResult
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gbResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.dgCompanyList);
-            this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(18, 382);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(2063, 647);
-            this.groupBox2.TabIndex = 97;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "数据列表";
-            this.groupBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gbResult.Controls.Add(this.dgCompanyList);
+            this.gbResult.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbResult.Location = new System.Drawing.Point(18, 382);
+            this.gbResult.Margin = new System.Windows.Forms.Padding(4);
+            this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbResult.Name = "gbResult";
+            this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
+            this.gbResult.Size = new System.Drawing.Size(2063, 647);
+            this.gbResult.TabIndex = 97;
+            this.gbResult.TabStop = false;
+            this.gbResult.Text = "数据列表";
+            this.gbResult.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btAdd
             // 
@@ -299,7 +299,7 @@
             this.uiLabel22.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel22.Location = new System.Drawing.Point(417, 181);
             this.uiLabel22.Name = "uiLabel22";
-            this.uiLabel22.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel22.Size = new System.Drawing.Size(110, 31);
             this.uiLabel22.TabIndex = 239;
             this.uiLabel22.Text = "人员规模";
             this.uiLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -310,7 +310,7 @@
             this.uiLabel27.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel27.Location = new System.Drawing.Point(1173, 37);
             this.uiLabel27.Name = "uiLabel27";
-            this.uiLabel27.Size = new System.Drawing.Size(274, 41);
+            this.uiLabel27.Size = new System.Drawing.Size(206, 31);
             this.uiLabel27.TabIndex = 235;
             this.uiLabel27.Text = "统一社会信用编码";
             this.uiLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -354,7 +354,7 @@
             this.土地使用说明.Location = new System.Drawing.Point(28, 137);
             this.土地使用说明.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.土地使用说明.Name = "土地使用说明";
-            this.土地使用说明.Size = new System.Drawing.Size(178, 41);
+            this.土地使用说明.Size = new System.Drawing.Size(134, 31);
             this.土地使用说明.TabIndex = 210;
             this.土地使用说明.Text = "工商注册号";
             this.土地使用说明.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -366,7 +366,7 @@
             this.uiLabel32.Location = new System.Drawing.Point(776, 137);
             this.uiLabel32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel32.Name = "uiLabel32";
-            this.uiLabel32.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel32.Size = new System.Drawing.Size(110, 31);
             this.uiLabel32.TabIndex = 207;
             this.uiLabel32.Text = "成立时间";
             this.uiLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -378,7 +378,7 @@
             this.uiLabel33.Location = new System.Drawing.Point(33, 183);
             this.uiLabel33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel33.Name = "uiLabel33";
-            this.uiLabel33.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel33.Size = new System.Drawing.Size(158, 31);
             this.uiLabel33.TabIndex = 205;
             this.uiLabel33.Text = "企业联系电话";
             this.uiLabel33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -405,7 +405,7 @@
             this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel10.Location = new System.Drawing.Point(417, 136);
             this.uiLabel10.Name = "uiLabel10";
-            this.uiLabel10.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel10.Size = new System.Drawing.Size(158, 31);
             this.uiLabel10.TabIndex = 200;
             this.uiLabel10.Text = "组织机构代码";
             this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -426,72 +426,89 @@
             this.tbTaxpayer_code.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbTaxpayer_code.Watermark = "";
             // 
-            // uiGroupBox1
+            // gbSearch
             // 
-            this.uiGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiGroupBox1.Controls.Add(this.ctvCompany_type);
-            this.uiGroupBox1.Controls.Add(this.tbInsure_person_count_From);
-            this.uiGroupBox1.Controls.Add(this.cbCompany_status);
-            this.uiGroupBox1.Controls.Add(this.cbIs_top_company);
-            this.uiGroupBox1.Controls.Add(this.tbCredit_code);
-            this.uiGroupBox1.Controls.Add(this.tbCompany_phone);
-            this.uiGroupBox1.Controls.Add(this.dpEstablish_date_To);
-            this.uiGroupBox1.Controls.Add(this.dpEstablish_date_From);
-            this.uiGroupBox1.Controls.Add(this.dpLicense_date_To);
-            this.uiGroupBox1.Controls.Add(this.dpLicense_date_From);
-            this.uiGroupBox1.Controls.Add(this.uiLabel14);
-            this.uiGroupBox1.Controls.Add(this.uiLabel12);
-            this.uiGroupBox1.Controls.Add(this.uiLabel4);
-            this.uiGroupBox1.Controls.Add(this.uiLabel13);
-            this.uiGroupBox1.Controls.Add(this.uiLabel17);
-            this.uiGroupBox1.Controls.Add(this.tbOutput_To);
-            this.uiGroupBox1.Controls.Add(this.tbOutput_From);
-            this.uiGroupBox1.Controls.Add(this.tbInsure_person_count_To);
-            this.uiGroupBox1.Controls.Add(this.tbStaff_size_To);
-            this.uiGroupBox1.Controls.Add(this.tbStaff_size_From);
-            this.uiGroupBox1.Controls.Add(this.tbLegal_idcard);
-            this.uiGroupBox1.Controls.Add(this.uiLabel24);
-            this.uiGroupBox1.Controls.Add(this.uiLabel22);
-            this.uiGroupBox1.Controls.Add(this.uiLabel27);
-            this.uiGroupBox1.Controls.Add(this.tbBusiness_code);
-            this.uiGroupBox1.Controls.Add(this.土地使用说明);
-            this.uiGroupBox1.Controls.Add(this.uiLabel32);
-            this.uiGroupBox1.Controls.Add(this.uiLabel33);
-            this.uiGroupBox1.Controls.Add(this.tbOrganization_code);
-            this.uiGroupBox1.Controls.Add(this.uiLabel10);
-            this.uiGroupBox1.Controls.Add(this.tbTaxpayer_code);
-            this.uiGroupBox1.Controls.Add(this.tbCompany_address);
-            this.uiGroupBox1.Controls.Add(this.uiLabel11);
-            this.uiGroupBox1.Controls.Add(this.uiLabel3);
-            this.uiGroupBox1.Controls.Add(this.uiLabel25);
-            this.uiGroupBox1.Controls.Add(this.uiLabel26);
-            this.uiGroupBox1.Controls.Add(this.cbTown);
-            this.uiGroupBox1.Controls.Add(this.cbTaxpayer_qualification);
-            this.uiGroupBox1.Controls.Add(this.cbVillage);
-            this.uiGroupBox1.Controls.Add(this.uiLabel2);
-            this.uiGroupBox1.Controls.Add(this.tbLegal_name);
-            this.uiGroupBox1.Controls.Add(this.tbCompany_name);
-            this.uiGroupBox1.Controls.Add(this.uiLabel9);
-            this.uiGroupBox1.Controls.Add(this.uiLabel8);
-            this.uiGroupBox1.Controls.Add(this.uiLabel6);
-            this.uiGroupBox1.Controls.Add(this.uiLabel7);
-            this.uiGroupBox1.Controls.Add(this.label15);
-            this.uiGroupBox1.Controls.Add(this.uiLabel5);
-            this.uiGroupBox1.Controls.Add(this.label12);
-            this.uiGroupBox1.Controls.Add(this.btReset);
-            this.uiGroupBox1.Controls.Add(this.btSearch);
-            this.uiGroupBox1.Controls.Add(this.uiLabel1);
-            this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiGroupBox1.Location = new System.Drawing.Point(13, 36);
-            this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiGroupBox1.Name = "uiGroupBox1";
-            this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(2063, 275);
-            this.uiGroupBox1.TabIndex = 104;
-            this.uiGroupBox1.Text = "查询条件";
-            this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gbSearch.Controls.Add(this.ctvCompany_type);
+            this.gbSearch.Controls.Add(this.tbInsure_person_count_From);
+            this.gbSearch.Controls.Add(this.cbCompany_status);
+            this.gbSearch.Controls.Add(this.cbIs_top_company);
+            this.gbSearch.Controls.Add(this.tbCredit_code);
+            this.gbSearch.Controls.Add(this.tbCompany_phone);
+            this.gbSearch.Controls.Add(this.dpEstablish_date_To);
+            this.gbSearch.Controls.Add(this.dpEstablish_date_From);
+            this.gbSearch.Controls.Add(this.dpLicense_date_To);
+            this.gbSearch.Controls.Add(this.dpLicense_date_From);
+            this.gbSearch.Controls.Add(this.uiLabel14);
+            this.gbSearch.Controls.Add(this.uiLabel12);
+            this.gbSearch.Controls.Add(this.uiLabel4);
+            this.gbSearch.Controls.Add(this.uiLabel13);
+            this.gbSearch.Controls.Add(this.uiLabel17);
+            this.gbSearch.Controls.Add(this.tbOutput_To);
+            this.gbSearch.Controls.Add(this.tbOutput_From);
+            this.gbSearch.Controls.Add(this.tbInsure_person_count_To);
+            this.gbSearch.Controls.Add(this.tbStaff_size_To);
+            this.gbSearch.Controls.Add(this.tbStaff_size_From);
+            this.gbSearch.Controls.Add(this.tbLegal_idcard);
+            this.gbSearch.Controls.Add(this.uiLabel24);
+            this.gbSearch.Controls.Add(this.uiLabel22);
+            this.gbSearch.Controls.Add(this.uiLabel27);
+            this.gbSearch.Controls.Add(this.tbBusiness_code);
+            this.gbSearch.Controls.Add(this.土地使用说明);
+            this.gbSearch.Controls.Add(this.uiLabel32);
+            this.gbSearch.Controls.Add(this.uiLabel33);
+            this.gbSearch.Controls.Add(this.tbOrganization_code);
+            this.gbSearch.Controls.Add(this.uiLabel10);
+            this.gbSearch.Controls.Add(this.tbTaxpayer_code);
+            this.gbSearch.Controls.Add(this.tbCompany_address);
+            this.gbSearch.Controls.Add(this.uiLabel11);
+            this.gbSearch.Controls.Add(this.uiLabel3);
+            this.gbSearch.Controls.Add(this.uiLabel25);
+            this.gbSearch.Controls.Add(this.uiLabel26);
+            this.gbSearch.Controls.Add(this.cbTown);
+            this.gbSearch.Controls.Add(this.cbTaxpayer_qualification);
+            this.gbSearch.Controls.Add(this.cbVillage);
+            this.gbSearch.Controls.Add(this.uiLabel2);
+            this.gbSearch.Controls.Add(this.tbLegal_name);
+            this.gbSearch.Controls.Add(this.tbCompany_name);
+            this.gbSearch.Controls.Add(this.uiLabel9);
+            this.gbSearch.Controls.Add(this.uiLabel8);
+            this.gbSearch.Controls.Add(this.uiLabel6);
+            this.gbSearch.Controls.Add(this.uiLabel7);
+            this.gbSearch.Controls.Add(this.label15);
+            this.gbSearch.Controls.Add(this.uiLabel5);
+            this.gbSearch.Controls.Add(this.label12);
+            this.gbSearch.Controls.Add(this.btReset);
+            this.gbSearch.Controls.Add(this.btSearch);
+            this.gbSearch.Controls.Add(this.uiLabel1);
+            this.gbSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbSearch.Location = new System.Drawing.Point(13, 36);
+            this.gbSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbSearch.Name = "gbSearch";
+            this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.gbSearch.Size = new System.Drawing.Size(2063, 275);
+            this.gbSearch.TabIndex = 104;
+            this.gbSearch.Text = "查询条件";
+            this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ctvCompany_type
+            // 
+            this.ctvCompany_type.CheckBoxes = true;
+            this.ctvCompany_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.ctvCompany_type.FillColor = System.Drawing.Color.White;
+            this.ctvCompany_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ctvCompany_type.Location = new System.Drawing.Point(557, 47);
+            this.ctvCompany_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctvCompany_type.MinimumSize = new System.Drawing.Size(63, 0);
+            this.ctvCompany_type.Name = "ctvCompany_type";
+            this.ctvCompany_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.ctvCompany_type.ShowSelectedAllCheckBox = false;
+            this.ctvCompany_type.Size = new System.Drawing.Size(158, 29);
+            this.ctvCompany_type.TabIndex = 307;
+            this.ctvCompany_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctvCompany_type.Watermark = "";
             // 
             // tbInsure_person_count_From
             // 
@@ -641,7 +658,7 @@
             this.uiLabel14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel14.Location = new System.Drawing.Point(1438, 183);
             this.uiLabel14.Name = "uiLabel14";
-            this.uiLabel14.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel14.Size = new System.Drawing.Size(24, 31);
             this.uiLabel14.TabIndex = 252;
             this.uiLabel14.Text = "-";
             this.uiLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -652,7 +669,7 @@
             this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel12.Location = new System.Drawing.Point(1020, 185);
             this.uiLabel12.Name = "uiLabel12";
-            this.uiLabel12.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel12.Size = new System.Drawing.Size(24, 31);
             this.uiLabel12.TabIndex = 252;
             this.uiLabel12.Text = "-";
             this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -663,7 +680,7 @@
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel4.Location = new System.Drawing.Point(619, 188);
             this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel4.Size = new System.Drawing.Size(24, 31);
             this.uiLabel4.TabIndex = 252;
             this.uiLabel4.Text = "-";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -770,7 +787,7 @@
             this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel11.Location = new System.Drawing.Point(1173, 125);
             this.uiLabel11.Name = "uiLabel11";
-            this.uiLabel11.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel11.Size = new System.Drawing.Size(158, 31);
             this.uiLabel11.TabIndex = 154;
             this.uiLabel11.Text = "企业经营状态";
             this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -781,7 +798,7 @@
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel3.Location = new System.Drawing.Point(1173, 78);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel3.Size = new System.Drawing.Size(158, 31);
             this.uiLabel3.TabIndex = 154;
             this.uiLabel3.Text = "是否龙头企业";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -792,7 +809,7 @@
             this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel25.Location = new System.Drawing.Point(1173, 225);
             this.uiLabel25.Name = "uiLabel25";
-            this.uiLabel25.Size = new System.Drawing.Size(114, 41);
+            this.uiLabel25.Size = new System.Drawing.Size(86, 31);
             this.uiLabel25.TabIndex = 154;
             this.uiLabel25.Text = "所在村";
             this.uiLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -803,7 +820,7 @@
             this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel26.Location = new System.Drawing.Point(779, 228);
             this.uiLabel26.Name = "uiLabel26";
-            this.uiLabel26.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel26.Size = new System.Drawing.Size(110, 31);
             this.uiLabel26.TabIndex = 155;
             this.uiLabel26.Text = "所在乡镇";
             this.uiLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -860,7 +877,7 @@
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(33, 44);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel2.Size = new System.Drawing.Size(110, 31);
             this.uiLabel2.TabIndex = 145;
             this.uiLabel2.Text = "企业名称";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -904,7 +921,7 @@
             this.uiLabel9.Location = new System.Drawing.Point(417, 228);
             this.uiLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel9.Name = "uiLabel9";
-            this.uiLabel9.Size = new System.Drawing.Size(178, 41);
+            this.uiLabel9.Size = new System.Drawing.Size(134, 31);
             this.uiLabel9.TabIndex = 113;
             this.uiLabel9.Text = "纳税人资质";
             this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -916,7 +933,7 @@
             this.uiLabel8.Location = new System.Drawing.Point(33, 224);
             this.uiLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel8.Name = "uiLabel8";
-            this.uiLabel8.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel8.Size = new System.Drawing.Size(158, 31);
             this.uiLabel8.TabIndex = 113;
             this.uiLabel8.Text = "纳税人识别号";
             this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -928,7 +945,7 @@
             this.uiLabel6.Location = new System.Drawing.Point(779, 44);
             this.uiLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel6.Size = new System.Drawing.Size(110, 31);
             this.uiLabel6.TabIndex = 113;
             this.uiLabel6.Text = "企业地址";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -940,7 +957,7 @@
             this.uiLabel7.Location = new System.Drawing.Point(1173, 175);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(168, 41);
+            this.uiLabel7.Size = new System.Drawing.Size(126, 31);
             this.uiLabel7.TabIndex = 113;
             this.uiLabel7.Text = "产值(万元)";
             this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -952,7 +969,7 @@
             this.label15.Location = new System.Drawing.Point(779, 181);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(146, 41);
+            this.label15.Size = new System.Drawing.Size(110, 31);
             this.label15.TabIndex = 113;
             this.label15.Text = "参保人数";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -964,7 +981,7 @@
             this.uiLabel5.Location = new System.Drawing.Point(417, 40);
             this.uiLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel5.Size = new System.Drawing.Size(110, 31);
             this.uiLabel5.TabIndex = 108;
             this.uiLabel5.Text = "企业类型";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -976,7 +993,7 @@
             this.label12.Location = new System.Drawing.Point(33, 87);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 41);
+            this.label12.Size = new System.Drawing.Size(110, 31);
             this.label12.TabIndex = 102;
             this.label12.Text = "法人姓名";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1013,7 +1030,7 @@
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(776, 91);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel1.Size = new System.Drawing.Size(158, 31);
             this.uiLabel1.TabIndex = 200;
             this.uiLabel1.Text = "营业执照日期";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1031,42 +1048,25 @@
             this.btDelete.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
-            // ctvCompany_type
-            // 
-            this.ctvCompany_type.CheckBoxes = true;
-            this.ctvCompany_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
-            this.ctvCompany_type.FillColor = System.Drawing.Color.White;
-            this.ctvCompany_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ctvCompany_type.Location = new System.Drawing.Point(557, 47);
-            this.ctvCompany_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ctvCompany_type.MinimumSize = new System.Drawing.Size(63, 0);
-            this.ctvCompany_type.Name = "ctvCompany_type";
-            this.ctvCompany_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.ctvCompany_type.ShowSelectedAllCheckBox = false;
-            this.ctvCompany_type.Size = new System.Drawing.Size(158, 29);
-            this.ctvCompany_type.TabIndex = 307;
-            this.ctvCompany_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ctvCompany_type.Watermark = "";
-            // 
             // frmCompanyList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(2170, 1132);
             this.Controls.Add(this.btImport);
             this.Controls.Add(this.btExport);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbResult);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btEdit);
             this.Controls.Add(this.pagination);
-            this.Controls.Add(this.uiGroupBox1);
+            this.Controls.Add(this.gbSearch);
             this.Controls.Add(this.btDelete);
             this.Name = "frmCompanyList";
             this.Text = "frmCompanyList";
             this.Load += new System.EventHandler(this.frmCompanyList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgCompanyList)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.uiGroupBox1.ResumeLayout(false);
-            this.uiGroupBox1.PerformLayout();
+            this.gbResult.ResumeLayout(false);
+            this.gbSearch.ResumeLayout(false);
+            this.gbSearch.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1080,7 +1080,7 @@
         private Sunny.UI.UILabel uiLabel17;
         private Sunny.UI.UITextBox tbLegal_idcard;
         private Sunny.UI.UILabel uiLabel24;
-        private Sunny.UI.UIGroupBox groupBox2;
+        private Sunny.UI.UIGroupBox gbResult;
         private Sunny.UI.UIButton btAdd;
         private Sunny.UI.UIButton btEdit;
         private Sunny.UI.UIPagination pagination;
@@ -1094,7 +1094,7 @@
         private Sunny.UI.UITextBox tbOrganization_code;
         private Sunny.UI.UILabel uiLabel10;
         private Sunny.UI.UITextBox tbTaxpayer_code;
-        private Sunny.UI.UIGroupBox uiGroupBox1;
+        private Sunny.UI.UIGroupBox gbSearch;
         private Sunny.UI.UILabel uiLabel25;
         private Sunny.UI.UILabel uiLabel26;
         private Sunny.UI.UIComboBox cbTown;

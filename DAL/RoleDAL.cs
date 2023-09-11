@@ -22,7 +22,11 @@ namespace com.vdm.dal
 
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
-
+        /// <summary>
+        ///  查询打个角色信息
+        /// </summary>
+        /// <param name="role_id"></param>
+        /// <returns></returns>
         public DataTable queryRole(string role_id)
         {
             string sql = "select * from t_role where role_id = '"+ role_id+"'";
@@ -30,7 +34,11 @@ namespace com.vdm.dal
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
 
-
+        /// <summary>
+        ///  查询角色对应的功能权限
+        /// </summary>
+        /// <param name="role_id">角色ID</param>
+        /// <returns></returns>
         public DataTable queryRoleFuncPower(string role_id)
         {
             string sql = "select * from t_character_funtion_authority where character_id = '" + role_id + "'";

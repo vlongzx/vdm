@@ -37,6 +37,45 @@ namespace com.vdm.form
             InitPlantList(null, pageIndex, pageSize);
 
             InitControls();
+
+            InitFuncPowerControl();
+        }
+
+        /// <summary>
+        ///  初始化权限控制
+        /// </summary>
+        private void InitFuncPowerControl()
+        {
+            if (LoginInfo.FuncPowerList.Contains("11000") == false)
+            {
+                this.gbSearch.Visible = false;
+                this.gbResult.Visible = false;
+            }
+
+            if (LoginInfo.FuncPowerList.Contains("11001") == false)
+            {
+                this.btAdd.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("11002") == false)
+            {
+                this.btEdit.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("11003") == false)
+            {
+                this.btDelete.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("11004") == false)
+            {
+                this.gbSearch.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("11005") == false)
+            {
+                this.btImport.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("11006") == false)
+            {
+                this.btExport.Visible = false;
+            }
         }
 
         public  void InitPlantList(Hashtable condition, int pageIndex=1, int pageSize=20)

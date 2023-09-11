@@ -24,6 +24,7 @@ namespace com.vdm.form
         private DictBLL dictBLL = null;
         private string dict_code = null;
         private string dict_name = null;
+        private const string MESSAGE = "您还没有权限操作该功能。请联系管理员开通。";
         public frmSystemSet()
         {
             InitializeComponent();
@@ -532,6 +533,43 @@ namespace com.vdm.form
                 {
                     MessageBox.Show("删除数据发生异常。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LogHelper.Error(result.Information, result.Exception);
+                }
+            }
+        }
+
+        private void uiTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(this.uiTabControl1.SelectedTab.Text == "数据字典")
+            {
+                if (LoginInfo.FuncPowerList.Contains("12000") == false)
+                {
+                    ShowInfoDialog(MESSAGE);
+                    return;
+                }
+
+            }
+            if (this.uiTabControl1.SelectedTab.Text == "用户管理")
+            {
+                if (LoginInfo.FuncPowerList.Contains("13000") == false)
+                {
+                    ShowInfoDialog(MESSAGE);
+                    return;
+                }
+            }
+            if (this.uiTabControl1.SelectedTab.Text == "角色管理")
+            {
+                if (LoginInfo.FuncPowerList.Contains("13000") == false)
+                {
+                    ShowInfoDialog(MESSAGE);
+                    return;
+                }
+            }
+            if (this.uiTabControl1.SelectedTab.Text == "功能权限")
+            {
+                if (LoginInfo.FuncPowerList.Contains("14000") == false)
+                {
+                    ShowInfoDialog(MESSAGE);
+                    return;
                 }
             }
         }

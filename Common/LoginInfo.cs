@@ -17,7 +17,7 @@ namespace com.vdm.common
         private string _AccountName = "";
         public string AccountName { get { return _AccountName; } set { _AccountName = value; } }
         //用户所属乡镇
-        private string _Town= "";
+        private string _Town = "";
         //用户所属村
         private string _Village = "";
         //登录时间
@@ -26,6 +26,8 @@ namespace com.vdm.common
 
 
         private static LoginInfo _CurrentUser = null;
+
+        private static List<string> _FuncPowerList = new List<string>();
 
 
         //应用单件模式，保存用户登录状态
@@ -62,6 +64,21 @@ namespace com.vdm.common
             set
             {
                 _Village = value;
+            }
+        }
+        /// <summary>
+        ///  权限列表
+        /// </summary>
+        public static List<string> FuncPowerList
+        {
+            get
+            {
+                return _FuncPowerList;
+            }
+
+            set
+            {
+                _FuncPowerList = value;
             }
         }
     }

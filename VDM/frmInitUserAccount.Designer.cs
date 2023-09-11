@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInitUserAccount));
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
@@ -44,6 +45,7 @@
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel6 = new Sunny.UI.UILabel();
             this.btInit = new Sunny.UI.UIButton();
+            this.uiStyleManager1 = new Sunny.UI.UIStyleManager(this.components);
             this.uiGroupBox1.SuspendLayout();
             this.uiGroupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -268,6 +270,10 @@
             this.btInit.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btInit.Click += new System.EventHandler(this.btInit_Click);
             // 
+            // uiStyleManager1
+            // 
+            this.uiStyleManager1.DPIScale = true;
+            // 
             // frmInitUserAccount
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -305,5 +311,6 @@
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UILabel uiLabel6;
         private Sunny.UI.UIButton btInit;
+        private Sunny.UI.UIStyleManager uiStyleManager1;
     }
 }

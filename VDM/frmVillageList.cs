@@ -27,6 +27,45 @@ namespace com.vdm.form
             InitControlData();
 
             InitListView(null, this.pageIndex, this.pageSize);
+
+            InitFuncPowerControl();
+        }
+
+        /// <summary>
+        ///  初始化权限控制
+        /// </summary>
+        private void InitFuncPowerControl()
+        {
+            if (LoginInfo.FuncPowerList.Contains("70000") == false)
+            {
+                this.gbSearch.Visible = false;
+                this.gbResult.Visible = false;
+            }
+
+            if (LoginInfo.FuncPowerList.Contains("70001") == false)
+            {
+                this.btAdd.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("70002") == false)
+            {
+                this.btEdit.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("70003") == false)
+            {
+                this.btDelete.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("70004") == false)
+            {
+                this.gbSearch.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("70005") == false)
+            {
+                this.btImport.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("70006") == false)
+            {
+                this.btExport.Visible = false;
+            }
         }
 
         private OrgBLL orgBLL = null;

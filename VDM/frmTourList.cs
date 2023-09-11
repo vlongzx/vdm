@@ -33,6 +33,45 @@ namespace com.vdm.form
             InitTourList(null, pageIndex, pageSize);
 
             InitControls();
+
+            InitFuncPowerControl();
+        }
+
+        /// <summary>
+        ///  初始化权限控制
+        /// </summary>
+        private void InitFuncPowerControl()
+        {
+            if (LoginInfo.FuncPowerList.Contains("90000") == false)
+            {
+                this.gbSearch.Visible = false;
+                this.gbResult.Visible = false;
+            }
+
+            if (LoginInfo.FuncPowerList.Contains("90001") == false)
+            {
+                this.btAdd.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("90002") == false)
+            {
+                this.btEdit.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("90003") == false)
+            {
+                this.btDelete.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("90004") == false)
+            {
+                this.gbSearch.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("90005") == false)
+            {
+                this.btImport.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("90006") == false)
+            {
+                this.btExport.Visible = false;
+            }
         }
 
         /// <summary>

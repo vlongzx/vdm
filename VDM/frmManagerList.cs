@@ -54,8 +54,46 @@ namespace com.vdm.form
             InitControlData();
 
             InitListView(null, this.pageIndex, this.pageSize);
-
+            InitFuncPowerControl();
         }
+
+        /// <summary>
+        ///  初始化权限控制
+        /// </summary>
+        private void InitFuncPowerControl()
+        {
+            if (LoginInfo.FuncPowerList.Contains("60000") == false)
+            {
+                this.gbSearch.Visible = false;
+                this.gbResult.Visible = false;
+            }
+
+            if (LoginInfo.FuncPowerList.Contains("60001") == false)
+            {
+                this.btAdd.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("60002") == false)
+            {
+                this.btEdit.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("60003") == false)
+            {
+                this.btDelete.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("60004") == false)
+            {
+                this.gbSearch.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("60005") == false)
+            {
+                this.btImport.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("60006") == false)
+            {
+                this.btExport.Visible = false;
+            }
+        }
+
         public void ConditionAdd(string key, string value)
         {
             this.conditionAdvance.Add(key, value);

@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pagination = new Sunny.UI.UIPagination();
             this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiComboBox3 = new Sunny.UI.UIComboBox();
@@ -45,9 +45,7 @@
             this.btAdd = new Sunny.UI.UIButton();
             this.btExport = new Sunny.UI.UIButton();
             this.btImport = new Sunny.UI.UIButton();
-            this.groupBox2 = new Sunny.UI.UIGroupBox();
-            this.dgPeopleList = new Sunny.UI.UIDataGridView();
-            this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.gbSearch = new Sunny.UI.UIGroupBox();
             this.btAdanceSearch = new Sunny.UI.UIButton();
             this.cbMarital_status = new Sunny.UI.UIComboBox();
             this.uiLabel24 = new Sunny.UI.UILabel();
@@ -83,9 +81,11 @@
             this.label8 = new Sunny.UI.UILabel();
             this.btReset = new Sunny.UI.UIButton();
             this.btSearch = new Sunny.UI.UIButton();
-            this.groupBox2.SuspendLayout();
+            this.dgPeopleList = new Sunny.UI.UIDataGridView();
+            this.gbResult = new Sunny.UI.UIGroupBox();
+            this.gbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPeopleList)).BeginInit();
-            this.uiGroupBox1.SuspendLayout();
+            this.gbResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // pagination
@@ -274,129 +274,56 @@
             this.btImport.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btImport.Click += new System.EventHandler(this.btImport_Click);
             // 
-            // groupBox2
+            // gbSearch
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.dgPeopleList);
-            this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(24, 375);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(2063, 647);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "数据列表";
-            this.groupBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dgPeopleList
-            // 
-            this.dgPeopleList.AllowUserToAddRows = false;
-            this.dgPeopleList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgPeopleList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgPeopleList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgPeopleList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPeopleList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgPeopleList.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgPeopleList.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgPeopleList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgPeopleList.EnableHeadersVisualStyles = false;
-            this.dgPeopleList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dgPeopleList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
-            this.dgPeopleList.Location = new System.Drawing.Point(4, 32);
-            this.dgPeopleList.Name = "dgPeopleList";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPeopleList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgPeopleList.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgPeopleList.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgPeopleList.RowTemplate.Height = 23;
-            this.dgPeopleList.ScrollBarHandleWidth = 40;
-            this.dgPeopleList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.dgPeopleList.SelectedIndex = -1;
-            this.dgPeopleList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgPeopleList.Size = new System.Drawing.Size(2055, 611);
-            this.dgPeopleList.TabIndex = 7;
-            this.dgPeopleList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPeopleList_CellContentClick);
-            // 
-            // uiGroupBox1
-            // 
-            this.uiGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiGroupBox1.Controls.Add(this.btAdanceSearch);
-            this.uiGroupBox1.Controls.Add(this.cbMarital_status);
-            this.uiGroupBox1.Controls.Add(this.uiLabel24);
-            this.uiGroupBox1.Controls.Add(this.uiLabel23);
-            this.uiGroupBox1.Controls.Add(this.tbSkill_type);
-            this.uiGroupBox1.Controls.Add(this.uiLabel25);
-            this.uiGroupBox1.Controls.Add(this.uiLabel26);
-            this.uiGroupBox1.Controls.Add(this.cbTown);
-            this.uiGroupBox1.Controls.Add(this.cbVillage);
-            this.uiGroupBox1.Controls.Add(this.uiLabel3);
-            this.uiGroupBox1.Controls.Add(this.uiLabel1);
-            this.uiGroupBox1.Controls.Add(this.uiLabel2);
-            this.uiGroupBox1.Controls.Add(this.dpBirthday_To);
-            this.uiGroupBox1.Controls.Add(this.dpJoin_party_time_to);
-            this.uiGroupBox1.Controls.Add(this.dpBirthday_From);
-            this.uiGroupBox1.Controls.Add(this.dpJoin_party_time_from);
-            this.uiGroupBox1.Controls.Add(this.cbPolitcal_outlook);
-            this.uiGroupBox1.Controls.Add(this.cbEducation);
-            this.uiGroupBox1.Controls.Add(this.cbSex);
-            this.uiGroupBox1.Controls.Add(this.cbNation);
-            this.uiGroupBox1.Controls.Add(this.cbRelationship);
-            this.uiGroupBox1.Controls.Add(this.tbPhone_number);
-            this.uiGroupBox1.Controls.Add(this.tbIdcard);
-            this.uiGroupBox1.Controls.Add(this.tbPeople_name);
-            this.uiGroupBox1.Controls.Add(this.label9);
-            this.uiGroupBox1.Controls.Add(this.label3);
-            this.uiGroupBox1.Controls.Add(this.label2);
-            this.uiGroupBox1.Controls.Add(this.label15);
-            this.uiGroupBox1.Controls.Add(this.label10);
-            this.uiGroupBox1.Controls.Add(this.uiLabel4);
-            this.uiGroupBox1.Controls.Add(this.label13);
-            this.uiGroupBox1.Controls.Add(this.label12);
-            this.uiGroupBox1.Controls.Add(this.label8);
-            this.uiGroupBox1.Controls.Add(this.btReset);
-            this.uiGroupBox1.Controls.Add(this.btSearch);
-            this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiGroupBox1.Location = new System.Drawing.Point(19, 29);
-            this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiGroupBox1.Name = "uiGroupBox1";
-            this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(2063, 252);
-            this.uiGroupBox1.TabIndex = 10;
-            this.uiGroupBox1.Text = "查询条件";
-            this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiGroupBox1.Click += new System.EventHandler(this.uiGroupBox1_Click);
+            this.gbSearch.Controls.Add(this.btAdanceSearch);
+            this.gbSearch.Controls.Add(this.cbMarital_status);
+            this.gbSearch.Controls.Add(this.uiLabel24);
+            this.gbSearch.Controls.Add(this.uiLabel23);
+            this.gbSearch.Controls.Add(this.tbSkill_type);
+            this.gbSearch.Controls.Add(this.uiLabel25);
+            this.gbSearch.Controls.Add(this.uiLabel26);
+            this.gbSearch.Controls.Add(this.cbTown);
+            this.gbSearch.Controls.Add(this.cbVillage);
+            this.gbSearch.Controls.Add(this.uiLabel3);
+            this.gbSearch.Controls.Add(this.uiLabel1);
+            this.gbSearch.Controls.Add(this.uiLabel2);
+            this.gbSearch.Controls.Add(this.dpBirthday_To);
+            this.gbSearch.Controls.Add(this.dpJoin_party_time_to);
+            this.gbSearch.Controls.Add(this.dpBirthday_From);
+            this.gbSearch.Controls.Add(this.dpJoin_party_time_from);
+            this.gbSearch.Controls.Add(this.cbPolitcal_outlook);
+            this.gbSearch.Controls.Add(this.cbEducation);
+            this.gbSearch.Controls.Add(this.cbSex);
+            this.gbSearch.Controls.Add(this.cbNation);
+            this.gbSearch.Controls.Add(this.cbRelationship);
+            this.gbSearch.Controls.Add(this.tbPhone_number);
+            this.gbSearch.Controls.Add(this.tbIdcard);
+            this.gbSearch.Controls.Add(this.tbPeople_name);
+            this.gbSearch.Controls.Add(this.label9);
+            this.gbSearch.Controls.Add(this.label3);
+            this.gbSearch.Controls.Add(this.label2);
+            this.gbSearch.Controls.Add(this.label15);
+            this.gbSearch.Controls.Add(this.label10);
+            this.gbSearch.Controls.Add(this.uiLabel4);
+            this.gbSearch.Controls.Add(this.label13);
+            this.gbSearch.Controls.Add(this.label12);
+            this.gbSearch.Controls.Add(this.label8);
+            this.gbSearch.Controls.Add(this.btReset);
+            this.gbSearch.Controls.Add(this.btSearch);
+            this.gbSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbSearch.Location = new System.Drawing.Point(19, 29);
+            this.gbSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbSearch.Name = "gbSearch";
+            this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.gbSearch.Size = new System.Drawing.Size(2063, 252);
+            this.gbSearch.TabIndex = 10;
+            this.gbSearch.Text = "查询条件";
+            this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gbSearch.Click += new System.EventHandler(this.uiGroupBox1_Click);
             // 
             // btAdanceSearch
             // 
@@ -432,7 +359,7 @@
             this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel24.Location = new System.Drawing.Point(1178, 134);
             this.uiLabel24.Name = "uiLabel24";
-            this.uiLabel24.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel24.Size = new System.Drawing.Size(110, 31);
             this.uiLabel24.TabIndex = 165;
             this.uiLabel24.Text = "最高学历";
             this.uiLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -444,7 +371,7 @@
             this.uiLabel23.Location = new System.Drawing.Point(1178, 42);
             this.uiLabel23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel23.Name = "uiLabel23";
-            this.uiLabel23.Size = new System.Drawing.Size(82, 41);
+            this.uiLabel23.Size = new System.Drawing.Size(62, 31);
             this.uiLabel23.TabIndex = 163;
             this.uiLabel23.Text = "性别";
             this.uiLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -471,7 +398,7 @@
             this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel25.Location = new System.Drawing.Point(1178, 180);
             this.uiLabel25.Name = "uiLabel25";
-            this.uiLabel25.Size = new System.Drawing.Size(114, 41);
+            this.uiLabel25.Size = new System.Drawing.Size(86, 31);
             this.uiLabel25.TabIndex = 154;
             this.uiLabel25.Text = "所在村";
             this.uiLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -482,7 +409,7 @@
             this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel26.Location = new System.Drawing.Point(779, 180);
             this.uiLabel26.Name = "uiLabel26";
-            this.uiLabel26.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel26.Size = new System.Drawing.Size(110, 31);
             this.uiLabel26.TabIndex = 155;
             this.uiLabel26.Text = "所在乡镇";
             this.uiLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -524,7 +451,7 @@
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel3.Location = new System.Drawing.Point(400, 88);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(72, 41);
+            this.uiLabel3.Size = new System.Drawing.Size(54, 31);
             this.uiLabel3.TabIndex = 147;
             this.uiLabel3.Text = "(到)";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -535,7 +462,7 @@
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(36, 88);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(200, 41);
+            this.uiLabel1.Size = new System.Drawing.Size(150, 31);
             this.uiLabel1.TabIndex = 146;
             this.uiLabel1.Text = "出生日期(从)";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -546,7 +473,7 @@
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(36, 42);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(82, 41);
+            this.uiLabel2.Size = new System.Drawing.Size(62, 31);
             this.uiLabel2.TabIndex = 145;
             this.uiLabel2.Text = "姓名";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -758,7 +685,7 @@
             this.label9.Location = new System.Drawing.Point(779, 88);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(146, 41);
+            this.label9.Size = new System.Drawing.Size(110, 31);
             this.label9.TabIndex = 116;
             this.label9.Text = "政治面貌";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -770,7 +697,7 @@
             this.label3.Location = new System.Drawing.Point(779, 42);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 41);
+            this.label3.Size = new System.Drawing.Size(62, 31);
             this.label3.TabIndex = 115;
             this.label3.Text = "民族";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -782,7 +709,7 @@
             this.label2.Location = new System.Drawing.Point(400, 42);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 41);
+            this.label2.Size = new System.Drawing.Size(134, 31);
             this.label2.TabIndex = 114;
             this.label2.Text = "与户主关系";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -794,7 +721,7 @@
             this.label15.Location = new System.Drawing.Point(1178, 88);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(146, 41);
+            this.label15.Size = new System.Drawing.Size(110, 31);
             this.label15.TabIndex = 113;
             this.label15.Text = "婚姻状况";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -806,7 +733,7 @@
             this.label10.Location = new System.Drawing.Point(36, 134);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(200, 41);
+            this.label10.Size = new System.Drawing.Size(150, 31);
             this.label10.TabIndex = 111;
             this.label10.Text = "入党时间(从)";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -818,7 +745,7 @@
             this.uiLabel4.Location = new System.Drawing.Point(779, 134);
             this.uiLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel4.Size = new System.Drawing.Size(110, 31);
             this.uiLabel4.TabIndex = 108;
             this.uiLabel4.Text = "技能类型";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -830,7 +757,7 @@
             this.label13.Location = new System.Drawing.Point(400, 180);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(146, 41);
+            this.label13.Size = new System.Drawing.Size(110, 31);
             this.label13.TabIndex = 104;
             this.label13.Text = "联系电话";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -842,7 +769,7 @@
             this.label12.Location = new System.Drawing.Point(36, 180);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 41);
+            this.label12.Size = new System.Drawing.Size(110, 31);
             this.label12.TabIndex = 102;
             this.label12.Text = "身份证号";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -854,7 +781,7 @@
             this.label8.Location = new System.Drawing.Point(400, 134);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 41);
+            this.label8.Size = new System.Drawing.Size(54, 31);
             this.label8.TabIndex = 101;
             this.label8.Text = "(到)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -885,14 +812,87 @@
             this.btSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
+            // dgPeopleList
+            // 
+            this.dgPeopleList.AllowUserToAddRows = false;
+            this.dgPeopleList.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgPeopleList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgPeopleList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgPeopleList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPeopleList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgPeopleList.ColumnHeadersHeight = 32;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgPeopleList.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgPeopleList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgPeopleList.EnableHeadersVisualStyles = false;
+            this.dgPeopleList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dgPeopleList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
+            this.dgPeopleList.Location = new System.Drawing.Point(4, 32);
+            this.dgPeopleList.Name = "dgPeopleList";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPeopleList.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgPeopleList.RowHeadersVisible = false;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgPeopleList.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgPeopleList.RowTemplate.Height = 23;
+            this.dgPeopleList.ScrollBarHandleWidth = 40;
+            this.dgPeopleList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.dgPeopleList.SelectedIndex = -1;
+            this.dgPeopleList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgPeopleList.Size = new System.Drawing.Size(2055, 611);
+            this.dgPeopleList.TabIndex = 7;
+            this.dgPeopleList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPeopleList_CellContentClick);
+            // 
+            // gbResult
+            // 
+            this.gbResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbResult.Controls.Add(this.dgPeopleList);
+            this.gbResult.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbResult.Location = new System.Drawing.Point(24, 375);
+            this.gbResult.Margin = new System.Windows.Forms.Padding(4);
+            this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbResult.Name = "gbResult";
+            this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
+            this.gbResult.Size = new System.Drawing.Size(2063, 647);
+            this.gbResult.TabIndex = 5;
+            this.gbResult.TabStop = false;
+            this.gbResult.Text = "数据列表";
+            this.gbResult.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmPeopleList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(2100, 1080);
             this.Controls.Add(this.btImport);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbResult);
             this.Controls.Add(this.btExport);
-            this.Controls.Add(this.uiGroupBox1);
+            this.Controls.Add(this.gbSearch);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btDelete);
@@ -902,10 +902,10 @@
             this.Text = "人员信息管理";
             this.Initialize += new System.EventHandler(this.frmPeopleList_Initialize);
             this.Load += new System.EventHandler(this.frmPeople_Load);
-            this.groupBox2.ResumeLayout(false);
+            this.gbSearch.ResumeLayout(false);
+            this.gbSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPeopleList)).EndInit();
-            this.uiGroupBox1.ResumeLayout(false);
-            this.uiGroupBox1.PerformLayout();
+            this.gbResult.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -923,9 +923,7 @@
         private Sunny.UI.UIButton btAdd;
         private Sunny.UI.UIButton btExport;
         private Sunny.UI.UIButton btImport;
-        private Sunny.UI.UIGroupBox groupBox2;
-        private Sunny.UI.UIDataGridView dgPeopleList;
-        private Sunny.UI.UIGroupBox uiGroupBox1;
+        private Sunny.UI.UIGroupBox gbSearch;
         private Sunny.UI.UIButton btAdanceSearch;
         private Sunny.UI.UIComboBox cbMarital_status;
         private Sunny.UI.UILabel uiLabel24;
@@ -961,5 +959,7 @@
         private Sunny.UI.UILabel label8;
         private Sunny.UI.UIButton btReset;
         private Sunny.UI.UIButton btSearch;
+        private Sunny.UI.UIDataGridView dgPeopleList;
+        private Sunny.UI.UIGroupBox gbResult;
     }
 }

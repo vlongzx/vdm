@@ -35,8 +35,45 @@ namespace com.vdm.form
         private void frmAnimalList_Load(object sender, EventArgs e)
         {
             InitAnimalList(null,pageIndex,pageSize);
-
+            InitFuncPowerControl();
             InitControls();
+        }
+
+        /// <summary>
+        ///  初始化权限控制
+        /// </summary>
+        private void InitFuncPowerControl()
+        {
+            if (LoginInfo.FuncPowerList.Contains("80000") == false)
+            {
+                this.gbSearch.Visible = false;
+                this.gbResult.Visible = false;
+            }
+
+            if (LoginInfo.FuncPowerList.Contains("80001") == false)
+            {
+                this.btAdd.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("80002") == false)
+            {
+                this.btEdit.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("80003") == false)
+            {
+                this.btDelete.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("80004") == false)
+            {
+                this.gbSearch.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("80005") == false)
+            {
+                this.btImport.Visible = false;
+            }
+            if (LoginInfo.FuncPowerList.Contains("80006") == false)
+            {
+                this.btExport.Visible = false;
+            }
         }
         /// <summary>
         ///  初始化界面控件数据

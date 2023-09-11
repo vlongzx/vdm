@@ -56,12 +56,12 @@
             this.btSearch = new Sunny.UI.UIButton();
             this.dgAnimalList = new Sunny.UI.UIDataGridView();
             this.btImport = new Sunny.UI.UIButton();
-            this.groupBox2 = new Sunny.UI.UIGroupBox();
+            this.gbResult = new Sunny.UI.UIGroupBox();
             this.btExport = new Sunny.UI.UIButton();
             this.btAdd = new Sunny.UI.UIButton();
             this.btEdit = new Sunny.UI.UIButton();
             this.btDelete = new Sunny.UI.UIButton();
-            this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.gbSearch = new Sunny.UI.UIGroupBox();
             this.uiLabel11 = new Sunny.UI.UILabel();
             this.uiLabel16 = new Sunny.UI.UILabel();
             this.uiLabel15 = new Sunny.UI.UILabel();
@@ -99,8 +99,8 @@
             this.uiLabel14 = new Sunny.UI.UILabel();
             this.pagination = new Sunny.UI.UIPagination();
             ((System.ComponentModel.ISupportInitialize)(this.dgAnimalList)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.uiGroupBox1.SuspendLayout();
+            this.gbResult.SuspendLayout();
+            this.gbSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiLabel24
@@ -109,7 +109,7 @@
             this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel24.Location = new System.Drawing.Point(1137, 134);
             this.uiLabel24.Name = "uiLabel24";
-            this.uiLabel24.Size = new System.Drawing.Size(178, 41);
+            this.uiLabel24.Size = new System.Drawing.Size(134, 31);
             this.uiLabel24.TabIndex = 165;
             this.uiLabel24.Text = "堆粪场面积";
             this.uiLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,7 +121,7 @@
             this.uiLabel23.Location = new System.Drawing.Point(36, 88);
             this.uiLabel23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel23.Name = "uiLabel23";
-            this.uiLabel23.Size = new System.Drawing.Size(114, 41);
+            this.uiLabel23.Size = new System.Drawing.Size(86, 31);
             this.uiLabel23.TabIndex = 163;
             this.uiLabel23.Text = "负责人";
             this.uiLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,7 +132,7 @@
             this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel25.Location = new System.Drawing.Point(1137, 180);
             this.uiLabel25.Name = "uiLabel25";
-            this.uiLabel25.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel25.Size = new System.Drawing.Size(110, 31);
             this.uiLabel25.TabIndex = 154;
             this.uiLabel25.Text = "排污登记";
             this.uiLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -143,7 +143,7 @@
             this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel26.Location = new System.Drawing.Point(779, 180);
             this.uiLabel26.Name = "uiLabel26";
-            this.uiLabel26.Size = new System.Drawing.Size(178, 41);
+            this.uiLabel26.Size = new System.Drawing.Size(134, 31);
             this.uiLabel26.TabIndex = 155;
             this.uiLabel26.Text = "防疫合格证";
             this.uiLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -186,7 +186,7 @@
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel3.Location = new System.Drawing.Point(779, 88);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel3.Size = new System.Drawing.Size(110, 31);
             this.uiLabel3.TabIndex = 147;
             this.uiLabel3.Text = "联系电话";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,7 +197,7 @@
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(400, 88);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel1.Size = new System.Drawing.Size(110, 31);
             this.uiLabel1.TabIndex = 146;
             this.uiLabel1.Text = "身份证号";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -208,7 +208,7 @@
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(36, 42);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel2.Size = new System.Drawing.Size(158, 31);
             this.uiLabel2.TabIndex = 145;
             this.uiLabel2.Text = "养殖场（户）";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -252,7 +252,7 @@
             this.label9.Location = new System.Drawing.Point(1137, 41);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(214, 41);
+            this.label9.Size = new System.Drawing.Size(160, 31);
             this.label9.TabIndex = 116;
             this.label9.Text = "年出栏(头/只)";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,7 +264,7 @@
             this.label3.Location = new System.Drawing.Point(1137, 88);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 41);
+            this.label3.Size = new System.Drawing.Size(62, 31);
             this.label3.TabIndex = 115;
             this.label3.Text = "地址";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -276,7 +276,7 @@
             this.label2.Location = new System.Drawing.Point(400, 42);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 41);
+            this.label2.Size = new System.Drawing.Size(110, 31);
             this.label2.TabIndex = 114;
             this.label2.Text = "养殖种类";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -288,7 +288,7 @@
             this.label10.Location = new System.Drawing.Point(36, 134);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(168, 41);
+            this.label10.Size = new System.Drawing.Size(126, 31);
             this.label10.TabIndex = 111;
             this.label10.Text = "产值(万元)";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -300,7 +300,7 @@
             this.uiLabel4.Location = new System.Drawing.Point(779, 134);
             this.uiLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(200, 41);
+            this.uiLabel4.Size = new System.Drawing.Size(150, 31);
             this.uiLabel4.TabIndex = 108;
             this.uiLabel4.Text = "圈舍面积(亩)";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -312,7 +312,7 @@
             this.label13.Location = new System.Drawing.Point(400, 180);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(214, 41);
+            this.label13.Size = new System.Drawing.Size(160, 31);
             this.label13.TabIndex = 104;
             this.label13.Text = "现存栏(头/只)";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -324,7 +324,7 @@
             this.label12.Location = new System.Drawing.Point(36, 180);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(178, 41);
+            this.label12.Size = new System.Drawing.Size(134, 31);
             this.label12.TabIndex = 102;
             this.label12.Text = "集污池面积";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -336,7 +336,7 @@
             this.label8.Location = new System.Drawing.Point(400, 134);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(200, 41);
+            this.label8.Size = new System.Drawing.Size(150, 31);
             this.label8.TabIndex = 101;
             this.label8.Text = "占地面积(亩)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -434,23 +434,23 @@
             this.btImport.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btImport.Click += new System.EventHandler(this.btImport_Click);
             // 
-            // groupBox2
+            // gbResult
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gbResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.dgAnimalList);
-            this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(19, 370);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(2063, 647);
-            this.groupBox2.TabIndex = 81;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "数据列表";
-            this.groupBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gbResult.Controls.Add(this.dgAnimalList);
+            this.gbResult.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbResult.Location = new System.Drawing.Point(19, 370);
+            this.gbResult.Margin = new System.Windows.Forms.Padding(4);
+            this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbResult.Name = "gbResult";
+            this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
+            this.gbResult.Size = new System.Drawing.Size(2063, 647);
+            this.gbResult.TabIndex = 81;
+            this.gbResult.TabStop = false;
+            this.gbResult.Text = "数据列表";
+            this.gbResult.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btExport
             // 
@@ -504,76 +504,76 @@
             this.btDelete.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
-            // uiGroupBox1
+            // gbSearch
             // 
-            this.uiGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiGroupBox1.Controls.Add(this.uiLabel11);
-            this.uiGroupBox1.Controls.Add(this.uiLabel16);
-            this.uiGroupBox1.Controls.Add(this.uiLabel15);
-            this.uiGroupBox1.Controls.Add(this.uiLabel10);
-            this.uiGroupBox1.Controls.Add(this.uiLabel13);
-            this.uiGroupBox1.Controls.Add(this.uiLabel9);
-            this.uiGroupBox1.Controls.Add(this.uiLabel12);
-            this.uiGroupBox1.Controls.Add(this.uiLabel5);
-            this.uiGroupBox1.Controls.Add(this.tbMidden_area_To);
-            this.uiGroupBox1.Controls.Add(this.tbYear_outbound_to);
-            this.uiGroupBox1.Controls.Add(this.tbYear_inventory_to);
-            this.uiGroupBox1.Controls.Add(this.tbPen_area_To);
-            this.uiGroupBox1.Controls.Add(this.tbCueernt_inventory_To);
-            this.uiGroupBox1.Controls.Add(this.tbTotal_area_To);
-            this.uiGroupBox1.Controls.Add(this.tbPullttion_area_To);
-            this.uiGroupBox1.Controls.Add(this.tbOutput_To);
-            this.uiGroupBox1.Controls.Add(this.tbMidden_area_From);
-            this.uiGroupBox1.Controls.Add(this.tbPen_area_From);
-            this.uiGroupBox1.Controls.Add(this.tbCueernt_inventory_From);
-            this.uiGroupBox1.Controls.Add(this.tbTotal_area_From);
-            this.uiGroupBox1.Controls.Add(this.tbPullttion_area_From);
-            this.uiGroupBox1.Controls.Add(this.tbOutput_From);
-            this.uiGroupBox1.Controls.Add(this.uiLabel6);
-            this.uiGroupBox1.Controls.Add(this.cbReport_or_filings);
-            this.uiGroupBox1.Controls.Add(this.cbTown);
-            this.uiGroupBox1.Controls.Add(this.cbVillage);
-            this.uiGroupBox1.Controls.Add(this.uiLabel7);
-            this.uiGroupBox1.Controls.Add(this.uiLabel8);
-            this.uiGroupBox1.Controls.Add(this.uiLabel24);
-            this.uiGroupBox1.Controls.Add(this.uiLabel23);
-            this.uiGroupBox1.Controls.Add(this.uiLabel25);
-            this.uiGroupBox1.Controls.Add(this.uiLabel26);
-            this.uiGroupBox1.Controls.Add(this.cbAnimal_qualify);
-            this.uiGroupBox1.Controls.Add(this.cbSolid_pollution);
-            this.uiGroupBox1.Controls.Add(this.uiLabel3);
-            this.uiGroupBox1.Controls.Add(this.uiLabel1);
-            this.uiGroupBox1.Controls.Add(this.uiLabel2);
-            this.uiGroupBox1.Controls.Add(this.cbBreed_type);
-            this.uiGroupBox1.Controls.Add(this.tbManager);
-            this.uiGroupBox1.Controls.Add(this.tbAddress);
-            this.uiGroupBox1.Controls.Add(this.tbYear_outbound_from);
-            this.uiGroupBox1.Controls.Add(this.tbYear_inventory_from);
-            this.uiGroupBox1.Controls.Add(this.tbPhone_number);
-            this.uiGroupBox1.Controls.Add(this.tbIdcard);
-            this.uiGroupBox1.Controls.Add(this.tbBreed_name);
-            this.uiGroupBox1.Controls.Add(this.uiLabel14);
-            this.uiGroupBox1.Controls.Add(this.label9);
-            this.uiGroupBox1.Controls.Add(this.label3);
-            this.uiGroupBox1.Controls.Add(this.label2);
-            this.uiGroupBox1.Controls.Add(this.label10);
-            this.uiGroupBox1.Controls.Add(this.uiLabel4);
-            this.uiGroupBox1.Controls.Add(this.label13);
-            this.uiGroupBox1.Controls.Add(this.label12);
-            this.uiGroupBox1.Controls.Add(this.label8);
-            this.uiGroupBox1.Controls.Add(this.btReset);
-            this.uiGroupBox1.Controls.Add(this.btSearch);
-            this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiGroupBox1.Location = new System.Drawing.Point(14, 24);
-            this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiGroupBox1.Name = "uiGroupBox1";
-            this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(2063, 269);
-            this.uiGroupBox1.TabIndex = 88;
-            this.uiGroupBox1.Text = "查询条件";
-            this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gbSearch.Controls.Add(this.uiLabel11);
+            this.gbSearch.Controls.Add(this.uiLabel16);
+            this.gbSearch.Controls.Add(this.uiLabel15);
+            this.gbSearch.Controls.Add(this.uiLabel10);
+            this.gbSearch.Controls.Add(this.uiLabel13);
+            this.gbSearch.Controls.Add(this.uiLabel9);
+            this.gbSearch.Controls.Add(this.uiLabel12);
+            this.gbSearch.Controls.Add(this.uiLabel5);
+            this.gbSearch.Controls.Add(this.tbMidden_area_To);
+            this.gbSearch.Controls.Add(this.tbYear_outbound_to);
+            this.gbSearch.Controls.Add(this.tbYear_inventory_to);
+            this.gbSearch.Controls.Add(this.tbPen_area_To);
+            this.gbSearch.Controls.Add(this.tbCueernt_inventory_To);
+            this.gbSearch.Controls.Add(this.tbTotal_area_To);
+            this.gbSearch.Controls.Add(this.tbPullttion_area_To);
+            this.gbSearch.Controls.Add(this.tbOutput_To);
+            this.gbSearch.Controls.Add(this.tbMidden_area_From);
+            this.gbSearch.Controls.Add(this.tbPen_area_From);
+            this.gbSearch.Controls.Add(this.tbCueernt_inventory_From);
+            this.gbSearch.Controls.Add(this.tbTotal_area_From);
+            this.gbSearch.Controls.Add(this.tbPullttion_area_From);
+            this.gbSearch.Controls.Add(this.tbOutput_From);
+            this.gbSearch.Controls.Add(this.uiLabel6);
+            this.gbSearch.Controls.Add(this.cbReport_or_filings);
+            this.gbSearch.Controls.Add(this.cbTown);
+            this.gbSearch.Controls.Add(this.cbVillage);
+            this.gbSearch.Controls.Add(this.uiLabel7);
+            this.gbSearch.Controls.Add(this.uiLabel8);
+            this.gbSearch.Controls.Add(this.uiLabel24);
+            this.gbSearch.Controls.Add(this.uiLabel23);
+            this.gbSearch.Controls.Add(this.uiLabel25);
+            this.gbSearch.Controls.Add(this.uiLabel26);
+            this.gbSearch.Controls.Add(this.cbAnimal_qualify);
+            this.gbSearch.Controls.Add(this.cbSolid_pollution);
+            this.gbSearch.Controls.Add(this.uiLabel3);
+            this.gbSearch.Controls.Add(this.uiLabel1);
+            this.gbSearch.Controls.Add(this.uiLabel2);
+            this.gbSearch.Controls.Add(this.cbBreed_type);
+            this.gbSearch.Controls.Add(this.tbManager);
+            this.gbSearch.Controls.Add(this.tbAddress);
+            this.gbSearch.Controls.Add(this.tbYear_outbound_from);
+            this.gbSearch.Controls.Add(this.tbYear_inventory_from);
+            this.gbSearch.Controls.Add(this.tbPhone_number);
+            this.gbSearch.Controls.Add(this.tbIdcard);
+            this.gbSearch.Controls.Add(this.tbBreed_name);
+            this.gbSearch.Controls.Add(this.uiLabel14);
+            this.gbSearch.Controls.Add(this.label9);
+            this.gbSearch.Controls.Add(this.label3);
+            this.gbSearch.Controls.Add(this.label2);
+            this.gbSearch.Controls.Add(this.label10);
+            this.gbSearch.Controls.Add(this.uiLabel4);
+            this.gbSearch.Controls.Add(this.label13);
+            this.gbSearch.Controls.Add(this.label12);
+            this.gbSearch.Controls.Add(this.label8);
+            this.gbSearch.Controls.Add(this.btReset);
+            this.gbSearch.Controls.Add(this.btSearch);
+            this.gbSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbSearch.Location = new System.Drawing.Point(14, 24);
+            this.gbSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbSearch.Name = "gbSearch";
+            this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.gbSearch.Size = new System.Drawing.Size(2063, 269);
+            this.gbSearch.TabIndex = 88;
+            this.gbSearch.Text = "查询条件";
+            this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // uiLabel11
             // 
@@ -581,7 +581,7 @@
             this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel11.Location = new System.Drawing.Point(1350, 133);
             this.uiLabel11.Name = "uiLabel11";
-            this.uiLabel11.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel11.Size = new System.Drawing.Size(24, 31);
             this.uiLabel11.TabIndex = 174;
             this.uiLabel11.Text = "-";
             this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -592,7 +592,7 @@
             this.uiLabel16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel16.Location = new System.Drawing.Point(1350, 40);
             this.uiLabel16.Name = "uiLabel16";
-            this.uiLabel16.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel16.Size = new System.Drawing.Size(24, 31);
             this.uiLabel16.TabIndex = 174;
             this.uiLabel16.Text = "-";
             this.uiLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -603,7 +603,7 @@
             this.uiLabel15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel15.Location = new System.Drawing.Point(1001, 41);
             this.uiLabel15.Name = "uiLabel15";
-            this.uiLabel15.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel15.Size = new System.Drawing.Size(24, 31);
             this.uiLabel15.TabIndex = 174;
             this.uiLabel15.Text = "-";
             this.uiLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -614,7 +614,7 @@
             this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel10.Location = new System.Drawing.Point(1001, 133);
             this.uiLabel10.Name = "uiLabel10";
-            this.uiLabel10.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel10.Size = new System.Drawing.Size(24, 31);
             this.uiLabel10.TabIndex = 174;
             this.uiLabel10.Text = "-";
             this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -625,7 +625,7 @@
             this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel13.Location = new System.Drawing.Point(647, 178);
             this.uiLabel13.Name = "uiLabel13";
-            this.uiLabel13.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel13.Size = new System.Drawing.Size(24, 31);
             this.uiLabel13.TabIndex = 174;
             this.uiLabel13.Text = "-";
             this.uiLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -636,7 +636,7 @@
             this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel9.Location = new System.Drawing.Point(647, 133);
             this.uiLabel9.Name = "uiLabel9";
-            this.uiLabel9.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel9.Size = new System.Drawing.Size(24, 31);
             this.uiLabel9.TabIndex = 174;
             this.uiLabel9.Text = "-";
             this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -647,7 +647,7 @@
             this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel12.Location = new System.Drawing.Point(266, 178);
             this.uiLabel12.Name = "uiLabel12";
-            this.uiLabel12.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel12.Size = new System.Drawing.Size(24, 31);
             this.uiLabel12.TabIndex = 174;
             this.uiLabel12.Text = "-";
             this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -658,7 +658,7 @@
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel5.Location = new System.Drawing.Point(266, 133);
             this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel5.Size = new System.Drawing.Size(24, 31);
             this.uiLabel5.TabIndex = 174;
             this.uiLabel5.Text = "-";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -893,7 +893,7 @@
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel6.Location = new System.Drawing.Point(779, 225);
             this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(114, 41);
+            this.uiLabel6.Size = new System.Drawing.Size(86, 31);
             this.uiLabel6.TabIndex = 173;
             this.uiLabel6.Text = "所属村";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -954,7 +954,7 @@
             this.uiLabel7.Location = new System.Drawing.Point(400, 225);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(114, 41);
+            this.uiLabel7.Size = new System.Drawing.Size(86, 31);
             this.uiLabel7.TabIndex = 167;
             this.uiLabel7.Text = "所属镇";
             this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -966,7 +966,7 @@
             this.uiLabel8.Location = new System.Drawing.Point(36, 225);
             this.uiLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel8.Name = "uiLabel8";
-            this.uiLabel8.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel8.Size = new System.Drawing.Size(110, 31);
             this.uiLabel8.TabIndex = 166;
             this.uiLabel8.Text = "环评报告";
             this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1074,7 +1074,7 @@
             this.uiLabel14.Location = new System.Drawing.Point(779, 41);
             this.uiLabel14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel14.Name = "uiLabel14";
-            this.uiLabel14.Size = new System.Drawing.Size(214, 41);
+            this.uiLabel14.Size = new System.Drawing.Size(160, 31);
             this.uiLabel14.TabIndex = 116;
             this.uiLabel14.Text = "年存栏(头/只)";
             this.uiLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1105,20 +1105,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(2100, 1080);
             this.Controls.Add(this.btImport);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbResult);
             this.Controls.Add(this.btExport);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btDelete);
-            this.Controls.Add(this.uiGroupBox1);
+            this.Controls.Add(this.gbSearch);
             this.Controls.Add(this.pagination);
             this.Name = "frmAnimalList";
             this.Text = "frmAnimalList";
             this.Load += new System.EventHandler(this.frmAnimalList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgAnimalList)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.uiGroupBox1.ResumeLayout(false);
-            this.uiGroupBox1.PerformLayout();
+            this.gbResult.ResumeLayout(false);
+            this.gbSearch.ResumeLayout(false);
+            this.gbSearch.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1147,12 +1147,12 @@
         private Sunny.UI.UIButton btSearch;
         private Sunny.UI.UIDataGridView dgAnimalList;
         private Sunny.UI.UIButton btImport;
-        private Sunny.UI.UIGroupBox groupBox2;
+        private Sunny.UI.UIGroupBox gbResult;
         private Sunny.UI.UIButton btExport;
         private Sunny.UI.UIButton btAdd;
         private Sunny.UI.UIButton btEdit;
         private Sunny.UI.UIButton btDelete;
-        private Sunny.UI.UIGroupBox uiGroupBox1;
+        private Sunny.UI.UIGroupBox gbSearch;
         private Sunny.UI.UIPagination pagination;
         private Sunny.UI.UILabel uiLabel6;
         private Sunny.UI.UIComboBox cbTown;

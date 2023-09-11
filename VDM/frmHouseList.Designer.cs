@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btDelete = new Sunny.UI.UIButton();
             this.dpOh_checktime_To = new Sunny.UI.UIDatePicker();
             this.dpOh_checktime_From = new Sunny.UI.UIDatePicker();
@@ -41,46 +41,46 @@
             this.uiLabel13 = new Sunny.UI.UILabel();
             this.uiLabel17 = new Sunny.UI.UILabel();
             this.pagination = new Sunny.UI.UIPagination();
-            this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.gbSearch = new Sunny.UI.UIGroupBox();
+            this.cbHouse_is_rent = new Sunny.UI.UIComboBox();
             this.uiLabel15 = new Sunny.UI.UILabel();
             this.tbArea_To = new Sunny.UI.UITextBox();
             this.tbArea_From = new Sunny.UI.UITextBox();
+            this.cbIs_old_house = new Sunny.UI.UIComboBox();
+            this.cbHouse_safe_grade = new Sunny.UI.UIComboBox();
+            this.cbTown = new Sunny.UI.UIComboBox();
+            this.tbHouse_location = new Sunny.UI.UITextBox();
+            this.tbHouse_owner = new Sunny.UI.UITextBox();
             this.tbIdcard = new Sunny.UI.UITextBox();
-            this.uiLabel24 = new Sunny.UI.UILabel();
             this.uiLabel27 = new Sunny.UI.UILabel();
             this.土地使用说明 = new Sunny.UI.UILabel();
             this.uiLabel32 = new Sunny.UI.UILabel();
-            this.uiLabel10 = new Sunny.UI.UILabel();
             this.uiLabel11 = new Sunny.UI.UILabel();
             this.uiLabel3 = new Sunny.UI.UILabel();
-            this.uiLabel25 = new Sunny.UI.UILabel();
             this.uiLabel26 = new Sunny.UI.UILabel();
-            this.cbTown = new Sunny.UI.UIComboBox();
-            this.cbIs_old_house = new Sunny.UI.UIComboBox();
-            this.cbHouse_safe_grade = new Sunny.UI.UIComboBox();
             this.cbHouse_type = new Sunny.UI.UIComboBox();
-            this.cbHouse_is_rent = new Sunny.UI.UIComboBox();
             this.cbVillage = new Sunny.UI.UIComboBox();
             this.cbIs_my_struct = new Sunny.UI.UIComboBox();
             this.cbHouse_struction = new Sunny.UI.UIComboBox();
             this.uiLabel2 = new Sunny.UI.UILabel();
-            this.tbHouse_location = new Sunny.UI.UITextBox();
-            this.tbHouse_owner = new Sunny.UI.UITextBox();
             this.uiLabel6 = new Sunny.UI.UILabel();
-            this.uiLabel5 = new Sunny.UI.UILabel();
             this.label12 = new Sunny.UI.UILabel();
             this.btReset = new Sunny.UI.UIButton();
             this.btSearch = new Sunny.UI.UIButton();
             this.uiLabel1 = new Sunny.UI.UILabel();
+            this.uiLabel24 = new Sunny.UI.UILabel();
+            this.uiLabel10 = new Sunny.UI.UILabel();
+            this.uiLabel25 = new Sunny.UI.UILabel();
+            this.uiLabel5 = new Sunny.UI.UILabel();
             this.btImport = new Sunny.UI.UIButton();
             this.dgHouseList = new Sunny.UI.UIDataGridView();
             this.btExport = new Sunny.UI.UIButton();
-            this.groupBox2 = new Sunny.UI.UIGroupBox();
+            this.gbResult = new Sunny.UI.UIGroupBox();
             this.btAdd = new Sunny.UI.UIButton();
             this.btEdit = new Sunny.UI.UIButton();
-            this.uiGroupBox1.SuspendLayout();
+            this.gbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgHouseList)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.gbResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // btDelete
@@ -182,7 +182,7 @@
             this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel13.Location = new System.Drawing.Point(1422, 134);
             this.uiLabel13.Name = "uiLabel13";
-            this.uiLabel13.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel13.Size = new System.Drawing.Size(24, 31);
             this.uiLabel13.TabIndex = 252;
             this.uiLabel13.Text = "-";
             this.uiLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -193,7 +193,7 @@
             this.uiLabel17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel17.Location = new System.Drawing.Point(1422, 87);
             this.uiLabel17.Name = "uiLabel17";
-            this.uiLabel17.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel17.Size = new System.Drawing.Size(24, 31);
             this.uiLabel17.TabIndex = 248;
             this.uiLabel17.Text = "-";
             this.uiLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -219,56 +219,71 @@
             this.pagination.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.pagination.TotalCount = 40000;
             // 
-            // uiGroupBox1
+            // gbSearch
             // 
-            this.uiGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiGroupBox1.Controls.Add(this.cbHouse_is_rent);
-            this.uiGroupBox1.Controls.Add(this.uiLabel15);
-            this.uiGroupBox1.Controls.Add(this.tbArea_To);
-            this.uiGroupBox1.Controls.Add(this.tbArea_From);
-            this.uiGroupBox1.Controls.Add(this.cbIs_old_house);
-            this.uiGroupBox1.Controls.Add(this.cbHouse_safe_grade);
-            this.uiGroupBox1.Controls.Add(this.dpHouse_build_date_To);
-            this.uiGroupBox1.Controls.Add(this.dpHouse_build_date_From);
-            this.uiGroupBox1.Controls.Add(this.uiLabel17);
-            this.uiGroupBox1.Controls.Add(this.cbTown);
-            this.uiGroupBox1.Controls.Add(this.tbHouse_location);
-            this.uiGroupBox1.Controls.Add(this.tbHouse_owner);
-            this.uiGroupBox1.Controls.Add(this.dpOh_checktime_To);
-            this.uiGroupBox1.Controls.Add(this.dpOh_checktime_From);
-            this.uiGroupBox1.Controls.Add(this.uiLabel13);
-            this.uiGroupBox1.Controls.Add(this.tbIdcard);
-            this.uiGroupBox1.Controls.Add(this.uiLabel27);
-            this.uiGroupBox1.Controls.Add(this.土地使用说明);
-            this.uiGroupBox1.Controls.Add(this.uiLabel32);
-            this.uiGroupBox1.Controls.Add(this.uiLabel11);
-            this.uiGroupBox1.Controls.Add(this.uiLabel3);
-            this.uiGroupBox1.Controls.Add(this.uiLabel26);
-            this.uiGroupBox1.Controls.Add(this.cbHouse_type);
-            this.uiGroupBox1.Controls.Add(this.cbVillage);
-            this.uiGroupBox1.Controls.Add(this.cbIs_my_struct);
-            this.uiGroupBox1.Controls.Add(this.cbHouse_struction);
-            this.uiGroupBox1.Controls.Add(this.uiLabel2);
-            this.uiGroupBox1.Controls.Add(this.uiLabel6);
-            this.uiGroupBox1.Controls.Add(this.label12);
-            this.uiGroupBox1.Controls.Add(this.btReset);
-            this.uiGroupBox1.Controls.Add(this.btSearch);
-            this.uiGroupBox1.Controls.Add(this.uiLabel1);
-            this.uiGroupBox1.Controls.Add(this.uiLabel24);
-            this.uiGroupBox1.Controls.Add(this.uiLabel10);
-            this.uiGroupBox1.Controls.Add(this.uiLabel25);
-            this.uiGroupBox1.Controls.Add(this.uiLabel5);
-            this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiGroupBox1.Location = new System.Drawing.Point(29, 45);
-            this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiGroupBox1.Name = "uiGroupBox1";
-            this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(1990, 247);
-            this.uiGroupBox1.TabIndex = 112;
-            this.uiGroupBox1.Text = "查询条件";
-            this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gbSearch.Controls.Add(this.cbHouse_is_rent);
+            this.gbSearch.Controls.Add(this.uiLabel15);
+            this.gbSearch.Controls.Add(this.tbArea_To);
+            this.gbSearch.Controls.Add(this.tbArea_From);
+            this.gbSearch.Controls.Add(this.cbIs_old_house);
+            this.gbSearch.Controls.Add(this.cbHouse_safe_grade);
+            this.gbSearch.Controls.Add(this.dpHouse_build_date_To);
+            this.gbSearch.Controls.Add(this.dpHouse_build_date_From);
+            this.gbSearch.Controls.Add(this.uiLabel17);
+            this.gbSearch.Controls.Add(this.cbTown);
+            this.gbSearch.Controls.Add(this.tbHouse_location);
+            this.gbSearch.Controls.Add(this.tbHouse_owner);
+            this.gbSearch.Controls.Add(this.dpOh_checktime_To);
+            this.gbSearch.Controls.Add(this.dpOh_checktime_From);
+            this.gbSearch.Controls.Add(this.uiLabel13);
+            this.gbSearch.Controls.Add(this.tbIdcard);
+            this.gbSearch.Controls.Add(this.uiLabel27);
+            this.gbSearch.Controls.Add(this.土地使用说明);
+            this.gbSearch.Controls.Add(this.uiLabel32);
+            this.gbSearch.Controls.Add(this.uiLabel11);
+            this.gbSearch.Controls.Add(this.uiLabel3);
+            this.gbSearch.Controls.Add(this.uiLabel26);
+            this.gbSearch.Controls.Add(this.cbHouse_type);
+            this.gbSearch.Controls.Add(this.cbVillage);
+            this.gbSearch.Controls.Add(this.cbIs_my_struct);
+            this.gbSearch.Controls.Add(this.cbHouse_struction);
+            this.gbSearch.Controls.Add(this.uiLabel2);
+            this.gbSearch.Controls.Add(this.uiLabel6);
+            this.gbSearch.Controls.Add(this.label12);
+            this.gbSearch.Controls.Add(this.btReset);
+            this.gbSearch.Controls.Add(this.btSearch);
+            this.gbSearch.Controls.Add(this.uiLabel1);
+            this.gbSearch.Controls.Add(this.uiLabel24);
+            this.gbSearch.Controls.Add(this.uiLabel10);
+            this.gbSearch.Controls.Add(this.uiLabel25);
+            this.gbSearch.Controls.Add(this.uiLabel5);
+            this.gbSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbSearch.Location = new System.Drawing.Point(29, 45);
+            this.gbSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbSearch.Name = "gbSearch";
+            this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.gbSearch.Size = new System.Drawing.Size(1990, 247);
+            this.gbSearch.TabIndex = 112;
+            this.gbSearch.Text = "查询条件";
+            this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbHouse_is_rent
+            // 
+            this.cbHouse_is_rent.DataSource = null;
+            this.cbHouse_is_rent.FillColor = System.Drawing.Color.White;
+            this.cbHouse_is_rent.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbHouse_is_rent.Location = new System.Drawing.Point(202, 140);
+            this.cbHouse_is_rent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbHouse_is_rent.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbHouse_is_rent.Name = "cbHouse_is_rent";
+            this.cbHouse_is_rent.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbHouse_is_rent.Size = new System.Drawing.Size(174, 29);
+            this.cbHouse_is_rent.TabIndex = 153;
+            this.cbHouse_is_rent.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbHouse_is_rent.Watermark = "";
             // 
             // uiLabel15
             // 
@@ -276,7 +291,7 @@
             this.uiLabel15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel15.Location = new System.Drawing.Point(982, 45);
             this.uiLabel15.Name = "uiLabel15";
-            this.uiLabel15.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel15.Size = new System.Drawing.Size(24, 31);
             this.uiLabel15.TabIndex = 252;
             this.uiLabel15.Text = "-";
             this.uiLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -313,139 +328,6 @@
             this.tbArea_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbArea_From.Watermark = "";
             // 
-            // tbIdcard
-            // 
-            this.tbIdcard.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbIdcard.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbIdcard.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbIdcard.Location = new System.Drawing.Point(557, 47);
-            this.tbIdcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbIdcard.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbIdcard.Name = "tbIdcard";
-            this.tbIdcard.Padding = new System.Windows.Forms.Padding(5);
-            this.tbIdcard.ShowText = false;
-            this.tbIdcard.Size = new System.Drawing.Size(167, 29);
-            this.tbIdcard.TabIndex = 229;
-            this.tbIdcard.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbIdcard.Watermark = "";
-            // 
-            // uiLabel24
-            // 
-            this.uiLabel24.AutoSize = true;
-            this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel24.Location = new System.Drawing.Point(417, 86);
-            this.uiLabel24.Name = "uiLabel24";
-            this.uiLabel24.Size = new System.Drawing.Size(146, 41);
-            this.uiLabel24.TabIndex = 241;
-            this.uiLabel24.Text = "房屋结构";
-            this.uiLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel27
-            // 
-            this.uiLabel27.AutoSize = true;
-            this.uiLabel27.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel27.Location = new System.Drawing.Point(1122, 40);
-            this.uiLabel27.Name = "uiLabel27";
-            this.uiLabel27.Size = new System.Drawing.Size(146, 41);
-            this.uiLabel27.TabIndex = 235;
-            this.uiLabel27.Text = "房屋类别";
-            this.uiLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // 土地使用说明
-            // 
-            this.土地使用说明.AutoSize = true;
-            this.土地使用说明.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.土地使用说明.Location = new System.Drawing.Point(779, 86);
-            this.土地使用说明.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.土地使用说明.Name = "土地使用说明";
-            this.土地使用说明.Size = new System.Drawing.Size(210, 41);
-            this.土地使用说明.TabIndex = 210;
-            this.土地使用说明.Text = "房屋安全等级";
-            this.土地使用说明.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel32
-            // 
-            this.uiLabel32.AutoSize = true;
-            this.uiLabel32.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel32.Location = new System.Drawing.Point(1122, 135);
-            this.uiLabel32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.uiLabel32.Name = "uiLabel32";
-            this.uiLabel32.Size = new System.Drawing.Size(210, 41);
-            this.uiLabel32.TabIndex = 207;
-            this.uiLabel32.Text = "古宅审批时间";
-            this.uiLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel10
-            // 
-            this.uiLabel10.AutoSize = true;
-            this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel10.Location = new System.Drawing.Point(417, 136);
-            this.uiLabel10.Name = "uiLabel10";
-            this.uiLabel10.Size = new System.Drawing.Size(210, 41);
-            this.uiLabel10.TabIndex = 200;
-            this.uiLabel10.Text = "房屋是否自建";
-            this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel11
-            // 
-            this.uiLabel11.AutoSize = true;
-            this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel11.Location = new System.Drawing.Point(779, 138);
-            this.uiLabel11.Name = "uiLabel11";
-            this.uiLabel11.Size = new System.Drawing.Size(146, 41);
-            this.uiLabel11.TabIndex = 154;
-            this.uiLabel11.Text = "是否古宅";
-            this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel3
-            // 
-            this.uiLabel3.AutoSize = true;
-            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel3.Location = new System.Drawing.Point(33, 131);
-            this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(210, 41);
-            this.uiLabel3.TabIndex = 154;
-            this.uiLabel3.Text = "房屋是否租赁";
-            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel25
-            // 
-            this.uiLabel25.AutoSize = true;
-            this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel25.Location = new System.Drawing.Point(417, 187);
-            this.uiLabel25.Name = "uiLabel25";
-            this.uiLabel25.Size = new System.Drawing.Size(114, 41);
-            this.uiLabel25.TabIndex = 154;
-            this.uiLabel25.Text = "所在村";
-            this.uiLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel26
-            // 
-            this.uiLabel26.AutoSize = true;
-            this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel26.Location = new System.Drawing.Point(33, 179);
-            this.uiLabel26.Name = "uiLabel26";
-            this.uiLabel26.Size = new System.Drawing.Size(146, 41);
-            this.uiLabel26.TabIndex = 155;
-            this.uiLabel26.Text = "所在乡镇";
-            this.uiLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbTown
-            // 
-            this.cbTown.DataSource = null;
-            this.cbTown.FillColor = System.Drawing.Color.White;
-            this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTown.Location = new System.Drawing.Point(202, 191);
-            this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbTown.Name = "cbTown";
-            this.cbTown.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbTown.Size = new System.Drawing.Size(174, 29);
-            this.cbTown.TabIndex = 152;
-            this.cbTown.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbTown.Watermark = "";
-            this.cbTown.SelectedValueChanged += new System.EventHandler(this.cbTown_SelectedValueChanged);
-            // 
             // cbIs_old_house
             // 
             this.cbIs_old_house.DataSource = null;
@@ -476,6 +358,138 @@
             this.cbHouse_safe_grade.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbHouse_safe_grade.Watermark = "";
             // 
+            // cbTown
+            // 
+            this.cbTown.DataSource = null;
+            this.cbTown.FillColor = System.Drawing.Color.White;
+            this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbTown.Location = new System.Drawing.Point(202, 191);
+            this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbTown.Name = "cbTown";
+            this.cbTown.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbTown.Size = new System.Drawing.Size(174, 29);
+            this.cbTown.TabIndex = 152;
+            this.cbTown.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbTown.Watermark = "";
+            this.cbTown.SelectedValueChanged += new System.EventHandler(this.cbTown_SelectedValueChanged);
+            // 
+            // tbHouse_location
+            // 
+            this.tbHouse_location.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbHouse_location.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbHouse_location.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbHouse_location.Location = new System.Drawing.Point(202, 95);
+            this.tbHouse_location.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbHouse_location.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbHouse_location.Name = "tbHouse_location";
+            this.tbHouse_location.Padding = new System.Windows.Forms.Padding(5);
+            this.tbHouse_location.ShowText = false;
+            this.tbHouse_location.Size = new System.Drawing.Size(178, 29);
+            this.tbHouse_location.TabIndex = 131;
+            this.tbHouse_location.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbHouse_location.Watermark = "";
+            // 
+            // tbHouse_owner
+            // 
+            this.tbHouse_owner.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbHouse_owner.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbHouse_owner.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbHouse_owner.Location = new System.Drawing.Point(202, 53);
+            this.tbHouse_owner.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbHouse_owner.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbHouse_owner.Name = "tbHouse_owner";
+            this.tbHouse_owner.Padding = new System.Windows.Forms.Padding(5);
+            this.tbHouse_owner.ShowText = false;
+            this.tbHouse_owner.Size = new System.Drawing.Size(178, 29);
+            this.tbHouse_owner.TabIndex = 130;
+            this.tbHouse_owner.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbHouse_owner.Watermark = "";
+            // 
+            // tbIdcard
+            // 
+            this.tbIdcard.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbIdcard.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbIdcard.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbIdcard.Location = new System.Drawing.Point(557, 47);
+            this.tbIdcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbIdcard.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbIdcard.Name = "tbIdcard";
+            this.tbIdcard.Padding = new System.Windows.Forms.Padding(5);
+            this.tbIdcard.ShowText = false;
+            this.tbIdcard.Size = new System.Drawing.Size(167, 29);
+            this.tbIdcard.TabIndex = 229;
+            this.tbIdcard.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbIdcard.Watermark = "";
+            // 
+            // uiLabel27
+            // 
+            this.uiLabel27.AutoSize = true;
+            this.uiLabel27.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel27.Location = new System.Drawing.Point(1122, 40);
+            this.uiLabel27.Name = "uiLabel27";
+            this.uiLabel27.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel27.TabIndex = 235;
+            this.uiLabel27.Text = "房屋类别";
+            this.uiLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // 土地使用说明
+            // 
+            this.土地使用说明.AutoSize = true;
+            this.土地使用说明.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.土地使用说明.Location = new System.Drawing.Point(779, 86);
+            this.土地使用说明.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.土地使用说明.Name = "土地使用说明";
+            this.土地使用说明.Size = new System.Drawing.Size(158, 31);
+            this.土地使用说明.TabIndex = 210;
+            this.土地使用说明.Text = "房屋安全等级";
+            this.土地使用说明.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel32
+            // 
+            this.uiLabel32.AutoSize = true;
+            this.uiLabel32.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel32.Location = new System.Drawing.Point(1122, 135);
+            this.uiLabel32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.uiLabel32.Name = "uiLabel32";
+            this.uiLabel32.Size = new System.Drawing.Size(158, 31);
+            this.uiLabel32.TabIndex = 207;
+            this.uiLabel32.Text = "古宅审批时间";
+            this.uiLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel11
+            // 
+            this.uiLabel11.AutoSize = true;
+            this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel11.Location = new System.Drawing.Point(779, 138);
+            this.uiLabel11.Name = "uiLabel11";
+            this.uiLabel11.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel11.TabIndex = 154;
+            this.uiLabel11.Text = "是否古宅";
+            this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel3
+            // 
+            this.uiLabel3.AutoSize = true;
+            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel3.Location = new System.Drawing.Point(33, 131);
+            this.uiLabel3.Name = "uiLabel3";
+            this.uiLabel3.Size = new System.Drawing.Size(158, 31);
+            this.uiLabel3.TabIndex = 154;
+            this.uiLabel3.Text = "房屋是否租赁";
+            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel26
+            // 
+            this.uiLabel26.AutoSize = true;
+            this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel26.Location = new System.Drawing.Point(33, 179);
+            this.uiLabel26.Name = "uiLabel26";
+            this.uiLabel26.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel26.TabIndex = 155;
+            this.uiLabel26.Text = "所在乡镇";
+            this.uiLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // cbHouse_type
             // 
             this.cbHouse_type.DataSource = null;
@@ -490,21 +504,6 @@
             this.cbHouse_type.TabIndex = 153;
             this.cbHouse_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbHouse_type.Watermark = "";
-            // 
-            // cbHouse_is_rent
-            // 
-            this.cbHouse_is_rent.DataSource = null;
-            this.cbHouse_is_rent.FillColor = System.Drawing.Color.White;
-            this.cbHouse_is_rent.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbHouse_is_rent.Location = new System.Drawing.Point(202, 140);
-            this.cbHouse_is_rent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbHouse_is_rent.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbHouse_is_rent.Name = "cbHouse_is_rent";
-            this.cbHouse_is_rent.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbHouse_is_rent.Size = new System.Drawing.Size(174, 29);
-            this.cbHouse_is_rent.TabIndex = 153;
-            this.cbHouse_is_rent.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbHouse_is_rent.Watermark = "";
             // 
             // cbVillage
             // 
@@ -557,42 +556,10 @@
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(33, 44);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(178, 41);
+            this.uiLabel2.Size = new System.Drawing.Size(134, 31);
             this.uiLabel2.TabIndex = 145;
             this.uiLabel2.Text = "房屋所有人";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tbHouse_location
-            // 
-            this.tbHouse_location.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbHouse_location.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbHouse_location.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbHouse_location.Location = new System.Drawing.Point(202, 95);
-            this.tbHouse_location.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbHouse_location.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbHouse_location.Name = "tbHouse_location";
-            this.tbHouse_location.Padding = new System.Windows.Forms.Padding(5);
-            this.tbHouse_location.ShowText = false;
-            this.tbHouse_location.Size = new System.Drawing.Size(178, 29);
-            this.tbHouse_location.TabIndex = 131;
-            this.tbHouse_location.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbHouse_location.Watermark = "";
-            // 
-            // tbHouse_owner
-            // 
-            this.tbHouse_owner.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbHouse_owner.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbHouse_owner.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbHouse_owner.Location = new System.Drawing.Point(202, 53);
-            this.tbHouse_owner.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbHouse_owner.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbHouse_owner.Name = "tbHouse_owner";
-            this.tbHouse_owner.Padding = new System.Windows.Forms.Padding(5);
-            this.tbHouse_owner.ShowText = false;
-            this.tbHouse_owner.Size = new System.Drawing.Size(178, 29);
-            this.tbHouse_owner.TabIndex = 130;
-            this.tbHouse_owner.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbHouse_owner.Watermark = "";
             // 
             // uiLabel6
             // 
@@ -601,22 +568,10 @@
             this.uiLabel6.Location = new System.Drawing.Point(779, 40);
             this.uiLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(264, 41);
+            this.uiLabel6.Size = new System.Drawing.Size(198, 31);
             this.uiLabel6.TabIndex = 113;
             this.uiLabel6.Text = "房屋面积(平方米)";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel5
-            // 
-            this.uiLabel5.AutoSize = true;
-            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel5.Location = new System.Drawing.Point(417, 40);
-            this.uiLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(146, 41);
-            this.uiLabel5.TabIndex = 108;
-            this.uiLabel5.Text = "身份证号";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label12
             // 
@@ -625,7 +580,7 @@
             this.label12.Location = new System.Drawing.Point(33, 87);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(210, 41);
+            this.label12.Size = new System.Drawing.Size(158, 31);
             this.label12.TabIndex = 102;
             this.label12.Text = "房屋具体位置";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -662,10 +617,55 @@
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(1122, 88);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel1.Size = new System.Drawing.Size(158, 31);
             this.uiLabel1.TabIndex = 200;
             this.uiLabel1.Text = "房屋建设时间";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel24
+            // 
+            this.uiLabel24.AutoSize = true;
+            this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel24.Location = new System.Drawing.Point(417, 86);
+            this.uiLabel24.Name = "uiLabel24";
+            this.uiLabel24.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel24.TabIndex = 241;
+            this.uiLabel24.Text = "房屋结构";
+            this.uiLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel10
+            // 
+            this.uiLabel10.AutoSize = true;
+            this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel10.Location = new System.Drawing.Point(417, 136);
+            this.uiLabel10.Name = "uiLabel10";
+            this.uiLabel10.Size = new System.Drawing.Size(158, 31);
+            this.uiLabel10.TabIndex = 200;
+            this.uiLabel10.Text = "房屋是否自建";
+            this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel25
+            // 
+            this.uiLabel25.AutoSize = true;
+            this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel25.Location = new System.Drawing.Point(417, 187);
+            this.uiLabel25.Name = "uiLabel25";
+            this.uiLabel25.Size = new System.Drawing.Size(86, 31);
+            this.uiLabel25.TabIndex = 154;
+            this.uiLabel25.Text = "所在村";
+            this.uiLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel5
+            // 
+            this.uiLabel5.AutoSize = true;
+            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel5.Location = new System.Drawing.Point(417, 40);
+            this.uiLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.uiLabel5.Name = "uiLabel5";
+            this.uiLabel5.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel5.TabIndex = 108;
+            this.uiLabel5.Text = "身份证号";
+            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btImport
             // 
@@ -684,48 +684,48 @@
             // 
             this.dgHouseList.AllowUserToAddRows = false;
             this.dgHouseList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgHouseList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgHouseList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgHouseList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgHouseList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgHouseList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgHouseList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgHouseList.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgHouseList.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgHouseList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgHouseList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgHouseList.EnableHeadersVisualStyles = false;
             this.dgHouseList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgHouseList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgHouseList.Location = new System.Drawing.Point(4, 32);
             this.dgHouseList.Name = "dgHouseList";
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgHouseList.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgHouseList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgHouseList.RowHeadersVisible = false;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgHouseList.RowsDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgHouseList.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgHouseList.RowTemplate.Height = 23;
             this.dgHouseList.ScrollBarHandleWidth = 40;
             this.dgHouseList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -747,23 +747,23 @@
             this.btExport.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btExport.Click += new System.EventHandler(this.btExport_Click);
             // 
-            // groupBox2
+            // gbResult
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gbResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.dgHouseList);
-            this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(34, 391);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(1990, 647);
-            this.groupBox2.TabIndex = 105;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "数据列表";
-            this.groupBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gbResult.Controls.Add(this.dgHouseList);
+            this.gbResult.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbResult.Location = new System.Drawing.Point(34, 391);
+            this.gbResult.Margin = new System.Windows.Forms.Padding(4);
+            this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbResult.Name = "gbResult";
+            this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
+            this.gbResult.Size = new System.Drawing.Size(1990, 647);
+            this.gbResult.TabIndex = 105;
+            this.gbResult.TabStop = false;
+            this.gbResult.Text = "数据列表";
+            this.gbResult.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btAdd
             // 
@@ -797,19 +797,19 @@
             this.ClientSize = new System.Drawing.Size(2263, 1117);
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.pagination);
-            this.Controls.Add(this.uiGroupBox1);
+            this.Controls.Add(this.gbSearch);
             this.Controls.Add(this.btImport);
             this.Controls.Add(this.btExport);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbResult);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btEdit);
             this.Name = "frmHouseList";
             this.Text = "frmHouseList";
             this.Load += new System.EventHandler(this.frmHouseList_Load);
-            this.uiGroupBox1.ResumeLayout(false);
-            this.uiGroupBox1.PerformLayout();
+            this.gbSearch.ResumeLayout(false);
+            this.gbSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgHouseList)).EndInit();
-            this.groupBox2.ResumeLayout(false);
+            this.gbResult.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -824,7 +824,7 @@
         private Sunny.UI.UILabel uiLabel13;
         private Sunny.UI.UILabel uiLabel17;
         private Sunny.UI.UIPagination pagination;
-        private Sunny.UI.UIGroupBox uiGroupBox1;
+        private Sunny.UI.UIGroupBox gbSearch;
         private Sunny.UI.UILabel uiLabel24;
         private Sunny.UI.UILabel uiLabel27;
         private Sunny.UI.UILabel 土地使用说明;
@@ -850,7 +850,7 @@
         private Sunny.UI.UIButton btImport;
         private Sunny.UI.UIDataGridView dgHouseList;
         private Sunny.UI.UIButton btExport;
-        private Sunny.UI.UIGroupBox groupBox2;
+        private Sunny.UI.UIGroupBox gbResult;
         private Sunny.UI.UIButton btAdd;
         private Sunny.UI.UIButton btEdit;
         private Sunny.UI.UILabel uiLabel15;

@@ -55,6 +55,22 @@ namespace com.vdm.form
                 LoginInfo.CurrentUser.Town = userdt.Rows[0]["town"].ToString();
                 LoginInfo.CurrentUser.Village = userdt.Rows[0]["village"].ToString();
                 LoginInfo.CurrentUser.LoginTime = DateTime.Now;
+
+
+                //获得当前用户角色对应的功能权限类比
+                RoleBLL roleBLL = new RoleBLL();
+                DataTable dtFuncPower = roleBLL.getRoleFuncPower(userdt.Rows[0]["character_id"].ToString());
+                if(dtFuncPower != null)
+                {
+                    List<string> funcPowerList = new List<string>();
+                    foreach(DataRow row in dtFuncPower.Rows)
+                    {
+                        funcPowerList.Add(row["function_id"].ToString());
+                    }
+
+                    LoginInfo.FuncPowerList = funcPowerList;
+                }
+               
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

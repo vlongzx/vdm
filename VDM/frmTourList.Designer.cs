@@ -34,13 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btImport = new Sunny.UI.UIButton();
-            this.groupBox2 = new Sunny.UI.UIGroupBox();
+            this.gbResult = new Sunny.UI.UIGroupBox();
             this.dgTourList = new Sunny.UI.UIDataGridView();
             this.btExport = new Sunny.UI.UIButton();
             this.btAdd = new Sunny.UI.UIButton();
             this.btEdit = new Sunny.UI.UIButton();
             this.btDelete = new Sunny.UI.UIButton();
-            this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.gbSearch = new Sunny.UI.UIGroupBox();
             this.uiLabel9 = new Sunny.UI.UILabel();
             this.uiLabel5 = new Sunny.UI.UILabel();
             this.tbYear_trade_income_to = new Sunny.UI.UITextBox();
@@ -72,9 +72,9 @@
             this.btReset = new Sunny.UI.UIButton();
             this.btSearch = new Sunny.UI.UIButton();
             this.pagination = new Sunny.UI.UIPagination();
-            this.groupBox2.SuspendLayout();
+            this.gbResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTourList)).BeginInit();
-            this.uiGroupBox1.SuspendLayout();
+            this.gbSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // btImport
@@ -90,23 +90,23 @@
             this.btImport.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btImport.Click += new System.EventHandler(this.btImport_Click);
             // 
-            // groupBox2
+            // gbResult
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gbResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.dgTourList);
-            this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(19, 376);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(2063, 647);
-            this.groupBox2.TabIndex = 89;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "数据列表";
-            this.groupBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gbResult.Controls.Add(this.dgTourList);
+            this.gbResult.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbResult.Location = new System.Drawing.Point(19, 376);
+            this.gbResult.Margin = new System.Windows.Forms.Padding(4);
+            this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbResult.Name = "gbResult";
+            this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
+            this.gbResult.Size = new System.Drawing.Size(2063, 647);
+            this.gbResult.TabIndex = 89;
+            this.gbResult.TabStop = false;
+            this.gbResult.Text = "数据列表";
+            this.gbResult.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgTourList
             // 
@@ -214,50 +214,50 @@
             this.btDelete.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
-            // uiGroupBox1
+            // gbSearch
             // 
-            this.uiGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiGroupBox1.Controls.Add(this.uiLabel9);
-            this.uiGroupBox1.Controls.Add(this.uiLabel5);
-            this.uiGroupBox1.Controls.Add(this.tbYear_trade_income_to);
-            this.uiGroupBox1.Controls.Add(this.tbYear_person_count_to);
-            this.uiGroupBox1.Controls.Add(this.tbYear_trade_income_from);
-            this.uiGroupBox1.Controls.Add(this.tbYear_person_count_from);
-            this.uiGroupBox1.Controls.Add(this.uiLabel6);
-            this.uiGroupBox1.Controls.Add(this.cbTown);
-            this.uiGroupBox1.Controls.Add(this.cbVillage);
-            this.uiGroupBox1.Controls.Add(this.uiLabel7);
-            this.uiGroupBox1.Controls.Add(this.uiLabel23);
-            this.uiGroupBox1.Controls.Add(this.uiLabel3);
-            this.uiGroupBox1.Controls.Add(this.uiLabel1);
-            this.uiGroupBox1.Controls.Add(this.uiLabel2);
-            this.uiGroupBox1.Controls.Add(this.cbTrade_form);
-            this.uiGroupBox1.Controls.Add(this.cbPrincipal_category);
-            this.uiGroupBox1.Controls.Add(this.tbRegistered_trademark);
-            this.uiGroupBox1.Controls.Add(this.tbAddress);
-            this.uiGroupBox1.Controls.Add(this.tbPhone_number);
-            this.uiGroupBox1.Controls.Add(this.tbLegal_name);
-            this.uiGroupBox1.Controls.Add(this.tbCompany_id);
-            this.uiGroupBox1.Controls.Add(this.tbPrincipal_name);
-            this.uiGroupBox1.Controls.Add(this.uiLabel14);
-            this.uiGroupBox1.Controls.Add(this.label9);
-            this.uiGroupBox1.Controls.Add(this.label3);
-            this.uiGroupBox1.Controls.Add(this.label2);
-            this.uiGroupBox1.Controls.Add(this.label10);
-            this.uiGroupBox1.Controls.Add(this.label8);
-            this.uiGroupBox1.Controls.Add(this.btReset);
-            this.uiGroupBox1.Controls.Add(this.btSearch);
-            this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiGroupBox1.Location = new System.Drawing.Point(14, 41);
-            this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiGroupBox1.Name = "uiGroupBox1";
-            this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(2063, 236);
-            this.uiGroupBox1.TabIndex = 96;
-            this.uiGroupBox1.Text = "查询条件";
-            this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gbSearch.Controls.Add(this.uiLabel9);
+            this.gbSearch.Controls.Add(this.uiLabel5);
+            this.gbSearch.Controls.Add(this.tbYear_trade_income_to);
+            this.gbSearch.Controls.Add(this.tbYear_person_count_to);
+            this.gbSearch.Controls.Add(this.tbYear_trade_income_from);
+            this.gbSearch.Controls.Add(this.tbYear_person_count_from);
+            this.gbSearch.Controls.Add(this.uiLabel6);
+            this.gbSearch.Controls.Add(this.cbTown);
+            this.gbSearch.Controls.Add(this.cbVillage);
+            this.gbSearch.Controls.Add(this.uiLabel7);
+            this.gbSearch.Controls.Add(this.uiLabel23);
+            this.gbSearch.Controls.Add(this.uiLabel3);
+            this.gbSearch.Controls.Add(this.uiLabel1);
+            this.gbSearch.Controls.Add(this.uiLabel2);
+            this.gbSearch.Controls.Add(this.cbTrade_form);
+            this.gbSearch.Controls.Add(this.cbPrincipal_category);
+            this.gbSearch.Controls.Add(this.tbRegistered_trademark);
+            this.gbSearch.Controls.Add(this.tbAddress);
+            this.gbSearch.Controls.Add(this.tbPhone_number);
+            this.gbSearch.Controls.Add(this.tbLegal_name);
+            this.gbSearch.Controls.Add(this.tbCompany_id);
+            this.gbSearch.Controls.Add(this.tbPrincipal_name);
+            this.gbSearch.Controls.Add(this.uiLabel14);
+            this.gbSearch.Controls.Add(this.label9);
+            this.gbSearch.Controls.Add(this.label3);
+            this.gbSearch.Controls.Add(this.label2);
+            this.gbSearch.Controls.Add(this.label10);
+            this.gbSearch.Controls.Add(this.label8);
+            this.gbSearch.Controls.Add(this.btReset);
+            this.gbSearch.Controls.Add(this.btSearch);
+            this.gbSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbSearch.Location = new System.Drawing.Point(14, 41);
+            this.gbSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.gbSearch.Name = "gbSearch";
+            this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.gbSearch.Size = new System.Drawing.Size(2063, 236);
+            this.gbSearch.TabIndex = 96;
+            this.gbSearch.Text = "查询条件";
+            this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // uiLabel9
             // 
@@ -696,21 +696,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(2100, 1080);
             this.Controls.Add(this.btImport);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbResult);
             this.Controls.Add(this.btExport);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btDelete);
-            this.Controls.Add(this.uiGroupBox1);
+            this.Controls.Add(this.gbSearch);
             this.Controls.Add(this.pagination);
             this.Name = "frmTourList";
             this.Text = "frmTourList";
             this.ZoomScaleRect = new System.Drawing.Rectangle(22, 22, 800, 480);
             this.Load += new System.EventHandler(this.frmTourList_Load);
-            this.groupBox2.ResumeLayout(false);
+            this.gbResult.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgTourList)).EndInit();
-            this.uiGroupBox1.ResumeLayout(false);
-            this.uiGroupBox1.PerformLayout();
+            this.gbSearch.ResumeLayout(false);
+            this.gbSearch.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -718,13 +718,13 @@
         #endregion
 
         private Sunny.UI.UIButton btImport;
-        private Sunny.UI.UIGroupBox groupBox2;
+        private Sunny.UI.UIGroupBox gbResult;
         private Sunny.UI.UIDataGridView dgTourList;
         private Sunny.UI.UIButton btExport;
         private Sunny.UI.UIButton btAdd;
         private Sunny.UI.UIButton btEdit;
         private Sunny.UI.UIButton btDelete;
-        private Sunny.UI.UIGroupBox uiGroupBox1;
+        private Sunny.UI.UIGroupBox gbSearch;
         private Sunny.UI.UILabel uiLabel9;
         private Sunny.UI.UILabel uiLabel5;
         private Sunny.UI.UITextBox tbYear_trade_income_to;

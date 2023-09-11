@@ -74,6 +74,8 @@
             this.uiTitlePanel1 = new Sunny.UI.UITitlePanel();
             this.tvFunction = new Sunny.UI.UITreeView();
             this.dgFunction = new Sunny.UI.UIDataGridView();
+            this.uiNavBar3 = new Sunny.UI.UINavBar();
+            this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiSplitContainer3)).BeginInit();
@@ -99,6 +101,7 @@
             this.uiSplitContainer2.SuspendLayout();
             this.uiTitlePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFunction)).BeginInit();
+            this.uiNavBar3.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiTabControl1
@@ -119,6 +122,7 @@
             this.uiTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl1.TabIndex = 0;
             this.uiTabControl1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiTabControl1.SelectedIndexChanged += new System.EventHandler(this.uiTabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -144,6 +148,7 @@
             // 
             // uiSplitContainer3.Panel2
             // 
+            this.uiSplitContainer3.Panel2.Controls.Add(this.uiNavBar3);
             this.uiSplitContainer3.Panel2.Controls.Add(this.dgDict);
             this.uiSplitContainer3.Size = new System.Drawing.Size(1920, 1040);
             this.uiSplitContainer3.SplitterDistance = 373;
@@ -537,7 +542,7 @@
             this.tabPage4.Controls.Add(this.uiSplitContainer2);
             this.tabPage4.Location = new System.Drawing.Point(0, 40);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1920, 1040);
+            this.tabPage4.Size = new System.Drawing.Size(200, 60);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "功能权限";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -557,8 +562,8 @@
             // uiSplitContainer2.Panel2
             // 
             this.uiSplitContainer2.Panel2.Controls.Add(this.dgFunction);
-            this.uiSplitContainer2.Size = new System.Drawing.Size(1920, 1040);
-            this.uiSplitContainer2.SplitterDistance = 384;
+            this.uiSplitContainer2.Size = new System.Drawing.Size(200, 60);
+            this.uiSplitContainer2.SplitterDistance = 40;
             this.uiSplitContainer2.SplitterWidth = 11;
             this.uiSplitContainer2.TabIndex = 0;
             // 
@@ -572,7 +577,7 @@
             this.uiTitlePanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTitlePanel1.Name = "uiTitlePanel1";
             this.uiTitlePanel1.ShowText = false;
-            this.uiTitlePanel1.Size = new System.Drawing.Size(384, 1040);
+            this.uiTitlePanel1.Size = new System.Drawing.Size(40, 60);
             this.uiTitlePanel1.TabIndex = 1;
             this.uiTitlePanel1.Text = "功能权限树";
             this.uiTitlePanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -590,7 +595,7 @@
             this.tvFunction.MinimumSize = new System.Drawing.Size(1, 1);
             this.tvFunction.Name = "tvFunction";
             this.tvFunction.ShowText = false;
-            this.tvFunction.Size = new System.Drawing.Size(384, 990);
+            this.tvFunction.Size = new System.Drawing.Size(40, 10);
             this.tvFunction.TabIndex = 0;
             this.tvFunction.Text = null;
             this.tvFunction.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -647,9 +652,34 @@
             this.dgFunction.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgFunction.SelectedIndex = -1;
             this.dgFunction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgFunction.Size = new System.Drawing.Size(1525, 1040);
+            this.dgFunction.Size = new System.Drawing.Size(149, 60);
             this.dgFunction.Style = Sunny.UI.UIStyle.Custom;
             this.dgFunction.TabIndex = 5;
+            // 
+            // uiNavBar3
+            // 
+            this.uiNavBar3.Controls.Add(this.uiLabel1);
+            this.uiNavBar3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uiNavBar3.DropMenuFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiNavBar3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiNavBar3.Location = new System.Drawing.Point(0, 0);
+            this.uiNavBar3.Name = "uiNavBar3";
+            this.uiNavBar3.Size = new System.Drawing.Size(1536, 54);
+            this.uiNavBar3.TabIndex = 5;
+            this.uiNavBar3.Text = "uiNavBar3";
+            // 
+            // uiLabel1
+            // 
+            this.uiLabel1.AutoSize = true;
+            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel1.ForeColor = System.Drawing.Color.White;
+            this.uiLabel1.Location = new System.Drawing.Point(14, 11);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(686, 31);
+            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel1.TabIndex = 0;
+            this.uiLabel1.Text = "温馨提示：如需要增加数据字典，请联系技术支持方进行添加。";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmSystemSet
             // 
@@ -683,6 +713,8 @@
             this.uiSplitContainer2.ResumeLayout(false);
             this.uiTitlePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgFunction)).EndInit();
+            this.uiNavBar3.ResumeLayout(false);
+            this.uiNavBar3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -715,5 +747,7 @@
         private Sunny.UI.UISplitContainer uiSplitContainer3;
         private Sunny.UI.UITreeView tvDict;
         private Sunny.UI.UIDataGridView dgDict;
+        private Sunny.UI.UINavBar uiNavBar3;
+        private Sunny.UI.UILabel uiLabel1;
     }
 }
