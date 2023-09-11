@@ -8,8 +8,8 @@ namespace com.vdm.model
 {
     public class Character_funtion_authority
     {
-        private long character_id;
-        private long function_id;
+        private long character_id =0;
+        private long function_id=0;
         /// <summary>
         /// 角色ID
         /// </summary>
