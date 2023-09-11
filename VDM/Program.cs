@@ -34,7 +34,17 @@ namespace com.vdm.form
             if(dt != null && dt.Rows.Count == 0)
             {
                 frmInitUserAccount initUserAccount = new frmInitUserAccount();
-                initUserAccount.ShowDialog();
+                DialogResult res =  initUserAccount.ShowDialog();
+
+                if(res == DialogResult.OK)
+                {
+                    frmLogin login = new frmLogin();
+                    login.ShowDialog();
+                    if (login.DialogResult == DialogResult.OK)
+                    {
+                        Application.Run(new frmMain());
+                    }
+                }
             }
 
             IAutoUpdater autoUpdater = new com.vdm.AutoUpdater.AutoUpdater();
@@ -45,12 +55,12 @@ namespace com.vdm.form
             //}
             //else
             //{
-                frmLogin login = new frmLogin();
-                login.ShowDialog();
-                if (login.DialogResult == DialogResult.OK)
-                {
-                    Application.Run(new frmMain());
-                }
+                //frmLogin login = new frmLogin();
+                //login.ShowDialog();
+                //if (login.DialogResult == DialogResult.OK)
+                //{
+                //    Application.Run(new frmMain());
+                //}
             //}
         }
 

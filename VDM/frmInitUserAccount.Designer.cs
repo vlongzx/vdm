@@ -283,6 +283,8 @@
             this.Controls.Add(this.uiRadioButtonGroup1);
             this.Controls.Add(this.uiGroupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmInitUserAccount";
             this.Text = "初始化用户账号";
             this.ZoomScaleRect = new System.Drawing.Rectangle(22, 22, 600, 450);
