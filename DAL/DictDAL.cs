@@ -117,6 +117,71 @@ namespace com.vdm.dal
             return this.SqlDbHelper.ExecuteNonQuery(sql, CommandType.Text, parameters);
         }
 
+        public Result BatchCreateDict(List<Dict> dicts)
+        {
+
+            List<SQLStringObject> SQLStringObjectList = null;
+            if (dicts != null)
+            {
+                SQLStringObjectList = new List<SQLStringObject>();
+                SQLStringObject sqlStringObject = null;
+                SQLiteParameter parameter = null;
+                List<SQLiteParameter> parameters = null;
+                //构建删除sql语句
+                string sql = "delete from t_dict";
+                parameters = new List<SQLiteParameter>();
+                sqlStringObject = new SQLStringObject();
+                sqlStringObject.StrSql = sql;
+                sqlStringObject.Parameter = parameters;
+                SQLStringObjectList.Add(sqlStringObject);
+
+                //构建批量插入sql
+                foreach (Dict dict in dicts)
+                {
+                    //构建sql语句
+                    List<string> listColumnName = new List<string>();
+                    List<string> listParameter = new List<string>();
+                    DataTable tblSchema = this.getTableSchema("t_dict");
+                    if (tblSchema != null)
+                    {
+                        foreach (DataRow row in tblSchema.Rows)
+                        {
+                            //过滤掉主键
+                            if (row["ColumnName"].ToString() == "id")
+                            {
+                                continue;
+                            }
+                            listColumnName.Add(row["ColumnName"].ToString());
+                            listParameter.Add("@" + row["ColumnName"].ToString());
+                        }
+                    }
+                    sql = "insert into t_dict(" + Utils.JoinStingListToString(listColumnName) + ") values(" + Utils.JoinStingListToString(listParameter) + ")";
+
+                    //构建参数值
+                    parameters = new List<SQLiteParameter>();
+                    if (tblSchema != null)
+                    {
+                        foreach (DataRow row in tblSchema.Rows)
+                        {
+                            if (row["ColumnName"].ToString() == "id")
+                            {
+                                continue;
+                            }
+                            string ColumnName = row["ColumnName"].ToString();
+                            string PropertyName = Utils.Capitalize(row["ColumnName"].ToString());
+                            parameter = new SQLiteParameter("@" + ColumnName, dict.GetType().GetProperty(PropertyName).GetValue(dict, null));
+                            parameters.Add(parameter);
+                        }
+                    }
+                    sqlStringObject = new SQLStringObject();
+                    sqlStringObject.StrSql = sql;
+                    sqlStringObject.Parameter = parameters;
+                    SQLStringObjectList.Add(sqlStringObject);
+                }
+            }
+            return this.SqlDbHelper.ExecuteSqlTran(SQLStringObjectList);
+        }
+
         public Result UpdateDict(Dict dict)
         {
             //构建参数值

@@ -183,6 +183,7 @@
             this.tbPassword.TabIndex = 21;
             this.tbPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPassword.Watermark = "";
+            this.tbPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
             // 
             // tbUsername
             // 
