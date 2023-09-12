@@ -505,6 +505,7 @@
     <Content Include="images\村委会.png" />
     <Content Include="images\种植.png" />
     <Content Include="images\系统.png" />
+    <Content Include="lib\Newtonsoft.Json.dll" />
     <Content Include="lib\SunnyUI.Common.dll" />
     <Content Include="lib\SunnyUI.dll" />
     <Content Include="lib\System.Data.SQLite.dll" />

@@ -55,11 +55,13 @@
     <Compile Include="Function.cs" />
     <Compile Include="House.cs" />
     <Compile Include="Land.cs" />
+    <Compile Include="ListRemoteDict.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Org.cs" />
     <Compile Include="People.cs" />
     <Compile Include="Plant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoteDict.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Tour.cs" />
     <Compile Include="User.cs" />
