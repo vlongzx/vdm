@@ -265,7 +265,7 @@
             this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbSearch.Name = "gbSearch";
             this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.gbSearch.Size = new System.Drawing.Size(1814, 247);
+            this.gbSearch.Size = new System.Drawing.Size(1889, 247);
             this.gbSearch.TabIndex = 112;
             this.gbSearch.Text = "查询条件";
             this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -731,7 +731,7 @@
             this.dgHouseList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgHouseList.SelectedIndex = -1;
             this.dgHouseList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgHouseList.Size = new System.Drawing.Size(1801, 600);
+            this.dgHouseList.Size = new System.Drawing.Size(1876, 600);
             this.dgHouseList.TabIndex = 8;
             // 
             // btExport
@@ -759,7 +759,7 @@
             this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbResult.Name = "gbResult";
             this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.gbResult.Size = new System.Drawing.Size(1809, 636);
+            this.gbResult.Size = new System.Drawing.Size(1884, 636);
             this.gbResult.TabIndex = 105;
             this.gbResult.TabStop = false;
             this.gbResult.Text = "数据列表";
