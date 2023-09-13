@@ -195,12 +195,14 @@ namespace com.vdm.form
                 this.cbTown.DisplayMember = "value";
                 this.cbTown.ValueMember = "key";
             }
-            cbTown.SelectedValue = LoginInfo.CurrentUser.Town;
+
             List<KeyValue> list_village = new List<KeyValue>();
             //list_village.Add(new KeyValue("", "请选择"));
             this.cbVillage.DataSource = list_village;
             this.cbVillage.DisplayMember = "value";
             this.cbVillage.ValueMember = "key";
+            cbTown.SelectedValue = LoginInfo.CurrentUser.Town;
+            cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;
 
             //初始化是否外出
             List<KeyValue> list_work_or_study = dictBLL.getDict("work_or_study");
@@ -605,7 +607,7 @@ namespace com.vdm.form
                             this.cbVillage.DisplayMember = "value";
                             this.cbVillage.ValueMember = "key";
                           //  this.cbVillage.SelectedValue = "";
-                             cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;
+                      //       cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;
                         }
                     }
                     else
