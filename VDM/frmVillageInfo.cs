@@ -75,13 +75,15 @@ namespace com.vdm.form
                 this.cbTown.ValueMember = "key";
             }
             //cbTown.SelectedValue = "";
-            cbTown.SelectedValue = LoginInfo.CurrentUser.Town;
+
 
             List<KeyValue> list_village = new List<KeyValue>();
            // list_village.Add(new KeyValue("", "请选择"));
             this.cbVilliage.DataSource = list_village;
             this.cbVilliage.DisplayMember = "value";
             this.cbVilliage.ValueMember = "key";
+            cbTown.SelectedValue = LoginInfo.CurrentUser.Town;
+            cbVilliage.SelectedValue = LoginInfo.CurrentUser.Village;
 
         }
         /// <summary>
@@ -104,12 +106,13 @@ namespace com.vdm.form
                         List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
                         if (list_village != null)
                         {
-                           // list_village.Add(new KeyValue("", "请选择"));
+
                             this.cbVilliage.DataSource = list_village;
                             this.cbVilliage.DisplayMember = "value";
                             this.cbVilliage.ValueMember = "key";
-                            //this.cbVilliage.SelectedValue = "";
-                            cbVilliage.SelectedValue = LoginInfo.CurrentUser.Village;
+                            list_village.Add(new KeyValue("", "请选择"));
+                            this.cbVilliage.SelectedValue = "";
+
                         }
                     }
                     else

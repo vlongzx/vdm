@@ -602,12 +602,13 @@ namespace com.vdm.form
                         if (list_village != null)
                         {
 
-                            // list_village.Add(new KeyValue("", "请选择"));
+
                             this.cbVillage.DataSource = list_village;
                             this.cbVillage.DisplayMember = "value";
                             this.cbVillage.ValueMember = "key";
-                          //  this.cbVillage.SelectedValue = "";
-                      //       cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;
+                             list_village.Add(new KeyValue("", "请选择"));
+                              this.cbVillage.SelectedValue = "";
+                            //       cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;
                         }
                     }
                     else
