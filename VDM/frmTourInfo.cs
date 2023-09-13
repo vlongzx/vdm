@@ -270,8 +270,8 @@ namespace com.vdm.form
                             this.cbVillage.DataSource = list_village;
                             this.cbVillage.DisplayMember = "value";
                             this.cbVillage.ValueMember = "key";
-                            list_village.Add(new KeyValue("", "请选择"));
-                            this.cbVillage.SelectedValue = "";
+                            //list_village.Add(new KeyValue("", "请选择"));
+                            //this.cbVillage.SelectedValue = "";
 
                         }
                     }
