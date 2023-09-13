@@ -319,7 +319,7 @@
             this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbSearch.Name = "gbSearch";
             this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.gbSearch.Size = new System.Drawing.Size(2037, 227);
+            this.gbSearch.Size = new System.Drawing.Size(1888, 227);
             this.gbSearch.TabIndex = 10;
             this.gbSearch.Text = "查询条件";
             this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -864,7 +864,7 @@
             this.dgPeopleList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgPeopleList.SelectedIndex = -1;
             this.dgPeopleList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgPeopleList.Size = new System.Drawing.Size(2029, 649);
+            this.dgPeopleList.Size = new System.Drawing.Size(1875, 649);
             this.dgPeopleList.TabIndex = 7;
             this.dgPeopleList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPeopleList_CellContentClick);
             // 
@@ -880,7 +880,7 @@
             this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbResult.Name = "gbResult";
             this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.gbResult.Size = new System.Drawing.Size(2037, 685);
+            this.gbResult.Size = new System.Drawing.Size(1883, 685);
             this.gbResult.TabIndex = 5;
             this.gbResult.TabStop = false;
             this.gbResult.Text = "数据列表";
