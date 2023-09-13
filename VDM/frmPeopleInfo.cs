@@ -525,7 +525,8 @@ namespace com.vdm.form
             {
                 if (people.Idcard!=""&&(peopleBLL.QueryByIdcard(people.Idcard).Rows.Count != 0))
                 {
-                    MessageBox.Show("该身份证号码已存在！请检查信息是否正确");
+                   MessageBox.Show("该身份证号码已存在！请检查信息是否正确");
+                   // ShowInfoDialog("该身份证号码已存在！请检查信息是否正确");
                 }     
                 else
                 {

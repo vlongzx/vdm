@@ -20,6 +20,8 @@ namespace com.vdm.common
         private string _Town = "";
         //用户所属村
         private string _Village = "";
+        //用户角色
+        private string _RoleName = "";
         //登录时间
         private DateTime _LoginTime;
         public DateTime LoginTime { get { return _LoginTime; } set { _LoginTime = value; } }
@@ -79,6 +81,19 @@ namespace com.vdm.common
             set
             {
                 _FuncPowerList = value;
+            }
+        }
+
+        public string RoleName
+        {
+            get
+            {
+                return _RoleName;
+            }
+
+            set
+            {
+                _RoleName = value;
             }
         }
     }

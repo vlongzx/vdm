@@ -227,7 +227,7 @@ namespace com.vdm.form
                 {
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
-                    people.People_name = dataRow["姓名 "].ToString();
+                    people.People_name = dataRow["姓名"].ToString();
                     people.Idcard = dataRow["身份证号"].ToString();
                     people.Birthday = dataRow["出生日期"].ToString();
                     people.Sex = dataRow["性别"].ToString();
@@ -240,7 +240,7 @@ namespace com.vdm.form
                     people.Religious_belief = dataRow["宗教信仰"].ToString();
                     people.Blood_type = dataRow["血型"].ToString();
                     people.Marital_status = dataRow["婚姻状况"].ToString();
-
+                    people.Education = dataRow["学历"].ToString();
                     people.Work_or_study = dataRow["是否外出"].ToString();
                     people.Industry = dataRow["从事行业"].ToString();
                     people.Unit_or_school = dataRow["工作单位/学校名称"].ToString();
@@ -262,9 +262,9 @@ namespace com.vdm.form
                     people.Low_five = dataRow["低保户/五保户"].ToString();
                     people.Remark = dataRow["备注"].ToString();
 
-
                     people.Town = dataRow["所属镇"].ToString();
                     people.Villiage = dataRow["所属村"].ToString();
+
                     people.Creater = LoginInfo.CurrentUser.Account;
                     people.Create_datetime = DateTime.Now.ToString();
 

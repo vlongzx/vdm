@@ -44,12 +44,18 @@
             this.labAccountName = new Sunny.UI.UILabel();
             this.lbLoginTime = new Sunny.UI.UILabel();
             this.uiHeaderButton1 = new Sunny.UI.UIHeaderButton();
+            this.labTown = new Sunny.UI.UILabel();
+            this.labVillage = new Sunny.UI.UILabel();
+            this.labRoleName = new Sunny.UI.UILabel();
             this.Footer.SuspendLayout();
             this.Header.SuspendLayout();
             this.SuspendLayout();
             // 
             // Footer
             // 
+            this.Footer.Controls.Add(this.labRoleName);
+            this.Footer.Controls.Add(this.labVillage);
+            this.Footer.Controls.Add(this.labTown);
             this.Footer.Controls.Add(this.lbLoginTime);
             this.Footer.Controls.Add(this.labAccountName);
             this.Footer.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -324,7 +330,7 @@
             this.labAccountName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labAccountName.AutoSize = true;
             this.labAccountName.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labAccountName.Location = new System.Drawing.Point(1575, 14);
+            this.labAccountName.Location = new System.Drawing.Point(1079, 14);
             this.labAccountName.Name = "labAccountName";
             this.labAccountName.Size = new System.Drawing.Size(110, 31);
             this.labAccountName.TabIndex = 0;
@@ -369,6 +375,42 @@
             this.uiHeaderButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiHeaderButton1.Click += new System.EventHandler(this.btManager_Click);
             // 
+            // labTown
+            // 
+            this.labTown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labTown.AutoSize = true;
+            this.labTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labTown.Location = new System.Drawing.Point(1446, 14);
+            this.labTown.Name = "labTown";
+            this.labTown.Size = new System.Drawing.Size(110, 31);
+            this.labTown.TabIndex = 2;
+            this.labTown.Text = "所属乡镇";
+            this.labTown.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labVillage
+            // 
+            this.labVillage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labVillage.AutoSize = true;
+            this.labVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labVillage.Location = new System.Drawing.Point(1613, 14);
+            this.labVillage.Name = "labVillage";
+            this.labVillage.Size = new System.Drawing.Size(86, 31);
+            this.labVillage.TabIndex = 3;
+            this.labVillage.Text = "所属村";
+            this.labVillage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labRoleName
+            // 
+            this.labRoleName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labRoleName.AutoSize = true;
+            this.labRoleName.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labRoleName.Location = new System.Drawing.Point(1266, 14);
+            this.labRoleName.Name = "labRoleName";
+            this.labRoleName.Size = new System.Drawing.Size(62, 31);
+            this.labRoleName.TabIndex = 4;
+            this.labRoleName.Text = "角色";
+            this.labRoleName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -403,6 +445,9 @@
         private Sunny.UI.UILabel labAccountName;
         private Sunny.UI.UILabel lbLoginTime;
         private Sunny.UI.UIHeaderButton uiHeaderButton1;
+        private Sunny.UI.UILabel labVillage;
+        private Sunny.UI.UILabel labTown;
+        private Sunny.UI.UILabel labRoleName;
     }
 }
 

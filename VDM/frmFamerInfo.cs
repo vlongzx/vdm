@@ -311,7 +311,7 @@ namespace com.vdm.form
         private void btnOK_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(ctvPlant_type.Text ); 
-                //如果数据校验没有通过则直接返回。
+            //如果数据校验没有通过则直接返回。
             if (this.IsOK == false)
             {
                 return;

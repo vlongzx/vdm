@@ -181,6 +181,7 @@ namespace com.vdm.form.utils
             catch (Exception ex)
             {
                 errMessage = ex.Message;
+                MessageBox.Show("文件导入异常：" + "\r\n"+"1、请检查密码是否正确！" + "\r\n" +"2、请检查被导入Excel是否在其它程序打开！" );
             }
             return dataTable;
         }

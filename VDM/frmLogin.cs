@@ -54,6 +54,7 @@ namespace com.vdm.form
                 LoginInfo.CurrentUser.AccountName = username;
                 LoginInfo.CurrentUser.Town = userdt.Rows[0]["town"].ToString();
                 LoginInfo.CurrentUser.Village = userdt.Rows[0]["village"].ToString();
+                LoginInfo.CurrentUser.RoleName = userdt.Rows[0]["role_name"].ToString();
                 LoginInfo.CurrentUser.LoginTime = DateTime.Now;
 
 

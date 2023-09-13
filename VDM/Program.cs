@@ -22,10 +22,10 @@ namespace com.vdm.form
         [STAThread]
         static void Main()
         {
-            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if(File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\db_file\\vdm_data.db") == false)
+            if (File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\db_file\\vdm_data.db") == false)
             {
                 MessageBox.Show("数据库文件不存在或路径不正确，请检查。", "运行错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -33,8 +33,8 @@ namespace com.vdm.form
             //判断是否需要初始化账户信息
             UserBLL userBLL = new UserBLL();
 
-            DataTable  dt = userBLL.getAllUser();
-            if(dt != null && dt.Rows.Count == 0)
+            DataTable dt = userBLL.getAllUser();
+            if (dt != null && dt.Rows.Count == 0)
             {
                 frmInitUserAccount initUserAccount = new frmInitUserAccount();
                 initUserAccount.ShowDialog();

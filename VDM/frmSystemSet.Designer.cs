@@ -52,6 +52,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.uiSplitContainer3 = new Sunny.UI.UISplitContainer();
             this.tvDict = new Sunny.UI.UITreeView();
+            this.uiNavBar3 = new Sunny.UI.UINavBar();
+            this.uiLabel1 = new Sunny.UI.UILabel();
             this.dgDict = new Sunny.UI.UIDataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.uiSplitContainer1 = new Sunny.UI.UISplitContainer();
@@ -74,14 +76,13 @@
             this.uiTitlePanel1 = new Sunny.UI.UITitlePanel();
             this.tvFunction = new Sunny.UI.UITreeView();
             this.dgFunction = new Sunny.UI.UIDataGridView();
-            this.uiNavBar3 = new Sunny.UI.UINavBar();
-            this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiSplitContainer3)).BeginInit();
             this.uiSplitContainer3.Panel1.SuspendLayout();
             this.uiSplitContainer3.Panel2.SuspendLayout();
             this.uiSplitContainer3.SuspendLayout();
+            this.uiNavBar3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDict)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiSplitContainer1)).BeginInit();
@@ -101,7 +102,6 @@
             this.uiSplitContainer2.SuspendLayout();
             this.uiTitlePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFunction)).BeginInit();
-            this.uiNavBar3.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiTabControl1
@@ -171,6 +171,31 @@
             this.tvDict.Text = "uiTreeView1";
             this.tvDict.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.tvDict.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvDict_AfterSelect);
+            // 
+            // uiNavBar3
+            // 
+            this.uiNavBar3.Controls.Add(this.uiLabel1);
+            this.uiNavBar3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uiNavBar3.DropMenuFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiNavBar3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiNavBar3.Location = new System.Drawing.Point(0, 0);
+            this.uiNavBar3.Name = "uiNavBar3";
+            this.uiNavBar3.Size = new System.Drawing.Size(1536, 54);
+            this.uiNavBar3.TabIndex = 5;
+            this.uiNavBar3.Text = "uiNavBar3";
+            // 
+            // uiLabel1
+            // 
+            this.uiLabel1.AutoSize = true;
+            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel1.ForeColor = System.Drawing.Color.White;
+            this.uiLabel1.Location = new System.Drawing.Point(14, 11);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(686, 31);
+            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel1.TabIndex = 0;
+            this.uiLabel1.Text = "温馨提示：如需要增加数据字典，请联系技术支持方进行添加。";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dgDict
             // 
@@ -422,7 +447,7 @@
             this.tabPage3.Controls.Add(this.uiNavBar2);
             this.tabPage3.Location = new System.Drawing.Point(0, 40);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(200, 60);
+            this.tabPage3.Size = new System.Drawing.Size(1920, 1040);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "角色管理";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -478,7 +503,7 @@
             this.dgRole.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgRole.SelectedIndex = -1;
             this.dgRole.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgRole.Size = new System.Drawing.Size(200, 0);
+            this.dgRole.Size = new System.Drawing.Size(1920, 930);
             this.dgRole.Style = Sunny.UI.UIStyle.Custom;
             this.dgRole.TabIndex = 4;
             // 
@@ -494,7 +519,7 @@
             this.uiNavBar2.Location = new System.Drawing.Point(0, 0);
             this.uiNavBar2.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
             this.uiNavBar2.Name = "uiNavBar2";
-            this.uiNavBar2.Size = new System.Drawing.Size(200, 110);
+            this.uiNavBar2.Size = new System.Drawing.Size(1920, 110);
             this.uiNavBar2.TabIndex = 3;
             this.uiNavBar2.Text = "uiNavBar2";
             // 
@@ -656,31 +681,6 @@
             this.dgFunction.Style = Sunny.UI.UIStyle.Custom;
             this.dgFunction.TabIndex = 5;
             // 
-            // uiNavBar3
-            // 
-            this.uiNavBar3.Controls.Add(this.uiLabel1);
-            this.uiNavBar3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uiNavBar3.DropMenuFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiNavBar3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiNavBar3.Location = new System.Drawing.Point(0, 0);
-            this.uiNavBar3.Name = "uiNavBar3";
-            this.uiNavBar3.Size = new System.Drawing.Size(1536, 54);
-            this.uiNavBar3.TabIndex = 5;
-            this.uiNavBar3.Text = "uiNavBar3";
-            // 
-            // uiLabel1
-            // 
-            this.uiLabel1.AutoSize = true;
-            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.ForeColor = System.Drawing.Color.White;
-            this.uiLabel1.Location = new System.Drawing.Point(14, 11);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(686, 31);
-            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel1.TabIndex = 0;
-            this.uiLabel1.Text = "温馨提示：如需要增加数据字典，请联系技术支持方进行添加。";
-            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // frmSystemSet
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -694,6 +694,8 @@
             this.uiSplitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiSplitContainer3)).EndInit();
             this.uiSplitContainer3.ResumeLayout(false);
+            this.uiNavBar3.ResumeLayout(false);
+            this.uiNavBar3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDict)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.uiSplitContainer1.Panel1.ResumeLayout(false);
@@ -713,8 +715,6 @@
             this.uiSplitContainer2.ResumeLayout(false);
             this.uiTitlePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgFunction)).EndInit();
-            this.uiNavBar3.ResumeLayout(false);
-            this.uiNavBar3.PerformLayout();
             this.ResumeLayout(false);
 
         }

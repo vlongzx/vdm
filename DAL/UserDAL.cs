@@ -27,9 +27,9 @@ namespace com.vdm.dal
         /// <returns></returns>
         public DataTable  getUserInfo(string username)
         {
-            string sql = "select * from t_user where username = '"+ username+"'";
+            //string sql = "select * from t_user where username = '"+ username+"'";
+            string sql = "select * from t_user JOIN t_role ON t_user.character_id = t_role.role_id where username ='" + username + "'";
             DataTable dt = this.sdh.ExecuteDataTable(sql);
-
             return dt;
         }
 

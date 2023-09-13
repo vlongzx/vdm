@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btImport = new Sunny.UI.UIButton();
             this.dgCompanyList = new Sunny.UI.UIDataGridView();
             this.btExport = new Sunny.UI.UIButton();
@@ -116,54 +116,54 @@
             // 
             this.dgCompanyList.AllowUserToAddRows = false;
             this.dgCompanyList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgCompanyList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgCompanyList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgCompanyList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgCompanyList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCompanyList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCompanyList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgCompanyList.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgCompanyList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgCompanyList.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgCompanyList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgCompanyList.EnableHeadersVisualStyles = false;
             this.dgCompanyList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgCompanyList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgCompanyList.Location = new System.Drawing.Point(4, 32);
             this.dgCompanyList.Name = "dgCompanyList";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCompanyList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCompanyList.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgCompanyList.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgCompanyList.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgCompanyList.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgCompanyList.RowTemplate.Height = 23;
             this.dgCompanyList.ScrollBarHandleWidth = 40;
             this.dgCompanyList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgCompanyList.SelectedIndex = -1;
             this.dgCompanyList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgCompanyList.Size = new System.Drawing.Size(2055, 611);
+            this.dgCompanyList.Size = new System.Drawing.Size(1831, 585);
             this.dgCompanyList.TabIndex = 8;
             // 
             // btExport
@@ -183,7 +183,7 @@
             // 
             this.uiLabel13.AutoSize = true;
             this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel13.Location = new System.Drawing.Point(1020, 136);
+            this.uiLabel13.Location = new System.Drawing.Point(892, 136);
             this.uiLabel13.Name = "uiLabel13";
             this.uiLabel13.Size = new System.Drawing.Size(24, 31);
             this.uiLabel13.TabIndex = 252;
@@ -194,7 +194,7 @@
             // 
             this.uiLabel17.AutoSize = true;
             this.uiLabel17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel17.Location = new System.Drawing.Point(1020, 92);
+            this.uiLabel17.Location = new System.Drawing.Point(892, 92);
             this.uiLabel17.Name = "uiLabel17";
             this.uiLabel17.Size = new System.Drawing.Size(24, 31);
             this.uiLabel17.TabIndex = 248;
@@ -206,7 +206,7 @@
             this.tbLegal_idcard.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbLegal_idcard.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbLegal_idcard.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbLegal_idcard.Location = new System.Drawing.Point(557, 91);
+            this.tbLegal_idcard.Location = new System.Drawing.Point(485, 91);
             this.tbLegal_idcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbLegal_idcard.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbLegal_idcard.Name = "tbLegal_idcard";
@@ -221,7 +221,7 @@
             // 
             this.uiLabel24.AutoSize = true;
             this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel24.Location = new System.Drawing.Point(417, 86);
+            this.uiLabel24.Location = new System.Drawing.Point(367, 86);
             this.uiLabel24.Name = "uiLabel24";
             this.uiLabel24.Size = new System.Drawing.Size(182, 31);
             this.uiLabel24.TabIndex = 241;
@@ -240,7 +240,7 @@
             this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbResult.Name = "gbResult";
             this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.gbResult.Size = new System.Drawing.Size(2063, 647);
+            this.gbResult.Size = new System.Drawing.Size(1839, 621);
             this.gbResult.TabIndex = 97;
             this.gbResult.TabStop = false;
             this.gbResult.Text = "数据列表";
@@ -278,7 +278,7 @@
             this.pagination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pagination.CausesValidation = false;
             this.pagination.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.pagination.Location = new System.Drawing.Point(10, 1038);
+            this.pagination.Location = new System.Drawing.Point(10, 1012);
             this.pagination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pagination.MinimumSize = new System.Drawing.Size(1, 1);
             this.pagination.Name = "pagination";
@@ -297,7 +297,7 @@
             // 
             this.uiLabel22.AutoSize = true;
             this.uiLabel22.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel22.Location = new System.Drawing.Point(417, 181);
+            this.uiLabel22.Location = new System.Drawing.Point(367, 181);
             this.uiLabel22.Name = "uiLabel22";
             this.uiLabel22.Size = new System.Drawing.Size(110, 31);
             this.uiLabel22.TabIndex = 239;
@@ -308,7 +308,7 @@
             // 
             this.uiLabel27.AutoSize = true;
             this.uiLabel27.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel27.Location = new System.Drawing.Point(1173, 37);
+            this.uiLabel27.Location = new System.Drawing.Point(1045, 37);
             this.uiLabel27.Name = "uiLabel27";
             this.uiLabel27.Size = new System.Drawing.Size(206, 31);
             this.uiLabel27.TabIndex = 235;
@@ -336,7 +336,7 @@
             this.tbCredit_code.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbCredit_code.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbCredit_code.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbCredit_code.Location = new System.Drawing.Point(1372, 44);
+            this.tbCredit_code.Location = new System.Drawing.Point(1258, 44);
             this.tbCredit_code.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbCredit_code.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbCredit_code.Name = "tbCredit_code";
@@ -363,7 +363,7 @@
             // 
             this.uiLabel32.AutoSize = true;
             this.uiLabel32.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel32.Location = new System.Drawing.Point(776, 137);
+            this.uiLabel32.Location = new System.Drawing.Point(648, 137);
             this.uiLabel32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel32.Name = "uiLabel32";
             this.uiLabel32.Size = new System.Drawing.Size(110, 31);
@@ -388,7 +388,7 @@
             this.tbOrganization_code.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbOrganization_code.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbOrganization_code.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbOrganization_code.Location = new System.Drawing.Point(557, 148);
+            this.tbOrganization_code.Location = new System.Drawing.Point(485, 148);
             this.tbOrganization_code.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbOrganization_code.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbOrganization_code.Name = "tbOrganization_code";
@@ -403,7 +403,7 @@
             // 
             this.uiLabel10.AutoSize = true;
             this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel10.Location = new System.Drawing.Point(417, 136);
+            this.uiLabel10.Location = new System.Drawing.Point(367, 136);
             this.uiLabel10.Name = "uiLabel10";
             this.uiLabel10.Size = new System.Drawing.Size(158, 31);
             this.uiLabel10.TabIndex = 200;
@@ -488,7 +488,7 @@
             this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbSearch.Name = "gbSearch";
             this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.gbSearch.Size = new System.Drawing.Size(2063, 275);
+            this.gbSearch.Size = new System.Drawing.Size(1839, 275);
             this.gbSearch.TabIndex = 104;
             this.gbSearch.Text = "查询条件";
             this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -499,7 +499,7 @@
             this.ctvCompany_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.ctvCompany_type.FillColor = System.Drawing.Color.White;
             this.ctvCompany_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ctvCompany_type.Location = new System.Drawing.Point(557, 47);
+            this.ctvCompany_type.Location = new System.Drawing.Point(485, 47);
             this.ctvCompany_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctvCompany_type.MinimumSize = new System.Drawing.Size(63, 0);
             this.ctvCompany_type.Name = "ctvCompany_type";
@@ -515,7 +515,7 @@
             this.tbInsure_person_count_From.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbInsure_person_count_From.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbInsure_person_count_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbInsure_person_count_From.Location = new System.Drawing.Point(905, 190);
+            this.tbInsure_person_count_From.Location = new System.Drawing.Point(777, 190);
             this.tbInsure_person_count_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbInsure_person_count_From.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbInsure_person_count_From.Name = "tbInsure_person_count_From";
@@ -531,7 +531,7 @@
             this.cbCompany_status.DataSource = null;
             this.cbCompany_status.FillColor = System.Drawing.Color.White;
             this.cbCompany_status.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbCompany_status.Location = new System.Drawing.Point(1371, 133);
+            this.cbCompany_status.Location = new System.Drawing.Point(1257, 133);
             this.cbCompany_status.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbCompany_status.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbCompany_status.Name = "cbCompany_status";
@@ -546,7 +546,7 @@
             this.cbIs_top_company.DataSource = null;
             this.cbIs_top_company.FillColor = System.Drawing.Color.White;
             this.cbIs_top_company.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbIs_top_company.Location = new System.Drawing.Point(1371, 88);
+            this.cbIs_top_company.Location = new System.Drawing.Point(1257, 88);
             this.cbIs_top_company.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbIs_top_company.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbIs_top_company.Name = "cbIs_top_company";
@@ -577,7 +577,7 @@
             this.dpEstablish_date_To.CanEmpty = true;
             this.dpEstablish_date_To.FillColor = System.Drawing.Color.White;
             this.dpEstablish_date_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpEstablish_date_To.Location = new System.Drawing.Point(1046, 138);
+            this.dpEstablish_date_To.Location = new System.Drawing.Point(918, 138);
             this.dpEstablish_date_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpEstablish_date_To.MaxLength = 10;
             this.dpEstablish_date_To.MinimumSize = new System.Drawing.Size(63, 0);
@@ -597,7 +597,7 @@
             this.dpEstablish_date_From.CanEmpty = true;
             this.dpEstablish_date_From.FillColor = System.Drawing.Color.White;
             this.dpEstablish_date_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpEstablish_date_From.Location = new System.Drawing.Point(905, 142);
+            this.dpEstablish_date_From.Location = new System.Drawing.Point(777, 142);
             this.dpEstablish_date_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpEstablish_date_From.MaxLength = 10;
             this.dpEstablish_date_From.MinimumSize = new System.Drawing.Size(63, 0);
@@ -617,7 +617,7 @@
             this.dpLicense_date_To.CanEmpty = true;
             this.dpLicense_date_To.FillColor = System.Drawing.Color.White;
             this.dpLicense_date_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpLicense_date_To.Location = new System.Drawing.Point(1046, 99);
+            this.dpLicense_date_To.Location = new System.Drawing.Point(918, 99);
             this.dpLicense_date_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpLicense_date_To.MaxLength = 10;
             this.dpLicense_date_To.MinimumSize = new System.Drawing.Size(63, 0);
@@ -637,7 +637,7 @@
             this.dpLicense_date_From.CanEmpty = true;
             this.dpLicense_date_From.FillColor = System.Drawing.Color.White;
             this.dpLicense_date_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpLicense_date_From.Location = new System.Drawing.Point(905, 99);
+            this.dpLicense_date_From.Location = new System.Drawing.Point(777, 99);
             this.dpLicense_date_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpLicense_date_From.MaxLength = 10;
             this.dpLicense_date_From.MinimumSize = new System.Drawing.Size(63, 0);
@@ -656,7 +656,7 @@
             // 
             this.uiLabel14.AutoSize = true;
             this.uiLabel14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel14.Location = new System.Drawing.Point(1438, 183);
+            this.uiLabel14.Location = new System.Drawing.Point(1324, 183);
             this.uiLabel14.Name = "uiLabel14";
             this.uiLabel14.Size = new System.Drawing.Size(24, 31);
             this.uiLabel14.TabIndex = 252;
@@ -667,7 +667,7 @@
             // 
             this.uiLabel12.AutoSize = true;
             this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel12.Location = new System.Drawing.Point(1020, 185);
+            this.uiLabel12.Location = new System.Drawing.Point(892, 185);
             this.uiLabel12.Name = "uiLabel12";
             this.uiLabel12.Size = new System.Drawing.Size(24, 31);
             this.uiLabel12.TabIndex = 252;
@@ -678,7 +678,7 @@
             // 
             this.uiLabel4.AutoSize = true;
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel4.Location = new System.Drawing.Point(619, 188);
+            this.uiLabel4.Location = new System.Drawing.Point(547, 188);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(24, 31);
             this.uiLabel4.TabIndex = 252;
@@ -690,7 +690,7 @@
             this.tbOutput_To.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbOutput_To.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbOutput_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbOutput_To.Location = new System.Drawing.Point(1470, 185);
+            this.tbOutput_To.Location = new System.Drawing.Point(1356, 185);
             this.tbOutput_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbOutput_To.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbOutput_To.Name = "tbOutput_To";
@@ -706,7 +706,7 @@
             this.tbOutput_From.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbOutput_From.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbOutput_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbOutput_From.Location = new System.Drawing.Point(1371, 187);
+            this.tbOutput_From.Location = new System.Drawing.Point(1257, 187);
             this.tbOutput_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbOutput_From.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbOutput_From.Name = "tbOutput_From";
@@ -722,7 +722,7 @@
             this.tbInsure_person_count_To.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbInsure_person_count_To.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbInsure_person_count_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbInsure_person_count_To.Location = new System.Drawing.Point(1046, 189);
+            this.tbInsure_person_count_To.Location = new System.Drawing.Point(918, 189);
             this.tbInsure_person_count_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbInsure_person_count_To.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbInsure_person_count_To.Name = "tbInsure_person_count_To";
@@ -738,7 +738,7 @@
             this.tbStaff_size_To.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbStaff_size_To.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbStaff_size_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbStaff_size_To.Location = new System.Drawing.Point(653, 190);
+            this.tbStaff_size_To.Location = new System.Drawing.Point(581, 190);
             this.tbStaff_size_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStaff_size_To.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbStaff_size_To.Name = "tbStaff_size_To";
@@ -754,7 +754,7 @@
             this.tbStaff_size_From.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbStaff_size_From.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbStaff_size_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbStaff_size_From.Location = new System.Drawing.Point(556, 190);
+            this.tbStaff_size_From.Location = new System.Drawing.Point(484, 190);
             this.tbStaff_size_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbStaff_size_From.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbStaff_size_From.Name = "tbStaff_size_From";
@@ -770,7 +770,7 @@
             this.tbCompany_address.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbCompany_address.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbCompany_address.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbCompany_address.Location = new System.Drawing.Point(905, 49);
+            this.tbCompany_address.Location = new System.Drawing.Point(777, 49);
             this.tbCompany_address.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbCompany_address.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbCompany_address.Name = "tbCompany_address";
@@ -785,7 +785,7 @@
             // 
             this.uiLabel11.AutoSize = true;
             this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel11.Location = new System.Drawing.Point(1173, 125);
+            this.uiLabel11.Location = new System.Drawing.Point(1045, 125);
             this.uiLabel11.Name = "uiLabel11";
             this.uiLabel11.Size = new System.Drawing.Size(158, 31);
             this.uiLabel11.TabIndex = 154;
@@ -796,7 +796,7 @@
             // 
             this.uiLabel3.AutoSize = true;
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel3.Location = new System.Drawing.Point(1173, 78);
+            this.uiLabel3.Location = new System.Drawing.Point(1045, 78);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(158, 31);
             this.uiLabel3.TabIndex = 154;
@@ -807,7 +807,7 @@
             // 
             this.uiLabel25.AutoSize = true;
             this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel25.Location = new System.Drawing.Point(1173, 225);
+            this.uiLabel25.Location = new System.Drawing.Point(1045, 225);
             this.uiLabel25.Name = "uiLabel25";
             this.uiLabel25.Size = new System.Drawing.Size(86, 31);
             this.uiLabel25.TabIndex = 154;
@@ -818,7 +818,7 @@
             // 
             this.uiLabel26.AutoSize = true;
             this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel26.Location = new System.Drawing.Point(779, 228);
+            this.uiLabel26.Location = new System.Drawing.Point(651, 228);
             this.uiLabel26.Name = "uiLabel26";
             this.uiLabel26.Size = new System.Drawing.Size(110, 31);
             this.uiLabel26.TabIndex = 155;
@@ -830,7 +830,7 @@
             this.cbTown.DataSource = null;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTown.Location = new System.Drawing.Point(905, 231);
+            this.cbTown.Location = new System.Drawing.Point(777, 231);
             this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbTown.Name = "cbTown";
@@ -846,7 +846,7 @@
             this.cbTaxpayer_qualification.DataSource = null;
             this.cbTaxpayer_qualification.FillColor = System.Drawing.Color.White;
             this.cbTaxpayer_qualification.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTaxpayer_qualification.Location = new System.Drawing.Point(557, 234);
+            this.cbTaxpayer_qualification.Location = new System.Drawing.Point(485, 234);
             this.cbTaxpayer_qualification.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTaxpayer_qualification.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbTaxpayer_qualification.Name = "cbTaxpayer_qualification";
@@ -861,7 +861,7 @@
             this.cbVillage.DataSource = null;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbVillage.Location = new System.Drawing.Point(1372, 233);
+            this.cbVillage.Location = new System.Drawing.Point(1258, 233);
             this.cbVillage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVillage.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbVillage.Name = "cbVillage";
@@ -918,7 +918,7 @@
             // 
             this.uiLabel9.AutoSize = true;
             this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel9.Location = new System.Drawing.Point(417, 228);
+            this.uiLabel9.Location = new System.Drawing.Point(367, 228);
             this.uiLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel9.Name = "uiLabel9";
             this.uiLabel9.Size = new System.Drawing.Size(134, 31);
@@ -942,7 +942,7 @@
             // 
             this.uiLabel6.AutoSize = true;
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel6.Location = new System.Drawing.Point(779, 44);
+            this.uiLabel6.Location = new System.Drawing.Point(651, 44);
             this.uiLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(110, 31);
@@ -954,7 +954,7 @@
             // 
             this.uiLabel7.AutoSize = true;
             this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel7.Location = new System.Drawing.Point(1173, 175);
+            this.uiLabel7.Location = new System.Drawing.Point(1045, 175);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(126, 31);
@@ -966,7 +966,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(779, 181);
+            this.label15.Location = new System.Drawing.Point(651, 181);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(110, 31);
@@ -978,7 +978,7 @@
             // 
             this.uiLabel5.AutoSize = true;
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel5.Location = new System.Drawing.Point(417, 40);
+            this.uiLabel5.Location = new System.Drawing.Point(367, 40);
             this.uiLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(110, 31);
@@ -1002,7 +1002,7 @@
             // 
             this.btReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btReset.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btReset.Location = new System.Drawing.Point(1770, 81);
+            this.btReset.Location = new System.Drawing.Point(1593, 115);
             this.btReset.MinimumSize = new System.Drawing.Size(1, 1);
             this.btReset.Name = "btReset";
             this.btReset.Size = new System.Drawing.Size(154, 62);
@@ -1015,7 +1015,7 @@
             // 
             this.btSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btSearch.Location = new System.Drawing.Point(1610, 81);
+            this.btSearch.Location = new System.Drawing.Point(1433, 115);
             this.btSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.btSearch.Name = "btSearch";
             this.btSearch.Size = new System.Drawing.Size(154, 62);
@@ -1028,7 +1028,7 @@
             // 
             this.uiLabel1.AutoSize = true;
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(776, 91);
+            this.uiLabel1.Location = new System.Drawing.Point(648, 91);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(158, 31);
             this.uiLabel1.TabIndex = 200;
@@ -1051,7 +1051,7 @@
             // frmCompanyList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(2170, 1132);
+            this.ClientSize = new System.Drawing.Size(1946, 1106);
             this.Controls.Add(this.btImport);
             this.Controls.Add(this.btExport);
             this.Controls.Add(this.gbResult);

@@ -101,7 +101,7 @@
             this.dpOh_checktime_To.CanEmpty = true;
             this.dpOh_checktime_To.FillColor = System.Drawing.Color.White;
             this.dpOh_checktime_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpOh_checktime_To.Location = new System.Drawing.Point(1441, 136);
+            this.dpOh_checktime_To.Location = new System.Drawing.Point(1215, 136);
             this.dpOh_checktime_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpOh_checktime_To.MaxLength = 10;
             this.dpOh_checktime_To.MinimumSize = new System.Drawing.Size(63, 0);
@@ -121,7 +121,7 @@
             this.dpOh_checktime_From.CanEmpty = true;
             this.dpOh_checktime_From.FillColor = System.Drawing.Color.White;
             this.dpOh_checktime_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpOh_checktime_From.Location = new System.Drawing.Point(1304, 140);
+            this.dpOh_checktime_From.Location = new System.Drawing.Point(1078, 140);
             this.dpOh_checktime_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpOh_checktime_From.MaxLength = 10;
             this.dpOh_checktime_From.MinimumSize = new System.Drawing.Size(63, 0);
@@ -141,7 +141,7 @@
             this.dpHouse_build_date_To.CanEmpty = true;
             this.dpHouse_build_date_To.FillColor = System.Drawing.Color.White;
             this.dpHouse_build_date_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpHouse_build_date_To.Location = new System.Drawing.Point(1441, 95);
+            this.dpHouse_build_date_To.Location = new System.Drawing.Point(1215, 95);
             this.dpHouse_build_date_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpHouse_build_date_To.MaxLength = 10;
             this.dpHouse_build_date_To.MinimumSize = new System.Drawing.Size(63, 0);
@@ -161,7 +161,7 @@
             this.dpHouse_build_date_From.CanEmpty = true;
             this.dpHouse_build_date_From.FillColor = System.Drawing.Color.White;
             this.dpHouse_build_date_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpHouse_build_date_From.Location = new System.Drawing.Point(1303, 95);
+            this.dpHouse_build_date_From.Location = new System.Drawing.Point(1077, 95);
             this.dpHouse_build_date_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpHouse_build_date_From.MaxLength = 10;
             this.dpHouse_build_date_From.MinimumSize = new System.Drawing.Size(63, 0);
@@ -180,7 +180,7 @@
             // 
             this.uiLabel13.AutoSize = true;
             this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel13.Location = new System.Drawing.Point(1422, 134);
+            this.uiLabel13.Location = new System.Drawing.Point(1196, 134);
             this.uiLabel13.Name = "uiLabel13";
             this.uiLabel13.Size = new System.Drawing.Size(24, 31);
             this.uiLabel13.TabIndex = 252;
@@ -191,7 +191,7 @@
             // 
             this.uiLabel17.AutoSize = true;
             this.uiLabel17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel17.Location = new System.Drawing.Point(1422, 87);
+            this.uiLabel17.Location = new System.Drawing.Point(1196, 87);
             this.uiLabel17.Name = "uiLabel17";
             this.uiLabel17.Size = new System.Drawing.Size(24, 31);
             this.uiLabel17.TabIndex = 248;
@@ -204,7 +204,7 @@
             this.pagination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pagination.CausesValidation = false;
             this.pagination.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.pagination.Location = new System.Drawing.Point(26, 1047);
+            this.pagination.Location = new System.Drawing.Point(26, 1036);
             this.pagination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pagination.MinimumSize = new System.Drawing.Size(1, 1);
             this.pagination.Name = "pagination";
@@ -265,7 +265,7 @@
             this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbSearch.Name = "gbSearch";
             this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.gbSearch.Size = new System.Drawing.Size(1990, 247);
+            this.gbSearch.Size = new System.Drawing.Size(1814, 247);
             this.gbSearch.TabIndex = 112;
             this.gbSearch.Text = "查询条件";
             this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -275,7 +275,7 @@
             this.cbHouse_is_rent.DataSource = null;
             this.cbHouse_is_rent.FillColor = System.Drawing.Color.White;
             this.cbHouse_is_rent.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbHouse_is_rent.Location = new System.Drawing.Point(202, 140);
+            this.cbHouse_is_rent.Location = new System.Drawing.Point(174, 140);
             this.cbHouse_is_rent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbHouse_is_rent.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbHouse_is_rent.Name = "cbHouse_is_rent";
@@ -289,7 +289,7 @@
             // 
             this.uiLabel15.AutoSize = true;
             this.uiLabel15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel15.Location = new System.Drawing.Point(982, 45);
+            this.uiLabel15.Location = new System.Drawing.Point(860, 45);
             this.uiLabel15.Name = "uiLabel15";
             this.uiLabel15.Size = new System.Drawing.Size(24, 31);
             this.uiLabel15.TabIndex = 252;
@@ -301,7 +301,7 @@
             this.tbArea_To.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbArea_To.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbArea_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbArea_To.Location = new System.Drawing.Point(1014, 47);
+            this.tbArea_To.Location = new System.Drawing.Point(892, 47);
             this.tbArea_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbArea_To.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbArea_To.Name = "tbArea_To";
@@ -317,7 +317,7 @@
             this.tbArea_From.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbArea_From.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbArea_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbArea_From.Location = new System.Drawing.Point(915, 47);
+            this.tbArea_From.Location = new System.Drawing.Point(793, 47);
             this.tbArea_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbArea_From.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbArea_From.Name = "tbArea_From";
@@ -333,7 +333,7 @@
             this.cbIs_old_house.DataSource = null;
             this.cbIs_old_house.FillColor = System.Drawing.Color.White;
             this.cbIs_old_house.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbIs_old_house.Location = new System.Drawing.Point(915, 146);
+            this.cbIs_old_house.Location = new System.Drawing.Point(793, 146);
             this.cbIs_old_house.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbIs_old_house.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbIs_old_house.Name = "cbIs_old_house";
@@ -348,7 +348,7 @@
             this.cbHouse_safe_grade.DataSource = null;
             this.cbHouse_safe_grade.FillColor = System.Drawing.Color.White;
             this.cbHouse_safe_grade.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbHouse_safe_grade.Location = new System.Drawing.Point(915, 93);
+            this.cbHouse_safe_grade.Location = new System.Drawing.Point(793, 93);
             this.cbHouse_safe_grade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbHouse_safe_grade.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbHouse_safe_grade.Name = "cbHouse_safe_grade";
@@ -363,7 +363,7 @@
             this.cbTown.DataSource = null;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTown.Location = new System.Drawing.Point(202, 191);
+            this.cbTown.Location = new System.Drawing.Point(174, 191);
             this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbTown.Name = "cbTown";
@@ -379,7 +379,7 @@
             this.tbHouse_location.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbHouse_location.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbHouse_location.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbHouse_location.Location = new System.Drawing.Point(202, 95);
+            this.tbHouse_location.Location = new System.Drawing.Point(174, 95);
             this.tbHouse_location.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbHouse_location.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbHouse_location.Name = "tbHouse_location";
@@ -395,7 +395,7 @@
             this.tbHouse_owner.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbHouse_owner.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbHouse_owner.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbHouse_owner.Location = new System.Drawing.Point(202, 53);
+            this.tbHouse_owner.Location = new System.Drawing.Point(174, 53);
             this.tbHouse_owner.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbHouse_owner.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbHouse_owner.Name = "tbHouse_owner";
@@ -411,7 +411,7 @@
             this.tbIdcard.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbIdcard.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbIdcard.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbIdcard.Location = new System.Drawing.Point(557, 47);
+            this.tbIdcard.Location = new System.Drawing.Point(482, 47);
             this.tbIdcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbIdcard.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbIdcard.Name = "tbIdcard";
@@ -426,7 +426,7 @@
             // 
             this.uiLabel27.AutoSize = true;
             this.uiLabel27.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel27.Location = new System.Drawing.Point(1122, 40);
+            this.uiLabel27.Location = new System.Drawing.Point(961, 40);
             this.uiLabel27.Name = "uiLabel27";
             this.uiLabel27.Size = new System.Drawing.Size(110, 31);
             this.uiLabel27.TabIndex = 235;
@@ -437,7 +437,7 @@
             // 
             this.土地使用说明.AutoSize = true;
             this.土地使用说明.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.土地使用说明.Location = new System.Drawing.Point(779, 86);
+            this.土地使用说明.Location = new System.Drawing.Point(657, 86);
             this.土地使用说明.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.土地使用说明.Name = "土地使用说明";
             this.土地使用说明.Size = new System.Drawing.Size(158, 31);
@@ -449,7 +449,7 @@
             // 
             this.uiLabel32.AutoSize = true;
             this.uiLabel32.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel32.Location = new System.Drawing.Point(1122, 135);
+            this.uiLabel32.Location = new System.Drawing.Point(961, 135);
             this.uiLabel32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel32.Name = "uiLabel32";
             this.uiLabel32.Size = new System.Drawing.Size(158, 31);
@@ -461,7 +461,7 @@
             // 
             this.uiLabel11.AutoSize = true;
             this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel11.Location = new System.Drawing.Point(779, 138);
+            this.uiLabel11.Location = new System.Drawing.Point(657, 138);
             this.uiLabel11.Name = "uiLabel11";
             this.uiLabel11.Size = new System.Drawing.Size(110, 31);
             this.uiLabel11.TabIndex = 154;
@@ -495,7 +495,7 @@
             this.cbHouse_type.DataSource = null;
             this.cbHouse_type.FillColor = System.Drawing.Color.White;
             this.cbHouse_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbHouse_type.Location = new System.Drawing.Point(1304, 40);
+            this.cbHouse_type.Location = new System.Drawing.Point(1078, 40);
             this.cbHouse_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbHouse_type.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbHouse_type.Name = "cbHouse_type";
@@ -510,7 +510,7 @@
             this.cbVillage.DataSource = null;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbVillage.Location = new System.Drawing.Point(557, 188);
+            this.cbVillage.Location = new System.Drawing.Point(482, 188);
             this.cbVillage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVillage.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbVillage.Name = "cbVillage";
@@ -525,7 +525,7 @@
             this.cbIs_my_struct.DataSource = null;
             this.cbIs_my_struct.FillColor = System.Drawing.Color.White;
             this.cbIs_my_struct.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbIs_my_struct.Location = new System.Drawing.Point(557, 145);
+            this.cbIs_my_struct.Location = new System.Drawing.Point(482, 145);
             this.cbIs_my_struct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbIs_my_struct.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbIs_my_struct.Name = "cbIs_my_struct";
@@ -540,7 +540,7 @@
             this.cbHouse_struction.DataSource = null;
             this.cbHouse_struction.FillColor = System.Drawing.Color.White;
             this.cbHouse_struction.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbHouse_struction.Location = new System.Drawing.Point(557, 94);
+            this.cbHouse_struction.Location = new System.Drawing.Point(482, 94);
             this.cbHouse_struction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbHouse_struction.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbHouse_struction.Name = "cbHouse_struction";
@@ -565,7 +565,7 @@
             // 
             this.uiLabel6.AutoSize = true;
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel6.Location = new System.Drawing.Point(779, 40);
+            this.uiLabel6.Location = new System.Drawing.Point(657, 40);
             this.uiLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(198, 31);
@@ -589,10 +589,10 @@
             // 
             this.btReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btReset.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btReset.Location = new System.Drawing.Point(1770, 81);
+            this.btReset.Location = new System.Drawing.Point(1467, 81);
             this.btReset.MinimumSize = new System.Drawing.Size(1, 1);
             this.btReset.Name = "btReset";
-            this.btReset.Size = new System.Drawing.Size(154, 62);
+            this.btReset.Size = new System.Drawing.Size(104, 62);
             this.btReset.TabIndex = 62;
             this.btReset.Text = "重置(&R)";
             this.btReset.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -602,10 +602,10 @@
             // 
             this.btSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btSearch.Location = new System.Drawing.Point(1610, 81);
+            this.btSearch.Location = new System.Drawing.Point(1348, 81);
             this.btSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(154, 62);
+            this.btSearch.Size = new System.Drawing.Size(113, 62);
             this.btSearch.TabIndex = 61;
             this.btSearch.Text = "查询(&S)";
             this.btSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -615,7 +615,7 @@
             // 
             this.uiLabel1.AutoSize = true;
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(1122, 88);
+            this.uiLabel1.Location = new System.Drawing.Point(961, 88);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(158, 31);
             this.uiLabel1.TabIndex = 200;
@@ -626,7 +626,7 @@
             // 
             this.uiLabel24.AutoSize = true;
             this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel24.Location = new System.Drawing.Point(417, 86);
+            this.uiLabel24.Location = new System.Drawing.Point(360, 86);
             this.uiLabel24.Name = "uiLabel24";
             this.uiLabel24.Size = new System.Drawing.Size(110, 31);
             this.uiLabel24.TabIndex = 241;
@@ -637,7 +637,7 @@
             // 
             this.uiLabel10.AutoSize = true;
             this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel10.Location = new System.Drawing.Point(417, 136);
+            this.uiLabel10.Location = new System.Drawing.Point(360, 136);
             this.uiLabel10.Name = "uiLabel10";
             this.uiLabel10.Size = new System.Drawing.Size(158, 31);
             this.uiLabel10.TabIndex = 200;
@@ -648,7 +648,7 @@
             // 
             this.uiLabel25.AutoSize = true;
             this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel25.Location = new System.Drawing.Point(417, 187);
+            this.uiLabel25.Location = new System.Drawing.Point(360, 187);
             this.uiLabel25.Name = "uiLabel25";
             this.uiLabel25.Size = new System.Drawing.Size(86, 31);
             this.uiLabel25.TabIndex = 154;
@@ -659,7 +659,7 @@
             // 
             this.uiLabel5.AutoSize = true;
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel5.Location = new System.Drawing.Point(417, 40);
+            this.uiLabel5.Location = new System.Drawing.Point(360, 40);
             this.uiLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(110, 31);
@@ -731,7 +731,7 @@
             this.dgHouseList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgHouseList.SelectedIndex = -1;
             this.dgHouseList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgHouseList.Size = new System.Drawing.Size(1982, 611);
+            this.dgHouseList.Size = new System.Drawing.Size(1801, 600);
             this.dgHouseList.TabIndex = 8;
             // 
             // btExport
@@ -759,7 +759,7 @@
             this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbResult.Name = "gbResult";
             this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.gbResult.Size = new System.Drawing.Size(1990, 647);
+            this.gbResult.Size = new System.Drawing.Size(1809, 636);
             this.gbResult.TabIndex = 105;
             this.gbResult.TabStop = false;
             this.gbResult.Text = "数据列表";
@@ -794,7 +794,7 @@
             // frmHouseList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(2263, 1117);
+            this.ClientSize = new System.Drawing.Size(1946, 1106);
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.pagination);
             this.Controls.Add(this.gbSearch);

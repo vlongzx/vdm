@@ -85,7 +85,7 @@
             // 
             this.uiLabel24.AutoSize = true;
             this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel24.Location = new System.Drawing.Point(1132, 87);
+            this.uiLabel24.Location = new System.Drawing.Point(961, 87);
             this.uiLabel24.Name = "uiLabel24";
             this.uiLabel24.Size = new System.Drawing.Size(110, 31);
             this.uiLabel24.TabIndex = 165;
@@ -96,7 +96,7 @@
             // 
             this.uiLabel23.AutoSize = true;
             this.uiLabel23.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel23.Location = new System.Drawing.Point(1132, 42);
+            this.uiLabel23.Location = new System.Drawing.Point(961, 42);
             this.uiLabel23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel23.Name = "uiLabel23";
             this.uiLabel23.Size = new System.Drawing.Size(62, 31);
@@ -119,7 +119,7 @@
             // 
             this.uiLabel26.AutoSize = true;
             this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel26.Location = new System.Drawing.Point(1132, 131);
+            this.uiLabel26.Location = new System.Drawing.Point(961, 131);
             this.uiLabel26.Name = "uiLabel26";
             this.uiLabel26.Size = new System.Drawing.Size(110, 31);
             this.uiLabel26.TabIndex = 155;
@@ -131,7 +131,7 @@
             this.cbTown.DataSource = null;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTown.Location = new System.Drawing.Point(1283, 139);
+            this.cbTown.Location = new System.Drawing.Point(1067, 131);
             this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbTown.Name = "cbTown";
@@ -147,7 +147,7 @@
             this.cbVillage.DataSource = null;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbVillage.Location = new System.Drawing.Point(173, 201);
+            this.cbVillage.Location = new System.Drawing.Point(143, 191);
             this.cbVillage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVillage.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbVillage.Name = "cbVillage";
@@ -161,7 +161,7 @@
             // 
             this.uiLabel1.AutoSize = true;
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(361, 41);
+            this.uiLabel1.Location = new System.Drawing.Point(316, 41);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(110, 31);
             this.uiLabel1.TabIndex = 146;
@@ -183,7 +183,7 @@
             // 
             this.dpBirthday_To.FillColor = System.Drawing.Color.White;
             this.dpBirthday_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpBirthday_To.Location = new System.Drawing.Point(655, 49);
+            this.dpBirthday_To.Location = new System.Drawing.Point(561, 42);
             this.dpBirthday_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpBirthday_To.MaxLength = 10;
             this.dpBirthday_To.MinimumSize = new System.Drawing.Size(63, 0);
@@ -202,7 +202,7 @@
             // 
             this.dpJoin_party_time_to.FillColor = System.Drawing.Color.White;
             this.dpJoin_party_time_to.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpJoin_party_time_to.Location = new System.Drawing.Point(655, 99);
+            this.dpJoin_party_time_to.Location = new System.Drawing.Point(561, 92);
             this.dpJoin_party_time_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpJoin_party_time_to.MaxLength = 10;
             this.dpJoin_party_time_to.MinimumSize = new System.Drawing.Size(63, 0);
@@ -221,7 +221,7 @@
             // 
             this.dpBirthday_From.FillColor = System.Drawing.Color.White;
             this.dpBirthday_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpBirthday_From.Location = new System.Drawing.Point(508, 49);
+            this.dpBirthday_From.Location = new System.Drawing.Point(420, 41);
             this.dpBirthday_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpBirthday_From.MaxLength = 10;
             this.dpBirthday_From.MinimumSize = new System.Drawing.Size(63, 0);
@@ -241,7 +241,7 @@
             this.dpJoin_party_time_from.CanEmpty = true;
             this.dpJoin_party_time_from.FillColor = System.Drawing.Color.White;
             this.dpJoin_party_time_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpJoin_party_time_from.Location = new System.Drawing.Point(508, 99);
+            this.dpJoin_party_time_from.Location = new System.Drawing.Point(420, 91);
             this.dpJoin_party_time_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpJoin_party_time_from.MaxLength = 10;
             this.dpJoin_party_time_from.MinimumSize = new System.Drawing.Size(63, 0);
@@ -261,7 +261,7 @@
             this.cbPolitcal_outlook.DataSource = null;
             this.cbPolitcal_outlook.FillColor = System.Drawing.Color.White;
             this.cbPolitcal_outlook.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbPolitcal_outlook.Location = new System.Drawing.Point(173, 96);
+            this.cbPolitcal_outlook.Location = new System.Drawing.Point(143, 96);
             this.cbPolitcal_outlook.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbPolitcal_outlook.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbPolitcal_outlook.Name = "cbPolitcal_outlook";
@@ -276,7 +276,7 @@
             this.cbEducation.DataSource = null;
             this.cbEducation.FillColor = System.Drawing.Color.White;
             this.cbEducation.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbEducation.Location = new System.Drawing.Point(1283, 95);
+            this.cbEducation.Location = new System.Drawing.Point(1067, 87);
             this.cbEducation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbEducation.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbEducation.Name = "cbEducation";
@@ -291,7 +291,7 @@
             this.cbSex.DataSource = null;
             this.cbSex.FillColor = System.Drawing.Color.White;
             this.cbSex.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbSex.Location = new System.Drawing.Point(1283, 50);
+            this.cbSex.Location = new System.Drawing.Point(1067, 42);
             this.cbSex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbSex.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbSex.Name = "cbSex";
@@ -306,7 +306,7 @@
             this.cbNation.DataSource = null;
             this.cbNation.FillColor = System.Drawing.Color.White;
             this.cbNation.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbNation.Location = new System.Drawing.Point(932, 50);
+            this.cbNation.Location = new System.Drawing.Point(788, 42);
             this.cbNation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbNation.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbNation.Name = "cbNation";
@@ -321,7 +321,7 @@
             this.tbPhone_number.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbPhone_number.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPhone_number.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPhone_number.Location = new System.Drawing.Point(173, 143);
+            this.tbPhone_number.Location = new System.Drawing.Point(143, 143);
             this.tbPhone_number.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPhone_number.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbPhone_number.Name = "tbPhone_number";
@@ -337,7 +337,7 @@
             this.tbIdcard.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbIdcard.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbIdcard.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbIdcard.Location = new System.Drawing.Point(932, 96);
+            this.tbIdcard.Location = new System.Drawing.Point(788, 88);
             this.tbIdcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbIdcard.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbIdcard.Name = "tbIdcard";
@@ -353,7 +353,7 @@
             this.tbManager_name.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbManager_name.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbManager_name.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbManager_name.Location = new System.Drawing.Point(173, 50);
+            this.tbManager_name.Location = new System.Drawing.Point(143, 50);
             this.tbManager_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbManager_name.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbManager_name.Name = "tbManager_name";
@@ -380,7 +380,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(790, 42);
+            this.label3.Location = new System.Drawing.Point(685, 42);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 31);
@@ -392,7 +392,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(361, 87);
+            this.label10.Location = new System.Drawing.Point(316, 87);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(110, 31);
@@ -416,7 +416,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(789, 87);
+            this.label12.Location = new System.Drawing.Point(684, 87);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(110, 31);
@@ -428,7 +428,7 @@
             // 
             this.btReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btReset.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btReset.Location = new System.Drawing.Point(1714, 88);
+            this.btReset.Location = new System.Drawing.Point(1408, 63);
             this.btReset.MinimumSize = new System.Drawing.Size(1, 1);
             this.btReset.Name = "btReset";
             this.btReset.Size = new System.Drawing.Size(154, 62);
@@ -441,7 +441,7 @@
             // 
             this.btSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btSearch.Location = new System.Drawing.Point(1554, 88);
+            this.btSearch.Location = new System.Drawing.Point(1239, 63);
             this.btSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.btSearch.Name = "btSearch";
             this.btSearch.Size = new System.Drawing.Size(154, 62);
@@ -475,7 +475,7 @@
             this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbResult.Name = "gbResult";
             this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.gbResult.Size = new System.Drawing.Size(2063, 647);
+            this.gbResult.Size = new System.Drawing.Size(1858, 599);
             this.gbResult.TabIndex = 81;
             this.gbResult.TabStop = false;
             this.gbResult.Text = "数据列表";
@@ -532,7 +532,7 @@
             this.dgManagerList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgManagerList.SelectedIndex = -1;
             this.dgManagerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgManagerList.Size = new System.Drawing.Size(2055, 611);
+            this.dgManagerList.Size = new System.Drawing.Size(1850, 563);
             this.dgManagerList.TabIndex = 7;
             // 
             // btExport
@@ -593,7 +593,7 @@
             this.pagination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pagination.CausesValidation = false;
             this.pagination.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.pagination.Location = new System.Drawing.Point(18, 1039);
+            this.pagination.Location = new System.Drawing.Point(18, 991);
             this.pagination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pagination.MinimumSize = new System.Drawing.Size(1, 1);
             this.pagination.Name = "pagination";
@@ -612,6 +612,8 @@
             // 
             this.gbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbSearch.Controls.Add(this.cbTown);
+            this.gbSearch.Controls.Add(this.cbEducation);
             this.gbSearch.Controls.Add(this.dpBirthday_From);
             this.gbSearch.Controls.Add(this.dpJoin_party_time_from);
             this.gbSearch.Controls.Add(this.dpEmploy_date_To);
@@ -625,7 +627,6 @@
             this.gbSearch.Controls.Add(this.uiLabel23);
             this.gbSearch.Controls.Add(this.uiLabel25);
             this.gbSearch.Controls.Add(this.uiLabel26);
-            this.gbSearch.Controls.Add(this.cbTown);
             this.gbSearch.Controls.Add(this.cbVillage);
             this.gbSearch.Controls.Add(this.uiLabel3);
             this.gbSearch.Controls.Add(this.uiLabel4);
@@ -633,7 +634,6 @@
             this.gbSearch.Controls.Add(this.uiLabel1);
             this.gbSearch.Controls.Add(this.uiLabel2);
             this.gbSearch.Controls.Add(this.cbPolitcal_outlook);
-            this.gbSearch.Controls.Add(this.cbEducation);
             this.gbSearch.Controls.Add(this.cbSex);
             this.gbSearch.Controls.Add(this.cbNation);
             this.gbSearch.Controls.Add(this.tbPhone_number);
@@ -652,7 +652,7 @@
             this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbSearch.Name = "gbSearch";
             this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.gbSearch.Size = new System.Drawing.Size(2063, 252);
+            this.gbSearch.Size = new System.Drawing.Size(1858, 252);
             this.gbSearch.TabIndex = 88;
             this.gbSearch.Text = "查询条件";
             this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -661,7 +661,7 @@
             // 
             this.dpEmploy_date_To.FillColor = System.Drawing.Color.White;
             this.dpEmploy_date_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpEmploy_date_To.Location = new System.Drawing.Point(655, 145);
+            this.dpEmploy_date_To.Location = new System.Drawing.Point(561, 138);
             this.dpEmploy_date_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpEmploy_date_To.MaxLength = 10;
             this.dpEmploy_date_To.MinimumSize = new System.Drawing.Size(63, 0);
@@ -680,7 +680,7 @@
             // 
             this.dpEmploy_date_From.FillColor = System.Drawing.Color.White;
             this.dpEmploy_date_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpEmploy_date_From.Location = new System.Drawing.Point(508, 145);
+            this.dpEmploy_date_From.Location = new System.Drawing.Point(420, 137);
             this.dpEmploy_date_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpEmploy_date_From.MaxLength = 10;
             this.dpEmploy_date_From.MinimumSize = new System.Drawing.Size(63, 0);
@@ -699,7 +699,7 @@
             // 
             this.uiLabel5.AutoSize = true;
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel5.Location = new System.Drawing.Point(362, 137);
+            this.uiLabel5.Location = new System.Drawing.Point(317, 137);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(110, 31);
             this.uiLabel5.TabIndex = 166;
@@ -710,7 +710,7 @@
             // 
             this.uiLabel3.AutoSize = true;
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel3.Location = new System.Drawing.Point(625, 88);
+            this.uiLabel3.Location = new System.Drawing.Point(542, 89);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(24, 31);
             this.uiLabel3.TabIndex = 147;
@@ -721,7 +721,7 @@
             // 
             this.uiLabel4.AutoSize = true;
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel4.Location = new System.Drawing.Point(625, 41);
+            this.uiLabel4.Location = new System.Drawing.Point(542, 42);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(24, 31);
             this.uiLabel4.TabIndex = 147;
@@ -732,7 +732,7 @@
             // 
             this.uiLabel6.AutoSize = true;
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel6.Location = new System.Drawing.Point(625, 133);
+            this.uiLabel6.Location = new System.Drawing.Point(542, 134);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(24, 31);
             this.uiLabel6.TabIndex = 147;
@@ -744,7 +744,7 @@
             this.tbPost.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbPost.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPost.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPost.Location = new System.Drawing.Point(932, 143);
+            this.tbPost.Location = new System.Drawing.Point(788, 135);
             this.tbPost.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPost.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbPost.Name = "tbPost";
@@ -759,7 +759,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(789, 134);
+            this.label2.Location = new System.Drawing.Point(684, 134);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 31);
@@ -771,7 +771,7 @@
             // frmManagerList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(2151, 1154);
+            this.ClientSize = new System.Drawing.Size(1946, 1106);
             this.Controls.Add(this.btImport);
             this.Controls.Add(this.gbResult);
             this.Controls.Add(this.btExport);
