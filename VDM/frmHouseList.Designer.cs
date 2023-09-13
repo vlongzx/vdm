@@ -204,7 +204,7 @@
             this.pagination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pagination.CausesValidation = false;
             this.pagination.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.pagination.Location = new System.Drawing.Point(26, 1036);
+            this.pagination.Location = new System.Drawing.Point(26, 1057);
             this.pagination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pagination.MinimumSize = new System.Drawing.Size(1, 1);
             this.pagination.Name = "pagination";
@@ -731,7 +731,7 @@
             this.dgHouseList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgHouseList.SelectedIndex = -1;
             this.dgHouseList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgHouseList.Size = new System.Drawing.Size(1876, 600);
+            this.dgHouseList.Size = new System.Drawing.Size(1876, 632);
             this.dgHouseList.TabIndex = 8;
             // 
             // btExport
@@ -759,7 +759,7 @@
             this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbResult.Name = "gbResult";
             this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.gbResult.Size = new System.Drawing.Size(1884, 636);
+            this.gbResult.Size = new System.Drawing.Size(1884, 668);
             this.gbResult.TabIndex = 105;
             this.gbResult.TabStop = false;
             this.gbResult.Text = "数据列表";
