@@ -583,11 +583,6 @@ namespace com.vdm.form
         /// <param name="e"></param>
         private void cbTown_SelectedValueChanged(object sender, EventArgs e)
         {
-            //if (this.opreation_mode == "EDIT" && editFlag)
-            //{
-            //    editFlag = false;
-            //    return;
-            //}
             if (this.cbTown.SelectedValue != null)
             {
                 orgBLL = new OrgBLL();
@@ -601,14 +596,14 @@ namespace com.vdm.form
                         List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
                         if (list_village != null)
                         {
-
-
+                            list_village.Add(new KeyValue("", "请选择"));
                             this.cbVillage.DataSource = list_village;
                             this.cbVillage.DisplayMember = "value";
                             this.cbVillage.ValueMember = "key";
-                             list_village.Add(new KeyValue("", "请选择"));
-                              this.cbVillage.SelectedValue = "";
-                            //       cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;
+                            if(selectValue.Key == LoginInfo.CurrentUser.Town)//乡镇相同
+                            {
+                                cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;
+                            }
                         }
                     }
                     else

@@ -111,7 +111,10 @@ namespace com.vdm.form
                             this.cbVilliage.DisplayMember = "value";
                             this.cbVilliage.ValueMember = "key";
                             list_village.Add(new KeyValue("", "请选择"));
-                            this.cbVilliage.SelectedValue = "";
+                            if (selectValue.Key == LoginInfo.CurrentUser.Town)//乡镇相同
+                            {
+                                cbVilliage.SelectedValue = LoginInfo.CurrentUser.Village;
+                            }
 
                         }
                     }

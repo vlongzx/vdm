@@ -75,7 +75,7 @@
             // 
             // pnlBtm
             // 
-            this.pnlBtm.Location = new System.Drawing.Point(1, 885);
+            this.pnlBtm.Location = new System.Drawing.Point(1, 653);
             this.pnlBtm.Size = new System.Drawing.Size(1625, 55);
             // 
             // btnCancel
@@ -135,7 +135,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1589, 814);
+            this.groupBox1.Size = new System.Drawing.Size(1589, 587);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "畜牧信息";
@@ -752,7 +752,7 @@
             // frmAnimalInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1627, 943);
+            this.ClientSize = new System.Drawing.Size(1627, 711);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAnimalInfo";
             this.Text = "frmAnimalInfo";

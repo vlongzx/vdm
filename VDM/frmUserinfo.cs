@@ -34,28 +34,23 @@ namespace com.vdm.form
         protected override bool CheckData()
         {
             return CheckEmpty(this.tbUsername,"用户名不能为空。")
-                && CheckEmpty(this.tbPassword, "密码不能为空。")
                 ;
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             string username = this.tbUsername.Text.Trim();
-            string password = this.tbPassword.Text;
-            string confirm_password = this.tbConfirmPassword.Text;
+            
             string remark = this.tbRemark.Text.Trim();
             string town  =this.cbTown.SelectedValue.ToString();
             string village = this.cbVillage.SelectedValue.ToString();
             string  character_id = this.cbRoel.SelectedValue.ToString();
-            if (password.Equals(confirm_password) == false)
-            {
-                MessageBox.Show("输入密码和确认密码不一致，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+
+            
             
             User user = new User();
             user.Username = username;
-            user.Password = MD5Encrypt.MD5Encrypt32(password);
+            
             user.Town = town;
             user.Village = village;
             user.Character_id = character_id;
@@ -73,6 +68,19 @@ namespace com.vdm.form
 
             if(user_id == 0)
             {
+                string password = this.tbPassword.Text.Trim();
+                string confirm_password = this.tbConfirmPassword.Text;
+                if(password == "")
+                {
+                    MessageBox.Show("密码不能为空，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (password.Equals(confirm_password) == false)
+                {
+                    MessageBox.Show("输入密码和确认密码不一致，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                user.Password = MD5Encrypt.MD5Encrypt32(password);
                 result = this.userBLL.addUser(user);
             }
             else
@@ -96,18 +104,6 @@ namespace com.vdm.form
 
         private void frmUserinfo_Load(object sender, EventArgs e)
         {
-            if(user_id != 0)
-            {
-                this.userBLL = new UserBLL();
-                User user = this.userBLL.getUser(user_id);
-                this.tbUsername.Text = user.Username;
-                this.tbRemark.Text = user.Remark;
-                this.cbRoel.SelectedValue = user.Character_id;
-                this.cbTown.SelectedValue = user.Town;
-                this.cbVillage.SelectedValue = user.Village;
-                this.tbPassword.Enabled = false;
-                this.tbConfirmPassword.Enabled = false;
-            }
             //初始化所在乡镇所在村
             orgBLL = new OrgBLL();
             List<KeyValue> list_town = orgBLL.getOrgByType("乡镇");
@@ -133,6 +129,19 @@ namespace com.vdm.form
                 this.cbRoel.DataSource = dt;
                 this.cbRoel.DisplayMember = "role_name";
                 this.cbRoel.ValueMember = "role_id";
+            }
+
+            if (user_id != 0)
+            {
+                this.userBLL = new UserBLL();
+                User user = this.userBLL.getUser(user_id);
+                this.tbUsername.Text = user.Username;
+                this.tbRemark.Text = user.Remark;
+                this.cbRoel.SelectedValue = user.Character_id;
+                this.cbTown.SelectedValue = user.Town;
+                this.cbVillage.SelectedValue = user.Village;
+                this.tbPassword.Enabled = false;
+                this.tbConfirmPassword.Enabled = false;
             }
         }
 

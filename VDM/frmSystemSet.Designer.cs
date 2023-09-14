@@ -257,7 +257,7 @@
             this.tabPage2.Controls.Add(this.uiSplitContainer1);
             this.tabPage2.Location = new System.Drawing.Point(0, 40);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(200, 60);
+            this.tabPage2.Size = new System.Drawing.Size(1920, 1040);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "用户管理";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -279,8 +279,8 @@
             this.uiSplitContainer1.Panel2.Controls.Add(this.uiPanel1);
             this.uiSplitContainer1.Panel2.Controls.Add(this.uiNavBar1);
             this.uiSplitContainer1.Panel2.Controls.Add(this.Pagination);
-            this.uiSplitContainer1.Size = new System.Drawing.Size(200, 60);
-            this.uiSplitContainer1.SplitterDistance = 35;
+            this.uiSplitContainer1.Size = new System.Drawing.Size(1920, 1040);
+            this.uiSplitContainer1.SplitterDistance = 336;
             this.uiSplitContainer1.SplitterWidth = 11;
             this.uiSplitContainer1.TabIndex = 0;
             // 
@@ -295,7 +295,7 @@
             this.tvOrg.Name = "tvOrg";
             this.tvOrg.ShowLines = true;
             this.tvOrg.ShowText = false;
-            this.tvOrg.Size = new System.Drawing.Size(35, 60);
+            this.tvOrg.Size = new System.Drawing.Size(336, 1040);
             this.tvOrg.Style = Sunny.UI.UIStyle.Custom;
             this.tvOrg.TabIndex = 0;
             this.tvOrg.Text = null;
@@ -310,7 +310,7 @@
             this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(154, 1);
+            this.uiPanel1.Size = new System.Drawing.Size(1573, 895);
             this.uiPanel1.TabIndex = 3;
             this.uiPanel1.Text = "uiPanel1";
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -366,7 +366,7 @@
             this.dgUser.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgUser.SelectedIndex = -1;
             this.dgUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgUser.Size = new System.Drawing.Size(154, 1);
+            this.dgUser.Size = new System.Drawing.Size(1573, 895);
             this.dgUser.TabIndex = 1;
             this.dgUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUser_CellContentClick);
             // 
@@ -382,7 +382,7 @@
             this.uiNavBar1.Location = new System.Drawing.Point(0, 0);
             this.uiNavBar1.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
             this.uiNavBar1.Name = "uiNavBar1";
-            this.uiNavBar1.Size = new System.Drawing.Size(154, 110);
+            this.uiNavBar1.Size = new System.Drawing.Size(1573, 110);
             this.uiNavBar1.TabIndex = 2;
             this.uiNavBar1.Text = "uiNavBar1";
             // 
@@ -429,14 +429,14 @@
             // 
             this.Pagination.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Pagination.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Pagination.Location = new System.Drawing.Point(0, 25);
+            this.Pagination.Location = new System.Drawing.Point(0, 1005);
             this.Pagination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Pagination.MinimumSize = new System.Drawing.Size(1, 1);
             this.Pagination.Name = "Pagination";
             this.Pagination.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
             this.Pagination.ShowJumpButton = false;
             this.Pagination.ShowText = false;
-            this.Pagination.Size = new System.Drawing.Size(154, 35);
+            this.Pagination.Size = new System.Drawing.Size(1573, 35);
             this.Pagination.TabIndex = 1;
             this.Pagination.Text = "uiPagination1";
             this.Pagination.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -447,7 +447,7 @@
             this.tabPage3.Controls.Add(this.uiNavBar2);
             this.tabPage3.Location = new System.Drawing.Point(0, 40);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1920, 1040);
+            this.tabPage3.Size = new System.Drawing.Size(200, 60);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "角色管理";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -503,7 +503,7 @@
             this.dgRole.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgRole.SelectedIndex = -1;
             this.dgRole.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgRole.Size = new System.Drawing.Size(1920, 930);
+            this.dgRole.Size = new System.Drawing.Size(200, 0);
             this.dgRole.Style = Sunny.UI.UIStyle.Custom;
             this.dgRole.TabIndex = 4;
             // 
@@ -519,7 +519,7 @@
             this.uiNavBar2.Location = new System.Drawing.Point(0, 0);
             this.uiNavBar2.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
             this.uiNavBar2.Name = "uiNavBar2";
-            this.uiNavBar2.Size = new System.Drawing.Size(1920, 110);
+            this.uiNavBar2.Size = new System.Drawing.Size(200, 110);
             this.uiNavBar2.TabIndex = 3;
             this.uiNavBar2.Text = "uiNavBar2";
             // 

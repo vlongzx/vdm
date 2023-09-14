@@ -231,6 +231,12 @@ namespace com.vdm.form
                 MessageBox.Show("请选择你要编辑的行。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            string username = this.dgUser.SelectedRows[0].Cells[1].Value.ToString();
+            if (username == "admin")
+            {
+                MessageBox.Show("系统管理员不允许编辑。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             int user_id = int.Parse(this.dgUser.SelectedRows[0].Cells[0].Value.ToString());
             frmUserinfo userInfo = new frmUserinfo(user_id);
             userInfo.Text = "编辑用户信息";

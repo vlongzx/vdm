@@ -61,7 +61,7 @@
             // 
             // pnlBtm
             // 
-            this.pnlBtm.Location = new System.Drawing.Point(1, 885);
+            this.pnlBtm.Location = new System.Drawing.Point(1, 610);
             this.pnlBtm.Size = new System.Drawing.Size(1625, 55);
             // 
             // btnCancel
@@ -105,7 +105,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1589, 814);
+            this.groupBox1.Size = new System.Drawing.Size(1589, 540);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "旅游信息";
@@ -154,7 +154,7 @@
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel6.Location = new System.Drawing.Point(1186, 214);
             this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(114, 41);
+            this.uiLabel6.Size = new System.Drawing.Size(86, 31);
             this.uiLabel6.TabIndex = 200;
             this.uiLabel6.Text = "所属村";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -199,7 +199,7 @@
             this.uiLabel7.Location = new System.Drawing.Point(828, 216);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(114, 41);
+            this.uiLabel7.Size = new System.Drawing.Size(86, 31);
             this.uiLabel7.TabIndex = 197;
             this.uiLabel7.Text = "所属镇";
             this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,7 +211,7 @@
             this.uiLabel23.Location = new System.Drawing.Point(85, 147);
             this.uiLabel23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel23.Name = "uiLabel23";
-            this.uiLabel23.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel23.Size = new System.Drawing.Size(110, 31);
             this.uiLabel23.TabIndex = 196;
             this.uiLabel23.Text = "注册商标";
             this.uiLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,7 +222,7 @@
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel3.Location = new System.Drawing.Point(828, 147);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel3.Size = new System.Drawing.Size(110, 31);
             this.uiLabel3.TabIndex = 195;
             this.uiLabel3.Text = "经营形式";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -233,7 +233,7 @@
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(449, 147);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel1.Size = new System.Drawing.Size(110, 31);
             this.uiLabel1.TabIndex = 194;
             this.uiLabel1.Text = "联系电话";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,7 +244,7 @@
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(85, 81);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel2.Size = new System.Drawing.Size(110, 31);
             this.uiLabel2.TabIndex = 193;
             this.uiLabel2.Text = "主体名称";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -384,7 +384,7 @@
             this.uiLabel14.Location = new System.Drawing.Point(828, 80);
             this.uiLabel14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel14.Name = "uiLabel14";
-            this.uiLabel14.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel14.Size = new System.Drawing.Size(158, 31);
             this.uiLabel14.TabIndex = 180;
             this.uiLabel14.Text = "统一信用代码";
             this.uiLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -396,7 +396,7 @@
             this.label9.Location = new System.Drawing.Point(1186, 80);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(178, 41);
+            this.label9.Size = new System.Drawing.Size(134, 31);
             this.label9.TabIndex = 179;
             this.label9.Text = "法定代表人";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -408,7 +408,7 @@
             this.label3.Location = new System.Drawing.Point(1186, 147);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 41);
+            this.label3.Size = new System.Drawing.Size(62, 31);
             this.label3.TabIndex = 178;
             this.label3.Text = "地址";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -420,7 +420,7 @@
             this.label2.Location = new System.Drawing.Point(449, 81);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 41);
+            this.label2.Size = new System.Drawing.Size(110, 31);
             this.label2.TabIndex = 177;
             this.label2.Text = "主体类别";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -472,7 +472,7 @@
             this.uiLabel20.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel20.Location = new System.Drawing.Point(94, 333);
             this.uiLabel20.Name = "uiLabel20";
-            this.uiLabel20.Size = new System.Drawing.Size(82, 41);
+            this.uiLabel20.Size = new System.Drawing.Size(62, 31);
             this.uiLabel20.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel20.TabIndex = 13;
             this.uiLabel20.Text = "备注";
@@ -481,7 +481,7 @@
             // frmTourInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1627, 943);
+            this.ClientSize = new System.Drawing.Size(1627, 668);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmTourInfo";
             this.Text = "frmTourInfo";
