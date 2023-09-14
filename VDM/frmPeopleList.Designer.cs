@@ -46,6 +46,10 @@
             this.btExport = new Sunny.UI.UIButton();
             this.btImport = new Sunny.UI.UIButton();
             this.gbSearch = new Sunny.UI.UIGroupBox();
+            this.dpBirthday_From = new Sunny.UI.UIDatePicker();
+            this.dpJoin_party_time_from = new Sunny.UI.UIDatePicker();
+            this.tbIdcard = new Sunny.UI.UITextBox();
+            this.tbPeople_name = new Sunny.UI.UITextBox();
             this.btAdanceSearch = new Sunny.UI.UIButton();
             this.cbMarital_status = new Sunny.UI.UIComboBox();
             this.uiLabel24 = new Sunny.UI.UILabel();
@@ -60,16 +64,12 @@
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.dpBirthday_To = new Sunny.UI.UIDatePicker();
             this.dpJoin_party_time_to = new Sunny.UI.UIDatePicker();
-            this.dpBirthday_From = new Sunny.UI.UIDatePicker();
-            this.dpJoin_party_time_from = new Sunny.UI.UIDatePicker();
             this.cbPolitcal_outlook = new Sunny.UI.UIComboBox();
             this.cbEducation = new Sunny.UI.UIComboBox();
             this.cbSex = new Sunny.UI.UIComboBox();
             this.cbNation = new Sunny.UI.UIComboBox();
             this.cbRelationship = new Sunny.UI.UIComboBox();
             this.tbPhone_number = new Sunny.UI.UITextBox();
-            this.tbIdcard = new Sunny.UI.UITextBox();
-            this.tbPeople_name = new Sunny.UI.UITextBox();
             this.label9 = new Sunny.UI.UILabel();
             this.label3 = new Sunny.UI.UILabel();
             this.label2 = new Sunny.UI.UILabel();
@@ -213,7 +213,7 @@
             // 
             this.btDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btDelete.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btDelete.Location = new System.Drawing.Point(341, 268);
+            this.btDelete.Location = new System.Drawing.Point(341, 225);
             this.btDelete.MinimumSize = new System.Drawing.Size(1, 1);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(154, 62);
@@ -226,7 +226,7 @@
             // 
             this.btEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btEdit.Location = new System.Drawing.Point(181, 268);
+            this.btEdit.Location = new System.Drawing.Point(181, 225);
             this.btEdit.MinimumSize = new System.Drawing.Size(1, 1);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(154, 62);
@@ -239,7 +239,7 @@
             // 
             this.btAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAdd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btAdd.Location = new System.Drawing.Point(21, 268);
+            this.btAdd.Location = new System.Drawing.Point(21, 225);
             this.btAdd.MinimumSize = new System.Drawing.Size(1, 1);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(154, 62);
@@ -252,7 +252,7 @@
             // 
             this.btExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btExport.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btExport.Location = new System.Drawing.Point(661, 268);
+            this.btExport.Location = new System.Drawing.Point(661, 225);
             this.btExport.MinimumSize = new System.Drawing.Size(1, 1);
             this.btExport.Name = "btExport";
             this.btExport.Size = new System.Drawing.Size(154, 62);
@@ -265,7 +265,7 @@
             // 
             this.btImport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btImport.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btImport.Location = new System.Drawing.Point(501, 268);
+            this.btImport.Location = new System.Drawing.Point(501, 225);
             this.btImport.MinimumSize = new System.Drawing.Size(1, 1);
             this.btImport.Name = "btImport";
             this.btImport.Size = new System.Drawing.Size(154, 62);
@@ -278,6 +278,10 @@
             // 
             this.gbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbSearch.Controls.Add(this.dpBirthday_From);
+            this.gbSearch.Controls.Add(this.dpJoin_party_time_from);
+            this.gbSearch.Controls.Add(this.tbIdcard);
+            this.gbSearch.Controls.Add(this.tbPeople_name);
             this.gbSearch.Controls.Add(this.btAdanceSearch);
             this.gbSearch.Controls.Add(this.cbMarital_status);
             this.gbSearch.Controls.Add(this.uiLabel24);
@@ -292,16 +296,12 @@
             this.gbSearch.Controls.Add(this.uiLabel2);
             this.gbSearch.Controls.Add(this.dpBirthday_To);
             this.gbSearch.Controls.Add(this.dpJoin_party_time_to);
-            this.gbSearch.Controls.Add(this.dpBirthday_From);
-            this.gbSearch.Controls.Add(this.dpJoin_party_time_from);
             this.gbSearch.Controls.Add(this.cbPolitcal_outlook);
             this.gbSearch.Controls.Add(this.cbEducation);
             this.gbSearch.Controls.Add(this.cbSex);
             this.gbSearch.Controls.Add(this.cbNation);
             this.gbSearch.Controls.Add(this.cbRelationship);
             this.gbSearch.Controls.Add(this.tbPhone_number);
-            this.gbSearch.Controls.Add(this.tbIdcard);
-            this.gbSearch.Controls.Add(this.tbPeople_name);
             this.gbSearch.Controls.Add(this.label9);
             this.gbSearch.Controls.Add(this.label3);
             this.gbSearch.Controls.Add(this.label2);
@@ -319,20 +319,91 @@
             this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbSearch.Name = "gbSearch";
             this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.gbSearch.Size = new System.Drawing.Size(1888, 227);
+            this.gbSearch.Size = new System.Drawing.Size(1888, 188);
             this.gbSearch.TabIndex = 10;
             this.gbSearch.Text = "查询条件";
             this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.gbSearch.Click += new System.EventHandler(this.uiGroupBox1_Click);
             // 
+            // dpBirthday_From
+            // 
+            this.dpBirthday_From.FillColor = System.Drawing.Color.White;
+            this.dpBirthday_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dpBirthday_From.Location = new System.Drawing.Point(139, 78);
+            this.dpBirthday_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dpBirthday_From.MaxLength = 10;
+            this.dpBirthday_From.MinimumSize = new System.Drawing.Size(63, 0);
+            this.dpBirthday_From.Name = "dpBirthday_From";
+            this.dpBirthday_From.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.dpBirthday_From.Size = new System.Drawing.Size(165, 29);
+            this.dpBirthday_From.SymbolDropDown = 61555;
+            this.dpBirthday_From.SymbolNormal = 61555;
+            this.dpBirthday_From.TabIndex = 142;
+            this.dpBirthday_From.Text = "1900-01-01";
+            this.dpBirthday_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dpBirthday_From.Value = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dpBirthday_From.Watermark = "";
+            // 
+            // dpJoin_party_time_from
+            // 
+            this.dpJoin_party_time_from.CanEmpty = true;
+            this.dpJoin_party_time_from.FillColor = System.Drawing.Color.White;
+            this.dpJoin_party_time_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dpJoin_party_time_from.Location = new System.Drawing.Point(139, 114);
+            this.dpJoin_party_time_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dpJoin_party_time_from.MaxLength = 10;
+            this.dpJoin_party_time_from.MinimumSize = new System.Drawing.Size(63, 0);
+            this.dpJoin_party_time_from.Name = "dpJoin_party_time_from";
+            this.dpJoin_party_time_from.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.dpJoin_party_time_from.Size = new System.Drawing.Size(165, 29);
+            this.dpJoin_party_time_from.SymbolDropDown = 61555;
+            this.dpJoin_party_time_from.SymbolNormal = 61555;
+            this.dpJoin_party_time_from.TabIndex = 141;
+            this.dpJoin_party_time_from.Text = "2023-08-25";
+            this.dpJoin_party_time_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dpJoin_party_time_from.Value = new System.DateTime(2023, 8, 25, 20, 18, 35, 482);
+            this.dpJoin_party_time_from.Watermark = "";
+            // 
+            // tbIdcard
+            // 
+            this.tbIdcard.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbIdcard.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbIdcard.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbIdcard.Location = new System.Drawing.Point(139, 149);
+            this.tbIdcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbIdcard.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbIdcard.Name = "tbIdcard";
+            this.tbIdcard.Padding = new System.Windows.Forms.Padding(5);
+            this.tbIdcard.ShowText = false;
+            this.tbIdcard.Size = new System.Drawing.Size(165, 29);
+            this.tbIdcard.TabIndex = 131;
+            this.tbIdcard.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbIdcard.Watermark = "";
+            // 
+            // tbPeople_name
+            // 
+            this.tbPeople_name.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbPeople_name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPeople_name.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPeople_name.Location = new System.Drawing.Point(139, 43);
+            this.tbPeople_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPeople_name.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbPeople_name.Name = "tbPeople_name";
+            this.tbPeople_name.Padding = new System.Windows.Forms.Padding(5);
+            this.tbPeople_name.ShowText = false;
+            this.tbPeople_name.Size = new System.Drawing.Size(165, 29);
+            this.tbPeople_name.TabIndex = 130;
+            this.tbPeople_name.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPeople_name.Watermark = "";
+            // 
             // btAdanceSearch
             // 
             this.btAdanceSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAdanceSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btAdanceSearch.Location = new System.Drawing.Point(1605, 88);
+            this.btAdanceSearch.Location = new System.Drawing.Point(1568, 72);
             this.btAdanceSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.btAdanceSearch.Name = "btAdanceSearch";
-            this.btAdanceSearch.Size = new System.Drawing.Size(154, 62);
+            this.btAdanceSearch.Size = new System.Drawing.Size(131, 62);
             this.btAdanceSearch.TabIndex = 62;
             this.btAdanceSearch.Text = "高级查询(&Q)";
             this.btAdanceSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -343,7 +414,7 @@
             this.cbMarital_status.DataSource = null;
             this.cbMarital_status.FillColor = System.Drawing.Color.White;
             this.cbMarital_status.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbMarital_status.Location = new System.Drawing.Point(1072, 89);
+            this.cbMarital_status.Location = new System.Drawing.Point(1040, 78);
             this.cbMarital_status.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbMarital_status.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbMarital_status.Name = "cbMarital_status";
@@ -357,7 +428,7 @@
             // 
             this.uiLabel24.AutoSize = true;
             this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel24.Location = new System.Drawing.Point(963, 134);
+            this.uiLabel24.Location = new System.Drawing.Point(963, 113);
             this.uiLabel24.Name = "uiLabel24";
             this.uiLabel24.Size = new System.Drawing.Size(110, 31);
             this.uiLabel24.TabIndex = 165;
@@ -381,7 +452,7 @@
             this.tbSkill_type.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbSkill_type.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbSkill_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbSkill_type.Location = new System.Drawing.Point(761, 135);
+            this.tbSkill_type.Location = new System.Drawing.Point(729, 114);
             this.tbSkill_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbSkill_type.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbSkill_type.Name = "tbSkill_type";
@@ -396,7 +467,7 @@
             // 
             this.uiLabel25.AutoSize = true;
             this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel25.Location = new System.Drawing.Point(963, 180);
+            this.uiLabel25.Location = new System.Drawing.Point(963, 148);
             this.uiLabel25.Name = "uiLabel25";
             this.uiLabel25.Size = new System.Drawing.Size(86, 31);
             this.uiLabel25.TabIndex = 154;
@@ -407,7 +478,7 @@
             // 
             this.uiLabel26.AutoSize = true;
             this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel26.Location = new System.Drawing.Point(652, 180);
+            this.uiLabel26.Location = new System.Drawing.Point(652, 148);
             this.uiLabel26.Name = "uiLabel26";
             this.uiLabel26.Size = new System.Drawing.Size(110, 31);
             this.uiLabel26.TabIndex = 155;
@@ -419,7 +490,7 @@
             this.cbTown.DataSource = null;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTown.Location = new System.Drawing.Point(761, 181);
+            this.cbTown.Location = new System.Drawing.Point(729, 149);
             this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbTown.Name = "cbTown";
@@ -435,7 +506,7 @@
             this.cbVillage.DataSource = null;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbVillage.Location = new System.Drawing.Point(1072, 181);
+            this.cbVillage.Location = new System.Drawing.Point(1040, 149);
             this.cbVillage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVillage.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbVillage.Name = "cbVillage";
@@ -449,7 +520,7 @@
             // 
             this.uiLabel3.AutoSize = true;
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel3.Location = new System.Drawing.Point(346, 88);
+            this.uiLabel3.Location = new System.Drawing.Point(346, 77);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(54, 31);
             this.uiLabel3.TabIndex = 147;
@@ -460,7 +531,7 @@
             // 
             this.uiLabel1.AutoSize = true;
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(36, 88);
+            this.uiLabel1.Location = new System.Drawing.Point(36, 77);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(150, 31);
             this.uiLabel1.TabIndex = 146;
@@ -482,7 +553,7 @@
             // 
             this.dpBirthday_To.FillColor = System.Drawing.Color.White;
             this.dpBirthday_To.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpBirthday_To.Location = new System.Drawing.Point(477, 89);
+            this.dpBirthday_To.Location = new System.Drawing.Point(443, 78);
             this.dpBirthday_To.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpBirthday_To.MaxLength = 10;
             this.dpBirthday_To.MinimumSize = new System.Drawing.Size(63, 0);
@@ -501,7 +572,7 @@
             // 
             this.dpJoin_party_time_to.FillColor = System.Drawing.Color.White;
             this.dpJoin_party_time_to.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpJoin_party_time_to.Location = new System.Drawing.Point(477, 135);
+            this.dpJoin_party_time_to.Location = new System.Drawing.Point(443, 114);
             this.dpJoin_party_time_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpJoin_party_time_to.MaxLength = 10;
             this.dpJoin_party_time_to.MinimumSize = new System.Drawing.Size(63, 0);
@@ -516,51 +587,12 @@
             this.dpJoin_party_time_to.Value = new System.DateTime(2023, 8, 25, 20, 18, 35, 482);
             this.dpJoin_party_time_to.Watermark = "";
             // 
-            // dpBirthday_From
-            // 
-            this.dpBirthday_From.FillColor = System.Drawing.Color.White;
-            this.dpBirthday_From.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpBirthday_From.Location = new System.Drawing.Point(178, 89);
-            this.dpBirthday_From.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dpBirthday_From.MaxLength = 10;
-            this.dpBirthday_From.MinimumSize = new System.Drawing.Size(63, 0);
-            this.dpBirthday_From.Name = "dpBirthday_From";
-            this.dpBirthday_From.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.dpBirthday_From.Size = new System.Drawing.Size(165, 29);
-            this.dpBirthday_From.SymbolDropDown = 61555;
-            this.dpBirthday_From.SymbolNormal = 61555;
-            this.dpBirthday_From.TabIndex = 142;
-            this.dpBirthday_From.Text = "1900-01-01";
-            this.dpBirthday_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dpBirthday_From.Value = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dpBirthday_From.Watermark = "";
-            // 
-            // dpJoin_party_time_from
-            // 
-            this.dpJoin_party_time_from.CanEmpty = true;
-            this.dpJoin_party_time_from.FillColor = System.Drawing.Color.White;
-            this.dpJoin_party_time_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpJoin_party_time_from.Location = new System.Drawing.Point(178, 135);
-            this.dpJoin_party_time_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dpJoin_party_time_from.MaxLength = 10;
-            this.dpJoin_party_time_from.MinimumSize = new System.Drawing.Size(63, 0);
-            this.dpJoin_party_time_from.Name = "dpJoin_party_time_from";
-            this.dpJoin_party_time_from.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.dpJoin_party_time_from.Size = new System.Drawing.Size(165, 29);
-            this.dpJoin_party_time_from.SymbolDropDown = 61555;
-            this.dpJoin_party_time_from.SymbolNormal = 61555;
-            this.dpJoin_party_time_from.TabIndex = 141;
-            this.dpJoin_party_time_from.Text = "2023-08-25";
-            this.dpJoin_party_time_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dpJoin_party_time_from.Value = new System.DateTime(2023, 8, 25, 20, 18, 35, 482);
-            this.dpJoin_party_time_from.Watermark = "";
-            // 
             // cbPolitcal_outlook
             // 
             this.cbPolitcal_outlook.DataSource = null;
             this.cbPolitcal_outlook.FillColor = System.Drawing.Color.White;
             this.cbPolitcal_outlook.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbPolitcal_outlook.Location = new System.Drawing.Point(761, 89);
+            this.cbPolitcal_outlook.Location = new System.Drawing.Point(729, 78);
             this.cbPolitcal_outlook.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbPolitcal_outlook.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbPolitcal_outlook.Name = "cbPolitcal_outlook";
@@ -575,7 +607,7 @@
             this.cbEducation.DataSource = null;
             this.cbEducation.FillColor = System.Drawing.Color.White;
             this.cbEducation.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbEducation.Location = new System.Drawing.Point(1072, 135);
+            this.cbEducation.Location = new System.Drawing.Point(1040, 114);
             this.cbEducation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbEducation.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbEducation.Name = "cbEducation";
@@ -590,7 +622,7 @@
             this.cbSex.DataSource = null;
             this.cbSex.FillColor = System.Drawing.Color.White;
             this.cbSex.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbSex.Location = new System.Drawing.Point(1072, 43);
+            this.cbSex.Location = new System.Drawing.Point(1040, 43);
             this.cbSex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbSex.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbSex.Name = "cbSex";
@@ -605,7 +637,7 @@
             this.cbNation.DataSource = null;
             this.cbNation.FillColor = System.Drawing.Color.White;
             this.cbNation.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbNation.Location = new System.Drawing.Point(761, 43);
+            this.cbNation.Location = new System.Drawing.Point(729, 43);
             this.cbNation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbNation.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbNation.Name = "cbNation";
@@ -620,7 +652,7 @@
             this.cbRelationship.DataSource = null;
             this.cbRelationship.FillColor = System.Drawing.Color.White;
             this.cbRelationship.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbRelationship.Location = new System.Drawing.Point(477, 43);
+            this.cbRelationship.Location = new System.Drawing.Point(443, 43);
             this.cbRelationship.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbRelationship.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbRelationship.Name = "cbRelationship";
@@ -635,7 +667,7 @@
             this.tbPhone_number.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbPhone_number.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPhone_number.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPhone_number.Location = new System.Drawing.Point(477, 181);
+            this.tbPhone_number.Location = new System.Drawing.Point(443, 149);
             this.tbPhone_number.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPhone_number.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbPhone_number.Name = "tbPhone_number";
@@ -646,43 +678,11 @@
             this.tbPhone_number.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPhone_number.Watermark = "";
             // 
-            // tbIdcard
-            // 
-            this.tbIdcard.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbIdcard.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbIdcard.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbIdcard.Location = new System.Drawing.Point(178, 181);
-            this.tbIdcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbIdcard.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbIdcard.Name = "tbIdcard";
-            this.tbIdcard.Padding = new System.Windows.Forms.Padding(5);
-            this.tbIdcard.ShowText = false;
-            this.tbIdcard.Size = new System.Drawing.Size(165, 29);
-            this.tbIdcard.TabIndex = 131;
-            this.tbIdcard.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbIdcard.Watermark = "";
-            // 
-            // tbPeople_name
-            // 
-            this.tbPeople_name.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbPeople_name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPeople_name.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPeople_name.Location = new System.Drawing.Point(178, 43);
-            this.tbPeople_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbPeople_name.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbPeople_name.Name = "tbPeople_name";
-            this.tbPeople_name.Padding = new System.Windows.Forms.Padding(5);
-            this.tbPeople_name.ShowText = false;
-            this.tbPeople_name.Size = new System.Drawing.Size(165, 29);
-            this.tbPeople_name.TabIndex = 130;
-            this.tbPeople_name.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbPeople_name.Watermark = "";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(652, 88);
+            this.label9.Location = new System.Drawing.Point(652, 77);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 31);
@@ -718,7 +718,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(963, 88);
+            this.label15.Location = new System.Drawing.Point(963, 77);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(110, 31);
@@ -730,7 +730,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(36, 134);
+            this.label10.Location = new System.Drawing.Point(36, 113);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(150, 31);
@@ -742,7 +742,7 @@
             // 
             this.uiLabel4.AutoSize = true;
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel4.Location = new System.Drawing.Point(652, 134);
+            this.uiLabel4.Location = new System.Drawing.Point(652, 113);
             this.uiLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(110, 31);
@@ -754,7 +754,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(346, 180);
+            this.label13.Location = new System.Drawing.Point(346, 148);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(110, 31);
@@ -766,7 +766,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(36, 180);
+            this.label12.Location = new System.Drawing.Point(36, 148);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(110, 31);
@@ -778,7 +778,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(346, 134);
+            this.label8.Location = new System.Drawing.Point(346, 113);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 31);
@@ -790,10 +790,10 @@
             // 
             this.btReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btReset.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btReset.Location = new System.Drawing.Point(1445, 88);
+            this.btReset.Location = new System.Drawing.Point(1431, 72);
             this.btReset.MinimumSize = new System.Drawing.Size(1, 1);
             this.btReset.Name = "btReset";
-            this.btReset.Size = new System.Drawing.Size(154, 62);
+            this.btReset.Size = new System.Drawing.Size(131, 62);
             this.btReset.TabIndex = 62;
             this.btReset.Text = "重置(&R)";
             this.btReset.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -803,10 +803,10 @@
             // 
             this.btSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btSearch.Location = new System.Drawing.Point(1285, 88);
+            this.btSearch.Location = new System.Drawing.Point(1294, 72);
             this.btSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(154, 62);
+            this.btSearch.Size = new System.Drawing.Size(131, 62);
             this.btSearch.TabIndex = 61;
             this.btSearch.Text = "查询(&S)";
             this.btSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -864,7 +864,7 @@
             this.dgPeopleList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgPeopleList.SelectedIndex = -1;
             this.dgPeopleList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgPeopleList.Size = new System.Drawing.Size(1875, 649);
+            this.dgPeopleList.Size = new System.Drawing.Size(1875, 692);
             this.dgPeopleList.TabIndex = 7;
             this.dgPeopleList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPeopleList_CellContentClick);
             // 
@@ -875,12 +875,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbResult.Controls.Add(this.dgPeopleList);
             this.gbResult.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gbResult.Location = new System.Drawing.Point(24, 337);
+            this.gbResult.Location = new System.Drawing.Point(24, 294);
             this.gbResult.Margin = new System.Windows.Forms.Padding(4);
             this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbResult.Name = "gbResult";
             this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.gbResult.Size = new System.Drawing.Size(1883, 685);
+            this.gbResult.Size = new System.Drawing.Size(1883, 728);
             this.gbResult.TabIndex = 5;
             this.gbResult.TabStop = false;
             this.gbResult.Text = "数据列表";
