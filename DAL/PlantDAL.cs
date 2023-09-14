@@ -40,6 +40,13 @@ namespace com.vdm.dal
             return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
         }
 
+
+        public DataTable queryPlantByIdCard(string IdCard,long Plant_id)
+        {
+            string sql = "select * from t_plant where idcard = '" + IdCard + "'";
+            return this.SqlDbHelper.ExecuteDataTable(sql);
+        }
+
         /// <summary>
         ///  生成查询条件和分页部分的SQL语句
         /// </summary>

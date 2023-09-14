@@ -200,8 +200,8 @@ namespace com.vdm.form
                                      && CheckCB(cbPlant_brand, "请选择种植品种")
                       && CheckCB(cbTown, "请选择所属镇")
                        //&& CheckCB(cbVillage, "请选择所属村")
-
-                ;
+                       && IsExistRecord(this.tbIdcard.Text.Trim(), this.plant_id);
+            ;
         }
 
         //校验下拉框是否选择
@@ -238,6 +238,24 @@ namespace com.vdm.form
                 ShowWarningDialog(Message);
                 return false;
             }
+            return true;
+        }
+
+        public bool IsExistRecord(string IdCard, long Plant_Id)
+        {
+            //判断当前增加的身份证号码有没有畜牧登记信息，如果有给与提示
+            this.plantBLL = new PlantBLL();
+            bool isExist = this.plantBLL.getPlantByIdCard(IdCard, Plant_Id);
+
+            if (isExist == true)
+            {
+                DialogResult res = MessageBox.Show("身份证编号：" + IdCard + "已存在种植登记信息，是否确认添加？", "温馨提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (res == DialogResult.No)
+                {
+                    return false;
+                }
+            }
+
             return true;
         }
         /// <summary>

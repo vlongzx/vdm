@@ -39,6 +39,24 @@ namespace com.vdm.bll
         {
             return this.plantDAL.queryAllPlant(condition);
         }
+        public bool getPlantByIdCard(string IdCard,long Plant_id)
+        {
+            DataTable dt =  this.plantDAL.queryPlantByIdCard(IdCard, Plant_id);
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                //判断是否是当前编辑的记录
+                foreach (DataRow row in dt.Rows)
+                {
+                    if (row["plant_id"].ToString() == Plant_id.ToString())
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            return false;
+        }
 
 
         public Plant getPlant(int plant_id)
