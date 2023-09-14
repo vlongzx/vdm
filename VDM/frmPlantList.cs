@@ -165,13 +165,13 @@ namespace com.vdm.form
 
 
             //初始化种植品种
-            List<KeyValue> list_plant_brand = dictBLL.getDict("plant_brand");
-            if (list_plant_brand != null)
-            {
-                this.cbPlant_brand.DataSource = list_plant_brand;
-                this.cbPlant_brand.DisplayMember = "value";
-                this.cbPlant_brand.ValueMember = "key";
-            }
+            //List<KeyValue> list_plant_brand = dictBLL.getDict("plant_brand");
+            //if (list_plant_brand != null)
+            //{
+            //    this.cbPlant_brand.DataSource = list_plant_brand;
+            //    this.cbPlant_brand.DisplayMember = "value";
+            //    this.cbPlant_brand.ValueMember = "key";
+            //}
 
             //初始化种植类别
             List<KeyValue> list_plant_type = dictBLL.getDict("plant_type");
@@ -268,7 +268,7 @@ namespace com.vdm.form
             {
                 plant_area = double.Parse(this.tbPlant_area.Text.Trim());
             }
-            string plant_brand = this.cbPlant_brand.SelectedValue.ToString();
+            string plant_brand = this.tbPlant_brand.Text.Trim();
             string plant_type = this.ctvPlant_type.Text.ToString();
             string contact_person = this.tbContact_person.Text.Trim();
             string idcard = this.tbIdcard.Text.Trim();
@@ -340,7 +340,7 @@ namespace com.vdm.form
             this.cbIs_plan.SelectedValue = "";
             this.ctvManage_skill_method.Text = "";
             this.tbOutput.Text = "";
-            this.cbPlant_brand.SelectedValue = "";
+            this.tbPlant_brand.Text= "";
             this.ctvPlant_type.Text = "";
             this.ctvSale_way.Text = "";
             this.cbTown.SelectedValue = "";

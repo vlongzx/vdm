@@ -48,7 +48,6 @@
             this.ctvManage_skill_method = new Sunny.UI.UIComboTreeView();
             this.ctvSale_way = new Sunny.UI.UIComboTreeView();
             this.ctvPlant_type = new Sunny.UI.UIComboTreeView();
-            this.cbPlant_brand = new Sunny.UI.UIComboBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiLabel9 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
@@ -78,6 +77,7 @@
             this.dgPlantList = new Sunny.UI.UIDataGridView();
             this.gbResult = new Sunny.UI.UIGroupBox();
             this.btEdit = new Sunny.UI.UIButton();
+            this.tbPlant_brand = new Sunny.UI.UITextBox();
             this.gbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPlantList)).BeginInit();
             this.gbResult.SuspendLayout();
@@ -251,7 +251,6 @@
             this.gbSearch.Controls.Add(this.tbYear_yield_from);
             this.gbSearch.Controls.Add(this.uiLabel6);
             this.gbSearch.Controls.Add(this.cbTown);
-            this.gbSearch.Controls.Add(this.cbPlant_brand);
             this.gbSearch.Controls.Add(this.cbVillage);
             this.gbSearch.Controls.Add(this.uiLabel7);
             this.gbSearch.Controls.Add(this.uiLabel23);
@@ -263,6 +262,7 @@
             this.gbSearch.Controls.Add(this.cbDevelop_willing);
             this.gbSearch.Controls.Add(this.cbIs_plan);
             this.gbSearch.Controls.Add(this.tbAddress);
+            this.gbSearch.Controls.Add(this.tbPlant_brand);
             this.gbSearch.Controls.Add(this.tbPhone_number);
             this.gbSearch.Controls.Add(this.tbOutput);
             this.gbSearch.Controls.Add(this.tbPlant_area);
@@ -340,22 +340,6 @@
             this.ctvPlant_type.TabIndex = 311;
             this.ctvPlant_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.ctvPlant_type.Watermark = "";
-            // 
-            // cbPlant_brand
-            // 
-            this.cbPlant_brand.DataSource = null;
-            this.cbPlant_brand.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
-            this.cbPlant_brand.FillColor = System.Drawing.Color.White;
-            this.cbPlant_brand.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbPlant_brand.Location = new System.Drawing.Point(1092, 73);
-            this.cbPlant_brand.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbPlant_brand.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbPlant_brand.Name = "cbPlant_brand";
-            this.cbPlant_brand.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbPlant_brand.Size = new System.Drawing.Size(165, 29);
-            this.cbPlant_brand.TabIndex = 170;
-            this.cbPlant_brand.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbPlant_brand.Watermark = "";
             // 
             // uiLabel1
             // 
@@ -792,6 +776,22 @@
             this.btEdit.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
+            // tbPlant_brand
+            // 
+            this.tbPlant_brand.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbPlant_brand.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPlant_brand.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPlant_brand.Location = new System.Drawing.Point(1092, 73);
+            this.tbPlant_brand.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPlant_brand.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbPlant_brand.Name = "tbPlant_brand";
+            this.tbPlant_brand.Padding = new System.Windows.Forms.Padding(5);
+            this.tbPlant_brand.ShowText = false;
+            this.tbPlant_brand.Size = new System.Drawing.Size(165, 29);
+            this.tbPlant_brand.TabIndex = 130;
+            this.tbPlant_brand.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPlant_brand.Watermark = "";
+            // 
             // frmPlantList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -849,7 +849,6 @@
         private Sunny.UI.UIDataGridView dgPlantList;
         private Sunny.UI.UIGroupBox gbResult;
         private Sunny.UI.UIButton btEdit;
-        private Sunny.UI.UIComboBox cbPlant_brand;
         private Sunny.UI.UILabel uiLabel9;
         private Sunny.UI.UIComboBox cbInsect_ill;
         private Sunny.UI.UIComboBox cbDevelop_willing;
@@ -862,5 +861,6 @@
         private Sunny.UI.UIComboTreeView ctvManage_skill_method;
         private Sunny.UI.UIComboTreeView ctvSale_way;
         private Sunny.UI.UIComboTreeView ctvPlant_type;
+        private Sunny.UI.UITextBox tbPlant_brand;
     }
 }

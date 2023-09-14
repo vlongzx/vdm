@@ -58,7 +58,7 @@ namespace com.vdm.form
                     this.cbInsect_ill.SelectedValue = plant.Insect_ill;
                     this.cbIs_plan.SelectedValue = plant.Is_plan;
                     this.ctvManage_skill_method.Text = plant.Manage_skill_method;
-                    this.cbPlant_brand.SelectedValue = plant.Plant_brand;
+                    this.tbPlant_brand.Text = plant.Plant_brand;
                     this.ctvPlant_type.Text = plant.Plant_type;
                     this.ctvSale_way.Text = plant.Sale_way;
                     this.cbTown.SelectedValue = plant.Town;
@@ -123,13 +123,13 @@ namespace com.vdm.form
             }
 
             //初始化种植品种
-            List<KeyValue> list_plant_brand = dictBLL.getDict("plant_brand");
-            if (list_plant_brand != null)
-            {
-                this.cbPlant_brand.DataSource = list_plant_brand;
-                this.cbPlant_brand.DisplayMember = "value";
-                this.cbPlant_brand.ValueMember = "key";
-            }
+            //List<KeyValue> list_plant_brand = dictBLL.getDict("plant_brand");
+            //if (list_plant_brand != null)
+            //{
+            //    this.cbPlant_brand.DataSource = list_plant_brand;
+            //    this.cbPlant_brand.DisplayMember = "value";
+            //    this.cbPlant_brand.ValueMember = "key";
+            //}
 
             //初始化种植类别
             List<KeyValue> list_plant_type = dictBLL.getDict("plant_type");
@@ -197,7 +197,7 @@ namespace com.vdm.form
          && CheckCB(cbDevelop_willing, "请选择发展意愿")
            && CheckCB(cbInsect_ill, "请选择主要虫病害")
                        && CheckCB(cbIs_plan, "请选择是否符合规划")
-                                     && CheckCB(cbPlant_brand, "请选择种植品种")
+                                     && CheckEmpty(tbPlant_brand, "请选择种植品种")
                       && CheckCB(cbTown, "请选择所属镇")
                        //&& CheckCB(cbVillage, "请选择所属村")
                        && IsExistRecord(this.tbIdcard.Text.Trim(), this.plant_id);
@@ -277,7 +277,7 @@ namespace com.vdm.form
             {
                 plant_area = double.Parse(this.tbPlant_area.Text.Trim());
             }
-            string plant_brand = this.cbPlant_brand.SelectedValue.ToString();
+            string plant_brand = this.tbPlant_brand.Text;
             string plant_type = this.ctvPlant_type.Text.ToString();
             string contact_person = this.tbContact_person.Text.Trim();
             string idcard = this.tbIdcard.Text.Trim();
