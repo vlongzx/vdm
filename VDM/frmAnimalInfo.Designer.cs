@@ -304,7 +304,7 @@
             this.cbSolid_pollution.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbSolid_pollution.FillColor = System.Drawing.Color.White;
             this.cbSolid_pollution.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbSolid_pollution.Location = new System.Drawing.Point(546, 314);
+            this.cbSolid_pollution.Location = new System.Drawing.Point(558, 314);
             this.cbSolid_pollution.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbSolid_pollution.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbSolid_pollution.Name = "cbSolid_pollution";

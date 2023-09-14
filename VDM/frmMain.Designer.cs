@@ -41,23 +41,12 @@
             this.btTour = new Sunny.UI.UIHeaderButton();
             this.btPlant = new Sunny.UI.UIHeaderButton();
             this.btSystemSet = new Sunny.UI.UIHeaderButton();
-            this.labAccountName = new Sunny.UI.UILabel();
-            this.lbLoginTime = new Sunny.UI.UILabel();
             this.uiHeaderButton1 = new Sunny.UI.UIHeaderButton();
-            this.labTown = new Sunny.UI.UILabel();
-            this.labVillage = new Sunny.UI.UILabel();
-            this.labRoleName = new Sunny.UI.UILabel();
-            this.Footer.SuspendLayout();
             this.Header.SuspendLayout();
             this.SuspendLayout();
             // 
             // Footer
             // 
-            this.Footer.Controls.Add(this.labRoleName);
-            this.Footer.Controls.Add(this.labVillage);
-            this.Footer.Controls.Add(this.labTown);
-            this.Footer.Controls.Add(this.lbLoginTime);
-            this.Footer.Controls.Add(this.labAccountName);
             this.Footer.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Footer.Location = new System.Drawing.Point(0, 727);
             this.Footer.Size = new System.Drawing.Size(1797, 56);
@@ -77,14 +66,14 @@
             this.Header.Controls.Add(this.btFamer);
             this.Header.Controls.Add(this.btPeople);
             this.Header.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
-            this.Header.Size = new System.Drawing.Size(1797, 110);
+            this.Header.Size = new System.Drawing.Size(1797, 92);
             // 
             // btPeople
             // 
             this.btPeople.CircleColor = System.Drawing.Color.Purple;
             this.btPeople.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btPeople.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btPeople.Location = new System.Drawing.Point(53, 12);
+            this.btPeople.Location = new System.Drawing.Point(53, 0);
             this.btPeople.MinimumSize = new System.Drawing.Size(1, 1);
             this.btPeople.Name = "btPeople";
             this.btPeople.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
@@ -106,7 +95,7 @@
             this.btFamer.CircleHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btFamer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btFamer.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btFamer.Location = new System.Drawing.Point(173, 12);
+            this.btFamer.Location = new System.Drawing.Point(173, 0);
             this.btFamer.MinimumSize = new System.Drawing.Size(1, 1);
             this.btFamer.Name = "btFamer";
             this.btFamer.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
@@ -133,7 +122,7 @@
             this.btLand.CircleHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btLand.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btLand.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btLand.Location = new System.Drawing.Point(293, 12);
+            this.btLand.Location = new System.Drawing.Point(293, 0);
             this.btLand.MinimumSize = new System.Drawing.Size(1, 1);
             this.btLand.Name = "btLand";
             this.btLand.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
@@ -158,7 +147,7 @@
             this.btCompany.CircleHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btCompany.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btCompany.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btCompany.Location = new System.Drawing.Point(413, 12);
+            this.btCompany.Location = new System.Drawing.Point(413, 0);
             this.btCompany.MinimumSize = new System.Drawing.Size(1, 1);
             this.btCompany.Name = "btCompany";
             this.btCompany.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
@@ -182,7 +171,7 @@
             this.btHouse.CircleHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btHouse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btHouse.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btHouse.Location = new System.Drawing.Point(533, 12);
+            this.btHouse.Location = new System.Drawing.Point(533, 0);
             this.btHouse.MinimumSize = new System.Drawing.Size(1, 1);
             this.btHouse.Name = "btHouse";
             this.btHouse.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
@@ -207,7 +196,7 @@
             this.uiHeaderButton4.CircleHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.uiHeaderButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiHeaderButton4.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiHeaderButton4.Location = new System.Drawing.Point(773, 12);
+            this.uiHeaderButton4.Location = new System.Drawing.Point(773, 0);
             this.uiHeaderButton4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiHeaderButton4.Name = "uiHeaderButton4";
             this.uiHeaderButton4.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
@@ -232,7 +221,7 @@
             this.btAnimal.CircleHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btAnimal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAnimal.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btAnimal.Location = new System.Drawing.Point(893, 12);
+            this.btAnimal.Location = new System.Drawing.Point(897, 0);
             this.btAnimal.MinimumSize = new System.Drawing.Size(1, 1);
             this.btAnimal.Name = "btAnimal";
             this.btAnimal.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
@@ -257,7 +246,7 @@
             this.btTour.CircleHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btTour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btTour.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btTour.Location = new System.Drawing.Point(1013, 12);
+            this.btTour.Location = new System.Drawing.Point(1013, 0);
             this.btTour.MinimumSize = new System.Drawing.Size(1, 1);
             this.btTour.Name = "btTour";
             this.btTour.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
@@ -282,7 +271,7 @@
             this.btPlant.CircleHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btPlant.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btPlant.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btPlant.Location = new System.Drawing.Point(1133, 12);
+            this.btPlant.Location = new System.Drawing.Point(1133, 0);
             this.btPlant.MinimumSize = new System.Drawing.Size(1, 1);
             this.btPlant.Name = "btPlant";
             this.btPlant.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
@@ -307,7 +296,7 @@
             this.btSystemSet.CircleHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btSystemSet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSystemSet.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btSystemSet.Location = new System.Drawing.Point(1253, 12);
+            this.btSystemSet.Location = new System.Drawing.Point(1253, 0);
             this.btSystemSet.MinimumSize = new System.Drawing.Size(1, 1);
             this.btSystemSet.Name = "btSystemSet";
             this.btSystemSet.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
@@ -325,37 +314,13 @@
             this.btSystemSet.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btSystemSet.Click += new System.EventHandler(this.btSystemSet_Click);
             // 
-            // labAccountName
-            // 
-            this.labAccountName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labAccountName.AutoSize = true;
-            this.labAccountName.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labAccountName.Location = new System.Drawing.Point(1079, 14);
-            this.labAccountName.Name = "labAccountName";
-            this.labAccountName.Size = new System.Drawing.Size(110, 31);
-            this.labAccountName.TabIndex = 0;
-            this.labAccountName.Text = "当前用户";
-            this.labAccountName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbLoginTime
-            // 
-            this.lbLoginTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbLoginTime.AutoSize = true;
-            this.lbLoginTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbLoginTime.Location = new System.Drawing.Point(22, 14);
-            this.lbLoginTime.Name = "lbLoginTime";
-            this.lbLoginTime.Size = new System.Drawing.Size(110, 31);
-            this.lbLoginTime.TabIndex = 1;
-            this.lbLoginTime.Text = "登录时间";
-            this.lbLoginTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // uiHeaderButton1
             // 
             this.uiHeaderButton1.CircleColor = System.Drawing.Color.DarkCyan;
             this.uiHeaderButton1.CircleHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.uiHeaderButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiHeaderButton1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiHeaderButton1.Location = new System.Drawing.Point(653, 12);
+            this.uiHeaderButton1.Location = new System.Drawing.Point(653, 0);
             this.uiHeaderButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiHeaderButton1.Name = "uiHeaderButton1";
             this.uiHeaderButton1.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
@@ -375,42 +340,6 @@
             this.uiHeaderButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiHeaderButton1.Click += new System.EventHandler(this.btManager_Click);
             // 
-            // labTown
-            // 
-            this.labTown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labTown.AutoSize = true;
-            this.labTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labTown.Location = new System.Drawing.Point(1446, 14);
-            this.labTown.Name = "labTown";
-            this.labTown.Size = new System.Drawing.Size(110, 31);
-            this.labTown.TabIndex = 2;
-            this.labTown.Text = "所属乡镇";
-            this.labTown.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labVillage
-            // 
-            this.labVillage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labVillage.AutoSize = true;
-            this.labVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labVillage.Location = new System.Drawing.Point(1613, 14);
-            this.labVillage.Name = "labVillage";
-            this.labVillage.Size = new System.Drawing.Size(86, 31);
-            this.labVillage.TabIndex = 3;
-            this.labVillage.Text = "所属村";
-            this.labVillage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labRoleName
-            // 
-            this.labRoleName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labRoleName.AutoSize = true;
-            this.labRoleName.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labRoleName.Location = new System.Drawing.Point(1266, 14);
-            this.labRoleName.Name = "labRoleName";
-            this.labRoleName.Size = new System.Drawing.Size(62, 31);
-            this.labRoleName.TabIndex = 4;
-            this.labRoleName.Text = "角色";
-            this.labRoleName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -422,8 +351,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ZoomScaleRect = new System.Drawing.Rectangle(22, 22, 1797, 783);
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.Footer.ResumeLayout(false);
-            this.Footer.PerformLayout();
             this.Header.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -442,12 +369,7 @@
         private Sunny.UI.UIHeaderButton btHouse;
         private Sunny.UI.UIHeaderButton btCompany;
         private Sunny.UI.UIHeaderButton btLand;
-        private Sunny.UI.UILabel labAccountName;
-        private Sunny.UI.UILabel lbLoginTime;
         private Sunny.UI.UIHeaderButton uiHeaderButton1;
-        private Sunny.UI.UILabel labVillage;
-        private Sunny.UI.UILabel labTown;
-        private Sunny.UI.UILabel labRoleName;
     }
 }
 

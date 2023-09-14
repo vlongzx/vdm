@@ -24,12 +24,12 @@ namespace com.vdm.form
         {
             //设置关联
             Header.TabControl = MainTabControl;
-            Footer.Text = "陕西奥维纳斯软件技术有限公司提供技术支持";
-            this.labAccountName.Text ="当前操作员："+ LoginInfo.CurrentUser.AccountName;
-            this.labTown.Text = "所属乡镇：" + LoginInfo.CurrentUser.Town;
-            this.labVillage.Text = "所属村：" + LoginInfo.CurrentUser.Village;
-            this.labRoleName.Text = "当前角色：" + LoginInfo.CurrentUser.RoleName;
-            this.lbLoginTime.Text ="登录时间："+ LoginInfo.CurrentUser.LoginTime.ToString();
+            //Footer.Text = "陕西奥维纳斯软件技术有限公司提供技术支持";
+
+            //this.labRoleName.Text = "当前角色：" + LoginInfo.CurrentUser.RoleName;
+            Footer.Text = "欢迎" + LoginInfo.CurrentUser.Town + LoginInfo.CurrentUser.Village + LoginInfo.CurrentUser.RoleName + LoginInfo.CurrentUser.AccountName + "登录。"+ "登录时间：" + LoginInfo.CurrentUser.LoginTime.ToString();
+            Footer.ForeColor = Color.Blue;
+
             //如果没有权限则不展示页面
             if (LoginInfo.FuncPowerList.Contains("10000") == true)
             {

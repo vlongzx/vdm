@@ -303,11 +303,11 @@ namespace com.vdm.form
                         List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
                         if (list_village != null)
                         {
-
+                            list_village.Add(new KeyValue("", "请选择"));
                             this.cbVillage.DataSource = list_village;
                             this.cbVillage.DisplayMember = "value";
                             this.cbVillage.ValueMember = "key";
-                            list_village.Add(new KeyValue("", "请选择"));
+
                             if (selectValue.Key == LoginInfo.CurrentUser.Town)//乡镇相同
                             {
                                 cbVillage.SelectedValue = LoginInfo.CurrentUser.Village;

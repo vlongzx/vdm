@@ -323,7 +323,7 @@ namespace com.vdm.dal
         
         public DataTable QueryByCompanyId(string companyId)
         {
-            string sql = "select * from t_tour where idcard = " + companyId;
+            string sql = "select * from t_tour where company_id = '" + companyId+"'";
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
     }
