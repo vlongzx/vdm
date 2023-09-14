@@ -199,7 +199,7 @@ namespace com.vdm.form
                        && CheckCB(cbIs_plan, "请选择是否符合规划")
                                      && CheckCB(cbPlant_brand, "请选择种植品种")
                       && CheckCB(cbTown, "请选择所属镇")
-                       && CheckCB(cbVillage, "请选择所属村")
+                       //&& CheckCB(cbVillage, "请选择所属村")
 
                 ;
         }

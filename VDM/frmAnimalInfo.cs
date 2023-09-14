@@ -147,7 +147,7 @@ namespace com.vdm.form
            && CheckCB(cbSolid_pollution, "请选择固体污染源排污登记")
                        && CheckCB(cbAnimal_qualify, "请选择动物防疫条件合格证")
                       && CheckCB(cbTown, "请选择所属镇")
-                       && CheckCB(cbVillage, "请选择所属村")
+                       //&& CheckCB(cbVillage, "请选择所属村")
                        && IsExistRecord(this.tbIdcard.Text.Trim(),this.breed_id);
 
                 ;

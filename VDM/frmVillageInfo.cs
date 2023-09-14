@@ -106,11 +106,11 @@ namespace com.vdm.form
                         List<KeyValue> list_village = orgBLL.getOrgByTown(pre_org_id);
                         if (list_village != null)
                         {
-
+                            list_village.Add(new KeyValue("", "请选择"));
                             this.cbVilliage.DataSource = list_village;
                             this.cbVilliage.DisplayMember = "value";
                             this.cbVilliage.ValueMember = "key";
-                            list_village.Add(new KeyValue("", "请选择"));
+
                             if (selectValue.Key == LoginInfo.CurrentUser.Town)//乡镇相同
                             {
                                 cbVilliage.SelectedValue = LoginInfo.CurrentUser.Village;
@@ -149,7 +149,7 @@ namespace com.vdm.form
                         && CheckEmpty(tbShop, "请输入村集体门店（平方米）")
               && CheckEmpty(tbWater_resource, "请输入水资源量（立方 / 秒）")
                       && CheckCB(cbTown, "请选择所属镇")
-                       && CheckCB(cbVilliage, "请选择所属村")
+                       //&& CheckCB(cbVilliage, "请选择所属村")
 
                 ;
         }

@@ -92,7 +92,7 @@ namespace com.vdm.form
                    && CheckCB(cbPrincipal_category, "请选择主体类别")
                       && CheckCB(cbTrade_form, "请选择经营形式")
                       && CheckCB(cbTown, "请选择所属镇")
-                       && CheckCB(cbVillage, "请选择所属村")
+                       //&& CheckCB(cbVillage, "请选择所属村")
 
                 ;
         }
