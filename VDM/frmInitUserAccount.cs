@@ -26,6 +26,7 @@ namespace com.vdm.form
 
         private void frmInitUserAccount_Load(object sender, EventArgs e)
         {
+            this.labLoginInfo.ForeColor = Color.Red;
             //初始化所在乡镇所在村
             orgBLL = new OrgBLL();
             List<KeyValue> list_town = orgBLL.getOrgByType("乡镇");

@@ -108,7 +108,7 @@
             // 
             this.uiLabel5.AutoSize = true;
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.Location = new System.Drawing.Point(231, 133);
+            this.uiLabel5.Location = new System.Drawing.Point(226, 104);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(24, 31);
             this.uiLabel5.TabIndex = 174;
@@ -120,7 +120,7 @@
             this.tbYear_yield_to.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbYear_yield_to.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbYear_yield_to.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbYear_yield_to.Location = new System.Drawing.Point(265, 135);
+            this.tbYear_yield_to.Location = new System.Drawing.Point(260, 104);
             this.tbYear_yield_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbYear_yield_to.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbYear_yield_to.Name = "tbYear_yield_to";
@@ -136,7 +136,7 @@
             this.tbYear_yield_from.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbYear_yield_from.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbYear_yield_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbYear_yield_from.Location = new System.Drawing.Point(162, 135);
+            this.tbYear_yield_from.Location = new System.Drawing.Point(157, 104);
             this.tbYear_yield_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbYear_yield_from.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbYear_yield_from.Name = "tbYear_yield_from";
@@ -151,7 +151,7 @@
             // 
             this.uiLabel6.AutoSize = true;
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel6.Location = new System.Drawing.Point(978, 188);
+            this.uiLabel6.Location = new System.Drawing.Point(998, 135);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(86, 31);
             this.uiLabel6.TabIndex = 173;
@@ -164,7 +164,7 @@
             this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTown.Location = new System.Drawing.Point(805, 188);
+            this.cbTown.Location = new System.Drawing.Point(798, 135);
             this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbTown.Name = "cbTown";
@@ -181,7 +181,7 @@
             this.cbVillage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbVillage.Location = new System.Drawing.Point(1096, 190);
+            this.cbVillage.Location = new System.Drawing.Point(1092, 135);
             this.cbVillage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVillage.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbVillage.Name = "cbVillage";
@@ -195,7 +195,7 @@
             // 
             this.uiLabel7.AutoSize = true;
             this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel7.Location = new System.Drawing.Point(655, 190);
+            this.uiLabel7.Location = new System.Drawing.Point(671, 135);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(86, 31);
@@ -207,7 +207,7 @@
             // 
             this.uiLabel23.AutoSize = true;
             this.uiLabel23.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel23.Location = new System.Drawing.Point(36, 88);
+            this.uiLabel23.Location = new System.Drawing.Point(36, 73);
             this.uiLabel23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel23.Name = "uiLabel23";
             this.uiLabel23.Size = new System.Drawing.Size(110, 31);
@@ -219,7 +219,7 @@
             // 
             this.uiLabel3.AutoSize = true;
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel3.Location = new System.Drawing.Point(655, 88);
+            this.uiLabel3.Location = new System.Drawing.Point(671, 73);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(150, 31);
             this.uiLabel3.TabIndex = 147;
@@ -230,7 +230,7 @@
             // 
             this.btImport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btImport.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btImport.Location = new System.Drawing.Point(501, 269);
+            this.btImport.Location = new System.Drawing.Point(501, 194);
             this.btImport.MinimumSize = new System.Drawing.Size(1, 1);
             this.btImport.Name = "btImport";
             this.btImport.Size = new System.Drawing.Size(154, 62);
@@ -285,7 +285,7 @@
             this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbSearch.Name = "gbSearch";
             this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.gbSearch.Size = new System.Drawing.Size(1909, 236);
+            this.gbSearch.Size = new System.Drawing.Size(1909, 179);
             this.gbSearch.TabIndex = 104;
             this.gbSearch.Text = "查询条件";
             this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -296,7 +296,7 @@
             this.ctvManage_skill_method.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.ctvManage_skill_method.FillColor = System.Drawing.Color.White;
             this.ctvManage_skill_method.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ctvManage_skill_method.Location = new System.Drawing.Point(162, 190);
+            this.ctvManage_skill_method.Location = new System.Drawing.Point(157, 135);
             this.ctvManage_skill_method.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctvManage_skill_method.MinimumSize = new System.Drawing.Size(63, 0);
             this.ctvManage_skill_method.Name = "ctvManage_skill_method";
@@ -313,7 +313,7 @@
             this.ctvSale_way.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.ctvSale_way.FillColor = System.Drawing.Color.White;
             this.ctvSale_way.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ctvSale_way.Location = new System.Drawing.Point(482, 135);
+            this.ctvSale_way.Location = new System.Drawing.Point(470, 104);
             this.ctvSale_way.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctvSale_way.MinimumSize = new System.Drawing.Size(63, 0);
             this.ctvSale_way.Name = "ctvSale_way";
@@ -330,7 +330,7 @@
             this.ctvPlant_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.ctvPlant_type.FillColor = System.Drawing.Color.White;
             this.ctvPlant_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ctvPlant_type.Location = new System.Drawing.Point(162, 41);
+            this.ctvPlant_type.Location = new System.Drawing.Point(157, 42);
             this.ctvPlant_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctvPlant_type.MinimumSize = new System.Drawing.Size(63, 0);
             this.ctvPlant_type.Name = "ctvPlant_type";
@@ -347,7 +347,7 @@
             this.cbPlant_brand.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbPlant_brand.FillColor = System.Drawing.Color.White;
             this.cbPlant_brand.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbPlant_brand.Location = new System.Drawing.Point(1096, 88);
+            this.cbPlant_brand.Location = new System.Drawing.Point(1092, 73);
             this.cbPlant_brand.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbPlant_brand.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbPlant_brand.Name = "cbPlant_brand";
@@ -361,7 +361,7 @@
             // 
             this.uiLabel1.AutoSize = true;
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(335, 88);
+            this.uiLabel1.Location = new System.Drawing.Point(364, 73);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(158, 31);
             this.uiLabel1.TabIndex = 146;
@@ -372,7 +372,7 @@
             // 
             this.uiLabel9.AutoSize = true;
             this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel9.Location = new System.Drawing.Point(36, 188);
+            this.uiLabel9.Location = new System.Drawing.Point(36, 135);
             this.uiLabel9.Name = "uiLabel9";
             this.uiLabel9.Size = new System.Drawing.Size(182, 31);
             this.uiLabel9.TabIndex = 145;
@@ -396,7 +396,7 @@
             this.cbInsect_ill.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbInsect_ill.FillColor = System.Drawing.Color.White;
             this.cbInsect_ill.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbInsect_ill.Location = new System.Drawing.Point(1096, 135);
+            this.cbInsect_ill.Location = new System.Drawing.Point(1092, 104);
             this.cbInsect_ill.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbInsect_ill.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbInsect_ill.Name = "cbInsect_ill";
@@ -412,7 +412,7 @@
             this.cbDevelop_willing.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbDevelop_willing.FillColor = System.Drawing.Color.White;
             this.cbDevelop_willing.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbDevelop_willing.Location = new System.Drawing.Point(482, 189);
+            this.cbDevelop_willing.Location = new System.Drawing.Point(470, 135);
             this.cbDevelop_willing.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbDevelop_willing.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbDevelop_willing.Name = "cbDevelop_willing";
@@ -428,7 +428,7 @@
             this.cbIs_plan.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbIs_plan.FillColor = System.Drawing.Color.White;
             this.cbIs_plan.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbIs_plan.Location = new System.Drawing.Point(482, 88);
+            this.cbIs_plan.Location = new System.Drawing.Point(470, 73);
             this.cbIs_plan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbIs_plan.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbIs_plan.Name = "cbIs_plan";
@@ -443,7 +443,7 @@
             this.tbAddress.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAddress.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbAddress.Location = new System.Drawing.Point(162, 88);
+            this.tbAddress.Location = new System.Drawing.Point(157, 73);
             this.tbAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbAddress.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbAddress.Name = "tbAddress";
@@ -459,7 +459,7 @@
             this.tbPhone_number.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbPhone_number.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPhone_number.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPhone_number.Location = new System.Drawing.Point(1096, 44);
+            this.tbPhone_number.Location = new System.Drawing.Point(1092, 40);
             this.tbPhone_number.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPhone_number.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbPhone_number.Name = "tbPhone_number";
@@ -475,7 +475,7 @@
             this.tbOutput.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbOutput.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbOutput.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbOutput.Location = new System.Drawing.Point(805, 133);
+            this.tbOutput.Location = new System.Drawing.Point(798, 104);
             this.tbOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbOutput.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbOutput.Name = "tbOutput";
@@ -491,7 +491,7 @@
             this.tbPlant_area.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbPlant_area.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPlant_area.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPlant_area.Location = new System.Drawing.Point(805, 86);
+            this.tbPlant_area.Location = new System.Drawing.Point(798, 73);
             this.tbPlant_area.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPlant_area.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbPlant_area.Name = "tbPlant_area";
@@ -507,7 +507,7 @@
             this.tbIdcard.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbIdcard.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbIdcard.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbIdcard.Location = new System.Drawing.Point(805, 42);
+            this.tbIdcard.Location = new System.Drawing.Point(798, 42);
             this.tbIdcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbIdcard.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbIdcard.Name = "tbIdcard";
@@ -523,7 +523,7 @@
             this.tbContact_person.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbContact_person.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbContact_person.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbContact_person.Location = new System.Drawing.Point(482, 41);
+            this.tbContact_person.Location = new System.Drawing.Point(470, 42);
             this.tbContact_person.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbContact_person.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbContact_person.Name = "tbContact_person";
@@ -538,7 +538,7 @@
             // 
             this.uiLabel14.AutoSize = true;
             this.uiLabel14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel14.Location = new System.Drawing.Point(655, 41);
+            this.uiLabel14.Location = new System.Drawing.Point(671, 42);
             this.uiLabel14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel14.Name = "uiLabel14";
             this.uiLabel14.Size = new System.Drawing.Size(182, 31);
@@ -550,7 +550,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(978, 41);
+            this.label9.Location = new System.Drawing.Point(998, 40);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 31);
@@ -562,7 +562,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(978, 88);
+            this.label3.Location = new System.Drawing.Point(998, 73);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 31);
@@ -574,7 +574,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(335, 42);
+            this.label2.Location = new System.Drawing.Point(364, 42);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 31);
@@ -586,7 +586,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(36, 134);
+            this.label10.Location = new System.Drawing.Point(36, 104);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(126, 31);
@@ -598,7 +598,7 @@
             // 
             this.uiLabel8.AutoSize = true;
             this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel8.Location = new System.Drawing.Point(978, 135);
+            this.uiLabel8.Location = new System.Drawing.Point(998, 104);
             this.uiLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel8.Name = "uiLabel8";
             this.uiLabel8.Size = new System.Drawing.Size(134, 31);
@@ -610,7 +610,7 @@
             // 
             this.uiLabel4.AutoSize = true;
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel4.Location = new System.Drawing.Point(655, 133);
+            this.uiLabel4.Location = new System.Drawing.Point(671, 104);
             this.uiLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(126, 31);
@@ -622,7 +622,7 @@
             // 
             this.uiLabel10.AutoSize = true;
             this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel10.Location = new System.Drawing.Point(335, 188);
+            this.uiLabel10.Location = new System.Drawing.Point(364, 135);
             this.uiLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel10.Name = "uiLabel10";
             this.uiLabel10.Size = new System.Drawing.Size(110, 31);
@@ -634,7 +634,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(335, 134);
+            this.label8.Location = new System.Drawing.Point(364, 104);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 31);
@@ -646,10 +646,10 @@
             // 
             this.btReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btReset.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btReset.Location = new System.Drawing.Point(1446, 88);
+            this.btReset.Location = new System.Drawing.Point(1385, 73);
             this.btReset.MinimumSize = new System.Drawing.Size(1, 1);
             this.btReset.Name = "btReset";
-            this.btReset.Size = new System.Drawing.Size(154, 62);
+            this.btReset.Size = new System.Drawing.Size(99, 62);
             this.btReset.TabIndex = 62;
             this.btReset.Text = "重置(&R)";
             this.btReset.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -659,10 +659,10 @@
             // 
             this.btSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btSearch.Location = new System.Drawing.Point(1286, 88);
+            this.btSearch.Location = new System.Drawing.Point(1280, 73);
             this.btSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(154, 62);
+            this.btSearch.Size = new System.Drawing.Size(99, 62);
             this.btSearch.TabIndex = 61;
             this.btSearch.Text = "查询(&S)";
             this.btSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -672,7 +672,7 @@
             // 
             this.btDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btDelete.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btDelete.Location = new System.Drawing.Point(341, 269);
+            this.btDelete.Location = new System.Drawing.Point(341, 194);
             this.btDelete.MinimumSize = new System.Drawing.Size(1, 1);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(154, 62);
@@ -685,7 +685,7 @@
             // 
             this.btExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btExport.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btExport.Location = new System.Drawing.Point(661, 269);
+            this.btExport.Location = new System.Drawing.Point(661, 194);
             this.btExport.MinimumSize = new System.Drawing.Size(1, 1);
             this.btExport.Name = "btExport";
             this.btExport.Size = new System.Drawing.Size(154, 62);
@@ -698,7 +698,7 @@
             // 
             this.btAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAdd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btAdd.Location = new System.Drawing.Point(21, 269);
+            this.btAdd.Location = new System.Drawing.Point(21, 194);
             this.btAdd.MinimumSize = new System.Drawing.Size(1, 1);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(154, 62);
@@ -758,7 +758,7 @@
             this.dgPlantList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgPlantList.SelectedIndex = -1;
             this.dgPlantList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgPlantList.Size = new System.Drawing.Size(1901, 644);
+            this.dgPlantList.Size = new System.Drawing.Size(1901, 723);
             this.dgPlantList.TabIndex = 7;
             // 
             // gbResult
@@ -768,12 +768,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbResult.Controls.Add(this.dgPlantList);
             this.gbResult.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gbResult.Location = new System.Drawing.Point(24, 342);
+            this.gbResult.Location = new System.Drawing.Point(24, 263);
             this.gbResult.Margin = new System.Windows.Forms.Padding(4);
             this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbResult.Name = "gbResult";
             this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.gbResult.Size = new System.Drawing.Size(1909, 680);
+            this.gbResult.Size = new System.Drawing.Size(1909, 759);
             this.gbResult.TabIndex = 97;
             this.gbResult.TabStop = false;
             this.gbResult.Text = "数据列表";
@@ -783,7 +783,7 @@
             // 
             this.btEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btEdit.Location = new System.Drawing.Point(181, 269);
+            this.btEdit.Location = new System.Drawing.Point(181, 194);
             this.btEdit.MinimumSize = new System.Drawing.Size(1, 1);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(154, 62);

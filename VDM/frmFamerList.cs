@@ -103,7 +103,18 @@ namespace com.vdm.form
                 }
             }
 
-
+            //初始化农用机械类型
+            List<KeyValue> list_mechine_type = dictBLL.getDict("mechine_type");
+            if (list_mechine_type != null)
+            {
+                foreach (KeyValue kv in list_mechine_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvMechine_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
+            }
             List<KeyValue> list_plant_area_type = dictBLL.getDict("plant_area_type");
             if (list_plant_area_type != null)
             {
@@ -229,7 +240,7 @@ namespace com.vdm.form
             string Idcard = tbIdcard.Text.Trim();
             string Phone_number = tbPhone_number.Text.Trim();
             string Car_brand = tbCar_brand.Text.Trim();
-            string Mechine_type = tbMechine_type.Text.Trim();
+            string Mechine_type = ctvMechine_type.Text.ToString();
             string Plant_type = ctvPlant_type.Text.ToString();
             string Plant_area_type = ctvPlant_area_type.Text.ToString();
             string Is_handle_process = cbIs_handle_process.SelectedValue.ToString();
@@ -460,7 +471,7 @@ namespace com.vdm.form
             this.tbIdcard.Text = "";
             this.tbPhone_number.Text = "";
             this.tbCar_brand.Text = "";
-            this.tbMechine_type.Text = "";
+            this.ctvMechine_type.Text = "";
             this.ctvPlant_type.Text = "";
             this.ctvPlant_area_type.Text = "";
             this.cbIs_handle_process.SelectedValue = "";

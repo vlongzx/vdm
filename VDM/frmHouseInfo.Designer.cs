@@ -78,7 +78,7 @@
             this.dpOh_checktime.CanEmpty = true;
             this.dpOh_checktime.FillColor = System.Drawing.Color.White;
             this.dpOh_checktime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpOh_checktime.Location = new System.Drawing.Point(1314, 187);
+            this.dpOh_checktime.Location = new System.Drawing.Point(1314, 175);
             this.dpOh_checktime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpOh_checktime.MaxLength = 10;
             this.dpOh_checktime.MinimumSize = new System.Drawing.Size(63, 0);
@@ -98,7 +98,7 @@
             this.dpHouse_build_date.CanEmpty = true;
             this.dpHouse_build_date.FillColor = System.Drawing.Color.White;
             this.dpHouse_build_date.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dpHouse_build_date.Location = new System.Drawing.Point(232, 178);
+            this.dpHouse_build_date.Location = new System.Drawing.Point(232, 175);
             this.dpHouse_build_date.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dpHouse_build_date.MaxLength = 10;
             this.dpHouse_build_date.MinimumSize = new System.Drawing.Size(63, 0);
@@ -108,9 +108,9 @@
             this.dpHouse_build_date.SymbolDropDown = 61555;
             this.dpHouse_build_date.SymbolNormal = 61555;
             this.dpHouse_build_date.TabIndex = 286;
-            this.dpHouse_build_date.Text = "1900-01-01";
+            this.dpHouse_build_date.Text = "2023-01-01";
             this.dpHouse_build_date.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dpHouse_build_date.Value = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dpHouse_build_date.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dpHouse_build_date.Watermark = "";
             // 
             // tbArea
@@ -119,7 +119,7 @@
             this.tbArea.CanEmpty = true;
             this.tbArea.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbArea.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbArea.Location = new System.Drawing.Point(953, 94);
+            this.tbArea.Location = new System.Drawing.Point(953, 87);
             this.tbArea.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbArea.Minimum = 0D;
             this.tbArea.MinimumSize = new System.Drawing.Size(1, 16);
@@ -137,7 +137,7 @@
             this.tbIdcard.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbIdcard.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbIdcard.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbIdcard.Location = new System.Drawing.Point(595, 92);
+            this.tbIdcard.Location = new System.Drawing.Point(595, 87);
             this.tbIdcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbIdcard.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbIdcard.Name = "tbIdcard";
@@ -152,9 +152,9 @@
             // 
             this.uiLabel24.AutoSize = true;
             this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel24.Location = new System.Drawing.Point(455, 126);
+            this.uiLabel24.Location = new System.Drawing.Point(455, 131);
             this.uiLabel24.Name = "uiLabel24";
-            this.uiLabel24.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel24.Size = new System.Drawing.Size(110, 31);
             this.uiLabel24.TabIndex = 282;
             this.uiLabel24.Text = "房屋结构";
             this.uiLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -163,9 +163,9 @@
             // 
             this.uiLabel27.AutoSize = true;
             this.uiLabel27.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel27.Location = new System.Drawing.Point(1117, 84);
+            this.uiLabel27.Location = new System.Drawing.Point(1117, 87);
             this.uiLabel27.Name = "uiLabel27";
-            this.uiLabel27.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel27.Size = new System.Drawing.Size(110, 31);
             this.uiLabel27.TabIndex = 281;
             this.uiLabel27.Text = "房屋类别";
             this.uiLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,10 +174,10 @@
             // 
             this.土地使用说明.AutoSize = true;
             this.土地使用说明.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.土地使用说明.Location = new System.Drawing.Point(817, 133);
+            this.土地使用说明.Location = new System.Drawing.Point(817, 131);
             this.土地使用说明.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.土地使用说明.Name = "土地使用说明";
-            this.土地使用说明.Size = new System.Drawing.Size(210, 41);
+            this.土地使用说明.Size = new System.Drawing.Size(158, 31);
             this.土地使用说明.TabIndex = 277;
             this.土地使用说明.Text = "房屋安全等级";
             this.土地使用说明.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,7 +189,7 @@
             this.uiLabel32.Location = new System.Drawing.Point(1117, 175);
             this.uiLabel32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel32.Name = "uiLabel32";
-            this.uiLabel32.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel32.Size = new System.Drawing.Size(158, 31);
             this.uiLabel32.TabIndex = 276;
             this.uiLabel32.Text = "古宅审批时间";
             this.uiLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,9 +198,9 @@
             // 
             this.uiLabel10.AutoSize = true;
             this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel10.Location = new System.Drawing.Point(455, 176);
+            this.uiLabel10.Location = new System.Drawing.Point(455, 175);
             this.uiLabel10.Name = "uiLabel10";
-            this.uiLabel10.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel10.Size = new System.Drawing.Size(158, 31);
             this.uiLabel10.TabIndex = 275;
             this.uiLabel10.Text = "房屋是否自建";
             this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,9 +209,9 @@
             // 
             this.uiLabel11.AutoSize = true;
             this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel11.Location = new System.Drawing.Point(813, 178);
+            this.uiLabel11.Location = new System.Drawing.Point(817, 175);
             this.uiLabel11.Name = "uiLabel11";
-            this.uiLabel11.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel11.Size = new System.Drawing.Size(110, 31);
             this.uiLabel11.TabIndex = 270;
             this.uiLabel11.Text = "是否古宅";
             this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,7 +222,7 @@
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel3.Location = new System.Drawing.Point(1117, 131);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel3.Size = new System.Drawing.Size(158, 31);
             this.uiLabel3.TabIndex = 271;
             this.uiLabel3.Text = "房屋是否租赁";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,9 +231,9 @@
             // 
             this.uiLabel25.AutoSize = true;
             this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel25.Location = new System.Drawing.Point(455, 227);
+            this.uiLabel25.Location = new System.Drawing.Point(455, 219);
             this.uiLabel25.Name = "uiLabel25";
-            this.uiLabel25.Size = new System.Drawing.Size(114, 41);
+            this.uiLabel25.Size = new System.Drawing.Size(86, 31);
             this.uiLabel25.TabIndex = 272;
             this.uiLabel25.Text = "所在村";
             this.uiLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,7 +244,7 @@
             this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel26.Location = new System.Drawing.Point(71, 219);
             this.uiLabel26.Name = "uiLabel26";
-            this.uiLabel26.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel26.Size = new System.Drawing.Size(110, 31);
             this.uiLabel26.TabIndex = 273;
             this.uiLabel26.Text = "所在乡镇";
             this.uiLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -255,7 +255,7 @@
             this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTown.Location = new System.Drawing.Point(232, 231);
+            this.cbTown.Location = new System.Drawing.Point(232, 219);
             this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbTown.Name = "cbTown";
@@ -272,7 +272,7 @@
             this.cbIs_old_house.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbIs_old_house.FillColor = System.Drawing.Color.White;
             this.cbIs_old_house.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbIs_old_house.Location = new System.Drawing.Point(953, 187);
+            this.cbIs_old_house.Location = new System.Drawing.Point(953, 175);
             this.cbIs_old_house.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbIs_old_house.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbIs_old_house.Name = "cbIs_old_house";
@@ -289,7 +289,7 @@
             this.cbHouse_safe_grade.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbHouse_safe_grade.FillColor = System.Drawing.Color.White;
             this.cbHouse_safe_grade.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbHouse_safe_grade.Location = new System.Drawing.Point(953, 138);
+            this.cbHouse_safe_grade.Location = new System.Drawing.Point(953, 131);
             this.cbHouse_safe_grade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbHouse_safe_grade.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbHouse_safe_grade.Name = "cbHouse_safe_grade";
@@ -321,7 +321,7 @@
             this.cbHouse_is_rent.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbHouse_is_rent.FillColor = System.Drawing.Color.White;
             this.cbHouse_is_rent.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbHouse_is_rent.Location = new System.Drawing.Point(1314, 141);
+            this.cbHouse_is_rent.Location = new System.Drawing.Point(1314, 131);
             this.cbHouse_is_rent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbHouse_is_rent.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbHouse_is_rent.Name = "cbHouse_is_rent";
@@ -337,7 +337,7 @@
             this.cbVillage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbVillage.Location = new System.Drawing.Point(595, 231);
+            this.cbVillage.Location = new System.Drawing.Point(595, 219);
             this.cbVillage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVillage.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbVillage.Name = "cbVillage";
@@ -353,7 +353,7 @@
             this.cbIs_my_struct.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbIs_my_struct.FillColor = System.Drawing.Color.White;
             this.cbIs_my_struct.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbIs_my_struct.Location = new System.Drawing.Point(595, 190);
+            this.cbIs_my_struct.Location = new System.Drawing.Point(595, 175);
             this.cbIs_my_struct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbIs_my_struct.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbIs_my_struct.Name = "cbIs_my_struct";
@@ -369,7 +369,7 @@
             this.cbHouse_struction.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbHouse_struction.FillColor = System.Drawing.Color.White;
             this.cbHouse_struction.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbHouse_struction.Location = new System.Drawing.Point(595, 139);
+            this.cbHouse_struction.Location = new System.Drawing.Point(595, 131);
             this.cbHouse_struction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbHouse_struction.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbHouse_struction.Name = "cbHouse_struction";
@@ -383,9 +383,9 @@
             // 
             this.uiLabel2.AutoSize = true;
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.Location = new System.Drawing.Point(71, 84);
+            this.uiLabel2.Location = new System.Drawing.Point(71, 87);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(178, 41);
+            this.uiLabel2.Size = new System.Drawing.Size(134, 31);
             this.uiLabel2.TabIndex = 261;
             this.uiLabel2.Text = "房屋所有人";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -426,10 +426,10 @@
             // 
             this.uiLabel6.AutoSize = true;
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel6.Location = new System.Drawing.Point(817, 85);
+            this.uiLabel6.Location = new System.Drawing.Point(817, 87);
             this.uiLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(264, 41);
+            this.uiLabel6.Size = new System.Drawing.Size(198, 31);
             this.uiLabel6.TabIndex = 258;
             this.uiLabel6.Text = "房屋面积(平方米)";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -438,10 +438,10 @@
             // 
             this.uiLabel5.AutoSize = true;
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel5.Location = new System.Drawing.Point(455, 80);
+            this.uiLabel5.Location = new System.Drawing.Point(455, 87);
             this.uiLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(146, 41);
+            this.uiLabel5.Size = new System.Drawing.Size(110, 31);
             this.uiLabel5.TabIndex = 257;
             this.uiLabel5.Text = "身份证号";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -450,10 +450,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(71, 127);
+            this.label12.Location = new System.Drawing.Point(71, 131);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(210, 41);
+            this.label12.Size = new System.Drawing.Size(158, 31);
             this.label12.TabIndex = 256;
             this.label12.Text = "房屋具体位置";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -462,9 +462,9 @@
             // 
             this.uiLabel1.AutoSize = true;
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(71, 168);
+            this.uiLabel1.Location = new System.Drawing.Point(71, 175);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(210, 41);
+            this.uiLabel1.Size = new System.Drawing.Size(158, 31);
             this.uiLabel1.TabIndex = 274;
             this.uiLabel1.Text = "房屋建设时间";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
