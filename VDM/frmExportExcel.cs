@@ -109,7 +109,7 @@ namespace com.vdm.form
             if (result == DialogResult.OK)
             {
                 string selectedPath = this.folderBrowserDialog.SelectedPath;
-                string fileName = object_name + "信息导出_"+ DateTime.Now.ToString("yyyymmdd") +".xlsx";
+                string fileName = object_name + "信息导出_"+ DateTime.Now.ToString("yyyyMMddHHmm") +".xlsx";
                 this.tbSavePath.Text = Path.Combine(selectedPath, fileName);
             }
         }
