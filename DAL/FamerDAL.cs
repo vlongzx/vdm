@@ -222,7 +222,7 @@ namespace com.vdm.dal
                 }
                 if (condition["Mechine_type"].ToString() != "")
                 {
-                    sql += "    and Mechine_type like @Mechine_type";
+                    sql += "    and Mechine_type = @Mechine_type";
                 }
                 if (condition["Plant_type"].ToString() != "")
                 {
@@ -331,7 +331,7 @@ namespace com.vdm.dal
                 parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
                 parameters.Add(new SQLiteParameter("@Phone_number", condition["Phone_number"]));
                 parameters.Add(new SQLiteParameter("@Car_brand", condition["Car_brand"]));
-                parameters.Add(new SQLiteParameter("@Mechine_type", "%" + condition["Mechine_type"] + "%"));
+                parameters.Add(new SQLiteParameter("@Mechine_type", condition["Mechine_type"]));
                 parameters.Add(new SQLiteParameter("@Plant_type", condition["Plant_type"]));
                 parameters.Add(new SQLiteParameter("@Plant_area_type", condition["Plant_area_type"]));
                 parameters.Add(new SQLiteParameter("@Is_handle_process", condition["Is_handle_process"]));

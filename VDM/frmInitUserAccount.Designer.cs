@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInitUserAccount));
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
-            this.uiLabel1 = new Sunny.UI.UILabel();
+            this.labLoginInfo = new Sunny.UI.UILabel();
             this.uiRadioButtonGroup1 = new Sunny.UI.UIRadioButtonGroup();
             this.uiGroupBox2 = new Sunny.UI.UIGroupBox();
             this.cbVillage = new Sunny.UI.UIComboBox();
@@ -52,27 +52,28 @@
             // 
             // uiGroupBox1
             // 
-            this.uiGroupBox1.Controls.Add(this.uiLabel1);
+            this.uiGroupBox1.Controls.Add(this.labLoginInfo);
             this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiGroupBox1.Location = new System.Drawing.Point(14, 40);
             this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox1.Name = "uiGroupBox1";
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(566, 196);
+            this.uiGroupBox1.Size = new System.Drawing.Size(566, 222);
             this.uiGroupBox1.TabIndex = 2;
             this.uiGroupBox1.Text = "温馨提示";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
-            // uiLabel1
+            // labLoginInfo
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.Location = new System.Drawing.Point(23, 44);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(518, 131);
-            this.uiLabel1.TabIndex = 0;
-            this.uiLabel1.Text = "1.设置账号请确定账号所属乡镇还是村级，一旦选择将不能再更改。\r\n2.该账号默认为系统管理员，请妥善设置密码并牢记。";
-            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labLoginInfo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labLoginInfo.Location = new System.Drawing.Point(23, 33);
+            this.labLoginInfo.Name = "labLoginInfo";
+            this.labLoginInfo.Size = new System.Drawing.Size(518, 172);
+            this.labLoginInfo.TabIndex = 0;
+            this.labLoginInfo.Text = "1.设置账号请确定账号所属乡镇还是村级，一旦选择将不能再更改。\r\n2.该账号默认为系统管理员，请妥善设置密码并牢记。\r\n3.软件卸载重装时，安装文件夹不能更换，否" +
+    "则原数据将丢失。为确保数据安全，请卸载重装前将所在数据导出备份，以防丢失，重新安装后再导入数据。";
+            this.labLoginInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiRadioButtonGroup1
             // 
@@ -83,7 +84,7 @@
             "乡镇级",
             "村级"});
             this.uiRadioButtonGroup1.ItemSize = new System.Drawing.Size(150, 60);
-            this.uiRadioButtonGroup1.Location = new System.Drawing.Point(14, 249);
+            this.uiRadioButtonGroup1.Location = new System.Drawing.Point(14, 267);
             this.uiRadioButtonGroup1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiRadioButtonGroup1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiRadioButtonGroup1.Name = "uiRadioButtonGroup1";
@@ -262,7 +263,7 @@
             // 
             this.btInit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btInit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btInit.Location = new System.Drawing.Point(412, 665);
+            this.btInit.Location = new System.Drawing.Point(412, 657);
             this.btInit.MinimumSize = new System.Drawing.Size(1, 1);
             this.btInit.Name = "btInit";
             this.btInit.Size = new System.Drawing.Size(168, 55);
@@ -278,7 +279,7 @@
             // frmInitUserAccount
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(600, 741);
+            this.ClientSize = new System.Drawing.Size(600, 728);
             this.Controls.Add(this.btInit);
             this.Controls.Add(this.uiGroupBox2);
             this.Controls.Add(this.uiRadioButtonGroup1);
@@ -300,7 +301,7 @@
         #endregion
 
         private Sunny.UI.UIGroupBox uiGroupBox1;
-        private Sunny.UI.UILabel uiLabel1;
+        private Sunny.UI.UILabel labLoginInfo;
         private Sunny.UI.UIRadioButtonGroup uiRadioButtonGroup1;
         private Sunny.UI.UIGroupBox uiGroupBox2;
         private Sunny.UI.UIComboBox cbVillage;

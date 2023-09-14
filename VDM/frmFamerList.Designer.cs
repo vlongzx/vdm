@@ -61,7 +61,6 @@
             this.ctvPlant_type = new Sunny.UI.UIComboTreeView();
             this.cbIs_handle_process = new Sunny.UI.UIComboBox();
             this.tbCar_brand = new Sunny.UI.UITextBox();
-            this.tbMechine_type = new Sunny.UI.UITextBox();
             this.cbTown = new Sunny.UI.UIComboBox();
             this.cbVillage = new Sunny.UI.UIComboBox();
             this.tbPhone_number = new Sunny.UI.UITextBox();
@@ -69,6 +68,7 @@
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.tbHolder_name = new Sunny.UI.UITextBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
+            this.ctvMechine_type = new Sunny.UI.UIComboTreeView();
             this.gbResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFamerList)).BeginInit();
             this.gbSearch.SuspendLayout();
@@ -392,6 +392,7 @@
             // 
             this.gbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbSearch.Controls.Add(this.ctvMechine_type);
             this.gbSearch.Controls.Add(this.ctvAnimal_area_type);
             this.gbSearch.Controls.Add(this.ctvAnimal_type);
             this.gbSearch.Controls.Add(this.ctvPlant_area_type);
@@ -399,7 +400,6 @@
             this.gbSearch.Controls.Add(this.btAdanceSearch);
             this.gbSearch.Controls.Add(this.cbIs_handle_process);
             this.gbSearch.Controls.Add(this.tbCar_brand);
-            this.gbSearch.Controls.Add(this.tbMechine_type);
             this.gbSearch.Controls.Add(this.uiLabel25);
             this.gbSearch.Controls.Add(this.uiLabel26);
             this.gbSearch.Controls.Add(this.cbTown);
@@ -529,22 +529,6 @@
             this.tbCar_brand.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbCar_brand.Watermark = "";
             // 
-            // tbMechine_type
-            // 
-            this.tbMechine_type.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbMechine_type.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbMechine_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbMechine_type.Location = new System.Drawing.Point(128, 72);
-            this.tbMechine_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbMechine_type.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbMechine_type.Name = "tbMechine_type";
-            this.tbMechine_type.Padding = new System.Windows.Forms.Padding(5);
-            this.tbMechine_type.ShowText = false;
-            this.tbMechine_type.Size = new System.Drawing.Size(165, 29);
-            this.tbMechine_type.TabIndex = 162;
-            this.tbMechine_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbMechine_type.Watermark = "";
-            // 
             // cbTown
             // 
             this.cbTown.DataSource = null;
@@ -648,6 +632,23 @@
             this.uiLabel1.Text = "养殖动物类型";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // ctvMechine_type
+            // 
+            this.ctvMechine_type.CheckBoxes = true;
+            this.ctvMechine_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.ctvMechine_type.FillColor = System.Drawing.Color.White;
+            this.ctvMechine_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ctvMechine_type.Location = new System.Drawing.Point(128, 73);
+            this.ctvMechine_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctvMechine_type.MinimumSize = new System.Drawing.Size(63, 0);
+            this.ctvMechine_type.Name = "ctvMechine_type";
+            this.ctvMechine_type.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.ctvMechine_type.ShowSelectedAllCheckBox = false;
+            this.ctvMechine_type.Size = new System.Drawing.Size(165, 29);
+            this.ctvMechine_type.TabIndex = 309;
+            this.ctvMechine_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctvMechine_type.Watermark = "";
+            // 
             // frmFamerList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -695,7 +696,6 @@
         private Sunny.UI.UIGroupBox gbSearch;
         private Sunny.UI.UIComboBox cbIs_handle_process;
         private Sunny.UI.UITextBox tbCar_brand;
-        private Sunny.UI.UITextBox tbMechine_type;
         private Sunny.UI.UIComboBox cbTown;
         private Sunny.UI.UIComboBox cbVillage;
         private Sunny.UI.UITextBox tbPhone_number;
@@ -708,5 +708,6 @@
         private Sunny.UI.UIComboTreeView ctvAnimal_type;
         private Sunny.UI.UIComboTreeView ctvPlant_area_type;
         private Sunny.UI.UIComboTreeView ctvPlant_type;
+        private Sunny.UI.UIComboTreeView ctvMechine_type;
     }
 }

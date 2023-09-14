@@ -45,7 +45,7 @@ namespace com.vdm.form
                 tbIdcard.Text = famer.Idcard;
                 tbPhone_number.Text = famer.Phone_number;
                 tbCar_brand.Text = famer.Car_brand;
-                tbMechine_type.Text = famer.Mechine_type;
+                ctvMechine_type.Text = famer.Mechine_type;
                 ctvPlant_type.Text = famer.Plant_type;
 
                 tbPlant_area.Text = famer.Plant_area.ToString();
@@ -106,7 +106,20 @@ namespace com.vdm.form
                 }
             }
 
-  
+            //初始化农用机械类型
+            List<KeyValue> list_mechine_type = dictBLL.getDict("mechine_type");
+            if (list_mechine_type != null)
+            {
+                foreach (KeyValue kv in list_mechine_type)
+                {
+                    if (kv.Key != "")
+                    {
+                        ctvMechine_type.TreeView.Nodes.Add(kv.Key, kv.Value);
+                    }
+                }
+            }
+
+
             List<KeyValue> list_plant_area_type = dictBLL.getDict("plant_area_type");
             if (list_plant_area_type != null)
             {
@@ -263,7 +276,7 @@ namespace com.vdm.form
         //校验关联字段
         protected bool CheckPlant()
         {
-            if (ctvPlant_type.Text != "")
+            if (ctvPlant_type.Text != "无; ")
             {
                 return CheckEmpty(tbPlant_area, "请输入种植物占地面积")
                     && CheckCTV(ctvPlant_area_type, "请选择种植占地地类")
@@ -276,7 +289,7 @@ namespace com.vdm.form
         }
         protected bool CheckAnimal()
         {
-            if (ctvAnimal_type.Text != "")
+            if (ctvAnimal_type.Text != "无; ")
             {
                 return CheckEmpty(tbAnimal_area, "请输入养殖地面积")
                     && CheckEmpty(tbAnimal_count, "请输入养殖数量")
@@ -328,7 +341,7 @@ namespace com.vdm.form
             famer.Idcard = tbIdcard.Text.Trim();
             famer.Phone_number = tbPhone_number.Text.Trim();
             famer.Car_brand = tbCar_brand.Text.Trim();
-            famer.Mechine_type = tbMechine_type.Text.Trim();
+            famer.Mechine_type = ctvMechine_type.Text.ToString();
             famer.Plant_type = ctvPlant_type.Text.ToString();
             if (ctvPlant_type.Text != "无; ")
             {
