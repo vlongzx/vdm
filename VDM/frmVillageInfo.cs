@@ -228,6 +228,34 @@ namespace com.vdm.form
             }
         }
 
-    
+        private void tbRoad_length_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbMineral_resource_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbMoney_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbSchool_From_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbVilliage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uiLabel23_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

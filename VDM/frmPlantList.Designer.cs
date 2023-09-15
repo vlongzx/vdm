@@ -55,6 +55,7 @@
             this.cbDevelop_willing = new Sunny.UI.UIComboBox();
             this.cbIs_plan = new Sunny.UI.UIComboBox();
             this.tbAddress = new Sunny.UI.UITextBox();
+            this.tbPlant_brand = new Sunny.UI.UITextBox();
             this.tbPhone_number = new Sunny.UI.UITextBox();
             this.tbOutput = new Sunny.UI.UITextBox();
             this.tbPlant_area = new Sunny.UI.UITextBox();
@@ -77,7 +78,6 @@
             this.dgPlantList = new Sunny.UI.UIDataGridView();
             this.gbResult = new Sunny.UI.UIGroupBox();
             this.btEdit = new Sunny.UI.UIButton();
-            this.tbPlant_brand = new Sunny.UI.UITextBox();
             this.gbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPlantList)).BeginInit();
             this.gbResult.SuspendLayout();
@@ -230,10 +230,10 @@
             // 
             this.btImport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btImport.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btImport.Location = new System.Drawing.Point(501, 194);
+            this.btImport.Location = new System.Drawing.Point(300, 194);
             this.btImport.MinimumSize = new System.Drawing.Size(1, 1);
             this.btImport.Name = "btImport";
-            this.btImport.Size = new System.Drawing.Size(154, 62);
+            this.btImport.Size = new System.Drawing.Size(87, 48);
             this.btImport.TabIndex = 98;
             this.btImport.Text = "导入(&I)";
             this.btImport.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -438,6 +438,22 @@
             this.tbAddress.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbAddress.Watermark = "";
             // 
+            // tbPlant_brand
+            // 
+            this.tbPlant_brand.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbPlant_brand.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPlant_brand.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPlant_brand.Location = new System.Drawing.Point(1092, 73);
+            this.tbPlant_brand.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPlant_brand.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbPlant_brand.Name = "tbPlant_brand";
+            this.tbPlant_brand.Padding = new System.Windows.Forms.Padding(5);
+            this.tbPlant_brand.ShowText = false;
+            this.tbPlant_brand.Size = new System.Drawing.Size(165, 29);
+            this.tbPlant_brand.TabIndex = 130;
+            this.tbPlant_brand.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPlant_brand.Watermark = "";
+            // 
             // tbPhone_number
             // 
             this.tbPhone_number.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
@@ -630,10 +646,10 @@
             // 
             this.btReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btReset.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btReset.Location = new System.Drawing.Point(1385, 73);
+            this.btReset.Location = new System.Drawing.Point(1373, 73);
             this.btReset.MinimumSize = new System.Drawing.Size(1, 1);
             this.btReset.Name = "btReset";
-            this.btReset.Size = new System.Drawing.Size(99, 62);
+            this.btReset.Size = new System.Drawing.Size(87, 48);
             this.btReset.TabIndex = 62;
             this.btReset.Text = "重置(&R)";
             this.btReset.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -646,7 +662,7 @@
             this.btSearch.Location = new System.Drawing.Point(1280, 73);
             this.btSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(99, 62);
+            this.btSearch.Size = new System.Drawing.Size(87, 48);
             this.btSearch.TabIndex = 61;
             this.btSearch.Text = "查询(&S)";
             this.btSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -656,10 +672,10 @@
             // 
             this.btDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btDelete.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btDelete.Location = new System.Drawing.Point(341, 194);
+            this.btDelete.Location = new System.Drawing.Point(207, 194);
             this.btDelete.MinimumSize = new System.Drawing.Size(1, 1);
             this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(154, 62);
+            this.btDelete.Size = new System.Drawing.Size(87, 48);
             this.btDelete.TabIndex = 102;
             this.btDelete.Text = "删除(&D)";
             this.btDelete.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -669,10 +685,10 @@
             // 
             this.btExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btExport.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btExport.Location = new System.Drawing.Point(661, 194);
+            this.btExport.Location = new System.Drawing.Point(393, 194);
             this.btExport.MinimumSize = new System.Drawing.Size(1, 1);
             this.btExport.Name = "btExport";
-            this.btExport.Size = new System.Drawing.Size(154, 62);
+            this.btExport.Size = new System.Drawing.Size(87, 48);
             this.btExport.TabIndex = 99;
             this.btExport.Text = "导出(&E)";
             this.btExport.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -685,7 +701,7 @@
             this.btAdd.Location = new System.Drawing.Point(21, 194);
             this.btAdd.MinimumSize = new System.Drawing.Size(1, 1);
             this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(154, 62);
+            this.btAdd.Size = new System.Drawing.Size(87, 48);
             this.btAdd.TabIndex = 100;
             this.btAdd.Text = "新增(&A)";
             this.btAdd.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -742,7 +758,7 @@
             this.dgPlantList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgPlantList.SelectedIndex = -1;
             this.dgPlantList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgPlantList.Size = new System.Drawing.Size(1901, 723);
+            this.dgPlantList.Size = new System.Drawing.Size(1901, 737);
             this.dgPlantList.TabIndex = 7;
             // 
             // gbResult
@@ -752,12 +768,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbResult.Controls.Add(this.dgPlantList);
             this.gbResult.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gbResult.Location = new System.Drawing.Point(24, 263);
+            this.gbResult.Location = new System.Drawing.Point(24, 249);
             this.gbResult.Margin = new System.Windows.Forms.Padding(4);
             this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbResult.Name = "gbResult";
             this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.gbResult.Size = new System.Drawing.Size(1909, 759);
+            this.gbResult.Size = new System.Drawing.Size(1909, 773);
             this.gbResult.TabIndex = 97;
             this.gbResult.TabStop = false;
             this.gbResult.Text = "数据列表";
@@ -767,30 +783,14 @@
             // 
             this.btEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btEdit.Location = new System.Drawing.Point(181, 194);
+            this.btEdit.Location = new System.Drawing.Point(114, 194);
             this.btEdit.MinimumSize = new System.Drawing.Size(1, 1);
             this.btEdit.Name = "btEdit";
-            this.btEdit.Size = new System.Drawing.Size(154, 62);
+            this.btEdit.Size = new System.Drawing.Size(87, 48);
             this.btEdit.TabIndex = 101;
             this.btEdit.Text = "编辑(&E)";
             this.btEdit.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
-            // 
-            // tbPlant_brand
-            // 
-            this.tbPlant_brand.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbPlant_brand.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPlant_brand.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPlant_brand.Location = new System.Drawing.Point(1092, 73);
-            this.tbPlant_brand.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbPlant_brand.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbPlant_brand.Name = "tbPlant_brand";
-            this.tbPlant_brand.Padding = new System.Windows.Forms.Padding(5);
-            this.tbPlant_brand.ShowText = false;
-            this.tbPlant_brand.Size = new System.Drawing.Size(165, 29);
-            this.tbPlant_brand.TabIndex = 130;
-            this.tbPlant_brand.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbPlant_brand.Watermark = "";
             // 
             // frmPlantList
             // 

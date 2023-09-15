@@ -79,16 +79,16 @@
             // 
             // pnlBtm
             // 
-            this.pnlBtm.Location = new System.Drawing.Point(1, 546);
-            this.pnlBtm.Size = new System.Drawing.Size(1673, 55);
+            this.pnlBtm.Location = new System.Drawing.Point(1, 347);
+            this.pnlBtm.Size = new System.Drawing.Size(1454, 55);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(1545, 12);
+            this.btnCancel.Location = new System.Drawing.Point(1326, 12);
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(1430, 12);
+            this.btnOK.Location = new System.Drawing.Point(1211, 12);
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // cbIs_handle_process
@@ -96,7 +96,7 @@
             this.cbIs_handle_process.DataSource = null;
             this.cbIs_handle_process.FillColor = System.Drawing.Color.White;
             this.cbIs_handle_process.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbIs_handle_process.Location = new System.Drawing.Point(1024, 221);
+            this.cbIs_handle_process.Location = new System.Drawing.Point(903, 148);
             this.cbIs_handle_process.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbIs_handle_process.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbIs_handle_process.Name = "cbIs_handle_process";
@@ -111,7 +111,7 @@
             this.tbCar_brand.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbCar_brand.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbCar_brand.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbCar_brand.Location = new System.Drawing.Point(1453, 74);
+            this.tbCar_brand.Location = new System.Drawing.Point(1276, 74);
             this.tbCar_brand.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbCar_brand.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbCar_brand.Name = "tbCar_brand";
@@ -126,7 +126,7 @@
             // 
             this.uiLabel25.AutoSize = true;
             this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel25.Location = new System.Drawing.Point(807, 450);
+            this.uiLabel25.Location = new System.Drawing.Point(766, 261);
             this.uiLabel25.Name = "uiLabel25";
             this.uiLabel25.Size = new System.Drawing.Size(86, 31);
             this.uiLabel25.TabIndex = 183;
@@ -137,7 +137,7 @@
             // 
             this.uiLabel26.AutoSize = true;
             this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel26.Location = new System.Drawing.Point(423, 442);
+            this.uiLabel26.Location = new System.Drawing.Point(411, 266);
             this.uiLabel26.Name = "uiLabel26";
             this.uiLabel26.Size = new System.Drawing.Size(110, 31);
             this.uiLabel26.TabIndex = 184;
@@ -150,7 +150,7 @@
             this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTown.Location = new System.Drawing.Point(641, 455);
+            this.cbTown.Location = new System.Drawing.Point(528, 261);
             this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbTown.Name = "cbTown";
@@ -167,7 +167,7 @@
             this.cbVillage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbVillage.Location = new System.Drawing.Point(1024, 452);
+            this.cbVillage.Location = new System.Drawing.Point(903, 258);
             this.cbVillage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVillage.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbVillage.Name = "cbVillage";
@@ -193,7 +193,7 @@
             this.tbPhone_number.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbPhone_number.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPhone_number.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPhone_number.Location = new System.Drawing.Point(1024, 78);
+            this.tbPhone_number.Location = new System.Drawing.Point(903, 78);
             this.tbPhone_number.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPhone_number.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbPhone_number.Name = "tbPhone_number";
@@ -209,7 +209,7 @@
             this.tbIdcard.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbIdcard.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbIdcard.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbIdcard.Location = new System.Drawing.Point(641, 75);
+            this.tbIdcard.Location = new System.Drawing.Point(528, 75);
             this.tbIdcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbIdcard.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbIdcard.Name = "tbIdcard";
@@ -224,7 +224,7 @@
             // 
             this.uiLabel3.AutoSize = true;
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel3.Location = new System.Drawing.Point(32, 281);
+            this.uiLabel3.Location = new System.Drawing.Point(32, 183);
             this.uiLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(158, 31);
@@ -237,7 +237,7 @@
             this.tbHolder_name.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbHolder_name.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbHolder_name.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbHolder_name.Location = new System.Drawing.Point(250, 75);
+            this.tbHolder_name.Location = new System.Drawing.Point(158, 78);
             this.tbHolder_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbHolder_name.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbHolder_name.Name = "tbHolder_name";
@@ -252,7 +252,7 @@
             // 
             this.uiLabel1.AutoSize = true;
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel1.Location = new System.Drawing.Point(1180, 211);
+            this.uiLabel1.Location = new System.Drawing.Point(1125, 147);
             this.uiLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(158, 31);
@@ -264,7 +264,7 @@
             // 
             this.uiLabel6.AutoSize = true;
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel6.Location = new System.Drawing.Point(819, 215);
+            this.uiLabel6.Location = new System.Drawing.Point(766, 147);
             this.uiLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(206, 31);
@@ -276,7 +276,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(423, 143);
+            this.label9.Location = new System.Drawing.Point(411, 111);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(158, 31);
@@ -288,7 +288,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(819, 135);
+            this.label15.Location = new System.Drawing.Point(766, 111);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(158, 31);
@@ -300,7 +300,7 @@
             // 
             this.uiLabel5.AutoSize = true;
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel5.Location = new System.Drawing.Point(1180, 73);
+            this.uiLabel5.Location = new System.Drawing.Point(1125, 75);
             this.uiLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(158, 31);
@@ -312,7 +312,7 @@
             // 
             this.uiLabel4.AutoSize = true;
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel4.Location = new System.Drawing.Point(32, 142);
+            this.uiLabel4.Location = new System.Drawing.Point(32, 111);
             this.uiLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(158, 31);
@@ -324,7 +324,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(819, 73);
+            this.label13.Location = new System.Drawing.Point(766, 75);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(110, 31);
@@ -336,7 +336,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(423, 74);
+            this.label12.Location = new System.Drawing.Point(411, 75);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(110, 31);
@@ -348,7 +348,7 @@
             // 
             this.uiLabel7.AutoSize = true;
             this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel7.Location = new System.Drawing.Point(32, 222);
+            this.uiLabel7.Location = new System.Drawing.Point(32, 147);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(150, 31);
@@ -360,7 +360,7 @@
             // 
             this.uiLabel9.AutoSize = true;
             this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel9.Location = new System.Drawing.Point(819, 276);
+            this.uiLabel9.Location = new System.Drawing.Point(766, 183);
             this.uiLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel9.Name = "uiLabel9";
             this.uiLabel9.Size = new System.Drawing.Size(184, 31);
@@ -372,7 +372,7 @@
             // 
             this.uiLabel10.AutoSize = true;
             this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel10.Location = new System.Drawing.Point(423, 281);
+            this.uiLabel10.Location = new System.Drawing.Point(411, 183);
             this.uiLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel10.Name = "uiLabel10";
             this.uiLabel10.Size = new System.Drawing.Size(174, 31);
@@ -386,7 +386,7 @@
             this.tbPlant_area.CanEmpty = true;
             this.tbPlant_area.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPlant_area.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPlant_area.Location = new System.Drawing.Point(1453, 142);
+            this.tbPlant_area.Location = new System.Drawing.Point(1275, 113);
             this.tbPlant_area.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPlant_area.Minimum = 0D;
             this.tbPlant_area.MinimumSize = new System.Drawing.Size(1, 16);
@@ -406,7 +406,7 @@
             this.tbPlant_yield.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPlant_yield.DecimalPlaces = 1;
             this.tbPlant_yield.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPlant_yield.Location = new System.Drawing.Point(250, 223);
+            this.tbPlant_yield.Location = new System.Drawing.Point(158, 148);
             this.tbPlant_yield.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPlant_yield.Minimum = 0D;
             this.tbPlant_yield.MinimumSize = new System.Drawing.Size(1, 16);
@@ -423,7 +423,7 @@
             // 
             this.uiLabel16.AutoSize = true;
             this.uiLabel16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel16.Location = new System.Drawing.Point(1180, 142);
+            this.uiLabel16.Location = new System.Drawing.Point(1125, 111);
             this.uiLabel16.Name = "uiLabel16";
             this.uiLabel16.Size = new System.Drawing.Size(174, 31);
             this.uiLabel16.TabIndex = 180;
@@ -436,7 +436,7 @@
             this.tbAnimal_count.CanEmpty = true;
             this.tbAnimal_count.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAnimal_count.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbAnimal_count.Location = new System.Drawing.Point(1024, 282);
+            this.tbAnimal_count.Location = new System.Drawing.Point(903, 183);
             this.tbAnimal_count.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbAnimal_count.Minimum = 0D;
             this.tbAnimal_count.MinimumSize = new System.Drawing.Size(1, 16);
@@ -455,7 +455,7 @@
             this.tbAnimal_area.CanEmpty = true;
             this.tbAnimal_area.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAnimal_area.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbAnimal_area.Location = new System.Drawing.Point(641, 282);
+            this.tbAnimal_area.Location = new System.Drawing.Point(528, 183);
             this.tbAnimal_area.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbAnimal_area.Minimum = 0D;
             this.tbAnimal_area.MinimumSize = new System.Drawing.Size(1, 16);
@@ -472,7 +472,7 @@
             // 
             this.uiLabel8.AutoSize = true;
             this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel8.Location = new System.Drawing.Point(423, 221);
+            this.uiLabel8.Location = new System.Drawing.Point(411, 147);
             this.uiLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel8.Name = "uiLabel8";
             this.uiLabel8.Size = new System.Drawing.Size(150, 31);
@@ -486,7 +486,7 @@
             this.tbPlant_output.CanEmpty = true;
             this.tbPlant_output.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPlant_output.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPlant_output.Location = new System.Drawing.Point(641, 222);
+            this.tbPlant_output.Location = new System.Drawing.Point(528, 148);
             this.tbPlant_output.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPlant_output.Minimum = 0D;
             this.tbPlant_output.MinimumSize = new System.Drawing.Size(1, 16);
@@ -503,31 +503,31 @@
             // 
             this.uiLabel11.AutoSize = true;
             this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel11.Location = new System.Drawing.Point(1180, 275);
+            this.uiLabel11.Location = new System.Drawing.Point(410, 219);
             this.uiLabel11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel11.Name = "uiLabel11";
-            this.uiLabel11.Size = new System.Drawing.Size(328, 31);
+            this.uiLabel11.Size = new System.Drawing.Size(184, 62);
             this.uiLabel11.TabIndex = 165;
-            this.uiLabel11.Text = "已接种疫苗的动物数量(头/只)";
+            this.uiLabel11.Text = "已接种疫苗的\r\n动物数量(头/只)";
             this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel12
             // 
             this.uiLabel12.AutoSize = true;
             this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel12.Location = new System.Drawing.Point(32, 367);
+            this.uiLabel12.Location = new System.Drawing.Point(32, 219);
             this.uiLabel12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel12.Name = "uiLabel12";
-            this.uiLabel12.Size = new System.Drawing.Size(328, 31);
+            this.uiLabel12.Size = new System.Drawing.Size(184, 62);
             this.uiLabel12.TabIndex = 165;
-            this.uiLabel12.Text = "未接种疫苗的动物数量(头/只)";
+            this.uiLabel12.Text = "未接种疫苗的\r\n动物数量(头/只)";
             this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel13
             // 
             this.uiLabel13.AutoSize = true;
             this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel13.Location = new System.Drawing.Point(423, 366);
+            this.uiLabel13.Location = new System.Drawing.Point(766, 219);
             this.uiLabel13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel13.Name = "uiLabel13";
             this.uiLabel13.Size = new System.Drawing.Size(184, 31);
@@ -541,14 +541,14 @@
             this.tbAnimal_vaccinate_count.CanEmpty = true;
             this.tbAnimal_vaccinate_count.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAnimal_vaccinate_count.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbAnimal_vaccinate_count.Location = new System.Drawing.Point(1453, 276);
+            this.tbAnimal_vaccinate_count.Location = new System.Drawing.Point(528, 222);
             this.tbAnimal_vaccinate_count.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbAnimal_vaccinate_count.Minimum = 0D;
             this.tbAnimal_vaccinate_count.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbAnimal_vaccinate_count.Name = "tbAnimal_vaccinate_count";
             this.tbAnimal_vaccinate_count.Padding = new System.Windows.Forms.Padding(5);
             this.tbAnimal_vaccinate_count.ShowText = false;
-            this.tbAnimal_vaccinate_count.Size = new System.Drawing.Size(140, 29);
+            this.tbAnimal_vaccinate_count.Size = new System.Drawing.Size(158, 29);
             this.tbAnimal_vaccinate_count.TabIndex = 175;
             this.tbAnimal_vaccinate_count.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbAnimal_vaccinate_count.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -560,7 +560,7 @@
             this.tbAnimal_nvaccinate_count.CanEmpty = true;
             this.tbAnimal_nvaccinate_count.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAnimal_nvaccinate_count.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbAnimal_nvaccinate_count.Location = new System.Drawing.Point(250, 368);
+            this.tbAnimal_nvaccinate_count.Location = new System.Drawing.Point(158, 221);
             this.tbAnimal_nvaccinate_count.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbAnimal_nvaccinate_count.Minimum = 0D;
             this.tbAnimal_nvaccinate_count.MinimumSize = new System.Drawing.Size(1, 16);
@@ -579,14 +579,14 @@
             this.tbInventory_count.CanEmpty = true;
             this.tbInventory_count.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbInventory_count.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbInventory_count.Location = new System.Drawing.Point(641, 367);
+            this.tbInventory_count.Location = new System.Drawing.Point(903, 219);
             this.tbInventory_count.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbInventory_count.Minimum = 0D;
             this.tbInventory_count.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbInventory_count.Name = "tbInventory_count";
             this.tbInventory_count.Padding = new System.Windows.Forms.Padding(5);
             this.tbInventory_count.ShowText = false;
-            this.tbInventory_count.Size = new System.Drawing.Size(158, 29);
+            this.tbInventory_count.Size = new System.Drawing.Size(148, 29);
             this.tbInventory_count.TabIndex = 185;
             this.tbInventory_count.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbInventory_count.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -596,7 +596,7 @@
             // 
             this.uiLabel14.AutoSize = true;
             this.uiLabel14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel14.Location = new System.Drawing.Point(1180, 365);
+            this.uiLabel14.Location = new System.Drawing.Point(1125, 183);
             this.uiLabel14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel14.Name = "uiLabel14";
             this.uiLabel14.Size = new System.Drawing.Size(232, 31);
@@ -608,7 +608,7 @@
             // 
             this.uiLabel15.AutoSize = true;
             this.uiLabel15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel15.Location = new System.Drawing.Point(32, 441);
+            this.uiLabel15.Location = new System.Drawing.Point(32, 266);
             this.uiLabel15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel15.Name = "uiLabel15";
             this.uiLabel15.Size = new System.Drawing.Size(198, 31);
@@ -622,14 +622,14 @@
             this.tbOutbound_count.CanEmpty = true;
             this.tbOutbound_count.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbOutbound_count.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbOutbound_count.Location = new System.Drawing.Point(1024, 366);
+            this.tbOutbound_count.Location = new System.Drawing.Point(1275, 219);
             this.tbOutbound_count.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbOutbound_count.Minimum = 0D;
             this.tbOutbound_count.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbOutbound_count.Name = "tbOutbound_count";
             this.tbOutbound_count.Padding = new System.Windows.Forms.Padding(5);
             this.tbOutbound_count.ShowText = false;
-            this.tbOutbound_count.Size = new System.Drawing.Size(148, 29);
+            this.tbOutbound_count.Size = new System.Drawing.Size(140, 29);
             this.tbOutbound_count.TabIndex = 174;
             this.tbOutbound_count.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbOutbound_count.Type = Sunny.UI.UITextBox.UIEditType.Integer;
@@ -641,7 +641,7 @@
             this.tbAnimal_yield.CanEmpty = true;
             this.tbAnimal_yield.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAnimal_yield.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbAnimal_yield.Location = new System.Drawing.Point(1453, 366);
+            this.tbAnimal_yield.Location = new System.Drawing.Point(1275, 183);
             this.tbAnimal_yield.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbAnimal_yield.Minimum = 0D;
             this.tbAnimal_yield.MinimumSize = new System.Drawing.Size(1, 16);
@@ -660,7 +660,7 @@
             this.tbAnimal_output.CanEmpty = true;
             this.tbAnimal_output.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbAnimal_output.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbAnimal_output.Location = new System.Drawing.Point(250, 442);
+            this.tbAnimal_output.Location = new System.Drawing.Point(158, 266);
             this.tbAnimal_output.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbAnimal_output.Minimum = 0D;
             this.tbAnimal_output.MinimumSize = new System.Drawing.Size(1, 16);
@@ -677,7 +677,7 @@
             // 
             this.uiLabel18.AutoSize = true;
             this.uiLabel18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel18.Location = new System.Drawing.Point(819, 366);
+            this.uiLabel18.Location = new System.Drawing.Point(1125, 219);
             this.uiLabel18.Name = "uiLabel18";
             this.uiLabel18.Size = new System.Drawing.Size(184, 31);
             this.uiLabel18.TabIndex = 180;
@@ -690,7 +690,7 @@
             this.ctvPlant_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.ctvPlant_type.FillColor = System.Drawing.Color.White;
             this.ctvPlant_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ctvPlant_type.Location = new System.Drawing.Point(641, 148);
+            this.ctvPlant_type.Location = new System.Drawing.Point(528, 113);
             this.ctvPlant_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctvPlant_type.MinimumSize = new System.Drawing.Size(63, 0);
             this.ctvPlant_type.Name = "ctvPlant_type";
@@ -708,7 +708,7 @@
             this.ctvPlant_area_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.ctvPlant_area_type.FillColor = System.Drawing.Color.White;
             this.ctvPlant_area_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ctvPlant_area_type.Location = new System.Drawing.Point(1024, 143);
+            this.ctvPlant_area_type.Location = new System.Drawing.Point(903, 113);
             this.ctvPlant_area_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctvPlant_area_type.MinimumSize = new System.Drawing.Size(63, 0);
             this.ctvPlant_area_type.Name = "ctvPlant_area_type";
@@ -725,7 +725,7 @@
             this.ctvAnimal_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.ctvAnimal_type.FillColor = System.Drawing.Color.White;
             this.ctvAnimal_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ctvAnimal_type.Location = new System.Drawing.Point(1453, 215);
+            this.ctvAnimal_type.Location = new System.Drawing.Point(1275, 148);
             this.ctvAnimal_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctvAnimal_type.MinimumSize = new System.Drawing.Size(63, 0);
             this.ctvAnimal_type.Name = "ctvAnimal_type";
@@ -743,7 +743,7 @@
             this.ctvAnimal_area_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.ctvAnimal_area_type.FillColor = System.Drawing.Color.White;
             this.ctvAnimal_area_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ctvAnimal_area_type.Location = new System.Drawing.Point(250, 287);
+            this.ctvAnimal_area_type.Location = new System.Drawing.Point(158, 183);
             this.ctvAnimal_area_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctvAnimal_area_type.MinimumSize = new System.Drawing.Size(63, 0);
             this.ctvAnimal_area_type.Name = "ctvAnimal_area_type";
@@ -760,7 +760,7 @@
             this.ctvMechine_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.ctvMechine_type.FillColor = System.Drawing.Color.White;
             this.ctvMechine_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ctvMechine_type.Location = new System.Drawing.Point(250, 145);
+            this.ctvMechine_type.Location = new System.Drawing.Point(158, 113);
             this.ctvMechine_type.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctvMechine_type.MinimumSize = new System.Drawing.Size(63, 0);
             this.ctvMechine_type.Name = "ctvMechine_type";
@@ -774,7 +774,7 @@
             // frmFamerInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1675, 604);
+            this.ClientSize = new System.Drawing.Size(1456, 405);
             this.Controls.Add(this.ctvMechine_type);
             this.Controls.Add(this.ctvAnimal_area_type);
             this.Controls.Add(this.ctvAnimal_type);

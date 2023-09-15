@@ -43,7 +43,6 @@
             this.btEdit = new Sunny.UI.UIButton();
             this.btDelete = new Sunny.UI.UIButton();
             this.gbSearch = new Sunny.UI.UIGroupBox();
-            this.pagination = new Sunny.UI.UIPagination();
             this.tbBreed_name = new Sunny.UI.UITextBox();
             this.uiLabel11 = new Sunny.UI.UILabel();
             this.uiLabel16 = new Sunny.UI.UILabel();
@@ -98,6 +97,7 @@
             this.label13 = new Sunny.UI.UILabel();
             this.label12 = new Sunny.UI.UILabel();
             this.label8 = new Sunny.UI.UILabel();
+            this.pagination = new Sunny.UI.UIPagination();
             ((System.ComponentModel.ISupportInitialize)(this.dgAnimalList)).BeginInit();
             this.gbResult.SuspendLayout();
             this.gbSearch.SuspendLayout();
@@ -107,11 +107,11 @@
             // 
             this.btReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btReset.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btReset.Location = new System.Drawing.Point(517, 225);
+            this.btReset.Location = new System.Drawing.Point(425, 225);
             this.btReset.MinimumSize = new System.Drawing.Size(1, 1);
             this.btReset.Name = "btReset";
             this.btReset.RectSize = 2;
-            this.btReset.Size = new System.Drawing.Size(120, 50);
+            this.btReset.Size = new System.Drawing.Size(98, 50);
             this.btReset.TabIndex = 62;
             this.btReset.Text = "重置(&R)";
             this.btReset.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -121,11 +121,11 @@
             // 
             this.btSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btSearch.Location = new System.Drawing.Point(390, 225);
+            this.btSearch.Location = new System.Drawing.Point(321, 225);
             this.btSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.btSearch.Name = "btSearch";
             this.btSearch.RectSize = 2;
-            this.btSearch.Size = new System.Drawing.Size(120, 50);
+            this.btSearch.Size = new System.Drawing.Size(98, 50);
             this.btSearch.TabIndex = 61;
             this.btSearch.Text = "查询(&S)";
             this.btSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -189,11 +189,11 @@
             // 
             this.btImport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btImport.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btImport.Location = new System.Drawing.Point(643, 225);
+            this.btImport.Location = new System.Drawing.Point(529, 225);
             this.btImport.MinimumSize = new System.Drawing.Size(1, 1);
             this.btImport.Name = "btImport";
             this.btImport.RectSize = 2;
-            this.btImport.Size = new System.Drawing.Size(120, 50);
+            this.btImport.Size = new System.Drawing.Size(98, 50);
             this.btImport.TabIndex = 82;
             this.btImport.Text = "导入(&I)";
             this.btImport.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -221,11 +221,11 @@
             // 
             this.btExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btExport.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btExport.Location = new System.Drawing.Point(769, 225);
+            this.btExport.Location = new System.Drawing.Point(633, 225);
             this.btExport.MinimumSize = new System.Drawing.Size(1, 1);
             this.btExport.Name = "btExport";
             this.btExport.RectSize = 2;
-            this.btExport.Size = new System.Drawing.Size(120, 50);
+            this.btExport.Size = new System.Drawing.Size(98, 50);
             this.btExport.TabIndex = 83;
             this.btExport.Text = "导出(&E)";
             this.btExport.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -238,7 +238,7 @@
             this.btAdd.Location = new System.Drawing.Point(9, 225);
             this.btAdd.MinimumSize = new System.Drawing.Size(1, 1);
             this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(120, 50);
+            this.btAdd.Size = new System.Drawing.Size(98, 50);
             this.btAdd.TabIndex = 84;
             this.btAdd.Text = "新增(&A)";
             this.btAdd.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -248,11 +248,11 @@
             // 
             this.btEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btEdit.Location = new System.Drawing.Point(136, 225);
+            this.btEdit.Location = new System.Drawing.Point(113, 225);
             this.btEdit.MinimumSize = new System.Drawing.Size(1, 1);
             this.btEdit.Name = "btEdit";
             this.btEdit.RectSize = 2;
-            this.btEdit.Size = new System.Drawing.Size(120, 50);
+            this.btEdit.Size = new System.Drawing.Size(98, 50);
             this.btEdit.TabIndex = 85;
             this.btEdit.Text = "编辑(&E)";
             this.btEdit.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -262,11 +262,11 @@
             // 
             this.btDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btDelete.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btDelete.Location = new System.Drawing.Point(263, 225);
+            this.btDelete.Location = new System.Drawing.Point(217, 225);
             this.btDelete.MinimumSize = new System.Drawing.Size(1, 1);
             this.btDelete.Name = "btDelete";
             this.btDelete.RectSize = 2;
-            this.btDelete.Size = new System.Drawing.Size(120, 50);
+            this.btDelete.Size = new System.Drawing.Size(98, 50);
             this.btDelete.TabIndex = 86;
             this.btDelete.Text = "删除(&D)";
             this.btDelete.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -276,6 +276,7 @@
             // 
             this.gbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbSearch.Controls.Add(this.cbAnimal_qualify);
             this.gbSearch.Controls.Add(this.tbBreed_name);
             this.gbSearch.Controls.Add(this.uiLabel11);
             this.gbSearch.Controls.Add(this.uiLabel16);
@@ -309,7 +310,6 @@
             this.gbSearch.Controls.Add(this.uiLabel23);
             this.gbSearch.Controls.Add(this.uiLabel25);
             this.gbSearch.Controls.Add(this.uiLabel26);
-            this.gbSearch.Controls.Add(this.cbAnimal_qualify);
             this.gbSearch.Controls.Add(this.cbSolid_pollution);
             this.gbSearch.Controls.Add(this.uiLabel3);
             this.gbSearch.Controls.Add(this.uiLabel1);
@@ -340,27 +340,6 @@
             this.gbSearch.TabIndex = 88;
             this.gbSearch.Text = "查询条件";
             this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pagination
-            // 
-            this.pagination.ActivePage = 20;
-            this.pagination.CausesValidation = false;
-            this.pagination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pagination.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.pagination.Location = new System.Drawing.Point(0, 865);
-            this.pagination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pagination.MinimumSize = new System.Drawing.Size(1, 1);
-            this.pagination.Name = "pagination";
-            this.pagination.PagerCount = 11;
-            this.pagination.PageSize = 50;
-            this.pagination.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
-            this.pagination.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
-            this.pagination.ShowText = false;
-            this.pagination.Size = new System.Drawing.Size(1440, 35);
-            this.pagination.TabIndex = 87;
-            this.pagination.Text = "uiDataGridPage1";
-            this.pagination.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.pagination.TotalCount = 40000;
             // 
             // tbBreed_name
             // 
@@ -1102,6 +1081,27 @@
             this.label8.TabIndex = 175;
             this.label8.Text = "占地面积(亩)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pagination
+            // 
+            this.pagination.ActivePage = 20;
+            this.pagination.CausesValidation = false;
+            this.pagination.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pagination.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.pagination.Location = new System.Drawing.Point(0, 865);
+            this.pagination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pagination.MinimumSize = new System.Drawing.Size(1, 1);
+            this.pagination.Name = "pagination";
+            this.pagination.PagerCount = 11;
+            this.pagination.PageSize = 50;
+            this.pagination.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
+            this.pagination.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
+            this.pagination.ShowText = false;
+            this.pagination.Size = new System.Drawing.Size(1440, 35);
+            this.pagination.TabIndex = 87;
+            this.pagination.Text = "uiDataGridPage1";
+            this.pagination.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pagination.TotalCount = 40000;
             // 
             // frmAnimalList
             // 
