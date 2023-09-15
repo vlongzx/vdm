@@ -241,9 +241,9 @@
             this.uiLabel27.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel27.Location = new System.Drawing.Point(699, 130);
             this.uiLabel27.Name = "uiLabel27";
-            this.uiLabel27.Size = new System.Drawing.Size(86, 31);
+            this.uiLabel27.Size = new System.Drawing.Size(150, 31);
             this.uiLabel27.TabIndex = 349;
-            this.uiLabel27.Text = "承包方";
+            this.uiLabel27.Text = "承包方(选填)";
             this.uiLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tbLand_use_remark

@@ -169,7 +169,8 @@ namespace com.vdm.form
             tour.Village = villiage;
             tour.Year_person_count = year_person_count;
             tour.Year_trade_income = year_trade_income;
-
+            tour.Creater = LoginInfo.CurrentUser.Account;
+            tour.Create_datetime = DateTime.Now.ToString();
             tourBLL = new TourBLL();
             
             if (this.tour_id == 0)//代表是新增

@@ -253,7 +253,8 @@ namespace com.vdm.form
             animal.Solid_pollution = this.cbSolid_pollution.SelectedValue.ToString();
             animal.Report_or_filings = this.cbReport_or_filings.SelectedValue.ToString();
             animal.Remark = this.tbRemark.Text;
-
+            animal.Creater = LoginInfo.CurrentUser.Account;
+            animal.Create_datetime = DateTime.Now.ToString();
             animalBLL = new AnimalBLL();
             if (this.breed_id == 0)//代表是新增
             {

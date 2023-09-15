@@ -317,7 +317,8 @@ namespace com.vdm.form
             plant.Town = town;
             plant.Village = village;
             plant.Year_yield = year_yield;
-
+            plant.Creater = LoginInfo.CurrentUser.Account;
+            plant.Create_datetime = DateTime.Now.ToString();
             plantBLL = new PlantBLL();
 
             if (this.plant_id == 0)//代表是新增

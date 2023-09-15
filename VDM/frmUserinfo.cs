@@ -140,8 +140,10 @@ namespace com.vdm.form
                 this.cbRoel.SelectedValue = user.Character_id;
                 this.cbTown.SelectedValue = user.Town;
                 this.cbVillage.SelectedValue = user.Village;
-                this.tbPassword.Enabled = false;
-                this.tbConfirmPassword.Enabled = false;
+                //this.tbPassword.Text = user.Password;
+                //this.tbConfirmPassword.Text = user.Password; 
+                //this.tbPassword.Enabled = false;
+                //this.tbConfirmPassword.Enabled = false;
             }
         }
 
@@ -164,7 +166,7 @@ namespace com.vdm.form
                             this.cbVillage.DataSource = list_village;
                             this.cbVillage.DisplayMember = "value";
                             this.cbVillage.ValueMember = "key";
-                            this.cbVillage.SelectedValue = "";
+                           // this.cbVillage.SelectedValue = "";
                         }
                     }
                     else
