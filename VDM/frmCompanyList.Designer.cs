@@ -55,6 +55,7 @@
             this.uiLabel10 = new Sunny.UI.UILabel();
             this.tbTaxpayer_code = new Sunny.UI.UITextBox();
             this.gbSearch = new Sunny.UI.UIGroupBox();
+            this.cbTown = new Sunny.UI.UIComboBox();
             this.ctvCompany_type = new Sunny.UI.UIComboTreeView();
             this.tbInsure_person_count_From = new Sunny.UI.UITextBox();
             this.cbCompany_status = new Sunny.UI.UIComboBox();
@@ -77,7 +78,6 @@
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel25 = new Sunny.UI.UILabel();
             this.uiLabel26 = new Sunny.UI.UILabel();
-            this.cbTown = new Sunny.UI.UIComboBox();
             this.cbTaxpayer_qualification = new Sunny.UI.UIComboBox();
             this.cbVillage = new Sunny.UI.UIComboBox();
             this.uiLabel2 = new Sunny.UI.UILabel();
@@ -493,6 +493,22 @@
             this.gbSearch.Text = "查询条件";
             this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cbTown
+            // 
+            this.cbTown.DataSource = null;
+            this.cbTown.FillColor = System.Drawing.Color.White;
+            this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbTown.Location = new System.Drawing.Point(786, 184);
+            this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbTown.Name = "cbTown";
+            this.cbTown.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbTown.Size = new System.Drawing.Size(261, 29);
+            this.cbTown.TabIndex = 152;
+            this.cbTown.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbTown.Watermark = "";
+            this.cbTown.SelectedValueChanged += new System.EventHandler(this.cbTown_SelectedValueChanged);
+            // 
             // ctvCompany_type
             // 
             this.ctvCompany_type.CheckBoxes = true;
@@ -825,22 +841,6 @@
             this.uiLabel26.Text = "所在乡镇";
             this.uiLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cbTown
-            // 
-            this.cbTown.DataSource = null;
-            this.cbTown.FillColor = System.Drawing.Color.White;
-            this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTown.Location = new System.Drawing.Point(786, 184);
-            this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbTown.Name = "cbTown";
-            this.cbTown.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbTown.Size = new System.Drawing.Size(261, 29);
-            this.cbTown.TabIndex = 152;
-            this.cbTown.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbTown.Watermark = "";
-            this.cbTown.SelectedValueChanged += new System.EventHandler(this.cbTown_SelectedValueChanged);
-            // 
             // cbTaxpayer_qualification
             // 
             this.cbTaxpayer_qualification.DataSource = null;
@@ -1002,10 +1002,10 @@
             // 
             this.btReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btReset.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btReset.Location = new System.Drawing.Point(1528, 93);
+            this.btReset.Location = new System.Drawing.Point(1416, 130);
             this.btReset.MinimumSize = new System.Drawing.Size(1, 1);
             this.btReset.Name = "btReset";
-            this.btReset.Size = new System.Drawing.Size(94, 50);
+            this.btReset.Size = new System.Drawing.Size(79, 37);
             this.btReset.TabIndex = 62;
             this.btReset.Text = "重置(&R)";
             this.btReset.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -1015,10 +1015,10 @@
             // 
             this.btSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btSearch.Location = new System.Drawing.Point(1428, 93);
+            this.btSearch.Location = new System.Drawing.Point(1416, 87);
             this.btSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(94, 50);
+            this.btSearch.Size = new System.Drawing.Size(79, 37);
             this.btSearch.TabIndex = 61;
             this.btSearch.Text = "查询(&S)";
             this.btSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));

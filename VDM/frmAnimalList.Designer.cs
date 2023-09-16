@@ -43,6 +43,7 @@
             this.btEdit = new Sunny.UI.UIButton();
             this.btDelete = new Sunny.UI.UIButton();
             this.gbSearch = new Sunny.UI.UIGroupBox();
+            this.cbAnimal_qualify = new Sunny.UI.UIComboBox();
             this.tbBreed_name = new Sunny.UI.UITextBox();
             this.uiLabel11 = new Sunny.UI.UILabel();
             this.uiLabel16 = new Sunny.UI.UILabel();
@@ -76,7 +77,6 @@
             this.uiLabel23 = new Sunny.UI.UILabel();
             this.uiLabel25 = new Sunny.UI.UILabel();
             this.uiLabel26 = new Sunny.UI.UILabel();
-            this.cbAnimal_qualify = new Sunny.UI.UIComboBox();
             this.cbSolid_pollution = new Sunny.UI.UIComboBox();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
@@ -107,11 +107,11 @@
             // 
             this.btReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btReset.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btReset.Location = new System.Drawing.Point(425, 225);
+            this.btReset.Location = new System.Drawing.Point(1257, 106);
             this.btReset.MinimumSize = new System.Drawing.Size(1, 1);
             this.btReset.Name = "btReset";
             this.btReset.RectSize = 2;
-            this.btReset.Size = new System.Drawing.Size(98, 50);
+            this.btReset.Size = new System.Drawing.Size(84, 31);
             this.btReset.TabIndex = 62;
             this.btReset.Text = "重置(&R)";
             this.btReset.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -121,11 +121,11 @@
             // 
             this.btSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btSearch.Location = new System.Drawing.Point(321, 225);
+            this.btSearch.Location = new System.Drawing.Point(1257, 71);
             this.btSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.btSearch.Name = "btSearch";
             this.btSearch.RectSize = 2;
-            this.btSearch.Size = new System.Drawing.Size(98, 50);
+            this.btSearch.Size = new System.Drawing.Size(84, 31);
             this.btSearch.TabIndex = 61;
             this.btSearch.Text = "查询(&S)";
             this.btSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -189,7 +189,7 @@
             // 
             this.btImport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btImport.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btImport.Location = new System.Drawing.Point(529, 225);
+            this.btImport.Location = new System.Drawing.Point(321, 225);
             this.btImport.MinimumSize = new System.Drawing.Size(1, 1);
             this.btImport.Name = "btImport";
             this.btImport.RectSize = 2;
@@ -221,7 +221,7 @@
             // 
             this.btExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btExport.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btExport.Location = new System.Drawing.Point(633, 225);
+            this.btExport.Location = new System.Drawing.Point(425, 225);
             this.btExport.MinimumSize = new System.Drawing.Size(1, 1);
             this.btExport.Name = "btExport";
             this.btExport.RectSize = 2;
@@ -282,6 +282,8 @@
             this.gbSearch.Controls.Add(this.uiLabel16);
             this.gbSearch.Controls.Add(this.uiLabel15);
             this.gbSearch.Controls.Add(this.uiLabel10);
+            this.gbSearch.Controls.Add(this.btReset);
+            this.gbSearch.Controls.Add(this.btSearch);
             this.gbSearch.Controls.Add(this.uiLabel13);
             this.gbSearch.Controls.Add(this.uiLabel9);
             this.gbSearch.Controls.Add(this.uiLabel12);
@@ -340,6 +342,22 @@
             this.gbSearch.TabIndex = 88;
             this.gbSearch.Text = "查询条件";
             this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbAnimal_qualify
+            // 
+            this.cbAnimal_qualify.DataSource = null;
+            this.cbAnimal_qualify.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.cbAnimal_qualify.FillColor = System.Drawing.Color.White;
+            this.cbAnimal_qualify.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbAnimal_qualify.Location = new System.Drawing.Point(759, 139);
+            this.cbAnimal_qualify.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbAnimal_qualify.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbAnimal_qualify.Name = "cbAnimal_qualify";
+            this.cbAnimal_qualify.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbAnimal_qualify.Size = new System.Drawing.Size(165, 29);
+            this.cbAnimal_qualify.TabIndex = 209;
+            this.cbAnimal_qualify.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbAnimal_qualify.Watermark = "";
             // 
             // tbBreed_name
             // 
@@ -797,22 +815,6 @@
             this.uiLabel26.Text = "防疫合格证";
             this.uiLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cbAnimal_qualify
-            // 
-            this.cbAnimal_qualify.DataSource = null;
-            this.cbAnimal_qualify.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
-            this.cbAnimal_qualify.FillColor = System.Drawing.Color.White;
-            this.cbAnimal_qualify.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbAnimal_qualify.Location = new System.Drawing.Point(759, 139);
-            this.cbAnimal_qualify.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbAnimal_qualify.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbAnimal_qualify.Name = "cbAnimal_qualify";
-            this.cbAnimal_qualify.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbAnimal_qualify.Size = new System.Drawing.Size(165, 29);
-            this.cbAnimal_qualify.TabIndex = 209;
-            this.cbAnimal_qualify.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbAnimal_qualify.Watermark = "";
-            // 
             // cbSolid_pollution
             // 
             this.cbSolid_pollution.DataSource = null;
@@ -1113,8 +1115,6 @@
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btExport);
             this.Controls.Add(this.pagination);
-            this.Controls.Add(this.btSearch);
-            this.Controls.Add(this.btReset);
             this.Controls.Add(this.gbResult);
             this.Controls.Add(this.gbSearch);
             this.Name = "frmAnimalList";

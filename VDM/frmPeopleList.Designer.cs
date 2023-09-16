@@ -46,6 +46,7 @@
             this.btExport = new Sunny.UI.UIButton();
             this.btImport = new Sunny.UI.UIButton();
             this.gbSearch = new Sunny.UI.UIGroupBox();
+            this.btSearch = new Sunny.UI.UIButton();
             this.dpBirthday_From = new Sunny.UI.UIDatePicker();
             this.dpJoin_party_time_from = new Sunny.UI.UIDatePicker();
             this.tbIdcard = new Sunny.UI.UITextBox();
@@ -82,7 +83,6 @@
             this.btReset = new Sunny.UI.UIButton();
             this.dgPeopleList = new Sunny.UI.UIDataGridView();
             this.gbResult = new Sunny.UI.UIGroupBox();
-            this.btSearch = new Sunny.UI.UIButton();
             this.gbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPeopleList)).BeginInit();
             this.gbResult.SuspendLayout();
@@ -325,6 +325,18 @@
             this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.gbSearch.Click += new System.EventHandler(this.uiGroupBox1_Click);
             // 
+            // btSearch
+            // 
+            this.btSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btSearch.Location = new System.Drawing.Point(1247, 43);
+            this.btSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(96, 40);
+            this.btSearch.TabIndex = 62;
+            this.btSearch.Text = "查询(&S)";
+            this.btSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            // 
             // dpBirthday_From
             // 
             this.dpBirthday_From.FillColor = System.Drawing.Color.White;
@@ -400,10 +412,10 @@
             // 
             this.btAdanceSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAdanceSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btAdanceSearch.Location = new System.Drawing.Point(1469, 78);
+            this.btAdanceSearch.Location = new System.Drawing.Point(1247, 137);
             this.btAdanceSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.btAdanceSearch.Name = "btAdanceSearch";
-            this.btAdanceSearch.Size = new System.Drawing.Size(96, 48);
+            this.btAdanceSearch.Size = new System.Drawing.Size(96, 40);
             this.btAdanceSearch.TabIndex = 62;
             this.btAdanceSearch.Text = "高级查询(&Q)";
             this.btAdanceSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -790,10 +802,10 @@
             // 
             this.btReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btReset.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btReset.Location = new System.Drawing.Point(1364, 78);
+            this.btReset.Location = new System.Drawing.Point(1247, 89);
             this.btReset.MinimumSize = new System.Drawing.Size(1, 1);
             this.btReset.Name = "btReset";
-            this.btReset.Size = new System.Drawing.Size(96, 48);
+            this.btReset.Size = new System.Drawing.Size(96, 40);
             this.btReset.TabIndex = 62;
             this.btReset.Text = "重置(&R)";
             this.btReset.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -872,18 +884,6 @@
             this.gbResult.TabStop = false;
             this.gbResult.Text = "数据列表";
             this.gbResult.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btSearch
-            // 
-            this.btSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSearch.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btSearch.Location = new System.Drawing.Point(1259, 78);
-            this.btSearch.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(96, 48);
-            this.btSearch.TabIndex = 62;
-            this.btSearch.Text = "查询(&S)";
-            this.btSearch.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             // 
             // frmPeopleList
             // 
