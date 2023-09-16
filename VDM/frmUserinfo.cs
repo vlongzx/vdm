@@ -85,6 +85,19 @@ namespace com.vdm.form
             }
             else
             {
+                string password = this.tbPassword.Text.Trim();
+                string confirm_password = this.tbConfirmPassword.Text;
+                if (password == "")
+                {
+                    MessageBox.Show("密码不能为空，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (password.Equals(confirm_password) == false)
+                {
+                    MessageBox.Show("输入密码和确认密码不一致，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                user.Password = MD5Encrypt.MD5Encrypt32(password);
                 user.User_id = user_id;
                 result = this.userBLL.editUser(user);
             }
@@ -141,7 +154,7 @@ namespace com.vdm.form
                 this.cbTown.SelectedValue = user.Town;
                 this.cbVillage.SelectedValue = user.Village;
                 //this.tbPassword.Text = user.Password;
-                //this.tbConfirmPassword.Text = user.Password; 
+                //this.tbConfirmPassword.Text = user.Password;
                 //this.tbPassword.Enabled = false;
                 //this.tbConfirmPassword.Enabled = false;
             }

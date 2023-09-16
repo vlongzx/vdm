@@ -115,10 +115,10 @@ namespace com.vdm.dal
                     {
                         continue;
                     }
-                    if (row["ColumnName"].ToString() == "password")
-                    {
-                        continue;
-                    }
+                    //if (row["ColumnName"].ToString() == "password")
+                    //{
+                    //    continue;
+                    //}
                     listSetValue.Add(row["ColumnName"].ToString() + "=@" + row["ColumnName"].ToString());
                 }
             }

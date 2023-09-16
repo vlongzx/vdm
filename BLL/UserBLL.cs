@@ -67,6 +67,7 @@ namespace com.vdm.bll
                 user = new User();
                 user.User_id = user_id;
                 user.Username = dt.Rows[0]["username"].ToString();
+                user.Password = dt.Rows[0]["password"].ToString();
                 user.Village = dt.Rows[0]["village"].ToString();
                 user.Town = dt.Rows[0]["town"].ToString();
                 user.Level = dt.Rows[0]["level"].ToString();
