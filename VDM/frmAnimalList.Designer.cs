@@ -182,7 +182,7 @@
             this.dgAnimalList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgAnimalList.SelectedIndex = -1;
             this.dgAnimalList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgAnimalList.Size = new System.Drawing.Size(1414, 543);
+            this.dgAnimalList.Size = new System.Drawing.Size(1894, 723);
             this.dgAnimalList.TabIndex = 7;
             // 
             // btImport
@@ -211,7 +211,7 @@
             this.gbResult.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbResult.Name = "gbResult";
             this.gbResult.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
-            this.gbResult.Size = new System.Drawing.Size(1422, 579);
+            this.gbResult.Size = new System.Drawing.Size(1902, 759);
             this.gbResult.TabIndex = 81;
             this.gbResult.TabStop = false;
             this.gbResult.Text = "数据列表";
@@ -338,7 +338,7 @@
             this.gbSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.gbSearch.Name = "gbSearch";
             this.gbSearch.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.gbSearch.Size = new System.Drawing.Size(1422, 215);
+            this.gbSearch.Size = new System.Drawing.Size(1902, 215);
             this.gbSearch.TabIndex = 88;
             this.gbSearch.Text = "查询条件";
             this.gbSearch.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1090,7 +1090,7 @@
             this.pagination.CausesValidation = false;
             this.pagination.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pagination.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.pagination.Location = new System.Drawing.Point(0, 865);
+            this.pagination.Location = new System.Drawing.Point(0, 1045);
             this.pagination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pagination.MinimumSize = new System.Drawing.Size(1, 1);
             this.pagination.Name = "pagination";
@@ -1099,7 +1099,7 @@
             this.pagination.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
             this.pagination.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
             this.pagination.ShowText = false;
-            this.pagination.Size = new System.Drawing.Size(1440, 35);
+            this.pagination.Size = new System.Drawing.Size(1920, 35);
             this.pagination.TabIndex = 87;
             this.pagination.Text = "uiDataGridPage1";
             this.pagination.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1108,7 +1108,7 @@
             // frmAnimalList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1440, 900);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.btImport);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btEdit);
