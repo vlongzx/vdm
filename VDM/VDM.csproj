@@ -85,8 +85,7 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>vdm.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -537,7 +536,9 @@
     <Content Include="lib\SunnyUI.dll" />
     <Content Include="lib\System.Data.SQLite.dll" />
     <Content Include="log4net.xml" />
-    <Content Include="vdm.ico" />
+    <Content Include="vdm.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
