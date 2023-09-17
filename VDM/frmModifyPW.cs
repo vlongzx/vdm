@@ -71,5 +71,14 @@ namespace com.vdm.form
         {
             
         }
+
+        private void tbPassword_Leave(object sender, EventArgs e)
+        {
+            if (Utils.IsPasswordValid(this.tbNewPassword.Text) == false)
+            {
+                ShowErrorDialog("密码必须至少有一个大写字母、一个小写字母、一个数字并且长度要大于8位。");
+                this.tbNewPassword.Focus();
+            }
+        }
     }
 }

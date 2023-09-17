@@ -106,6 +106,7 @@
             this.tbNewPassword.TabIndex = 1;
             this.tbNewPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbNewPassword.Watermark = "";
+            this.tbNewPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
             // 
             // tbOldPassword
             // 
