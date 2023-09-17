@@ -1,5 +1,6 @@
 ﻿using com.vdm.AutoUpdater;
 using com.vdm.bll;
+using com.vdm.common;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -50,12 +51,26 @@ namespace com.vdm.form
             {
                 MessageBox.Show(ex.Message, "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            IAutoUpdater autoUpdater = new com.vdm.AutoUpdater.AutoUpdater();
-            int fileCount = autoUpdater.CheckUpdaterFileCount();//检查需要更新的文件数量
+            int fileCount = 0;
+            try
+            {
+                IAutoUpdater autoUpdater = new com.vdm.AutoUpdater.AutoUpdater();
+                fileCount = autoUpdater.CheckUpdaterFileCount();//检查需要更新的文件数量
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.Message + ex.StackTrace);
+            }
             if (fileCount > 0)
             {
-                Process.Start(System.IO.Directory.GetCurrentDirectory() + "\\AutoUpdater.exe");
+                try
+                {
+                    Process.Start(System.IO.Directory.GetCurrentDirectory() + "\\AutoUpdater.exe");
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.Error(ex.Message + ex.StackTrace);
+                }
             }
             else
             {

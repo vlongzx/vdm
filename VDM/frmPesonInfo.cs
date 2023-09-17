@@ -23,8 +23,8 @@ namespace com.vdm.form
         {
             this.labLevelName.Text = LoginInfo.CurrentUser.Level;
             this.labRealName.Text = LoginInfo.CurrentUser.RealName;
-            this.labRoleName.Text = LoginInfo.CurrentUser.RealName;
-            this.labTown.Text = LoginInfo.CurrentUser.RealName;
+            this.labRoleName.Text = LoginInfo.CurrentUser.RoleName;
+            this.labTown.Text = LoginInfo.CurrentUser.Town;
             this.labUserName.Text = LoginInfo.CurrentUser.AccountName;
             this.labVillage.Text = LoginInfo.CurrentUser.Village;
         }

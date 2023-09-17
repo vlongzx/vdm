@@ -59,8 +59,7 @@ namespace com.vdm.bll
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                LogHelper.Error(ex.Message + ex.StackTrace);
             }
         }
        
