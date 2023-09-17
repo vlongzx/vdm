@@ -39,7 +39,7 @@ namespace com.vdm.bll
         //        {
         //            return 1;
         //        }
-               
+
         //    }
         //    return -1;
         //}
@@ -62,11 +62,12 @@ namespace com.vdm.bll
         {
             DataTable dt = this.userDAL.getUser(user_id);
             User user = null;
-            if(dt != null && dt.Rows.Count > 0)
+            if (dt != null && dt.Rows.Count > 0)
             {
                 user = new User();
                 user.User_id = user_id;
                 user.Username = dt.Rows[0]["username"].ToString();
+                user.Realname = dt.Rows[0]["realname"].ToString();
                 user.Password = dt.Rows[0]["password"].ToString();
                 user.Village = dt.Rows[0]["village"].ToString();
                 user.Town = dt.Rows[0]["town"].ToString();
@@ -105,6 +106,11 @@ namespace com.vdm.bll
         public Result delUser(int user_id)
         {
             return this.userDAL.DeleteUser(user_id);
+        }
+
+        public Result editPassword(string username, string password)
+        {
+            return this.userDAL.UpdatePassword(username, password);
         }
     }
 

@@ -107,6 +107,7 @@ namespace com.vdm.form
         {
 
             return  CheckRBG(uiRadioButtonGroup1, "请选择账号级别！")
+                && CheckTB(tbRealName, "姓名不能为空!")
                    && CheckTB(tbPassword, "密码不能设置为空!")
                     && CheckConfirmPassword(tbPassword,tbConfirmPassword,"输入密码和确认密码不一致，请重新输入！")
                       && CheckTownAndVillage(cbTown, cbVillage, "请选择账号所属乡镇！", "请选择账号所属村！")
@@ -181,6 +182,7 @@ namespace com.vdm.form
                 return;
             }
             string username = this.tbUsername.Text.Trim();
+            string realname = this.tbRealName.Text.Trim();
             string password = this.tbPassword.Text;
             string confirm_password = this.tbConfirmPassword.Text;
             string town = this.cbTown.SelectedValue.ToString();
@@ -189,6 +191,7 @@ namespace com.vdm.form
 
             User user = new User();
             user.Username = username;
+            user.Realname = realname;
             user.Password = MD5Encrypt.MD5Encrypt32(password);
             user.Town = town;
             user.Village = village;

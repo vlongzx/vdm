@@ -38,10 +38,12 @@
             this.cbTown = new Sunny.UI.UIComboBox();
             this.tbConfirmPassword = new Sunny.UI.UITextBox();
             this.tbPassword = new Sunny.UI.UITextBox();
+            this.tbRealName = new Sunny.UI.UITextBox();
             this.tbUsername = new Sunny.UI.UITextBox();
             this.uiLabel5 = new Sunny.UI.UILabel();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiLabel3 = new Sunny.UI.UILabel();
+            this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel6 = new Sunny.UI.UILabel();
             this.btInit = new Sunny.UI.UIButton();
@@ -101,10 +103,12 @@
             this.uiGroupBox2.Controls.Add(this.cbTown);
             this.uiGroupBox2.Controls.Add(this.tbConfirmPassword);
             this.uiGroupBox2.Controls.Add(this.tbPassword);
+            this.uiGroupBox2.Controls.Add(this.tbRealName);
             this.uiGroupBox2.Controls.Add(this.tbUsername);
             this.uiGroupBox2.Controls.Add(this.uiLabel5);
             this.uiGroupBox2.Controls.Add(this.uiLabel4);
             this.uiGroupBox2.Controls.Add(this.uiLabel3);
+            this.uiGroupBox2.Controls.Add(this.uiLabel1);
             this.uiGroupBox2.Controls.Add(this.uiLabel2);
             this.uiGroupBox2.Controls.Add(this.uiLabel6);
             this.uiGroupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -113,7 +117,7 @@
             this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox2.Name = "uiGroupBox2";
             this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox2.Size = new System.Drawing.Size(566, 285);
+            this.uiGroupBox2.Size = new System.Drawing.Size(566, 322);
             this.uiGroupBox2.TabIndex = 4;
             this.uiGroupBox2.Text = "初始化账号信息";
             this.uiGroupBox2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -124,7 +128,7 @@
             this.cbVillage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbVillage.Location = new System.Drawing.Point(140, 230);
+            this.cbVillage.Location = new System.Drawing.Point(140, 265);
             this.cbVillage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVillage.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbVillage.Name = "cbVillage";
@@ -140,7 +144,7 @@
             this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbTown.Location = new System.Drawing.Point(140, 185);
+            this.cbTown.Location = new System.Drawing.Point(140, 220);
             this.cbTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTown.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbTown.Name = "cbTown";
@@ -156,7 +160,7 @@
             this.tbConfirmPassword.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbConfirmPassword.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbConfirmPassword.Location = new System.Drawing.Point(140, 141);
+            this.tbConfirmPassword.Location = new System.Drawing.Point(140, 176);
             this.tbConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbConfirmPassword.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbConfirmPassword.Name = "tbConfirmPassword";
@@ -173,7 +177,7 @@
             this.tbPassword.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
             this.tbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbPassword.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPassword.Location = new System.Drawing.Point(140, 98);
+            this.tbPassword.Location = new System.Drawing.Point(140, 133);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPassword.MinimumSize = new System.Drawing.Size(1, 16);
             this.tbPassword.Name = "tbPassword";
@@ -185,6 +189,22 @@
             this.tbPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPassword.Watermark = "";
             this.tbPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
+            // 
+            // tbRealName
+            // 
+            this.tbRealName.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbRealName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbRealName.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbRealName.Location = new System.Drawing.Point(140, 94);
+            this.tbRealName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbRealName.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbRealName.Name = "tbRealName";
+            this.tbRealName.Padding = new System.Windows.Forms.Padding(5);
+            this.tbRealName.ShowText = false;
+            this.tbRealName.Size = new System.Drawing.Size(289, 29);
+            this.tbRealName.TabIndex = 15;
+            this.tbRealName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbRealName.Watermark = "";
             // 
             // tbUsername
             // 
@@ -208,7 +228,7 @@
             // 
             this.uiLabel5.AutoSize = true;
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel5.Location = new System.Drawing.Point(23, 228);
+            this.uiLabel5.Location = new System.Drawing.Point(23, 263);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(86, 31);
             this.uiLabel5.TabIndex = 16;
@@ -219,7 +239,7 @@
             // 
             this.uiLabel4.AutoSize = true;
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel4.Location = new System.Drawing.Point(23, 185);
+            this.uiLabel4.Location = new System.Drawing.Point(23, 220);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(110, 31);
             this.uiLabel4.TabIndex = 17;
@@ -230,18 +250,29 @@
             // 
             this.uiLabel3.AutoSize = true;
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel3.Location = new System.Drawing.Point(23, 139);
+            this.uiLabel3.Location = new System.Drawing.Point(23, 174);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(110, 31);
             this.uiLabel3.TabIndex = 18;
             this.uiLabel3.Text = "确认密码";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // uiLabel1
+            // 
+            this.uiLabel1.AutoSize = true;
+            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel1.Location = new System.Drawing.Point(23, 94);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(62, 31);
+            this.uiLabel1.TabIndex = 20;
+            this.uiLabel1.Text = "姓名";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // uiLabel2
             // 
             this.uiLabel2.AutoSize = true;
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel2.Location = new System.Drawing.Point(23, 100);
+            this.uiLabel2.Location = new System.Drawing.Point(23, 135);
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(62, 31);
             this.uiLabel2.TabIndex = 19;
@@ -263,7 +294,7 @@
             // 
             this.btInit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btInit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btInit.Location = new System.Drawing.Point(412, 657);
+            this.btInit.Location = new System.Drawing.Point(412, 695);
             this.btInit.MinimumSize = new System.Drawing.Size(1, 1);
             this.btInit.Name = "btInit";
             this.btInit.Size = new System.Drawing.Size(168, 55);
@@ -279,7 +310,7 @@
             // frmInitUserAccount
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(600, 728);
+            this.ClientSize = new System.Drawing.Size(600, 762);
             this.Controls.Add(this.btInit);
             this.Controls.Add(this.uiGroupBox2);
             this.Controls.Add(this.uiRadioButtonGroup1);
@@ -316,5 +347,7 @@
         private Sunny.UI.UILabel uiLabel6;
         private Sunny.UI.UIButton btInit;
         private Sunny.UI.UIStyleManager uiStyleManager1;
+        private Sunny.UI.UITextBox tbRealName;
+        private Sunny.UI.UILabel uiLabel1;
     }
 }

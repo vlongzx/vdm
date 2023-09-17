@@ -40,7 +40,7 @@ namespace com.vdm.form
         private void btnOK_Click(object sender, EventArgs e)
         {
             string username = this.tbUsername.Text.Trim();
-            
+            string realname = this.tbRealName.Text.Trim();
             string remark = this.tbRemark.Text.Trim();
             string town  =this.cbTown.SelectedValue.ToString();
             string village = this.cbVillage.SelectedValue.ToString();
@@ -50,7 +50,7 @@ namespace com.vdm.form
             
             User user = new User();
             user.Username = username;
-            
+            user.Realname = realname;
             user.Town = town;
             user.Village = village;
             user.Character_id = character_id;
@@ -149,6 +149,7 @@ namespace com.vdm.form
                 this.userBLL = new UserBLL();
                 User user = this.userBLL.getUser(user_id);
                 this.tbUsername.Text = user.Username;
+                this.tbRealName.Text = user.Realname;
                 this.tbRemark.Text = user.Remark;
                 this.cbRoel.SelectedValue = user.Character_id;
                 this.cbTown.SelectedValue = user.Town;

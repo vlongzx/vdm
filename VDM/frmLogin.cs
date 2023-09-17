@@ -52,11 +52,13 @@ namespace com.vdm.form
             {
                 LoginInfo.CurrentUser.Account = username;
                 LoginInfo.CurrentUser.AccountName = username;
+                LoginInfo.CurrentUser.RealName = userdt.Rows[0]["realname"].ToString();
                 LoginInfo.CurrentUser.Town = userdt.Rows[0]["town"].ToString();
                 LoginInfo.CurrentUser.Village = userdt.Rows[0]["village"].ToString();
                 LoginInfo.CurrentUser.RoleName = userdt.Rows[0]["role_name"].ToString();
+                LoginInfo.CurrentUser.Level = userdt.Rows[0]["level"].ToString();
                 LoginInfo.CurrentUser.LoginTime = DateTime.Now;
-
+                LoginInfo.CurrentUser.Password = password;
 
                 //获得当前用户角色对应的功能权限类比
                 RoleBLL roleBLL = new RoleBLL();

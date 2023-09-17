@@ -12,7 +12,8 @@ namespace com.vdm.common
         private string _Account = "";
         public string Account { get { return _Account; } set { _Account = value; } }
 
-
+        private string _RealName = "";
+        private string _Password = "";
         //用户名
         private string _AccountName = "";
         public string AccountName { get { return _AccountName; } set { _AccountName = value; } }
@@ -22,6 +23,7 @@ namespace com.vdm.common
         private string _Village = "";
         //用户角色
         private string _RoleName = "";
+        private string _Level = "";
         //登录时间
         private DateTime _LoginTime;
         public DateTime LoginTime { get { return _LoginTime; } set { _LoginTime = value; } }
@@ -94,6 +96,51 @@ namespace com.vdm.common
             set
             {
                 _RoleName = value;
+            }
+        }
+        /// <summary>
+        ///  姓名
+        /// </summary>
+        public string RealName
+        {
+            get
+            {
+                return _RealName;
+            }
+
+            set
+            {
+                _RealName = value;
+            }
+        }
+        /// <summary>
+        /// 账号级别
+        /// </summary>
+        public string Level
+        {
+            get
+            {
+                return _Level;
+            }
+
+            set
+            {
+                _Level = value;
+            }
+        }
+        /// <summary>
+        ///  密码
+        /// </summary>
+        public string Password
+        {
+            get
+            {
+                return _Password;
+            }
+
+            set
+            {
+                _Password = value;
             }
         }
     }

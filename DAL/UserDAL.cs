@@ -149,5 +149,12 @@ namespace com.vdm.dal
             string sql = "delete from t_user where user_id=" + user_id;
             return this.SqlDbHelper.ExecuteNonQuery(sql);
         }
+
+
+        public Result UpdatePassword(string username ,string newpassword)
+        {
+            string sql = "update t_user set password = '"+ newpassword + "'";
+            return this.SqlDbHelper.ExecuteNonQuery(sql);
+        }
     }
 }

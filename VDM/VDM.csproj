@@ -85,7 +85,8 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>data.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -245,6 +246,12 @@
     <Compile Include="frmManagerList.Designer.cs">
       <DependentUpon>frmManagerList.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModifyPW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModifyPW.Designer.cs">
+      <DependentUpon>frmModifyPW.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPeopleAdvanceQuery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +269,12 @@
     </Compile>
     <Compile Include="frmPeopleInfo.Designer.cs">
       <DependentUpon>frmPeopleInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesonInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesonInfo.Designer.cs">
+      <DependentUpon>frmPesonInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPlantInfo.cs">
       <SubType>Form</SubType>
@@ -292,6 +305,12 @@
     </Compile>
     <Compile Include="frmSystemSet.Designer.cs">
       <DependentUpon>frmSystemSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTech.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTech.Designer.cs">
+      <DependentUpon>frmTech.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTourInfo.cs">
       <SubType>Form</SubType>
@@ -386,6 +405,9 @@
     <EmbeddedResource Include="frmManagerList.resx">
       <DependentUpon>frmManagerList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmModifyPW.resx">
+      <DependentUpon>frmModifyPW.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPeopleAdvanceQuery.resx">
       <DependentUpon>frmPeopleAdvanceQuery.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPeopleInfo.resx">
       <DependentUpon>frmPeopleInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesonInfo.resx">
+      <DependentUpon>frmPesonInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlantInfo.resx">
       <DependentUpon>frmPlantInfo.cs</DependentUpon>
@@ -409,6 +434,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSystemSet.resx">
       <DependentUpon>frmSystemSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTech.resx">
+      <DependentUpon>frmTech.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTourInfo.resx">
       <DependentUpon>frmTourInfo.cs</DependentUpon>
@@ -492,7 +520,6 @@
     <Content Include="aspose\Aspose.Cells.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data.ico" />
     <Content Include="images\data.ico" />
     <Content Include="images\企业.png" />
     <Content Include="images\养殖.png" />
@@ -510,6 +537,7 @@
     <Content Include="lib\SunnyUI.dll" />
     <Content Include="lib\System.Data.SQLite.dll" />
     <Content Include="log4net.xml" />
+    <Content Include="vdm.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

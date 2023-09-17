@@ -10,6 +10,7 @@ namespace com.vdm.model
     {
         private int user_id;
         private string username;
+        private string realname;
         private string password;
         private string level;
         private string  town;
@@ -109,7 +110,9 @@ namespace com.vdm.model
                 character_id = value;
             }
         }
-
+        /// <summary>
+        /// 所属乡镇
+        /// </summary>
         public string Town
         {
             get
@@ -122,7 +125,9 @@ namespace com.vdm.model
                 town = value;
             }
         }
-
+        /// <summary>
+        /// 所属村
+        /// </summary>
         public string Village
         {
             get
@@ -133,6 +138,21 @@ namespace com.vdm.model
             set
             {
                 village = value;
+            }
+        }
+        /// <summary>
+        ///  姓名
+        /// </summary>
+        public string Realname
+        {
+            get
+            {
+                return realname;
+            }
+
+            set
+            {
+                realname = value;
             }
         }
     }

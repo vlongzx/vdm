@@ -27,7 +27,7 @@ namespace com.vdm.form
             //Footer.Text = "陕西奥维纳斯软件技术有限公司提供技术支持";
 
             //this.labRoleName.Text = "当前角色：" + LoginInfo.CurrentUser.RoleName;
-            Footer.Text = "欢迎" + LoginInfo.CurrentUser.Town + LoginInfo.CurrentUser.Village + LoginInfo.CurrentUser.RoleName + LoginInfo.CurrentUser.AccountName + "登录。"+ "登录时间：" + LoginInfo.CurrentUser.LoginTime.ToString();
+            Footer.Text = "欢迎" + LoginInfo.CurrentUser.Town + LoginInfo.CurrentUser.Village + LoginInfo.CurrentUser.RoleName + LoginInfo.CurrentUser.RealName + "登录。"+ "登录时间：" + LoginInfo.CurrentUser.LoginTime.ToString();
             Footer.ForeColor = Color.Blue;
 
             //如果没有权限则不展示页面
@@ -205,6 +205,34 @@ namespace com.vdm.form
                 return;
             }
             MainTabControl.SelectPage(1006);
+        }
+
+        private void uiAvatar1_Click(object sender, EventArgs e)
+        {
+            this.uiContextMenuStrip.Show(this.uiAvatar1.Location.X, this.uiAvatar1.Location.Y + 60);
+        }
+
+        private void PToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPesonInfo pesonInfo = new frmPesonInfo();
+            pesonInfo.ShowDialog();
+        }
+
+        private void MToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModifyPW modifyPW = new frmModifyPW();
+            modifyPW.ShowDialog();
+        }
+
+        private void DToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTech tech = new frmTech();
+            tech.ShowDialog();
         }
     }
 }

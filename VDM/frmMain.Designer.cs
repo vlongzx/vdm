@@ -43,8 +43,11 @@
             this.btSystemSet = new Sunny.UI.UIHeaderButton();
             this.uiHeaderButton1 = new Sunny.UI.UIHeaderButton();
             this.uiContextMenuStrip = new Sunny.UI.UIContextMenuStrip();
-            this.技术支持TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.帮助文档DToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uiAvatar1 = new Sunny.UI.UIAvatar();
             this.Header.SuspendLayout();
             this.uiContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +61,7 @@
             // Header
             // 
             this.Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.Header.Controls.Add(this.uiAvatar1);
             this.Header.Controls.Add(this.btSystemSet);
             this.Header.Controls.Add(this.btPlant);
             this.Header.Controls.Add(this.btTour);
@@ -351,29 +355,58 @@
             this.uiContextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.uiContextMenuStrip.IsScaled = true;
             this.uiContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.技术支持TToolStripMenuItem,
-            this.帮助文档DToolStripMenuItem});
+            this.PToolStripMenuItem,
+            this.MToolStripMenuItem,
+            this.DToolStripMenuItem,
+            this.TToolStripMenuItem});
             this.uiContextMenuStrip.Name = "uiContextMenuStrip";
-            this.uiContextMenuStrip.Size = new System.Drawing.Size(167, 56);
+            this.uiContextMenuStrip.Size = new System.Drawing.Size(199, 141);
             // 
-            // 技术支持TToolStripMenuItem
+            // PToolStripMenuItem
             // 
-            this.技术支持TToolStripMenuItem.Name = "技术支持TToolStripMenuItem";
-            this.技术支持TToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
-            this.技术支持TToolStripMenuItem.Text = "技术支持(&T)";
+            this.PToolStripMenuItem.Name = "PToolStripMenuItem";
+            this.PToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.PToolStripMenuItem.Text = "个人信息(&P)";
+            this.PToolStripMenuItem.Click += new System.EventHandler(this.PToolStripMenuItem_Click);
             // 
-            // 帮助文档DToolStripMenuItem
+            // MToolStripMenuItem
             // 
-            this.帮助文档DToolStripMenuItem.Name = "帮助文档DToolStripMenuItem";
-            this.帮助文档DToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
-            this.帮助文档DToolStripMenuItem.Text = "帮助文档(&D)";
+            this.MToolStripMenuItem.Name = "MToolStripMenuItem";
+            this.MToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.MToolStripMenuItem.Text = "修改密码(&M)";
+            this.MToolStripMenuItem.Click += new System.EventHandler(this.MToolStripMenuItem_Click);
+            // 
+            // DToolStripMenuItem
+            // 
+            this.DToolStripMenuItem.Name = "DToolStripMenuItem";
+            this.DToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.DToolStripMenuItem.Text = "帮助文档(&D)";
+            this.DToolStripMenuItem.Click += new System.EventHandler(this.DToolStripMenuItem_Click);
+            // 
+            // TToolStripMenuItem
+            // 
+            this.TToolStripMenuItem.Name = "TToolStripMenuItem";
+            this.TToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.TToolStripMenuItem.Text = "技术支持(&T)";
+            this.TToolStripMenuItem.Click += new System.EventHandler(this.TToolStripMenuItem_Click);
+            // 
+            // uiAvatar1
+            // 
+            this.uiAvatar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiAvatar1.ContextMenuStrip = this.uiContextMenuStrip;
+            this.uiAvatar1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiAvatar1.Location = new System.Drawing.Point(1715, 15);
+            this.uiAvatar1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiAvatar1.Name = "uiAvatar1";
+            this.uiAvatar1.Size = new System.Drawing.Size(60, 60);
+            this.uiAvatar1.TabIndex = 7;
+            this.uiAvatar1.Text = "uiAvatar1";
+            this.uiAvatar1.Click += new System.EventHandler(this.uiAvatar1_Click);
             // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1797, 783);
-            this.ExtendBox = true;
-            this.ExtendMenu = this.uiContextMenuStrip;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
@@ -404,8 +437,11 @@
         private Sunny.UI.UIHeaderButton btLand;
         private Sunny.UI.UIHeaderButton uiHeaderButton1;
         private Sunny.UI.UIContextMenuStrip uiContextMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem 技术支持TToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 帮助文档DToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DToolStripMenuItem;
+        private Sunny.UI.UIAvatar uiAvatar1;
+        private System.Windows.Forms.ToolStripMenuItem PToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MToolStripMenuItem;
     }
 }
 
