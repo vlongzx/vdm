@@ -35,16 +35,16 @@
             this.tbRemark = new Sunny.UI.UITextBox();
             this.tbConfirmPassword = new Sunny.UI.UITextBox();
             this.tbPassword = new Sunny.UI.UITextBox();
+            this.tbRealName = new Sunny.UI.UITextBox();
             this.tbUsername = new Sunny.UI.UITextBox();
             this.uiLabel6 = new Sunny.UI.UILabel();
             this.uiLabel7 = new Sunny.UI.UILabel();
             this.uiLabel5 = new Sunny.UI.UILabel();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiLabel3 = new Sunny.UI.UILabel();
+            this.uiLabel8 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiLabel8 = new Sunny.UI.UILabel();
-            this.tbRealName = new Sunny.UI.UITextBox();
             this.pnlBtm.SuspendLayout();
             this.uiGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +52,10 @@
             // pnlBtm
             // 
             this.pnlBtm.Location = new System.Drawing.Point(1, 504);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
@@ -188,6 +192,22 @@
             this.tbPassword.Watermark = "";
             this.tbPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
             // 
+            // tbRealName
+            // 
+            this.tbRealName.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbRealName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbRealName.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbRealName.Location = new System.Drawing.Point(167, 104);
+            this.tbRealName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbRealName.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbRealName.Name = "tbRealName";
+            this.tbRealName.Padding = new System.Windows.Forms.Padding(5);
+            this.tbRealName.ShowText = false;
+            this.tbRealName.Size = new System.Drawing.Size(289, 29);
+            this.tbRealName.TabIndex = 0;
+            this.tbRealName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbRealName.Watermark = "";
+            // 
             // tbUsername
             // 
             this.tbUsername.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
@@ -259,6 +279,17 @@
             this.uiLabel3.Text = "确认密码";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // uiLabel8
+            // 
+            this.uiLabel8.AutoSize = true;
+            this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel8.Location = new System.Drawing.Point(50, 104);
+            this.uiLabel8.Name = "uiLabel8";
+            this.uiLabel8.Size = new System.Drawing.Size(62, 31);
+            this.uiLabel8.TabIndex = 0;
+            this.uiLabel8.Text = "姓名";
+            this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // uiLabel2
             // 
             this.uiLabel2.AutoSize = true;
@@ -280,33 +311,6 @@
             this.uiLabel1.TabIndex = 0;
             this.uiLabel1.Text = "用户名";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel8
-            // 
-            this.uiLabel8.AutoSize = true;
-            this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel8.Location = new System.Drawing.Point(50, 104);
-            this.uiLabel8.Name = "uiLabel8";
-            this.uiLabel8.Size = new System.Drawing.Size(62, 31);
-            this.uiLabel8.TabIndex = 0;
-            this.uiLabel8.Text = "姓名";
-            this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tbRealName
-            // 
-            this.tbRealName.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbRealName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbRealName.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbRealName.Location = new System.Drawing.Point(167, 104);
-            this.tbRealName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbRealName.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbRealName.Name = "tbRealName";
-            this.tbRealName.Padding = new System.Windows.Forms.Padding(5);
-            this.tbRealName.ShowText = false;
-            this.tbRealName.Size = new System.Drawing.Size(289, 29);
-            this.tbRealName.TabIndex = 0;
-            this.tbRealName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbRealName.Watermark = "";
             // 
             // frmUserinfo
             // 

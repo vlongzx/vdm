@@ -22,11 +22,17 @@ namespace com.vdm.form
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            //如果数据校验没有通过则直接返回。
+            if (this.IsOK == false)
+            {
+                return;
+            }
             string oldPassword = this.tbOldPassword.Text.Trim();
             string newPassword = this.tbNewPassword.Text.Trim();
             string confrimPassword = this.tbConfirmNewPassword.Text.Trim();
             UserBLL userBLL = new UserBLL();
             DataTable userdt = userBLL.Login(LoginInfo.CurrentUser.AccountName, oldPassword);
+
             if (userdt != null && userdt.Rows.Count > 0)
             {
                 //密码加密
@@ -53,11 +59,25 @@ namespace com.vdm.form
             return CheckEmpty(this.tbOldPassword, "请输入原密码。")
                 && CheckEmpty(this.tbNewPassword, "请输入新密码。")
                 && CheckEmpty(this.tbConfirmNewPassword, "请输入确认新密码。")
-                && CheckEquals("新密码和确认新密码不一致，请重现输入。")
+                && CheckPW("密码必须至少有一个大写字母、一个小写字母、一个数字并且长度要大于8位。")
+                && CheckEquals("新密码和确认新密码不一致，请重新输入。")
+     
+
                 ;
         }
+        private bool CheckPW(string message)
+        {
+            if (Utils.IsPasswordValid(this.tbNewPassword.Text) == false)
+            {
+                ShowErrorDialog(message);
+                // this.tbNewPassword.Focus();
+                return false;
+            }
+            return true;
+        }
 
-        private bool CheckEquals(string message)
+
+    private bool CheckEquals(string message)
         {
             if (this.tbNewPassword.Text.Equals(this.tbConfirmNewPassword.Text) == false)
             {
@@ -74,11 +94,16 @@ namespace com.vdm.form
 
         private void tbPassword_Leave(object sender, EventArgs e)
         {
-            if (Utils.IsPasswordValid(this.tbNewPassword.Text) == false)
-            {
-                ShowErrorDialog("密码必须至少有一个大写字母、一个小写字母、一个数字并且长度要大于8位。");
-                this.tbNewPassword.Focus();
-            }
+            //if (Utils.IsPasswordValid(this.tbNewPassword.Text) == false)
+            //{
+            //    ShowErrorDialog("密码必须至少有一个大写字母、一个小写字母、一个数字并且长度要大于8位。");
+            //    this.tbNewPassword.Focus();
+            //}
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,6 +16,7 @@ namespace com.vdm.form
 {
     public partial class frmUserinfo : UIEditForm
     {
+        private int flag = 0;
         private int user_id = 0;
         private UserBLL userBLL = null;
         private RoleBLL roleBLL = null;
@@ -75,13 +76,23 @@ namespace com.vdm.form
                     MessageBox.Show("密码不能为空，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+                if (Utils.IsPasswordValid(this.tbPassword.Text) == false)
+                {
+                    ShowErrorDialog("密码必须至少有一个大写字母、一个小写字母、一个数字并且长度要大于8位。");
+                    //this.tbPassword.Focus();
+                    return;
+                }
                 if (password.Equals(confirm_password) == false)
                 {
                     MessageBox.Show("输入密码和确认密码不一致，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                user.Password = MD5Encrypt.MD5Encrypt32(password);
-                result = this.userBLL.addUser(user);
+
+
+
+                    user.Password = MD5Encrypt.MD5Encrypt32(password);
+                    result = this.userBLL.addUser(user);
+
             }
             else
             {
@@ -90,6 +101,12 @@ namespace com.vdm.form
                 if (password == "")
                 {
                     MessageBox.Show("密码不能为空，请重新输入。", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (Utils.IsPasswordValid(this.tbPassword.Text) == false)
+                {
+                    ShowErrorDialog("密码必须至少有一个大写字母、一个小写字母、一个数字并且长度要大于8位。");
+                    //this.tbPassword.Focus();
                     return;
                 }
                 if (password.Equals(confirm_password) == false)
@@ -200,8 +217,12 @@ namespace com.vdm.form
             if (Utils.IsPasswordValid(this.tbPassword.Text) == false)
             {
                 ShowErrorDialog("密码必须至少有一个大写字母、一个小写字母、一个数字并且长度要大于8位。");
-                this.tbPassword.Focus();
+                //this.tbPassword.Focus();
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
         }
     }
 }
