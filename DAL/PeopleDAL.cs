@@ -699,7 +699,7 @@ namespace com.vdm.dal
 
         public DataTable QueryByIdcard(string idcard)
         {
-            string sql = "select * from t_people where idcard = " + idcard;
+            string sql = "select * from t_people where idcard = " + "'" + idcard + "'";
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
 

@@ -31,7 +31,7 @@ namespace com.vdm.dal
         /// <returns></returns>
         public DataTable queryAnimalByIdCard(string IdCard)
         {
-            string sql = "select * from t_animal where idcard = " + IdCard;
+            string sql = "select * from t_animal where idcard = " +"'"+ IdCard+"'";
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
         /// <summary>

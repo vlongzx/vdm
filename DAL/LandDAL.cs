@@ -335,7 +335,7 @@ namespace com.vdm.dal
         }
         public DataTable QueryByIdcard(string idcard)
         {
-            string sql = "select * from t_land where idcard = " + idcard;
+            string sql = "select * from t_land where idcard = " + "'" +idcard+ "'";
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
     }

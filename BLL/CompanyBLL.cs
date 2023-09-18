@@ -112,5 +112,10 @@ namespace com.vdm.bll
         {
             return this.companyDAL.ImportCompany(SQLStringObjectList);
         }
+        public DataTable QueryByCreditCode(string credit_code)
+        {
+            return this.companyDAL.QueryByCreditCode(credit_code);
+        }
+        
     }
 }

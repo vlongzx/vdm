@@ -336,6 +336,10 @@ namespace com.vdm.dal
             }
             return this.SqlDbHelper.ExecuteDataTable(sql, CommandType.Text, parameters);
         }
-
+        public DataTable QueryByCreditCode(string credit_code)
+        {
+            string sql = "select * from t_company where credit_code = " + "'" + credit_code + "'";
+            return this.SqlDbHelper.ExecuteDataTable(sql);
+        }
     }
 }

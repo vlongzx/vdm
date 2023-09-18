@@ -185,7 +185,7 @@
             this.tbHouse_location.Name = "tbHouse_location";
             this.tbHouse_location.Padding = new System.Windows.Forms.Padding(5);
             this.tbHouse_location.ShowText = false;
-            this.tbHouse_location.Size = new System.Drawing.Size(178, 29);
+            this.tbHouse_location.Size = new System.Drawing.Size(174, 29);
             this.tbHouse_location.TabIndex = 260;
             this.tbHouse_location.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbHouse_location.Watermark = "";
@@ -201,7 +201,7 @@
             this.tbHouse_owner.Name = "tbHouse_owner";
             this.tbHouse_owner.Padding = new System.Windows.Forms.Padding(5);
             this.tbHouse_owner.ShowText = false;
-            this.tbHouse_owner.Size = new System.Drawing.Size(178, 29);
+            this.tbHouse_owner.Size = new System.Drawing.Size(174, 29);
             this.tbHouse_owner.TabIndex = 259;
             this.tbHouse_owner.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbHouse_owner.Watermark = "";

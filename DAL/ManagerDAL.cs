@@ -434,7 +434,7 @@ namespace com.vdm.dal
         }
         public DataTable QueryByIdcard(string idcard)
         {
-            string sql = "select * from t_manager where idcard = " + idcard;
+            string sql = "select * from t_manager where idcard = " + "'" + idcard + "'";
             return this.SqlDbHelper.ExecuteDataTable(sql);
         }
     }
