@@ -372,6 +372,7 @@ namespace com.vdm.form
             dpOh_checktime_To.Text = "";
             this.cbVillage.SelectedValue = "";
             this.cbTown.SelectedValue = "";
+
             //查询所有信息
             condition = null;
             InitListView(condition, this.pageIndex, this.pageSize);

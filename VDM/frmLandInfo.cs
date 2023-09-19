@@ -31,7 +31,17 @@ namespace com.vdm.form
             this.opreation_mode = opreation_mode;
             this.land_id = land_id;
         }
-
+        private void SelectedItem(UIComboTreeView uct, string s)
+        {
+            if (s != null)
+            {
+                string[] arr_Plant_type = s.Split("; ");
+                for (int i = 0; i < arr_Plant_type.Length - 1; i++)//减一的原因是被split的字符串结尾是“; ”
+                {
+                    uct.Nodes.Find(arr_Plant_type[i], true)[0].Checked = true;
+                }
+            }
+        }
         private void frmLandInfo_Load(object sender, EventArgs e)
         {
             //初始化节目控件的值
@@ -62,6 +72,9 @@ namespace com.vdm.form
                 dpMove_date.Text = land.Move_date;
                 this.cbTown.SelectedValue = land.Town;
                 this.cbVillage.SelectedValue = land.Villiage;
+                SelectedItem(ctvLand_grade, land.Land_grade);
+                SelectedItem(ctvLand_type, land.Land_type);
+                SelectedItem(ctvMove_type, land.Move_type);
 
             }
         }

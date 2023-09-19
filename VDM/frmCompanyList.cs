@@ -366,7 +366,19 @@ namespace com.vdm.form
                 }
             }
         }
-
+        private void CancelItemSelect(UIComboTreeView uct)
+        {
+            if (uct != null)
+            {
+                foreach (TreeNode node in uct.Nodes)
+                {
+                    if (node.Checked == true)
+                    {
+                        node.Checked = false;
+                    }
+                }
+            }
+        }
         private void btReset_Click(object sender, EventArgs e)
         {
             //清空查询文本框内容
@@ -395,6 +407,8 @@ namespace com.vdm.form
             dpLicense_date_To.Text = "";
             this.cbVillage.SelectedValue = "";
             this.cbTown.SelectedValue = "";
+            //清空多选下拉框
+            CancelItemSelect(this.ctvCompany_type);
             //查询所有信息
             condition = null;
             InitListView(condition, this.pageIndex, this.pageSize);

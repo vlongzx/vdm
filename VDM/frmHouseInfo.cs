@@ -31,7 +31,17 @@ namespace com.vdm.form
             this.opreation_mode = opreation_mode;
             this.house_id = house_id;
         }
-
+        private void SelectedItem(UIComboTreeView uct, string s)
+        {
+            if (s != null)
+            {
+                string[] arr_Plant_type = s.Split("; ");
+                for (int i = 0; i < arr_Plant_type.Length - 1; i++)//减一的原因是被split的字符串结尾是“; ”
+                {
+                    uct.Nodes.Find(arr_Plant_type[i], true)[0].Checked = true;
+                }
+            }
+        }
         private void frmHouseInfo_Load(object sender, EventArgs e)
         {
             //初始化节目控件的值
@@ -56,7 +66,6 @@ namespace com.vdm.form
                 dpOh_checktime.Text = house.Oh_checktime;
                 this.cbTown.Text = house.Town;
                 this.cbVillage.Text = house.Villiage;
-
             }
 
         }

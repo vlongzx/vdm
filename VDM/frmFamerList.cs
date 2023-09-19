@@ -479,13 +479,31 @@ namespace com.vdm.form
             this.ctvAnimal_area_type.Text = "";
             this.cbTown.SelectedValue = "";
             this.cbVillage.SelectedValue = "";
+            //清空多选列表
+            CancelItemSelect(this.ctvAnimal_area_type);
+            CancelItemSelect(this.ctvAnimal_type);
+            CancelItemSelect(this.ctvMechine_type);
+            CancelItemSelect(this.ctvPlant_area_type);
+            CancelItemSelect(this.ctvPlant_type);
             //清空高级查询条件
             conditionAdvance = new Hashtable();
             //查询所有人员信息
             condition = null;
             InitListView(condition, this.pageIndex, this.pageSize);
         }
-
+        private void CancelItemSelect(UIComboTreeView uct)
+        {
+            if (uct != null)
+            {
+                foreach (TreeNode node in uct.Nodes)
+                {
+                    if (node.Checked == true)
+                    {
+                        node.Checked = false;
+                    }
+                }
+            }
+        }
         /// <summary>
         /// 导入
         /// </summary>

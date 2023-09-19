@@ -435,6 +435,7 @@ namespace com.vdm.form
             this.tbIdcard.Text = "";
             this.tbPhone_number.Text = "";
             this.cbPolitcal_outlook.SelectedValue = "";
+   
            // this.tbReligious_belief.Text = "";
             this.cbEducation.SelectedValue = "";
             this.dpJoin_party_time_from.Text = "";
