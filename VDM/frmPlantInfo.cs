@@ -58,11 +58,30 @@ namespace com.vdm.form
                     this.cbInsect_ill.SelectedValue = plant.Insect_ill;
                     this.cbIs_plan.SelectedValue = plant.Is_plan;
                     this.ctvManage_skill_method.Text = plant.Manage_skill_method;
+                    SelectedItem(this.ctvManage_skill_method, plant.Manage_skill_method);
+
                     this.tbPlant_brand.Text = plant.Plant_brand;
+                    //处理种植种类被选中
                     this.ctvPlant_type.Text = plant.Plant_type;
+                    SelectedItem(this.ctvPlant_type,plant.Plant_type);
+
                     this.ctvSale_way.Text = plant.Sale_way;
+                    SelectedItem(this.ctvSale_way, plant.Sale_way);
+
                     this.cbTown.SelectedValue = plant.Town;
                     this.cbVillage.SelectedValue = plant.Village;
+                }
+            }
+        }
+
+        private void SelectedItem(UIComboTreeView uct, string str_Plant_type)
+        {
+            if (str_Plant_type != null)
+            {
+                string[] arr_Plant_type = str_Plant_type.Split("; ");
+                for (int  i=0;i< arr_Plant_type.Length-1;i++)//减一的原因是被split的字符串结尾是“; ”
+                {
+                    uct.Nodes.Find(arr_Plant_type[i], true)[0].Checked = true;
                 }
             }
         }

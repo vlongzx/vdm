@@ -57,8 +57,6 @@
             this.tbAddress = new Sunny.UI.UITextBox();
             this.tbPlant_brand = new Sunny.UI.UITextBox();
             this.tbPhone_number = new Sunny.UI.UITextBox();
-            this.tbOutput = new Sunny.UI.UITextBox();
-            this.tbPlant_area = new Sunny.UI.UITextBox();
             this.tbIdcard = new Sunny.UI.UITextBox();
             this.tbContact_person = new Sunny.UI.UITextBox();
             this.uiLabel14 = new Sunny.UI.UILabel();
@@ -78,6 +76,12 @@
             this.dgPlantList = new Sunny.UI.UIDataGridView();
             this.gbResult = new Sunny.UI.UIGroupBox();
             this.btEdit = new Sunny.UI.UIButton();
+            this.tbPlant_area_from = new Sunny.UI.UITextBox();
+            this.tbPlant_area_to = new Sunny.UI.UITextBox();
+            this.uiLabel11 = new Sunny.UI.UILabel();
+            this.tbOutput_from = new Sunny.UI.UITextBox();
+            this.tbOutput_to = new Sunny.UI.UITextBox();
+            this.uiLabel12 = new Sunny.UI.UILabel();
             this.gbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPlantList)).BeginInit();
             this.gbResult.SuspendLayout();
@@ -246,7 +250,13 @@
             this.gbSearch.Controls.Add(this.ctvManage_skill_method);
             this.gbSearch.Controls.Add(this.ctvSale_way);
             this.gbSearch.Controls.Add(this.ctvPlant_type);
+            this.gbSearch.Controls.Add(this.uiLabel12);
+            this.gbSearch.Controls.Add(this.uiLabel11);
             this.gbSearch.Controls.Add(this.uiLabel5);
+            this.gbSearch.Controls.Add(this.tbOutput_to);
+            this.gbSearch.Controls.Add(this.tbPlant_area_to);
+            this.gbSearch.Controls.Add(this.tbOutput_from);
+            this.gbSearch.Controls.Add(this.tbPlant_area_from);
             this.gbSearch.Controls.Add(this.tbYear_yield_to);
             this.gbSearch.Controls.Add(this.tbYear_yield_from);
             this.gbSearch.Controls.Add(this.uiLabel6);
@@ -264,8 +274,6 @@
             this.gbSearch.Controls.Add(this.tbAddress);
             this.gbSearch.Controls.Add(this.tbPlant_brand);
             this.gbSearch.Controls.Add(this.tbPhone_number);
-            this.gbSearch.Controls.Add(this.tbOutput);
-            this.gbSearch.Controls.Add(this.tbPlant_area);
             this.gbSearch.Controls.Add(this.tbIdcard);
             this.gbSearch.Controls.Add(this.tbContact_person);
             this.gbSearch.Controls.Add(this.uiLabel14);
@@ -469,38 +477,6 @@
             this.tbPhone_number.TabIndex = 130;
             this.tbPhone_number.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbPhone_number.Watermark = "";
-            // 
-            // tbOutput
-            // 
-            this.tbOutput.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbOutput.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbOutput.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbOutput.Location = new System.Drawing.Point(798, 104);
-            this.tbOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbOutput.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbOutput.Name = "tbOutput";
-            this.tbOutput.Padding = new System.Windows.Forms.Padding(5);
-            this.tbOutput.ShowText = false;
-            this.tbOutput.Size = new System.Drawing.Size(165, 29);
-            this.tbOutput.TabIndex = 130;
-            this.tbOutput.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbOutput.Watermark = "";
-            // 
-            // tbPlant_area
-            // 
-            this.tbPlant_area.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbPlant_area.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPlant_area.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPlant_area.Location = new System.Drawing.Point(798, 73);
-            this.tbPlant_area.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbPlant_area.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbPlant_area.Name = "tbPlant_area";
-            this.tbPlant_area.Padding = new System.Windows.Forms.Padding(5);
-            this.tbPlant_area.ShowText = false;
-            this.tbPlant_area.Size = new System.Drawing.Size(165, 29);
-            this.tbPlant_area.TabIndex = 130;
-            this.tbPlant_area.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbPlant_area.Watermark = "";
             // 
             // tbIdcard
             // 
@@ -792,6 +768,92 @@
             this.btEdit.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
+            // tbPlant_area_from
+            // 
+            this.tbPlant_area_from.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbPlant_area_from.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPlant_area_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPlant_area_from.Location = new System.Drawing.Point(798, 73);
+            this.tbPlant_area_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPlant_area_from.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbPlant_area_from.Name = "tbPlant_area_from";
+            this.tbPlant_area_from.Padding = new System.Windows.Forms.Padding(5);
+            this.tbPlant_area_from.ShowText = false;
+            this.tbPlant_area_from.Size = new System.Drawing.Size(62, 29);
+            this.tbPlant_area_from.TabIndex = 131;
+            this.tbPlant_area_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPlant_area_from.Watermark = "";
+            // 
+            // tbPlant_area_to
+            // 
+            this.tbPlant_area_to.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbPlant_area_to.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPlant_area_to.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPlant_area_to.Location = new System.Drawing.Point(901, 73);
+            this.tbPlant_area_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPlant_area_to.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbPlant_area_to.Name = "tbPlant_area_to";
+            this.tbPlant_area_to.Padding = new System.Windows.Forms.Padding(5);
+            this.tbPlant_area_to.ShowText = false;
+            this.tbPlant_area_to.Size = new System.Drawing.Size(62, 29);
+            this.tbPlant_area_to.TabIndex = 131;
+            this.tbPlant_area_to.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPlant_area_to.Watermark = "";
+            // 
+            // uiLabel11
+            // 
+            this.uiLabel11.AutoSize = true;
+            this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel11.Location = new System.Drawing.Point(867, 73);
+            this.uiLabel11.Name = "uiLabel11";
+            this.uiLabel11.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel11.TabIndex = 174;
+            this.uiLabel11.Text = "-";
+            this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tbOutput_from
+            // 
+            this.tbOutput_from.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbOutput_from.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbOutput_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbOutput_from.Location = new System.Drawing.Point(798, 104);
+            this.tbOutput_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbOutput_from.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbOutput_from.Name = "tbOutput_from";
+            this.tbOutput_from.Padding = new System.Windows.Forms.Padding(5);
+            this.tbOutput_from.ShowText = false;
+            this.tbOutput_from.Size = new System.Drawing.Size(62, 29);
+            this.tbOutput_from.TabIndex = 131;
+            this.tbOutput_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbOutput_from.Watermark = "";
+            // 
+            // tbOutput_to
+            // 
+            this.tbOutput_to.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbOutput_to.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbOutput_to.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbOutput_to.Location = new System.Drawing.Point(901, 104);
+            this.tbOutput_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbOutput_to.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbOutput_to.Name = "tbOutput_to";
+            this.tbOutput_to.Padding = new System.Windows.Forms.Padding(5);
+            this.tbOutput_to.ShowText = false;
+            this.tbOutput_to.Size = new System.Drawing.Size(62, 29);
+            this.tbOutput_to.TabIndex = 131;
+            this.tbOutput_to.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbOutput_to.Watermark = "";
+            // 
+            // uiLabel12
+            // 
+            this.uiLabel12.AutoSize = true;
+            this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel12.Location = new System.Drawing.Point(867, 104);
+            this.uiLabel12.Name = "uiLabel12";
+            this.uiLabel12.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel12.TabIndex = 174;
+            this.uiLabel12.Text = "-";
+            this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmPlantList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -853,14 +915,18 @@
         private Sunny.UI.UIComboBox cbInsect_ill;
         private Sunny.UI.UIComboBox cbDevelop_willing;
         private Sunny.UI.UIComboBox cbIs_plan;
-        private Sunny.UI.UITextBox tbPlant_area;
         private Sunny.UI.UILabel uiLabel8;
         private Sunny.UI.UILabel uiLabel4;
         private Sunny.UI.UILabel uiLabel10;
-        private Sunny.UI.UITextBox tbOutput;
         private Sunny.UI.UIComboTreeView ctvManage_skill_method;
         private Sunny.UI.UIComboTreeView ctvSale_way;
         private Sunny.UI.UIComboTreeView ctvPlant_type;
         private Sunny.UI.UITextBox tbPlant_brand;
+        private Sunny.UI.UILabel uiLabel12;
+        private Sunny.UI.UILabel uiLabel11;
+        private Sunny.UI.UITextBox tbOutput_to;
+        private Sunny.UI.UITextBox tbPlant_area_to;
+        private Sunny.UI.UITextBox tbOutput_from;
+        private Sunny.UI.UITextBox tbPlant_area_from;
     }
 }

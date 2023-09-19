@@ -73,6 +73,7 @@ namespace com.vdm.bll
                 plant.Develop_willing = dt.Rows[0]["Develop_willing"].ToString();
                 plant.Insect_ill = dt.Rows[0]["Insect_ill"].ToString();
                 plant.Is_plan = dt.Rows[0]["Is_plan"].ToString();
+                plant.Idcard = dt.Rows[0]["Idcard"].ToString();
                 plant.Last_updater = dt.Rows[0]["Last_updater"].ToString();
                 plant.Last_update_datetime = dt.Rows[0]["Last_update_datetime"].ToString();
                 plant.Manage_skill_method = dt.Rows[0]["Manage_skill_method"].ToString();

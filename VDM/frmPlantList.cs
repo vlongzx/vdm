@@ -263,10 +263,15 @@ namespace com.vdm.form
         {
             string town = this.cbTown.SelectedValue.ToString();
             string village = this.cbVillage.SelectedValue.ToString();
-            double plant_area = 0;
-            if(this.tbPlant_area.Text.Trim() != "")
+            double plant_area_from = 0;
+            if(this.tbPlant_area_from.Text.Trim() != "")
             {
-                plant_area = double.Parse(this.tbPlant_area.Text.Trim());
+                plant_area_from = double.Parse(this.tbPlant_area_from.Text.Trim());
+            }
+            double plant_area_to = 0;
+            if (this.tbPlant_area_to.Text.Trim() != "")
+            {
+                plant_area_to = double.Parse(this.tbPlant_area_to.Text.Trim());
             }
             string plant_brand = this.tbPlant_brand.Text.Trim();
             string plant_type = this.ctvPlant_type.Text.ToString();
@@ -286,10 +291,15 @@ namespace com.vdm.form
                 year_yield_to = double.Parse(this.tbYear_yield_to.Text.Trim());
             }
             string sale_way = this.ctvSale_way.Text.ToString();
-            double output = 0;
-            if(this.tbOutput.Text.Trim() != "")
+            double output_from = 0;
+            if(this.tbOutput_from.Text.Trim() != "")
             {
-                output = double.Parse(this.tbOutput.Text.Trim());
+                output_from = double.Parse(this.tbOutput_from.Text.Trim());
+            }
+            double output_to = 0;
+            if (this.tbOutput_to.Text.Trim() != "")
+            {
+                output_to = double.Parse(this.tbOutput_to.Text.Trim());
             }
             string insect_ill = this.cbInsect_ill.SelectedValue.ToString();
             string manage_skill_method = this.ctvManage_skill_method.Text.ToString();
@@ -298,7 +308,8 @@ namespace com.vdm.form
             Hashtable condition = new Hashtable();
             condition.Add("town", town);
             condition.Add("village", village);
-            condition.Add("plant_area", plant_area);
+            condition.Add("plant_area_from", plant_area_from);
+            condition.Add("plant_area_to", plant_area_to);
             condition.Add("plant_brand", plant_brand);
             condition.Add("plant_type", plant_type);
             condition.Add("contact_person", contact_person);
@@ -308,7 +319,8 @@ namespace com.vdm.form
             condition.Add("year_yield_from", year_yield_from);
             condition.Add("year_yield_to", year_yield_to);
             condition.Add("sale_way", sale_way);
-            condition.Add("output", output);
+            condition.Add("output_from", output_from);
+            condition.Add("output_to", output_to);
             condition.Add("insect_ill", insect_ill);
             condition.Add("manage_skill_method", manage_skill_method);
             condition.Add("develop_willing", develop_willing);
@@ -332,20 +344,44 @@ namespace com.vdm.form
             this.tbContact_person.Text = "";
             this.tbIdcard.Text = "";
             this.tbPhone_number.Text = "";
-            this.tbPlant_area.Text = "";
-            this.tbYear_yield_from.Text = "";
+            this.tbPlant_area_from.Text = "";
+            this.tbPlant_area_from.Text = "";
+            this.tbYear_yield_to.Text = "";
             this.tbYear_yield_to.Text = "";
             this.cbDevelop_willing.SelectedValue = "";
             this.cbInsect_ill.SelectedValue = "";
             this.cbIs_plan.SelectedValue = "";
-            this.ctvManage_skill_method.Text = "";
-            this.tbOutput.Text = "";
+
+            this.ctvManage_skill_method.ResetText();
+            CancelItemSelect(this.ctvManage_skill_method);
+
+            this.tbOutput_from.Text = "";
+            this.tbOutput_to.Text = "";
             this.tbPlant_brand.Text= "";
-            this.ctvPlant_type.Text = "";
-            this.ctvSale_way.Text = "";
+
+            this.ctvPlant_type.ResetText();
+            CancelItemSelect(this.ctvPlant_type);
+
+            this.ctvSale_way.ResetText();
+            CancelItemSelect(this.ctvSale_way);
+
             this.cbTown.SelectedValue = "";
             this.cbVillage.SelectedValue = "";
             
+        }
+
+        private void CancelItemSelect(UIComboTreeView uct)
+        {
+            if(uct != null)
+            {
+                foreach(TreeNode node in uct.Nodes)
+                {
+                    if(node.Checked == true)
+                    {
+                        node.Checked = false;
+                    }
+                }
+            }
         }
         /// <summary>
         /// 增加

@@ -61,9 +61,9 @@ namespace com.vdm.dal
             string sql = "";
             if (condition != null)
             {
-                if (condition["plant_area"].ToString() != "0")
+                if (condition["plant_area_from"].ToString() != "0" && condition["plant_area_to"].ToString() != "0")
                 {
-                    sql += "    and plant_area = @plant_area";
+                    sql += "  and  plant_area BETWEEN '" + condition["plant_area_from"].ToString() + "' AND '" + condition["plant_area_to"].ToString() + "'";
                 }
                 if (condition["plant_brand"].ToString() != "")
                 {
@@ -93,9 +93,9 @@ namespace com.vdm.dal
                 {
                     sql += "    and sale_way = @sale_way";
                 }
-                if (condition["output"].ToString() != "0")
+                if (condition["output_from"].ToString() != "0" && condition["output_to"].ToString() != "0")
                 {
-                    sql += "    and output = @output";
+                    sql += "  and  output BETWEEN '" + condition["output_from"].ToString() + "' AND '" + condition["output_to"].ToString() + "'";
                 }
                 if (condition["insect_ill"].ToString() != "")
                 {
