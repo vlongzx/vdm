@@ -345,8 +345,8 @@ namespace com.vdm.form
             this.tbIdcard.Text = "";
             this.tbPhone_number.Text = "";
             this.tbPlant_area_from.Text = "";
-            this.tbPlant_area_from.Text = "";
-            this.tbYear_yield_to.Text = "";
+            this.tbPlant_area_to.Text = "";
+            this.tbYear_yield_from.Text = "";
             this.tbYear_yield_to.Text = "";
             this.cbDevelop_willing.SelectedValue = "";
             this.cbInsect_ill.SelectedValue = "";
