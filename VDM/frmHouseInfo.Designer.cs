@@ -76,6 +76,7 @@
             // cbHouse_is_rent
             // 
             this.cbHouse_is_rent.DataSource = null;
+            this.cbHouse_is_rent.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbHouse_is_rent.FillColor = System.Drawing.Color.White;
             this.cbHouse_is_rent.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbHouse_is_rent.Location = new System.Drawing.Point(165, 167);
@@ -110,6 +111,7 @@
             // cbIs_old_house
             // 
             this.cbIs_old_house.DataSource = null;
+            this.cbIs_old_house.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbIs_old_house.FillColor = System.Drawing.Color.White;
             this.cbIs_old_house.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbIs_old_house.Location = new System.Drawing.Point(823, 167);
@@ -126,6 +128,7 @@
             // cbHouse_safe_grade
             // 
             this.cbHouse_safe_grade.DataSource = null;
+            this.cbHouse_safe_grade.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbHouse_safe_grade.FillColor = System.Drawing.Color.White;
             this.cbHouse_safe_grade.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbHouse_safe_grade.Location = new System.Drawing.Point(823, 133);
@@ -161,6 +164,7 @@
             // cbTown
             // 
             this.cbTown.DataSource = null;
+            this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTown.Location = new System.Drawing.Point(165, 201);
@@ -313,6 +317,7 @@
             // cbHouse_type
             // 
             this.cbHouse_type.DataSource = null;
+            this.cbHouse_type.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbHouse_type.FillColor = System.Drawing.Color.White;
             this.cbHouse_type.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbHouse_type.Location = new System.Drawing.Point(1154, 97);
@@ -328,6 +333,7 @@
             // cbVillage
             // 
             this.cbVillage.DataSource = null;
+            this.cbVillage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbVillage.Location = new System.Drawing.Point(495, 201);
@@ -343,6 +349,7 @@
             // cbIs_my_struct
             // 
             this.cbIs_my_struct.DataSource = null;
+            this.cbIs_my_struct.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbIs_my_struct.FillColor = System.Drawing.Color.White;
             this.cbIs_my_struct.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbIs_my_struct.Location = new System.Drawing.Point(495, 167);
@@ -358,6 +365,7 @@
             // cbHouse_struction
             // 
             this.cbHouse_struction.DataSource = null;
+            this.cbHouse_struction.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbHouse_struction.FillColor = System.Drawing.Color.White;
             this.cbHouse_struction.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbHouse_struction.Location = new System.Drawing.Point(495, 133);

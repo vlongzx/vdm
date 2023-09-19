@@ -44,16 +44,6 @@
             this.gbSearch = new Sunny.UI.UIGroupBox();
             this.tbConfirm_area_From = new Sunny.UI.UITextBox();
             this.tbShop_From = new Sunny.UI.UITextBox();
-            this.uiLabel17 = new Sunny.UI.UILabel();
-            this.uiLabel16 = new Sunny.UI.UILabel();
-            this.uiLabel15 = new Sunny.UI.UILabel();
-            this.uiLabel8 = new Sunny.UI.UILabel();
-            this.uiLabel9 = new Sunny.UI.UILabel();
-            this.uiLabel12 = new Sunny.UI.UILabel();
-            this.uiLabel18 = new Sunny.UI.UILabel();
-            this.uiLabel13 = new Sunny.UI.UILabel();
-            this.uiLabel11 = new Sunny.UI.UILabel();
-            this.uiLabel5 = new Sunny.UI.UILabel();
             this.tbFactory_To = new Sunny.UI.UITextBox();
             this.tbMove_area_To = new Sunny.UI.UITextBox();
             this.tbConfirm_area_To = new Sunny.UI.UITextBox();
@@ -67,12 +57,22 @@
             this.tbMineral_resource_To = new Sunny.UI.UITextBox();
             this.tbSchool_To = new Sunny.UI.UITextBox();
             this.tbForeast_area_From = new Sunny.UI.UITextBox();
-            this.tbMechine = new Sunny.UI.UITextBox();
             this.tbWater_resource_From = new Sunny.UI.UITextBox();
             this.tbOffice_From = new Sunny.UI.UITextBox();
             this.tbMineral_resource_From = new Sunny.UI.UITextBox();
             this.tbMoney_From = new Sunny.UI.UITextBox();
             this.tbSchool_From = new Sunny.UI.UITextBox();
+            this.uiLabel17 = new Sunny.UI.UILabel();
+            this.uiLabel16 = new Sunny.UI.UILabel();
+            this.uiLabel15 = new Sunny.UI.UILabel();
+            this.uiLabel8 = new Sunny.UI.UILabel();
+            this.uiLabel9 = new Sunny.UI.UILabel();
+            this.uiLabel12 = new Sunny.UI.UILabel();
+            this.uiLabel18 = new Sunny.UI.UILabel();
+            this.uiLabel13 = new Sunny.UI.UILabel();
+            this.uiLabel11 = new Sunny.UI.UILabel();
+            this.uiLabel5 = new Sunny.UI.UILabel();
+            this.tbMechine = new Sunny.UI.UITextBox();
             this.uiLabel6 = new Sunny.UI.UILabel();
             this.cbTown = new Sunny.UI.UIComboBox();
             this.cbVilliage = new Sunny.UI.UIComboBox();
@@ -348,116 +348,6 @@
             this.tbShop_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbShop_From.Watermark = "";
             // 
-            // uiLabel17
-            // 
-            this.uiLabel17.AutoSize = true;
-            this.uiLabel17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel17.Location = new System.Drawing.Point(1228, 79);
-            this.uiLabel17.Name = "uiLabel17";
-            this.uiLabel17.Size = new System.Drawing.Size(24, 31);
-            this.uiLabel17.TabIndex = 174;
-            this.uiLabel17.Text = "-";
-            this.uiLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiLabel16
-            // 
-            this.uiLabel16.AutoSize = true;
-            this.uiLabel16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel16.Location = new System.Drawing.Point(1228, 48);
-            this.uiLabel16.Name = "uiLabel16";
-            this.uiLabel16.Size = new System.Drawing.Size(24, 31);
-            this.uiLabel16.TabIndex = 174;
-            this.uiLabel16.Text = "-";
-            this.uiLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiLabel15
-            // 
-            this.uiLabel15.AutoSize = true;
-            this.uiLabel15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel15.Location = new System.Drawing.Point(925, 48);
-            this.uiLabel15.Name = "uiLabel15";
-            this.uiLabel15.Size = new System.Drawing.Size(24, 31);
-            this.uiLabel15.TabIndex = 174;
-            this.uiLabel15.Text = "-";
-            this.uiLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiLabel8
-            // 
-            this.uiLabel8.AutoSize = true;
-            this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel8.Location = new System.Drawing.Point(590, 48);
-            this.uiLabel8.Name = "uiLabel8";
-            this.uiLabel8.Size = new System.Drawing.Size(24, 31);
-            this.uiLabel8.TabIndex = 174;
-            this.uiLabel8.Text = "-";
-            this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiLabel9
-            // 
-            this.uiLabel9.AutoSize = true;
-            this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel9.Location = new System.Drawing.Point(590, 110);
-            this.uiLabel9.Name = "uiLabel9";
-            this.uiLabel9.Size = new System.Drawing.Size(24, 31);
-            this.uiLabel9.TabIndex = 174;
-            this.uiLabel9.Text = "-";
-            this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiLabel12
-            // 
-            this.uiLabel12.AutoSize = true;
-            this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel12.Location = new System.Drawing.Point(244, 48);
-            this.uiLabel12.Name = "uiLabel12";
-            this.uiLabel12.Size = new System.Drawing.Size(24, 31);
-            this.uiLabel12.TabIndex = 174;
-            this.uiLabel12.Text = "-";
-            this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiLabel18
-            // 
-            this.uiLabel18.AutoSize = true;
-            this.uiLabel18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel18.Location = new System.Drawing.Point(925, 79);
-            this.uiLabel18.Name = "uiLabel18";
-            this.uiLabel18.Size = new System.Drawing.Size(24, 31);
-            this.uiLabel18.TabIndex = 174;
-            this.uiLabel18.Text = "-";
-            this.uiLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiLabel13
-            // 
-            this.uiLabel13.AutoSize = true;
-            this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel13.Location = new System.Drawing.Point(590, 79);
-            this.uiLabel13.Name = "uiLabel13";
-            this.uiLabel13.Size = new System.Drawing.Size(24, 31);
-            this.uiLabel13.TabIndex = 174;
-            this.uiLabel13.Text = "-";
-            this.uiLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiLabel11
-            // 
-            this.uiLabel11.AutoSize = true;
-            this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel11.Location = new System.Drawing.Point(244, 79);
-            this.uiLabel11.Name = "uiLabel11";
-            this.uiLabel11.Size = new System.Drawing.Size(24, 31);
-            this.uiLabel11.TabIndex = 174;
-            this.uiLabel11.Text = "-";
-            this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiLabel5
-            // 
-            this.uiLabel5.AutoSize = true;
-            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.Location = new System.Drawing.Point(244, 110);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(24, 31);
-            this.uiLabel5.TabIndex = 174;
-            this.uiLabel5.Text = "-";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tbFactory_To
             // 
             this.tbFactory_To.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
@@ -666,22 +556,6 @@
             this.tbForeast_area_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbForeast_area_From.Watermark = "";
             // 
-            // tbMechine
-            // 
-            this.tbMechine.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbMechine.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbMechine.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbMechine.Location = new System.Drawing.Point(859, 110);
-            this.tbMechine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbMechine.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbMechine.Name = "tbMechine";
-            this.tbMechine.Padding = new System.Windows.Forms.Padding(5);
-            this.tbMechine.ShowText = false;
-            this.tbMechine.Size = new System.Drawing.Size(150, 29);
-            this.tbMechine.TabIndex = 131;
-            this.tbMechine.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbMechine.Watermark = "";
-            // 
             // tbWater_resource_From
             // 
             this.tbWater_resource_From.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
@@ -762,6 +636,132 @@
             this.tbSchool_From.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbSchool_From.Watermark = "";
             // 
+            // uiLabel17
+            // 
+            this.uiLabel17.AutoSize = true;
+            this.uiLabel17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel17.Location = new System.Drawing.Point(1228, 79);
+            this.uiLabel17.Name = "uiLabel17";
+            this.uiLabel17.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel17.TabIndex = 174;
+            this.uiLabel17.Text = "-";
+            this.uiLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiLabel16
+            // 
+            this.uiLabel16.AutoSize = true;
+            this.uiLabel16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel16.Location = new System.Drawing.Point(1228, 48);
+            this.uiLabel16.Name = "uiLabel16";
+            this.uiLabel16.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel16.TabIndex = 174;
+            this.uiLabel16.Text = "-";
+            this.uiLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiLabel15
+            // 
+            this.uiLabel15.AutoSize = true;
+            this.uiLabel15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel15.Location = new System.Drawing.Point(925, 48);
+            this.uiLabel15.Name = "uiLabel15";
+            this.uiLabel15.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel15.TabIndex = 174;
+            this.uiLabel15.Text = "-";
+            this.uiLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiLabel8
+            // 
+            this.uiLabel8.AutoSize = true;
+            this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel8.Location = new System.Drawing.Point(590, 48);
+            this.uiLabel8.Name = "uiLabel8";
+            this.uiLabel8.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel8.TabIndex = 174;
+            this.uiLabel8.Text = "-";
+            this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiLabel9
+            // 
+            this.uiLabel9.AutoSize = true;
+            this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel9.Location = new System.Drawing.Point(590, 110);
+            this.uiLabel9.Name = "uiLabel9";
+            this.uiLabel9.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel9.TabIndex = 174;
+            this.uiLabel9.Text = "-";
+            this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiLabel12
+            // 
+            this.uiLabel12.AutoSize = true;
+            this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel12.Location = new System.Drawing.Point(244, 48);
+            this.uiLabel12.Name = "uiLabel12";
+            this.uiLabel12.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel12.TabIndex = 174;
+            this.uiLabel12.Text = "-";
+            this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiLabel18
+            // 
+            this.uiLabel18.AutoSize = true;
+            this.uiLabel18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel18.Location = new System.Drawing.Point(925, 79);
+            this.uiLabel18.Name = "uiLabel18";
+            this.uiLabel18.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel18.TabIndex = 174;
+            this.uiLabel18.Text = "-";
+            this.uiLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiLabel13
+            // 
+            this.uiLabel13.AutoSize = true;
+            this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel13.Location = new System.Drawing.Point(590, 79);
+            this.uiLabel13.Name = "uiLabel13";
+            this.uiLabel13.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel13.TabIndex = 174;
+            this.uiLabel13.Text = "-";
+            this.uiLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiLabel11
+            // 
+            this.uiLabel11.AutoSize = true;
+            this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel11.Location = new System.Drawing.Point(244, 79);
+            this.uiLabel11.Name = "uiLabel11";
+            this.uiLabel11.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel11.TabIndex = 174;
+            this.uiLabel11.Text = "-";
+            this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiLabel5
+            // 
+            this.uiLabel5.AutoSize = true;
+            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel5.Location = new System.Drawing.Point(244, 110);
+            this.uiLabel5.Name = "uiLabel5";
+            this.uiLabel5.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel5.TabIndex = 174;
+            this.uiLabel5.Text = "-";
+            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tbMechine
+            // 
+            this.tbMechine.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbMechine.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbMechine.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbMechine.Location = new System.Drawing.Point(859, 110);
+            this.tbMechine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbMechine.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbMechine.Name = "tbMechine";
+            this.tbMechine.Padding = new System.Windows.Forms.Padding(5);
+            this.tbMechine.ShowText = false;
+            this.tbMechine.Size = new System.Drawing.Size(150, 29);
+            this.tbMechine.TabIndex = 131;
+            this.tbMechine.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbMechine.Watermark = "";
+            // 
             // uiLabel6
             // 
             this.uiLabel6.AutoSize = true;
@@ -776,6 +776,7 @@
             // cbTown
             // 
             this.cbTown.DataSource = null;
+            this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTown.Location = new System.Drawing.Point(1169, 110);
@@ -792,6 +793,7 @@
             // cbVilliage
             // 
             this.cbVilliage.DataSource = null;
+            this.cbVilliage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVilliage.FillColor = System.Drawing.Color.White;
             this.cbVilliage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbVilliage.Location = new System.Drawing.Point(186, 141);

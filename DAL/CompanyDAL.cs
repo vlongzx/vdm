@@ -260,7 +260,7 @@ namespace com.vdm.dal
 
                 if (condition["Village"].ToString() != "")
                 {
-                    sql += "    and Village = @Village";
+                    sql += "    and Villiage = @Village";
                 }
                 if (condition["Town"].ToString() != "")
                 {

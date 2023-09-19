@@ -55,7 +55,7 @@ namespace com.vdm.dal
                 }
                 if (condition.ContainsKey("Village") && condition["Village"].ToString() != "")
                 {
-                    sql += "    and village = @village";
+                    sql += "    and villiage = @village";
                 }
                 if (condition.ContainsKey("Town") && condition["Town"].ToString() != "")
                 {
@@ -141,7 +141,7 @@ namespace com.vdm.dal
                 }
                 if (condition.ContainsKey("Village") && condition["Village"].ToString() != "")
                 {
-                    sql += "    and village = @village";
+                    sql += "    and villiage = @village";
                 }
                 if (condition.ContainsKey("Town") && condition["Town"].ToString() != "")
                 {
@@ -240,7 +240,7 @@ namespace com.vdm.dal
                 }
                 if (condition.ContainsKey("Village") && condition["Village"].ToString() != "")
                 {
-                    sql += "    and village = @village";
+                    sql += "    and villiage = @village";
                 }
                 if (condition.ContainsKey("Town") && condition["Town"].ToString() != "")
                 {

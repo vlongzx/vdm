@@ -74,6 +74,7 @@
             // cbTown
             // 
             this.cbTown.DataSource = null;
+            this.cbTown.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbTown.FillColor = System.Drawing.Color.White;
             this.cbTown.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbTown.Location = new System.Drawing.Point(1007, 152);
@@ -90,6 +91,7 @@
             // cbEducation
             // 
             this.cbEducation.DataSource = null;
+            this.cbEducation.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbEducation.FillColor = System.Drawing.Color.White;
             this.cbEducation.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbEducation.Location = new System.Drawing.Point(1007, 118);
@@ -252,6 +254,7 @@
             // cbVillage
             // 
             this.cbVillage.DataSource = null;
+            this.cbVillage.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbVillage.FillColor = System.Drawing.Color.White;
             this.cbVillage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbVillage.Location = new System.Drawing.Point(137, 185);
@@ -289,6 +292,7 @@
             // cbPolitcal_outlook
             // 
             this.cbPolitcal_outlook.DataSource = null;
+            this.cbPolitcal_outlook.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbPolitcal_outlook.FillColor = System.Drawing.Color.White;
             this.cbPolitcal_outlook.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbPolitcal_outlook.Location = new System.Drawing.Point(137, 119);
@@ -305,6 +309,7 @@
             // cbSex
             // 
             this.cbSex.DataSource = null;
+            this.cbSex.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbSex.FillColor = System.Drawing.Color.White;
             this.cbSex.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbSex.Location = new System.Drawing.Point(1007, 84);
@@ -320,6 +325,7 @@
             // cbNation
             // 
             this.cbNation.DataSource = null;
+            this.cbNation.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbNation.FillColor = System.Drawing.Color.White;
             this.cbNation.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbNation.Location = new System.Drawing.Point(723, 120);

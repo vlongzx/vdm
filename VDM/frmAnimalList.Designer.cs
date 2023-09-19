@@ -729,6 +729,7 @@
             this.cbTown.TabIndex = 218;
             this.cbTown.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbTown.Watermark = "";
+            this.cbTown.SelectedValueChanged += new System.EventHandler(this.cbTown_SelectedValueChanged);
             // 
             // cbVillage
             // 

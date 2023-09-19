@@ -94,6 +94,7 @@
             // cbIs_handle_process
             // 
             this.cbIs_handle_process.DataSource = null;
+            this.cbIs_handle_process.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.cbIs_handle_process.FillColor = System.Drawing.Color.White;
             this.cbIs_handle_process.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbIs_handle_process.Location = new System.Drawing.Point(903, 148);

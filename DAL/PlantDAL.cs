@@ -67,7 +67,7 @@ namespace com.vdm.dal
                 }
                 if (condition["plant_brand"].ToString() != "")
                 {
-                    sql += "    and plant_brand = @plant_brand";
+                    sql += "    and plant_brand like @plant_brand";
                 }
                 if (condition["plant_type"].ToString() != "")
                 {
@@ -150,7 +150,7 @@ namespace com.vdm.dal
             if (condition != null)
             {
                 parameters.Add(new SQLiteParameter("@plant_area", condition["plant_area"]));
-                parameters.Add(new SQLiteParameter("@plant_brand", condition["plant_brand"]));
+                parameters.Add(new SQLiteParameter("@plant_brand", "%"+condition["plant_brand"]+"%"));
                 parameters.Add(new SQLiteParameter("@plant_type", condition["plant_type"]));
                 parameters.Add(new SQLiteParameter("@contact_person", "%"+condition["contact_person"]+"%"));
                 parameters.Add(new SQLiteParameter("@phone_number", "%"+condition["phone_number"]+"%"));

@@ -119,7 +119,7 @@ namespace com.vdm.dal
                 }
                 if (condition["villiage"].ToString() != "")
                 {
-                    sql += "    and villiage = @villiage";
+                    sql += "    and village = @villiage";
                 }
                 if (condition["year_person_count_from"].ToString() != "0" && condition["year_person_count_to"].ToString() != "0")
                 {

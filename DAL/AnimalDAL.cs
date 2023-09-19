@@ -99,7 +99,7 @@ namespace com.vdm.dal
                 }
                 if (condition["villiage"].ToString() != "")
                 {
-                    sql += "    and villiage = @villiage";
+                    sql += "    and village = @villiage";
                 }
                 if (condition["breed_type"].ToString() != "")
                 {
