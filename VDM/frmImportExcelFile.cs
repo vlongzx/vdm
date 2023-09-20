@@ -19,6 +19,7 @@ namespace com.vdm.form
 {
     public partial class frmImportExcelFile : UIEditForm
     {
+        private List<String> ErrorMsg;
         private string object_name;
         public frmImportExcelFile()
         {
@@ -116,6 +117,8 @@ namespace com.vdm.form
         /// <param name="dt">旅游信息表</param>
         private void ImportTourData(DataTable dt)
         {
+            ErrorMsg = new List<string>();
+            string errorStr = "";
             TourBLL tourBLL = new TourBLL();
             List<Tour> tours = new List<Tour>();
             //若有数据
@@ -136,8 +139,23 @@ namespace com.vdm.form
                     tour.Registered_trademark = dataRow["注册商标"].ToString();
                     tour.Remark = dataRow["备注"].ToString();
                     tour.Trade_form = dataRow["经营形式"].ToString();
-                    tour.Year_person_count = int.Parse(dataRow["年接待旅游（人次）"].ToString());
-                    tour.Year_trade_income = double.Parse(dataRow["年经营收入（万元）"].ToString());
+                    try
+                    {
+                        tour.Year_person_count = int.Parse(dataRow["年接待旅游（人次）"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("统一社会信用代码为" + tour.Company_id+ "年接待旅游（人次）数据错误");
+                    }
+                    try
+                    {
+                        tour.Year_trade_income = double.Parse(dataRow["年经营收入（万元）"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("统一社会信用代码为" + tour.Company_id + "年经营收入（万元）数据错误");
+                    }
+
                     tour.Town = dataRow["所属镇"].ToString();
                     tour.Village = dataRow["所属村"].ToString();
                     tour.Creater = LoginInfo.CurrentUser.Account;
@@ -145,17 +163,30 @@ namespace com.vdm.form
 
                     tours.Add(tour);
                 }
-                Result result = tourBLL.batchAddTour(tours);
-                if (result.Count == tours.Count)
+                if (ErrorMsg.Count == 0)
                 {
-                    ShowInfoDialog("导入成功。");
-                    frmTourList tourList = (frmTourList)this.Owner;
-                    tourList.InitTourList(null);
+                    Result result = tourBLL.batchAddTour(tours);
+                    if (result.Count == tours.Count)
+                    {
+                        ShowInfoDialog("导入成功。");
+                        frmTourList tourList = (frmTourList)this.Owner;
+                        tourList.InitTourList(null);
+                    }
+                    else
+                    {
+                        ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    }
                 }
+
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    foreach (String s in ErrorMsg)
+                    {
+                        errorStr += (s + "；");
+                    }
+                    ShowInfoDialog("导入失败。错误信息：" + errorStr);
                 }
+           
             }
         }
         /// <summary>
@@ -164,6 +195,8 @@ namespace com.vdm.form
         /// <param name="dt"></param>
         private void ImportPlantData(DataTable dt)
         {
+            ErrorMsg = new List<string>();
+            string errorStr = "";
             PlantBLL plantBLL = new PlantBLL();
             ////删除原来表所有数据
             //plantBLL.deleteAll();
@@ -186,32 +219,69 @@ namespace com.vdm.form
                     plant.Remark = dataRow["备注"].ToString();
                     plant.Is_plan = dataRow["是否符合规划"].ToString();
                     plant.Manage_skill_method = dataRow["主要管理和技术措施"].ToString();
-                    plant.Output = double.Parse(dataRow["产值(万元)"].ToString());
-                    plant.Plant_area = double.Parse(dataRow["种植面积"].ToString());
+                    try
+                    {
+                        plant.Output = double.Parse(dataRow["产值(万元)"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("身份证为"+plant.Idcard + "产值(万元)数据错误");
+                    }
+                    try
+                    {
+                        plant.Plant_area = double.Parse(dataRow["种植面积"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("身份证为" + plant.Idcard + "种植面积数据错误");
+                    }
+                    try
+                    {
+                        plant.Year_yield = double.Parse(dataRow["年产量（斤）"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("身份证为" + plant.Idcard + "年产量（斤）数据错误");
+                    }
+
                     plant.Town = dataRow["所属镇"].ToString();
                     plant.Village = dataRow["所属村"].ToString();
                     plant.Plant_brand = dataRow["种植品种"].ToString();
                     plant.Plant_type = dataRow["种植类别"].ToString();
                     plant.Question = dataRow["需要政府解决的问题"].ToString();
                     plant.Sale_way = dataRow["销售途径"].ToString();
-                    plant.Year_yield = double.Parse(dataRow["年产量（斤）"].ToString());
+
                     plant.Creater = LoginInfo.CurrentUser.Account;
                     plant.Create_datetime = DateTime.Now.ToString();
 
                     plants.Add(plant);
                 }
-                Result result = plantBLL.batchAddPlant(plants);
-                if (result.Count == plants.Count)
+
+                if (ErrorMsg.Count == 0)
                 {
-                    ShowInfoDialog("导入成功。");
-                    frmPlantList plantList = (frmPlantList)this.Owner;
-                    plantList.InitPlantList(null);
+                    Result result = plantBLL.batchAddPlant(plants);
+                    if (result.Count == plants.Count)
+                    {
+                        ShowInfoDialog("导入成功。");
+                        frmPlantList plantList = (frmPlantList)this.Owner;
+                        plantList.InitPlantList(null);
+                    }
+                    else
+                    {
+                        //  ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                        ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    }
                 }
+
                 else
                 {
-                    //  ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
-                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    foreach (String s in ErrorMsg)
+                    {
+                        errorStr += (s + "；");
+                    }
+                    ShowInfoDialog("导入失败。错误信息：" + errorStr);
                 }
+             
             }
         }
 
@@ -287,6 +357,8 @@ namespace com.vdm.form
 
         private void ImportLandData(DataTable dt)
         {
+            ErrorMsg = new List<string>();
+            string errorStr = "";
             List<SQLStringObject> sqlso = new List<SQLStringObject>();
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
@@ -303,7 +375,15 @@ namespace com.vdm.form
                     land.Is_basic_farmland = dataRow["是否基本农田"].ToString();
                     land.Land_type = dataRow["地块类型"].ToString();
                     land.Land_grade = dataRow["地块等级"].ToString();
-                    land.Real_area = double.Parse(dataRow["实测面积"].ToString());
+                    try
+                    {
+                        land.Real_area = double.Parse(dataRow["实测面积"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("身份证为" + land.Idcard + "实测面积数据错误");
+                    }
+
                     land.East = dataRow["东至"].ToString();
                     land.South = dataRow["南至"].ToString();
                     land.West = dataRow["西至"].ToString();
@@ -313,9 +393,24 @@ namespace com.vdm.form
                     if (dataRow["承包方"].ToString() != "")
                     {
                         land.Contract_time = dataRow["承包时间"].ToString();
-                        land.Move_area = double.Parse(dataRow["流转面积"].ToString());
+                        try
+                        {
+                            land.Move_area = double.Parse(dataRow["流转面积"].ToString());
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + land.Idcard + "流转面积数据错误");
+                        }
+                        try
+                        {
+                            land.Move_price = int.Parse(dataRow["流转价格"].ToString());
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + land.Idcard + "流转价格数据错误");
+                        }
                         land.Move_type = dataRow["流转形式"].ToString();
-                        land.Move_price = int.Parse(dataRow["流转价格"].ToString());
+
                         land.Move_date = dataRow["流转日期"].ToString();
                     }
 
@@ -327,18 +422,31 @@ namespace com.vdm.form
                     SQLStringObject s = landBLL.ImportLandAdd(land);
                     sqlso.Add(s);
                 }
-                Result result = landBLL.ImportLand(sqlso);
-                if (result.Count == sqlso.Count)
+                if (ErrorMsg.Count == 0)
                 {
-                    ShowInfoDialog("导入成功。");
-                    frmLandList landList = (frmLandList)this.Owner;
-                    landList.InitListView(null, 1, 20);
+                    Result result = landBLL.ImportLand(sqlso);
+                    if (result.Count == sqlso.Count)
+                    {
+                        ShowInfoDialog("导入成功。");
+                        frmLandList landList = (frmLandList)this.Owner;
+                        landList.InitListView(null, 1, 20);
+                    }
+                    else
+                    {
+                        //ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
+                        ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    }
                 }
+
                 else
                 {
-                    //ShowInfoDialog("导入失败。错误信息：" + result.Exception.Message);
-                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    foreach (String s in ErrorMsg)
+                    {
+                        errorStr += (s + "；");
+                    }
+                    ShowInfoDialog("导入失败。错误信息：" + errorStr);
                 }
+             
             }
         }
         private void ImportManagerData(DataTable dt)
@@ -372,6 +480,7 @@ namespace com.vdm.form
                     SQLStringObject s = managerBLL.ImportManagerAdd(manager);
                     sqlso.Add(s);
                 }
+
                 Result result = managerBLL.ImportManager(sqlso);
                 if (result.Count == sqlso.Count)
                 {
@@ -387,6 +496,8 @@ namespace com.vdm.form
         }
         private void ImportHouseData(DataTable dt)
         {
+            ErrorMsg = new List<string>();
+            string errorStr = "";
             List<SQLStringObject> sqlso = new List<SQLStringObject>();
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
@@ -395,11 +506,19 @@ namespace com.vdm.form
                 HouseBLL houseBLL = new HouseBLL();
                 foreach (DataRow dataRow in dt.Rows)
                 {
-                    //将excel数据值封装业务对象
-                    //------------------基础信息部分---------------------------------
                     house.House_owner = dataRow["房屋所有人"].ToString();
                     house.Idcard = dataRow["身份证号"].ToString();
-                    house.Area = int.Parse(dataRow["房屋面积(平方米)"].ToString());
+                    //将excel数据值封装业务对象
+                    try
+                    {
+                        house.Area = int.Parse(dataRow["房屋面积(平方米)"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("身份证为" + house.Idcard + "房屋面积(平方米)数据错误");
+                    }
+
+
                     house.House_type = dataRow["房屋类别"].ToString();
                     house.House_location = dataRow["房屋具体位置"].ToString();
                     house.House_struction = dataRow["房屋结构"].ToString();
@@ -417,21 +536,38 @@ namespace com.vdm.form
                     SQLStringObject s = houseBLL.ImportHouseAdd(house);
                     sqlso.Add(s);
                 }
-                Result result = houseBLL.ImportHouse(sqlso);
-                if (result.Count == sqlso.Count)
+
+
+                if (ErrorMsg.Count == 0)
                 {
-                    ShowInfoDialog("导入成功。");
-                    frmHouseList houseList = (frmHouseList)this.Owner;
-                    houseList.InitListView(null, 1, 20);
+                    Result result = houseBLL.ImportHouse(sqlso);
+                    if (result.Count == sqlso.Count)
+                    {
+                        ShowInfoDialog("导入成功。");
+                        frmHouseList houseList = (frmHouseList)this.Owner;
+                        houseList.InitListView(null, 1, 20);
+                    }
+                    else
+                    {
+                        ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    }
                 }
+
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    foreach (String s in ErrorMsg)
+                    {
+                        errorStr += (s + "；");
+                    }
+                    ShowInfoDialog("导入失败。错误信息：" + errorStr);
                 }
+            
             }
         }
         private void ImportVillageData(DataTable dt)
         {
+            ErrorMsg = new List<string>();
+            string errorStr = "";
             List<SQLStringObject> sqlso = new List<SQLStringObject>();
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
@@ -440,43 +576,138 @@ namespace com.vdm.form
                 VillageBLL villageBLL = new VillageBLL();
                 foreach (DataRow dataRow in dt.Rows)
                 {
-                    //将excel数据值封装业务对象
-                    //------------------基础信息部分---------------------------------
-                    village.Money = double.Parse(dataRow["村集体资金"].ToString());
-                    village.Foreast_area = double.Parse(dataRow["林地面积"].ToString());
-                    village.Confirm_area = double.Parse(dataRow["确权耕地面积"].ToString());
-                    village.Move_area = double.Parse(dataRow["机动耕地面积"].ToString());
-                    village.Mineral_resource = double.Parse(dataRow["矿产资源量"].ToString());
-                    village.Water_resource = double.Parse(dataRow["水资源量"].ToString());
-                    village.Road_length = double.Parse(dataRow["道路长度"].ToString());
-                    village.Shop = double.Parse(dataRow["村集体门店"].ToString());
-                    village.Factory = double.Parse(dataRow["村集体厂房"].ToString());
-                    village.School = double.Parse(dataRow["学校"].ToString());
-                    village.Office = double.Parse(dataRow["村组织办公场所"].ToString());
-                    village.Mechine = dataRow["村集体设施、设备"].ToString();
                     village.Town = dataRow["所属镇"].ToString();
                     village.Villiage = dataRow["所属村"].ToString();
+                    //将excel数据值封装业务对象
+                    try
+                    {
+                        village.Money = double.Parse(dataRow["村集体资金"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add( village.Villiage + "村集体资金数据错误");
+                    }
+                    try
+                    {
+                        village.Foreast_area = double.Parse(dataRow["林地面积"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add(village.Villiage + "林地面积数据错误");
+                    }
+                    try
+                    {
+                        village.Confirm_area = double.Parse(dataRow["确权耕地面积"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add(village.Villiage + "确权耕地面积数据错误");
+                    }
+                    try
+                    {
+                        village.Move_area = double.Parse(dataRow["机动耕地面积"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add(village.Villiage + "机动耕地面积数据错误");
+                    }
+                    try
+                    {
+                        village.Mineral_resource = double.Parse(dataRow["矿产资源量"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add(village.Villiage + "矿产资源量数据错误");
+                    }
+                    try
+                    {
+                        village.Water_resource = double.Parse(dataRow["水资源量"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add(village.Villiage + "水资源量数据错误");
+                    }
+                    try
+                    {
+                        village.Road_length = double.Parse(dataRow["道路长度"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add(village.Villiage + "道路长度数据错误");
+                    }
+                    try
+                    {
+                        village.Shop = double.Parse(dataRow["村集体门店"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add(village.Villiage + "村集体门店数据错误");
+                    }
+
+                    try
+                    {
+                        village.Factory = double.Parse(dataRow["村集体厂房"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add(village.Villiage + "村集体厂房数据错误");
+                    }
+                    try
+                    {
+                        village.School = double.Parse(dataRow["学校"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add(village.Villiage + "学校数据错误");
+                    }
+                    try
+                    {
+                        village.Office = double.Parse(dataRow["村组织办公场所"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add(village.Villiage + "村组织办公场所数据错误");
+                    }
+
+
+                    village.Mechine = dataRow["村集体设施、设备"].ToString();
+
                     village.Creater = LoginInfo.CurrentUser.Account;
                     village.Create_datetime = DateTime.Now.ToString();
 
                     SQLStringObject s = villageBLL.ImportVillageAdd(village);
                     sqlso.Add(s);
                 }
-                Result result = villageBLL.ImportVillage(sqlso);
-                if (result.Count == sqlso.Count)
+
+                if (ErrorMsg.Count == 0)
                 {
-                    ShowInfoDialog("导入成功。");
-                    frmVillageList villageList = (frmVillageList)this.Owner;
-                    villageList.InitListView(null, 1, 20);
+                    Result result = villageBLL.ImportVillage(sqlso);
+                    if (result.Count == sqlso.Count)
+                    {
+                        ShowInfoDialog("导入成功。");
+                        frmVillageList villageList = (frmVillageList)this.Owner;
+                        villageList.InitListView(null, 1, 20);
+                    }
+                    else
+                    {
+                        ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    }
                 }
+
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    foreach (String s in ErrorMsg)
+                    {
+                        errorStr += (s + "；");
+                    }
+                    ShowInfoDialog("导入失败。错误信息：" + errorStr);
                 }
             }
         }
         private void ImportCompanyData(DataTable dt)
         {
+            ErrorMsg = new List<string>();
+            string errorStr = "";
             List<SQLStringObject> sqlso = new List<SQLStringObject>();
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
@@ -486,7 +717,8 @@ namespace com.vdm.form
                 foreach (DataRow dataRow in dt.Rows)
                 {
                     //将excel数据值封装业务对象
-                    //------------------基础信息部分---------------------------------
+
+          
                     company.Company_name = dataRow["企业名称"].ToString();
                     company.Company_type = dataRow["企业类型"].ToString();
                     company.Company_address = dataRow["企业地址"].ToString();
@@ -498,9 +730,6 @@ namespace com.vdm.form
                     company.Legal_name = dataRow["企业法人姓名"].ToString();
                     company.Legal_idcard = dataRow["企业法人身份证"].ToString();
                     company.Company_phone = dataRow["企业联系电话"].ToString();
-                    company.Staff_size = int.Parse(dataRow["人员规模"].ToString());
-                    company.Insure_person_count = int.Parse(dataRow["参保人数"].ToString());
-                    company.Output = double.Parse(dataRow["产值(万元)"].ToString());
                     company.Taxpayer_code = dataRow["纳税人识别号"].ToString();
                     company.Taxpayer_qualification = dataRow["纳税人资质"].ToString();
                     company.Is_top_company = dataRow["是否龙头企业"].ToString();
@@ -509,21 +738,60 @@ namespace com.vdm.form
                     company.Villiage = dataRow["所属村"].ToString();
                     company.Creater = LoginInfo.CurrentUser.Account;
                     company.Create_datetime = DateTime.Now.ToString();
+                    try
+                    {
+                        company.Staff_size = int.Parse(dataRow["人员规模"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("统一社会信用编码为" + company.Credit_code + "人员规模数据错误");
+                    }
+                    try
+                    {
 
+                        company.Insure_person_count = int.Parse(dataRow["参保人数"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("统一社会信用编码为" + company.Credit_code + "参保人数数据错误");
+                    }
+                    try
+                    {
+                        company.Output = double.Parse(dataRow["产值(万元)"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("统一社会信用编码为" + company.Credit_code + "产值(万元)数据错误");
+                    }
                     SQLStringObject s = companyBLL.ImportCompanyAdd(company);
                     sqlso.Add(s);
                 }
-                Result result = companyBLL.ImportCompany(sqlso);
-                if (result.Count == sqlso.Count)
+
+                if (ErrorMsg.Count == 0)
                 {
-                    ShowInfoDialog("导入成功。");
-                    frmCompanyList companyList = (frmCompanyList)this.Owner;
-                    companyList.InitListView(null, 1, 20);
+                    Result result = companyBLL.ImportCompany(sqlso);
+                    if (result.Count == sqlso.Count)
+                    {
+                        ShowInfoDialog("导入成功。");
+                        frmCompanyList companyList = (frmCompanyList)this.Owner;
+                        companyList.InitListView(null, 1, 20);
+                    }
+                    else
+                    {
+                        ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    }
                 }
+
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    foreach (String s in ErrorMsg)
+                    {
+                        errorStr += (s + "；");
+                    }
+                    ShowInfoDialog("导入失败。错误信息：" + errorStr);
                 }
+
+             
             }
         }
         /// <summary>
@@ -532,6 +800,8 @@ namespace com.vdm.form
         /// <param name="dt">畜牧信息表</param>
         private void ImportAnimalData(DataTable dt)
         {
+            ErrorMsg = new List<string>();
+            string errorStr = "";
             AnimalBLL animalBLL = new AnimalBLL();
             //删除原来表所有数据
             List<Animal> animals = new List<Animal>();
@@ -550,16 +820,60 @@ namespace com.vdm.form
                     animal.Animal_qualify = dataRow["动物防疫条件合格证"].ToString();
                     animal.Breed_name = dataRow["养殖场（户）名称"].ToString();
                     animal.Breed_type = dataRow["养殖种类"].ToString();
-                    animal.Cueernt_inventory = long.Parse(dataRow["现存栏"].ToString());
+                    try
+                    {
+                        animal.Cueernt_inventory = long.Parse(dataRow["现存栏"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("身份证为" + animal.Idcard + "现存栏数据错误");
+                    }
+
                     animal.Manager = dataRow["负责人"].ToString();
-                    animal.Midden_area = double.Parse(dataRow["堆粪场面积"].ToString());
-                    animal.Output = double.Parse(dataRow["产值(万元)"].ToString());
-                    animal.Pen_area = double.Parse(dataRow["圈舍面积"].ToString());
-                    animal.Pullttion_area = double.Parse(dataRow["集污池面积"].ToString());
+                    try
+                    {
+                        animal.Midden_area = double.Parse(dataRow["堆粪场面积"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("身份证为" + animal.Idcard + "堆粪场面积数据错误");
+                    }
+                    try
+                    {
+                        animal.Output = double.Parse(dataRow["产值(万元)"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("身份证为" + animal.Idcard + "产值(万元)数据错误");
+                    }
+                    try
+                    {
+                        animal.Pen_area = double.Parse(dataRow["圈舍面积"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("身份证为" + animal.Idcard + "圈舍面积数据错误");
+                    }
+                    try
+                    {
+                        animal.Pullttion_area = double.Parse(dataRow["集污池面积"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("身份证为" + animal.Idcard + "集污池面积数据错误");
+                    }
+                    try
+                    {
+                        animal.Total_area = double.Parse(dataRow["占地面积"].ToString());
+                    }
+                    catch
+                    {
+                        ErrorMsg.Add("身份证为" + animal.Idcard + "占地面积数据错误");
+                    }
+
                     animal.Remark = dataRow["备注"].ToString();
                     animal.Report_or_filings = dataRow["环评报告或备案"].ToString();
                     animal.Solid_pollution = dataRow["固体污染源排污登记"].ToString();
-                    animal.Total_area = double.Parse(dataRow["占地面积"].ToString());
                     animal.Year_inventory = dataRow["年存栏（设计规模）"].ToString();
                     animal.Year_outbound = dataRow["年出栏（设计规模）"].ToString();
                     animal.Town = dataRow["所属镇"].ToString();
@@ -569,23 +883,38 @@ namespace com.vdm.form
 
                     animals.Add(animal);
                 }
-                Result result = animalBLL.BacthAddAnimal(animals);
-                if (result.Count == animals.Count)
+                if (ErrorMsg.Count == 0)
                 {
-                    ShowInfoDialog("导入成功。");
-                    frmAnimalList animalList = (frmAnimalList)this.Owner;
-                    animalList.InitAnimalList(null);
+                    Result result = animalBLL.BacthAddAnimal(animals);
+                    if (result.Count == animals.Count)
+                    {
+                        ShowInfoDialog("导入成功。");
+                        frmAnimalList animalList = (frmAnimalList)this.Owner;
+                        animalList.InitAnimalList(null);
+                    }
+                    else
+                    {
+                        ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    }
                 }
+
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    foreach (String s in ErrorMsg)
+                    {
+                        errorStr += (s + "；");
+                    }
+                    ShowInfoDialog("导入失败。错误信息：" + errorStr);
                 }
             }
 
         }
 
+
         private void ImportFamerData(DataTable dt)
         {
+            ErrorMsg = new List<string>();
+            string errorStr = "";
             List<SQLStringObject> sqlso = new List<SQLStringObject>();
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
@@ -607,22 +936,108 @@ namespace com.vdm.form
 
                         famer.Plant_area_type = dataRow["种植占地地类"].ToString();
                         famer.Is_handle_process = dataRow["是否办理设施农用地手续"].ToString();
-                        famer.Plant_area = double.Parse(dataRow["占地面积(亩)"].ToString());
-                        famer.Plant_yield = double.Parse(dataRow["种植产量(斤)"].ToString());
-                        famer.Plant_output = int.Parse(dataRow["种植产值(元)"].ToString());
+                        try
+                        {
+                            famer.Plant_area = double.Parse(dataRow["占地面积(亩)"].ToString());
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + famer.Idcard + "占地面积(亩)数据错误");
+                        }
+                        try
+                        {
+                            famer.Plant_yield = double.Parse(dataRow["种植产量(斤)"].ToString());
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + famer.Idcard + "种植产量(斤)数据错误");
+                        }
+                        try
+                        {
+
+                            famer.Plant_output = int.Parse(dataRow["种植产值(元)"].ToString());
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + famer.Idcard + "种植产值(元)数据错误");
+                        }
                     }
 
                     famer.Animal_type = dataRow["养殖动物类型"].ToString();
                     if (dataRow["养殖动物类型"].ToString() != "无")
                     {
-                        famer.Animal_area = double.Parse(dataRow["养殖地面积(亩)"].ToString());
-                        famer.Animal_count = int.Parse(dataRow["养殖数量(头)"].ToString());
-                        famer.Animal_vaccinate_count = int.Parse(dataRow["已接种疫苗的动物数量(头/只)"].ToString());
-                        famer.Animal_nvaccinate_count = int.Parse(dataRow["未接种疫苗的动物数量(头/只)"].ToString());
-                        famer.Inventory_count = int.Parse(dataRow["存栏数量(头/只)"].ToString());
-                        famer.Outbound_count = int.Parse(dataRow["出栏数量(头/只)"].ToString());
-                        famer.Animal_yield = int.Parse(dataRow["养殖产出产量(头/只)"].ToString());
-                        famer.Animal_output = int.Parse(dataRow["养殖产出产值(元)"].ToString());
+                        try
+                        {
+                            famer.Animal_area = double.Parse(dataRow["养殖地面积(亩)"].ToString());
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + famer.Idcard + "养殖地面积(亩)数据错误");
+                        }
+                        try
+                        {
+
+                            famer.Animal_count = int.Parse(dataRow["养殖数量(头)"].ToString());
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + famer.Idcard + "养殖数量(头)数据错误");
+                        }
+                        try
+                        {
+
+                            famer.Animal_vaccinate_count = int.Parse(dataRow["已接种疫苗的动物数量(头/只)"].ToString());
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + famer.Idcard + "已接种疫苗的动物数量(头/只)数据错误");
+                        }
+
+                        try
+                        {
+                            famer.Animal_nvaccinate_count = int.Parse(dataRow["未接种疫苗的动物数量(头/只)"].ToString());
+
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + famer.Idcard + "未接种疫苗的动物数量(头/只)数据错误");
+                        }
+                        try
+                        {
+
+                            famer.Inventory_count = int.Parse(dataRow["存栏数量(头/只)"].ToString());
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + famer.Idcard + "存栏数量(头/只)数据错误");
+                        }
+
+                        try
+                        {
+                            famer.Outbound_count = int.Parse(dataRow["出栏数量(头/只)"].ToString());
+
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + famer.Idcard + "出栏数量(头/只)数据错误");
+                        }
+                        try
+                        {
+
+                            famer.Animal_yield = int.Parse(dataRow["养殖产出产量(头/只)"].ToString());
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + famer.Idcard + "养殖产出产量(头/只)数据错误");
+                        }
+                        try
+                        {
+                            famer.Animal_output = int.Parse(dataRow["养殖产出产值(元)"].ToString());
+                        }
+                        catch
+                        {
+                            ErrorMsg.Add("身份证为" + famer.Idcard + "养殖产出产值(元)数据错误");
+                        }
                         famer.Animal_area_type = dataRow["养殖占地地类"].ToString();
                     }
                     famer.Town = dataRow["所属镇"].ToString();
@@ -634,16 +1049,29 @@ namespace com.vdm.form
                     sqlso.Add(s);
                 }
                 Result result = famerBLL.ImportFamer(sqlso);
-                if (result.Count == sqlso.Count)
+                if (ErrorMsg.Count == 0)
                 {
-                    ShowInfoDialog("导入成功。");
-                    frmFamerList famerList = (frmFamerList)this.Owner;
-                    famerList.InitListView(null);
+
+                    if (result.Count == sqlso.Count)
+                    {
+                        ShowInfoDialog("导入成功。");
+                        frmFamerList famerList = (frmFamerList)this.Owner;
+                        famerList.InitListView(null);
+                    }
+                    else
+                    {
+                        ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    }
                 }
                 else
                 {
-                    ShowInfoDialog("导入失败。错误信息：" + result.Information);
+                    foreach (String s in ErrorMsg)
+                    {
+                        errorStr += (s + "；");
+                    }
+                    ShowInfoDialog("导入失败。错误信息：" + errorStr);
                 }
+
             }
         }
 
