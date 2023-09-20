@@ -360,33 +360,33 @@
             this.DToolStripMenuItem,
             this.TToolStripMenuItem});
             this.uiContextMenuStrip.Name = "uiContextMenuStrip";
-            this.uiContextMenuStrip.Size = new System.Drawing.Size(199, 141);
+            this.uiContextMenuStrip.Size = new System.Drawing.Size(171, 108);
             // 
             // PToolStripMenuItem
             // 
             this.PToolStripMenuItem.Name = "PToolStripMenuItem";
-            this.PToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.PToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.PToolStripMenuItem.Text = "个人信息(&P)";
             this.PToolStripMenuItem.Click += new System.EventHandler(this.PToolStripMenuItem_Click);
             // 
             // MToolStripMenuItem
             // 
             this.MToolStripMenuItem.Name = "MToolStripMenuItem";
-            this.MToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.MToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.MToolStripMenuItem.Text = "修改密码(&M)";
             this.MToolStripMenuItem.Click += new System.EventHandler(this.MToolStripMenuItem_Click);
             // 
             // DToolStripMenuItem
             // 
             this.DToolStripMenuItem.Name = "DToolStripMenuItem";
-            this.DToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.DToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.DToolStripMenuItem.Text = "帮助文档(&D)";
             this.DToolStripMenuItem.Click += new System.EventHandler(this.DToolStripMenuItem_Click);
             // 
             // TToolStripMenuItem
             // 
             this.TToolStripMenuItem.Name = "TToolStripMenuItem";
-            this.TToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.TToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.TToolStripMenuItem.Text = "技术支持(&T)";
             this.TToolStripMenuItem.Click += new System.EventHandler(this.TToolStripMenuItem_Click);
             // 
