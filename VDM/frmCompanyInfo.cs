@@ -37,7 +37,7 @@ namespace com.vdm.form
         {
             if (s != null)
             {
-                string[] arr_Plant_type = s.Split("; ");
+                string[] arr_Plant_type = s.Split("；");
                 for (int i = 0; i < arr_Plant_type.Length - 1; i++)//减一的原因是被split的字符串结尾是“; ”
                 {
                     uct.Nodes.Find(arr_Plant_type[i], true)[0].Checked = true;
@@ -295,7 +295,7 @@ namespace com.vdm.form
             company.Taxpayer_qualification = cbTaxpayer_qualification.Text;
             company.Company_status = cbCompany_status.SelectedValue.ToString();
            // company.Company_type = cbCompany_type.SelectedValue.ToString();
-            company.Company_type = ctvCompany_type.Text;
+            company.Company_type = ctvCompany_type.Text.Replace(" ", "").Replace(";", "；");
             company.Is_top_company = cbIs_top_company.SelectedValue.ToString();
             company.Town = this.cbTown.Text.ToString();
             company.Villiage = this.cbVillage.Text.ToString();

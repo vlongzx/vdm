@@ -544,8 +544,8 @@ namespace com.vdm.form
 
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
-                    animal.Address = dataRow["地址"].ToString();
-                    animal.Idcard = dataRow["身份证号"].ToString();
+                    animal.Address = dataRow["联系地址"].ToString();
+                    animal.Idcard = dataRow["身份证号码"].ToString();
                     animal.Phone_number = dataRow["联系电话"].ToString();
                     animal.Animal_qualify = dataRow["动物防疫条件合格证"].ToString();
                     animal.Breed_name = dataRow["养殖场（户）名称"].ToString();

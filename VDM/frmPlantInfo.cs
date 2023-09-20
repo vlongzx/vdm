@@ -78,7 +78,7 @@ namespace com.vdm.form
         {
             if (str_Plant_type != null)
             {
-                string[] arr_Plant_type = str_Plant_type.Split("; ");
+                string[] arr_Plant_type = str_Plant_type.Split("；");
                 for (int  i=0;i< arr_Plant_type.Length-1;i++)//减一的原因是被split的字符串结尾是“; ”
                 {
                     uct.Nodes.Find(arr_Plant_type[i], true)[0].Checked = true;
@@ -297,21 +297,21 @@ namespace com.vdm.form
                 plant_area = double.Parse(this.tbPlant_area.Text.Trim());
             }
             string plant_brand = this.tbPlant_brand.Text;
-            string plant_type = this.ctvPlant_type.Text.ToString();
+            string plant_type = this.ctvPlant_type.Text.Replace(" ", "").Replace(";", "；");
             string contact_person = this.tbContact_person.Text.Trim();
             string idcard = this.tbIdcard.Text.Trim();
             string phone_number = this.tbPhone_number.Text.Trim();
             string address = this.tbAddress.Text.Trim();
             string is_plan = this.cbIs_plan.SelectedValue.ToString();
             double year_yield =  double.Parse(this.tbYear_yield.Text.Trim());
-            string sale_way = this.ctvSale_way.Text.ToString();
+            string sale_way = this.ctvSale_way.Text.Replace(" ", "").Replace(";", "；");
             double output = 0;
             if (this.tbOutput.Text.Trim()!= "")
             {
                 output = double.Parse(this.tbOutput.Text.Trim());
             }
             string insect_ill = this.cbInsect_ill.SelectedValue.ToString();
-            string manage_skill_method = this.ctvManage_skill_method.Text.ToString();
+            string manage_skill_method = this.ctvManage_skill_method.Text.Replace(" ", "").Replace(";", "；");
             string develop_willing = this.cbDevelop_willing.SelectedValue.ToString();
             string question = this.cbQuestion.SelectedValue.ToString();
             string remark = this.tbRemark.Text;

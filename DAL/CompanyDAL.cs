@@ -215,7 +215,7 @@ namespace com.vdm.dal
                 }
                 if (condition["Company_name"].ToString() != "")
                 {
-                    sql += "    and Company_name = @Company_name";
+                    sql += "    and Company_name like @Company_name";
                 }
                 if (condition["Company_phone"].ToString() != "")
                 {
@@ -320,7 +320,7 @@ namespace com.vdm.dal
             {
                 parameters.Add(new SQLiteParameter("@Business_code", condition["Business_code"]));
                 parameters.Add(new SQLiteParameter("@Company_address", "%" + condition["Company_address"] + "%"));
-                parameters.Add(new SQLiteParameter("@Company_name", condition["Company_name"]));
+                parameters.Add(new SQLiteParameter("@Company_name", "%" + condition["Company_name"]+"%" ));
                 parameters.Add(new SQLiteParameter("@Company_phone", condition["Company_phone"]));
                 parameters.Add(new SQLiteParameter("@Credit_code", condition["Credit_code"]));
                 parameters.Add(new SQLiteParameter("@Legal_idcard", condition["Legal_idcard"]));

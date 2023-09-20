@@ -35,7 +35,7 @@ namespace com.vdm.form
         {
             if (s != null)
             {
-                string[] arr_Plant_type = s.Split("; ");
+                string[] arr_Plant_type = s.Split("；");
                 for (int i = 0; i < arr_Plant_type.Length - 1; i++)//减一的原因是被split的字符串结尾是“; ”
                 {
                     uct.Nodes.Find(arr_Plant_type[i], true)[0].Checked = true;
@@ -356,17 +356,17 @@ namespace com.vdm.form
             famer.Idcard = tbIdcard.Text.Trim();
             famer.Phone_number = tbPhone_number.Text.Trim();
             famer.Car_brand = tbCar_brand.Text.Trim();
-            famer.Mechine_type = ctvMechine_type.Text.ToString();
-            famer.Plant_type = ctvPlant_type.Text.ToString();
+            famer.Mechine_type = ctvMechine_type.Text.Replace(" ","").Replace(";","；");
+            famer.Plant_type = ctvPlant_type.Text.Replace(" ", "").Replace(";", "；");
             if (ctvPlant_type.Text != "无; ")
             {
                 famer.Plant_area = double.Parse(tbPlant_area.Text.Trim());
                 famer.Plant_yield = double.Parse(tbPlant_yield.Text.Trim());
                 famer.Plant_output = int.Parse(tbPlant_output.Text.Trim());
             }
-            famer.Plant_area_type = ctvPlant_area_type.Text.ToString();
+            famer.Plant_area_type = ctvPlant_area_type.Text.Replace(" ", "").Replace(";", "；");
             famer.Is_handle_process = cbIs_handle_process.SelectedValue.ToString();
-            famer.Animal_type = ctvAnimal_type.Text.ToString();
+            famer.Animal_type = ctvAnimal_type.Text.Replace(" ", "").Replace(";", "；");
             if (ctvAnimal_type.Text != "无; ")
             {
 
@@ -379,7 +379,7 @@ namespace com.vdm.form
                 famer.Animal_yield = int.Parse(tbAnimal_yield.Text.Trim());
                 famer.Animal_output = int.Parse(tbAnimal_output.Text.Trim());
             }
-            famer.Animal_area_type = ctvAnimal_area_type.Text.ToString();
+            famer.Animal_area_type = ctvAnimal_area_type.Text.Replace(" ", "").Replace(";", "；");
             famer.Town = this.cbTown.Text.ToString();
             famer.Villiage = this.cbVillage.Text.ToString();
             famer.Creater = LoginInfo.CurrentUser.Account;

@@ -212,7 +212,7 @@ namespace com.vdm.dal
                 }
                 if (condition["Idcard"].ToString() != "")
                 {
-                    sql += "    and Idcard = @Idcard";
+                    sql += "    and Idcard like @Idcard";
                 }
                 if (condition["Is_basic_farmland"].ToString() != "")
                 {
@@ -317,7 +317,7 @@ namespace com.vdm.dal
             {
                 parameters.Add(new SQLiteParameter("@Land_name", "%" + condition["Land_name"] + "%"));
                 parameters.Add(new SQLiteParameter("@Name", "%" + condition["Name"] + "%"));
-                parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
+                parameters.Add(new SQLiteParameter("@Idcard", "%"+condition["Idcard"]+"%"));
                 parameters.Add(new SQLiteParameter("@Is_basic_farmland", condition["Is_basic_farmland"]));
                 parameters.Add(new SQLiteParameter("@Land_type",  condition["Land_type"] ));
                 parameters.Add(new SQLiteParameter("@Land_grade", condition["Land_grade"] ));

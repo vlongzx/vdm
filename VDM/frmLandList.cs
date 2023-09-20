@@ -215,8 +215,8 @@ namespace com.vdm.form
             string Name = tbName.Text.Trim();
             string Idcard = tbIdcard.Text.Trim();
             string Is_basic_farmland = cbIs_basic_farmland.SelectedValue.ToString();
-            string Land_type = ctvLand_type.Text.ToString();
-            string Land_grade = ctvLand_grade.Text.ToString();
+            string Land_type = ctvLand_type.Text.Replace(" ", "").Replace(";", "；");
+            string Land_grade = ctvLand_grade.Text.Replace(" ", "").Replace(";", "；");
             string Real_area_To = tbReal_area_To.Text.Trim();
             string Real_area_From = tbReal_area_From.Text.Trim();
             string East = tbEast.Text.Trim();
@@ -229,7 +229,7 @@ namespace com.vdm.form
             string Contract_time_From = tbContract_time_From.Text.Trim();
             string Move_area_From = tbMove_area_From.Text.Trim();
             string Move_area_To = tbMove_area_To.Text.Trim();
-            string Move_type = ctvMove_type.Text.ToString();
+            string Move_type = ctvMove_type.Text.Replace(" ", "").Replace(";", "；");
             string Move_price_From = tbMove_price_From.Text.Trim();
             string Move_price_To = tbMove_price_To.Text.Trim();
             string Move_date_From = dpMove_date_From.Text.Trim();

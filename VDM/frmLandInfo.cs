@@ -35,7 +35,7 @@ namespace com.vdm.form
         {
             if (s != null)
             {
-                string[] arr_Plant_type = s.Split("; ");
+                string[] arr_Plant_type = s.Split("；");
                 for (int i = 0; i < arr_Plant_type.Length - 1; i++)//减一的原因是被split的字符串结尾是“; ”
                 {
                     uct.Nodes.Find(arr_Plant_type[i], true)[0].Checked = true;
@@ -301,8 +301,8 @@ namespace com.vdm.form
             land.Name = tbName.Text.Trim();
             land.Idcard = tbIdcard.Text.Trim();
             land.Is_basic_farmland = cbIs_basic_farmland.SelectedValue.ToString();
-            land.Land_type = ctvLand_type.Text.ToString();
-            land.Land_grade = ctvLand_grade.Text.ToString();
+            land.Land_type = ctvLand_type.Text.Replace(" ", "").Replace(";", "；");
+            land.Land_grade = ctvLand_grade.Text.Replace(" ", "").Replace(";", "；");
             land.Real_area= double.Parse(tbReal_area.Text.Trim());
             land.East = tbEast.Text.Trim();
             land.West = tbWest.Text.Trim();
@@ -314,7 +314,7 @@ namespace com.vdm.form
             {
                 land.Contract_time = tbContract_time.Text.Trim();
                 land.Move_area = double.Parse(tbMove_area.Text.Trim());
-                land.Move_type = ctvMove_type.Text.ToString();
+                land.Move_type = ctvMove_type.Text.Replace(" ", "").Replace(";", "；");
                 land.Move_price = int.Parse(tbMove_price.Text.Trim());
                 land.Move_date = dpMove_date.Text.ToString();
             }

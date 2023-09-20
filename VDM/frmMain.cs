@@ -9,6 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Aspose.Cells;
+using System.IO;
+using Aspose.Pdf;
+using Aspose.Pdf.Facades;
 
 namespace com.vdm.form
 {
@@ -28,7 +32,7 @@ namespace com.vdm.form
 
             //this.labRoleName.Text = "当前角色：" + LoginInfo.CurrentUser.RoleName;
             Footer.Text = "欢迎" + LoginInfo.CurrentUser.Town + LoginInfo.CurrentUser.Village + LoginInfo.CurrentUser.RoleName + LoginInfo.CurrentUser.RealName + "登录。"+ "登录时间：" + LoginInfo.CurrentUser.LoginTime.ToString();
-            Footer.ForeColor = Color.Blue;
+            Footer.ForeColor = System.Drawing.Color.Blue;
 
             //如果没有权限则不展示页面
             if (LoginInfo.FuncPowerList.Contains("10000") == true)
@@ -226,6 +230,20 @@ namespace com.vdm.form
 
         private void DToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Aspose.Pdf.License li = new Aspose.Pdf.License();
+                li.SetLicense(System.IO.Directory.GetCurrentDirectory() + "\\aspose\\pdf.lic");//破解证书
+                Document pdfDocument = new Document(System.IO.Directory.GetCurrentDirectory() + "\\aspose\\乡村采集操作手册.pdf");
+                //path获取到的是当前计算机的桌面路径。
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                pdfDocument.Save(path + "\\乡村采集操作手册.pdf");
+                MessageBox.Show("帮助手册:'乡村采集操作手册.pdf'已下载至桌面，请在桌面查看！");
+            }
+            catch(Exception ex)
+            {
+                ShowErrorDialog("下载帮助手册失败，错误信息：" + ex.Message);
+            }
 
         }
 

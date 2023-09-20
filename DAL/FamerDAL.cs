@@ -206,15 +206,15 @@ namespace com.vdm.dal
             {
                 if (condition["Holder_name"].ToString() != "")
                 {
-                    sql += "    and Holder_name = @Holder_name";
+                    sql += "    and Holder_name like @Holder_name";
                 }
                 if (condition["Idcard"].ToString() != "")
                 {
-                    sql += "    and Idcard = @Idcard";
+                    sql += "    and Idcard like @Idcard";
                 }
                 if (condition["Phone_number"].ToString() != "")
                 {
-                    sql += "    and Phone_number = @Phone_number";
+                    sql += "    and Phone_number like @Phone_number";
                 }
                 if (condition["Car_brand"].ToString() != "")
                 {
@@ -327,9 +327,9 @@ namespace com.vdm.dal
             List<SQLiteParameter> parameters = new List<SQLiteParameter>();
             if (condition != null)
             {
-                parameters.Add(new SQLiteParameter("@Holder_name", condition["Holder_name"]));
-                parameters.Add(new SQLiteParameter("@Idcard", condition["Idcard"]));
-                parameters.Add(new SQLiteParameter("@Phone_number", condition["Phone_number"]));
+                parameters.Add(new SQLiteParameter("@Holder_name", "%"+condition["Holder_name"]+"%"));
+                parameters.Add(new SQLiteParameter("@Idcard", "%" + condition["Idcard"]+ "%" ));
+                parameters.Add(new SQLiteParameter("@Phone_number", "%" + condition["Phone_number"]+ "%"));
                 parameters.Add(new SQLiteParameter("@Car_brand", condition["Car_brand"]));
                 parameters.Add(new SQLiteParameter("@Mechine_type", condition["Mechine_type"]));
                 parameters.Add(new SQLiteParameter("@Plant_type", condition["Plant_type"]));

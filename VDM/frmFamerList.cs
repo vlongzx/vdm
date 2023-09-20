@@ -240,12 +240,12 @@ namespace com.vdm.form
             string Idcard = tbIdcard.Text.Trim();
             string Phone_number = tbPhone_number.Text.Trim();
             string Car_brand = tbCar_brand.Text.Trim();
-            string Mechine_type = ctvMechine_type.Text.ToString();
-            string Plant_type = ctvPlant_type.Text.ToString();
-            string Plant_area_type = ctvPlant_area_type.Text.ToString();
+            string Mechine_type = ctvMechine_type.Text.Replace(" ", "").Replace(";", "；");
+            string Plant_type = ctvPlant_type.Text.Replace(" ", "").Replace(";", "；");
+            string Plant_area_type = ctvPlant_area_type.Text.Replace(" ", "").Replace(";", "；");
             string Is_handle_process = cbIs_handle_process.SelectedValue.ToString();
-            string Animal_type = ctvAnimal_type.Text.ToString();
-            string Animal_area_type = ctvAnimal_area_type.Text.ToString();
+            string Animal_type = ctvAnimal_type.Text.Replace(" ", "").Replace(";", "；");
+            string Animal_area_type = ctvAnimal_area_type.Text.Replace(" ", "").Replace(";", "；");
             string Village = this.cbVillage.SelectedValue.ToString();
             string Town = this.cbTown.SelectedValue.ToString();
 

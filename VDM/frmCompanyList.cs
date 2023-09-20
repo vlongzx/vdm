@@ -299,8 +299,8 @@ namespace com.vdm.form
           string Taxpayer_code = tbTaxpayer_code.Text.Trim();
           string Taxpayer_qualification = cbTaxpayer_qualification.SelectedValue.ToString();
           string Company_status = cbCompany_status.SelectedValue.ToString();
-          string Company_type = ctvCompany_type.Text.ToString();
-          string Is_top_company = cbIs_top_company.SelectedValue.ToString();
+          string Company_type = ctvCompany_type.Text.Replace(" ", "").Replace(";", "；");
+            string Is_top_company = cbIs_top_company.SelectedValue.ToString();
           string Establish_date_From = dpEstablish_date_From.Text.Trim();
           string Establish_date_To = dpEstablish_date_To.Text.Trim();
           string License_date_From = dpLicense_date_From.Text.Trim();

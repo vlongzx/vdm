@@ -274,7 +274,7 @@ namespace com.vdm.form
                 plant_area_to = double.Parse(this.tbPlant_area_to.Text.Trim());
             }
             string plant_brand = this.tbPlant_brand.Text.Trim();
-            string plant_type = this.ctvPlant_type.Text.ToString();
+            string plant_type = this.ctvPlant_type.Text.Replace(" ", "").Replace(";", "；");
             string contact_person = this.tbContact_person.Text.Trim();
             string idcard = this.tbIdcard.Text.Trim();
             string phone_number = this.tbPhone_number.Text.Trim();
@@ -290,7 +290,7 @@ namespace com.vdm.form
             {
                 year_yield_to = double.Parse(this.tbYear_yield_to.Text.Trim());
             }
-            string sale_way = this.ctvSale_way.Text.ToString();
+            string sale_way = this.ctvSale_way.Text.Replace(" ", "").Replace(";", "；");
             double output_from = 0;
             if(this.tbOutput_from.Text.Trim() != "")
             {
@@ -302,7 +302,7 @@ namespace com.vdm.form
                 output_to = double.Parse(this.tbOutput_to.Text.Trim());
             }
             string insect_ill = this.cbInsect_ill.SelectedValue.ToString();
-            string manage_skill_method = this.ctvManage_skill_method.Text.ToString();
+            string manage_skill_method = this.ctvManage_skill_method.Text.Replace(" ", "").Replace(";", "；");
             string develop_willing = this.cbDevelop_willing.SelectedValue.ToString();
 
             Hashtable condition = new Hashtable();
