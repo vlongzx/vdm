@@ -48,12 +48,15 @@
             this.DToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uiAvatar1 = new Sunny.UI.UIAvatar();
+            this.labVersion = new Sunny.UI.UILabel();
+            this.Footer.SuspendLayout();
             this.Header.SuspendLayout();
             this.uiContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // Footer
             // 
+            this.Footer.Controls.Add(this.labVersion);
             this.Footer.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Footer.Location = new System.Drawing.Point(0, 727);
             this.Footer.Size = new System.Drawing.Size(1797, 56);
@@ -403,6 +406,17 @@
             this.uiAvatar1.Text = "uiAvatar1";
             this.uiAvatar1.Click += new System.EventHandler(this.uiAvatar1_Click);
             // 
+            // labVersion
+            // 
+            this.labVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labVersion.AutoSize = true;
+            this.labVersion.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labVersion.Location = new System.Drawing.Point(1613, 17);
+            this.labVersion.Name = "labVersion";
+            this.labVersion.Size = new System.Drawing.Size(0, 31);
+            this.labVersion.TabIndex = 0;
+            this.labVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -416,6 +430,8 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.Controls.SetChildIndex(this.Footer, 0);
             this.Controls.SetChildIndex(this.Header, 0);
+            this.Footer.ResumeLayout(false);
+            this.Footer.PerformLayout();
             this.Header.ResumeLayout(false);
             this.uiContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -442,6 +458,7 @@
         private Sunny.UI.UIAvatar uiAvatar1;
         private System.Windows.Forms.ToolStripMenuItem PToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MToolStripMenuItem;
+        private Sunny.UI.UILabel labVersion;
     }
 }
 

@@ -34,6 +34,8 @@ namespace com.vdm.form
             Footer.Text = "欢迎" + LoginInfo.CurrentUser.Town + LoginInfo.CurrentUser.Village + LoginInfo.CurrentUser.RoleName + LoginInfo.CurrentUser.RealName + "登录。"+ "登录时间：" + LoginInfo.CurrentUser.LoginTime.ToString();
             Footer.ForeColor = System.Drawing.Color.Blue;
 
+            this.labVersion.Text = "版本号：" + GetVersion();
+
             //如果没有权限则不展示页面
             if (LoginInfo.FuncPowerList.Contains("10000") == true)
             {
@@ -81,6 +83,10 @@ namespace com.vdm.form
             }
            
             
+        }
+        public static string GetVersion()
+        {
+            try { return System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString(); } catch { return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(); }
         }
 
         private void tspPeople_Click(object sender, EventArgs e)
