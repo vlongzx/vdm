@@ -66,6 +66,9 @@ namespace com.vdm.form
                 try
                 {
                     Process.Start(System.IO.Directory.GetCurrentDirectory() + "\\AutoUpdater.exe");
+                    //调试
+                    //IAutoUpdater autoUpdater = new com.vdm.AutoUpdater.AutoUpdater();
+                    //autoUpdater.Update();
                 }
                 catch (Exception ex)
                 {

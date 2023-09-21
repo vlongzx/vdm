@@ -173,7 +173,7 @@ namespace com.vdm.AutoUpdater
             //Debug.WriteLine("All Downloaded");
             foreach (DownloadFileInfo file in this.allFileList)
             {
-                string tempUrlPath = CommonUnitity.GetFolderUrl(file);
+                string tempUrlPath = "";// CommonUnitity.GetFolderUrl(file);
                 string oldPath = string.Empty;
                 string newPath = string.Empty;
                 try
