@@ -132,7 +132,7 @@ namespace com.vdm.AutoUpdater
                     evtPerDonwload.Reset();
 
                     //Download the folder file
-                    string tempFolderPath1 = CommonUnitity.GetFolderUrl(file);
+                    string tempFolderPath1 = "";// CommonUnitity.GetFolderUrl(file);
                     if (!string.IsNullOrEmpty(tempFolderPath1))
                     {
                         tempFolderPath = Path.Combine(CommonUnitity.SystemBinUrl, ConstFile.TEMPFOLDERNAME);
