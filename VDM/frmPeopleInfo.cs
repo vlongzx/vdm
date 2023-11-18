@@ -106,6 +106,11 @@ namespace com.vdm.form
             dtBirthday.Text = "";
             dtCareer_get_time.Text = "";
             dtJoin_party_time.Text = "";
+
+            //初始化宗教信仰
+            tbReligious_belief.Text = "无";
+
+
             //初始化血型
             List<KeyValue> list_blood_type = dictBLL.getDict("blood_type");
             if (list_blood_type != null)

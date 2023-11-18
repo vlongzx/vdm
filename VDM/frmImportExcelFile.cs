@@ -299,7 +299,8 @@ namespace com.vdm.form
                     //------------------基础信息部分---------------------------------
                     people.People_name = dataRow["姓名"].ToString();
                     people.Idcard = dataRow["身份证号"].ToString();
-                    people.Birthday = dataRow["出生日期"].ToString();
+                    //people.Birthday = dataRow["出生日期"].ToString();
+                    people.Birthday = people.Idcard.Substring(6, 4) + "-" + people.Idcard.Substring(10, 2) + "-" + people.Idcard.Substring(12, 2);
                     people.Sex = dataRow["性别"].ToString();
                     people.Relationship = dataRow["与户主关系"].ToString();
                     people.Nation = dataRow["民族"].ToString();
