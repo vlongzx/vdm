@@ -465,12 +465,13 @@ namespace com.vdm.form
                     manager.Manager_name = dataRow["姓名"].ToString();
                     manager.Post = dataRow["职务"].ToString();
                     manager.Employ_date = dataRow["任职时间"].ToString();
-                    manager.Birthday = dataRow["出生日期"].ToString();
+                    //manager.Birthday = dataRow["出生日期"].ToString();
                     manager.Sex = dataRow["性别"].ToString();
                     manager.Nation = dataRow["民族"].ToString();
                     manager.Politcal_outlook = dataRow["政治面貌"].ToString();
                     manager.Join_party_time = dataRow["入党时间"].ToString();
                     manager.Idcard = dataRow["身份证号"].ToString();
+                    manager.Birthday = manager.Idcard.Substring(6, 4) + "-" + manager.Idcard.Substring(10, 2) + "-" + manager.Idcard.Substring(12, 2);
                     manager.Phone_number = dataRow["联系电话"].ToString();
                     manager.Education = dataRow["学历"].ToString();
                     manager.Town = dataRow["所属镇"].ToString();
