@@ -279,6 +279,60 @@ namespace com.vdm.dal
             }
             return data;
         }
+
+
+        /// <summary>
+        /// 基于数据库事务执行可以直接执行的SQL语句
+        /// </summary>
+        /// <param name="SQLStringList">数据库数组</param>
+        /// <returns></returns>
+        public Result ExecuteSqlTranDirect(List<string> SQLStringList)
+        {
+            string msg = "";
+            Result result = new Result();
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                SQLiteCommand command = new SQLiteCommand();
+                command.Connection = conn;
+                SQLiteTransaction tx = conn.BeginTransaction();
+                command.Transaction = tx;
+                int count = 0;
+                try
+                {
+                    for (int n = 0; n < SQLStringList.Count; n++)
+                    {
+                        string strsql = SQLStringList[n];
+                        command.CommandText = strsql;
+                        int resultCount = command.ExecuteNonQuery();
+                        count += resultCount;
+                    }
+                    if (count >= SQLStringList.Count)
+                    {
+                        tx.Commit();
+                        result.Count = count;
+                        result.Information = "批量执行成功";
+                    }
+                    else
+                    {
+                        tx.Rollback();
+                        result.Count = count;
+                        result.Information = "批量执行失败" + "\r\n" + msg + "以上数据存在问题，请检查";
+                    }
+
+                }
+                catch (System.Data.SqlClient.SqlException E)
+                {
+                    tx.Rollback();
+                    result.Count = count;
+                    result.Information = "批量执行发生异常";
+                    result.Exception = E;
+                }
+            }
+
+            return result;
+        }
+
         /// <summary>
         /// 基于数据库事务执行多条SQL语句
         /// </summary>
@@ -328,7 +382,6 @@ namespace com.vdm.dal
                         tx.Rollback();
                         result.Count = count;
                         result.Information = "批量执行失败" + "\r\n" + msg + "以上数据存在问题，请检查";
-
                     }
 
                 }
@@ -343,6 +396,9 @@ namespace com.vdm.dal
 
             return result;
         }
+
+
+
 
         /// <summary>
         /// 种植和畜牧导入时使用

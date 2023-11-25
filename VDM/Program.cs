@@ -17,6 +17,7 @@ namespace com.vdm.form
     {
         //定义异步委托
         public delegate void SyncDictDelegate();
+        public delegate void SyncDictDelegate2();
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
@@ -44,6 +45,8 @@ namespace com.vdm.form
             try
             {
                 SyncDictDelegate syncDictDelegate = new SyncDictDelegate(DictBLL.syncDict);
+                SyncDictDelegate syncDictDelegate2 = new SyncDictDelegate(SqlSyncBLL.syncNotice);
+                syncDictDelegate2.BeginInvoke(null, null);//异步调用
                 syncDictDelegate.BeginInvoke(null, null);//异步调用
                 Thread.Sleep(0);
             }

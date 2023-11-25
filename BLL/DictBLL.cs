@@ -26,6 +26,8 @@ namespace com.vdm.bll
             this.dictDAL = new DictDAL();
         }
 
+     
+        //同步字典
         public static void syncDict()
         {
             string url = ConfigurationManager.AppSettings["Sysc_Dict_Url"];
