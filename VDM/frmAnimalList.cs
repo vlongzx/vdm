@@ -370,7 +370,9 @@ namespace com.vdm.form
             animalInfo.ShowDialog();
             if (animalInfo.DialogResult == DialogResult.OK)
             {
-                InitAnimalList(null, this.pageIndex, this.pageSize);
+                //不知道为什么会触发翻页方法，pageIndex莫名变为20.解决方案：控件设计中将默认值20改为1。-2024/2/28
+                  InitAnimalList(null, this.pageIndex, this.pageSize);
+
             }
         }
         /// <summary>
@@ -455,6 +457,13 @@ namespace com.vdm.form
         private ListView InitExportDataTable(Hashtable condition)
         {
             throw new NotImplementedException();
+        }
+
+        //翻页
+                private void pagination_PageChanged(object sender, object pagingSource, int pageIndex, int count)
+        {
+            this.pageIndex = pageIndex;
+            InitAnimalList(condition, this.pageIndex, this.pageSize);
         }
 
         private void btReset_Click(object sender, EventArgs e)

@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiLabel25 = new Sunny.UI.UILabel();
             this.cbTown = new Sunny.UI.UIComboBox();
             this.gbSearch = new Sunny.UI.UIGroupBox();
@@ -105,7 +105,7 @@
             this.uiLabel25.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel25.Location = new System.Drawing.Point(1022, 188);
             this.uiLabel25.Name = "uiLabel25";
-            this.uiLabel25.Size = new System.Drawing.Size(86, 31);
+            this.uiLabel25.Size = new System.Drawing.Size(114, 41);
             this.uiLabel25.TabIndex = 154;
             this.uiLabel25.Text = "所在村";
             this.uiLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -307,7 +307,7 @@
             this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel12.Location = new System.Drawing.Point(1233, 116);
             this.uiLabel12.Name = "uiLabel12";
-            this.uiLabel12.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel12.Size = new System.Drawing.Size(32, 41);
             this.uiLabel12.TabIndex = 253;
             this.uiLabel12.Text = "-";
             this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -334,7 +334,7 @@
             this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel13.Location = new System.Drawing.Point(881, 116);
             this.uiLabel13.Name = "uiLabel13";
-            this.uiLabel13.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel13.Size = new System.Drawing.Size(32, 41);
             this.uiLabel13.TabIndex = 252;
             this.uiLabel13.Text = "-";
             this.uiLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -361,7 +361,7 @@
             this.uiLabel15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel15.Location = new System.Drawing.Point(584, 116);
             this.uiLabel15.Name = "uiLabel15";
-            this.uiLabel15.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel15.Size = new System.Drawing.Size(32, 41);
             this.uiLabel15.TabIndex = 250;
             this.uiLabel15.Text = "-";
             this.uiLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -372,7 +372,7 @@
             this.uiLabel16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel16.Location = new System.Drawing.Point(245, 152);
             this.uiLabel16.Name = "uiLabel16";
-            this.uiLabel16.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel16.Size = new System.Drawing.Size(32, 41);
             this.uiLabel16.TabIndex = 249;
             this.uiLabel16.Text = "-";
             this.uiLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -383,7 +383,7 @@
             this.uiLabel17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel17.Location = new System.Drawing.Point(246, 116);
             this.uiLabel17.Name = "uiLabel17";
-            this.uiLabel17.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel17.Size = new System.Drawing.Size(32, 41);
             this.uiLabel17.TabIndex = 248;
             this.uiLabel17.Text = "-";
             this.uiLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -458,7 +458,7 @@
             this.uiLabel24.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel24.Location = new System.Drawing.Point(1022, 116);
             this.uiLabel24.Name = "uiLabel24";
-            this.uiLabel24.Size = new System.Drawing.Size(219, 31);
+            this.uiLabel24.Size = new System.Drawing.Size(293, 41);
             this.uiLabel24.TabIndex = 241;
             this.uiLabel24.Text = "流转价格(元/亩*年)";
             this.uiLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -469,7 +469,7 @@
             this.uiLabel22.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel22.Location = new System.Drawing.Point(418, 152);
             this.uiLabel22.Name = "uiLabel22";
-            this.uiLabel22.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel22.Size = new System.Drawing.Size(146, 41);
             this.uiLabel22.TabIndex = 239;
             this.uiLabel22.Text = "流转形式";
             this.uiLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -480,7 +480,7 @@
             this.uiLabel27.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel27.Location = new System.Drawing.Point(719, 80);
             this.uiLabel27.Name = "uiLabel27";
-            this.uiLabel27.Size = new System.Drawing.Size(86, 31);
+            this.uiLabel27.Size = new System.Drawing.Size(114, 41);
             this.uiLabel27.TabIndex = 235;
             this.uiLabel27.Text = "承包方";
             this.uiLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -508,7 +508,7 @@
             this.土地使用说明.Location = new System.Drawing.Point(1022, 80);
             this.土地使用说明.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.土地使用说明.Name = "土地使用说明";
-            this.土地使用说明.Size = new System.Drawing.Size(158, 31);
+            this.土地使用说明.Size = new System.Drawing.Size(210, 41);
             this.土地使用说明.TabIndex = 210;
             this.土地使用说明.Text = "土地用途说明";
             this.土地使用说明.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -520,7 +520,7 @@
             this.uiLabel32.Location = new System.Drawing.Point(719, 116);
             this.uiLabel32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel32.Name = "uiLabel32";
-            this.uiLabel32.Size = new System.Drawing.Size(150, 31);
+            this.uiLabel32.Size = new System.Drawing.Size(200, 41);
             this.uiLabel32.TabIndex = 207;
             this.uiLabel32.Text = "流转面积(亩)";
             this.uiLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -532,7 +532,7 @@
             this.uiLabel33.Location = new System.Drawing.Point(33, 152);
             this.uiLabel33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel33.Name = "uiLabel33";
-            this.uiLabel33.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel33.Size = new System.Drawing.Size(146, 41);
             this.uiLabel33.TabIndex = 205;
             this.uiLabel33.Text = "流转日期";
             this.uiLabel33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -575,7 +575,7 @@
             this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel10.Location = new System.Drawing.Point(418, 116);
             this.uiLabel10.Name = "uiLabel10";
-            this.uiLabel10.Size = new System.Drawing.Size(150, 31);
+            this.uiLabel10.Size = new System.Drawing.Size(200, 41);
             this.uiLabel10.TabIndex = 200;
             this.uiLabel10.Text = "承包时间(年)";
             this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -682,7 +682,7 @@
             this.uiLabel26.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel26.Location = new System.Drawing.Point(722, 188);
             this.uiLabel26.Name = "uiLabel26";
-            this.uiLabel26.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel26.Size = new System.Drawing.Size(146, 41);
             this.uiLabel26.TabIndex = 155;
             this.uiLabel26.Text = "所在乡镇";
             this.uiLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -709,7 +709,7 @@
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(33, 44);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(62, 31);
+            this.uiLabel2.Size = new System.Drawing.Size(82, 41);
             this.uiLabel2.TabIndex = 145;
             this.uiLabel2.Text = "姓名";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -753,7 +753,7 @@
             this.uiLabel9.Location = new System.Drawing.Point(418, 188);
             this.uiLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel9.Name = "uiLabel9";
-            this.uiLabel9.Size = new System.Drawing.Size(62, 31);
+            this.uiLabel9.Size = new System.Drawing.Size(82, 41);
             this.uiLabel9.TabIndex = 113;
             this.uiLabel9.Text = "北至";
             this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -765,7 +765,7 @@
             this.uiLabel8.Location = new System.Drawing.Point(33, 188);
             this.uiLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel8.Name = "uiLabel8";
-            this.uiLabel8.Size = new System.Drawing.Size(62, 31);
+            this.uiLabel8.Size = new System.Drawing.Size(82, 41);
             this.uiLabel8.TabIndex = 113;
             this.uiLabel8.Text = "西至";
             this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -777,7 +777,7 @@
             this.uiLabel6.Location = new System.Drawing.Point(1019, 44);
             this.uiLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(158, 31);
+            this.uiLabel6.Size = new System.Drawing.Size(210, 41);
             this.uiLabel6.TabIndex = 113;
             this.uiLabel6.Text = "是否基本农田";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -789,7 +789,7 @@
             this.uiLabel7.Location = new System.Drawing.Point(1022, 152);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(62, 31);
+            this.uiLabel7.Size = new System.Drawing.Size(82, 41);
             this.uiLabel7.TabIndex = 113;
             this.uiLabel7.Text = "南至";
             this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -801,7 +801,7 @@
             this.label9.Location = new System.Drawing.Point(418, 80);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 31);
+            this.label9.Size = new System.Drawing.Size(146, 41);
             this.label9.TabIndex = 116;
             this.label9.Text = "地块等级";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -813,7 +813,7 @@
             this.label15.Location = new System.Drawing.Point(722, 152);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(62, 31);
+            this.label15.Size = new System.Drawing.Size(82, 41);
             this.label15.TabIndex = 113;
             this.label15.Text = "东至";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -825,7 +825,7 @@
             this.uiLabel5.Location = new System.Drawing.Point(722, 44);
             this.uiLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel5.Size = new System.Drawing.Size(146, 41);
             this.uiLabel5.TabIndex = 108;
             this.uiLabel5.Text = "地块名称";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -837,7 +837,7 @@
             this.uiLabel4.Location = new System.Drawing.Point(33, 80);
             this.uiLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel4.Size = new System.Drawing.Size(146, 41);
             this.uiLabel4.TabIndex = 108;
             this.uiLabel4.Text = "地块类型";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -849,7 +849,7 @@
             this.label12.Location = new System.Drawing.Point(418, 44);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 31);
+            this.label12.Size = new System.Drawing.Size(146, 41);
             this.label12.TabIndex = 102;
             this.label12.Text = "身份证号";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -886,7 +886,7 @@
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(33, 116);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(166, 31);
+            this.uiLabel1.Size = new System.Drawing.Size(221, 41);
             this.uiLabel1.TabIndex = 200;
             this.uiLabel1.Text = "实测面积(亩）";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -926,48 +926,48 @@
             // 
             this.dgLandList.AllowUserToAddRows = false;
             this.dgLandList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgLandList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgLandList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgLandList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgLandList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgLandList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLandList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgLandList.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgLandList.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgLandList.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgLandList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgLandList.EnableHeadersVisualStyles = false;
             this.dgLandList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgLandList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgLandList.Location = new System.Drawing.Point(4, 32);
             this.dgLandList.Name = "dgLandList";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgLandList.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLandList.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgLandList.RowHeadersVisible = false;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgLandList.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgLandList.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgLandList.RowTemplate.Height = 23;
             this.dgLandList.ScrollBarHandleWidth = 40;
             this.dgLandList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -1030,7 +1030,6 @@
             // 
             // pagination
             // 
-            this.pagination.ActivePage = 20;
             this.pagination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pagination.CausesValidation = false;
             this.pagination.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -1048,6 +1047,7 @@
             this.pagination.Text = "uiDataGridPage1";
             this.pagination.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.pagination.TotalCount = 40000;
+            this.pagination.PageChanged += new Sunny.UI.UIPagination.OnPageChangeEventHandler(this.pagination_PageChanged);
             // 
             // frmLandList
             // 

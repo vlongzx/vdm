@@ -387,7 +387,11 @@ namespace com.vdm.form
             frmExportExcel ef = new frmExportExcel(excelUtil, Data_Object_Const.MANAGER);
             ef.ShowDialog();
         }
-
+        private void pagination_PageChanged(object sender, object pagingSource, int pageIndex, int count)
+        {
+            this.pageIndex = pageIndex;
+            InitListView(condition, this.pageIndex, this.pageSize);
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 

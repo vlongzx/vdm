@@ -512,7 +512,11 @@ namespace com.vdm.form
             importExcelFile.Owner = this;
             importExcelFile.ShowDialog();
         }
-
+        private void pagination_PageChanged(object sender, object pagingSource, int pageIndex, int count)
+        {
+            this.pageIndex = pageIndex;
+            InitListView(condition, this.pageIndex, this.pageSize);
+        }
         private void uiButton1_Click(object sender, EventArgs e)
         {
 

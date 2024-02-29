@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pagination = new Sunny.UI.UIPagination();
             this.uiLabel5 = new Sunny.UI.UILabel();
             this.tbYear_yield_to = new Sunny.UI.UITextBox();
@@ -48,6 +48,12 @@
             this.ctvManage_skill_method = new Sunny.UI.UIComboTreeView();
             this.ctvSale_way = new Sunny.UI.UIComboTreeView();
             this.ctvPlant_type = new Sunny.UI.UIComboTreeView();
+            this.uiLabel12 = new Sunny.UI.UILabel();
+            this.uiLabel11 = new Sunny.UI.UILabel();
+            this.tbOutput_to = new Sunny.UI.UITextBox();
+            this.tbPlant_area_to = new Sunny.UI.UITextBox();
+            this.tbOutput_from = new Sunny.UI.UITextBox();
+            this.tbPlant_area_from = new Sunny.UI.UITextBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiLabel9 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
@@ -76,12 +82,6 @@
             this.dgPlantList = new Sunny.UI.UIDataGridView();
             this.gbResult = new Sunny.UI.UIGroupBox();
             this.btEdit = new Sunny.UI.UIButton();
-            this.tbPlant_area_from = new Sunny.UI.UITextBox();
-            this.tbPlant_area_to = new Sunny.UI.UITextBox();
-            this.uiLabel11 = new Sunny.UI.UILabel();
-            this.tbOutput_from = new Sunny.UI.UITextBox();
-            this.tbOutput_to = new Sunny.UI.UITextBox();
-            this.uiLabel12 = new Sunny.UI.UILabel();
             this.gbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPlantList)).BeginInit();
             this.gbResult.SuspendLayout();
@@ -89,7 +89,6 @@
             // 
             // pagination
             // 
-            this.pagination.ActivePage = 20;
             this.pagination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pagination.CausesValidation = false;
             this.pagination.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -107,6 +106,7 @@
             this.pagination.Text = "uiDataGridPage1";
             this.pagination.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.pagination.TotalCount = 40000;
+            this.pagination.PageChanged += new Sunny.UI.UIPagination.OnPageChangeEventHandler(this.pagination_PageChanged);
             // 
             // uiLabel5
             // 
@@ -114,7 +114,7 @@
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel5.Location = new System.Drawing.Point(226, 104);
             this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(24, 31);
+            this.uiLabel5.Size = new System.Drawing.Size(32, 41);
             this.uiLabel5.TabIndex = 174;
             this.uiLabel5.Text = "-";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,7 +157,7 @@
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel6.Location = new System.Drawing.Point(998, 135);
             this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(86, 31);
+            this.uiLabel6.Size = new System.Drawing.Size(114, 41);
             this.uiLabel6.TabIndex = 173;
             this.uiLabel6.Text = "所属村";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -202,7 +202,7 @@
             this.uiLabel7.Location = new System.Drawing.Point(671, 135);
             this.uiLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(86, 31);
+            this.uiLabel7.Size = new System.Drawing.Size(114, 41);
             this.uiLabel7.TabIndex = 167;
             this.uiLabel7.Text = "所属镇";
             this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -214,7 +214,7 @@
             this.uiLabel23.Location = new System.Drawing.Point(36, 73);
             this.uiLabel23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel23.Name = "uiLabel23";
-            this.uiLabel23.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel23.Size = new System.Drawing.Size(146, 41);
             this.uiLabel23.TabIndex = 163;
             this.uiLabel23.Text = "详细地址";
             this.uiLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -225,7 +225,7 @@
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel3.Location = new System.Drawing.Point(671, 73);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(150, 31);
+            this.uiLabel3.Size = new System.Drawing.Size(200, 41);
             this.uiLabel3.TabIndex = 147;
             this.uiLabel3.Text = "种植面积(亩)";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -349,13 +349,99 @@
             this.ctvPlant_type.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.ctvPlant_type.Watermark = "";
             // 
+            // uiLabel12
+            // 
+            this.uiLabel12.AutoSize = true;
+            this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel12.Location = new System.Drawing.Point(867, 104);
+            this.uiLabel12.Name = "uiLabel12";
+            this.uiLabel12.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel12.TabIndex = 174;
+            this.uiLabel12.Text = "-";
+            this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiLabel11
+            // 
+            this.uiLabel11.AutoSize = true;
+            this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel11.Location = new System.Drawing.Point(867, 73);
+            this.uiLabel11.Name = "uiLabel11";
+            this.uiLabel11.Size = new System.Drawing.Size(32, 41);
+            this.uiLabel11.TabIndex = 174;
+            this.uiLabel11.Text = "-";
+            this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tbOutput_to
+            // 
+            this.tbOutput_to.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbOutput_to.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbOutput_to.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbOutput_to.Location = new System.Drawing.Point(901, 104);
+            this.tbOutput_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbOutput_to.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbOutput_to.Name = "tbOutput_to";
+            this.tbOutput_to.Padding = new System.Windows.Forms.Padding(5);
+            this.tbOutput_to.ShowText = false;
+            this.tbOutput_to.Size = new System.Drawing.Size(62, 29);
+            this.tbOutput_to.TabIndex = 131;
+            this.tbOutput_to.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbOutput_to.Watermark = "";
+            // 
+            // tbPlant_area_to
+            // 
+            this.tbPlant_area_to.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbPlant_area_to.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPlant_area_to.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPlant_area_to.Location = new System.Drawing.Point(901, 73);
+            this.tbPlant_area_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPlant_area_to.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbPlant_area_to.Name = "tbPlant_area_to";
+            this.tbPlant_area_to.Padding = new System.Windows.Forms.Padding(5);
+            this.tbPlant_area_to.ShowText = false;
+            this.tbPlant_area_to.Size = new System.Drawing.Size(62, 29);
+            this.tbPlant_area_to.TabIndex = 131;
+            this.tbPlant_area_to.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPlant_area_to.Watermark = "";
+            // 
+            // tbOutput_from
+            // 
+            this.tbOutput_from.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbOutput_from.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbOutput_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbOutput_from.Location = new System.Drawing.Point(798, 104);
+            this.tbOutput_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbOutput_from.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbOutput_from.Name = "tbOutput_from";
+            this.tbOutput_from.Padding = new System.Windows.Forms.Padding(5);
+            this.tbOutput_from.ShowText = false;
+            this.tbOutput_from.Size = new System.Drawing.Size(62, 29);
+            this.tbOutput_from.TabIndex = 131;
+            this.tbOutput_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbOutput_from.Watermark = "";
+            // 
+            // tbPlant_area_from
+            // 
+            this.tbPlant_area_from.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
+            this.tbPlant_area_from.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPlant_area_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPlant_area_from.Location = new System.Drawing.Point(798, 73);
+            this.tbPlant_area_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPlant_area_from.MinimumSize = new System.Drawing.Size(1, 16);
+            this.tbPlant_area_from.Name = "tbPlant_area_from";
+            this.tbPlant_area_from.Padding = new System.Windows.Forms.Padding(5);
+            this.tbPlant_area_from.ShowText = false;
+            this.tbPlant_area_from.Size = new System.Drawing.Size(62, 29);
+            this.tbPlant_area_from.TabIndex = 131;
+            this.tbPlant_area_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbPlant_area_from.Watermark = "";
+            // 
             // uiLabel1
             // 
             this.uiLabel1.AutoSize = true;
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(364, 73);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(158, 31);
+            this.uiLabel1.Size = new System.Drawing.Size(210, 41);
             this.uiLabel1.TabIndex = 146;
             this.uiLabel1.Text = "是否符合规划";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -366,7 +452,7 @@
             this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel9.Location = new System.Drawing.Point(36, 135);
             this.uiLabel9.Name = "uiLabel9";
-            this.uiLabel9.Size = new System.Drawing.Size(182, 31);
+            this.uiLabel9.Size = new System.Drawing.Size(242, 41);
             this.uiLabel9.TabIndex = 145;
             this.uiLabel9.Text = "主要管理和技术";
             this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -377,7 +463,7 @@
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLabel2.Location = new System.Drawing.Point(36, 42);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel2.Size = new System.Drawing.Size(146, 41);
             this.uiLabel2.TabIndex = 145;
             this.uiLabel2.Text = "种植类别";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -517,7 +603,7 @@
             this.uiLabel14.Location = new System.Drawing.Point(671, 42);
             this.uiLabel14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel14.Name = "uiLabel14";
-            this.uiLabel14.Size = new System.Drawing.Size(182, 31);
+            this.uiLabel14.Size = new System.Drawing.Size(242, 41);
             this.uiLabel14.TabIndex = 116;
             this.uiLabel14.Text = "联系人身份证号";
             this.uiLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -529,7 +615,7 @@
             this.label9.Location = new System.Drawing.Point(998, 40);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 31);
+            this.label9.Size = new System.Drawing.Size(146, 41);
             this.label9.TabIndex = 116;
             this.label9.Text = "联系电话";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -541,7 +627,7 @@
             this.label3.Location = new System.Drawing.Point(998, 73);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 31);
+            this.label3.Size = new System.Drawing.Size(146, 41);
             this.label3.TabIndex = 115;
             this.label3.Text = "种植品种";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -553,7 +639,7 @@
             this.label2.Location = new System.Drawing.Point(364, 42);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 31);
+            this.label2.Size = new System.Drawing.Size(114, 41);
             this.label2.TabIndex = 114;
             this.label2.Text = "联系人";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -565,7 +651,7 @@
             this.label10.Location = new System.Drawing.Point(36, 104);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 31);
+            this.label10.Size = new System.Drawing.Size(168, 41);
             this.label10.TabIndex = 111;
             this.label10.Text = "年产量(斤)";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -577,7 +663,7 @@
             this.uiLabel8.Location = new System.Drawing.Point(998, 104);
             this.uiLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel8.Name = "uiLabel8";
-            this.uiLabel8.Size = new System.Drawing.Size(134, 31);
+            this.uiLabel8.Size = new System.Drawing.Size(178, 41);
             this.uiLabel8.TabIndex = 101;
             this.uiLabel8.Text = "主要虫病害";
             this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -589,7 +675,7 @@
             this.uiLabel4.Location = new System.Drawing.Point(671, 104);
             this.uiLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(126, 31);
+            this.uiLabel4.Size = new System.Drawing.Size(168, 41);
             this.uiLabel4.TabIndex = 101;
             this.uiLabel4.Text = "产值(万元)";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -601,7 +687,7 @@
             this.uiLabel10.Location = new System.Drawing.Point(364, 135);
             this.uiLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiLabel10.Name = "uiLabel10";
-            this.uiLabel10.Size = new System.Drawing.Size(110, 31);
+            this.uiLabel10.Size = new System.Drawing.Size(146, 41);
             this.uiLabel10.TabIndex = 101;
             this.uiLabel10.Text = "发展意愿";
             this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -613,7 +699,7 @@
             this.label8.Location = new System.Drawing.Point(364, 104);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 31);
+            this.label8.Size = new System.Drawing.Size(146, 41);
             this.label8.TabIndex = 101;
             this.label8.Text = "销售途径";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -687,48 +773,48 @@
             // 
             this.dgPlantList.AllowUserToAddRows = false;
             this.dgPlantList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgPlantList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgPlantList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgPlantList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgPlantList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPlantList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPlantList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgPlantList.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgPlantList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgPlantList.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgPlantList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgPlantList.EnableHeadersVisualStyles = false;
             this.dgPlantList.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgPlantList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgPlantList.Location = new System.Drawing.Point(4, 32);
             this.dgPlantList.Name = "dgPlantList";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPlantList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPlantList.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgPlantList.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgPlantList.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgPlantList.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgPlantList.RowTemplate.Height = 23;
             this.dgPlantList.ScrollBarHandleWidth = 40;
             this.dgPlantList.ScrollBarRectColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -767,92 +853,6 @@
             this.btEdit.Text = "编辑(&E)";
             this.btEdit.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
-            // 
-            // tbPlant_area_from
-            // 
-            this.tbPlant_area_from.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbPlant_area_from.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPlant_area_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPlant_area_from.Location = new System.Drawing.Point(798, 73);
-            this.tbPlant_area_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbPlant_area_from.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbPlant_area_from.Name = "tbPlant_area_from";
-            this.tbPlant_area_from.Padding = new System.Windows.Forms.Padding(5);
-            this.tbPlant_area_from.ShowText = false;
-            this.tbPlant_area_from.Size = new System.Drawing.Size(62, 29);
-            this.tbPlant_area_from.TabIndex = 131;
-            this.tbPlant_area_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbPlant_area_from.Watermark = "";
-            // 
-            // tbPlant_area_to
-            // 
-            this.tbPlant_area_to.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbPlant_area_to.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPlant_area_to.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbPlant_area_to.Location = new System.Drawing.Point(901, 73);
-            this.tbPlant_area_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbPlant_area_to.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbPlant_area_to.Name = "tbPlant_area_to";
-            this.tbPlant_area_to.Padding = new System.Windows.Forms.Padding(5);
-            this.tbPlant_area_to.ShowText = false;
-            this.tbPlant_area_to.Size = new System.Drawing.Size(62, 29);
-            this.tbPlant_area_to.TabIndex = 131;
-            this.tbPlant_area_to.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbPlant_area_to.Watermark = "";
-            // 
-            // uiLabel11
-            // 
-            this.uiLabel11.AutoSize = true;
-            this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel11.Location = new System.Drawing.Point(867, 73);
-            this.uiLabel11.Name = "uiLabel11";
-            this.uiLabel11.Size = new System.Drawing.Size(24, 31);
-            this.uiLabel11.TabIndex = 174;
-            this.uiLabel11.Text = "-";
-            this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tbOutput_from
-            // 
-            this.tbOutput_from.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbOutput_from.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbOutput_from.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbOutput_from.Location = new System.Drawing.Point(798, 104);
-            this.tbOutput_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbOutput_from.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbOutput_from.Name = "tbOutput_from";
-            this.tbOutput_from.Padding = new System.Windows.Forms.Padding(5);
-            this.tbOutput_from.ShowText = false;
-            this.tbOutput_from.Size = new System.Drawing.Size(62, 29);
-            this.tbOutput_from.TabIndex = 131;
-            this.tbOutput_from.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbOutput_from.Watermark = "";
-            // 
-            // tbOutput_to
-            // 
-            this.tbOutput_to.ButtonSymbolOffset = new System.Drawing.Point(0, 0);
-            this.tbOutput_to.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbOutput_to.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbOutput_to.Location = new System.Drawing.Point(901, 104);
-            this.tbOutput_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbOutput_to.MinimumSize = new System.Drawing.Size(1, 16);
-            this.tbOutput_to.Name = "tbOutput_to";
-            this.tbOutput_to.Padding = new System.Windows.Forms.Padding(5);
-            this.tbOutput_to.ShowText = false;
-            this.tbOutput_to.Size = new System.Drawing.Size(62, 29);
-            this.tbOutput_to.TabIndex = 131;
-            this.tbOutput_to.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbOutput_to.Watermark = "";
-            // 
-            // uiLabel12
-            // 
-            this.uiLabel12.AutoSize = true;
-            this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel12.Location = new System.Drawing.Point(867, 104);
-            this.uiLabel12.Name = "uiLabel12";
-            this.uiLabel12.Size = new System.Drawing.Size(24, 31);
-            this.uiLabel12.TabIndex = 174;
-            this.uiLabel12.Text = "-";
-            this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmPlantList
             // 

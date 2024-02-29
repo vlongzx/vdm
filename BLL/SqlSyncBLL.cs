@@ -36,6 +36,7 @@ namespace com.vdm.bll
                 SqlSyncDAL sqlSyncDAL = new SqlSyncDAL();
                 //0、创建t_sql_sync表
                 sqlSyncDAL.CreateTableSqlSync();
+
                 if (listRemoteSqlNotice != null)
                 {
                     List<SqlSync> sqlSyncs = new List<SqlSync>();

@@ -124,10 +124,10 @@ namespace com.vdm.form
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
             {
-                Tour tour = new Tour();
+               // Tour tour = new Tour();
                 foreach (DataRow dataRow in dt.Rows)
                 {
-
+                    Tour tour = new Tour();
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
                     tour.Address = dataRow["联系地址"].ToString();
@@ -204,10 +204,10 @@ namespace com.vdm.form
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
             {
-                Plant plant = new Plant();
+                //Plant plant = new Plant();
                 foreach (DataRow dataRow in dt.Rows)
                 {
-
+                    Plant plant = new Plant();
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
                     plant.Address = dataRow["详细地址"].ToString();
@@ -291,10 +291,11 @@ namespace com.vdm.form
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
             {
-                People people = new People();
+                //People people = new People();
                 PeopleBLL peopleBLL = new PeopleBLL();
                 foreach (DataRow dataRow in dt.Rows)
                 {
+                    People people = new People();
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
                     people.People_name = dataRow["姓名"].ToString();
@@ -364,10 +365,11 @@ namespace com.vdm.form
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
             {
-                Land land = new Land();
+              //  Land land = new Land();
                 LandBLL landBLL = new LandBLL();
                 foreach (DataRow dataRow in dt.Rows)
                 {
+                    Land land = new Land();
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
                     land.Name = dataRow["姓名"].ToString();
@@ -456,10 +458,11 @@ namespace com.vdm.form
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
             {
-                Manager manager = new Manager();
+                //Manager manager = new Manager();
                 ManagerBLL managerBLL = new ManagerBLL();
                 foreach (DataRow dataRow in dt.Rows)
                 {
+                    Manager manager = new Manager();
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
                     manager.Manager_name = dataRow["姓名"].ToString();
@@ -504,10 +507,11 @@ namespace com.vdm.form
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
             {
-                House house = new House();
+             //   House house = new House();
                 HouseBLL houseBLL = new HouseBLL();
                 foreach (DataRow dataRow in dt.Rows)
                 {
+                    House house = new House();
                     house.House_owner = dataRow["房屋所有人"].ToString();
                     house.Idcard = dataRow["身份证号"].ToString();
                     //将excel数据值封装业务对象
@@ -574,10 +578,11 @@ namespace com.vdm.form
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
             {
-                Village village = new Village();
+                //Village village = new Village();
                 VillageBLL villageBLL = new VillageBLL();
                 foreach (DataRow dataRow in dt.Rows)
                 {
+                    Village village = new Village();
                     village.Town = dataRow["所属镇"].ToString();
                     village.Villiage = dataRow["所属村"].ToString();
                     //将excel数据值封装业务对象
@@ -714,13 +719,14 @@ namespace com.vdm.form
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
             {
-                Company company = new Company();
+              //  Company company = new Company();
                 CompanyBLL companyBLL = new CompanyBLL();
                 foreach (DataRow dataRow in dt.Rows)
                 {
+                    Company company = new Company();
                     //将excel数据值封装业务对象
 
-          
+
                     company.Company_name = dataRow["企业名称"].ToString();
                     company.Company_type = dataRow["企业类型"].ToString();
                     company.Company_address = dataRow["企业地址"].ToString();
@@ -810,10 +816,11 @@ namespace com.vdm.form
             //若有数据
             if (dt != null && dt.Rows.Count != 0)
             {
-                Animal animal = new Animal();
+                //放在这里会导致导入时候所有数据变成excel最后一项
+                //Animal animal = new Animal();
                 foreach (DataRow dataRow in dt.Rows)
                 {
-
+                    Animal animal = new Animal();
                     //将excel数据值封装业务对象
                     //------------------基础信息部分---------------------------------
                     animal.Address = dataRow["联系地址"].ToString();

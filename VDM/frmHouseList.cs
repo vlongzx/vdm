@@ -378,5 +378,11 @@ namespace com.vdm.form
             InitListView(condition, this.pageIndex, this.pageSize);
 
         }
+
+        private void pagination_PageChanged(object sender, object pagingSource, int pageIndex, int count)
+        {
+            this.pageIndex = pageIndex;
+            InitListView(condition, this.pageIndex, this.pageSize);
+        }
     }
 }
